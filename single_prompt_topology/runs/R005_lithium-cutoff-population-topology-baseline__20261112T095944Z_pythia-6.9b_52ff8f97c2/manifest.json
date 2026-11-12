@@ -1,0 +1,228 @@
+{
+  "run_number": "R005",
+  "run_name": "lithium-cutoff-population-topology-baseline",
+  "run_id": "R005_lithium-cutoff-population-topology-baseline__20261112T095944Z_pythia-6.9b_52ff8f97c2",
+  "technical_id": "20261112T095944Z_pythia-6.9b_52ff8f97c2",
+  "source_run": "R004_lithium-full-curve-cutoffs__20261112T092701Z_pythia-6.9b_52ff8f97c2",
+  "ultimate_source_run": "R001_lithium-initial-output-inspection__20261112T063540Z_pythia-6.9b_52ff8f97c2",
+  "status": "successful",
+  "started_at": "2026-11-12T09:59:44.418264+00:00",
+  "completed_at": "2026-11-12T10:01:29.377084+00:00",
+  "required_components": [
+    "source_validation",
+    "embedding_load",
+    "observed_graphs",
+    "random_baselines",
+    "transition_analysis",
+    "communities_and_figures",
+    "validation"
+  ],
+  "components": {
+    "source_validation": {
+      "status": "successful",
+      "completed_at": "2026-11-12T09:59:44.829062+00:00",
+      "seconds": 0.3781036000000313,
+      "validated_source_artifact_count": 2,
+      "state_count": 33,
+      "tail_membership_rows": 191872
+    },
+    "embedding_load": {
+      "status": "successful",
+      "completed_at": "2026-11-12T09:59:45.781843+00:00",
+      "seconds": 0.9531504000042332,
+      "embedding_shape": [
+        50277,
+        4096
+      ],
+      "embedding_dtype": "torch.float32",
+      "embedding_shard": "model-00001-of-00002.safetensors",
+      "embedding_shard_bytes": 9911600880,
+      "safetensors_index_sha256": "d89b85688f4f2cffd1963313c11e4cec758f7fe6b27fdbbf3ee4180d5b48d063"
+    },
+    "observed_graphs": {
+      "status": "successful",
+      "completed_at": "2026-11-12T10:00:54.837221+00:00",
+      "seconds": 69.0528348999942,
+      "state_count": 33,
+      "directed_edge_rows": 1918720,
+      "community_assignment_rows": 191872,
+      "community_rows": 426
+    },
+    "random_baselines": {
+      "status": "successful",
+      "completed_at": "2026-11-12T10:01:16.225357+00:00",
+      "seconds": 21.387619100001757,
+      "replicates_per_state": 20,
+      "random_population_rows": 660,
+      "comparison_rows": 99
+    },
+    "transition_analysis": {
+      "status": "successful",
+      "completed_at": "2026-11-12T10:01:27.374016+00:00",
+      "seconds": 11.148545699994429,
+      "adjacent_transition_rows": 32,
+      "persistent_edge_rows": 191879,
+      "minimum_persistent_state_count": 2
+    },
+    "communities_and_figures": {
+      "status": "successful",
+      "completed_at": "2026-11-12T10:01:28.325369+00:00",
+      "seconds": 0.9500340000085998,
+      "selected_figure_states": [
+        0,
+        8,
+        16,
+        24,
+        32
+      ],
+      "figure_count": 3,
+      "findings_report_written": true
+    },
+    "validation": {
+      "status": "successful",
+      "completed_at": "2026-11-12T10:01:29.377084+00:00",
+      "seconds": 1.051450400002068
+    }
+  },
+  "model": {
+    "id": "EleutherAI/pythia-6.9b",
+    "revision": "c0e3eee36dc47af0c49f361c74cfe459c09f7f23",
+    "model_forward_executed": false,
+    "full_model_loaded": false,
+    "embedding_weight_loaded": true,
+    "embedding_weight": "gpt_neox.embed_in.weight",
+    "source_score_matrix_recalculated": false
+  },
+  "input": {
+    "prompt": "Battery demand, mineral supply, electric vehicles, and energy storage all shape the market for lithium",
+    "prompt_sha256": "52ff8f97c22b72506ca9b7acfb9be4450726157f1a31c6a4ce3e112380cd7bf7",
+    "target_text": " lithium",
+    "target_token_id": 27747,
+    "target_position": 18
+  },
+  "pipeline": {
+    "script": "single_prompt_topology\\cutoff_population_topology.py",
+    "script_sha256": "958b841faa1d7677b694ef010397e0d9ad640b008bc49c87cc344629f59432f8",
+    "pre_run_plan": "single_prompt_topology/R005_PLAN.md",
+    "pre_run_plan_sha256": "70c58d259fa0f994272f3c7c8fafe2faef2f91f8f1a4b5b804d5529932bd28a3"
+  },
+  "environment": {
+    "python": "3.11.15",
+    "torch": "2.6.0+cu124",
+    "numpy": "2.4.4",
+    "pandas": "3.0.3",
+    "networkx": "3.6.1",
+    "scikit_learn": "1.8.0",
+    "matplotlib": "3.10.9",
+    "transformers": "5.12.1",
+    "safetensors": "0.8.0",
+    "device": "NVIDIA GeForce RTX 4090",
+    "hf_home": "D:\\AI\\cache\\huggingface",
+    "hf_hub_cache": "D:\\AI\\cache\\huggingface\\hub"
+  },
+  "method": {
+    "basis": "static Pythia input embeddings",
+    "metric": "cosine_similarity",
+    "knn_k": 10,
+    "knn_algorithm": "exact full selected-population matrix",
+    "directed_graph": "each selected token points to its 10 nearest selected tokens",
+    "undirected_graph": "edge retained when either directed relation exists",
+    "undirected_graph_weighting": "unweighted for topology and communities",
+    "community_algorithm": "NetworkX Louvain",
+    "community_resolution": 1.0,
+    "random_replicates_per_state": 20,
+    "random_seed": 20261112,
+    "random_baseline": "sampled without replacement from the exact-target-removed vocabulary; positive, negative and total counts match each observed state",
+    "selected_figure_states": [
+      0,
+      8,
+      16,
+      24,
+      32
+    ],
+    "interpretation_boundary": "Layer-wise changes arise from changing R004 membership inside one fixed static embedding topology. Communities are geometric graph partitions, not established topics. The null controls population size only."
+  },
+  "source_manifest": {
+    "path": "single_prompt_topology/runs/R004_lithium-full-curve-cutoffs__20261112T092701Z_pythia-6.9b_52ff8f97c2/manifest.json",
+    "sha256": "d132f8a95da5e31caa2388179cc598b2f8ab632ee9598afc53d96df20cfe69da"
+  },
+  "source_artifacts": {
+    "cutoffs.csv": {
+      "bytes": 14840,
+      "sha256": "07b5ffab77b24babc376ce1aed28c24a1066f499230252c0965e3454ba823491"
+    },
+    "tail_tokens.csv.gz": {
+      "bytes": 4512165,
+      "sha256": "0ae949a6c91cdf3d3a25b9a73942e3e7f1ca2525de8c69e5b70e99257b40f6e6"
+    }
+  },
+  "artifacts": {
+    "state_topology_metrics.csv": {
+      "bytes": 10507,
+      "sha256": "0a1adf6614c37fdec0e74ed39970d5596a48c600e60dc9374982ed02f464e541"
+    },
+    "random_baseline_metrics.csv": {
+      "bytes": 120528,
+      "sha256": "7edefd211722ac8c53421854da521697baa9457a9cbfe010a289efa58eb5c61e"
+    },
+    "observed_vs_random.csv": {
+      "bytes": 19947,
+      "sha256": "8ba7e6557feb7d46f0bbe27a983c6bbe51f8ff7f4ed9c3bf29bd2b012143be9e"
+    },
+    "knn_edges.csv.gz": {
+      "bytes": 21913675,
+      "sha256": "e46533d2550f7051d31fdba085ba59c3a0b52997856a309041010c30b1b162ee"
+    },
+    "community_assignments.csv.gz": {
+      "bytes": 3529085,
+      "sha256": "756818d6670356c1a05e9d8738713c58c192ed2817fcdfeb124ece7f6b56f40d"
+    },
+    "community_summary.csv": {
+      "bytes": 128864,
+      "sha256": "5e79e71dbc75d4ff289d2b8db829dda7920feb4293d8926d41d9123480916d82"
+    },
+    "state_transitions.csv": {
+      "bytes": 5895,
+      "sha256": "ca0f742bb975a580072ed7b88101cbe9b6b070de1543278e25df10900f2242ff"
+    },
+    "persistent_edges.csv.gz": {
+      "bytes": 6061626,
+      "sha256": "2966045070f44033ab44626ef41a6ad8040cba5ab2187de2ad93dac240f5b26b"
+    },
+    "findings.md": {
+      "bytes": 3133,
+      "sha256": "9c8c1be0d9864f0ac7f32abcc52c64d6163393d55a9ee4c9730888c1bd8b120c"
+    },
+    "figures/topology_vs_random.png": {
+      "bytes": 422427,
+      "sha256": "61dc37cf566c52fa413d289cfb0a1f27bf3b50884a2a93eeff235016b7537029"
+    },
+    "figures/transition_stability.png": {
+      "bytes": 199737,
+      "sha256": "c495909e326553fc05838661feb088bf5676833938c8b528f0df0371c7555ba6"
+    },
+    "figures/selected_state_community_networks.png": {
+      "bytes": 844687,
+      "sha256": "144fead2300d8cde7dfc897520fb42dc5957e907c02deec4210b866317f61c06"
+    }
+  },
+  "results": {
+    "state_count": 33,
+    "valid_vocabulary_size": 50277,
+    "knn_k": 10,
+    "observed_population_rows": 191872,
+    "directed_edge_rows": 1918720,
+    "community_assignment_rows": 191872,
+    "community_summary_rows": 426,
+    "random_baseline_rows": 660,
+    "comparison_rows": 99,
+    "transition_rows": 32,
+    "persistent_edge_rows": 191879,
+    "states_above_random_similarity_q975": 33,
+    "states_above_random_same_region_q975": 33,
+    "median_adjacent_membership_jaccard": 0.7560532223172074,
+    "median_adjacent_edge_jaccard": 0.5307481241365939,
+    "median_adjacent_community_ari": 0.3827035052365909,
+    "peak_gpu_memory_bytes": 2266165248
+  }
+}
