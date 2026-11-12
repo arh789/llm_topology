@@ -12,7 +12,11 @@ __pycache__/
 .mypy_cache/
 .ruff_cache/
 .ipynb_checkpoints/
-single_prompt_topology/runs/
+
+# Generated run directories are ignored unless selected as curated evidence.
+single_prompt_topology/runs/*
+!single_prompt_topology/runs/R009_lithium-community-semantic-classification/
+!single_prompt_topology/runs/R009_lithium-community-semantic-classification/*.md
 
 # Model weights and checkpoints
 *.bin

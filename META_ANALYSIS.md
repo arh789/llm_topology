@@ -2913,3 +2913,51 @@ i am now getting chatgpt to start its analysis one state at the time. it will ad
 - Codex must not assume that the last locally synchronized GitHub commit remains
   the current remote state and must not overwrite or force-push over ChatGPT's
   analysis work.
+
+### MA-0028 — R009 first-pass completion and verified local import
+
+- Entry timestamp: `2026-11-13T09:40:58+11:00`
+- Timezone: `Australia/Sydney`
+- Authors and sources: `external ChatGPT analysis`; `Codex repository inspection and import verification`
+- Entry type: `observed run completion, provenance and local reconciliation record`
+- Related runs: `R008`; `R009`
+- Preservation mode: `structured operational record; no source response reproduced verbatim`
+
+#### Observed GitHub changes
+
+- External ChatGPT added 36 commits after the last Codex GitHub commit
+  `b732d63`, ending at remote head `49a4b0a`.
+- The changes created the R009 protocol, 33 state-classification files covering
+  State 00 through State 32, and a completeness-verification report.
+- The R009 directory contains 35 files and 5,593 added lines. No
+  `R009_SYNTHESIS.md` file was present at the inspected remote head.
+
+#### Independent structural verification
+
+- All 33 state indices are present once, with no missing or duplicate state
+  files.
+- The state tables contain 392 positive-head and 400 negative-tail community
+  records, totalling all 792 R008 community instances.
+- All 792 community rows matched the locked output schema and permitted
+  taxonomy and confidence values.
+- Community IDs are complete, contiguous and non-duplicated within each state
+  and side.
+- Occurrences of words such as `emerging` and `adjacent` were ordinary
+  descriptive content, not SDA-3 role assignments.
+
+#### Local import verification
+
+- The complete R009 directory was imported from GitHub remote head `49a4b0a`
+  into the authoritative local working repository.
+- The 35 local files were compared with the refreshed GitHub checkout using
+  SHA-256. All 35 matched byte-for-byte, with no missing or extra local files.
+- The Git ignore policy was narrowed so this curated text-only R009 package is
+  tracked while other generated run directories remain ignored by default.
+
+#### Interpretation boundary
+
+R009 is model-generated semantic interpretation of measured R008 communities.
+Its structural completeness verification establishes coverage and schema
+consistency, not the correctness of the semantic labels, semantic coherence,
+cross-state persistence, an optimal layer or support for SDA-3. Those remain
+questions for a later, separately authorized synthesis stage.

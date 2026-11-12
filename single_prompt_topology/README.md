@@ -178,6 +178,27 @@ It contains 191,872 node-state rows, 1,918,720 directed within-side edges,
 relations. These remain static-embedding networks selected by a moving
 contextual target representation.
 
+## R009 state-local semantic classification
+
+R009 is an interpretive analysis of R008 rather than another measured pipeline
+run. It does not run Pythia, recalculate scores, alter cutoffs or change the
+R008 communities. Its locked contract is
+[`R009_ANALYSIS_PROTOCOL.md`](runs/R009_lithium-community-semantic-classification/R009_ANALYSIS_PROTOCOL.md).
+
+External ChatGPT classified every state-local community independently under a
+fixed descriptive taxonomy, producing one self-contained Markdown file for
+each of the 33 recorded states. The
+[`R009_COMPLETENESS_VERIFICATION.md`](runs/R009_lithium-community-semantic-classification/R009_COMPLETENESS_VERIFICATION.md)
+check reports 392 positive-head and 400 negative-tail instances, for all 792
+R008 communities exactly once with valid schemas, taxonomy values and
+confidence values.
+
+The R009 labels are model-generated interpretations of measured R008
+communities, not new measurements or proof of semantic coherence. No
+cross-state synthesis, SDA-3 role assignment, optimal-layer judgement or
+curvature interpretation has yet been performed. The text-only package was
+imported byte-for-byte from `chatgpt-analysis` commit `49a4b0a`.
+
 ## Run outputs
 
 Each execution writes a timestamped directory under `runs/` containing:
@@ -192,12 +213,13 @@ Each execution writes a timestamped directory under `runs/` containing:
 - `figures/target_relationships.png`;
 - `figures/token_similarity_layers.png`.
 
-Generated run directories are excluded from Git by default. The reviewed
-baseline at
+Generated run directories are excluded from Git by default unless deliberately
+selected as curated evidence. The reviewed baseline at
 `runs/R001_lithium-initial-output-inspection__20261112T063540Z_pythia-6.9b_52ff8f97c2/`
 is deliberately
 committed as the first reproducible evidence package; its `manifest.json`
-records the exact model revision and hashes for every artifact. Later runs
+records the exact model revision and hashes for every artifact. R009 is also
+tracked as a curated text-only interpretive package. Other later run outputs
 should remain local unless they are explicitly selected for comparison or
 publication.
 
