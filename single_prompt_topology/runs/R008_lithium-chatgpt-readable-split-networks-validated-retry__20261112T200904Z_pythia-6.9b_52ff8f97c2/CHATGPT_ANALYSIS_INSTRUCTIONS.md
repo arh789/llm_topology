@@ -28,6 +28,7 @@ Read these files in order:
 4. `single_prompt_topology/R008_PLAN.md`
 5. The successful R008 `manifest.json` and `findings.md`
 6. The primary analysis data:
+   - `COMMUNITY_COUNTS_BY_STATE.md`
    - `chatgpt_community_networks.json`
    - `chatgpt_layer_packets.md`
 7. Supporting tables when required:
