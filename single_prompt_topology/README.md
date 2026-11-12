@@ -36,11 +36,21 @@ Each execution writes a timestamped directory under `runs/` containing:
 - `figures/token_similarity_layers.png`.
 
 Generated run directories are excluded from Git by default. The reviewed
-baseline at `runs/20261112T063540Z_pythia-6.9b_52ff8f97c2/` is deliberately
+baseline at
+`runs/R001_lithium-initial-output-inspection__20261112T063540Z_pythia-6.9b_52ff8f97c2/`
+is deliberately
 committed as the first reproducible evidence package; its `manifest.json`
 records the exact model revision and hashes for every artifact. Later runs
 should remain local unless they are explicitly selected for comparison or
 publication.
+
+## Run naming
+
+Before each execution, set a new sequential `RUN_NUMBER` and a neutral,
+lowercase kebab-case `RUN_NAME` in the configuration cell. Run directories use
+the form `RNNN_<target>-<purpose>__<UTC>_<model>_<prompt-hash>`. Numbers are
+never reused, including for failed or repeated runs, and the notebook stops if
+the selected number already exists.
 
 ## Interpretation boundary
 

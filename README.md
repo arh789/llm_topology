@@ -28,7 +28,7 @@ versioned here.
    executed interactive comparison surface for Pythia 410M, 6.9B and 12B.
 5. [`single_prompt_topology/README.md`](single_prompt_topology/README.md) — the
    proof-of-concept pipeline, output contract and interpretation boundary.
-6. [`single_prompt_topology/runs/20261112T063540Z_pythia-6.9b_52ff8f97c2/manifest.json`](single_prompt_topology/runs/20261112T063540Z_pythia-6.9b_52ff8f97c2/manifest.json)
+6. [`single_prompt_topology/runs/R001_lithium-initial-output-inspection__20261112T063540Z_pythia-6.9b_52ff8f97c2/manifest.json`](single_prompt_topology/runs/R001_lithium-initial-output-inspection__20261112T063540Z_pythia-6.9b_52ff8f97c2/manifest.json)
    — the selected successful baseline and artifact index.
 
 ## Provenance
@@ -39,7 +39,7 @@ versioned here.
   inspected on 2026-11-12.
 - The case-study mapping was prepared from the handover and the published page.
 - This complete tracked snapshot was copied from authoritative local project
-  commit `6d99770eb8a87de623464f5103901b1bf9284ea8`.
+  commit `3220ece93abfb78fbbba7da5863b563f816a7f28`.
 
 This is an analysis copy in the private `chatgpt-analysis` repository. The
 independent local Git repository remains the authoritative working copy, and
