@@ -1,0 +1,124 @@
+{
+  "run_id": "20261112T063540Z_pythia-6.9b_52ff8f97c2",
+  "status": "successful",
+  "started_at": "2026-11-12T06:35:40.787498+00:00",
+  "completed_at": "2026-11-12T06:36:06.270053+00:00",
+  "required_components": [
+    "capture",
+    "analysis"
+  ],
+  "components": {
+    "capture": {
+      "status": "successful",
+      "completed_at": "2026-11-12T06:36:02.442162+00:00"
+    },
+    "analysis": {
+      "status": "successful",
+      "completed_at": "2026-11-12T06:36:06.270053+00:00"
+    }
+  },
+  "model": {
+    "id": "EleutherAI/pythia-6.9b",
+    "requested_revision": "c0e3eee36dc47af0c49f361c74cfe459c09f7f23",
+    "resolved_revision": "c0e3eee36dc47af0c49f361c74cfe459c09f7f23",
+    "dtype": "torch.bfloat16"
+  },
+  "input": {
+    "prompt": "Battery demand, mineral supply, electric vehicles, and energy storage all shape the market for lithium",
+    "prompt_sha256": "52ff8f97c22b72506ca9b7acfb9be4450726157f1a31c6a4ce3e112380cd7bf7",
+    "target_text": " lithium",
+    "seed": 42,
+    "token_ids": [
+      35,
+      27263,
+      4831,
+      13,
+      17160,
+      6186,
+      13,
+      5637,
+      9411,
+      13,
+      285,
+      2341,
+      5718,
+      512,
+      5281,
+      253,
+      2791,
+      323,
+      27747
+    ],
+    "target_token_id": 27747,
+    "target_position": 18
+  },
+  "environment": {
+    "python": "3.11.15",
+    "torch": "2.6.0+cu124",
+    "transformers": "5.12.1",
+    "safetensors": "0.8.0",
+    "pandas": "3.0.3",
+    "matplotlib": "3.10.9",
+    "device": "NVIDIA GeForce RTX 4090",
+    "total_gpu_gib": 23.988,
+    "free_gpu_gib_before_load": 22.5,
+    "hf_home": "D:\\AI\\cache\\huggingface",
+    "hf_hub_cache": "D:\\AI\\cache\\huggingface\\hub"
+  },
+  "artifacts": {
+    "tokens.csv": {
+      "bytes": 586,
+      "sha256": "2507867f14088712889b30902d992602e19181277624103c6194f1a34501d39a"
+    },
+    "hidden_states.safetensors": {
+      "bytes": 5136704,
+      "sha256": "71f92b53676c7b27ac7e48253847e11e3ae52b2dd8589c4d91e1d6f2165e4599"
+    },
+    "layer_metrics.csv": {
+      "bytes": 4166,
+      "sha256": "5703e82d7f3080a582b1dbe2c026086786f2f3504b97ab6aa7c84ab31ed7e012"
+    },
+    "target_relationships.csv": {
+      "bytes": 29107,
+      "sha256": "4d129f0d37a96a91d4858b31f56f00404ef4d80a0fcefec8a02acd90e2164a98"
+    },
+    "semantic_neighbors.csv": {
+      "bytes": 3098,
+      "sha256": "d79b85f3862a6c1ab614065a7182f90759de0e037416207153b064c22ac122f8"
+    },
+    "figures/target_trajectory.png": {
+      "bytes": 125363,
+      "sha256": "037de29e17e466df2071cbd6c2307a516d5439f80c0c303ce8e01ab3709836f7"
+    },
+    "figures/target_relationships.png": {
+      "bytes": 78823,
+      "sha256": "c1099574f4e97a03046132d4fc58e574290fcd579265b4cfc5db514a76bc2e34"
+    },
+    "figures/token_similarity_layers.png": {
+      "bytes": 81537,
+      "sha256": "3de27a569d164d2045da82b783e640f63aeab7a3cdf18f1d1c6fed8cb9630af5"
+    }
+  },
+  "capture": {
+    "hidden_state_shape": [
+      33,
+      19,
+      4096
+    ],
+    "hidden_state_dtype": "torch.bfloat16",
+    "forward_seconds": 0.541419399996812,
+    "peak_gpu_memory_gib": 12.787435054779053
+  },
+  "analysis": {
+    "selected_layers": [
+      0,
+      8,
+      16,
+      24,
+      32
+    ],
+    "layer_count": 33,
+    "token_count": 19,
+    "hidden_dimension": 4096
+  }
+}

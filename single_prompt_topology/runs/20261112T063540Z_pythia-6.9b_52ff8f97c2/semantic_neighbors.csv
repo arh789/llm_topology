@@ -1,0 +1,42 @@
+source,metric,rank,token_id,raw_token,decoded_token,score
+input_embedding,cosine_similarity,1,8182,ĠLi, Li,0.24957743287086487
+input_embedding,cosine_similarity,2,17448,Li,Li,0.21054129302501678
+input_embedding,cosine_similarity,3,31976,ĠLith, Lith,0.19406723976135254
+input_embedding,cosine_similarity,4,23160,Ġpotassium, potassium,0.17764292657375336
+input_embedding,cosine_similarity,5,29742,Ġmagnesium, magnesium,0.17582140862941742
+input_embedding,cosine_similarity,6,46456,Ġcobalt, cobalt,0.17034611105918884
+input_embedding,cosine_similarity,7,38244,Ġhelium, helium,0.1627463698387146
+input_embedding,cosine_similarity,8,11914,Ġsodium, sodium,0.15776681900024414
+input_embedding,cosine_similarity,9,20837,assium,assium,0.1522531658411026
+input_embedding,cosine_similarity,10,26796,odium,odium,0.1490987241268158
+input_embedding,cosine_similarity,11,31191,Ġelectrolyte, electrolyte,0.1433921605348587
+input_embedding,cosine_similarity,12,37583,onium,onium,0.14268434047698975
+input_embedding,cosine_similarity,13,45779,mium,mium,0.14210627973079681
+input_embedding,cosine_similarity,14,30237,Ġnickel, nickel,0.14112627506256104
+input_embedding,cosine_similarity,15,33322,Ġammonium, ammonium,0.13885152339935303
+input_embedding,cosine_similarity,16,19442,Ġhydrox, hydrox,0.13667364418506622
+input_embedding,cosine_similarity,17,11672,Ġcalcium, calcium,0.13488014042377472
+input_embedding,cosine_similarity,18,42391,Ġalkali, alkali,0.13185331225395203
+input_embedding,cosine_similarity,19,24570,esium,esium,0.13161733746528625
+input_embedding,cosine_similarity,20,30327,Ġtitanium, titanium,0.12968167662620544
+final_prediction,probability,1,14,-,-,0.4850909411907196
+final_prediction,probability,2,7235,Ġion, ion,0.16764295101165771
+final_prediction,probability,3,15,.,.,0.07439111173152924
+final_prediction,probability,4,19978,Ġbatteries, batteries,0.06988397985696793
+final_prediction,probability,5,285,Ġand, and,0.024151256307959557
+final_prediction,probability,6,13,",",",",0.021313410252332687
+final_prediction,probability,7,9378,Ġbattery, battery,0.014648477546870708
+final_prediction,probability,8,275,Ġin, in,0.011408246122300625
+final_prediction,probability,9,187,Ċ,"
+",0.007840764708817005
+final_prediction,probability,10,13291,Ġions, ions,0.005388874094933271
+final_prediction,probability,11,17110,Ġchemicals, chemicals,0.004196858964860439
+final_prediction,probability,12,3580,Ġproducts, products,0.0037037148140370846
+final_prediction,probability,13,2341,Ġenergy, energy,0.0032685170881450176
+final_prediction,probability,14,5148,Ġmetal, metal,0.003070487640798092
+final_prediction,probability,15,313,Ġ(, (,0.0028844561893492937
+final_prediction,probability,16,39040,Ġcarbonate, carbonate,0.002545523690059781
+final_prediction,probability,17,3275,Ġproduction, production,0.002545523690059781
+final_prediction,probability,18,1128,âĢĶ,—,0.0023912980686873198
+final_prediction,probability,19,323,Ġfor, for,0.002110313391312957
+final_prediction,probability,20,5300,Ġresources, resources,0.0019824558403342962
