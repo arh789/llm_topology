@@ -1,0 +1,233 @@
+{
+  "run_number": "R008",
+  "run_name": "lithium-chatgpt-readable-split-networks-validated-retry",
+  "run_id": "R008_lithium-chatgpt-readable-split-networks-validated-retry__20261112T200904Z_pythia-6.9b_52ff8f97c2",
+  "technical_id": "20261112T200904Z_pythia-6.9b_52ff8f97c2",
+  "source_run": "R005_lithium-cutoff-population-topology-baseline__20261112T095944Z_pythia-6.9b_52ff8f97c2",
+  "membership_source_run": "R004_lithium-full-curve-cutoffs__20261112T092701Z_pythia-6.9b_52ff8f97c2",
+  "ultimate_source_run": "R001_lithium-initial-output-inspection__20261112T063540Z_pythia-6.9b_52ff8f97c2",
+  "status": "successful",
+  "started_at": "2026-11-12T20:09:04.421258+00:00",
+  "completed_at": "2026-11-12T20:10:54.908947+00:00",
+  "required_components": [
+    "source_validation",
+    "embedding_load",
+    "split_networks",
+    "transitions_and_bridges",
+    "chatgpt_exports",
+    "validation"
+  ],
+  "components": {
+    "source_validation": {
+      "status": "successful",
+      "completed_at": "2026-11-12T20:09:04.922933+00:00",
+      "seconds": 0.4559484999999768,
+      "validated_source_artifact_count": 3,
+      "state_count": 33,
+      "tail_membership_rows": 191872
+    },
+    "embedding_load": {
+      "status": "successful",
+      "completed_at": "2026-11-12T20:09:05.834906+00:00",
+      "seconds": 0.9111358999998629,
+      "embedding_shape": [
+        50277,
+        4096
+      ],
+      "embedding_dtype": "torch.float32",
+      "embedding_shard": "model-00001-of-00002.safetensors",
+      "embedding_shard_bytes": 9911600880,
+      "safetensors_index_sha256": "d89b85688f4f2cffd1963313c11e4cec758f7fe6b27fdbbf3ee4180d5b48d063"
+    },
+    "split_networks": {
+      "status": "successful",
+      "completed_at": "2026-11-12T20:10:22.869550+00:00",
+      "seconds": 77.0327734,
+      "primary_network_count": 66,
+      "node_rows": 191872,
+      "directed_edge_rows": 1918720,
+      "community_rows": 792,
+      "intercommunity_edge_rows": 4384
+    },
+    "transitions_and_bridges": {
+      "status": "successful",
+      "completed_at": "2026-11-12T20:10:53.253593+00:00",
+      "seconds": 30.38427210000009,
+      "adjacent_transition_rows": 64,
+      "persistent_edge_rows": 191262,
+      "cross_side_directed_edge_rows": 604515,
+      "validated_r005_combined_edge_rows": 1918720
+    },
+    "chatgpt_exports": {
+      "status": "successful",
+      "completed_at": "2026-11-12T20:10:53.649038+00:00",
+      "seconds": 0.3936826999999994,
+      "compact_json_network_count": 66,
+      "layer_packet_state_count": 33,
+      "findings_report_written": true
+    },
+    "validation": {
+      "status": "successful",
+      "completed_at": "2026-11-12T20:10:54.908947+00:00",
+      "seconds": 1.2593825000001289
+    }
+  },
+  "model": {
+    "id": "EleutherAI/pythia-6.9b",
+    "revision": "c0e3eee36dc47af0c49f361c74cfe459c09f7f23",
+    "model_forward_executed": false,
+    "full_model_loaded": false,
+    "embedding_weight_loaded": true,
+    "embedding_weight": "gpt_neox.embed_in.weight",
+    "source_score_matrix_recalculated": false
+  },
+  "input": {
+    "prompt": "Battery demand, mineral supply, electric vehicles, and energy storage all shape the market for lithium",
+    "prompt_sha256": "52ff8f97c22b72506ca9b7acfb9be4450726157f1a31c6a4ce3e112380cd7bf7",
+    "target_text": " lithium",
+    "target_token_id": 27747,
+    "target_position": 18
+  },
+  "pipeline": {
+    "script": "single_prompt_topology\\export_chatgpt_split_networks.py",
+    "script_sha256": "d4ab92939c192e80fe1d7d095925798ba13ebf2f7882057d93216411a5b4905b",
+    "pre_run_plan": "single_prompt_topology/R008_PLAN.md",
+    "pre_run_plan_sha256": "4b019157c54801a344f15816bef264a2ba3bd96c1a3153207c8e2dbd0b01e3f6"
+  },
+  "environment": {
+    "python": "3.11.15",
+    "torch": "2.6.0+cu124",
+    "numpy": "2.4.4",
+    "pandas": "3.0.3",
+    "networkx": "3.6.1",
+    "scikit_learn": "1.8.0",
+    "transformers": "5.12.1",
+    "safetensors": "0.8.0",
+    "device": "NVIDIA GeForce RTX 4090",
+    "hf_home": "D:\\AI\\cache\\huggingface",
+    "hf_hub_cache": "D:\\AI\\cache\\huggingface\\hub"
+  },
+  "method": {
+    "basis": "static Pythia input embeddings",
+    "metric": "cosine_similarity",
+    "knn_k": 10,
+    "primary_network_count": 66,
+    "primary_network_definition": "separate exact directed 10-nearest-neighbour graphs inside each state-side population",
+    "undirected_graph": "edge retained when either directed relation exists",
+    "undirected_graph_weighting": "unweighted for topology and communities",
+    "community_algorithm": "NetworkX Louvain",
+    "community_resolution": 1.0,
+    "cross_side_definition": "cross-region directed relations retained from R005 combined 10-nearest-neighbour graphs; not exhaustive cross-side similarity",
+    "interpretation_boundary": "Layer-wise differences arise from changing R004 membership inside one fixed static embedding topology. Positive means target-relative alignment and negative means anti-alignment. Neither establishes a topic, suppression, contradiction, exclusion or curvature."
+  },
+  "source_manifests": {
+    "R004": {
+      "path": "single_prompt_topology/runs/R004_lithium-full-curve-cutoffs__20261112T092701Z_pythia-6.9b_52ff8f97c2/manifest.json",
+      "sha256": "d132f8a95da5e31caa2388179cc598b2f8ab632ee9598afc53d96df20cfe69da"
+    },
+    "R005": {
+      "path": "single_prompt_topology/runs/R005_lithium-cutoff-population-topology-baseline__20261112T095944Z_pythia-6.9b_52ff8f97c2/manifest.json",
+      "sha256": "2346fefc2beca8a124b24b0a7f71c7a11c5e7d4bfd5012f9ef51bebe08a06138"
+    }
+  },
+  "source_artifacts": {
+    "R004/cutoffs.csv": {
+      "bytes": 14840,
+      "sha256": "07b5ffab77b24babc376ce1aed28c24a1066f499230252c0965e3454ba823491"
+    },
+    "R004/tail_tokens.csv.gz": {
+      "bytes": 4512165,
+      "sha256": "0ae949a6c91cdf3d3a25b9a73942e3e7f1ca2525de8c69e5b70e99257b40f6e6"
+    },
+    "R005/knn_edges.csv.gz": {
+      "bytes": 21913675,
+      "sha256": "e46533d2550f7051d31fdba085ba59c3a0b52997856a309041010c30b1b162ee"
+    }
+  },
+  "artifacts": {
+    "network_index.csv": {
+      "bytes": 17171,
+      "sha256": "88ba905744070c9b5742654092b31ca99b6cd46a0607db61f826a8cb8ac1b49a"
+    },
+    "nodes.csv.gz": {
+      "bytes": 5361204,
+      "sha256": "a4e434506e4416f99e265a3d479ff984d942942af57e5bed503bdad39f457a3e"
+    },
+    "edges.csv.gz": {
+      "bytes": 20917135,
+      "sha256": "b2b1e9b694978812960c9c3c5a466ff16cca76818372d111473d252ff4086846"
+    },
+    "community_nodes.csv": {
+      "bytes": 491076,
+      "sha256": "5d1b6b57dabddb35305ef6d02456a58afa9778b6bc9f4e373d2989c8d6b71c39"
+    },
+    "community_edges.csv": {
+      "bytes": 414096,
+      "sha256": "43f5a070db02eb4ff4816effecca47e1c8c40f24e64724edc802a67729d6b34d"
+    },
+    "state_transitions.csv": {
+      "bytes": 9416,
+      "sha256": "62e8b6f14b83fabf6756714a62a94ed5c86b33a68afd55a051942bf39d5065c8"
+    },
+    "persistent_edges.csv.gz": {
+      "bytes": 7784308,
+      "sha256": "4e65c01ab833e6b88be7e326ad0207221b52f0267f32451327164c0d96c4303e"
+    },
+    "cross_side_edges.csv.gz": {
+      "bytes": 11066841,
+      "sha256": "aa0a901c0c81cb355530849c1fd447ae010077fdecd11bd2ed74824b9cedfcc0"
+    },
+    "chatgpt_community_networks.json": {
+      "bytes": 2075008,
+      "sha256": "1f5b33bd5522695f11272697b80d7de1d98970ef24abdd0bc187c54b8d926856"
+    },
+    "chatgpt_layer_packets.md": {
+      "bytes": 242372,
+      "sha256": "74a0063cb7a7e1b5c683dbacaaaea0271cd9e07855bf73becf11fe0b53194787"
+    },
+    "findings.md": {
+      "bytes": 2036,
+      "sha256": "466e0cc1baca45c31c1bc37dc8efff5440db63e743dc89d8b5c4a7f1d0b4a5b4"
+    }
+  },
+  "results": {
+    "state_count": 33,
+    "side_count": 2,
+    "primary_network_count": 66,
+    "valid_vocabulary_size": 50277,
+    "knn_k": 10,
+    "node_rows": 191872,
+    "directed_edge_rows": 1918720,
+    "community_rows": 792,
+    "intercommunity_edge_rows": 4384,
+    "transition_rows": 64,
+    "persistent_edge_rows": 191262,
+    "cross_side_directed_edge_rows": 604515,
+    "compact_json_network_count": 66,
+    "side_summaries": {
+      "positive_head": {
+        "population_min": 1871,
+        "population_max": 3491,
+        "community_min": 9,
+        "community_max": 14,
+        "modularity_min": 0.49873199529697165,
+        "modularity_max": 0.5890398873822386,
+        "median_membership_jaccard": 0.7537242217015929,
+        "median_edge_jaccard": 0.5343779386416542,
+        "median_community_ari": 0.3748914940389326
+      },
+      "negative_tail": {
+        "population_min": 1316,
+        "population_max": 3313,
+        "community_min": 10,
+        "community_max": 15,
+        "modularity_min": 0.4686133937263179,
+        "modularity_max": 0.5417614444223965,
+        "median_membership_jaccard": 0.7581901181525241,
+        "median_edge_jaccard": 0.5371120859746328,
+        "median_community_ari": 0.39857354634147935
+      }
+    },
+    "peak_gpu_memory_bytes": 2266165248
+  }
+}
