@@ -8,19 +8,25 @@ representation geometry.
 
 The package contains a research design, one behavioural case mapping, an
 executed model playground, one successful single-prompt hidden-state capture
-from Pythia 6.9B and five successful derived analyses. R002 created the
-full-vocabulary static-basis score matrix; R003 tested an unnecessarily gated
-boundary policy; R004 retains the full-curve upper and lower elbow cutoffs at
-all states without that acceptance gate; R005 constructs exact static
-embedding relationship networks for those populations; and R008 exports 66
-separate positive/negative networks in complete and ChatGPT-readable forms
-after two documented failed attempts. R005 found greater
-nearest-neighbour density and positive/negative segregation than a size-matched
-random null at all 33 states, but its communities also contain tokenizer and
-morphological structure and do not establish semantic topics. The evidence does
-not establish semantic opposition, a generally optimal layer, causal mechanisms
-or a correspondence between semantic conflict and geometric curvature. Model
-weights remain in the shared cache under `D:\AI` and are not versioned here.
+from Pythia 6.9B, five successful measured derived analyses and one completed
+interpretive classification run. R002 created the full-vocabulary static-basis
+score matrix; R003 tested an unnecessarily gated boundary policy; R004 retains
+the full-curve upper and lower elbow cutoffs at all states without that
+acceptance gate; R005 constructs exact static embedding relationship networks
+for those populations; and R008 exports 66 separate positive/negative networks
+in complete and ChatGPT-readable forms after two documented failed attempts.
+R009 applies a fixed descriptive taxonomy to all 792 state-local R008
+communities across 33 states and passes its structural completeness check.
+
+R005 found greater nearest-neighbour density and positive/negative segregation
+than a size-matched random null at all 33 states, but its communities also
+contain tokenizer and morphological structure. R009 records model-generated
+candidate identities for those communities; it is not new measured evidence
+and does not establish semantic coherence or SDA-3 roles. Cross-state synthesis
+has not begun. The evidence does not establish semantic opposition, a generally
+optimal layer, causal mechanisms or a correspondence between semantic conflict
+and geometric curvature. Model weights remain in the shared cache under
+`D:\AI` and are not versioned here.
 
 ## Reading order
 
@@ -64,6 +70,13 @@ weights remain in the shared cache under `D:\AI` and are not versioned here.
     — the successful corrected split-network contract and execution record.
 17. [`single_prompt_topology/runs/R008_lithium-chatgpt-readable-split-networks-validated-retry__20261112T200904Z_pythia-6.9b_52ff8f97c2/manifest.json`](single_prompt_topology/runs/R008_lithium-chatgpt-readable-split-networks-validated-retry__20261112T200904Z_pythia-6.9b_52ff8f97c2/manifest.json)
     — the successful R008 artifact index and validation record.
+18. [`single_prompt_topology/runs/R009_lithium-community-semantic-classification/R009_ANALYSIS_PROTOCOL.md`](single_prompt_topology/runs/R009_lithium-community-semantic-classification/R009_ANALYSIS_PROTOCOL.md)
+    — the locked descriptive-classification contract and interpretation
+    boundaries for the external ChatGPT analysis.
+19. [`single_prompt_topology/runs/R009_lithium-community-semantic-classification/`](single_prompt_topology/runs/R009_lithium-community-semantic-classification/)
+    — all 33 state-local community-classification files.
+20. [`single_prompt_topology/runs/R009_lithium-community-semantic-classification/R009_COMPLETENESS_VERIFICATION.md`](single_prompt_topology/runs/R009_lithium-community-semantic-classification/R009_COMPLETENESS_VERIFICATION.md)
+    — the exactly-once count, schema and protocol-boundary verification.
 
 ## Provenance
 
@@ -74,8 +87,11 @@ weights remain in the shared cache under `D:\AI` and are not versioned here.
 - The case-study mapping was prepared from the handover and the published page.
 
 Selected, documented snapshots may be published separately to the private
-`chatgpt-analysis` repository for external analysis. This repository remains
-the authoritative project working copy.
+`chatgpt-analysis` repository for external analysis. R009 was authored there
+by external ChatGPT and imported byte-for-byte at remote commit `49a4b0a`.
+GitHub may temporarily lead while external analysis is active, so its history
+must be fetched and reconciled before later edits or pushes. This repository
+remains the authoritative project working copy after that reconciliation.
 
 ## First experiment: Pythia prompt playground
 
