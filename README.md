@@ -17,18 +17,21 @@ versioned here.
 
 ## Reading order
 
-1. [`PROJECT_HANDOVER.md`](PROJECT_HANDOVER.md) — the governing research
+1. [`META_ANALYSIS.md`](META_ANALYSIS.md) — the append-only chronological
+   record, agent usage instructions, interpretations and methodological
+   decisions.
+2. [`PROJECT_HANDOVER.md`](PROJECT_HANDOVER.md) — the governing research
    objective, questions, epistemic distinctions and proposed phases.
-2. [`ZOMBIE_CASE_STUDY.md`](ZOMBIE_CASE_STUDY.md) — how an existing
+3. [`ZOMBIE_CASE_STUDY.md`](ZOMBIE_CASE_STUDY.md) — how an existing
    ChatGPT zombie-survival interrogation relates to the proposed research,
    including limitations and a candidate controlled stimulus.
-3. [`ANALYSIS_BRIEF.md`](ANALYSIS_BRIEF.md) — bounded questions for ChatGPT to
+4. [`ANALYSIS_BRIEF.md`](ANALYSIS_BRIEF.md) — bounded questions for ChatGPT to
    analyse using the two preceding documents.
-4. [`pythia_prompt_playground.ipynb`](pythia_prompt_playground.ipynb) — an
+5. [`pythia_prompt_playground.ipynb`](pythia_prompt_playground.ipynb) — an
    executed interactive comparison surface for Pythia 410M, 6.9B and 12B.
-5. [`single_prompt_topology/README.md`](single_prompt_topology/README.md) — the
+6. [`single_prompt_topology/README.md`](single_prompt_topology/README.md) — the
    proof-of-concept pipeline, output contract and interpretation boundary.
-6. [`single_prompt_topology/runs/R001_lithium-initial-output-inspection__20261112T063540Z_pythia-6.9b_52ff8f97c2/manifest.json`](single_prompt_topology/runs/R001_lithium-initial-output-inspection__20261112T063540Z_pythia-6.9b_52ff8f97c2/manifest.json)
+7. [`single_prompt_topology/runs/R001_lithium-initial-output-inspection__20261112T063540Z_pythia-6.9b_52ff8f97c2/manifest.json`](single_prompt_topology/runs/R001_lithium-initial-output-inspection__20261112T063540Z_pythia-6.9b_52ff8f97c2/manifest.json)
    — the selected successful baseline and artifact index.
 
 ## Provenance
@@ -39,7 +42,7 @@ versioned here.
   inspected on 2026-11-12.
 - The case-study mapping was prepared from the handover and the published page.
 - This complete tracked snapshot was copied from authoritative local project
-  commit `3220ece93abfb78fbbba7da5863b563f816a7f28`.
+  commit `4346aed73147a2e66e35757e95b8f712b4b35119`.
 
 This is an analysis copy in the private `chatgpt-analysis` repository. The
 independent local Git repository remains the authoritative working copy, and
