@@ -1857,3 +1857,97 @@ Test predictions against further measurements
 The crucial distinction: I should use the measured relationships to generate and challenge structural hypotheses, while keeping those interpretations separate from what the measurements actually establish.
 
 My task is not simply to describe the strongest clusters. It is to determine what holds the structure together, where it becomes unstable, what is absent, and what changes when alternative explanations are introduced.
+
+### MA-0017 — ChatGPT explanation of positive and negative cosine populations
+
+- Entry timestamp: `2026-11-12T21:41:39+11:00`
+- Timezone: `Australia/Sydney`
+- Author and source: `external ChatGPT response supplied by the project owner`
+- Entry type: `measurement and interpretation clarification`
+- Related runs: `R002`, `R004`, `R005`; proposed `R006`
+- Preservation mode: `verbatim`
+- Timestamp note: the original ChatGPT post time was unavailable; the entry timestamp records when the supplied response was added to the metaanalysis.
+
+#### Verbatim input
+
+In the current Pythia pipeline, positive and negative values represent cosine similarity between the contextual representation of the target token at a particular layer and tokens in the fixed input-embedding vocabulary.
+
+|   |
+| - |
+
+Value
+
+|   |
+| - |
+
+Meaning
+
+|   |
+| - |
+
+Positive (+)
+
+|   |
+| - |
+
+The target representation and vocabulary token point in broadly similar directions
+
+|   |
+| - |
+
+Zero (0)
+
+|   |
+| - |
+
+The representations are approximately orthogonal
+
+|   |
+| - |
+
+Negative (−)
+
+|   |
+| - |
+
+The representations point in opposing directions
+
+For each layer, the calculation is:
+
+\\[ s\_{l,i}=\frac{h_l\cdot e_i}{\\|h_l\\|\\|e_i\\|} \\]
+
+Where \\(h_l\\) is the contextual representation of `lithium` at layer \\(l\\), and \\(e_i\\) is a static vocabulary embedding.
+
+## What this means for your semantic analysis
+```sql
+                    LITHIUM
+                       |
+           Layer-specific representation
+                       |
+            +----------+----------+
+            |                     |
+       POSITIVE (+)          NEGATIVE (-)
+            |                     |
+    Directional alignment    Directional opposition
+            |                     |
+    High-score tokens        Low-score tokens
+            |                     |
+    Community detection      Community detection
+```
+
+The important distinction is that positive does not necessarily mean semantically related, and negative does not necessarily mean semantically contradictory or suppressed.
+
+For example, a negative cosine value cannot independently establish that the model is rejecting a topic. It only establishes geometric anti-alignment under the chosen measurement.
+
+## Why the changes across layers matter
+
+As the contextual representation of `lithium` changes:
+
+- Tokens can move into or out of the positive population.
+- Tokens can move into or out of the negative population.
+- Entire semantic communities may become more or less prominent.
+- The relative composition of those communities may change.
+
+The input embeddings remain fixed. The changing target representation produces the changing scores.
+
+The next analytical question is whether the positive and negative populations represent systematically different semantic structures, and how those differences evolve through transformer depth.
