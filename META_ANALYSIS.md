@@ -1747,3 +1747,67 @@ The strongest conclusion is:
 We also did not observe the selected tokens themselves changing through the layers. We observed the model’s changing representation of `lithium` selecting different areas of one fixed vocabulary-embedding map.
 
 Nothing here yet demonstrates contradiction, suppression, semantic conflict, curvature density or an optimal layer.
+
+### MA-0015 — Split positive/negative networks and ChatGPT-readable next run
+
+- Entry timestamp: `2026-11-12T21:21:42+11:00`
+- Timezone: `Australia/Sydney`
+- Authors and sources: `Codex assistant`; `project owner`
+- Entry type: `methodological next-step decision`
+- Related runs: `R004`, `R005`; proposed `R006`
+- Preservation mode: `verbatim`
+- Source note: the Codex text is the immediately preceding assistant response; the project-owner text is the decision supplied in the following instruction.
+- Timestamp note: original UI post times were unavailable; the entry timestamp records when the material was added to the metaanalysis.
+
+#### Codex response — verbatim
+
+Yes—two separate networks per recorded state is the cleaner design.
+
+```text
+Layer/state
+├── Positive-head network
+└── Negative-tail network
+```
+
+This changes the question from:
+
+> Do positive and negative tokens separate?
+
+to the more useful questions:
+
+> What structure exists inside the positive population?
+
+> What structure exists inside the negative population?
+
+For each network:
+
+- Nodes are tokens inside that layer’s relevant cutoff.
+- Edges are cosine relationships between tokens on that same side.
+- Communities are calculated separately.
+- Membership, edges and communities are tracked across layers.
+
+The nearest neighbours should be recalculated separately within each side. Merely filtering R005’s combined graph could remove cross-side edges and leave some tokens with fewer than ten neighbours.
+
+Cross-side relationships should still be preserved, but as a secondary bridge table or bipartite network:
+
+```text
+positive network ← cross-scale bridges → negative network
+```
+
+This produces 66 primary networks from the 33 recorded states. No new transformer run is required; the existing memberships and static embeddings are sufficient.
+
+The terminology still needs care:
+
+- “Positive” means high cosine compatibility with the contextual `lithium` vector.
+- “Negative” means geometric anti-alignment.
+- They do not mean good/bad, promoted/suppressed or true/false.
+
+This design is substantially better suited to investigating topic-like organisation within each side.
+
+#### Project-owner decision — verbatim
+
+creating data more user friendly for chatgpt analysis will be the next run
+
+#### Recorded status
+
+The next run is reserved conceptually for ChatGPT-readable positive and negative network exports. No R006 plan, implementation or run directory was created by this entry.
