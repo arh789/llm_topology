@@ -1811,3 +1811,49 @@ creating data more user friendly for chatgpt analysis will be the next run
 #### Recorded status
 
 The next run is reserved conceptually for ChatGPT-readable positive and negative network exports. No R006 plan, implementation or run directory was created by this entry.
+
+### MA-0016 — ChatGPT semantic-network analysis role
+
+- Entry timestamp: `2026-11-12T21:35:28+11:00`
+- Timezone: `Australia/Sydney`
+- Author and source: `external ChatGPT response supplied by the project owner`
+- Entry type: `analysis-role definition`
+- Related runs: `R005`; proposed `R006`
+- Preservation mode: `verbatim`
+- Timestamp note: the original ChatGPT post time was unavailable; the entry timestamp records when the supplied response was added to the metaanalysis.
+
+#### Verbatim input
+
+Yes. My role is to interpret the semantic structures extracted by the pipeline, not redesign the pipeline around a different objective.
+
+The division is now clearer:
+
+Codex: Measures and extracts the data.
+
+My role: Analyses the resulting semantic networks to determine:
+
+1. What structure forms? Identify topics, communities and their relationships.
+2. What remains stable? Identify persistent semantic structures across layers.
+3. What changes? Identify emerging, disappearing, splitting and merging communities.
+4. Where is coherence strongest or weakest? Examine compatible and competing semantic relationships.
+5. What is being suppressed or excluded? Investigate missing, peripheral and negatively associated structures without assuming negative cosine implies suppression.
+6. What additions A and B are suggested? Distinguish genuine coherence-increasing explanations from those that conceal conflict.
+7. What trajectories follow? Infer how alternative additions would reorganise the semantic structure.
+
+The essential workflow is:
+```yaml
+CODEX
+Capture → Score → Cutoff → Communities → Export
+                                      |
+                                      v
+CHATGPT
+Interpret → Compare → Challenge → Infer trajectories
+                                      |
+                                      v
+CODEX
+Test predictions against further measurements
+```
+
+The crucial distinction: I should use the measured relationships to generate and challenge structural hypotheses, while keeping those interpretations separate from what the measurements actually establish.
+
+My task is not simply to describe the strongest clusters. It is to determine what holds the structure together, where it becomes unstable, what is absent, and what changes when alternative explanations are introduced.
