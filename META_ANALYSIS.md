@@ -2961,3 +2961,93 @@ Its structural completeness verification establishes coverage and schema
 consistency, not the correctness of the semantic labels, semantic coherence,
 cross-state persistence, an optimal layer or support for SDA-3. Those remain
 questions for a later, separately authorized synthesis stage.
+
+### MA-0029 — ChatGPT assessment of R009 incorporation and the next research problem
+
+- Entry timestamp: `2026-11-13T09:52:27+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `external ChatGPT response supplied by the project owner`
+- Entry type: `repository-state interpretation and proposed next-stage framing`
+- Related runs: `R008`; `R009`
+- Preservation mode: `verbatim`
+- Timestamp note: the original ChatGPT response time was unavailable; the
+  entry timestamp records when this response was added to the metaanalysis.
+
+#### ChatGPT response — verbatim
+
+The repository has changed in a consequential but **non-analytical** way. The current head is:
+
+`c6a8d32974bf2bf5a2ee6d885f550e2920b8faa9` — **Document R009 import and provenance**
+
+This is one commit beyond the R009 completeness-verification commit `49a4b0a2e0ed4eb831c9ba85311ebf093631022c`.
+
+### What changed
+
+- **R009 is now formally incorporated into the project repository.** The complete package is present under `single_prompt_topology/runs/R009_lithium-community-semantic-classification/`: protocol + 33 state files + completeness verification = **35 files**.
+- **R009 is now deliberately tracked by Git.** `.gitignore` changed from ignoring the entire `runs/` tree to ignoring generated runs by default while explicitly allowing the R009 Markdown package.
+- **The project READMEs now recognise R009 as a completed interpretive run.** The evidence chain is explicitly `R001 → R002 → … → R008 → R009`, with R009 described as classification rather than new measurement.
+- **`META_ANALYSIS.md` gained MA-0028**, recording the external ChatGPT work, independent Codex verification, import into the authoritative local repository, and byte-for-byte SHA-256 reconciliation of all 35 files.
+- **Provenance is now explicit.** R009 was authored externally in this GitHub repository through commit `49a4b0a`, then imported and verified against the authoritative local working copy.
+- **No pipeline code, R008 measurements, cutoffs, networks, community assignments or R009 classifications were altered.**
+- **No synthesis has been added.** There is still no `R009_SYNTHESIS.md`.
+
+### The important methodological change
+
+The repository now makes a much sharper distinction between three epistemic levels:
+```perl
+R008
+measured community/network structure
+        ↓
+R009
+model-generated state-local semantic identities
+        ↓
+NOT YET DONE
+cross-state semantic synthesis
+coherence analysis
+SDA-3 role testing
+layer usefulness analysis
+curvature/coherence relationship
+```
+
+That distinction is now embedded in both project READMEs and the meta-analysis rather than existing only in our working protocol.
+
+This matters because **R009 is no longer merely an external ChatGPT artefact**. It is now curated project evidence, while still being explicitly labelled *interpretive evidence*. The repository correctly prevents the 792 classifications from being silently promoted into measured facts.
+
+### Current project state
+
+The repository now says, in effect:
+
+> R008 establishes the measurable topology. R009 gives candidate semantic identities to every measured community. R009 has complete coverage, but semantic coherence, cross-layer continuity and SDA-3 correspondence have not yet been established.
+
+That is an accurate description of where the research actually stands.
+
+The most important sentence added to the repository is essentially the boundary that **structural completeness is not semantic validation**. The 792/792 result proves that every object has been classified; it does not prove that those classifications describe coherent semantic structures.
+
+### What has therefore become the next problem
+
+The remaining problem is no longer *“what is each community?”*.
+
+It is now:
+```vbnet
+792 state-local labelled communities
+        ↓
+Which labels correspond to genuinely coherent semantic structures?
+        ↓
+Which structures can be matched across states despite changing community IDs?
+        ↓
+How do those structures evolve?
+        ↓
+Which structures organise the positive and negative regions?
+        ↓
+Do stable structural roles emerge?
+        ↓
+Do any correspond to C / S / A / HCU / E?
+        ↓
+Which layers expose those relations most clearly?
+```
+
+That is a materially different task from R009 classification.
+
+One additional consequence of the update is operational: **the GitHub/local divergence problem has been resolved and documented**. The authoritative local repository now contains R009 byte-for-byte, while GitHub contains the corresponding provenance record. Future work can therefore proceed from `c6a8d3` without needing to reconstruct or re-import the R009 state files.
+
+The repository is now in a clean state for the **cross-state synthesis stage**. No further state-local classification or structural verification is required before beginning it.
