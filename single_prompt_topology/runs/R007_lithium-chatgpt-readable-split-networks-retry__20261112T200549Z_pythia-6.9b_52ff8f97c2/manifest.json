@@ -1,0 +1,150 @@
+{
+  "run_number": "R007",
+  "run_name": "lithium-chatgpt-readable-split-networks-retry",
+  "run_id": "R007_lithium-chatgpt-readable-split-networks-retry__20261112T200549Z_pythia-6.9b_52ff8f97c2",
+  "technical_id": "20261112T200549Z_pythia-6.9b_52ff8f97c2",
+  "source_run": "R005_lithium-cutoff-population-topology-baseline__20261112T095944Z_pythia-6.9b_52ff8f97c2",
+  "membership_source_run": "R004_lithium-full-curve-cutoffs__20261112T092701Z_pythia-6.9b_52ff8f97c2",
+  "ultimate_source_run": "R001_lithium-initial-output-inspection__20261112T063540Z_pythia-6.9b_52ff8f97c2",
+  "status": "failed",
+  "started_at": "2026-11-12T20:05:49.939779+00:00",
+  "completed_at": "2026-11-12T20:07:33.853522+00:00",
+  "required_components": [
+    "source_validation",
+    "embedding_load",
+    "split_networks",
+    "transitions_and_bridges",
+    "chatgpt_exports",
+    "validation"
+  ],
+  "components": {
+    "source_validation": {
+      "status": "successful",
+      "completed_at": "2026-11-12T20:05:50.421451+00:00",
+      "seconds": 0.447209799999996,
+      "validated_source_artifact_count": 3,
+      "state_count": 33,
+      "tail_membership_rows": 191872
+    },
+    "embedding_load": {
+      "status": "successful",
+      "completed_at": "2026-11-12T20:05:51.239965+00:00",
+      "seconds": 0.8180487000000767,
+      "embedding_shape": [
+        50277,
+        4096
+      ],
+      "embedding_dtype": "torch.float32",
+      "embedding_shard": "model-00001-of-00002.safetensors",
+      "embedding_shard_bytes": 9911600880,
+      "safetensors_index_sha256": "d89b85688f4f2cffd1963313c11e4cec758f7fe6b27fdbbf3ee4180d5b48d063"
+    },
+    "split_networks": {
+      "status": "successful",
+      "completed_at": "2026-11-12T20:06:58.135118+00:00",
+      "seconds": 66.89375580000001,
+      "primary_network_count": 66,
+      "node_rows": 191872,
+      "directed_edge_rows": 1918720,
+      "community_rows": 792,
+      "intercommunity_edge_rows": 4384
+    },
+    "transitions_and_bridges": {
+      "status": "successful",
+      "completed_at": "2026-11-12T20:07:33.150290+00:00",
+      "seconds": 35.01475960000005,
+      "adjacent_transition_rows": 64,
+      "persistent_edge_rows": 191262,
+      "cross_side_directed_edge_rows": 604515,
+      "validated_r005_combined_edge_rows": 1918720
+    },
+    "chatgpt_exports": {
+      "status": "successful",
+      "completed_at": "2026-11-12T20:07:33.650003+00:00",
+      "seconds": 0.4991228000000092,
+      "compact_json_network_count": 66,
+      "layer_packet_state_count": 33,
+      "findings_report_written": true
+    },
+    "validation": {
+      "status": "failed",
+      "completed_at": "2026-11-12T20:07:33.853522+00:00",
+      "error_type": "RuntimeError",
+      "error": "Persisted node row count does not reconcile."
+    }
+  },
+  "model": {
+    "id": "EleutherAI/pythia-6.9b",
+    "revision": "c0e3eee36dc47af0c49f361c74cfe459c09f7f23",
+    "model_forward_executed": false,
+    "full_model_loaded": false,
+    "embedding_weight_loaded": true,
+    "embedding_weight": "gpt_neox.embed_in.weight",
+    "source_score_matrix_recalculated": false
+  },
+  "input": {
+    "prompt": "Battery demand, mineral supply, electric vehicles, and energy storage all shape the market for lithium",
+    "prompt_sha256": "52ff8f97c22b72506ca9b7acfb9be4450726157f1a31c6a4ce3e112380cd7bf7",
+    "target_text": " lithium",
+    "target_token_id": 27747,
+    "target_position": 18
+  },
+  "pipeline": {
+    "script": "single_prompt_topology\\export_chatgpt_split_networks.py",
+    "script_sha256": "e12f48761450596d253780e451ffa7874d266a996ad5c2772c8ed76b37459b0e",
+    "pre_run_plan": "single_prompt_topology/R007_PLAN.md",
+    "pre_run_plan_sha256": "dc30efcbe98b24472402674a2eccd5dc6f646b846f413aff2ef51821a4fdf5c2"
+  },
+  "environment": {
+    "python": "3.11.15",
+    "torch": "2.6.0+cu124",
+    "numpy": "2.4.4",
+    "pandas": "3.0.3",
+    "networkx": "3.6.1",
+    "scikit_learn": "1.8.0",
+    "transformers": "5.12.1",
+    "safetensors": "0.8.0",
+    "device": "NVIDIA GeForce RTX 4090",
+    "hf_home": "D:\\AI\\cache\\huggingface",
+    "hf_hub_cache": "D:\\AI\\cache\\huggingface\\hub"
+  },
+  "method": {
+    "basis": "static Pythia input embeddings",
+    "metric": "cosine_similarity",
+    "knn_k": 10,
+    "primary_network_count": 66,
+    "primary_network_definition": "separate exact directed 10-nearest-neighbour graphs inside each state-side population",
+    "undirected_graph": "edge retained when either directed relation exists",
+    "undirected_graph_weighting": "unweighted for topology and communities",
+    "community_algorithm": "NetworkX Louvain",
+    "community_resolution": 1.0,
+    "cross_side_definition": "cross-region directed relations retained from R005 combined 10-nearest-neighbour graphs; not exhaustive cross-side similarity",
+    "interpretation_boundary": "Layer-wise differences arise from changing R004 membership inside one fixed static embedding topology. Positive means target-relative alignment and negative means anti-alignment. Neither establishes a topic, suppression, contradiction, exclusion or curvature."
+  },
+  "source_manifests": {
+    "R004": {
+      "path": "single_prompt_topology/runs/R004_lithium-full-curve-cutoffs__20261112T092701Z_pythia-6.9b_52ff8f97c2/manifest.json",
+      "sha256": "d132f8a95da5e31caa2388179cc598b2f8ab632ee9598afc53d96df20cfe69da"
+    },
+    "R005": {
+      "path": "single_prompt_topology/runs/R005_lithium-cutoff-population-topology-baseline__20261112T095944Z_pythia-6.9b_52ff8f97c2/manifest.json",
+      "sha256": "2346fefc2beca8a124b24b0a7f71c7a11c5e7d4bfd5012f9ef51bebe08a06138"
+    }
+  },
+  "source_artifacts": {
+    "R004/cutoffs.csv": {
+      "bytes": 14840,
+      "sha256": "07b5ffab77b24babc376ce1aed28c24a1066f499230252c0965e3454ba823491"
+    },
+    "R004/tail_tokens.csv.gz": {
+      "bytes": 4512165,
+      "sha256": "0ae949a6c91cdf3d3a25b9a73942e3e7f1ca2525de8c69e5b70e99257b40f6e6"
+    },
+    "R005/knn_edges.csv.gz": {
+      "bytes": 21913675,
+      "sha256": "e46533d2550f7051d31fdba085ba59c3a0b52997856a309041010c30b1b162ee"
+    }
+  },
+  "artifacts": {},
+  "results": {}
+}

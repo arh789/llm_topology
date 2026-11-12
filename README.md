@@ -8,11 +8,13 @@ representation geometry.
 
 The package contains a research design, one behavioural case mapping, an
 executed model playground, one successful single-prompt hidden-state capture
-from Pythia 6.9B and four successful derived analyses. R002 created the
+from Pythia 6.9B and five successful derived analyses. R002 created the
 full-vocabulary static-basis score matrix; R003 tested an unnecessarily gated
 boundary policy; R004 retains the full-curve upper and lower elbow cutoffs at
-all states without that acceptance gate; and R005 constructs exact static
-embedding relationship networks for those populations. R005 found greater
+all states without that acceptance gate; R005 constructs exact static
+embedding relationship networks for those populations; and R008 exports 66
+separate positive/negative networks in complete and ChatGPT-readable forms
+after two documented failed attempts. R005 found greater
 nearest-neighbour density and positive/negative segregation than a size-matched
 random null at all 33 states, but its communities also contain tokenizer and
 morphological structure and do not establish semantic topics. The evidence does
@@ -55,6 +57,13 @@ weights remain in the shared cache under `D:\AI` and are not versioned here.
     static-topology baseline.
 14. [`single_prompt_topology/runs/R005_lithium-cutoff-population-topology-baseline__20261112T095944Z_pythia-6.9b_52ff8f97c2/manifest.json`](single_prompt_topology/runs/R005_lithium-cutoff-population-topology-baseline__20261112T095944Z_pythia-6.9b_52ff8f97c2/manifest.json)
     — the successful R005 lineage, component status and artifact index.
+15. [`single_prompt_topology/R006_PLAN.md`](single_prompt_topology/R006_PLAN.md)
+    and [`single_prompt_topology/R007_PLAN.md`](single_prompt_topology/R007_PLAN.md)
+    — the preserved failed-attempt contracts and failure records.
+16. [`single_prompt_topology/R008_PLAN.md`](single_prompt_topology/R008_PLAN.md)
+    — the successful corrected split-network contract and execution record.
+17. [`single_prompt_topology/runs/R008_lithium-chatgpt-readable-split-networks-validated-retry__20261112T200904Z_pythia-6.9b_52ff8f97c2/manifest.json`](single_prompt_topology/runs/R008_lithium-chatgpt-readable-split-networks-validated-retry__20261112T200904Z_pythia-6.9b_52ff8f97c2/manifest.json)
+    — the successful R008 artifact index and validation record.
 
 ## Provenance
 
@@ -140,6 +149,16 @@ edge fraction exceeded the random 97.5th percentile at all 33 states. Because
 the null controls size only and the population is selected along the same
 target-relative axis used to define positive and negative tails, this establishes
 geometric organization relative to that null, not semantic topic validity.
+
+R006 failed before its first network because of an ambiguous temporary pandas
+index. R007 rebuilt all 66 networks and exports but failed closed when physical
+gzip lines were incorrectly used to count CSV records containing embedded
+newlines. R008 reran the full workflow and validated those records with a CSV
+parser. It exports separate positive-head and negative-tail token graphs,
+community-level networks, transition evidence, a secondary R005 cross-side
+table and compact JSON and Markdown packets for ChatGPT. The split exports make
+the existing measurements easier to interpret; they do not validate topics,
+suppression, coherence or curvature.
 
 ## Interpretation boundary
 

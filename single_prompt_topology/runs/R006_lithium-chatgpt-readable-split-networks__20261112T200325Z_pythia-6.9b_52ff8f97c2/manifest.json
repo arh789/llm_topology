@@ -1,0 +1,132 @@
+{
+  "run_number": "R006",
+  "run_name": "lithium-chatgpt-readable-split-networks",
+  "run_id": "R006_lithium-chatgpt-readable-split-networks__20261112T200325Z_pythia-6.9b_52ff8f97c2",
+  "technical_id": "20261112T200325Z_pythia-6.9b_52ff8f97c2",
+  "source_run": "R005_lithium-cutoff-population-topology-baseline__20261112T095944Z_pythia-6.9b_52ff8f97c2",
+  "membership_source_run": "R004_lithium-full-curve-cutoffs__20261112T092701Z_pythia-6.9b_52ff8f97c2",
+  "ultimate_source_run": "R001_lithium-initial-output-inspection__20261112T063540Z_pythia-6.9b_52ff8f97c2",
+  "status": "failed",
+  "started_at": "2026-11-12T20:03:25.632721+00:00",
+  "completed_at": "2026-11-12T20:03:28.097335+00:00",
+  "required_components": [
+    "source_validation",
+    "embedding_load",
+    "split_networks",
+    "transitions_and_bridges",
+    "chatgpt_exports",
+    "validation"
+  ],
+  "components": {
+    "source_validation": {
+      "status": "successful",
+      "completed_at": "2026-11-12T20:03:26.142167+00:00",
+      "seconds": 0.4449645000000828,
+      "validated_source_artifact_count": 3,
+      "state_count": 33,
+      "tail_membership_rows": 191872
+    },
+    "embedding_load": {
+      "status": "successful",
+      "completed_at": "2026-11-12T20:03:27.427249+00:00",
+      "seconds": 1.2841876999999613,
+      "embedding_shape": [
+        50277,
+        4096
+      ],
+      "embedding_dtype": "torch.float32",
+      "embedding_shard": "model-00001-of-00002.safetensors",
+      "embedding_shard_bytes": 9911600880,
+      "safetensors_index_sha256": "d89b85688f4f2cffd1963313c11e4cec758f7fe6b27fdbbf3ee4180d5b48d063"
+    },
+    "split_networks": {
+      "status": "failed",
+      "completed_at": "2026-11-12T20:03:28.097335+00:00",
+      "error_type": "ValueError",
+      "error": "'token_id' is both an index level and a column label, which is ambiguous."
+    },
+    "transitions_and_bridges": {
+      "status": "pending"
+    },
+    "chatgpt_exports": {
+      "status": "pending"
+    },
+    "validation": {
+      "status": "pending"
+    }
+  },
+  "model": {
+    "id": "EleutherAI/pythia-6.9b",
+    "revision": "c0e3eee36dc47af0c49f361c74cfe459c09f7f23",
+    "model_forward_executed": false,
+    "full_model_loaded": false,
+    "embedding_weight_loaded": true,
+    "embedding_weight": "gpt_neox.embed_in.weight",
+    "source_score_matrix_recalculated": false
+  },
+  "input": {
+    "prompt": "Battery demand, mineral supply, electric vehicles, and energy storage all shape the market for lithium",
+    "prompt_sha256": "52ff8f97c22b72506ca9b7acfb9be4450726157f1a31c6a4ce3e112380cd7bf7",
+    "target_text": " lithium",
+    "target_token_id": 27747,
+    "target_position": 18
+  },
+  "pipeline": {
+    "script": "single_prompt_topology\\export_chatgpt_split_networks.py",
+    "script_sha256": "d39a23ba0a0ddc67918006d3e2dde1266158ee0e8812bad2d41ddf2a2418f77a",
+    "pre_run_plan": "single_prompt_topology/R006_PLAN.md",
+    "pre_run_plan_sha256": "5968e1c6d86b1665f278f92c19b3c1c2a14b86d011361a9f99b392d743b686a3"
+  },
+  "environment": {
+    "python": "3.11.15",
+    "torch": "2.6.0+cu124",
+    "numpy": "2.4.4",
+    "pandas": "3.0.3",
+    "networkx": "3.6.1",
+    "scikit_learn": "1.8.0",
+    "transformers": "5.12.1",
+    "safetensors": "0.8.0",
+    "device": "NVIDIA GeForce RTX 4090",
+    "hf_home": "D:\\AI\\cache\\huggingface",
+    "hf_hub_cache": "D:\\AI\\cache\\huggingface\\hub"
+  },
+  "method": {
+    "basis": "static Pythia input embeddings",
+    "metric": "cosine_similarity",
+    "knn_k": 10,
+    "primary_network_count": 66,
+    "primary_network_definition": "separate exact directed 10-nearest-neighbour graphs inside each state-side population",
+    "undirected_graph": "edge retained when either directed relation exists",
+    "undirected_graph_weighting": "unweighted for topology and communities",
+    "community_algorithm": "NetworkX Louvain",
+    "community_resolution": 1.0,
+    "cross_side_definition": "cross-region directed relations retained from R005 combined 10-nearest-neighbour graphs; not exhaustive cross-side similarity",
+    "interpretation_boundary": "Layer-wise differences arise from changing R004 membership inside one fixed static embedding topology. Positive means target-relative alignment and negative means anti-alignment. Neither establishes a topic, suppression, contradiction, exclusion or curvature."
+  },
+  "source_manifests": {
+    "R004": {
+      "path": "single_prompt_topology/runs/R004_lithium-full-curve-cutoffs__20261112T092701Z_pythia-6.9b_52ff8f97c2/manifest.json",
+      "sha256": "d132f8a95da5e31caa2388179cc598b2f8ab632ee9598afc53d96df20cfe69da"
+    },
+    "R005": {
+      "path": "single_prompt_topology/runs/R005_lithium-cutoff-population-topology-baseline__20261112T095944Z_pythia-6.9b_52ff8f97c2/manifest.json",
+      "sha256": "2346fefc2beca8a124b24b0a7f71c7a11c5e7d4bfd5012f9ef51bebe08a06138"
+    }
+  },
+  "source_artifacts": {
+    "R004/cutoffs.csv": {
+      "bytes": 14840,
+      "sha256": "07b5ffab77b24babc376ce1aed28c24a1066f499230252c0965e3454ba823491"
+    },
+    "R004/tail_tokens.csv.gz": {
+      "bytes": 4512165,
+      "sha256": "0ae949a6c91cdf3d3a25b9a73942e3e7f1ca2525de8c69e5b70e99257b40f6e6"
+    },
+    "R005/knn_edges.csv.gz": {
+      "bytes": 21913675,
+      "sha256": "e46533d2550f7051d31fdba085ba59c3a0b52997856a309041010c30b1b162ee"
+    }
+  },
+  "artifacts": {},
+  "results": {}
+}

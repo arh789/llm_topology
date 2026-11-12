@@ -2240,3 +2240,88 @@ The important qualification is that negative cosine alone does not prove semanti
 So I would not treat the negative side as noise or merely the opposite end of a scale.
 
 **The positive network may tell you what interpretation the model is constructing; the negative network may tell you what competing interpretations have to be excluded for that construction to remain coherent.**
+
+### MA-0020 — Split-network export execution and findings
+
+- Entry timestamp: `2026-11-13T07:11:38+11:00`
+- Timezone: `Australia/Sydney`
+- Author: `Codex assistant`
+- Entry type: `experimental result, failure record and interpretation boundary`
+- Related runs: `R004`, `R005`, `R006`, `R007`, `R008`
+- Preservation mode: `synthesized from persisted manifests and artifacts`
+- Successful manifest:
+  `single_prompt_topology/runs/R008_lithium-chatgpt-readable-split-networks-validated-retry__20261112T200904Z_pythia-6.9b_52ff8f97c2/manifest.json`
+- Failed manifests:
+  `single_prompt_topology/runs/R006_lithium-chatgpt-readable-split-networks__20261112T200325Z_pythia-6.9b_52ff8f97c2/manifest.json` and
+  `single_prompt_topology/runs/R007_lithium-chatgpt-readable-split-networks-retry__20261112T200549Z_pythia-6.9b_52ff8f97c2/manifest.json`
+
+#### Execution record
+
+1. R006 validated the R004 and R005 sources and loaded the exact cached Pythia
+   input embedding. It then failed before producing the first network because
+   `token_id` was both an index level and a column label during one pandas
+   ordering operation. Its manifest was marked failed and no partial artifact
+   was accepted.
+2. R007 corrected that defect and completed all 66 networks and every export.
+   Final validation then failed because the node gzip file was counted by
+   physical lines. Tokenizer fields containing embedded newline characters
+   produced 192,837 physical data lines. CSV-aware parsing confirmed the
+   intended 191,872 records. The run remained failed and none of its outputs
+   was accepted.
+3. R008 reran every component from the validated R004 and R005 sources with
+   CSV-aware node validation. All six required components succeeded in
+   approximately 110.49 seconds. All 11 output artifacts independently matched
+   the byte sizes and SHA-256 hashes in the successful manifest.
+
+#### Directly observed R008 findings
+
+1. R008 produced 66 primary graphs: one positive-head and one negative-tail
+   network at each of 33 recorded states. It wrote 191,872 node-state rows and
+   1,918,720 directed within-side 10-nearest-neighbour edges.
+2. The compact outputs contain 792 state-side community nodes and 4,384
+   intercommunity edges. The JSON contains all 66 networks; the Markdown packet
+   covers all 33 states.
+3. Positive-head populations ranged from 1,871 to 3,491 nodes and contained
+   9–14 Louvain communities. Their modularity ranged from 0.4987 to 0.5890.
+4. Negative-tail populations ranged from 1,316 to 3,313 nodes and contained
+   10–15 communities. Their modularity ranged from 0.4686 to 0.5418.
+5. Median adjacent-state membership Jaccard was 0.7537 for positive networks
+   and 0.7582 for negative networks. Median edge Jaccard was 0.5344 and 0.5371,
+   while median community adjusted Rand index was 0.3749 and 0.3986.
+6. Both sides changed most sharply from the input embedding to block 0.
+   Positive membership Jaccard was 0.0310 and edge Jaccard 0.0027; negative
+   membership Jaccard was 0.0275 and edge Jaccard 0.0022.
+7. Both sides showed another large discontinuity from block 30 to the final
+   normalized state. Positive membership and edge Jaccard were 0.2036 and
+   0.0552; negative values were 0.2159 and 0.0619.
+8. Persistent relationships include plausible lexical structures, such as
+   `barrel`–`barrels` in the negative population, alongside formatting runs,
+   word fragments and other tokenizer artifacts. Persistence therefore does
+   not independently establish semantic importance.
+9. R005's combined graphs contained 604,515 directed cross-side relations,
+   31.51% of their 1,918,720 directed edges. R008 preserves these as a
+   secondary table; they are not an exhaustive positive-to-negative graph.
+10. Peak allocated GPU memory was 2.11 GiB. The transformer was not run and the
+    full model was not loaded.
+
+#### Supported conclusion
+
+The positive and negative cutoff populations are now available as separate,
+reconstructible networks for every recorded state. ChatGPT can analyze the
+compact community graph without replacing or obscuring the complete token-level
+evidence.
+
+This result establishes data accessibility and network separability. It does
+not establish that the communities are semantic topics, that negative
+anti-alignment is suppression, that positive and negative structures jointly
+produce coherence, or that any transition measures curvature density.
+
+#### Next analytical step
+
+Supply ChatGPT with `chatgpt_community_networks.json`,
+`chatgpt_layer_packets.md` and the schema encoded in the manifest. Ask it to
+identify candidate semantic communities, stable and changing structures,
+tokenizer-dominated groups and explicit hypotheses about positive/negative
+relationships. Those interpretations should then be recorded separately from
+the measurements and used to choose controlled prompt perturbations for a
+later experiment.

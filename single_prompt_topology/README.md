@@ -143,6 +143,41 @@ were selected from opposite ends of their projection onto the same contextual
 target vector. The community representatives also expose lexical,
 morphological and tokenizer structure.
 
+## R008 ChatGPT-readable split networks
+
+R006 and R007 are preserved failed attempts. R006 failed before the first
+network because of an ambiguous temporary pandas index. R007 completed every
+analysis and export component but failed final validation because physical
+gzip lines were incorrectly treated as CSV rows even though tokenizer fields
+can contain embedded newlines. Neither failed run supplies accepted result
+artifacts.
+
+R008 reruns the complete workflow from the validated R004 and R005 sources.
+For every recorded state it calculates separate exact directed 10-nearest-
+neighbour graphs inside the positive-head and negative-tail populations. It
+produces 66 primary graphs, state-side-local Louvain communities, separate
+transition statistics, persistent within-side edges and a secondary table of
+cross-side relations retained by R005's earlier combined graphs.
+
+The complete token-level evidence is in `nodes.csv.gz` and `edges.csv.gz`. The
+small `community_nodes.csv`, `community_edges.csv` and
+`chatgpt_community_networks.json` artifacts let ChatGPT reconstruct all 66
+community-level networks, while `chatgpt_layer_packets.md` provides a readable
+state-by-state inspection surface.
+
+The verified production command is:
+
+```powershell
+& 'C:\Users\arhal\anaconda3\envs\myenv\python.exe' single_prompt_topology\export_chatgpt_split_networks.py
+```
+
+The successful run is
+`runs/R008_lithium-chatgpt-readable-split-networks-validated-retry__20261112T200904Z_pythia-6.9b_52ff8f97c2/`.
+It contains 191,872 node-state rows, 1,918,720 directed within-side edges,
+792 community rows, 4,384 intercommunity edges and 604,515 secondary cross-side
+relations. These remain static-embedding networks selected by a moving
+contextual target representation.
+
 ## Run outputs
 
 Each execution writes a timestamped directory under `runs/` containing:
