@@ -1951,3 +1951,167 @@ As the contextual representation of `lithium` changes:
 The input embeddings remain fixed. The changing target representation produces the changing scores.
 
 The next analytical question is whether the positive and negative populations represent systematically different semantic structures, and how those differences evolve through transformer depth.
+
+### MA-0018 — ChatGPT hypothesis connecting negative alignment with SDA-3 suppression
+
+- Entry timestamp: `2026-11-12T21:46:57+11:00`
+- Timezone: `Australia/Sydney`
+- Author and source: `external ChatGPT response supplied by the project owner`
+- Entry type: `research hypothesis and interpretive limitation`
+- Related runs: `R002`, `R004`, `R005`; proposed `R006`
+- Preservation mode: `verbatim`
+- Timestamp note: the original ChatGPT post time was unavailable; the entry timestamp records when the supplied response was added to the metaanalysis.
+
+#### Verbatim input
+
+Yes — the strongest argument is that negatively scored tokens are candidates for the geometric counterpart of SDA-3's Suppressed (S) category.
+
+The relationship follows from how both are defined operationally.
+
+### 1. The structural correspondence
+
+|   |
+| - |
+
+SDA-3
+
+|   |
+| - |
+
+Pythia measurement
+
+|   |
+| - |
+
+Central (C)
+
+|   |
+| - |
+
+Strong positive semantic alignment
+
+|   |
+| - |
+
+Suppressed (S)
+
+|   |
+| - |
+
+Strong negative semantic alignment
+
+|   |
+| - |
+
+Adjacent (A)
+
+|   |
+| - |
+
+Moderate or indirect association
+
+|   |
+| - |
+
+HCU
+
+|   |
+| - |
+
+Strong geometric association without direct topical relevance
+
+|   |
+| - |
+
+Emerging (E)
+
+|   |
+| - |
+
+Tokens or communities gaining alignment across layers
+
+The important distinction is that S is not necessarily information the model has actively inhibited. In SDA-3, suppression can mean information that is statistically displaced, underrepresented or incompatible with the dominant semantic structure.
+
+That broader definition makes negative alignment a plausible indicator.
+
+### 2. Why the correspondence is meaningful
+
+Your pipeline measures:
+
+\\[ s\_{l,i}=\cos(h_l,e_i) \\]
+
+As the contextual representation \\(h_l\\) changes through transformer depth, some vocabulary tokens become increasingly aligned while others become increasingly anti-aligned.
+
+This creates two competing populations:
+```vbnet
+                  CONTEXTUAL TARGET
+                         |
+              +----------+----------+
+              |                     |
+       POSITIVE ALIGNMENT     NEGATIVE ALIGNMENT
+              |                     |
+       Compatible with        Geometrically opposed
+       target direction       to target direction
+              |                     |
+       Candidate central      Candidate suppressed
+       semantic structure     semantic structure
+```
+
+If semantic compatibility is reflected in this geometry, strong anti-alignment provides a natural place to search for information that the evolving representation is selecting against.
+
+The hypothesis becomes stronger when negative tokens form coherent communities rather than a random collection of unrelated words.
+
+A coherent negative community suggests structured exclusion, not merely an absence of association.
+
+### 3. What would constitute compelling evidence?
+
+Suppose the lithium analysis finds that a particular community:
+
+1. Has meaningful internal semantic relationships.
+2. Becomes increasingly negatively aligned with the contextual lithium representation.
+3. Is independently relevant to a competing interpretation of the prompt.
+4. Becomes less represented in the model's subsequent explanations.
+5. Reappears when the prompt explicitly challenges the dominant interpretation.
+
+That would constitute substantial evidence for identifying the community as S — Suppressed.
+
+The key is the relationship between negative alignment and recoverable but underexpressed semantic structure.
+
+### 4. The strongest conceptual implication
+
+Suppression may be a relational property rather than an intrinsic property of a token.
+```lua
+Same token or community
+          |
+          +-- Context A → Central
+          |
+          +-- Context B → Adjacent
+          |
+          `-- Context C → Suppressed
+```
+
+The token does not possess a permanent SDA-3 classification.
+
+Its position depends on the dominant semantic structure, the contextual conditions and the layer being examined.
+
+This is precisely why tracking negative communities across transformer layers could be informative.
+
+### 5. The decisive limitation
+
+There is one important distinction that cannot be removed by argument alone:
+
+Negative cosine measures directional opposition in the chosen representation space. SDA-3 suppression refers to a semantic relationship involving exclusion, contradiction or underrepresentation.
+
+Those are not mathematically identical.
+
+A negative-scoring token could be unrelated, affected by representation geometry, or statistically common in the context despite its cosine score.
+
+Therefore, the defensible conclusion is:
+
+> The negative population is the strongest geometrically motivated candidate pool for SDA-3's Suppressed category, but suppression is established only when anti-alignment corresponds to meaningful semantic exclusion or competing structure.
+
+This gives the project a concrete research hypothesis:
+
+Do increasingly negative token communities identify semantically coherent alternatives that the model systematically underexpresses, and can those alternatives be recovered through adversarial prompting?
+
+If the answer is yes, the pipeline would provide an empirical foundation for one of SDA-3's most important structural categories.
