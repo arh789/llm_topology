@@ -28,7 +28,7 @@ versioned here.
    executed interactive comparison surface for Pythia 410M, 6.9B and 12B.
 5. [`single_prompt_topology/README.md`](single_prompt_topology/README.md) — the
    proof-of-concept pipeline, output contract and interpretation boundary.
-6. [`single_prompt_topology/runs/20261112T063540Z_pythia-6.9b_52ff8f97c2/manifest.json`](single_prompt_topology/runs/20261112T063540Z_pythia-6.9b_52ff8f97c2/manifest.json)
+6. [`single_prompt_topology/runs/R001_lithium-initial-output-inspection__20261112T063540Z_pythia-6.9b_52ff8f97c2/manifest.json`](single_prompt_topology/runs/R001_lithium-initial-output-inspection__20261112T063540Z_pythia-6.9b_52ff8f97c2/manifest.json)
    — the selected successful baseline and artifact index.
 
 ## Provenance

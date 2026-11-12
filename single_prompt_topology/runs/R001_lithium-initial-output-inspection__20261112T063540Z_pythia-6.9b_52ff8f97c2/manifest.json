@@ -1,5 +1,9 @@
 {
-  "run_id": "20261112T063540Z_pythia-6.9b_52ff8f97c2",
+  "run_number": "R001",
+  "run_name": "lithium-initial-output-inspection",
+  "run_id": "R001_lithium-initial-output-inspection__20261112T063540Z_pythia-6.9b_52ff8f97c2",
+  "technical_id": "20261112T063540Z_pythia-6.9b_52ff8f97c2",
+  "source_run": null,
   "status": "successful",
   "started_at": "2026-11-12T06:35:40.787498+00:00",
   "completed_at": "2026-11-12T06:36:06.270053+00:00",
