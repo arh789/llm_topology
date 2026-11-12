@@ -1,0 +1,20 @@
+position,token_id,raw_token,decoded_token,is_target
+0,35,B,B,False
+1,27263,attery,attery,False
+2,4831,Ġdemand, demand,False
+3,13,",",",",False
+4,17160,Ġmineral, mineral,False
+5,6186,Ġsupply, supply,False
+6,13,",",",",False
+7,5637,Ġelectric, electric,False
+8,9411,Ġvehicles, vehicles,False
+9,13,",",",",False
+10,285,Ġand, and,False
+11,2341,Ġenergy, energy,False
+12,5718,Ġstorage, storage,False
+13,512,Ġall, all,False
+14,5281,Ġshape, shape,False
+15,253,Ġthe, the,False
+16,2791,Ġmarket, market,False
+17,323,Ġfor, for,False
+18,27747,Ġlithium, lithium,True

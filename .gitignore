@@ -12,6 +12,7 @@ __pycache__/
 .mypy_cache/
 .ruff_cache/
 .ipynb_checkpoints/
+single_prompt_topology/runs/
 
 # Model weights and checkpoints
 *.bin

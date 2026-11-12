@@ -6,10 +6,14 @@ representation geometry.
 
 ## Current evidence state
 
-The package contains a research design and one behavioural case mapping. It
-does not contain experimental results, activation captures, model weights,
-datasets or evidence that semantic conflict corresponds to geometric
-curvature.
+The package contains a research design, one behavioural case mapping, an
+executed model playground and one successful single-prompt hidden-state
+capture from Pythia 6.9B. The selected baseline includes the exact prompt,
+model revision, environment, artifact hashes, layer-wise measurements and
+figures. It does not establish stable topics, a generally optimal layer,
+causal mechanisms or evidence that semantic conflict corresponds to geometric
+curvature. Model weights remain in the shared cache under `D:\AI` and are not
+versioned here.
 
 ## Reading order
 
@@ -20,6 +24,12 @@ curvature.
    including limitations and a candidate controlled stimulus.
 3. [`ANALYSIS_BRIEF.md`](ANALYSIS_BRIEF.md) — bounded questions for ChatGPT to
    analyse using the two preceding documents.
+4. [`pythia_prompt_playground.ipynb`](pythia_prompt_playground.ipynb) — an
+   executed interactive comparison surface for Pythia 410M, 6.9B and 12B.
+5. [`single_prompt_topology/README.md`](single_prompt_topology/README.md) — the
+   proof-of-concept pipeline, output contract and interpretation boundary.
+6. [`single_prompt_topology/runs/20261112T063540Z_pythia-6.9b_52ff8f97c2/manifest.json`](single_prompt_topology/runs/20261112T063540Z_pythia-6.9b_52ff8f97c2/manifest.json)
+   — the selected successful baseline and artifact index.
 
 ## Provenance
 
@@ -36,13 +46,14 @@ the authoritative project working copy.
 ## First experiment: Pythia prompt playground
 
 [`pythia_prompt_playground.ipynb`](pythia_prompt_playground.ipynb)
-provides a dropdown for switching between `EleutherAI/pythia-410m` and
-`EleutherAI/pythia-6.9b` without editing the notebook. Pythia 6.9B is selected
-by default. The editable prompt cell returns the generated continuation and
-records the seed, sampling settings, token counts, latency and peak GPU memory.
+provides a dropdown for switching between `EleutherAI/pythia-410m`,
+`EleutherAI/pythia-6.9b` and `EleutherAI/pythia-12b` without editing the
+notebook. Pythia 12B is selected by default for the current fit test. Its BF16
+weights nearly fill a 24 GiB GPU, so 6.9B remains the practical fallback. The
+editable prompt cell returns the generated continuation and records the seed,
+sampling settings, token counts, latency and peak GPU memory.
 
-This machine currently needs a Python and JupyterLab environment before the
-notebook can be opened. On Windows:
+To reproduce the notebooks in a fresh Windows environment:
 
 1. Install Python 3.11 or later.
 2. Create and activate a project environment:
@@ -63,7 +74,7 @@ notebook can be opened. On Windows:
    ```
 
 The first loading run for each choice downloads its checkpoint from Hugging
-Face. Both Pythia models are base next-token models, not instruction-tuned
+Face. All three Pythia models are base next-token models, not instruction-tuned
 assistants, so the notebook deliberately evaluates completions rather than
 chat behaviour.
 
@@ -71,6 +82,21 @@ The notebook verifies that `HF_HOME` is `D:\AI\cache\huggingface` and
 `HF_HUB_CACHE` is `D:\AI\cache\huggingface\hub` before loading anything. It
 stops before a download if the shared model-cache configuration is missing or
 points elsewhere.
+
+## Second experiment: single-prompt layer topology
+
+[`single_prompt_topology/single_prompt_topology.ipynb`](single_prompt_topology/single_prompt_topology.ipynb)
+captures every prompt-token hidden state across all 33 Pythia 6.9B layer
+outputs for one fixed lithium-market prompt. It compares the target token's
+static input-embedding neighbours, contextual prompt-token relationships and
+final next-token predictions without treating those three measurements as
+equivalent.
+
+The committed baseline completed successfully using exact model revision
+`c0e3eee36dc47af0c49f361c74cfe459c09f7f23`. It captured a
+`[33, 19, 4096]` BF16 tensor, used 12.79 GiB peak GPU memory and records hashes
+for every generated artifact in its manifest. Future run directories remain
+ignored until they are deliberately reviewed and selected for publication.
 
 ## Interpretation boundary
 

@@ -1,0 +1,2 @@
+# Keep hashed research artifacts byte-for-byte stable across platforms.
+single_prompt_topology/runs/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
