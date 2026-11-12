@@ -181,3 +181,36 @@ The first-pass R009 classification is complete only when:
   rewritten as semantic topics.
 
 A synthesis file should be created only after these conditions are met.
+
+
+## Execution cadence and housekeeping
+
+During the state-by-state classification phase, each project-owner instruction
+`proceed` advances **exactly one state** and means:
+
+1. identify the next unclassified R008 state in sequence;
+2. reconcile its expected positive-head and negative-tail community counts;
+3. inspect and classify every community in that state under this protocol;
+4. use broader membership or edge evidence when compact evidence is
+   insufficient;
+5. verify that every expected community has exactly one classification;
+6. write the corresponding `STATE_XX_<state-label>.md` file;
+7. fetch and verify the committed file;
+8. stop without inspecting or interpreting the next state.
+
+No `proceed` during this phase may silently process multiple states.
+
+After State 32 is complete, the next `proceed` changes function. It initiates
+run-completeness verification rather than another state classification. That
+verification must confirm:
+
+- all 33 state files exist;
+- all 792 R008 state-local community instances are represented exactly once;
+- per-state positive and negative counts reconcile with R008;
+- the fixed taxonomy, confidence scheme and output schema were applied
+  consistently;
+- no state file contains premature SDA-3 role assignment or cross-state
+  synthesis.
+
+Only after that verification succeeds may a subsequent `proceed` begin
+cross-state synthesis and coherence/SDA-3 analysis.
