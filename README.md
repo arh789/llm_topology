@@ -6,14 +6,15 @@ representation geometry.
 
 ## Current evidence state
 
-The package contains a research design, one behavioural case mapping and an
-executed Pythia 410M baseline notebook. The saved notebook run demonstrates
-behavioural limitations of a small base language model, including a confident
-factual error, contradictory reasoning and instruction-following failure.
+The package contains a research design, one behavioural case mapping and a
+configurable Pythia prompt playground. The notebook can switch between Pythia
+410M and Pythia 6.9B without source edits, with Pythia 6.9B selected by
+default. Its previous 410M outputs were cleared when the model choice changed,
+so the current notebook does not yet contain a saved 6.9B result.
 
-It does not contain activation captures, representation-geometry measurements,
-causal interventions, model weights or evidence that semantic conflict
-corresponds to geometric curvature.
+The package does not contain activation captures,
+representation-geometry measurements, causal interventions, model weights or
+evidence that semantic conflict corresponds to geometric curvature.
 
 ## Reading order
 
@@ -22,9 +23,9 @@ corresponds to geometric curvature.
 2. [`ZOMBIE_CASE_STUDY.md`](ZOMBIE_CASE_STUDY.md) — how an existing
    ChatGPT zombie-survival interrogation relates to the proposed research,
    including limitations and a candidate controlled stimulus.
-3. [`pythia_410m_prompt_playground.ipynb`](pythia_410m_prompt_playground.ipynb)
-   — an executable prompt playground and saved RTX 4090 baseline run. Treat the
-   outputs as a single-seed behavioural example, not topology evidence.
+3. [`pythia_prompt_playground.ipynb`](pythia_prompt_playground.ipynb) — a
+   switchable Pythia prompt playground. Pythia 410M is the lightweight option
+   and Pythia 6.9B is the current default.
 4. [`ANALYSIS_BRIEF.md`](ANALYSIS_BRIEF.md) — bounded questions for ChatGPT
    to analyse using the preceding material.
 
@@ -36,8 +37,7 @@ corresponds to geometric curvature.
   inspected on 2026-11-12.
 - The case-study mapping was prepared from the handover and the published page.
 - The notebook was copied from the authoritative local `llm_topology`
-  project at commit `99103c9212a0aa714995e1082bbba4da26f51965`.
-  Its saved outputs were generated on 2026-11-12.
+  project at commit `7c185113313022a3a4f1e98d58031ba9df38378d`.
 - Model weights are intentionally excluded. The notebook is configured to use
   the machine's shared Hugging Face cache.
 
@@ -54,7 +54,8 @@ Keep these levels separate throughout analysis:
 - measured internal representations;
 - causal conclusions supported by interventions.
 
-The notebook and behavioural case provide observations at the first level.
-The case also contains researcher interpretations and model-generated
-explanations. The proposed project is intended to measure the fourth level and
-test the fifth.
+The behavioural case provides observations at the first level and includes
+researcher interpretations and model-generated explanations. The current
+notebook is experimental tooling; it does not by itself provide new evidence.
+The proposed project is intended to measure the fourth level and test the
+fifth.
