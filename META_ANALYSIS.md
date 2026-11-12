@@ -2325,3 +2325,173 @@ tokenizer-dominated groups and explicit hypotheses about positive/negative
 relationships. Those interpretations should then be recorded separately from
 the measurements and used to choose controlled prompt perturbations for a
 later experiment.
+
+### MA-0021 — Combined community-audit prompt and ChatGPT response
+
+- Entry timestamp: `2026-11-13T07:46:19+11:00`
+- Timezone: `Australia/Sydney`
+- Authors and sources: `project-owner prompt`; `external ChatGPT response supplied by the project owner`
+- Entry type: `combined research-direction prompt and response`
+- Related run: `R008`
+- Preservation mode: `single combined verbatim insertion`
+- Timestamp note: the original prompt and ChatGPT response times were
+  unavailable; the entry timestamp records when the combined material was
+  added to the metaanalysis.
+
+#### Project-owner prompt — verbatim
+
+the task now is to inspect all of the communites for all of the transformer layers, and in broad terms, identify what the topic of the community is. this process is intended to validate the sda3 concept. \
+\
+the goal is to identify 'what' each community is, then in subsequent analysis, we will see what useful information can be extracted from the communites of each transformer layer, where the goal will most likely need to shift to identifying 'coherent' communities. \
+\
+thoughts?
+
+#### ChatGPT response — verbatim
+
+Yes. This is the correct next analytical step, but it should be kept deliberately simpler than the later SDA-3 interpretation.
+
+The immediate task should be:
+
+> **For every community at every transformer state, identify what kind of structure the community appears to represent.**
+
+Not yet:
+
+> Is it Central, Suppressed, Adjacent, HCU or Emerging?
+
+That separation is important because otherwise SDA-3 gets built into the labelling process and then appears to validate itself.
+
+### I would use this sequence
+```lua
+R008 communities
+      |
+      v
+1. WHAT IS THIS COMMUNITY?
+      |
+      +-- broad semantic/topic label
+      +-- lexical/morphological
+      +-- named-entity
+      +-- numeric
+      +-- formatting/tokenizer
+      +-- mixed
+      `-- unclear
+      |
+      v
+2. HOW COHERENT IS IT?
+      |
+      +-- strongly coherent
+      +-- partly coherent
+      +-- weak/mixed
+      `-- artefactual
+      |
+      v
+3. HOW DOES IT EVOLVE?
+      |
+      +-- persists
+      +-- strengthens
+      +-- weakens
+      +-- appears
+      +-- disappears
+      +-- splits
+      `-- merges
+      |
+      v
+4. WHAT STRUCTURAL ROLE DOES IT HAVE?
+      |
+      +-- candidate C
+      +-- candidate S
+      +-- candidate A
+      +-- candidate HCU
+      `-- candidate E
+```
+
+The first pass should therefore be **descriptive rather than interpretive**.
+
+For each of the 792 community instances, I would record something like:
+
+| Field               | Example                                                     |
+| ------------------- | ----------------------------------------------------------- |
+| State               | Block 12                                                    |
+| Side                | Positive                                                    |
+| Community           | Local ID 7                                                  |
+| Broad topic         | Battery chemistry                                           |
+| Secondary structure | Metals / electrolytes                                       |
+| Structure type      | Semantic/topic                                              |
+| Confidence          | High                                                        |
+| Notes               | Strong chemistry vocabulary; little obvious tokenizer noise |
+
+If it is not semantically coherent:
+```
+Broad topic: none identifiable
+Structure type: lexical/morphological
+Confidence: high
+Notes: plural/singular and word-fragment relationships dominate
+```
+
+That is just as valuable.
+
+### One methodological improvement I strongly recommend
+
+**Blind the first-pass semantic labelling to positive/negative status where practical.**
+
+Ideally, I should see:
+```yaml
+State 14
+Community 3
+Tokens: ...
+Relationships: ...
+```
+
+and identify what it is before being told whether it came from the positive or negative population.
+
+Otherwise I already carry the hypothesis:
+```bash
+positive → coherent/central
+negative → suppressed/competing
+```
+
+and that can contaminate interpretation.
+
+Layer identity can remain visible because evolution through depth is eventually important, but even that could be hidden for a first semantic-content pass if you want the strongest methodological separation.
+
+### Why this is useful for SDA-3
+
+SDA-3 makes claims about **structural roles**, not merely individual tokens.
+
+Community analysis gives you a much better unit of analysis:
+```
+individual token
+      ↓
+semantic community
+      ↓
+community trajectory
+      ↓
+structural role
+```
+
+For example, a negative community should only become a serious candidate for **Suppressed** if later analysis shows that it is:
+
+1. semantically coherent;
+2. relevant to the target;
+3. meaningfully opposed to the dominant structure;
+4. persistent or systematically changing rather than random;
+5. potentially recoverable when the competing interpretation is prompted.
+
+Likewise, an **Emerging** community should not merely exist at a late layer; it should show a trajectory of increasing formation or relevance.
+
+### The crucial shift
+
+The first question is:
+
+> **What are the communities?**
+
+The second is:
+
+> **Which of them are actually coherent semantic structures?**
+
+Only after that should we ask:
+
+> **What roles do those coherent structures occupy relative to the target and to one another?**
+
+That third question is where SDA-3 starts being genuinely testable.
+
+So I would treat the 792-community audit as **semantic ground preparation**. Its most valuable outcome may not be the topic labels themselves, but establishing which communities are real semantic objects worth tracking and which are merely morphology, formatting, names, numbers or tokenizer artefacts.
