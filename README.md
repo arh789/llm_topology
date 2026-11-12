@@ -33,12 +33,13 @@ Selected, documented snapshots may be published separately to the private
 `chatgpt-analysis` repository for external analysis. This repository remains
 the authoritative project working copy.
 
-## First experiment: Pythia 410M prompt playground
+## First experiment: Pythia prompt playground
 
-[`pythia_410m_prompt_playground.ipynb`](pythia_410m_prompt_playground.ipynb)
-loads the final `EleutherAI/pythia-410m` checkpoint and provides an editable
-prompt cell that returns the generated continuation. It also records the seed,
-sampling settings, token counts, latency and peak GPU memory.
+[`pythia_prompt_playground.ipynb`](pythia_prompt_playground.ipynb)
+provides a dropdown for switching between `EleutherAI/pythia-410m` and
+`EleutherAI/pythia-6.9b` without editing the notebook. Pythia 6.9B is selected
+by default. The editable prompt cell returns the generated continuation and
+records the seed, sampling settings, token counts, latency and peak GPU memory.
 
 This machine currently needs a Python and JupyterLab environment before the
 notebook can be opened. On Windows:
@@ -57,13 +58,14 @@ notebook can be opened. On Windows:
 4. Install the notebook dependencies and launch JupyterLab:
 
    ```powershell
-   python -m pip install jupyterlab "transformers>=4.48" safetensors
+   python -m pip install jupyterlab "transformers>=4.48" safetensors ipywidgets
    python -m jupyter lab
    ```
 
-The first model-loading run downloads the checkpoint from Hugging Face. Pythia
-410M is a base next-token model, not an instruction-tuned assistant, so the
-notebook deliberately evaluates completions rather than chat behaviour.
+The first loading run for each choice downloads its checkpoint from Hugging
+Face. Both Pythia models are base next-token models, not instruction-tuned
+assistants, so the notebook deliberately evaluates completions rather than
+chat behaviour.
 
 The notebook verifies that `HF_HOME` is `D:\AI\cache\huggingface` and
 `HF_HUB_CACHE` is `D:\AI\cache\huggingface\hub` before loading anything. It
