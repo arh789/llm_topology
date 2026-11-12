@@ -1620,3 +1620,130 @@ We should not calculate “curvature density” yet. First we need to establish 
 A successful R005 would show coherent groups and relationship trajectories that outperform the random baseline. An unsuccessful but useful result would show that the cutoff populations are no more structured than comparable arbitrary populations.
 
 One important boundary remains: because the vocabulary embeddings are static, R005 would measure how the moving contextual `lithium` representation selects different regions of a fixed embedding topology. It would not yet demonstrate that the vocabulary tokens’ own contextual geometry changes through the transformer. That should be the subsequent controlled-context experiment if R005 finds usable structure.
+
+### MA-0013 — R005 cutoff-population topology baseline findings
+
+- Entry timestamp: `2026-11-12T21:02:51+11:00`
+- Timezone: `Australia/Sydney`
+- Author: `Codex assistant`
+- Entry type: `experimental result and interpretation`
+- Related runs: `R004`, `R005`
+- Preservation mode: `synthesized from persisted artifacts`
+- Primary manifest:
+  `single_prompt_topology/runs/R005_lithium-cutoff-population-topology-baseline__20261112T095944Z_pythia-6.9b_52ff8f97c2/manifest.json`
+- Primary artifacts: `state_topology_metrics.csv`,
+  `observed_vs_random.csv`, `state_transitions.csv`,
+  `persistent_edges.csv.gz`, `community_summary.csv` and the three recorded
+  figures
+
+#### Directly observed findings
+
+1. R005 completed all seven required components successfully in approximately
+   104.96 seconds. It processed all 33 R004 populations, wrote 1,918,720 exact
+   directed 10-nearest-neighbour edges, evaluated 660 size-matched random
+   populations and independently hash-validated all 12 output artifacts.
+2. Mean nearest-neighbour cosine exceeded the random 97.5th percentile at 33
+   of 33 states. The median observed-minus-random difference was `0.005669`,
+   ranging from `0.004257` to `0.029047`.
+3. Same-region edge fraction exceeded the random 97.5th percentile at 33 of 33
+   states. The median excess was `0.179517`; the largest excess, `0.381059`,
+   occurred at the input-embedding state.
+4. Reciprocity did not show the same universal result. It exceeded the random
+   97.5th percentile at 16 states and fell below the random 2.5th percentile at
+   two states. The selected graphs are therefore not simply denser than random
+   under every graph statistic.
+5. The median adjacent-state membership Jaccard was `0.7561`, edge Jaccard was
+   `0.5307` and state-local community adjusted Rand index was `0.3827`.
+6. The input-to-block-0 transition was an extreme discontinuity: membership
+   Jaccard `0.0409` and edge Jaccard `0.0032`. Stability then generally
+   increased through the intermediate states.
+7. The block-30-to-final-normalized transition was another discontinuity:
+   membership Jaccard `0.2100` and edge Jaccard `0.0580`. The capture does not
+   contain raw block-31 output, so the block-31 transformation and final layer
+   normalization cannot be separated.
+8. Louvain community count ranged from 11 to 15 and modularity from `0.5241`
+   to `0.5733`. Community-to-region normalized mutual information was `0.2791`
+   at the input embedding, `0.0121` after block 0 and `0.0134` at the median.
+   Later communities therefore mixed positive and negative membership even
+   though local same-region edges remained elevated.
+9. There were 191,879 undirected edges present in at least two states, 34 in at
+   least 30 states and none in all 33 states. Persistent examples included
+   recognizable lexical relations such as `barrel`–`barrels`, but the most
+   persistent list also contained long punctuation tokens and fragmentary
+   tokenizer artifacts.
+
+#### Visual inspection
+
+- The observed-versus-random figure shows complete separation for mean
+  nearest-neighbour cosine and same-region edge fraction at every state.
+- The transition figure shows the input-to-block-0 and
+  block-30-to-final-normalized discontinuities, with substantially higher
+  stability across most intermediate states.
+- The selected-state community figure shows strong red/blue region separation
+  at the input state and predominantly mixed communities later. Its largest
+  communities contain both recognizable lexical groupings and subword or
+  punctuation structure.
+- The community figure is descriptive rather than a primary measurement. Some
+  labels are crowded, and the plotting font omitted the visible-space glyph;
+  the CSV community summaries preserve the full labels.
+
+#### Interpretation
+
+R005 establishes that the R004-selected populations have reproducible local
+geometric organization relative to a size-only random null. It also establishes
+that relationships and population composition can be tracked across the
+recorded states with the present pipeline.
+
+It does not yet establish that the elbow cutoff isolates semantically useful
+topics. Positive and negative populations were selected from opposite ends of
+their cosine projection onto the same contextual target vector. Strong
+same-region separation is therefore partly constructed by the selection rule
+and is expected geometrically. The size-matched random null does not control
+this projection, token class, morphology, frequency or score rank.
+
+The low post-input community-to-region NMI is especially important. Local
+positive-positive and negative-negative edges are elevated, but the broader
+Louvain communities are usually mixed. “Positive tail versus negative tail”
+and “topic-like community” are therefore not interchangeable structures.
+
+#### Decision boundary
+
+R005 is sufficient to retain the cutoff populations as a practical candidate
+set and to retain the relationship-network pipeline. It is not sufficient to
+move directly to curvature-density or semantic-conflict claims. A subsequent
+experiment should either strengthen the null with score-, token-class- and
+morphology-matched controls or hold a small interpretable token set fixed while
+capturing its contextual representations under controlled prompt variants.
+
+### MA-0014 — Plain-language interpretation of R005
+
+- Entry timestamp: `2026-11-12T21:13:52+11:00`
+- Timezone: `Australia/Sydney`
+- Author: `Codex assistant`
+- Entry type: `plain-language interpretation`
+- Related runs: `R004`, `R005`
+- Preservation mode: `verbatim`
+- Source: immediately preceding assistant response in the project conversation
+- Timestamp note: the original UI post time was unavailable; the entry timestamp records when this verbatim response was added to the project file.
+
+#### Verbatim input
+
+The cutoff is useful, but it has not found clean topics.
+
+In plain terms:
+
+- The cutoff selects tokens that are much more related to one another than a random collection of tokens. So it is finding real structure, not noise.
+- Tokens from the high-score and low-score sides mostly form relationships within their own side.
+- However, this separation is partly built into the method: we deliberately selected tokens from opposite ends of the same score scale.
+- When we grouped the tokens into larger communities, those communities were generally mixtures of high- and low-score tokens. The two sides are therefore not two distinct topics.
+- Some communities looked meaningful—chemistry, medicine, names, transport—but others were driven by word fragments, punctuation and formatting tokens.
+- The selected population changed dramatically after the input embedding, became progressively more stable through the middle layers, then changed dramatically again at the final state.
+- Some token relationships persisted across many layers, but these included both meaningful relationships such as `barrel`–`barrels` and meaningless tokenizer artifacts.
+
+The strongest conclusion is:
+
+> The cutoff provides a structured set of candidate tokens worth analysing, but it is not yet a demonstrated semantic boundary or topic detector.
+
+We also did not observe the selected tokens themselves changing through the layers. We observed the model’s changing representation of `lithium` selecting different areas of one fixed vocabulary-embedding map.
+
+Nothing here yet demonstrates contradiction, suppression, semantic conflict, curvature density or an optimal layer.

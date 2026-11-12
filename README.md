@@ -1,6 +1,6 @@
 # LLM Semantic Topology Research
 
-This directory is a published analysis snapshot of an experimental project
+This is the independent working repository for an experimental project
 examining semantic conflict, language-model behaviour and internal
 representation geometry.
 
@@ -8,12 +8,16 @@ representation geometry.
 
 The package contains a research design, one behavioural case mapping, an
 executed model playground, one successful single-prompt hidden-state capture
-from Pythia 6.9B and three successful derived CPU analyses. R002 created the
+from Pythia 6.9B and four successful derived analyses. R002 created the
 full-vocabulary static-basis score matrix; R003 tested an unnecessarily gated
 boundary policy; R004 retains the full-curve upper and lower elbow cutoffs at
-all states without that acceptance gate. The evidence does not establish stable
-topics, semantic opposition, a generally optimal layer, causal mechanisms or
-evidence that semantic conflict corresponds to geometric curvature. Model
+all states without that acceptance gate; and R005 constructs exact static
+embedding relationship networks for those populations. R005 found greater
+nearest-neighbour density and positive/negative segregation than a size-matched
+random null at all 33 states, but its communities also contain tokenizer and
+morphological structure and do not establish semantic topics. The evidence does
+not establish semantic opposition, a generally optimal layer, causal mechanisms
+or a correspondence between semantic conflict and geometric curvature. Model
 weights remain in the shared cache under `D:\AI` and are not versioned here.
 
 ## Reading order
@@ -46,6 +50,11 @@ weights remain in the shared cache under `D:\AI` and are not versioned here.
     cutoff analysis.
 12. [`single_prompt_topology/runs/R004_lithium-full-curve-cutoffs__20261112T092701Z_pythia-6.9b_52ff8f97c2/manifest.json`](single_prompt_topology/runs/R004_lithium-full-curve-cutoffs__20261112T092701Z_pythia-6.9b_52ff8f97c2/manifest.json)
     — the successful R004 lineage, validation record and artifact index.
+13. [`single_prompt_topology/R005_PLAN.md`](single_prompt_topology/R005_PLAN.md)
+    — the preregistered contract and execution record for the cutoff-population
+    static-topology baseline.
+14. [`single_prompt_topology/runs/R005_lithium-cutoff-population-topology-baseline__20261112T095944Z_pythia-6.9b_52ff8f97c2/manifest.json`](single_prompt_topology/runs/R005_lithium-cutoff-population-topology-baseline__20261112T095944Z_pythia-6.9b_52ff8f97c2/manifest.json)
+    — the successful R005 lineage, component status and artifact index.
 
 ## Provenance
 
@@ -55,16 +64,9 @@ weights remain in the shared cache under `D:\AI` and are not versioned here.
   inspected on 2026-11-12.
 - The case-study mapping was prepared from the handover and the published page.
 
-This is the curated analysis copy in the private `chatgpt-analysis` repository.
-It was prepared from authoritative local project commit
-`f185f1ee3829ac198049497a2f62084f8f2156ad`.
-
-The publication includes the chronological research record, run plans,
-manifests, cutoff and boundary tables, cutoff-adjacent token tables and every
-figure linked from the meta-analysis. High-volume score tensors, complete tail
-membership tables, complete trajectory tables, the interactive HTML report and
-post-baseline implementation scripts remain in the independent local Git
-repository. Model weights remain outside Git under `D:\AI`.
+Selected, documented snapshots may be published separately to the private
+`chatgpt-analysis` repository for external analysis. This repository remains
+the authoritative project working copy.
 
 ## First experiment: Pythia prompt playground
 
@@ -128,6 +130,16 @@ but added a secondary acceptance gate that was later identified as unnecessary.
 R004 removes that gate, calculates and uses one upper and one lower full-curve
 elbow at all 33 states, and assigns membership by exact cutoff rank. Semantic
 usefulness remains unestablished.
+
+R005 loads only the exact cached input-embedding weight and constructs an exact
+directed 10-nearest-neighbour graph for every R004 population. It compares each
+state with 20 deterministic size-matched random populations, records
+state-local Louvain communities and tracks membership, edge and community
+stability across adjacent states. Mean nearest-neighbour cosine and same-region
+edge fraction exceeded the random 97.5th percentile at all 33 states. Because
+the null controls size only and the population is selected along the same
+target-relative axis used to define positive and negative tails, this establishes
+geometric organization relative to that null, not semantic topic validity.
 
 ## Interpretation boundary
 

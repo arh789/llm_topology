@@ -9,15 +9,9 @@ of Pythia 6.9B for one fixed prompt. It separates three forms of evidence:
 
 The initial capture pipeline is intentionally contained in
 `single_prompt_topology.ipynb`. The derived full-vocabulary cutoff analysis is
-contained in `full_vocabulary_cutoff.py`. Reusable Python modules, topic
-modelling, multi-model comparisons and causal interventions remain outside the
-proof-of-concept scope.
-
-This published analysis copy includes the post-baseline plans, manifests,
-summary tables, cutoff-adjacent token tables and referenced figures. The
-post-baseline implementation scripts and high-volume tensors, tail-membership
-tables and trajectory tables remain in authoritative local commit
-`f185f1ee3829ac198049497a2f62084f8f2156ad` rather than being duplicated here.
+contained in `full_vocabulary_cutoff.py`; the R005 relationship baseline is in
+`cutoff_population_topology.py`. Topic modelling, multi-model comparisons and
+causal interventions remain outside the proof-of-concept scope.
 
 ## Before running
 
@@ -113,6 +107,41 @@ It calculated and used both cutoffs at all 33 states, producing 191,872
 tail-membership rows and trajectories for 24,364 union tokens. R004 supersedes
 R003 for primary cutoff membership; R003 remains the historical record of the
 discarded acceptance policy.
+
+## R005 cutoff-population topology baseline
+
+R005 reuses R004's exact positive-head and negative-tail memberships and loads
+only the exact cached Pythia input-embedding weight. Its preregistered contract
+and execution record are in [`R005_PLAN.md`](R005_PLAN.md), and the
+implementation is `cutoff_population_topology.py`.
+
+For each of the 33 states, it calculates an exact directed cosine
+10-nearest-neighbour graph among the selected tokens, symmetrizes it for graph
+metrics and state-local Louvain communities, and compares the observed graph
+with 20 deterministic size-matched random populations. It also records
+adjacent-state membership, edge and community stability. The transformer is not
+run and R002's score matrix is not recalculated.
+
+The verified production command is:
+
+```powershell
+& 'C:\Users\arhal\anaconda3\envs\myenv\python.exe' single_prompt_topology\cutoff_population_topology.py
+```
+
+The successful run is
+`runs/R005_lithium-cutoff-population-topology-baseline__20261112T095944Z_pythia-6.9b_52ff8f97c2/`.
+It produced 1,918,720 directed edges and 660 random-baseline rows. Mean
+nearest-neighbour cosine and same-region edge fraction exceeded the random
+97.5th percentile at all 33 states. The median adjacent-state population
+Jaccard was 0.7561, edge Jaccard was 0.5307 and state-local community adjusted
+Rand index was 0.3827.
+
+These results establish organization relative to a size-only random null. They
+do not establish topics or validate the elbow as a semantic boundary. The
+strong positive/negative separation is partly expected because both populations
+were selected from opposite ends of their projection onto the same contextual
+target vector. The community representatives also expose lexical,
+morphological and tokenizer structure.
 
 ## Run outputs
 
