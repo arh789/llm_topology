@@ -1,0 +1,1653 @@
+state_index,state_type,state_label,cutoff_status,candidate_rank,rank,token_id,score,raw_token,decoded_token,token_class,is_target_lexical_variant
+0,input_embedding,input_embedding,none,143,1,8182,0.24953486,ĠLi, Li,target_lexical_variant,True
+0,input_embedding,input_embedding,none,143,2,17448,0.21053739,Li,Li,target_lexical_variant,True
+0,input_embedding,input_embedding,none,143,3,31976,0.19405048,ĠLith, Lith,target_lexical_variant,True
+0,input_embedding,input_embedding,none,143,4,23160,0.17758997,Ġpotassium, potassium,word_initial,False
+0,input_embedding,input_embedding,none,143,5,29742,0.17578189,Ġmagnesium, magnesium,word_initial,False
+0,input_embedding,input_embedding,none,143,6,46456,0.17033906,Ġcobalt, cobalt,word_initial,False
+0,input_embedding,input_embedding,none,143,7,38244,0.16269468,Ġhelium, helium,word_initial,False
+0,input_embedding,input_embedding,none,143,8,11914,0.15778324,Ġsodium, sodium,word_initial,False
+0,input_embedding,input_embedding,none,143,9,20837,0.15226534,assium,assium,continuation_or_standalone,False
+0,input_embedding,input_embedding,none,143,10,26796,0.14912331,odium,odium,continuation_or_standalone,False
+0,input_embedding,input_embedding,none,143,11,31191,0.14343709,Ġelectrolyte, electrolyte,word_initial,False
+0,input_embedding,input_embedding,none,143,12,37583,0.14265908,onium,onium,continuation_or_standalone,False
+0,input_embedding,input_embedding,none,143,13,45779,0.14216496,mium,mium,continuation_or_standalone,False
+0,input_embedding,input_embedding,none,143,14,30237,0.14115734,Ġnickel, nickel,word_initial,False
+0,input_embedding,input_embedding,none,143,15,33322,0.13883542,Ġammonium, ammonium,word_initial,False
+0,input_embedding,input_embedding,none,143,16,19442,0.13664463,Ġhydrox, hydrox,word_initial,False
+0,input_embedding,input_embedding,none,143,17,11672,0.13487509,Ġcalcium, calcium,word_initial,False
+0,input_embedding,input_embedding,none,143,18,42391,0.13180281,Ġalkali, alkali,word_initial,False
+0,input_embedding,input_embedding,none,143,19,24570,0.13159294,esium,esium,continuation_or_standalone,False
+0,input_embedding,input_embedding,none,143,20,30327,0.12971555,Ġtitanium, titanium,word_initial,False
+0,input_embedding,input_embedding,none,143,21,19978,0.1284081,Ġbatteries, batteries,word_initial,False
+0,input_embedding,input_embedding,none,143,22,27842,0.12725675,Ġbipolar, bipolar,word_initial,False
+0,input_embedding,input_embedding,none,143,23,9946,0.12675181,Ġhydrogen, hydrogen,word_initial,False
+0,input_embedding,input_embedding,none,143,24,20458,0.12617704,Ġzinc, zinc,word_initial,False
+0,input_embedding,input_embedding,none,143,25,1514,0.1258732,ium,ium,target_lexical_variant,True
+0,input_embedding,input_embedding,none,143,26,9378,0.12404904,Ġbattery, battery,word_initial,False
+0,input_embedding,input_embedding,none,143,27,17454,0.12287513,Ġaluminum, aluminum,word_initial,False
+0,input_embedding,input_embedding,none,143,28,45733,0.121918045,ĠBattery, Battery,word_initial,False
+0,input_embedding,input_embedding,none,143,29,48625,0.1207991,Ġrecharge, recharge,word_initial,False
+0,input_embedding,input_embedding,none,143,30,47645,0.11894435,Ġaluminium, aluminium,word_initial,False
+0,input_embedding,input_embedding,none,143,31,43318,0.11795404,Ġmetformin, metformin,word_initial,False
+0,input_embedding,input_embedding,none,143,32,44185,0.11731856,cium,cium,continuation_or_standalone,False
+0,input_embedding,input_embedding,none,143,33,35651,0.11697068,Ġsilicone, silicone,word_initial,False
+0,input_embedding,input_embedding,none,143,34,40509,0.116253786,ĠLTE, LTE,word_initial,False
+0,input_embedding,input_embedding,none,143,35,33679,0.11620728,Ġmercury, mercury,word_initial,False
+0,input_embedding,input_embedding,none,143,36,18995,0.11600488,Ġlith, lith,target_lexical_variant,True
+0,input_embedding,input_embedding,none,143,37,6315,0.115895584,Ġcarbon, carbon,word_initial,False
+0,input_embedding,input_embedding,none,143,38,22281,0.11495386,Ġelectroly, electroly,word_initial,False
+0,input_embedding,input_embedding,none,143,39,39181,0.11474394,Ġfluoride, fluoride,word_initial,False
+0,input_embedding,input_embedding,none,143,40,34285,0.11455308,Ġglutathione, glutathione,word_initial,False
+0,input_embedding,input_embedding,none,143,41,34770,0.11361484,Ġelectrochemical, electrochemical,word_initial,False
+0,input_embedding,input_embedding,none,143,42,34413,0.11292723,ĠSilicon, Silicon,word_initial,False
+0,input_embedding,input_embedding,none,143,43,32297,0.112661846,Ġplatinum, platinum,word_initial,False
+0,input_embedding,input_embedding,none,143,44,14185,0.11242071,Ġsilicon, silicon,word_initial,False
+0,input_embedding,input_embedding,none,143,45,14992,0.1117562,Ġalumin, alumin,word_initial,False
+0,input_embedding,input_embedding,none,143,46,15201,0.11144229,lium,lium,continuation_or_standalone,False
+0,input_embedding,input_embedding,none,143,47,30429,0.11065788,Ġcellulose, cellulose,word_initial,False
+0,input_embedding,input_embedding,none,143,48,33950,0.10919249,Ġantidepress, antidepress,word_initial,False
+0,input_embedding,input_embedding,none,143,49,41031,0.10897635,Ġuranium, uranium,word_initial,False
+0,input_embedding,input_embedding,none,143,50,24532,0.108622484,Ġschizophrenia, schizophrenia,word_initial,False
+1,block_output,block_00_output,none,192,1,31255,0.07305325,Ġrefreshing, refreshing,word_initial,False
+1,block_output,block_00_output,none,192,2,20383,0.066680044,ĠPARTICULAR, PARTICULAR,word_initial,False
+1,block_output,block_00_output,none,192,3,10656,0.06620051,Ġadministrative, administrative,word_initial,False
+1,block_output,block_00_output,none,192,4,10,0.06573133,),),punctuation_or_symbol,False
+1,block_output,block_00_output,none,192,5,41772,0.06377568,seeking,seeking,continuation_or_standalone,False
+1,block_output,block_00_output,none,192,6,5232,0.061164647,Form,Form,continuation_or_standalone,False
+1,block_output,block_00_output,none,192,7,2295,0.05996564,Ġ==, ==,punctuation_or_symbol,False
+1,block_output,block_00_output,none,192,8,10109,0.057680458,ĠCivil, Civil,word_initial,False
+1,block_output,block_00_output,none,192,9,27483,0.057680096,)))),)))),punctuation_or_symbol,False
+1,block_output,block_00_output,none,192,10,22226,0.0571374,>),>),punctuation_or_symbol,False
+1,block_output,block_00_output,none,192,11,22272,0.0560655,ĠHash, Hash,word_initial,False
+1,block_output,block_00_output,none,192,12,19329,0.05523094,ĠKIND, KIND,word_initial,False
+1,block_output,block_00_output,none,192,13,50201,0.054630853,Ġmycket, mycket,word_initial,False
+1,block_output,block_00_output,none,192,14,38717,0.05448433,Ġmitotic, mitotic,word_initial,False
+1,block_output,block_00_output,none,192,15,27744,0.054447122,Ġ409, 409,word_initial,False
+1,block_output,block_00_output,none,192,16,11013,0.05388228,Ġ===, ===,punctuation_or_symbol,False
+1,block_output,block_00_output,none,192,17,20049,0.053853225,ĠActive, Active,word_initial,False
+1,block_output,block_00_output,none,192,18,44183,0.053327985,Ġelectronically, electronically,word_initial,False
+1,block_output,block_00_output,none,192,19,4110,0.05329405,ĠIS, IS,word_initial,False
+1,block_output,block_00_output,none,192,20,9421,0.053247996,Ġsurfaces, surfaces,word_initial,False
+1,block_output,block_00_output,none,192,21,49805,0.053139564,Absolute,Absolute,continuation_or_standalone,False
+1,block_output,block_00_output,none,192,22,9928,0.05300188,Ġpermanent, permanent,word_initial,False
+1,block_output,block_00_output,none,192,23,48431,0.05292325,ginx,ginx,continuation_or_standalone,False
+1,block_output,block_00_output,none,192,24,32732,0.0525194,Ġhatch, hatch,word_initial,False
+1,block_output,block_00_output,none,192,25,20285,0.052302673,counter,counter,continuation_or_standalone,False
+1,block_output,block_00_output,none,192,26,16710,0.05188571,ĠCSS, CSS,word_initial,False
+1,block_output,block_00_output,none,192,27,33682,0.051883243,ĠAppellate, Appellate,word_initial,False
+1,block_output,block_00_output,none,192,28,30861,0.051805865,idis,idis,continuation_or_standalone,False
+1,block_output,block_00_output,none,192,29,8211,0.051563673,eting,eting,continuation_or_standalone,False
+1,block_output,block_00_output,none,192,30,45068,0.05124415,CSI,CSI,continuation_or_standalone,False
+1,block_output,block_00_output,none,192,31,12778,0.0511508,ĠRound, Round,word_initial,False
+1,block_output,block_00_output,none,192,32,36121,0.051059175,ĠFIN, FIN,word_initial,False
+1,block_output,block_00_output,none,192,33,33836,0.050951935,è³,�,punctuation_or_symbol,False
+1,block_output,block_00_output,none,192,34,19828,0.050930582,00000000000000000000000000000000,00000000000000000000000000000000,continuation_or_standalone,False
+1,block_output,block_00_output,none,192,35,22220,0.050852172,ellen,ellen,continuation_or_standalone,False
+1,block_output,block_00_output,none,192,36,42817,0.050823744,African,African,continuation_or_standalone,False
+1,block_output,block_00_output,none,192,37,28544,0.05072988,Ã¶s,ös,continuation_or_standalone,False
+1,block_output,block_00_output,none,192,38,38100,0.05069953,==',==',punctuation_or_symbol,False
+1,block_output,block_00_output,none,192,39,49841,0.05062447,ĠBCG, BCG,word_initial,False
+1,block_output,block_00_output,none,192,40,12070,0.05050046,SQL,SQL,continuation_or_standalone,False
+1,block_output,block_00_output,none,192,41,27891,0.050392065,ĠCounter, Counter,word_initial,False
+1,block_output,block_00_output,none,192,42,46162,0.050154798,entre,entre,continuation_or_standalone,False
+1,block_output,block_00_output,none,192,43,13170,0.050047316,ĠNAS, NAS,word_initial,False
+1,block_output,block_00_output,none,192,44,20182,0.05000835,Ġcheaper, cheaper,word_initial,False
+1,block_output,block_00_output,none,192,45,38268,0.049897682,ĠLIN, LIN,word_initial,False
+1,block_output,block_00_output,none,192,46,23567,0.049871348,Ġpolys, polys,word_initial,False
+1,block_output,block_00_output,none,192,47,38115,0.0498246,Spin,Spin,continuation_or_standalone,False
+1,block_output,block_00_output,none,192,48,17075,0.049739815,Ġformul, formul,word_initial,False
+1,block_output,block_00_output,none,192,49,7954,0.049723122,Ġfo, fo,word_initial,False
+1,block_output,block_00_output,none,192,50,24497,0.04960478,Ġaccessing, accessing,word_initial,False
+2,block_output,block_01_output,none,290,1,31255,0.06692471,Ġrefreshing, refreshing,word_initial,False
+2,block_output,block_01_output,none,290,2,5232,0.06546374,Form,Form,continuation_or_standalone,False
+2,block_output,block_01_output,none,290,3,10656,0.0652411,Ġadministrative, administrative,word_initial,False
+2,block_output,block_01_output,none,290,4,20383,0.063951395,ĠPARTICULAR, PARTICULAR,word_initial,False
+2,block_output,block_01_output,none,290,5,10,0.06277974,),),punctuation_or_symbol,False
+2,block_output,block_01_output,none,290,6,41772,0.06251358,seeking,seeking,continuation_or_standalone,False
+2,block_output,block_01_output,none,290,7,27483,0.060114726,)))),)))),punctuation_or_symbol,False
+2,block_output,block_01_output,none,290,8,2295,0.05816296,Ġ==, ==,punctuation_or_symbol,False
+2,block_output,block_01_output,none,290,9,13170,0.0579336,ĠNAS, NAS,word_initial,False
+2,block_output,block_01_output,none,290,10,20285,0.057366047,counter,counter,continuation_or_standalone,False
+2,block_output,block_01_output,none,290,11,14042,0.056477226,Ġsolved, solved,word_initial,False
+2,block_output,block_01_output,none,290,12,23393,0.055750348,ercise,ercise,continuation_or_standalone,False
+2,block_output,block_01_output,none,290,13,10109,0.055439096,ĠCivil, Civil,word_initial,False
+2,block_output,block_01_output,none,290,14,20049,0.055303525,ĠActive, Active,word_initial,False
+2,block_output,block_01_output,none,290,15,17075,0.054848745,Ġformul, formul,word_initial,False
+2,block_output,block_01_output,none,290,16,44017,0.054714136,ĠForms, Forms,word_initial,False
+2,block_output,block_01_output,none,290,17,49841,0.054582093,ĠBCG, BCG,word_initial,False
+2,block_output,block_01_output,none,290,18,30861,0.05452546,idis,idis,continuation_or_standalone,False
+2,block_output,block_01_output,none,290,19,19828,0.054174807,00000000000000000000000000000000,00000000000000000000000000000000,continuation_or_standalone,False
+2,block_output,block_01_output,none,290,20,29006,0.053806808,?.,?.,punctuation_or_symbol,False
+2,block_output,block_01_output,none,290,21,16710,0.053699914,ĠCSS, CSS,word_initial,False
+2,block_output,block_01_output,none,290,22,38115,0.053687487,Spin,Spin,continuation_or_standalone,False
+2,block_output,block_01_output,none,290,23,42817,0.053388096,African,African,continuation_or_standalone,False
+2,block_output,block_01_output,none,290,24,9928,0.053200062,Ġpermanent, permanent,word_initial,False
+2,block_output,block_01_output,none,290,25,12070,0.052703936,SQL,SQL,continuation_or_standalone,False
+2,block_output,block_01_output,none,290,26,9421,0.052673265,Ġsurfaces, surfaces,word_initial,False
+2,block_output,block_01_output,none,290,27,38374,0.052644927,lion,lion,continuation_or_standalone,False
+2,block_output,block_01_output,none,290,28,37765,0.05242297,Modified,Modified,continuation_or_standalone,False
+2,block_output,block_01_output,none,290,29,43113,0.05238444,ĠIndonesian, Indonesian,word_initial,False
+2,block_output,block_01_output,none,290,30,5166,0.052378964,CS,CS,continuation_or_standalone,False
+2,block_output,block_01_output,none,290,31,18815,0.05234275,ortex,ortex,continuation_or_standalone,False
+2,block_output,block_01_output,none,290,32,50201,0.05231773,Ġmycket, mycket,word_initial,False
+2,block_output,block_01_output,none,290,33,11013,0.052265976,Ġ===, ===,punctuation_or_symbol,False
+2,block_output,block_01_output,none,290,34,22226,0.051923797,>),>),punctuation_or_symbol,False
+2,block_output,block_01_output,none,290,35,26782,0.051636726,ayan,ayan,continuation_or_standalone,False
+2,block_output,block_01_output,none,290,36,31947,0.05149458,Ġremembers, remembers,word_initial,False
+2,block_output,block_01_output,none,290,37,36121,0.05142237,ĠFIN, FIN,word_initial,False
+2,block_output,block_01_output,none,290,38,33836,0.051373225,è³,�,punctuation_or_symbol,False
+2,block_output,block_01_output,none,290,39,15937,0.05095252,oric,oric,continuation_or_standalone,False
+2,block_output,block_01_output,none,290,40,49805,0.050912846,Absolute,Absolute,continuation_or_standalone,False
+2,block_output,block_01_output,none,290,41,19329,0.050908916,ĠKIND, KIND,word_initial,False
+2,block_output,block_01_output,none,290,42,17447,0.0508355,tar,tar,continuation_or_standalone,False
+2,block_output,block_01_output,none,290,43,28868,0.050819125,Ġbeet, beet,word_initial,False
+2,block_output,block_01_output,none,290,44,22927,0.0505111,"Ġ*,"," *,",punctuation_or_symbol,False
+2,block_output,block_01_output,none,290,45,47108,0.05050678,ĠACP, ACP,word_initial,False
+2,block_output,block_01_output,none,290,46,48431,0.050489906,ginx,ginx,continuation_or_standalone,False
+2,block_output,block_01_output,none,290,47,6428,0.050303705,==========,==========,punctuation_or_symbol,False
+2,block_output,block_01_output,none,290,48,22272,0.04996993,ĠHash, Hash,word_initial,False
+2,block_output,block_01_output,none,290,49,38717,0.049901385,Ġmitotic, mitotic,word_initial,False
+2,block_output,block_01_output,none,290,50,8211,0.049566004,eting,eting,continuation_or_standalone,False
+3,block_output,block_02_output,none,260,1,10,0.066449516,),),punctuation_or_symbol,False
+3,block_output,block_02_output,none,260,2,5232,0.06582163,Form,Form,continuation_or_standalone,False
+3,block_output,block_02_output,none,260,3,31255,0.06333745,Ġrefreshing, refreshing,word_initial,False
+3,block_output,block_02_output,none,260,4,41772,0.06289212,seeking,seeking,continuation_or_standalone,False
+3,block_output,block_02_output,none,260,5,13170,0.060993806,ĠNAS, NAS,word_initial,False
+3,block_output,block_02_output,none,260,6,20285,0.060953803,counter,counter,continuation_or_standalone,False
+3,block_output,block_02_output,none,260,7,10656,0.060591515,Ġadministrative, administrative,word_initial,False
+3,block_output,block_02_output,none,260,8,14042,0.06020999,Ġsolved, solved,word_initial,False
+3,block_output,block_02_output,none,260,9,20049,0.058229834,ĠActive, Active,word_initial,False
+3,block_output,block_02_output,none,260,10,27483,0.05704302,)))),)))),punctuation_or_symbol,False
+3,block_output,block_02_output,none,260,11,11013,0.05608815,Ġ===, ===,punctuation_or_symbol,False
+3,block_output,block_02_output,none,260,12,26782,0.05591386,ayan,ayan,continuation_or_standalone,False
+3,block_output,block_02_output,none,260,13,20383,0.055673722,ĠPARTICULAR, PARTICULAR,word_initial,False
+3,block_output,block_02_output,none,260,14,19828,0.055219397,00000000000000000000000000000000,00000000000000000000000000000000,continuation_or_standalone,False
+3,block_output,block_02_output,none,260,15,5166,0.0552168,CS,CS,continuation_or_standalone,False
+3,block_output,block_02_output,none,260,16,36115,0.054783132,ppen,ppen,continuation_or_standalone,False
+3,block_output,block_02_output,none,260,17,38115,0.054737918,Spin,Spin,continuation_or_standalone,False
+3,block_output,block_02_output,none,260,18,46898,0.054233428,ĠLOS, LOS,word_initial,False
+3,block_output,block_02_output,none,260,19,38374,0.054091204,lion,lion,continuation_or_standalone,False
+3,block_output,block_02_output,none,260,20,11789,0.054058142,Ġrice, rice,word_initial,False
+3,block_output,block_02_output,none,260,21,50201,0.053762868,Ġmycket, mycket,word_initial,False
+3,block_output,block_02_output,none,260,22,27729,0.053538874,ĠRole, Role,word_initial,False
+3,block_output,block_02_output,none,260,23,29006,0.053220768,?.,?.,punctuation_or_symbol,False
+3,block_output,block_02_output,none,260,24,17075,0.05311086,Ġformul, formul,word_initial,False
+3,block_output,block_02_output,none,260,25,16710,0.053083573,ĠCSS, CSS,word_initial,False
+3,block_output,block_02_output,none,260,26,5077,0.052782975,PC,PC,continuation_or_standalone,False
+3,block_output,block_02_output,none,260,27,20505,0.05270015,Ġds, ds,word_initial,False
+3,block_output,block_02_output,none,260,28,30861,0.052653912,idis,idis,continuation_or_standalone,False
+3,block_output,block_02_output,none,260,29,23393,0.05261757,ercise,ercise,continuation_or_standalone,False
+3,block_output,block_02_output,none,260,30,10109,0.052490957,ĠCivil, Civil,word_initial,False
+3,block_output,block_02_output,none,260,31,9421,0.05248393,Ġsurfaces, surfaces,word_initial,False
+3,block_output,block_02_output,none,260,32,43113,0.052192464,ĠIndonesian, Indonesian,word_initial,False
+3,block_output,block_02_output,none,260,33,23536,0.051984277,Role,Role,continuation_or_standalone,False
+3,block_output,block_02_output,none,260,34,31947,0.051980704,Ġremembers, remembers,word_initial,False
+3,block_output,block_02_output,none,260,35,19329,0.05166791,ĠKIND, KIND,word_initial,False
+3,block_output,block_02_output,none,260,36,44017,0.050930526,ĠForms, Forms,word_initial,False
+3,block_output,block_02_output,none,260,37,2295,0.050862443,Ġ==, ==,punctuation_or_symbol,False
+3,block_output,block_02_output,none,260,38,22226,0.050734434,>),>),punctuation_or_symbol,False
+3,block_output,block_02_output,none,260,39,49296,0.050706174,ensch,ensch,continuation_or_standalone,False
+3,block_output,block_02_output,none,260,40,36121,0.050553016,ĠFIN, FIN,word_initial,False
+3,block_output,block_02_output,none,260,41,8211,0.050419062,eting,eting,continuation_or_standalone,False
+3,block_output,block_02_output,none,260,42,33836,0.05027141,è³,�,punctuation_or_symbol,False
+3,block_output,block_02_output,none,260,43,15937,0.050253596,oric,oric,continuation_or_standalone,False
+3,block_output,block_02_output,none,260,44,35477,0.050233364,recognized,recognized,continuation_or_standalone,False
+3,block_output,block_02_output,none,260,45,6428,0.050213635,==========,==========,punctuation_or_symbol,False
+3,block_output,block_02_output,none,260,46,28544,0.05011686,Ã¶s,ös,continuation_or_standalone,False
+3,block_output,block_02_output,none,260,47,28191,0.050066583,ĠThai, Thai,word_initial,False
+3,block_output,block_02_output,none,260,48,7954,0.04988213,Ġfo, fo,word_initial,False
+3,block_output,block_02_output,none,260,49,18815,0.04970069,ortex,ortex,continuation_or_standalone,False
+3,block_output,block_02_output,none,260,50,22927,0.049183287,"Ġ*,"," *,",punctuation_or_symbol,False
+4,block_output,block_03_output,none,281,1,5232,0.066261336,Form,Form,continuation_or_standalone,False
+4,block_output,block_03_output,none,281,2,13170,0.06552693,ĠNAS, NAS,word_initial,False
+4,block_output,block_03_output,none,281,3,31255,0.062170584,Ġrefreshing, refreshing,word_initial,False
+4,block_output,block_03_output,none,281,4,19828,0.060238972,00000000000000000000000000000000,00000000000000000000000000000000,continuation_or_standalone,False
+4,block_output,block_03_output,none,281,5,10,0.058583606,),),punctuation_or_symbol,False
+4,block_output,block_03_output,none,281,6,20285,0.05839045,counter,counter,continuation_or_standalone,False
+4,block_output,block_03_output,none,281,7,20049,0.0580682,ĠActive, Active,word_initial,False
+4,block_output,block_03_output,none,281,8,11013,0.058026206,Ġ===, ===,punctuation_or_symbol,False
+4,block_output,block_03_output,none,281,9,38115,0.057113074,Spin,Spin,continuation_or_standalone,False
+4,block_output,block_03_output,none,281,10,41772,0.05633742,seeking,seeking,continuation_or_standalone,False
+4,block_output,block_03_output,none,281,11,47108,0.05628894,ĠACP, ACP,word_initial,False
+4,block_output,block_03_output,none,281,12,27483,0.055582654,)))),)))),punctuation_or_symbol,False
+4,block_output,block_03_output,none,281,13,5166,0.055286538,CS,CS,continuation_or_standalone,False
+4,block_output,block_03_output,none,281,14,14042,0.055268034,Ġsolved, solved,word_initial,False
+4,block_output,block_03_output,none,281,15,10109,0.053990334,ĠCivil, Civil,word_initial,False
+4,block_output,block_03_output,none,281,16,36115,0.053497847,ppen,ppen,continuation_or_standalone,False
+4,block_output,block_03_output,none,281,17,11789,0.053360738,Ġrice, rice,word_initial,False
+4,block_output,block_03_output,none,281,18,17027,0.053082153,carbon,carbon,continuation_or_standalone,False
+4,block_output,block_03_output,none,281,19,10656,0.052408863,Ġadministrative, administrative,word_initial,False
+4,block_output,block_03_output,none,281,20,19329,0.051753227,ĠKIND, KIND,word_initial,False
+4,block_output,block_03_output,none,281,21,17075,0.05168679,Ġformul, formul,word_initial,False
+4,block_output,block_03_output,none,281,22,50201,0.05153265,Ġmycket, mycket,word_initial,False
+4,block_output,block_03_output,none,281,23,22272,0.051287264,ĠHash, Hash,word_initial,False
+4,block_output,block_03_output,none,281,24,20505,0.051171195,Ġds, ds,word_initial,False
+4,block_output,block_03_output,none,281,25,29006,0.051097047,?.,?.,punctuation_or_symbol,False
+4,block_output,block_03_output,none,281,26,23567,0.05091031,Ġpolys, polys,word_initial,False
+4,block_output,block_03_output,none,281,27,46898,0.050907996,ĠLOS, LOS,word_initial,False
+4,block_output,block_03_output,none,281,28,44017,0.050514575,ĠForms, Forms,word_initial,False
+4,block_output,block_03_output,none,281,29,17117,0.050456263,Ġfranchise, franchise,word_initial,False
+4,block_output,block_03_output,none,281,30,45594,0.050408196,ĠGest, Gest,word_initial,False
+4,block_output,block_03_output,none,281,31,35857,0.05033636,Ġcivic, civic,word_initial,False
+4,block_output,block_03_output,none,281,32,9421,0.050269518,Ġsurfaces, surfaces,word_initial,False
+4,block_output,block_03_output,none,281,33,16710,0.04990823,ĠCSS, CSS,word_initial,False
+4,block_output,block_03_output,none,281,34,31947,0.049817946,Ġremembers, remembers,word_initial,False
+4,block_output,block_03_output,none,281,35,23536,0.04964285,Role,Role,continuation_or_standalone,False
+4,block_output,block_03_output,none,281,36,37580,0.049614854,opan,opan,continuation_or_standalone,False
+4,block_output,block_03_output,none,281,37,16231,0.04948344,bara,bara,continuation_or_standalone,False
+4,block_output,block_03_output,none,281,38,7954,0.049472384,Ġfo, fo,word_initial,False
+4,block_output,block_03_output,none,281,39,33836,0.049461946,è³,�,punctuation_or_symbol,False
+4,block_output,block_03_output,none,281,40,27729,0.049433507,ĠRole, Role,word_initial,False
+4,block_output,block_03_output,none,281,41,38374,0.049391665,lion,lion,continuation_or_standalone,False
+4,block_output,block_03_output,none,281,42,49296,0.04932404,ensch,ensch,continuation_or_standalone,False
+4,block_output,block_03_output,none,281,43,41986,0.04924934,ë§,�,punctuation_or_symbol,False
+4,block_output,block_03_output,none,281,44,20383,0.04922065,ĠPARTICULAR, PARTICULAR,word_initial,False
+4,block_output,block_03_output,none,281,45,27240,0.04894358,=======================,=======================,punctuation_or_symbol,False
+4,block_output,block_03_output,none,281,46,46162,0.048911076,entre,entre,continuation_or_standalone,False
+4,block_output,block_03_output,none,281,47,30861,0.048869845,idis,idis,continuation_or_standalone,False
+4,block_output,block_03_output,none,281,48,35477,0.048809476,recognized,recognized,continuation_or_standalone,False
+4,block_output,block_03_output,none,281,49,22927,0.048704423,"Ġ*,"," *,",punctuation_or_symbol,False
+4,block_output,block_03_output,none,281,50,44913,0.04866456,ĠViews, Views,word_initial,False
+5,block_output,block_04_output,none,252,1,10,0.06644777,),),punctuation_or_symbol,False
+5,block_output,block_04_output,none,252,2,31255,0.06569423,Ġrefreshing, refreshing,word_initial,False
+5,block_output,block_04_output,none,252,3,5232,0.064065814,Form,Form,continuation_or_standalone,False
+5,block_output,block_04_output,none,252,4,20285,0.062894434,counter,counter,continuation_or_standalone,False
+5,block_output,block_04_output,none,252,5,13170,0.06262524,ĠNAS, NAS,word_initial,False
+5,block_output,block_04_output,none,252,6,41772,0.061047606,seeking,seeking,continuation_or_standalone,False
+5,block_output,block_04_output,none,252,7,14042,0.05992904,Ġsolved, solved,word_initial,False
+5,block_output,block_04_output,none,252,8,20049,0.059425395,ĠActive, Active,word_initial,False
+5,block_output,block_04_output,none,252,9,17117,0.059358902,Ġfranchise, franchise,word_initial,False
+5,block_output,block_04_output,none,252,10,27483,0.058242153,)))),)))),punctuation_or_symbol,False
+5,block_output,block_04_output,none,252,11,20505,0.056858968,Ġds, ds,word_initial,False
+5,block_output,block_04_output,none,252,12,11013,0.056656107,Ġ===, ===,punctuation_or_symbol,False
+5,block_output,block_04_output,none,252,13,19828,0.056337144,00000000000000000000000000000000,00000000000000000000000000000000,continuation_or_standalone,False
+5,block_output,block_04_output,none,252,14,44913,0.055884544,ĠViews, Views,word_initial,False
+5,block_output,block_04_output,none,252,15,49296,0.055557057,ensch,ensch,continuation_or_standalone,False
+5,block_output,block_04_output,none,252,16,5166,0.055471618,CS,CS,continuation_or_standalone,False
+5,block_output,block_04_output,none,252,17,19329,0.05488469,ĠKIND, KIND,word_initial,False
+5,block_output,block_04_output,none,252,18,10109,0.054653242,ĠCivil, Civil,word_initial,False
+5,block_output,block_04_output,none,252,19,44017,0.0545563,ĠForms, Forms,word_initial,False
+5,block_output,block_04_output,none,252,20,10656,0.054094523,Ġadministrative, administrative,word_initial,False
+5,block_output,block_04_output,none,252,21,28868,0.05396417,Ġbeet, beet,word_initial,False
+5,block_output,block_04_output,none,252,22,118,0.053647812,¸,�,punctuation_or_symbol,False
+5,block_output,block_04_output,none,252,23,38115,0.05355391,Spin,Spin,continuation_or_standalone,False
+5,block_output,block_04_output,none,252,24,27729,0.05318171,ĠRole, Role,word_initial,False
+5,block_output,block_04_output,none,252,25,24916,0.05310555,ĠBrothers, Brothers,word_initial,False
+5,block_output,block_04_output,none,252,26,17942,0.05292538,Ġresort, resort,word_initial,False
+5,block_output,block_04_output,none,252,27,38717,0.05292501,Ġmitotic, mitotic,word_initial,False
+5,block_output,block_04_output,none,252,28,11789,0.052861523,Ġrice, rice,word_initial,False
+5,block_output,block_04_output,none,252,29,9421,0.052398846,Ġsurfaces, surfaces,word_initial,False
+5,block_output,block_04_output,none,252,30,17075,0.052368477,Ġformul, formul,word_initial,False
+5,block_output,block_04_output,none,252,31,36115,0.052279174,ppen,ppen,continuation_or_standalone,False
+5,block_output,block_04_output,none,252,32,41781,0.05120572,ãĤ¤ãĥ³,イン,continuation_or_standalone,False
+5,block_output,block_04_output,none,252,33,28544,0.0509988,Ã¶s,ös,continuation_or_standalone,False
+5,block_output,block_04_output,none,252,34,16231,0.05072048,bara,bara,continuation_or_standalone,False
+5,block_output,block_04_output,none,252,35,31947,0.050635554,Ġremembers, remembers,word_initial,False
+5,block_output,block_04_output,none,252,36,22599,0.050633192,Ġfinancing, financing,word_initial,False
+5,block_output,block_04_output,none,252,37,38905,0.050543275,Reading,Reading,continuation_or_standalone,False
+5,block_output,block_04_output,none,252,38,3939,0.050404735,Ġactive, active,word_initial,False
+5,block_output,block_04_output,none,252,39,23536,0.05039175,Role,Role,continuation_or_standalone,False
+5,block_output,block_04_output,none,252,40,33836,0.050259385,è³,�,punctuation_or_symbol,False
+5,block_output,block_04_output,none,252,41,5077,0.050208896,PC,PC,continuation_or_standalone,False
+5,block_output,block_04_output,none,252,42,30861,0.050206244,idis,idis,continuation_or_standalone,False
+5,block_output,block_04_output,none,252,43,46898,0.049987637,ĠLOS, LOS,word_initial,False
+5,block_output,block_04_output,none,252,44,39358,0.0499843,Ġrenormalization, renormalization,word_initial,False
+5,block_output,block_04_output,none,252,45,5880,0.04986781,Ġcycle, cycle,word_initial,False
+5,block_output,block_04_output,none,252,46,17919,0.04977699,Press,Press,continuation_or_standalone,False
+5,block_output,block_04_output,none,252,47,37925,0.0495304,anden,anden,continuation_or_standalone,False
+5,block_output,block_04_output,none,252,48,10826,0.049375784,ĠOK, OK,word_initial,False
+5,block_output,block_04_output,none,252,49,22927,0.049337164,"Ġ*,"," *,",punctuation_or_symbol,False
+5,block_output,block_04_output,none,252,50,17736,0.049159676,License,License,continuation_or_standalone,False
+6,block_output,block_05_output,none,240,1,10,0.066572644,),),punctuation_or_symbol,False
+6,block_output,block_05_output,none,240,2,31255,0.06583905,Ġrefreshing, refreshing,word_initial,False
+6,block_output,block_05_output,none,240,3,13170,0.064620584,ĠNAS, NAS,word_initial,False
+6,block_output,block_05_output,none,240,4,41772,0.063659824,seeking,seeking,continuation_or_standalone,False
+6,block_output,block_05_output,none,240,5,5232,0.060689073,Form,Form,continuation_or_standalone,False
+6,block_output,block_05_output,none,240,6,49296,0.05838235,ensch,ensch,continuation_or_standalone,False
+6,block_output,block_05_output,none,240,7,17075,0.057933714,Ġformul, formul,word_initial,False
+6,block_output,block_05_output,none,240,8,10656,0.057828337,Ġadministrative, administrative,word_initial,False
+6,block_output,block_05_output,none,240,9,10109,0.05734209,ĠCivil, Civil,word_initial,False
+6,block_output,block_05_output,none,240,10,19329,0.05724493,ĠKIND, KIND,word_initial,False
+6,block_output,block_05_output,none,240,11,20285,0.057073746,counter,counter,continuation_or_standalone,False
+6,block_output,block_05_output,none,240,12,31947,0.05694089,Ġremembers, remembers,word_initial,False
+6,block_output,block_05_output,none,240,13,14042,0.056855842,Ġsolved, solved,word_initial,False
+6,block_output,block_05_output,none,240,14,20505,0.055628784,Ġds, ds,word_initial,False
+6,block_output,block_05_output,none,240,15,38115,0.054952227,Spin,Spin,continuation_or_standalone,False
+6,block_output,block_05_output,none,240,16,44017,0.054788686,ĠForms, Forms,word_initial,False
+6,block_output,block_05_output,none,240,17,20049,0.054406755,ĠActive, Active,word_initial,False
+6,block_output,block_05_output,none,240,18,5166,0.05439244,CS,CS,continuation_or_standalone,False
+6,block_output,block_05_output,none,240,19,27729,0.05433708,ĠRole, Role,word_initial,False
+6,block_output,block_05_output,none,240,20,17942,0.053934257,Ġresort, resort,word_initial,False
+6,block_output,block_05_output,none,240,21,44913,0.05359844,ĠViews, Views,word_initial,False
+6,block_output,block_05_output,none,240,22,22272,0.053093042,ĠHash, Hash,word_initial,False
+6,block_output,block_05_output,none,240,23,39358,0.052948028,Ġrenormalization, renormalization,word_initial,False
+6,block_output,block_05_output,none,240,24,37925,0.05292592,anden,anden,continuation_or_standalone,False
+6,block_output,block_05_output,none,240,25,11013,0.05290769,Ġ===, ===,punctuation_or_symbol,False
+6,block_output,block_05_output,none,240,26,23536,0.052807655,Role,Role,continuation_or_standalone,False
+6,block_output,block_05_output,none,240,27,27483,0.052749246,)))),)))),punctuation_or_symbol,False
+6,block_output,block_05_output,none,240,28,19828,0.052609976,00000000000000000000000000000000,00000000000000000000000000000000,continuation_or_standalone,False
+6,block_output,block_05_output,none,240,29,41986,0.052421167,ë§,�,punctuation_or_symbol,False
+6,block_output,block_05_output,none,240,30,28868,0.05222394,Ġbeet, beet,word_initial,False
+6,block_output,block_05_output,none,240,31,17117,0.052181892,Ġfranchise, franchise,word_initial,False
+6,block_output,block_05_output,none,240,32,21102,0.05216891,ĠBD, BD,word_initial,False
+6,block_output,block_05_output,none,240,33,10826,0.05215043,ĠOK, OK,word_initial,False
+6,block_output,block_05_output,none,240,34,30426,0.051577203,Ġresolving, resolving,word_initial,False
+6,block_output,block_05_output,none,240,35,118,0.051566806,¸,�,punctuation_or_symbol,False
+6,block_output,block_05_output,none,240,36,17027,0.05124424,carbon,carbon,continuation_or_standalone,False
+6,block_output,block_05_output,none,240,37,8410,0.05110193,Ġemployment, employment,word_initial,False
+6,block_output,block_05_output,none,240,38,16231,0.051024996,bara,bara,continuation_or_standalone,False
+6,block_output,block_05_output,none,240,39,41349,0.050778598,Financial,Financial,continuation_or_standalone,False
+6,block_output,block_05_output,none,240,40,5656,0.050549787,ANT,ANT,continuation_or_standalone,False
+6,block_output,block_05_output,none,240,41,35612,0.050461397,ocortic,ocortic,continuation_or_standalone,False
+6,block_output,block_05_output,none,240,42,36121,0.050377123,ĠFIN, FIN,word_initial,False
+6,block_output,block_05_output,none,240,43,3116,0.050275102,Ġgrowth, growth,word_initial,False
+6,block_output,block_05_output,none,240,44,43644,0.05000935,srep,srep,continuation_or_standalone,False
+6,block_output,block_05_output,none,240,45,23485,0.049823754,camp,camp,continuation_or_standalone,False
+6,block_output,block_05_output,none,240,46,4072,0.04982,Ġ2013, 2013,word_initial,False
+6,block_output,block_05_output,none,240,47,9421,0.049796395,Ġsurfaces, surfaces,word_initial,False
+6,block_output,block_05_output,none,240,48,43537,0.049776625,Gas,Gas,continuation_or_standalone,False
+6,block_output,block_05_output,none,240,49,26534,0.049352095,iane,iane,continuation_or_standalone,False
+6,block_output,block_05_output,none,240,50,11789,0.04929482,Ġrice, rice,word_initial,False
+7,block_output,block_06_output,none,198,1,31255,0.065984845,Ġrefreshing, refreshing,word_initial,False
+7,block_output,block_06_output,none,198,2,10,0.065704495,),),punctuation_or_symbol,False
+7,block_output,block_06_output,none,198,3,13170,0.06175614,ĠNAS, NAS,word_initial,False
+7,block_output,block_06_output,none,198,4,41772,0.061371416,seeking,seeking,continuation_or_standalone,False
+7,block_output,block_06_output,none,198,5,8410,0.059376772,Ġemployment, employment,word_initial,False
+7,block_output,block_06_output,none,198,6,17075,0.058807664,Ġformul, formul,word_initial,False
+7,block_output,block_06_output,none,198,7,14042,0.058268484,Ġsolved, solved,word_initial,False
+7,block_output,block_06_output,none,198,8,2244,0.057896804,urs,urs,continuation_or_standalone,False
+7,block_output,block_06_output,none,198,9,44017,0.057801303,ĠForms, Forms,word_initial,False
+7,block_output,block_06_output,none,198,10,10109,0.057794973,ĠCivil, Civil,word_initial,False
+7,block_output,block_06_output,none,198,11,10826,0.057397783,ĠOK, OK,word_initial,False
+7,block_output,block_06_output,none,198,12,44913,0.05708041,ĠViews, Views,word_initial,False
+7,block_output,block_06_output,none,198,13,10656,0.05683585,Ġadministrative, administrative,word_initial,False
+7,block_output,block_06_output,none,198,14,20285,0.05669253,counter,counter,continuation_or_standalone,False
+7,block_output,block_06_output,none,198,15,5232,0.05630831,Form,Form,continuation_or_standalone,False
+7,block_output,block_06_output,none,198,16,17942,0.056204718,Ġresort, resort,word_initial,False
+7,block_output,block_06_output,none,198,17,38115,0.055703066,Spin,Spin,continuation_or_standalone,False
+7,block_output,block_06_output,none,198,18,27483,0.055692125,)))),)))),punctuation_or_symbol,False
+7,block_output,block_06_output,none,198,19,39358,0.05565388,Ġrenormalization, renormalization,word_initial,False
+7,block_output,block_06_output,none,198,20,22272,0.054869693,ĠHash, Hash,word_initial,False
+7,block_output,block_06_output,none,198,21,28868,0.054722372,Ġbeet, beet,word_initial,False
+7,block_output,block_06_output,none,198,22,41986,0.05460951,ë§,�,punctuation_or_symbol,False
+7,block_output,block_06_output,none,198,23,19329,0.054535076,ĠKIND, KIND,word_initial,False
+7,block_output,block_06_output,none,198,24,118,0.05366757,¸,�,punctuation_or_symbol,False
+7,block_output,block_06_output,none,198,25,20505,0.05366175,Ġds, ds,word_initial,False
+7,block_output,block_06_output,none,198,26,24916,0.05344909,ĠBrothers, Brothers,word_initial,False
+7,block_output,block_06_output,none,198,27,27729,0.053318646,ĠRole, Role,word_initial,False
+7,block_output,block_06_output,none,198,28,23485,0.053120267,camp,camp,continuation_or_standalone,False
+7,block_output,block_06_output,none,198,29,5166,0.052971564,CS,CS,continuation_or_standalone,False
+7,block_output,block_06_output,none,198,30,43644,0.052925903,srep,srep,continuation_or_standalone,False
+7,block_output,block_06_output,none,198,31,11013,0.052760597,Ġ===, ===,punctuation_or_symbol,False
+7,block_output,block_06_output,none,198,32,31947,0.052374054,Ġremembers, remembers,word_initial,False
+7,block_output,block_06_output,none,198,33,30653,0.05225811,Ġlitter, litter,word_initial,False
+7,block_output,block_06_output,none,198,34,32497,0.051333945,Ġlending, lending,word_initial,False
+7,block_output,block_06_output,none,198,35,30426,0.051022157,Ġresolving, resolving,word_initial,False
+7,block_output,block_06_output,none,198,36,14085,0.050831042,Entry,Entry,continuation_or_standalone,False
+7,block_output,block_06_output,none,198,37,19828,0.050804846,00000000000000000000000000000000,00000000000000000000000000000000,continuation_or_standalone,False
+7,block_output,block_06_output,none,198,38,22952,0.050660964,Ġseasonal, seasonal,word_initial,False
+7,block_output,block_06_output,none,198,39,38717,0.0505931,Ġmitotic, mitotic,word_initial,False
+7,block_output,block_06_output,none,198,40,21102,0.05058839,ĠBD, BD,word_initial,False
+7,block_output,block_06_output,none,198,41,4072,0.0504153,Ġ2013, 2013,word_initial,False
+7,block_output,block_06_output,none,198,42,33836,0.050252542,è³,�,punctuation_or_symbol,False
+7,block_output,block_06_output,none,198,43,35477,0.05019545,recognized,recognized,continuation_or_standalone,False
+7,block_output,block_06_output,none,198,44,23378,0.050129276,Ġreferenced, referenced,word_initial,False
+7,block_output,block_06_output,none,198,45,41992,0.050060082,ĠChocolate, Chocolate,word_initial,False
+7,block_output,block_06_output,none,198,46,23536,0.050041392,Role,Role,continuation_or_standalone,False
+7,block_output,block_06_output,none,198,47,37925,0.050033826,anden,anden,continuation_or_standalone,False
+7,block_output,block_06_output,none,198,48,9112,0.050017178,Rel,Rel,continuation_or_standalone,False
+7,block_output,block_06_output,none,198,49,39464,0.04993383,games,games,continuation_or_standalone,False
+7,block_output,block_06_output,none,198,50,38905,0.049834605,Reading,Reading,continuation_or_standalone,False
+8,block_output,block_07_output,none,299,1,8410,0.06194683,Ġemployment, employment,word_initial,False
+8,block_output,block_07_output,none,299,2,31255,0.06102711,Ġrefreshing, refreshing,word_initial,False
+8,block_output,block_07_output,none,299,3,10,0.061003998,),),punctuation_or_symbol,False
+8,block_output,block_07_output,none,299,4,41772,0.060782567,seeking,seeking,continuation_or_standalone,False
+8,block_output,block_07_output,none,299,5,13170,0.059768595,ĠNAS, NAS,word_initial,False
+8,block_output,block_07_output,none,299,6,23485,0.058712166,camp,camp,continuation_or_standalone,False
+8,block_output,block_07_output,none,299,7,39358,0.058682818,Ġrenormalization, renormalization,word_initial,False
+8,block_output,block_07_output,none,299,8,17075,0.05844182,Ġformul, formul,word_initial,False
+8,block_output,block_07_output,none,299,9,43644,0.05829876,srep,srep,continuation_or_standalone,False
+8,block_output,block_07_output,none,299,10,44017,0.058177404,ĠForms, Forms,word_initial,False
+8,block_output,block_07_output,none,299,11,2244,0.058020294,urs,urs,continuation_or_standalone,False
+8,block_output,block_07_output,none,299,12,38905,0.05771756,Reading,Reading,continuation_or_standalone,False
+8,block_output,block_07_output,none,299,13,44913,0.05743377,ĠViews, Views,word_initial,False
+8,block_output,block_07_output,none,299,14,20285,0.05725555,counter,counter,continuation_or_standalone,False
+8,block_output,block_07_output,none,299,15,38115,0.0567784,Spin,Spin,continuation_or_standalone,False
+8,block_output,block_07_output,none,299,16,28868,0.056702234,Ġbeet, beet,word_initial,False
+8,block_output,block_07_output,none,299,17,10826,0.0565127,ĠOK, OK,word_initial,False
+8,block_output,block_07_output,none,299,18,38717,0.05647814,Ġmitotic, mitotic,word_initial,False
+8,block_output,block_07_output,none,299,19,118,0.055779934,¸,�,punctuation_or_symbol,False
+8,block_output,block_07_output,none,299,20,22272,0.05529782,ĠHash, Hash,word_initial,False
+8,block_output,block_07_output,none,299,21,5232,0.055037513,Form,Form,continuation_or_standalone,False
+8,block_output,block_07_output,none,299,22,27483,0.054932397,)))),)))),punctuation_or_symbol,False
+8,block_output,block_07_output,none,299,23,14042,0.054736182,Ġsolved, solved,word_initial,False
+8,block_output,block_07_output,none,299,24,35477,0.05452806,recognized,recognized,continuation_or_standalone,False
+8,block_output,block_07_output,none,299,25,14085,0.05450215,Entry,Entry,continuation_or_standalone,False
+8,block_output,block_07_output,none,299,26,20505,0.054280065,Ġds, ds,word_initial,False
+8,block_output,block_07_output,none,299,27,19329,0.053612612,ĠKIND, KIND,word_initial,False
+8,block_output,block_07_output,none,299,28,30426,0.05358786,Ġresolving, resolving,word_initial,False
+8,block_output,block_07_output,none,299,29,10109,0.053400557,ĠCivil, Civil,word_initial,False
+8,block_output,block_07_output,none,299,30,17942,0.053051036,Ġresort, resort,word_initial,False
+8,block_output,block_07_output,none,299,31,41986,0.05292425,ë§,�,punctuation_or_symbol,False
+8,block_output,block_07_output,none,299,32,24916,0.05280057,ĠBrothers, Brothers,word_initial,False
+8,block_output,block_07_output,none,299,33,35612,0.05242873,ocortic,ocortic,continuation_or_standalone,False
+8,block_output,block_07_output,none,299,34,37421,0.052279092,Ġfellowship, fellowship,word_initial,False
+8,block_output,block_07_output,none,299,35,4126,0.052253224,aign,aign,continuation_or_standalone,False
+8,block_output,block_07_output,none,299,36,5166,0.052090455,CS,CS,continuation_or_standalone,False
+8,block_output,block_07_output,none,299,37,39351,0.051880486,ĠSalvador, Salvador,word_initial,False
+8,block_output,block_07_output,none,299,38,21102,0.051307805,ĠBD, BD,word_initial,False
+8,block_output,block_07_output,none,299,39,12664,0.0511194,ĠWeek, Week,word_initial,False
+8,block_output,block_07_output,none,299,40,35215,0.050782613,spacing,spacing,continuation_or_standalone,False
+8,block_output,block_07_output,none,299,41,31947,0.050526563,Ġremembers, remembers,word_initial,False
+8,block_output,block_07_output,none,299,42,22952,0.050498806,Ġseasonal, seasonal,word_initial,False
+8,block_output,block_07_output,none,299,43,37925,0.050446566,anden,anden,continuation_or_standalone,False
+8,block_output,block_07_output,none,299,44,17919,0.050358307,Press,Press,continuation_or_standalone,False
+8,block_output,block_07_output,none,299,45,10656,0.0503162,Ġadministrative, administrative,word_initial,False
+8,block_output,block_07_output,none,299,46,37861,0.05019035,Ġpsychosocial, psychosocial,word_initial,False
+8,block_output,block_07_output,none,299,47,39622,0.050174,Ġfry, fry,word_initial,False
+8,block_output,block_07_output,none,299,48,28456,0.049960632,arming,arming,continuation_or_standalone,False
+8,block_output,block_07_output,none,299,49,9112,0.049870893,Rel,Rel,continuation_or_standalone,False
+8,block_output,block_07_output,none,299,50,43038,0.04972997,rese,rese,continuation_or_standalone,False
+9,block_output,block_08_output,none,308,1,39358,0.061078634,Ġrenormalization, renormalization,word_initial,False
+9,block_output,block_08_output,none,308,2,8410,0.06073626,Ġemployment, employment,word_initial,False
+9,block_output,block_08_output,none,308,3,31255,0.060600046,Ġrefreshing, refreshing,word_initial,False
+9,block_output,block_08_output,none,308,4,17075,0.060589176,Ġformul, formul,word_initial,False
+9,block_output,block_08_output,none,308,5,41772,0.06031309,seeking,seeking,continuation_or_standalone,False
+9,block_output,block_08_output,none,308,6,2244,0.060282733,urs,urs,continuation_or_standalone,False
+9,block_output,block_08_output,none,308,7,23485,0.05941809,camp,camp,continuation_or_standalone,False
+9,block_output,block_08_output,none,308,8,10,0.059329607,),),punctuation_or_symbol,False
+9,block_output,block_08_output,none,308,9,38905,0.057956938,Reading,Reading,continuation_or_standalone,False
+9,block_output,block_08_output,none,308,10,28868,0.057478417,Ġbeet, beet,word_initial,False
+9,block_output,block_08_output,none,308,11,38115,0.057270195,Spin,Spin,continuation_or_standalone,False
+9,block_output,block_08_output,none,308,12,41986,0.05724818,ë§,�,punctuation_or_symbol,False
+9,block_output,block_08_output,none,308,13,38717,0.057157103,Ġmitotic, mitotic,word_initial,False
+9,block_output,block_08_output,none,308,14,43644,0.05680654,srep,srep,continuation_or_standalone,False
+9,block_output,block_08_output,none,308,15,43038,0.056432717,rese,rese,continuation_or_standalone,False
+9,block_output,block_08_output,none,308,16,44017,0.056184806,ĠForms, Forms,word_initial,False
+9,block_output,block_08_output,none,308,17,37421,0.05592185,Ġfellowship, fellowship,word_initial,False
+9,block_output,block_08_output,none,308,18,14085,0.055269476,Entry,Entry,continuation_or_standalone,False
+9,block_output,block_08_output,none,308,19,118,0.05500746,¸,�,punctuation_or_symbol,False
+9,block_output,block_08_output,none,308,20,35215,0.054544955,spacing,spacing,continuation_or_standalone,False
+9,block_output,block_08_output,none,308,21,20505,0.05446366,Ġds, ds,word_initial,False
+9,block_output,block_08_output,none,308,22,44913,0.05432092,ĠViews, Views,word_initial,False
+9,block_output,block_08_output,none,308,23,20285,0.054159466,counter,counter,continuation_or_standalone,False
+9,block_output,block_08_output,none,308,24,13699,0.053997062,Ġthreatened, threatened,word_initial,False
+9,block_output,block_08_output,none,308,25,23269,0.053899746,sizeof,sizeof,continuation_or_standalone,False
+9,block_output,block_08_output,none,308,26,13170,0.05373713,ĠNAS, NAS,word_initial,False
+9,block_output,block_08_output,none,308,27,14042,0.053681593,Ġsolved, solved,word_initial,False
+9,block_output,block_08_output,none,308,28,27483,0.05346498,)))),)))),punctuation_or_symbol,False
+9,block_output,block_08_output,none,308,29,5232,0.053406868,Form,Form,continuation_or_standalone,False
+9,block_output,block_08_output,none,308,30,12664,0.053004302,ĠWeek, Week,word_initial,False
+9,block_output,block_08_output,none,308,31,10826,0.052846357,ĠOK, OK,word_initial,False
+9,block_output,block_08_output,none,308,32,47725,0.05240219,uploads,uploads,continuation_or_standalone,False
+9,block_output,block_08_output,none,308,33,40365,0.051953122,inhib,inhib,continuation_or_standalone,False
+9,block_output,block_08_output,none,308,34,11416,0.051546726,iley,iley,continuation_or_standalone,False
+9,block_output,block_08_output,none,308,35,39351,0.051467884,ĠSalvador, Salvador,word_initial,False
+9,block_output,block_08_output,none,308,36,4126,0.05136968,aign,aign,continuation_or_standalone,False
+9,block_output,block_08_output,none,308,37,22952,0.051323157,Ġseasonal, seasonal,word_initial,False
+9,block_output,block_08_output,none,308,38,22272,0.051183313,ĠHash, Hash,word_initial,False
+9,block_output,block_08_output,none,308,39,28456,0.051145818,arming,arming,continuation_or_standalone,False
+9,block_output,block_08_output,none,308,40,30426,0.051049,Ġresolving, resolving,word_initial,False
+9,block_output,block_08_output,none,308,41,35414,0.05076126,WN,WN,continuation_or_standalone,False
+9,block_output,block_08_output,none,308,42,49465,0.050706014,Managed,Managed,continuation_or_standalone,False
+9,block_output,block_08_output,none,308,43,39464,0.05054667,games,games,continuation_or_standalone,False
+9,block_output,block_08_output,none,308,44,36339,0.050357446,Ġfellows, fellows,word_initial,False
+9,block_output,block_08_output,none,308,45,46083,0.050203264,Ġ*);, *);,punctuation_or_symbol,False
+9,block_output,block_08_output,none,308,46,33836,0.050165765,è³,�,punctuation_or_symbol,False
+9,block_output,block_08_output,none,308,47,38630,0.05016394,Ġmediation, mediation,word_initial,False
+9,block_output,block_08_output,none,308,48,27024,0.05007206,Ġperfor, perfor,word_initial,False
+9,block_output,block_08_output,none,308,49,21102,0.050068103,ĠBD, BD,word_initial,False
+9,block_output,block_08_output,none,308,50,35477,0.0498177,recognized,recognized,continuation_or_standalone,False
+10,block_output,block_09_output,none,257,1,38905,0.06374841,Reading,Reading,continuation_or_standalone,False
+10,block_output,block_09_output,none,257,2,38115,0.06301475,Spin,Spin,continuation_or_standalone,False
+10,block_output,block_09_output,none,257,3,8410,0.06176079,Ġemployment, employment,word_initial,False
+10,block_output,block_09_output,none,257,4,31255,0.061519675,Ġrefreshing, refreshing,word_initial,False
+10,block_output,block_09_output,none,257,5,23269,0.06140619,sizeof,sizeof,continuation_or_standalone,False
+10,block_output,block_09_output,none,257,6,2244,0.06075624,urs,urs,continuation_or_standalone,False
+10,block_output,block_09_output,none,257,7,43038,0.059528366,rese,rese,continuation_or_standalone,False
+10,block_output,block_09_output,none,257,8,11416,0.059196122,iley,iley,continuation_or_standalone,False
+10,block_output,block_09_output,none,257,9,38717,0.058292624,Ġmitotic, mitotic,word_initial,False
+10,block_output,block_09_output,none,257,10,23485,0.058232367,camp,camp,continuation_or_standalone,False
+10,block_output,block_09_output,none,257,11,43644,0.057937242,srep,srep,continuation_or_standalone,False
+10,block_output,block_09_output,none,257,12,35215,0.057763364,spacing,spacing,continuation_or_standalone,False
+10,block_output,block_09_output,none,257,13,28868,0.057725076,Ġbeet, beet,word_initial,False
+10,block_output,block_09_output,none,257,14,41772,0.05741164,seeking,seeking,continuation_or_standalone,False
+10,block_output,block_09_output,none,257,15,42699,0.057213087,ĠCaption, Caption,word_initial,False
+10,block_output,block_09_output,none,257,16,47725,0.05711141,uploads,uploads,continuation_or_standalone,False
+10,block_output,block_09_output,none,257,17,39358,0.057049606,Ġrenormalization, renormalization,word_initial,False
+10,block_output,block_09_output,none,257,18,17075,0.05637316,Ġformul, formul,word_initial,False
+10,block_output,block_09_output,none,257,19,41986,0.05634446,ë§,�,punctuation_or_symbol,False
+10,block_output,block_09_output,none,257,20,36723,0.055285282,Ð»ÐµÐ½,лен,continuation_or_standalone,False
+10,block_output,block_09_output,none,257,21,13699,0.055202305,Ġthreatened, threatened,word_initial,False
+10,block_output,block_09_output,none,257,22,22952,0.054799225,Ġseasonal, seasonal,word_initial,False
+10,block_output,block_09_output,none,257,23,33757,0.05452868,ĠSpin, Spin,word_initial,False
+10,block_output,block_09_output,none,257,24,12088,0.053793937,Ġtalks, talks,word_initial,False
+10,block_output,block_09_output,none,257,25,10,0.053479247,),),punctuation_or_symbol,False
+10,block_output,block_09_output,none,257,26,14085,0.053455703,Entry,Entry,continuation_or_standalone,False
+10,block_output,block_09_output,none,257,27,30547,0.05342885,Ġsket, sket,word_initial,False
+10,block_output,block_09_output,none,257,28,37421,0.053275112,Ġfellowship, fellowship,word_initial,False
+10,block_output,block_09_output,none,257,29,39351,0.053137638,ĠSalvador, Salvador,word_initial,False
+10,block_output,block_09_output,none,257,30,30426,0.05269343,Ġresolving, resolving,word_initial,False
+10,block_output,block_09_output,none,257,31,118,0.052475587,¸,�,punctuation_or_symbol,False
+10,block_output,block_09_output,none,257,32,4126,0.052472513,aign,aign,continuation_or_standalone,False
+10,block_output,block_09_output,none,257,33,7562,0.05190696,Ġkeeping, keeping,word_initial,False
+10,block_output,block_09_output,none,257,34,48520,0.05180383,Ġresorts, resorts,word_initial,False
+10,block_output,block_09_output,none,257,35,14042,0.051510915,Ġsolved, solved,word_initial,False
+10,block_output,block_09_output,none,257,36,38630,0.05132413,Ġmediation, mediation,word_initial,False
+10,block_output,block_09_output,none,257,37,21919,0.051282316,ĠWorking, Working,word_initial,False
+10,block_output,block_09_output,none,257,38,29433,0.051065143,Ġtravelled, travelled,word_initial,False
+10,block_output,block_09_output,none,257,39,40365,0.05078175,inhib,inhib,continuation_or_standalone,False
+10,block_output,block_09_output,none,257,40,28456,0.05058945,arming,arming,continuation_or_standalone,False
+10,block_output,block_09_output,none,257,41,37861,0.05047279,Ġpsychosocial, psychosocial,word_initial,False
+10,block_output,block_09_output,none,257,42,21102,0.050460048,ĠBD, BD,word_initial,False
+10,block_output,block_09_output,none,257,43,2805,0.050311245,Ġq, q,word_initial,False
+10,block_output,block_09_output,none,257,44,45924,0.050309934,Greek,Greek,continuation_or_standalone,False
+10,block_output,block_09_output,none,257,45,5398,0.05025114,Ġprem, prem,word_initial,False
+10,block_output,block_09_output,none,257,46,10826,0.050220747,ĠOK, OK,word_initial,False
+10,block_output,block_09_output,none,257,47,24907,0.050163828,ĠPret, Pret,word_initial,False
+10,block_output,block_09_output,none,257,48,40248,0.050015014,Ġsprang, sprang,word_initial,False
+10,block_output,block_09_output,none,257,49,13170,0.04995067,ĠNAS, NAS,word_initial,False
+10,block_output,block_09_output,none,257,50,27024,0.049835447,Ġperfor, perfor,word_initial,False
+11,block_output,block_10_output,none,254,1,38905,0.06505693,Reading,Reading,continuation_or_standalone,False
+11,block_output,block_10_output,none,254,2,38115,0.06302956,Spin,Spin,continuation_or_standalone,False
+11,block_output,block_10_output,none,254,3,23269,0.062638484,sizeof,sizeof,continuation_or_standalone,False
+11,block_output,block_10_output,none,254,4,43644,0.06001754,srep,srep,continuation_or_standalone,False
+11,block_output,block_10_output,none,254,5,28868,0.059630275,Ġbeet, beet,word_initial,False
+11,block_output,block_10_output,none,254,6,43038,0.05917258,rese,rese,continuation_or_standalone,False
+11,block_output,block_10_output,none,254,7,8410,0.059053548,Ġemployment, employment,word_initial,False
+11,block_output,block_10_output,none,254,8,11416,0.058995046,iley,iley,continuation_or_standalone,False
+11,block_output,block_10_output,none,254,9,36723,0.05870776,Ð»ÐµÐ½,лен,continuation_or_standalone,False
+11,block_output,block_10_output,none,254,10,23485,0.058589958,camp,camp,continuation_or_standalone,False
+11,block_output,block_10_output,none,254,11,38717,0.05800282,Ġmitotic, mitotic,word_initial,False
+11,block_output,block_10_output,none,254,12,30547,0.057738815,Ġsket, sket,word_initial,False
+11,block_output,block_10_output,none,254,13,47725,0.0565269,uploads,uploads,continuation_or_standalone,False
+11,block_output,block_10_output,none,254,14,35215,0.056376085,spacing,spacing,continuation_or_standalone,False
+11,block_output,block_10_output,none,254,15,39358,0.056181427,Ġrenormalization, renormalization,word_initial,False
+11,block_output,block_10_output,none,254,16,45924,0.055736143,Greek,Greek,continuation_or_standalone,False
+11,block_output,block_10_output,none,254,17,7562,0.055540577,Ġkeeping, keeping,word_initial,False
+11,block_output,block_10_output,none,254,18,41986,0.055164777,ë§,�,punctuation_or_symbol,False
+11,block_output,block_10_output,none,254,19,31255,0.054472744,Ġrefreshing, refreshing,word_initial,False
+11,block_output,block_10_output,none,254,20,42699,0.05445963,ĠCaption, Caption,word_initial,False
+11,block_output,block_10_output,none,254,21,42594,0.054412745,12345,12345,continuation_or_standalone,False
+11,block_output,block_10_output,none,254,22,33757,0.054169726,ĠSpin, Spin,word_initial,False
+11,block_output,block_10_output,none,254,23,2244,0.054098956,urs,urs,continuation_or_standalone,False
+11,block_output,block_10_output,none,254,24,30426,0.0540423,Ġresolving, resolving,word_initial,False
+11,block_output,block_10_output,none,254,25,13841,0.05382623,Ġstake, stake,word_initial,False
+11,block_output,block_10_output,none,254,26,17075,0.053590994,Ġformul, formul,word_initial,False
+11,block_output,block_10_output,none,254,27,22339,0.053538706,getElementById,getElementById,continuation_or_standalone,False
+11,block_output,block_10_output,none,254,28,811,0.05335886,Ġtrans, trans,word_initial,False
+11,block_output,block_10_output,none,254,29,5398,0.053265437,Ġprem, prem,word_initial,False
+11,block_output,block_10_output,none,254,30,14085,0.053113908,Entry,Entry,continuation_or_standalone,False
+11,block_output,block_10_output,none,254,31,25302,0.05285179,Got,Got,continuation_or_standalone,False
+11,block_output,block_10_output,none,254,32,41772,0.052510776,seeking,seeking,continuation_or_standalone,False
+11,block_output,block_10_output,none,254,33,21919,0.051833365,ĠWorking, Working,word_initial,False
+11,block_output,block_10_output,none,254,34,37421,0.0514526,Ġfellowship, fellowship,word_initial,False
+11,block_output,block_10_output,none,254,35,46726,0.051408317,amid,amid,continuation_or_standalone,False
+11,block_output,block_10_output,none,254,36,12088,0.05130109,Ġtalks, talks,word_initial,False
+11,block_output,block_10_output,none,254,37,48520,0.051301084,Ġresorts, resorts,word_initial,False
+11,block_output,block_10_output,none,254,38,12911,0.05060479,ĠBerlin, Berlin,word_initial,False
+11,block_output,block_10_output,none,254,39,46083,0.050387837,Ġ*);, *);,punctuation_or_symbol,False
+11,block_output,block_10_output,none,254,40,27270,0.050206967,Business,Business,continuation_or_standalone,False
+11,block_output,block_10_output,none,254,41,49085,0.05019627,Gary,Gary,continuation_or_standalone,False
+11,block_output,block_10_output,none,254,42,32111,0.05019568,ĠMumbai, Mumbai,word_initial,False
+11,block_output,block_10_output,none,254,43,4207,0.04996247,\].,\].,punctuation_or_symbol,False
+11,block_output,block_10_output,none,254,44,22952,0.049891833,Ġseasonal, seasonal,word_initial,False
+11,block_output,block_10_output,none,254,45,47787,0.04969831,interacting,interacting,continuation_or_standalone,False
+11,block_output,block_10_output,none,254,46,37470,0.049586594,Ġrecycled, recycled,word_initial,False
+11,block_output,block_10_output,none,254,47,2108,0.04957375,ours,ours,continuation_or_standalone,False
+11,block_output,block_10_output,none,254,48,37972,0.049525548,499,499,continuation_or_standalone,False
+11,block_output,block_10_output,none,254,49,13699,0.04948212,Ġthreatened, threatened,word_initial,False
+11,block_output,block_10_output,none,254,50,8550,0.04942531,ivated,ivated,continuation_or_standalone,False
+12,block_output,block_11_output,none,272,1,23269,0.06270473,sizeof,sizeof,continuation_or_standalone,False
+12,block_output,block_11_output,none,272,2,43038,0.06141163,rese,rese,continuation_or_standalone,False
+12,block_output,block_11_output,none,272,3,38905,0.060672015,Reading,Reading,continuation_or_standalone,False
+12,block_output,block_11_output,none,272,4,38115,0.06047474,Spin,Spin,continuation_or_standalone,False
+12,block_output,block_11_output,none,272,5,26696,0.05986682,Ġtravers, travers,word_initial,False
+12,block_output,block_11_output,none,272,6,11416,0.058857955,iley,iley,continuation_or_standalone,False
+12,block_output,block_11_output,none,272,7,35215,0.058688007,spacing,spacing,continuation_or_standalone,False
+12,block_output,block_11_output,none,272,8,38717,0.058605712,Ġmitotic, mitotic,word_initial,False
+12,block_output,block_11_output,none,272,9,43644,0.057765495,srep,srep,continuation_or_standalone,False
+12,block_output,block_11_output,none,272,10,36723,0.056775697,Ð»ÐµÐ½,лен,continuation_or_standalone,False
+12,block_output,block_11_output,none,272,11,30547,0.056615658,Ġsket, sket,word_initial,False
+12,block_output,block_11_output,none,272,12,41986,0.055134706,ë§,�,punctuation_or_symbol,False
+12,block_output,block_11_output,none,272,13,42699,0.054862287,ĠCaption, Caption,word_initial,False
+12,block_output,block_11_output,none,272,14,8410,0.054244235,Ġemployment, employment,word_initial,False
+12,block_output,block_11_output,none,272,15,33757,0.054101903,ĠSpin, Spin,word_initial,False
+12,block_output,block_11_output,none,272,16,13841,0.05409757,Ġstake, stake,word_initial,False
+12,block_output,block_11_output,none,272,17,12664,0.053476833,ĠWeek, Week,word_initial,False
+12,block_output,block_11_output,none,272,18,12911,0.053223416,ĠBerlin, Berlin,word_initial,False
+12,block_output,block_11_output,none,272,19,5398,0.05312057,Ġprem, prem,word_initial,False
+12,block_output,block_11_output,none,272,20,47725,0.053047296,uploads,uploads,continuation_or_standalone,False
+12,block_output,block_11_output,none,272,21,8191,0.05296351,Ġinformed, informed,word_initial,False
+12,block_output,block_11_output,none,272,22,23485,0.052857604,camp,camp,continuation_or_standalone,False
+12,block_output,block_11_output,none,272,23,28868,0.052851725,Ġbeet, beet,word_initial,False
+12,block_output,block_11_output,none,272,24,7562,0.052733723,Ġkeeping, keeping,word_initial,False
+12,block_output,block_11_output,none,272,25,39358,0.052632883,Ġrenormalization, renormalization,word_initial,False
+12,block_output,block_11_output,none,272,26,45924,0.052508853,Greek,Greek,continuation_or_standalone,False
+12,block_output,block_11_output,none,272,27,37470,0.051574722,Ġrecycled, recycled,word_initial,False
+12,block_output,block_11_output,none,272,28,30426,0.05141592,Ġresolving, resolving,word_initial,False
+12,block_output,block_11_output,none,272,29,15212,0.051251788,Ġquoted, quoted,word_initial,False
+12,block_output,block_11_output,none,272,30,811,0.051069126,Ġtrans, trans,word_initial,False
+12,block_output,block_11_output,none,272,31,41515,0.05091721,Ġmilitant, militant,word_initial,False
+12,block_output,block_11_output,none,272,32,47787,0.0508775,interacting,interacting,continuation_or_standalone,False
+12,block_output,block_11_output,none,272,33,22339,0.050763488,getElementById,getElementById,continuation_or_standalone,False
+12,block_output,block_11_output,none,272,34,12088,0.050640613,Ġtalks, talks,word_initial,False
+12,block_output,block_11_output,none,272,35,47827,0.05051351,mathchoice,mathchoice,continuation_or_standalone,False
+12,block_output,block_11_output,none,272,36,14085,0.050505385,Entry,Entry,continuation_or_standalone,False
+12,block_output,block_11_output,none,272,37,35629,0.05039378,Ġcustomary, customary,word_initial,False
+12,block_output,block_11_output,none,272,38,8061,0.050168227,Thanks,Thanks,continuation_or_standalone,False
+12,block_output,block_11_output,none,272,39,25302,0.05011287,Got,Got,continuation_or_standalone,False
+12,block_output,block_11_output,none,272,40,2108,0.049737293,ours,ours,continuation_or_standalone,False
+12,block_output,block_11_output,none,272,41,25698,0.049696527,Posted,Posted,continuation_or_standalone,False
+12,block_output,block_11_output,none,272,42,12430,0.049650967,1997,1997,continuation_or_standalone,False
+12,block_output,block_11_output,none,272,43,27024,0.049466398,Ġperfor, perfor,word_initial,False
+12,block_output,block_11_output,none,272,44,7966,0.049438294,Ġfluores, fluores,word_initial,False
+12,block_output,block_11_output,none,272,45,49085,0.04941093,Gary,Gary,continuation_or_standalone,False
+12,block_output,block_11_output,none,272,46,46083,0.04940264,Ġ*);, *);,punctuation_or_symbol,False
+12,block_output,block_11_output,none,272,47,42864,0.049314696,Ġairborne, airborne,word_initial,False
+12,block_output,block_11_output,none,272,48,22952,0.049262237,Ġseasonal, seasonal,word_initial,False
+12,block_output,block_11_output,none,272,49,32111,0.049244724,ĠMumbai, Mumbai,word_initial,False
+12,block_output,block_11_output,none,272,50,21919,0.049138617,ĠWorking, Working,word_initial,False
+13,block_output,block_12_output,none,244,1,26696,0.06488847,Ġtravers, travers,word_initial,False
+13,block_output,block_12_output,none,244,2,30547,0.061177835,Ġsket, sket,word_initial,False
+13,block_output,block_12_output,none,244,3,38905,0.058323305,Reading,Reading,continuation_or_standalone,False
+13,block_output,block_12_output,none,244,4,35215,0.05816718,spacing,spacing,continuation_or_standalone,False
+13,block_output,block_12_output,none,244,5,25698,0.057722654,Posted,Posted,continuation_or_standalone,False
+13,block_output,block_12_output,none,244,6,13841,0.057562523,Ġstake, stake,word_initial,False
+13,block_output,block_12_output,none,244,7,11416,0.057356495,iley,iley,continuation_or_standalone,False
+13,block_output,block_12_output,none,244,8,12911,0.057134867,ĠBerlin, Berlin,word_initial,False
+13,block_output,block_12_output,none,244,9,43038,0.05682643,rese,rese,continuation_or_standalone,False
+13,block_output,block_12_output,none,244,10,23269,0.056606796,sizeof,sizeof,continuation_or_standalone,False
+13,block_output,block_12_output,none,244,11,42699,0.056604765,ĠCaption, Caption,word_initial,False
+13,block_output,block_12_output,none,244,12,6734,0.055440277,Ġ(), (),punctuation_or_symbol,False
+13,block_output,block_12_output,none,244,13,5398,0.055272557,Ġprem, prem,word_initial,False
+13,block_output,block_12_output,none,244,14,41986,0.054850027,ë§,�,punctuation_or_symbol,False
+13,block_output,block_12_output,none,244,15,15212,0.05457377,Ġquoted, quoted,word_initial,False
+13,block_output,block_12_output,none,244,16,23763,0.054566525,sal,sal,continuation_or_standalone,False
+13,block_output,block_12_output,none,244,17,8191,0.05454153,Ġinformed, informed,word_initial,False
+13,block_output,block_12_output,none,244,18,6449,0.053611796,ãĤĴ,を,continuation_or_standalone,False
+13,block_output,block_12_output,none,244,19,8061,0.053284876,Thanks,Thanks,continuation_or_standalone,False
+13,block_output,block_12_output,none,244,20,811,0.052816637,Ġtrans, trans,word_initial,False
+13,block_output,block_12_output,none,244,21,35629,0.05277136,Ġcustomary, customary,word_initial,False
+13,block_output,block_12_output,none,244,22,47827,0.051972516,mathchoice,mathchoice,continuation_or_standalone,False
+13,block_output,block_12_output,none,244,23,42864,0.051964372,Ġairborne, airborne,word_initial,False
+13,block_output,block_12_output,none,244,24,49085,0.05177426,Gary,Gary,continuation_or_standalone,False
+13,block_output,block_12_output,none,244,25,8550,0.05177193,ivated,ivated,continuation_or_standalone,False
+13,block_output,block_12_output,none,244,26,36723,0.05170056,Ð»ÐµÐ½,лен,continuation_or_standalone,False
+13,block_output,block_12_output,none,244,27,43644,0.05156844,srep,srep,continuation_or_standalone,False
+13,block_output,block_12_output,none,244,28,2108,0.05155152,ours,ours,continuation_or_standalone,False
+13,block_output,block_12_output,none,244,29,37470,0.051464446,Ġrecycled, recycled,word_initial,False
+13,block_output,block_12_output,none,244,30,12008,0.05131366,Ġvice, vice,word_initial,False
+13,block_output,block_12_output,none,244,31,7562,0.0512297,Ġkeeping, keeping,word_initial,False
+13,block_output,block_12_output,none,244,32,41918,0.051026955,ĠKrish, Krish,word_initial,False
+13,block_output,block_12_output,none,244,33,14045,0.05065853,Ġpropri, propri,word_initial,False
+13,block_output,block_12_output,none,244,34,39358,0.050308827,Ġrenormalization, renormalization,word_initial,False
+13,block_output,block_12_output,none,244,35,16571,0.050186697,Ġviable, viable,word_initial,False
+13,block_output,block_12_output,none,244,36,21530,0.05015962,Ġanimated, animated,word_initial,False
+13,block_output,block_12_output,none,244,37,47963,0.050131477,vii,vii,continuation_or_standalone,False
+13,block_output,block_12_output,none,244,38,28868,0.050095923,Ġbeet, beet,word_initial,False
+13,block_output,block_12_output,none,244,39,21919,0.049857773,ĠWorking, Working,word_initial,False
+13,block_output,block_12_output,none,244,40,49903,0.0498367,Bab,Bab,continuation_or_standalone,False
+13,block_output,block_12_output,none,244,41,38717,0.0496812,Ġmitotic, mitotic,word_initial,False
+13,block_output,block_12_output,none,244,42,26008,0.04966677,Pen,Pen,continuation_or_standalone,False
+13,block_output,block_12_output,none,244,43,38115,0.04962054,Spin,Spin,continuation_or_standalone,False
+13,block_output,block_12_output,none,244,44,8410,0.049604848,Ġemployment, employment,word_initial,False
+13,block_output,block_12_output,none,244,45,30789,0.049564827,ĠKap, Kap,word_initial,False
+13,block_output,block_12_output,none,244,46,46726,0.04948744,amid,amid,continuation_or_standalone,False
+13,block_output,block_12_output,none,244,47,46105,0.049331553,âĸł,■,punctuation_or_symbol,False
+13,block_output,block_12_output,none,244,48,39026,0.04932752,Ð¾Ðµ,ое,continuation_or_standalone,False
+13,block_output,block_12_output,none,244,49,41515,0.049105242,Ġmilitant, militant,word_initial,False
+13,block_output,block_12_output,none,244,50,47033,0.048616294,thank,thank,continuation_or_standalone,False
+14,block_output,block_13_output,none,244,1,26696,0.07105409,Ġtravers, travers,word_initial,False
+14,block_output,block_13_output,none,244,2,25698,0.06326165,Posted,Posted,continuation_or_standalone,False
+14,block_output,block_13_output,none,244,3,6734,0.059256934,Ġ(), (),punctuation_or_symbol,False
+14,block_output,block_13_output,none,244,4,23763,0.058476124,sal,sal,continuation_or_standalone,False
+14,block_output,block_13_output,none,244,5,12911,0.057982903,ĠBerlin, Berlin,word_initial,False
+14,block_output,block_13_output,none,244,6,49903,0.057981048,Bab,Bab,continuation_or_standalone,False
+14,block_output,block_13_output,none,244,7,42699,0.057710037,ĠCaption, Caption,word_initial,False
+14,block_output,block_13_output,none,244,8,30547,0.05769893,Ġsket, sket,word_initial,False
+14,block_output,block_13_output,none,244,9,23269,0.05754994,sizeof,sizeof,continuation_or_standalone,False
+14,block_output,block_13_output,none,244,10,15212,0.05686356,Ġquoted, quoted,word_initial,False
+14,block_output,block_13_output,none,244,11,8191,0.055956833,Ġinformed, informed,word_initial,False
+14,block_output,block_13_output,none,244,12,13841,0.055749115,Ġstake, stake,word_initial,False
+14,block_output,block_13_output,none,244,13,6449,0.05472631,ãĤĴ,を,continuation_or_standalone,False
+14,block_output,block_13_output,none,244,14,41918,0.054212604,ĠKrish, Krish,word_initial,False
+14,block_output,block_13_output,none,244,15,811,0.053420763,Ġtrans, trans,word_initial,False
+14,block_output,block_13_output,none,244,16,8061,0.05336514,Thanks,Thanks,continuation_or_standalone,False
+14,block_output,block_13_output,none,244,17,47827,0.05303619,mathchoice,mathchoice,continuation_or_standalone,False
+14,block_output,block_13_output,none,244,18,46105,0.052935768,âĸł,■,punctuation_or_symbol,False
+14,block_output,block_13_output,none,244,19,14045,0.052793212,Ġpropri, propri,word_initial,False
+14,block_output,block_13_output,none,244,20,35629,0.052667186,Ġcustomary, customary,word_initial,False
+14,block_output,block_13_output,none,244,21,37153,0.052658513,Ġ505, 505,word_initial,False
+14,block_output,block_13_output,none,244,22,2108,0.052544314,ours,ours,continuation_or_standalone,False
+14,block_output,block_13_output,none,244,23,50024,0.05254194,javase,javase,continuation_or_standalone,False
+14,block_output,block_13_output,none,244,24,41515,0.051943466,Ġmilitant, militant,word_initial,False
+14,block_output,block_13_output,none,244,25,41986,0.05178577,ë§,�,punctuation_or_symbol,False
+14,block_output,block_13_output,none,244,26,47963,0.05173852,vii,vii,continuation_or_standalone,False
+14,block_output,block_13_output,none,244,27,39026,0.05167053,Ð¾Ðµ,ое,continuation_or_standalone,False
+14,block_output,block_13_output,none,244,28,35215,0.051496066,spacing,spacing,continuation_or_standalone,False
+14,block_output,block_13_output,none,244,29,14059,0.051322788,iy,iy,continuation_or_standalone,False
+14,block_output,block_13_output,none,244,30,42805,0.051321186,Fresh,Fresh,continuation_or_standalone,False
+14,block_output,block_13_output,none,244,31,47740,0.051281784,RAW,RAW,continuation_or_standalone,False
+14,block_output,block_13_output,none,244,32,43038,0.05102849,rese,rese,continuation_or_standalone,False
+14,block_output,block_13_output,none,244,33,11416,0.051017627,iley,iley,continuation_or_standalone,False
+14,block_output,block_13_output,none,244,34,7966,0.050717775,Ġfluores, fluores,word_initial,False
+14,block_output,block_13_output,none,244,35,26008,0.050708197,Pen,Pen,continuation_or_standalone,False
+14,block_output,block_13_output,none,244,36,21530,0.05063775,Ġanimated, animated,word_initial,False
+14,block_output,block_13_output,none,244,37,29758,0.0505723,Observ,Observ,continuation_or_standalone,False
+14,block_output,block_13_output,none,244,38,38905,0.05041236,Reading,Reading,continuation_or_standalone,False
+14,block_output,block_13_output,none,244,39,42864,0.05029208,Ġairborne, airborne,word_initial,False
+14,block_output,block_13_output,none,244,40,16571,0.04989931,Ġviable, viable,word_initial,False
+14,block_output,block_13_output,none,244,41,37470,0.049799815,Ġrecycled, recycled,word_initial,False
+14,block_output,block_13_output,none,244,42,5398,0.049777,Ġprem, prem,word_initial,False
+14,block_output,block_13_output,none,244,43,35199,0.049382776,âĢķ,―,punctuation_or_symbol,False
+14,block_output,block_13_output,none,244,44,47787,0.049148645,interacting,interacting,continuation_or_standalone,False
+14,block_output,block_13_output,none,244,45,21505,0.049127303,pages,pages,continuation_or_standalone,False
+14,block_output,block_13_output,none,244,46,36314,0.049045175,ausing,ausing,continuation_or_standalone,False
+14,block_output,block_13_output,none,244,47,6355,0.048860718,Ġinteractions, interactions,word_initial,False
+14,block_output,block_13_output,none,244,48,28868,0.048827946,Ġbeet, beet,word_initial,False
+14,block_output,block_13_output,none,244,49,3311,0.048611246,Ġestim, estim,word_initial,False
+14,block_output,block_13_output,none,244,50,38717,0.048431538,Ġmitotic, mitotic,word_initial,False
+15,block_output,block_14_output,none,252,1,26696,0.06871178,Ġtravers, travers,word_initial,False
+15,block_output,block_14_output,none,252,2,25698,0.06468077,Posted,Posted,continuation_or_standalone,False
+15,block_output,block_14_output,none,252,3,49903,0.061377153,Bab,Bab,continuation_or_standalone,False
+15,block_output,block_14_output,none,252,4,23763,0.061183847,sal,sal,continuation_or_standalone,False
+15,block_output,block_14_output,none,252,5,6734,0.059733383,Ġ(), (),punctuation_or_symbol,False
+15,block_output,block_14_output,none,252,6,42699,0.058654737,ĠCaption, Caption,word_initial,False
+15,block_output,block_14_output,none,252,7,15212,0.05813051,Ġquoted, quoted,word_initial,False
+15,block_output,block_14_output,none,252,8,30547,0.057026703,Ġsket, sket,word_initial,False
+15,block_output,block_14_output,none,252,9,12911,0.056915097,ĠBerlin, Berlin,word_initial,False
+15,block_output,block_14_output,none,252,10,6449,0.056812834,ãĤĴ,を,continuation_or_standalone,False
+15,block_output,block_14_output,none,252,11,23269,0.056085613,sizeof,sizeof,continuation_or_standalone,False
+15,block_output,block_14_output,none,252,12,46105,0.054990474,âĸł,■,punctuation_or_symbol,False
+15,block_output,block_14_output,none,252,13,14045,0.054701507,Ġpropri, propri,word_initial,False
+15,block_output,block_14_output,none,252,14,8191,0.05436404,Ġinformed, informed,word_initial,False
+15,block_output,block_14_output,none,252,15,811,0.054055955,Ġtrans, trans,word_initial,False
+15,block_output,block_14_output,none,252,16,2108,0.052817754,ours,ours,continuation_or_standalone,False
+15,block_output,block_14_output,none,252,17,13841,0.052681513,Ġstake, stake,word_initial,False
+15,block_output,block_14_output,none,252,18,5398,0.052412592,Ġprem, prem,word_initial,False
+15,block_output,block_14_output,none,252,19,26008,0.052356515,Pen,Pen,continuation_or_standalone,False
+15,block_output,block_14_output,none,252,20,12008,0.052294865,Ġvice, vice,word_initial,False
+15,block_output,block_14_output,none,252,21,41918,0.052207246,ĠKrish, Krish,word_initial,False
+15,block_output,block_14_output,none,252,22,47963,0.05186083,vii,vii,continuation_or_standalone,False
+15,block_output,block_14_output,none,252,23,29758,0.0518208,Observ,Observ,continuation_or_standalone,False
+15,block_output,block_14_output,none,252,24,35215,0.051763467,spacing,spacing,continuation_or_standalone,False
+15,block_output,block_14_output,none,252,25,1650,0.051753506,Ġexample, example,word_initial,False
+15,block_output,block_14_output,none,252,26,50024,0.051688503,javase,javase,continuation_or_standalone,False
+15,block_output,block_14_output,none,252,27,37153,0.05167875,Ġ505, 505,word_initial,False
+15,block_output,block_14_output,none,252,28,6355,0.051666424,Ġinteractions, interactions,word_initial,False
+15,block_output,block_14_output,none,252,29,8061,0.051564444,Thanks,Thanks,continuation_or_standalone,False
+15,block_output,block_14_output,none,252,30,36314,0.051494647,ausing,ausing,continuation_or_standalone,False
+15,block_output,block_14_output,none,252,31,880,0.051198896,](,](,punctuation_or_symbol,False
+15,block_output,block_14_output,none,252,32,4191,0.05113733,Ġbeaut, beaut,word_initial,False
+15,block_output,block_14_output,none,252,33,16571,0.05100266,Ġviable, viable,word_initial,False
+15,block_output,block_14_output,none,252,34,39026,0.050982095,Ð¾Ðµ,ое,continuation_or_standalone,False
+15,block_output,block_14_output,none,252,35,14059,0.050954685,iy,iy,continuation_or_standalone,False
+15,block_output,block_14_output,none,252,36,42805,0.050939575,Fresh,Fresh,continuation_or_standalone,False
+15,block_output,block_14_output,none,252,37,46726,0.05034252,amid,amid,continuation_or_standalone,False
+15,block_output,block_14_output,none,252,38,41986,0.0502678,ë§,�,punctuation_or_symbol,False
+15,block_output,block_14_output,none,252,39,33670,0.050062,Ġwij, wij,word_initial,False
+15,block_output,block_14_output,none,252,40,42852,0.050045736,Ġmotivations, motivations,word_initial,False
+15,block_output,block_14_output,none,252,41,12780,0.050039146,tmp,tmp,continuation_or_standalone,False
+15,block_output,block_14_output,none,252,42,35199,0.049909767,âĢķ,―,punctuation_or_symbol,False
+15,block_output,block_14_output,none,252,43,21530,0.049759097,Ġanimated, animated,word_initial,False
+15,block_output,block_14_output,none,252,44,47827,0.04959936,mathchoice,mathchoice,continuation_or_standalone,False
+15,block_output,block_14_output,none,252,45,37470,0.049452055,Ġrecycled, recycled,word_initial,False
+15,block_output,block_14_output,none,252,46,35629,0.049158476,Ġcustomary, customary,word_initial,False
+15,block_output,block_14_output,none,252,47,21505,0.049138643,pages,pages,continuation_or_standalone,False
+15,block_output,block_14_output,none,252,48,44309,0.049131323,emplo,emplo,continuation_or_standalone,False
+15,block_output,block_14_output,none,252,49,22270,0.049129985,295,295,continuation_or_standalone,False
+15,block_output,block_14_output,none,252,50,42864,0.04912053,Ġairborne, airborne,word_initial,False
+16,block_output,block_15_output,none,212,1,26696,0.071737915,Ġtravers, travers,word_initial,False
+16,block_output,block_15_output,none,212,2,25698,0.068204194,Posted,Posted,continuation_or_standalone,False
+16,block_output,block_15_output,none,212,3,23763,0.06382592,sal,sal,continuation_or_standalone,False
+16,block_output,block_15_output,none,212,4,49903,0.061387748,Bab,Bab,continuation_or_standalone,False
+16,block_output,block_15_output,none,212,5,6734,0.059024062,Ġ(), (),punctuation_or_symbol,False
+16,block_output,block_15_output,none,212,6,14045,0.0577083,Ġpropri, propri,word_initial,False
+16,block_output,block_15_output,none,212,7,30547,0.057430115,Ġsket, sket,word_initial,False
+16,block_output,block_15_output,none,212,8,15212,0.05712688,Ġquoted, quoted,word_initial,False
+16,block_output,block_15_output,none,212,9,23269,0.056682535,sizeof,sizeof,continuation_or_standalone,False
+16,block_output,block_15_output,none,212,10,6449,0.056599773,ãĤĴ,を,continuation_or_standalone,False
+16,block_output,block_15_output,none,212,11,811,0.055421464,Ġtrans, trans,word_initial,False
+16,block_output,block_15_output,none,212,12,1650,0.05499757,Ġexample, example,word_initial,False
+16,block_output,block_15_output,none,212,13,42699,0.054499254,ĠCaption, Caption,word_initial,False
+16,block_output,block_15_output,none,212,14,4191,0.05426283,Ġbeaut, beaut,word_initial,False
+16,block_output,block_15_output,none,212,15,12911,0.05417518,ĠBerlin, Berlin,word_initial,False
+16,block_output,block_15_output,none,212,16,46105,0.054100905,âĸł,■,punctuation_or_symbol,False
+16,block_output,block_15_output,none,212,17,29758,0.053640462,Observ,Observ,continuation_or_standalone,False
+16,block_output,block_15_output,none,212,18,26008,0.053541444,Pen,Pen,continuation_or_standalone,False
+16,block_output,block_15_output,none,212,19,50024,0.053468358,javase,javase,continuation_or_standalone,False
+16,block_output,block_15_output,none,212,20,8191,0.053395234,Ġinformed, informed,word_initial,False
+16,block_output,block_15_output,none,212,21,34346,0.05292908,Ġ@@, @@,punctuation_or_symbol,False
+16,block_output,block_15_output,none,212,22,6355,0.052593395,Ġinteractions, interactions,word_initial,False
+16,block_output,block_15_output,none,212,23,47827,0.052575167,mathchoice,mathchoice,continuation_or_standalone,False
+16,block_output,block_15_output,none,212,24,21530,0.052512337,Ġanimated, animated,word_initial,False
+16,block_output,block_15_output,none,212,25,42852,0.05229431,Ġmotivations, motivations,word_initial,False
+16,block_output,block_15_output,none,212,26,14059,0.05219651,iy,iy,continuation_or_standalone,False
+16,block_output,block_15_output,none,212,27,16571,0.052026495,Ġviable, viable,word_initial,False
+16,block_output,block_15_output,none,212,28,880,0.05178281,](,](,punctuation_or_symbol,False
+16,block_output,block_15_output,none,212,29,2108,0.051654253,ours,ours,continuation_or_standalone,False
+16,block_output,block_15_output,none,212,30,39026,0.051587094,Ð¾Ðµ,ое,continuation_or_standalone,False
+16,block_output,block_15_output,none,212,31,41918,0.051585503,ĠKrish, Krish,word_initial,False
+16,block_output,block_15_output,none,212,32,42151,0.05140256,Ġpeng, peng,word_initial,False
+16,block_output,block_15_output,none,212,33,33670,0.05119938,Ġwij, wij,word_initial,False
+16,block_output,block_15_output,none,212,34,3779,0.050834686,Ġsal, sal,word_initial,False
+16,block_output,block_15_output,none,212,35,47963,0.050807253,vii,vii,continuation_or_standalone,False
+16,block_output,block_15_output,none,212,36,21505,0.05061867,pages,pages,continuation_or_standalone,False
+16,block_output,block_15_output,none,212,37,33089,0.050584316,âĨ,�,punctuation_or_symbol,False
+16,block_output,block_15_output,none,212,38,13841,0.050580647,Ġstake, stake,word_initial,False
+16,block_output,block_15_output,none,212,39,3311,0.050565243,Ġestim, estim,word_initial,False
+16,block_output,block_15_output,none,212,40,3040,0.05053917,leq,leq,continuation_or_standalone,False
+16,block_output,block_15_output,none,212,41,37839,0.05000594,ĠWrest, Wrest,word_initial,False
+16,block_output,block_15_output,none,212,42,5398,0.04995751,Ġprem, prem,word_initial,False
+16,block_output,block_15_output,none,212,43,8061,0.049926434,Thanks,Thanks,continuation_or_standalone,False
+16,block_output,block_15_output,none,212,44,47740,0.049915522,RAW,RAW,continuation_or_standalone,False
+16,block_output,block_15_output,none,212,45,22270,0.049672164,295,295,continuation_or_standalone,False
+16,block_output,block_15_output,none,212,46,12780,0.04955585,tmp,tmp,continuation_or_standalone,False
+16,block_output,block_15_output,none,212,47,8224,0.04941583,Manager,Manager,continuation_or_standalone,False
+16,block_output,block_15_output,none,212,48,42864,0.049370002,Ġairborne, airborne,word_initial,False
+16,block_output,block_15_output,none,212,49,22937,0.049134325,ĠĊĠĠĠĠĠ," 
+     ",whitespace,False
+16,block_output,block_15_output,none,212,50,40584,0.049134273,Ġmars, mars,word_initial,False
+17,block_output,block_16_output,none,246,1,25698,0.07042787,Posted,Posted,continuation_or_standalone,False
+17,block_output,block_16_output,none,246,2,26696,0.06865531,Ġtravers, travers,word_initial,False
+17,block_output,block_16_output,none,246,3,49903,0.0647289,Bab,Bab,continuation_or_standalone,False
+17,block_output,block_16_output,none,246,4,23763,0.062367804,sal,sal,continuation_or_standalone,False
+17,block_output,block_16_output,none,246,5,6734,0.06067118,Ġ(), (),punctuation_or_symbol,False
+17,block_output,block_16_output,none,246,6,12911,0.058983155,ĠBerlin, Berlin,word_initial,False
+17,block_output,block_16_output,none,246,7,15212,0.058841884,Ġquoted, quoted,word_initial,False
+17,block_output,block_16_output,none,246,8,14045,0.058733385,Ġpropri, propri,word_initial,False
+17,block_output,block_16_output,none,246,9,34346,0.05735111,Ġ@@, @@,punctuation_or_symbol,False
+17,block_output,block_16_output,none,246,10,4191,0.056652293,Ġbeaut, beaut,word_initial,False
+17,block_output,block_16_output,none,246,11,23269,0.055931933,sizeof,sizeof,continuation_or_standalone,False
+17,block_output,block_16_output,none,246,12,6355,0.055480078,Ġinteractions, interactions,word_initial,False
+17,block_output,block_16_output,none,246,13,811,0.055460814,Ġtrans, trans,word_initial,False
+17,block_output,block_16_output,none,246,14,39026,0.05517196,Ð¾Ðµ,ое,continuation_or_standalone,False
+17,block_output,block_16_output,none,246,15,26008,0.054648865,Pen,Pen,continuation_or_standalone,False
+17,block_output,block_16_output,none,246,16,6449,0.05464873,ãĤĴ,を,continuation_or_standalone,False
+17,block_output,block_16_output,none,246,17,1650,0.054632843,Ġexample, example,word_initial,False
+17,block_output,block_16_output,none,246,18,42852,0.054226823,Ġmotivations, motivations,word_initial,False
+17,block_output,block_16_output,none,246,19,14059,0.054064434,iy,iy,continuation_or_standalone,False
+17,block_output,block_16_output,none,246,20,30547,0.053505316,Ġsket, sket,word_initial,False
+17,block_output,block_16_output,none,246,21,29758,0.05346682,Observ,Observ,continuation_or_standalone,False
+17,block_output,block_16_output,none,246,22,47740,0.052899618,RAW,RAW,continuation_or_standalone,False
+17,block_output,block_16_output,none,246,23,33089,0.052770685,âĨ,�,punctuation_or_symbol,False
+17,block_output,block_16_output,none,246,24,46105,0.052544396,âĸł,■,punctuation_or_symbol,False
+17,block_output,block_16_output,none,246,25,8191,0.052234385,Ġinformed, informed,word_initial,False
+17,block_output,block_16_output,none,246,26,42151,0.052116066,Ġpeng, peng,word_initial,False
+17,block_output,block_16_output,none,246,27,13841,0.05198176,Ġstake, stake,word_initial,False
+17,block_output,block_16_output,none,246,28,3311,0.051915053,Ġestim, estim,word_initial,False
+17,block_output,block_16_output,none,246,29,42699,0.051821444,ĠCaption, Caption,word_initial,False
+17,block_output,block_16_output,none,246,30,50024,0.051418614,javase,javase,continuation_or_standalone,False
+17,block_output,block_16_output,none,246,31,21530,0.051371016,Ġanimated, animated,word_initial,False
+17,block_output,block_16_output,none,246,32,3779,0.051284272,Ġsal, sal,word_initial,False
+17,block_output,block_16_output,none,246,33,41986,0.05104681,ë§,�,punctuation_or_symbol,False
+17,block_output,block_16_output,none,246,34,44309,0.050845332,emplo,emplo,continuation_or_standalone,False
+17,block_output,block_16_output,none,246,35,1126,0.050702084,_{\,_{\,punctuation_or_symbol,False
+17,block_output,block_16_output,none,246,36,22270,0.050481524,295,295,continuation_or_standalone,False
+17,block_output,block_16_output,none,246,37,16571,0.05013242,Ġviable, viable,word_initial,False
+17,block_output,block_16_output,none,246,38,41918,0.04998025,ĠKrish, Krish,word_initial,False
+17,block_output,block_16_output,none,246,39,12780,0.049958713,tmp,tmp,continuation_or_standalone,False
+17,block_output,block_16_output,none,246,40,47827,0.04989543,mathchoice,mathchoice,continuation_or_standalone,False
+17,block_output,block_16_output,none,246,41,33670,0.049867343,Ġwij, wij,word_initial,False
+17,block_output,block_16_output,none,246,42,880,0.04985649,](,](,punctuation_or_symbol,False
+17,block_output,block_16_output,none,246,43,22937,0.04972734,ĠĊĠĠĠĠĠ," 
+     ",whitespace,False
+17,block_output,block_16_output,none,246,44,40584,0.04949511,Ġmars, mars,word_initial,False
+17,block_output,block_16_output,none,246,45,37839,0.04921516,ĠWrest, Wrest,word_initial,False
+17,block_output,block_16_output,none,246,46,2108,0.049185865,ours,ours,continuation_or_standalone,False
+17,block_output,block_16_output,none,246,47,41515,0.049146987,Ġmilitant, militant,word_initial,False
+17,block_output,block_16_output,none,246,48,21505,0.04900488,pages,pages,continuation_or_standalone,False
+17,block_output,block_16_output,none,246,49,18453,0.048786473,Ã¤m,äm,continuation_or_standalone,False
+17,block_output,block_16_output,none,246,50,6983,0.048605256,Ġrecall, recall,word_initial,False
+18,block_output,block_17_output,none,191,1,25698,0.071629465,Posted,Posted,continuation_or_standalone,False
+18,block_output,block_17_output,none,191,2,49903,0.06506883,Bab,Bab,continuation_or_standalone,False
+18,block_output,block_17_output,none,191,3,26696,0.06439971,Ġtravers, travers,word_initial,False
+18,block_output,block_17_output,none,191,4,23763,0.06343001,sal,sal,continuation_or_standalone,False
+18,block_output,block_17_output,none,191,5,15212,0.061429642,Ġquoted, quoted,word_initial,False
+18,block_output,block_17_output,none,191,6,6734,0.06122102,Ġ(), (),punctuation_or_symbol,False
+18,block_output,block_17_output,none,191,7,12911,0.06045975,ĠBerlin, Berlin,word_initial,False
+18,block_output,block_17_output,none,191,8,14045,0.059522696,Ġpropri, propri,word_initial,False
+18,block_output,block_17_output,none,191,9,34346,0.059237808,Ġ@@, @@,punctuation_or_symbol,False
+18,block_output,block_17_output,none,191,10,23269,0.056799553,sizeof,sizeof,continuation_or_standalone,False
+18,block_output,block_17_output,none,191,11,4191,0.05638588,Ġbeaut, beaut,word_initial,False
+18,block_output,block_17_output,none,191,12,42852,0.056351677,Ġmotivations, motivations,word_initial,False
+18,block_output,block_17_output,none,191,13,33089,0.05581562,âĨ,�,punctuation_or_symbol,False
+18,block_output,block_17_output,none,191,14,6449,0.05541315,ãĤĴ,を,continuation_or_standalone,False
+18,block_output,block_17_output,none,191,15,6355,0.0553333,Ġinteractions, interactions,word_initial,False
+18,block_output,block_17_output,none,191,16,39026,0.055053756,Ð¾Ðµ,ое,continuation_or_standalone,False
+18,block_output,block_17_output,none,191,17,13841,0.0549057,Ġstake, stake,word_initial,False
+18,block_output,block_17_output,none,191,18,811,0.054905467,Ġtrans, trans,word_initial,False
+18,block_output,block_17_output,none,191,19,26008,0.054629512,Pen,Pen,continuation_or_standalone,False
+18,block_output,block_17_output,none,191,20,1650,0.054579284,Ġexample, example,word_initial,False
+18,block_output,block_17_output,none,191,21,14059,0.05431938,iy,iy,continuation_or_standalone,False
+18,block_output,block_17_output,none,191,22,46105,0.053391963,âĸł,■,punctuation_or_symbol,False
+18,block_output,block_17_output,none,191,23,3311,0.052872516,Ġestim, estim,word_initial,False
+18,block_output,block_17_output,none,191,24,42151,0.05284175,Ġpeng, peng,word_initial,False
+18,block_output,block_17_output,none,191,25,42699,0.052643836,ĠCaption, Caption,word_initial,False
+18,block_output,block_17_output,none,191,26,29758,0.05240079,Observ,Observ,continuation_or_standalone,False
+18,block_output,block_17_output,none,191,27,30547,0.05212781,Ġsket, sket,word_initial,False
+18,block_output,block_17_output,none,191,28,3779,0.05153021,Ġsal, sal,word_initial,False
+18,block_output,block_17_output,none,191,29,41986,0.05139238,ë§,�,punctuation_or_symbol,False
+18,block_output,block_17_output,none,191,30,47740,0.05134034,RAW,RAW,continuation_or_standalone,False
+18,block_output,block_17_output,none,191,31,47827,0.051322076,mathchoice,mathchoice,continuation_or_standalone,False
+18,block_output,block_17_output,none,191,32,18453,0.051186748,Ã¤m,äm,continuation_or_standalone,False
+18,block_output,block_17_output,none,191,33,50024,0.050865706,javase,javase,continuation_or_standalone,False
+18,block_output,block_17_output,none,191,34,22270,0.05077757,295,295,continuation_or_standalone,False
+18,block_output,block_17_output,none,191,35,41918,0.050767936,ĠKrish, Krish,word_initial,False
+18,block_output,block_17_output,none,191,36,44309,0.050606314,emplo,emplo,continuation_or_standalone,False
+18,block_output,block_17_output,none,191,37,8224,0.050206207,Manager,Manager,continuation_or_standalone,False
+18,block_output,block_17_output,none,191,38,8191,0.05018776,Ġinformed, informed,word_initial,False
+18,block_output,block_17_output,none,191,39,21530,0.05015671,Ġanimated, animated,word_initial,False
+18,block_output,block_17_output,none,191,40,37470,0.049912408,Ġrecycled, recycled,word_initial,False
+18,block_output,block_17_output,none,191,41,37730,0.049840212,Ġdebated, debated,word_initial,False
+18,block_output,block_17_output,none,191,42,12008,0.04972562,Ġvice, vice,word_initial,False
+18,block_output,block_17_output,none,191,43,12780,0.049656708,tmp,tmp,continuation_or_standalone,False
+18,block_output,block_17_output,none,191,44,11360,0.049568113,Ġdominant, dominant,word_initial,False
+18,block_output,block_17_output,none,191,45,22770,0.049439885,Ġrefres, refres,word_initial,False
+18,block_output,block_17_output,none,191,46,16571,0.049405076,Ġviable, viable,word_initial,False
+18,block_output,block_17_output,none,191,47,13209,0.049142163,ĠBab, Bab,word_initial,False
+18,block_output,block_17_output,none,191,48,34946,0.048984487,ĠKumar, Kumar,word_initial,False
+18,block_output,block_17_output,none,191,49,1126,0.048983604,_{\,_{\,punctuation_or_symbol,False
+18,block_output,block_17_output,none,191,50,40584,0.048916552,Ġmars, mars,word_initial,False
+19,block_output,block_18_output,none,215,1,25698,0.07253239,Posted,Posted,continuation_or_standalone,False
+19,block_output,block_18_output,none,215,2,49903,0.06603767,Bab,Bab,continuation_or_standalone,False
+19,block_output,block_18_output,none,215,3,23763,0.0627929,sal,sal,continuation_or_standalone,False
+19,block_output,block_18_output,none,215,4,26696,0.061690114,Ġtravers, travers,word_initial,False
+19,block_output,block_18_output,none,215,5,15212,0.061015885,Ġquoted, quoted,word_initial,False
+19,block_output,block_18_output,none,215,6,6734,0.060489714,Ġ(), (),punctuation_or_symbol,False
+19,block_output,block_18_output,none,215,7,12911,0.059939817,ĠBerlin, Berlin,word_initial,False
+19,block_output,block_18_output,none,215,8,14045,0.059434216,Ġpropri, propri,word_initial,False
+19,block_output,block_18_output,none,215,9,34346,0.05911448,Ġ@@, @@,punctuation_or_symbol,False
+19,block_output,block_18_output,none,215,10,13841,0.057221767,Ġstake, stake,word_initial,False
+19,block_output,block_18_output,none,215,11,23269,0.057015575,sizeof,sizeof,continuation_or_standalone,False
+19,block_output,block_18_output,none,215,12,6355,0.05689167,Ġinteractions, interactions,word_initial,False
+19,block_output,block_18_output,none,215,13,42852,0.05653239,Ġmotivations, motivations,word_initial,False
+19,block_output,block_18_output,none,215,14,33089,0.055396713,âĨ,�,punctuation_or_symbol,False
+19,block_output,block_18_output,none,215,15,39026,0.05521882,Ð¾Ðµ,ое,continuation_or_standalone,False
+19,block_output,block_18_output,none,215,16,811,0.054679725,Ġtrans, trans,word_initial,False
+19,block_output,block_18_output,none,215,17,14059,0.054572567,iy,iy,continuation_or_standalone,False
+19,block_output,block_18_output,none,215,18,6449,0.05445121,ãĤĴ,を,continuation_or_standalone,False
+19,block_output,block_18_output,none,215,19,1650,0.05430898,Ġexample, example,word_initial,False
+19,block_output,block_18_output,none,215,20,42151,0.05429384,Ġpeng, peng,word_initial,False
+19,block_output,block_18_output,none,215,21,4191,0.053374596,Ġbeaut, beaut,word_initial,False
+19,block_output,block_18_output,none,215,22,47740,0.053359374,RAW,RAW,continuation_or_standalone,False
+19,block_output,block_18_output,none,215,23,26008,0.05330074,Pen,Pen,continuation_or_standalone,False
+19,block_output,block_18_output,none,215,24,3311,0.053299814,Ġestim, estim,word_initial,False
+19,block_output,block_18_output,none,215,25,29758,0.052665308,Observ,Observ,continuation_or_standalone,False
+19,block_output,block_18_output,none,215,26,46105,0.052627128,âĸł,■,punctuation_or_symbol,False
+19,block_output,block_18_output,none,215,27,30547,0.05227931,Ġsket, sket,word_initial,False
+19,block_output,block_18_output,none,215,28,34946,0.052270316,ĠKumar, Kumar,word_initial,False
+19,block_output,block_18_output,none,215,29,42699,0.051601127,ĠCaption, Caption,word_initial,False
+19,block_output,block_18_output,none,215,30,8224,0.05137812,Manager,Manager,continuation_or_standalone,False
+19,block_output,block_18_output,none,215,31,22270,0.051241376,295,295,continuation_or_standalone,False
+19,block_output,block_18_output,none,215,32,47827,0.051168103,mathchoice,mathchoice,continuation_or_standalone,False
+19,block_output,block_18_output,none,215,33,37730,0.051003423,Ġdebated, debated,word_initial,False
+19,block_output,block_18_output,none,215,34,50024,0.050789602,javase,javase,continuation_or_standalone,False
+19,block_output,block_18_output,none,215,35,12415,0.050629422,Ġtension, tension,word_initial,False
+19,block_output,block_18_output,none,215,36,6983,0.050562646,Ġrecall, recall,word_initial,False
+19,block_output,block_18_output,none,215,37,1126,0.050271828,_{\,_{\,punctuation_or_symbol,False
+19,block_output,block_18_output,none,215,38,28592,0.05025527,ĠÂµm, µm,word_initial,False
+19,block_output,block_18_output,none,215,39,18453,0.050207116,Ã¤m,äm,continuation_or_standalone,False
+19,block_output,block_18_output,none,215,40,34887,0.049961425,Ġtornado, tornado,word_initial,False
+19,block_output,block_18_output,none,215,41,41918,0.04993699,ĠKrish, Krish,word_initial,False
+19,block_output,block_18_output,none,215,42,22770,0.049827646,Ġrefres, refres,word_initial,False
+19,block_output,block_18_output,none,215,43,11360,0.04964754,Ġdominant, dominant,word_initial,False
+19,block_output,block_18_output,none,215,44,12780,0.049372267,tmp,tmp,continuation_or_standalone,False
+19,block_output,block_18_output,none,215,45,44309,0.049365938,emplo,emplo,continuation_or_standalone,False
+19,block_output,block_18_output,none,215,46,8191,0.049327616,Ġinformed, informed,word_initial,False
+19,block_output,block_18_output,none,215,47,41986,0.049111824,ë§,�,punctuation_or_symbol,False
+19,block_output,block_18_output,none,215,48,46101,0.049080122,ĠMeasurements, Measurements,word_initial,False
+19,block_output,block_18_output,none,215,49,37470,0.04897909,Ġrecycled, recycled,word_initial,False
+19,block_output,block_18_output,none,215,50,37839,0.048883565,ĠWrest, Wrest,word_initial,False
+20,block_output,block_19_output,none,206,1,25698,0.070277244,Posted,Posted,continuation_or_standalone,False
+20,block_output,block_19_output,none,206,2,49903,0.06563656,Bab,Bab,continuation_or_standalone,False
+20,block_output,block_19_output,none,206,3,6734,0.062220372,Ġ(), (),punctuation_or_symbol,False
+20,block_output,block_19_output,none,206,4,26696,0.061377235,Ġtravers, travers,word_initial,False
+20,block_output,block_19_output,none,206,5,12911,0.060747474,ĠBerlin, Berlin,word_initial,False
+20,block_output,block_19_output,none,206,6,23763,0.06034145,sal,sal,continuation_or_standalone,False
+20,block_output,block_19_output,none,206,7,14045,0.060213838,Ġpropri, propri,word_initial,False
+20,block_output,block_19_output,none,206,8,15212,0.06001673,Ġquoted, quoted,word_initial,False
+20,block_output,block_19_output,none,206,9,34346,0.058295753,Ġ@@, @@,punctuation_or_symbol,False
+20,block_output,block_19_output,none,206,10,42852,0.05770987,Ġmotivations, motivations,word_initial,False
+20,block_output,block_19_output,none,206,11,13841,0.056855798,Ġstake, stake,word_initial,False
+20,block_output,block_19_output,none,206,12,23269,0.056520708,sizeof,sizeof,continuation_or_standalone,False
+20,block_output,block_19_output,none,206,13,42151,0.055080302,Ġpeng, peng,word_initial,False
+20,block_output,block_19_output,none,206,14,33089,0.054762382,âĨ,�,punctuation_or_symbol,False
+20,block_output,block_19_output,none,206,15,6355,0.054351702,Ġinteractions, interactions,word_initial,False
+20,block_output,block_19_output,none,206,16,4191,0.054339863,Ġbeaut, beaut,word_initial,False
+20,block_output,block_19_output,none,206,17,26008,0.05419241,Pen,Pen,continuation_or_standalone,False
+20,block_output,block_19_output,none,206,18,3311,0.05412163,Ġestim, estim,word_initial,False
+20,block_output,block_19_output,none,206,19,14059,0.05396465,iy,iy,continuation_or_standalone,False
+20,block_output,block_19_output,none,206,20,811,0.05366688,Ġtrans, trans,word_initial,False
+20,block_output,block_19_output,none,206,21,1650,0.053389825,Ġexample, example,word_initial,False
+20,block_output,block_19_output,none,206,22,47740,0.053187106,RAW,RAW,continuation_or_standalone,False
+20,block_output,block_19_output,none,206,23,6449,0.05295459,ãĤĴ,を,continuation_or_standalone,False
+20,block_output,block_19_output,none,206,24,34946,0.052919712,ĠKumar, Kumar,word_initial,False
+20,block_output,block_19_output,none,206,25,46105,0.052478913,âĸł,■,punctuation_or_symbol,False
+20,block_output,block_19_output,none,206,26,42699,0.05243828,ĠCaption, Caption,word_initial,False
+20,block_output,block_19_output,none,206,27,12415,0.05226703,Ġtension, tension,word_initial,False
+20,block_output,block_19_output,none,206,28,30547,0.05221276,Ġsket, sket,word_initial,False
+20,block_output,block_19_output,none,206,29,8224,0.052192144,Manager,Manager,continuation_or_standalone,False
+20,block_output,block_19_output,none,206,30,28592,0.052117947,ĠÂµm, µm,word_initial,False
+20,block_output,block_19_output,none,206,31,39026,0.05198119,Ð¾Ðµ,ое,continuation_or_standalone,False
+20,block_output,block_19_output,none,206,32,11360,0.05187405,Ġdominant, dominant,word_initial,False
+20,block_output,block_19_output,none,206,33,22770,0.051629186,Ġrefres, refres,word_initial,False
+20,block_output,block_19_output,none,206,34,24269,0.05141342,triangle,triangle,continuation_or_standalone,False
+20,block_output,block_19_output,none,206,35,37470,0.051315162,Ġrecycled, recycled,word_initial,False
+20,block_output,block_19_output,none,206,36,44309,0.051164933,emplo,emplo,continuation_or_standalone,False
+20,block_output,block_19_output,none,206,37,41918,0.051020835,ĠKrish, Krish,word_initial,False
+20,block_output,block_19_output,none,206,38,34887,0.0507825,Ġtornado, tornado,word_initial,False
+20,block_output,block_19_output,none,206,39,29758,0.050709974,Observ,Observ,continuation_or_standalone,False
+20,block_output,block_19_output,none,206,40,17499,0.050611082,Ã¼n,ün,continuation_or_standalone,False
+20,block_output,block_19_output,none,206,41,6983,0.05060301,Ġrecall, recall,word_initial,False
+20,block_output,block_19_output,none,206,42,21530,0.050389126,Ġanimated, animated,word_initial,False
+20,block_output,block_19_output,none,206,43,13597,0.05028117,Ġdating, dating,word_initial,False
+20,block_output,block_19_output,none,206,44,12780,0.0502738,tmp,tmp,continuation_or_standalone,False
+20,block_output,block_19_output,none,206,45,39507,0.050252773,ĠINTRODUCTION, INTRODUCTION,word_initial,False
+20,block_output,block_19_output,none,206,46,50024,0.05009693,javase,javase,continuation_or_standalone,False
+20,block_output,block_19_output,none,206,47,47827,0.049673058,mathchoice,mathchoice,continuation_or_standalone,False
+20,block_output,block_19_output,none,206,48,50082,0.049672674,Ġsnar, snar,word_initial,False
+20,block_output,block_19_output,none,206,49,22270,0.04965808,295,295,continuation_or_standalone,False
+20,block_output,block_19_output,none,206,50,18453,0.04948562,Ã¤m,äm,continuation_or_standalone,False
+21,block_output,block_20_output,none,282,1,25698,0.069810644,Posted,Posted,continuation_or_standalone,False
+21,block_output,block_20_output,none,282,2,49903,0.06651488,Bab,Bab,continuation_or_standalone,False
+21,block_output,block_20_output,none,282,3,6734,0.062194273,Ġ(), (),punctuation_or_symbol,False
+21,block_output,block_20_output,none,282,4,23763,0.06140456,sal,sal,continuation_or_standalone,False
+21,block_output,block_20_output,none,282,5,26696,0.06066953,Ġtravers, travers,word_initial,False
+21,block_output,block_20_output,none,282,6,12911,0.060617372,ĠBerlin, Berlin,word_initial,False
+21,block_output,block_20_output,none,282,7,14045,0.05969038,Ġpropri, propri,word_initial,False
+21,block_output,block_20_output,none,282,8,15212,0.059340365,Ġquoted, quoted,word_initial,False
+21,block_output,block_20_output,none,282,9,34346,0.05859813,Ġ@@, @@,punctuation_or_symbol,False
+21,block_output,block_20_output,none,282,10,42151,0.05858598,Ġpeng, peng,word_initial,False
+21,block_output,block_20_output,none,282,11,13841,0.058468692,Ġstake, stake,word_initial,False
+21,block_output,block_20_output,none,282,12,42852,0.057906043,Ġmotivations, motivations,word_initial,False
+21,block_output,block_20_output,none,282,13,23269,0.057297558,sizeof,sizeof,continuation_or_standalone,False
+21,block_output,block_20_output,none,282,14,33089,0.055568393,âĨ,�,punctuation_or_symbol,False
+21,block_output,block_20_output,none,282,15,34946,0.055521466,ĠKumar, Kumar,word_initial,False
+21,block_output,block_20_output,none,282,16,811,0.054290168,Ġtrans, trans,word_initial,False
+21,block_output,block_20_output,none,282,17,37470,0.054095186,Ġrecycled, recycled,word_initial,False
+21,block_output,block_20_output,none,282,18,12415,0.05363516,Ġtension, tension,word_initial,False
+21,block_output,block_20_output,none,282,19,3311,0.053572286,Ġestim, estim,word_initial,False
+21,block_output,block_20_output,none,282,20,6355,0.053546384,Ġinteractions, interactions,word_initial,False
+21,block_output,block_20_output,none,282,21,4191,0.053189695,Ġbeaut, beaut,word_initial,False
+21,block_output,block_20_output,none,282,22,42699,0.053166375,ĠCaption, Caption,word_initial,False
+21,block_output,block_20_output,none,282,23,41918,0.05315485,ĠKrish, Krish,word_initial,False
+21,block_output,block_20_output,none,282,24,47740,0.053039826,RAW,RAW,continuation_or_standalone,False
+21,block_output,block_20_output,none,282,25,1650,0.052870855,Ġexample, example,word_initial,False
+21,block_output,block_20_output,none,282,26,34887,0.05278793,Ġtornado, tornado,word_initial,False
+21,block_output,block_20_output,none,282,27,14059,0.05269526,iy,iy,continuation_or_standalone,False
+21,block_output,block_20_output,none,282,28,24269,0.052690525,triangle,triangle,continuation_or_standalone,False
+21,block_output,block_20_output,none,282,29,11360,0.0524869,Ġdominant, dominant,word_initial,False
+21,block_output,block_20_output,none,282,30,6449,0.0520535,ãĤĴ,を,continuation_or_standalone,False
+21,block_output,block_20_output,none,282,31,22770,0.05200692,Ġrefres, refres,word_initial,False
+21,block_output,block_20_output,none,282,32,46105,0.051864363,âĸł,■,punctuation_or_symbol,False
+21,block_output,block_20_output,none,282,33,26008,0.05155829,Pen,Pen,continuation_or_standalone,False
+21,block_output,block_20_output,none,282,34,44309,0.051458932,emplo,emplo,continuation_or_standalone,False
+21,block_output,block_20_output,none,282,35,17499,0.051441282,Ã¼n,ün,continuation_or_standalone,False
+21,block_output,block_20_output,none,282,36,50082,0.051275343,Ġsnar, snar,word_initial,False
+21,block_output,block_20_output,none,282,37,41986,0.05124412,ë§,�,punctuation_or_symbol,False
+21,block_output,block_20_output,none,282,38,39026,0.051182315,Ð¾Ðµ,ое,continuation_or_standalone,False
+21,block_output,block_20_output,none,282,39,39507,0.05080396,ĠINTRODUCTION, INTRODUCTION,word_initial,False
+21,block_output,block_20_output,none,282,40,8224,0.050298832,Manager,Manager,continuation_or_standalone,False
+21,block_output,block_20_output,none,282,41,28592,0.050119426,ĠÂµm, µm,word_initial,False
+21,block_output,block_20_output,none,282,42,18453,0.050108843,Ã¤m,äm,continuation_or_standalone,False
+21,block_output,block_20_output,none,282,43,30547,0.0500894,Ġsket, sket,word_initial,False
+21,block_output,block_20_output,none,282,44,50024,0.050077435,javase,javase,continuation_or_standalone,False
+21,block_output,block_20_output,none,282,45,13209,0.049932376,ĠBab, Bab,word_initial,False
+21,block_output,block_20_output,none,282,46,37730,0.04985009,Ġdebated, debated,word_initial,False
+21,block_output,block_20_output,none,282,47,29758,0.049795095,Observ,Observ,continuation_or_standalone,False
+21,block_output,block_20_output,none,282,48,10626,0.049644753,×ķ,ו,continuation_or_standalone,False
+21,block_output,block_20_output,none,282,49,21530,0.04960925,Ġanimated, animated,word_initial,False
+21,block_output,block_20_output,none,282,50,12780,0.04959307,tmp,tmp,continuation_or_standalone,False
+22,block_output,block_21_output,none,246,1,25698,0.06860551,Posted,Posted,continuation_or_standalone,False
+22,block_output,block_21_output,none,246,2,49903,0.068266734,Bab,Bab,continuation_or_standalone,False
+22,block_output,block_21_output,none,246,3,12911,0.06182693,ĠBerlin, Berlin,word_initial,False
+22,block_output,block_21_output,none,246,4,14045,0.060567856,Ġpropri, propri,word_initial,False
+22,block_output,block_21_output,none,246,5,23763,0.060566578,sal,sal,continuation_or_standalone,False
+22,block_output,block_21_output,none,246,6,26696,0.060480367,Ġtravers, travers,word_initial,False
+22,block_output,block_21_output,none,246,7,34346,0.059966408,Ġ@@, @@,punctuation_or_symbol,False
+22,block_output,block_21_output,none,246,8,15212,0.059834223,Ġquoted, quoted,word_initial,False
+22,block_output,block_21_output,none,246,9,6734,0.059771027,Ġ(), (),punctuation_or_symbol,False
+22,block_output,block_21_output,none,246,10,42151,0.058152996,Ġpeng, peng,word_initial,False
+22,block_output,block_21_output,none,246,11,34946,0.05813182,ĠKumar, Kumar,word_initial,False
+22,block_output,block_21_output,none,246,12,13841,0.05653655,Ġstake, stake,word_initial,False
+22,block_output,block_21_output,none,246,13,42852,0.05624422,Ġmotivations, motivations,word_initial,False
+22,block_output,block_21_output,none,246,14,37470,0.05486682,Ġrecycled, recycled,word_initial,False
+22,block_output,block_21_output,none,246,15,23269,0.054854326,sizeof,sizeof,continuation_or_standalone,False
+22,block_output,block_21_output,none,246,16,41918,0.054292813,ĠKrish, Krish,word_initial,False
+22,block_output,block_21_output,none,246,17,33089,0.05417548,âĨ,�,punctuation_or_symbol,False
+22,block_output,block_21_output,none,246,18,3311,0.05389301,Ġestim, estim,word_initial,False
+22,block_output,block_21_output,none,246,19,811,0.05385469,Ġtrans, trans,word_initial,False
+22,block_output,block_21_output,none,246,20,12415,0.05309446,Ġtension, tension,word_initial,False
+22,block_output,block_21_output,none,246,21,24269,0.052792322,triangle,triangle,continuation_or_standalone,False
+22,block_output,block_21_output,none,246,22,6449,0.05269584,ãĤĴ,を,continuation_or_standalone,False
+22,block_output,block_21_output,none,246,23,28592,0.052658893,ĠÂµm, µm,word_initial,False
+22,block_output,block_21_output,none,246,24,14059,0.052646764,iy,iy,continuation_or_standalone,False
+22,block_output,block_21_output,none,246,25,6355,0.052513637,Ġinteractions, interactions,word_initial,False
+22,block_output,block_21_output,none,246,26,4191,0.052421585,Ġbeaut, beaut,word_initial,False
+22,block_output,block_21_output,none,246,27,34887,0.052337736,Ġtornado, tornado,word_initial,False
+22,block_output,block_21_output,none,246,28,44309,0.052275155,emplo,emplo,continuation_or_standalone,False
+22,block_output,block_21_output,none,246,29,42699,0.05212438,ĠCaption, Caption,word_initial,False
+22,block_output,block_21_output,none,246,30,47740,0.052097205,RAW,RAW,continuation_or_standalone,False
+22,block_output,block_21_output,none,246,31,17499,0.051830612,Ã¼n,ün,continuation_or_standalone,False
+22,block_output,block_21_output,none,246,32,39507,0.05164417,ĠINTRODUCTION, INTRODUCTION,word_initial,False
+22,block_output,block_21_output,none,246,33,46105,0.05138904,âĸł,■,punctuation_or_symbol,False
+22,block_output,block_21_output,none,246,34,18453,0.0513093,Ã¤m,äm,continuation_or_standalone,False
+22,block_output,block_21_output,none,246,35,1650,0.051265176,Ġexample, example,word_initial,False
+22,block_output,block_21_output,none,246,36,26008,0.051105775,Pen,Pen,continuation_or_standalone,False
+22,block_output,block_21_output,none,246,37,4675,0.050940413,Ġhospital, hospital,word_initial,False
+22,block_output,block_21_output,none,246,38,11360,0.05087972,Ġdominant, dominant,word_initial,False
+22,block_output,block_21_output,none,246,39,22770,0.050637096,Ġrefres, refres,word_initial,False
+22,block_output,block_21_output,none,246,40,8224,0.050517347,Manager,Manager,continuation_or_standalone,False
+22,block_output,block_21_output,none,246,41,41986,0.050474837,ë§,�,punctuation_or_symbol,False
+22,block_output,block_21_output,none,246,42,39026,0.050181296,Ð¾Ðµ,ое,continuation_or_standalone,False
+22,block_output,block_21_output,none,246,43,30547,0.05015519,Ġsket, sket,word_initial,False
+22,block_output,block_21_output,none,246,44,13209,0.049936026,ĠBab, Bab,word_initial,False
+22,block_output,block_21_output,none,246,45,37730,0.0498795,Ġdebated, debated,word_initial,False
+22,block_output,block_21_output,none,246,46,12780,0.04986896,tmp,tmp,continuation_or_standalone,False
+22,block_output,block_21_output,none,246,47,50082,0.04969311,Ġsnar, snar,word_initial,False
+22,block_output,block_21_output,none,246,48,13597,0.04967118,Ġdating, dating,word_initial,False
+22,block_output,block_21_output,none,246,49,46101,0.049485758,ĠMeasurements, Measurements,word_initial,False
+22,block_output,block_21_output,none,246,50,880,0.049442355,](,](,punctuation_or_symbol,False
+23,block_output,block_22_output,none,240,1,49903,0.06734899,Bab,Bab,continuation_or_standalone,False
+23,block_output,block_22_output,none,240,2,25698,0.066824764,Posted,Posted,continuation_or_standalone,False
+23,block_output,block_22_output,none,240,3,12911,0.061046705,ĠBerlin, Berlin,word_initial,False
+23,block_output,block_22_output,none,240,4,23763,0.060866088,sal,sal,continuation_or_standalone,False
+23,block_output,block_22_output,none,240,5,14045,0.060643017,Ġpropri, propri,word_initial,False
+23,block_output,block_22_output,none,240,6,15212,0.05994119,Ġquoted, quoted,word_initial,False
+23,block_output,block_22_output,none,240,7,13841,0.059802886,Ġstake, stake,word_initial,False
+23,block_output,block_22_output,none,240,8,6734,0.05962613,Ġ(), (),punctuation_or_symbol,False
+23,block_output,block_22_output,none,240,9,42151,0.05943063,Ġpeng, peng,word_initial,False
+23,block_output,block_22_output,none,240,10,34346,0.05905187,Ġ@@, @@,punctuation_or_symbol,False
+23,block_output,block_22_output,none,240,11,26696,0.05819133,Ġtravers, travers,word_initial,False
+23,block_output,block_22_output,none,240,12,34946,0.05813837,ĠKumar, Kumar,word_initial,False
+23,block_output,block_22_output,none,240,13,42852,0.056201532,Ġmotivations, motivations,word_initial,False
+23,block_output,block_22_output,none,240,14,24269,0.055079702,triangle,triangle,continuation_or_standalone,False
+23,block_output,block_22_output,none,240,15,23269,0.05505193,sizeof,sizeof,continuation_or_standalone,False
+23,block_output,block_22_output,none,240,16,41918,0.054657917,ĠKrish, Krish,word_initial,False
+23,block_output,block_22_output,none,240,17,37470,0.05429981,Ġrecycled, recycled,word_initial,False
+23,block_output,block_22_output,none,240,18,12415,0.053942546,Ġtension, tension,word_initial,False
+23,block_output,block_22_output,none,240,19,3311,0.053932287,Ġestim, estim,word_initial,False
+23,block_output,block_22_output,none,240,20,34887,0.05367812,Ġtornado, tornado,word_initial,False
+23,block_output,block_22_output,none,240,21,811,0.053491276,Ġtrans, trans,word_initial,False
+23,block_output,block_22_output,none,240,22,33089,0.053413946,âĨ,�,punctuation_or_symbol,False
+23,block_output,block_22_output,none,240,23,47740,0.052750867,RAW,RAW,continuation_or_standalone,False
+23,block_output,block_22_output,none,240,24,22770,0.05272792,Ġrefres, refres,word_initial,False
+23,block_output,block_22_output,none,240,25,6449,0.05251133,ãĤĴ,を,continuation_or_standalone,False
+23,block_output,block_22_output,none,240,26,14059,0.05225771,iy,iy,continuation_or_standalone,False
+23,block_output,block_22_output,none,240,27,39507,0.05210706,ĠINTRODUCTION, INTRODUCTION,word_initial,False
+23,block_output,block_22_output,none,240,28,18453,0.05202436,Ã¤m,äm,continuation_or_standalone,False
+23,block_output,block_22_output,none,240,29,28592,0.051768407,ĠÂµm, µm,word_initial,False
+23,block_output,block_22_output,none,240,30,17499,0.0516546,Ã¼n,ün,continuation_or_standalone,False
+23,block_output,block_22_output,none,240,31,4675,0.05153776,Ġhospital, hospital,word_initial,False
+23,block_output,block_22_output,none,240,32,46105,0.051522344,âĸł,■,punctuation_or_symbol,False
+23,block_output,block_22_output,none,240,33,42699,0.051437054,ĠCaption, Caption,word_initial,False
+23,block_output,block_22_output,none,240,34,6355,0.051366083,Ġinteractions, interactions,word_initial,False
+23,block_output,block_22_output,none,240,35,1650,0.051349025,Ġexample, example,word_initial,False
+23,block_output,block_22_output,none,240,36,4191,0.0511346,Ġbeaut, beaut,word_initial,False
+23,block_output,block_22_output,none,240,37,26008,0.051033568,Pen,Pen,continuation_or_standalone,False
+23,block_output,block_22_output,none,240,38,44309,0.05098104,emplo,emplo,continuation_or_standalone,False
+23,block_output,block_22_output,none,240,39,3484,0.050899953,Ġstudents, students,word_initial,False
+23,block_output,block_22_output,none,240,40,880,0.050882604,](,](,punctuation_or_symbol,False
+23,block_output,block_22_output,none,240,41,39026,0.05070948,Ð¾Ðµ,ое,continuation_or_standalone,False
+23,block_output,block_22_output,none,240,42,11360,0.05025136,Ġdominant, dominant,word_initial,False
+23,block_output,block_22_output,none,240,43,8224,0.050126743,Manager,Manager,continuation_or_standalone,False
+23,block_output,block_22_output,none,240,44,37792,0.0501118,ĠLung, Lung,word_initial,False
+23,block_output,block_22_output,none,240,45,37730,0.04995334,Ġdebated, debated,word_initial,False
+23,block_output,block_22_output,none,240,46,30547,0.04991494,Ġsket, sket,word_initial,False
+23,block_output,block_22_output,none,240,47,13597,0.049869835,Ġdating, dating,word_initial,False
+23,block_output,block_22_output,none,240,48,10108,0.049857683,ilation,ilation,continuation_or_standalone,False
+23,block_output,block_22_output,none,240,49,46101,0.04968956,ĠMeasurements, Measurements,word_initial,False
+23,block_output,block_22_output,none,240,50,12780,0.049570683,tmp,tmp,continuation_or_standalone,False
+24,block_output,block_23_output,none,264,1,25698,0.0664124,Posted,Posted,continuation_or_standalone,False
+24,block_output,block_23_output,none,264,2,49903,0.06545231,Bab,Bab,continuation_or_standalone,False
+24,block_output,block_23_output,none,264,3,13841,0.06179026,Ġstake, stake,word_initial,False
+24,block_output,block_23_output,none,264,4,12911,0.060361236,ĠBerlin, Berlin,word_initial,False
+24,block_output,block_23_output,none,264,5,42151,0.060240347,Ġpeng, peng,word_initial,False
+24,block_output,block_23_output,none,264,6,14045,0.06006237,Ġpropri, propri,word_initial,False
+24,block_output,block_23_output,none,264,7,23763,0.059928022,sal,sal,continuation_or_standalone,False
+24,block_output,block_23_output,none,264,8,15212,0.059731662,Ġquoted, quoted,word_initial,False
+24,block_output,block_23_output,none,264,9,34346,0.05908057,Ġ@@, @@,punctuation_or_symbol,False
+24,block_output,block_23_output,none,264,10,34946,0.058634564,ĠKumar, Kumar,word_initial,False
+24,block_output,block_23_output,none,264,11,26696,0.058547042,Ġtravers, travers,word_initial,False
+24,block_output,block_23_output,none,264,12,6734,0.058247395,Ġ(), (),punctuation_or_symbol,False
+24,block_output,block_23_output,none,264,13,24269,0.057007916,triangle,triangle,continuation_or_standalone,False
+24,block_output,block_23_output,none,264,14,42852,0.05654779,Ġmotivations, motivations,word_initial,False
+24,block_output,block_23_output,none,264,15,41918,0.055904385,ĠKrish, Krish,word_initial,False
+24,block_output,block_23_output,none,264,16,23269,0.055157036,sizeof,sizeof,continuation_or_standalone,False
+24,block_output,block_23_output,none,264,17,37470,0.054806374,Ġrecycled, recycled,word_initial,False
+24,block_output,block_23_output,none,264,18,6449,0.05452792,ãĤĴ,を,continuation_or_standalone,False
+24,block_output,block_23_output,none,264,19,34887,0.054352205,Ġtornado, tornado,word_initial,False
+24,block_output,block_23_output,none,264,20,47740,0.053959403,RAW,RAW,continuation_or_standalone,False
+24,block_output,block_23_output,none,264,21,3484,0.053767756,Ġstudents, students,word_initial,False
+24,block_output,block_23_output,none,264,22,46105,0.05373883,âĸł,■,punctuation_or_symbol,False
+24,block_output,block_23_output,none,264,23,3311,0.053706083,Ġestim, estim,word_initial,False
+24,block_output,block_23_output,none,264,24,12415,0.05357779,Ġtension, tension,word_initial,False
+24,block_output,block_23_output,none,264,25,22770,0.053541962,Ġrefres, refres,word_initial,False
+24,block_output,block_23_output,none,264,26,4675,0.053314596,Ġhospital, hospital,word_initial,False
+24,block_output,block_23_output,none,264,27,39507,0.052920647,ĠINTRODUCTION, INTRODUCTION,word_initial,False
+24,block_output,block_23_output,none,264,28,39026,0.0525737,Ð¾Ðµ,ое,continuation_or_standalone,False
+24,block_output,block_23_output,none,264,29,42699,0.052418146,ĠCaption, Caption,word_initial,False
+24,block_output,block_23_output,none,264,30,811,0.05211785,Ġtrans, trans,word_initial,False
+24,block_output,block_23_output,none,264,31,10108,0.05164621,ilation,ilation,continuation_or_standalone,False
+24,block_output,block_23_output,none,264,32,14059,0.05148241,iy,iy,continuation_or_standalone,False
+24,block_output,block_23_output,none,264,33,880,0.05135009,](,](,punctuation_or_symbol,False
+24,block_output,block_23_output,none,264,34,28592,0.051142514,ĠÂµm, µm,word_initial,False
+24,block_output,block_23_output,none,264,35,33089,0.0511364,âĨ,�,punctuation_or_symbol,False
+24,block_output,block_23_output,none,264,36,44309,0.051073037,emplo,emplo,continuation_or_standalone,False
+24,block_output,block_23_output,none,264,37,17499,0.051040962,Ã¼n,ün,continuation_or_standalone,False
+24,block_output,block_23_output,none,264,38,18453,0.05100683,Ã¤m,äm,continuation_or_standalone,False
+24,block_output,block_23_output,none,264,39,26008,0.0508613,Pen,Pen,continuation_or_standalone,False
+24,block_output,block_23_output,none,264,40,39498,0.050541278,Ġsalivary, salivary,word_initial,False
+24,block_output,block_23_output,none,264,41,6355,0.050369784,Ġinteractions, interactions,word_initial,False
+24,block_output,block_23_output,none,264,42,1650,0.050330937,Ġexample, example,word_initial,False
+24,block_output,block_23_output,none,264,43,13597,0.05032774,Ġdating, dating,word_initial,False
+24,block_output,block_23_output,none,264,44,8224,0.049993273,Manager,Manager,continuation_or_standalone,False
+24,block_output,block_23_output,none,264,45,38810,0.049965758,Ġsoybean, soybean,word_initial,False
+24,block_output,block_23_output,none,264,46,4191,0.04976828,Ġbeaut, beaut,word_initial,False
+24,block_output,block_23_output,none,264,47,11360,0.04974581,Ġdominant, dominant,word_initial,False
+24,block_output,block_23_output,none,264,48,12780,0.049685523,tmp,tmp,continuation_or_standalone,False
+24,block_output,block_23_output,none,264,49,46101,0.049475625,ĠMeasurements, Measurements,word_initial,False
+24,block_output,block_23_output,none,264,50,37730,0.04939369,Ġdebated, debated,word_initial,False
+25,block_output,block_24_output,none,261,1,49903,0.065482534,Bab,Bab,continuation_or_standalone,False
+25,block_output,block_24_output,none,261,2,25698,0.065309085,Posted,Posted,continuation_or_standalone,False
+25,block_output,block_24_output,none,261,3,13841,0.062285814,Ġstake, stake,word_initial,False
+25,block_output,block_24_output,none,261,4,12911,0.060879458,ĠBerlin, Berlin,word_initial,False
+25,block_output,block_24_output,none,261,5,15212,0.060691334,Ġquoted, quoted,word_initial,False
+25,block_output,block_24_output,none,261,6,14045,0.06000776,Ġpropri, propri,word_initial,False
+25,block_output,block_24_output,none,261,7,42151,0.05976966,Ġpeng, peng,word_initial,False
+25,block_output,block_24_output,none,261,8,34346,0.059545208,Ġ@@, @@,punctuation_or_symbol,False
+25,block_output,block_24_output,none,261,9,23763,0.058921773,sal,sal,continuation_or_standalone,False
+25,block_output,block_24_output,none,261,10,34946,0.058143646,ĠKumar, Kumar,word_initial,False
+25,block_output,block_24_output,none,261,11,24269,0.057030477,triangle,triangle,continuation_or_standalone,False
+25,block_output,block_24_output,none,261,12,6734,0.05699744,Ġ(), (),punctuation_or_symbol,False
+25,block_output,block_24_output,none,261,13,26696,0.05684989,Ġtravers, travers,word_initial,False
+25,block_output,block_24_output,none,261,14,42852,0.05634282,Ġmotivations, motivations,word_initial,False
+25,block_output,block_24_output,none,261,15,41918,0.05612618,ĠKrish, Krish,word_initial,False
+25,block_output,block_24_output,none,261,16,37470,0.055782247,Ġrecycled, recycled,word_initial,False
+25,block_output,block_24_output,none,261,17,46105,0.055370077,âĸł,■,punctuation_or_symbol,False
+25,block_output,block_24_output,none,261,18,22770,0.05461643,Ġrefres, refres,word_initial,False
+25,block_output,block_24_output,none,261,19,4675,0.054380618,Ġhospital, hospital,word_initial,False
+25,block_output,block_24_output,none,261,20,47740,0.053982757,RAW,RAW,continuation_or_standalone,False
+25,block_output,block_24_output,none,261,21,3484,0.053365953,Ġstudents, students,word_initial,False
+25,block_output,block_24_output,none,261,22,42699,0.053160522,ĠCaption, Caption,word_initial,False
+25,block_output,block_24_output,none,261,23,23269,0.053137474,sizeof,sizeof,continuation_or_standalone,False
+25,block_output,block_24_output,none,261,24,34887,0.052940328,Ġtornado, tornado,word_initial,False
+25,block_output,block_24_output,none,261,25,6449,0.052563164,ãĤĴ,を,continuation_or_standalone,False
+25,block_output,block_24_output,none,261,26,811,0.052466776,Ġtrans, trans,word_initial,False
+25,block_output,block_24_output,none,261,27,12415,0.052429058,Ġtension, tension,word_initial,False
+25,block_output,block_24_output,none,261,28,14059,0.05239384,iy,iy,continuation_or_standalone,False
+25,block_output,block_24_output,none,261,29,39507,0.052343786,ĠINTRODUCTION, INTRODUCTION,word_initial,False
+25,block_output,block_24_output,none,261,30,10108,0.05194224,ilation,ilation,continuation_or_standalone,False
+25,block_output,block_24_output,none,261,31,880,0.05165219,](,](,punctuation_or_symbol,False
+25,block_output,block_24_output,none,261,32,3311,0.05121984,Ġestim, estim,word_initial,False
+25,block_output,block_24_output,none,261,33,39026,0.051212125,Ð¾Ðµ,ое,continuation_or_standalone,False
+25,block_output,block_24_output,none,261,34,18453,0.05120844,Ã¤m,äm,continuation_or_standalone,False
+25,block_output,block_24_output,none,261,35,33089,0.051083937,âĨ,�,punctuation_or_symbol,False
+25,block_output,block_24_output,none,261,36,44309,0.05100302,emplo,emplo,continuation_or_standalone,False
+25,block_output,block_24_output,none,261,37,4191,0.050883856,Ġbeaut, beaut,word_initial,False
+25,block_output,block_24_output,none,261,38,8362,0.05079911,Ġfunding, funding,word_initial,False
+25,block_output,block_24_output,none,261,39,26008,0.050587006,Pen,Pen,continuation_or_standalone,False
+25,block_output,block_24_output,none,261,40,38810,0.050395172,Ġsoybean, soybean,word_initial,False
+25,block_output,block_24_output,none,261,41,39498,0.050355166,Ġsalivary, salivary,word_initial,False
+25,block_output,block_24_output,none,261,42,37730,0.050174534,Ġdebated, debated,word_initial,False
+25,block_output,block_24_output,none,261,43,38717,0.05005036,Ġmitotic, mitotic,word_initial,False
+25,block_output,block_24_output,none,261,44,13597,0.050029274,Ġdating, dating,word_initial,False
+25,block_output,block_24_output,none,261,45,46101,0.049802177,ĠMeasurements, Measurements,word_initial,False
+25,block_output,block_24_output,none,261,46,17499,0.049735215,Ã¼n,ün,continuation_or_standalone,False
+25,block_output,block_24_output,none,261,47,28592,0.04950897,ĠÂµm, µm,word_initial,False
+25,block_output,block_24_output,none,261,48,8224,0.049508087,Manager,Manager,continuation_or_standalone,False
+25,block_output,block_24_output,none,261,49,6355,0.049046233,Ġinteractions, interactions,word_initial,False
+25,block_output,block_24_output,none,261,50,11360,0.048950426,Ġdominant, dominant,word_initial,False
+26,block_output,block_25_output,none,260,1,25698,0.06476906,Posted,Posted,continuation_or_standalone,False
+26,block_output,block_25_output,none,260,2,49903,0.064483866,Bab,Bab,continuation_or_standalone,False
+26,block_output,block_25_output,none,260,3,13841,0.062438656,Ġstake, stake,word_initial,False
+26,block_output,block_25_output,none,260,4,15212,0.061672773,Ġquoted, quoted,word_initial,False
+26,block_output,block_25_output,none,260,5,34346,0.06100703,Ġ@@, @@,punctuation_or_symbol,False
+26,block_output,block_25_output,none,260,6,12911,0.060373705,ĠBerlin, Berlin,word_initial,False
+26,block_output,block_25_output,none,260,7,14045,0.058426484,Ġpropri, propri,word_initial,False
+26,block_output,block_25_output,none,260,8,24269,0.058084287,triangle,triangle,continuation_or_standalone,False
+26,block_output,block_25_output,none,260,9,42151,0.058054425,Ġpeng, peng,word_initial,False
+26,block_output,block_25_output,none,260,10,23763,0.057508577,sal,sal,continuation_or_standalone,False
+26,block_output,block_25_output,none,260,11,34946,0.057204362,ĠKumar, Kumar,word_initial,False
+26,block_output,block_25_output,none,260,12,6734,0.056921452,Ġ(), (),punctuation_or_symbol,False
+26,block_output,block_25_output,none,260,13,42852,0.05682586,Ġmotivations, motivations,word_initial,False
+26,block_output,block_25_output,none,260,14,26696,0.056413453,Ġtravers, travers,word_initial,False
+26,block_output,block_25_output,none,260,15,22770,0.056269806,Ġrefres, refres,word_initial,False
+26,block_output,block_25_output,none,260,16,4675,0.056064583,Ġhospital, hospital,word_initial,False
+26,block_output,block_25_output,none,260,17,37470,0.05603548,Ġrecycled, recycled,word_initial,False
+26,block_output,block_25_output,none,260,18,41918,0.055992845,ĠKrish, Krish,word_initial,False
+26,block_output,block_25_output,none,260,19,46105,0.0556329,âĸł,■,punctuation_or_symbol,False
+26,block_output,block_25_output,none,260,20,23269,0.05502881,sizeof,sizeof,continuation_or_standalone,False
+26,block_output,block_25_output,none,260,21,3484,0.054806188,Ġstudents, students,word_initial,False
+26,block_output,block_25_output,none,260,22,47740,0.05438658,RAW,RAW,continuation_or_standalone,False
+26,block_output,block_25_output,none,260,23,42699,0.053443573,ĠCaption, Caption,word_initial,False
+26,block_output,block_25_output,none,260,24,811,0.05297338,Ġtrans, trans,word_initial,False
+26,block_output,block_25_output,none,260,25,34887,0.05213681,Ġtornado, tornado,word_initial,False
+26,block_output,block_25_output,none,260,26,880,0.05210973,](,](,punctuation_or_symbol,False
+26,block_output,block_25_output,none,260,27,28592,0.052030034,ĠÂµm, µm,word_initial,False
+26,block_output,block_25_output,none,260,28,6449,0.051684897,ãĤĴ,を,continuation_or_standalone,False
+26,block_output,block_25_output,none,260,29,14059,0.051637914,iy,iy,continuation_or_standalone,False
+26,block_output,block_25_output,none,260,30,4191,0.05163181,Ġbeaut, beaut,word_initial,False
+26,block_output,block_25_output,none,260,31,33089,0.051353537,âĨ,�,punctuation_or_symbol,False
+26,block_output,block_25_output,none,260,32,39026,0.051293995,Ð¾Ðµ,ое,continuation_or_standalone,False
+26,block_output,block_25_output,none,260,33,38717,0.0512765,Ġmitotic, mitotic,word_initial,False
+26,block_output,block_25_output,none,260,34,39507,0.051162984,ĠINTRODUCTION, INTRODUCTION,word_initial,False
+26,block_output,block_25_output,none,260,35,12415,0.05096463,Ġtension, tension,word_initial,False
+26,block_output,block_25_output,none,260,36,10108,0.05094804,ilation,ilation,continuation_or_standalone,False
+26,block_output,block_25_output,none,260,37,3311,0.05066634,Ġestim, estim,word_initial,False
+26,block_output,block_25_output,none,260,38,8224,0.050321892,Manager,Manager,continuation_or_standalone,False
+26,block_output,block_25_output,none,260,39,8362,0.050308708,Ġfunding, funding,word_initial,False
+26,block_output,block_25_output,none,260,40,37730,0.05026682,Ġdebated, debated,word_initial,False
+26,block_output,block_25_output,none,260,41,39498,0.05025368,Ġsalivary, salivary,word_initial,False
+26,block_output,block_25_output,none,260,42,46101,0.050227977,ĠMeasurements, Measurements,word_initial,False
+26,block_output,block_25_output,none,260,43,41627,0.05007145,Ð½Ð¾Ðµ,ное,continuation_or_standalone,False
+26,block_output,block_25_output,none,260,44,26008,0.04989551,Pen,Pen,continuation_or_standalone,False
+26,block_output,block_25_output,none,260,45,18453,0.049791995,Ã¤m,äm,continuation_or_standalone,False
+26,block_output,block_25_output,none,260,46,44309,0.049780853,emplo,emplo,continuation_or_standalone,False
+26,block_output,block_25_output,none,260,47,12780,0.04910045,tmp,tmp,continuation_or_standalone,False
+26,block_output,block_25_output,none,260,48,15837,0.0490631,ĠPhoto, Photo,word_initial,False
+26,block_output,block_25_output,none,260,49,45507,0.04905602,Ġ](, ](,punctuation_or_symbol,False
+26,block_output,block_25_output,none,260,50,17499,0.04894279,Ã¼n,ün,continuation_or_standalone,False
+27,block_output,block_26_output,none,280,1,25698,0.06434228,Posted,Posted,continuation_or_standalone,False
+27,block_output,block_26_output,none,280,2,49903,0.06337458,Bab,Bab,continuation_or_standalone,False
+27,block_output,block_26_output,none,280,3,15212,0.06144562,Ġquoted, quoted,word_initial,False
+27,block_output,block_26_output,none,280,4,13841,0.0603953,Ġstake, stake,word_initial,False
+27,block_output,block_26_output,none,280,5,34346,0.05984851,Ġ@@, @@,punctuation_or_symbol,False
+27,block_output,block_26_output,none,280,6,12911,0.058773533,ĠBerlin, Berlin,word_initial,False
+27,block_output,block_26_output,none,280,7,14045,0.058606617,Ġpropri, propri,word_initial,False
+27,block_output,block_26_output,none,280,8,24269,0.058101147,triangle,triangle,continuation_or_standalone,False
+27,block_output,block_26_output,none,280,9,23763,0.057618134,sal,sal,continuation_or_standalone,False
+27,block_output,block_26_output,none,280,10,34946,0.0573177,ĠKumar, Kumar,word_initial,False
+27,block_output,block_26_output,none,280,11,37470,0.056841176,Ġrecycled, recycled,word_initial,False
+27,block_output,block_26_output,none,280,12,42151,0.05666108,Ġpeng, peng,word_initial,False
+27,block_output,block_26_output,none,280,13,6734,0.05643084,Ġ(), (),punctuation_or_symbol,False
+27,block_output,block_26_output,none,280,14,23269,0.055842854,sizeof,sizeof,continuation_or_standalone,False
+27,block_output,block_26_output,none,280,15,42852,0.055487823,Ġmotivations, motivations,word_initial,False
+27,block_output,block_26_output,none,280,16,4675,0.055275865,Ġhospital, hospital,word_initial,False
+27,block_output,block_26_output,none,280,17,22770,0.055207584,Ġrefres, refres,word_initial,False
+27,block_output,block_26_output,none,280,18,41918,0.05505777,ĠKrish, Krish,word_initial,False
+27,block_output,block_26_output,none,280,19,46105,0.055003468,âĸł,■,punctuation_or_symbol,False
+27,block_output,block_26_output,none,280,20,880,0.054781187,](,](,punctuation_or_symbol,False
+27,block_output,block_26_output,none,280,21,47740,0.05425496,RAW,RAW,continuation_or_standalone,False
+27,block_output,block_26_output,none,280,22,3484,0.053681906,Ġstudents, students,word_initial,False
+27,block_output,block_26_output,none,280,23,26696,0.05313391,Ġtravers, travers,word_initial,False
+27,block_output,block_26_output,none,280,24,42699,0.052411195,ĠCaption, Caption,word_initial,False
+27,block_output,block_26_output,none,280,25,811,0.052081198,Ġtrans, trans,word_initial,False
+27,block_output,block_26_output,none,280,26,14059,0.051806882,iy,iy,continuation_or_standalone,False
+27,block_output,block_26_output,none,280,27,38717,0.05130636,Ġmitotic, mitotic,word_initial,False
+27,block_output,block_26_output,none,280,28,34887,0.05114293,Ġtornado, tornado,word_initial,False
+27,block_output,block_26_output,none,280,29,41627,0.051141012,Ð½Ð¾Ðµ,ное,continuation_or_standalone,False
+27,block_output,block_26_output,none,280,30,28592,0.050705068,ĠÂµm, µm,word_initial,False
+27,block_output,block_26_output,none,280,31,6449,0.05044364,ãĤĴ,を,continuation_or_standalone,False
+27,block_output,block_26_output,none,280,32,3311,0.050437454,Ġestim, estim,word_initial,False
+27,block_output,block_26_output,none,280,33,45507,0.050372794,Ġ](, ](,punctuation_or_symbol,False
+27,block_output,block_26_output,none,280,34,39498,0.050341874,Ġsalivary, salivary,word_initial,False
+27,block_output,block_26_output,none,280,35,8224,0.05028946,Manager,Manager,continuation_or_standalone,False
+27,block_output,block_26_output,none,280,36,39507,0.050283797,ĠINTRODUCTION, INTRODUCTION,word_initial,False
+27,block_output,block_26_output,none,280,37,8362,0.050221592,Ġfunding, funding,word_initial,False
+27,block_output,block_26_output,none,280,38,18453,0.05021484,Ã¤m,äm,continuation_or_standalone,False
+27,block_output,block_26_output,none,280,39,12415,0.049992118,Ġtension, tension,word_initial,False
+27,block_output,block_26_output,none,280,40,37730,0.049917154,Ġdebated, debated,word_initial,False
+27,block_output,block_26_output,none,280,41,5641,0.049717456,space,space,continuation_or_standalone,False
+27,block_output,block_26_output,none,280,42,10108,0.049623135,ilation,ilation,continuation_or_standalone,False
+27,block_output,block_26_output,none,280,43,1650,0.049445484,Ġexample, example,word_initial,False
+27,block_output,block_26_output,none,280,44,39026,0.04935758,Ð¾Ðµ,ое,continuation_or_standalone,False
+27,block_output,block_26_output,none,280,45,46473,0.04932831,Ġwieder, wieder,word_initial,False
+27,block_output,block_26_output,none,280,46,44309,0.04927001,emplo,emplo,continuation_or_standalone,False
+27,block_output,block_26_output,none,280,47,1126,0.049132496,_{\,_{\,punctuation_or_symbol,False
+27,block_output,block_26_output,none,280,48,33089,0.048760153,âĨ,�,punctuation_or_symbol,False
+27,block_output,block_26_output,none,280,49,12780,0.048648436,tmp,tmp,continuation_or_standalone,False
+27,block_output,block_26_output,none,280,50,26008,0.048472907,Pen,Pen,continuation_or_standalone,False
+28,block_output,block_27_output,none,276,1,25698,0.063881695,Posted,Posted,continuation_or_standalone,False
+28,block_output,block_27_output,none,276,2,49903,0.06229569,Bab,Bab,continuation_or_standalone,False
+28,block_output,block_27_output,none,276,3,15212,0.060630135,Ġquoted, quoted,word_initial,False
+28,block_output,block_27_output,none,276,4,13841,0.059851572,Ġstake, stake,word_initial,False
+28,block_output,block_27_output,none,276,5,34346,0.059684742,Ġ@@, @@,punctuation_or_symbol,False
+28,block_output,block_27_output,none,276,6,24269,0.058154695,triangle,triangle,continuation_or_standalone,False
+28,block_output,block_27_output,none,276,7,12911,0.058049805,ĠBerlin, Berlin,word_initial,False
+28,block_output,block_27_output,none,276,8,37470,0.057588287,Ġrecycled, recycled,word_initial,False
+28,block_output,block_27_output,none,276,9,34946,0.056658052,ĠKumar, Kumar,word_initial,False
+28,block_output,block_27_output,none,276,10,14045,0.05614428,Ġpropri, propri,word_initial,False
+28,block_output,block_27_output,none,276,11,4675,0.056110557,Ġhospital, hospital,word_initial,False
+28,block_output,block_27_output,none,276,12,42852,0.056109853,Ġmotivations, motivations,word_initial,False
+28,block_output,block_27_output,none,276,13,41918,0.055974755,ĠKrish, Krish,word_initial,False
+28,block_output,block_27_output,none,276,14,22770,0.05585015,Ġrefres, refres,word_initial,False
+28,block_output,block_27_output,none,276,15,42151,0.05559628,Ġpeng, peng,word_initial,False
+28,block_output,block_27_output,none,276,16,23763,0.055059146,sal,sal,continuation_or_standalone,False
+28,block_output,block_27_output,none,276,17,23269,0.054794617,sizeof,sizeof,continuation_or_standalone,False
+28,block_output,block_27_output,none,276,18,6734,0.054241367,Ġ(), (),punctuation_or_symbol,False
+28,block_output,block_27_output,none,276,19,46105,0.054224882,âĸł,■,punctuation_or_symbol,False
+28,block_output,block_27_output,none,276,20,3484,0.05397969,Ġstudents, students,word_initial,False
+28,block_output,block_27_output,none,276,21,42699,0.053785935,ĠCaption, Caption,word_initial,False
+28,block_output,block_27_output,none,276,22,47740,0.05318801,RAW,RAW,continuation_or_standalone,False
+28,block_output,block_27_output,none,276,23,880,0.053131174,](,](,punctuation_or_symbol,False
+28,block_output,block_27_output,none,276,24,26696,0.05266811,Ġtravers, travers,word_initial,False
+28,block_output,block_27_output,none,276,25,39498,0.052057184,Ġsalivary, salivary,word_initial,False
+28,block_output,block_27_output,none,276,26,1126,0.051542725,_{\,_{\,punctuation_or_symbol,False
+28,block_output,block_27_output,none,276,27,38717,0.05148289,Ġmitotic, mitotic,word_initial,False
+28,block_output,block_27_output,none,276,28,811,0.051434644,Ġtrans, trans,word_initial,False
+28,block_output,block_27_output,none,276,29,14059,0.050936837,iy,iy,continuation_or_standalone,False
+28,block_output,block_27_output,none,276,30,15837,0.050904166,ĠPhoto, Photo,word_initial,False
+28,block_output,block_27_output,none,276,31,37730,0.050773744,Ġdebated, debated,word_initial,False
+28,block_output,block_27_output,none,276,32,34887,0.050670903,Ġtornado, tornado,word_initial,False
+28,block_output,block_27_output,none,276,33,45507,0.050607838,Ġ](, ](,punctuation_or_symbol,False
+28,block_output,block_27_output,none,276,34,12415,0.050503545,Ġtension, tension,word_initial,False
+28,block_output,block_27_output,none,276,35,8224,0.050380558,Manager,Manager,continuation_or_standalone,False
+28,block_output,block_27_output,none,276,36,46473,0.049738955,Ġwieder, wieder,word_initial,False
+28,block_output,block_27_output,none,276,37,5641,0.04967786,space,space,continuation_or_standalone,False
+28,block_output,block_27_output,none,276,38,28592,0.049632344,ĠÂµm, µm,word_initial,False
+28,block_output,block_27_output,none,276,39,18453,0.04950067,Ã¤m,äm,continuation_or_standalone,False
+28,block_output,block_27_output,none,276,40,17499,0.049399156,Ã¼n,ün,continuation_or_standalone,False
+28,block_output,block_27_output,none,276,41,21505,0.0493631,pages,pages,continuation_or_standalone,False
+28,block_output,block_27_output,none,276,42,1650,0.04927415,Ġexample, example,word_initial,False
+28,block_output,block_27_output,none,276,43,44236,0.04921098,Ġmarkup, markup,word_initial,False
+28,block_output,block_27_output,none,276,44,26008,0.049156312,Pen,Pen,continuation_or_standalone,False
+28,block_output,block_27_output,none,276,45,3311,0.049002305,Ġestim, estim,word_initial,False
+28,block_output,block_27_output,none,276,46,7170,0.04899885,Ġadvance, advance,word_initial,False
+28,block_output,block_27_output,none,276,47,8191,0.048921175,Ġinformed, informed,word_initial,False
+28,block_output,block_27_output,none,276,48,46101,0.04868583,ĠMeasurements, Measurements,word_initial,False
+28,block_output,block_27_output,none,276,49,14889,0.048678365,boy,boy,continuation_or_standalone,False
+28,block_output,block_27_output,none,276,50,12780,0.048658043,tmp,tmp,continuation_or_standalone,False
+29,block_output,block_28_output,none,280,1,25698,0.06365269,Posted,Posted,continuation_or_standalone,False
+29,block_output,block_28_output,none,280,2,34346,0.06105965,Ġ@@, @@,punctuation_or_symbol,False
+29,block_output,block_28_output,none,280,3,49903,0.060727723,Bab,Bab,continuation_or_standalone,False
+29,block_output,block_28_output,none,280,4,15212,0.059716,Ġquoted, quoted,word_initial,False
+29,block_output,block_28_output,none,280,5,24269,0.059469476,triangle,triangle,continuation_or_standalone,False
+29,block_output,block_28_output,none,280,6,4675,0.05903466,Ġhospital, hospital,word_initial,False
+29,block_output,block_28_output,none,280,7,13841,0.057956383,Ġstake, stake,word_initial,False
+29,block_output,block_28_output,none,280,8,37470,0.057272844,Ġrecycled, recycled,word_initial,False
+29,block_output,block_28_output,none,280,9,34946,0.05702468,ĠKumar, Kumar,word_initial,False
+29,block_output,block_28_output,none,280,10,14045,0.05674985,Ġpropri, propri,word_initial,False
+29,block_output,block_28_output,none,280,11,41918,0.056079205,ĠKrish, Krish,word_initial,False
+29,block_output,block_28_output,none,280,12,42699,0.055245947,ĠCaption, Caption,word_initial,False
+29,block_output,block_28_output,none,280,13,12911,0.05521441,ĠBerlin, Berlin,word_initial,False
+29,block_output,block_28_output,none,280,14,42151,0.05459018,Ġpeng, peng,word_initial,False
+29,block_output,block_28_output,none,280,15,880,0.054298036,](,](,punctuation_or_symbol,False
+29,block_output,block_28_output,none,280,16,23269,0.054190513,sizeof,sizeof,continuation_or_standalone,False
+29,block_output,block_28_output,none,280,17,22770,0.053836517,Ġrefres, refres,word_initial,False
+29,block_output,block_28_output,none,280,18,42852,0.0536417,Ġmotivations, motivations,word_initial,False
+29,block_output,block_28_output,none,280,19,23763,0.053138908,sal,sal,continuation_or_standalone,False
+29,block_output,block_28_output,none,280,20,45507,0.05312622,Ġ](, ](,punctuation_or_symbol,False
+29,block_output,block_28_output,none,280,21,3484,0.05283469,Ġstudents, students,word_initial,False
+29,block_output,block_28_output,none,280,22,8224,0.05270077,Manager,Manager,continuation_or_standalone,False
+29,block_output,block_28_output,none,280,23,26696,0.05243821,Ġtravers, travers,word_initial,False
+29,block_output,block_28_output,none,280,24,46105,0.052179348,âĸł,■,punctuation_or_symbol,False
+29,block_output,block_28_output,none,280,25,6734,0.052037757,Ġ(), (),punctuation_or_symbol,False
+29,block_output,block_28_output,none,280,26,47740,0.051835734,RAW,RAW,continuation_or_standalone,False
+29,block_output,block_28_output,none,280,27,1126,0.0518093,_{\,_{\,punctuation_or_symbol,False
+29,block_output,block_28_output,none,280,28,12415,0.05176291,Ġtension, tension,word_initial,False
+29,block_output,block_28_output,none,280,29,28592,0.050995667,ĠÂµm, µm,word_initial,False
+29,block_output,block_28_output,none,280,30,46101,0.050724775,ĠMeasurements, Measurements,word_initial,False
+29,block_output,block_28_output,none,280,31,21505,0.050467744,pages,pages,continuation_or_standalone,False
+29,block_output,block_28_output,none,280,32,10518,0.050367225,ĠBusiness, Business,word_initial,False
+29,block_output,block_28_output,none,280,33,8191,0.05031081,Ġinformed, informed,word_initial,False
+29,block_output,block_28_output,none,280,34,811,0.050291706,Ġtrans, trans,word_initial,False
+29,block_output,block_28_output,none,280,35,37730,0.050029904,Ġdebated, debated,word_initial,False
+29,block_output,block_28_output,none,280,36,39498,0.049845655,Ġsalivary, salivary,word_initial,False
+29,block_output,block_28_output,none,280,37,15837,0.049771845,ĠPhoto, Photo,word_initial,False
+29,block_output,block_28_output,none,280,38,38717,0.049517468,Ġmitotic, mitotic,word_initial,False
+29,block_output,block_28_output,none,280,39,12780,0.04951684,tmp,tmp,continuation_or_standalone,False
+29,block_output,block_28_output,none,280,40,46473,0.04944944,Ġwieder, wieder,word_initial,False
+29,block_output,block_28_output,none,280,41,7170,0.04926693,Ġadvance, advance,word_initial,False
+29,block_output,block_28_output,none,280,42,44236,0.049060572,Ġmarkup, markup,word_initial,False
+29,block_output,block_28_output,none,280,43,14889,0.049036894,boy,boy,continuation_or_standalone,False
+29,block_output,block_28_output,none,280,44,387,0.048688944,Ġat, at,word_initial,False
+29,block_output,block_28_output,none,280,45,34887,0.048571073,Ġtornado, tornado,word_initial,False
+29,block_output,block_28_output,none,280,46,14059,0.04849416,iy,iy,continuation_or_standalone,False
+29,block_output,block_28_output,none,280,47,8362,0.048415963,Ġfunding, funding,word_initial,False
+29,block_output,block_28_output,none,280,48,18453,0.04823884,Ã¤m,äm,continuation_or_standalone,False
+29,block_output,block_28_output,none,280,49,5641,0.04810266,space,space,continuation_or_standalone,False
+29,block_output,block_28_output,none,280,50,45300,0.047893003,Ġneonates, neonates,word_initial,False
+30,block_output,block_29_output,none,270,1,25698,0.0637941,Posted,Posted,continuation_or_standalone,False
+30,block_output,block_29_output,none,270,2,34346,0.0606959,Ġ@@, @@,punctuation_or_symbol,False
+30,block_output,block_29_output,none,270,3,24269,0.060027663,triangle,triangle,continuation_or_standalone,False
+30,block_output,block_29_output,none,270,4,15212,0.059862748,Ġquoted, quoted,word_initial,False
+30,block_output,block_29_output,none,270,5,49903,0.058369793,Bab,Bab,continuation_or_standalone,False
+30,block_output,block_29_output,none,270,6,13841,0.058255665,Ġstake, stake,word_initial,False
+30,block_output,block_29_output,none,270,7,4675,0.057928946,Ġhospital, hospital,word_initial,False
+30,block_output,block_29_output,none,270,8,23269,0.05789486,sizeof,sizeof,continuation_or_standalone,False
+30,block_output,block_29_output,none,270,9,37470,0.055899832,Ġrecycled, recycled,word_initial,False
+30,block_output,block_29_output,none,270,10,41918,0.055544384,ĠKrish, Krish,word_initial,False
+30,block_output,block_29_output,none,270,11,23763,0.05533035,sal,sal,continuation_or_standalone,False
+30,block_output,block_29_output,none,270,12,34946,0.05526437,ĠKumar, Kumar,word_initial,False
+30,block_output,block_29_output,none,270,13,880,0.054565523,](,](,punctuation_or_symbol,False
+30,block_output,block_29_output,none,270,14,14045,0.054073356,Ġpropri, propri,word_initial,False
+30,block_output,block_29_output,none,270,15,12911,0.05404331,ĠBerlin, Berlin,word_initial,False
+30,block_output,block_29_output,none,270,16,22770,0.053828254,Ġrefres, refres,word_initial,False
+30,block_output,block_29_output,none,270,17,42151,0.053317335,Ġpeng, peng,word_initial,False
+30,block_output,block_29_output,none,270,18,42852,0.053106323,Ġmotivations, motivations,word_initial,False
+30,block_output,block_29_output,none,270,19,46105,0.053085145,âĸł,■,punctuation_or_symbol,False
+30,block_output,block_29_output,none,270,20,26696,0.052562136,Ġtravers, travers,word_initial,False
+30,block_output,block_29_output,none,270,21,1126,0.05253067,_{\,_{\,punctuation_or_symbol,False
+30,block_output,block_29_output,none,270,22,42699,0.052422807,ĠCaption, Caption,word_initial,False
+30,block_output,block_29_output,none,270,23,12780,0.052099355,tmp,tmp,continuation_or_standalone,False
+30,block_output,block_29_output,none,270,24,45507,0.051865876,Ġ](, ](,punctuation_or_symbol,False
+30,block_output,block_29_output,none,270,25,8224,0.051865242,Manager,Manager,continuation_or_standalone,False
+30,block_output,block_29_output,none,270,26,37730,0.05185238,Ġdebated, debated,word_initial,False
+30,block_output,block_29_output,none,270,27,15837,0.051609088,ĠPhoto, Photo,word_initial,False
+30,block_output,block_29_output,none,270,28,8191,0.051551126,Ġinformed, informed,word_initial,False
+30,block_output,block_29_output,none,270,29,3484,0.050927248,Ġstudents, students,word_initial,False
+30,block_output,block_29_output,none,270,30,21505,0.050746534,pages,pages,continuation_or_standalone,False
+30,block_output,block_29_output,none,270,31,12415,0.050647344,Ġtension, tension,word_initial,False
+30,block_output,block_29_output,none,270,32,46473,0.05046144,Ġwieder, wieder,word_initial,False
+30,block_output,block_29_output,none,270,33,10518,0.050410002,ĠBusiness, Business,word_initial,False
+30,block_output,block_29_output,none,270,34,46101,0.05015555,ĠMeasurements, Measurements,word_initial,False
+30,block_output,block_29_output,none,270,35,811,0.0501178,Ġtrans, trans,word_initial,False
+30,block_output,block_29_output,none,270,36,40438,0.050007414,Ġrecorder, recorder,word_initial,False
+30,block_output,block_29_output,none,270,37,4080,0.049940854,Ġmeasured, measured,word_initial,False
+30,block_output,block_29_output,none,270,38,6734,0.04983938,Ġ(), (),punctuation_or_symbol,False
+30,block_output,block_29_output,none,270,39,387,0.049616262,Ġat, at,word_initial,False
+30,block_output,block_29_output,none,270,40,28592,0.0495695,ĠÂµm, µm,word_initial,False
+30,block_output,block_29_output,none,270,41,14889,0.049345393,boy,boy,continuation_or_standalone,False
+30,block_output,block_29_output,none,270,42,47740,0.049295302,RAW,RAW,continuation_or_standalone,False
+30,block_output,block_29_output,none,270,43,39574,0.04904887,Ġanchored, anchored,word_initial,False
+30,block_output,block_29_output,none,270,44,17020,0.049027964,DATA,DATA,continuation_or_standalone,False
+30,block_output,block_29_output,none,270,45,39498,0.048978854,Ġsalivary, salivary,word_initial,False
+30,block_output,block_29_output,none,270,46,3311,0.04877664,Ġestim, estim,word_initial,False
+30,block_output,block_29_output,none,270,47,18453,0.048622843,Ã¤m,äm,continuation_or_standalone,False
+30,block_output,block_29_output,none,270,48,26008,0.048285447,Pen,Pen,continuation_or_standalone,False
+30,block_output,block_29_output,none,270,49,13597,0.048273526,Ġdating, dating,word_initial,False
+30,block_output,block_29_output,none,270,50,10626,0.047982827,×ķ,ו,continuation_or_standalone,False
+31,block_output,block_30_output,none,334,1,25698,0.062010467,Posted,Posted,continuation_or_standalone,False
+31,block_output,block_30_output,none,334,2,34346,0.059834663,Ġ@@, @@,punctuation_or_symbol,False
+31,block_output,block_30_output,none,334,3,15212,0.059107784,Ġquoted, quoted,word_initial,False
+31,block_output,block_30_output,none,334,4,13841,0.058255322,Ġstake, stake,word_initial,False
+31,block_output,block_30_output,none,334,5,24269,0.05771001,triangle,triangle,continuation_or_standalone,False
+31,block_output,block_30_output,none,334,6,49903,0.05718444,Bab,Bab,continuation_or_standalone,False
+31,block_output,block_30_output,none,334,7,4675,0.055692524,Ġhospital, hospital,word_initial,False
+31,block_output,block_30_output,none,334,8,37470,0.055007342,Ġrecycled, recycled,word_initial,False
+31,block_output,block_30_output,none,334,9,23763,0.054945834,sal,sal,continuation_or_standalone,False
+31,block_output,block_30_output,none,334,10,12911,0.054645095,ĠBerlin, Berlin,word_initial,False
+31,block_output,block_30_output,none,334,11,23269,0.054348536,sizeof,sizeof,continuation_or_standalone,False
+31,block_output,block_30_output,none,334,12,15837,0.054169703,ĠPhoto, Photo,word_initial,False
+31,block_output,block_30_output,none,334,13,41918,0.054096915,ĠKrish, Krish,word_initial,False
+31,block_output,block_30_output,none,334,14,40438,0.053748548,Ġrecorder, recorder,word_initial,False
+31,block_output,block_30_output,none,334,15,34946,0.053728502,ĠKumar, Kumar,word_initial,False
+31,block_output,block_30_output,none,334,16,46105,0.053588524,âĸł,■,punctuation_or_symbol,False
+31,block_output,block_30_output,none,334,17,880,0.05350472,](,](,punctuation_or_symbol,False
+31,block_output,block_30_output,none,334,18,42699,0.0534664,ĠCaption, Caption,word_initial,False
+31,block_output,block_30_output,none,334,19,45507,0.05321275,Ġ](, ](,punctuation_or_symbol,False
+31,block_output,block_30_output,none,334,20,12780,0.053181104,tmp,tmp,continuation_or_standalone,False
+31,block_output,block_30_output,none,334,21,387,0.05237279,Ġat, at,word_initial,False
+31,block_output,block_30_output,none,334,22,26696,0.051949367,Ġtravers, travers,word_initial,False
+31,block_output,block_30_output,none,334,23,22770,0.05188025,Ġrefres, refres,word_initial,False
+31,block_output,block_30_output,none,334,24,4080,0.05165399,Ġmeasured, measured,word_initial,False
+31,block_output,block_30_output,none,334,25,21505,0.051502127,pages,pages,continuation_or_standalone,False
+31,block_output,block_30_output,none,334,26,46473,0.05136525,Ġwieder, wieder,word_initial,False
+31,block_output,block_30_output,none,334,27,42151,0.05116731,Ġpeng, peng,word_initial,False
+31,block_output,block_30_output,none,334,28,1126,0.051011533,_{\,_{\,punctuation_or_symbol,False
+31,block_output,block_30_output,none,334,29,12415,0.050685953,Ġtension, tension,word_initial,False
+31,block_output,block_30_output,none,334,30,17020,0.050209276,DATA,DATA,continuation_or_standalone,False
+31,block_output,block_30_output,none,334,31,37730,0.050148457,Ġdebated, debated,word_initial,False
+31,block_output,block_30_output,none,334,32,46101,0.0498081,ĠMeasurements, Measurements,word_initial,False
+31,block_output,block_30_output,none,334,33,6355,0.04969688,Ġinteractions, interactions,word_initial,False
+31,block_output,block_30_output,none,334,34,8224,0.04934044,Manager,Manager,continuation_or_standalone,False
+31,block_output,block_30_output,none,334,35,8191,0.049202066,Ġinformed, informed,word_initial,False
+31,block_output,block_30_output,none,334,36,10108,0.048412163,ilation,ilation,continuation_or_standalone,False
+31,block_output,block_30_output,none,334,37,10626,0.048313092,×ķ,ו,continuation_or_standalone,False
+31,block_output,block_30_output,none,334,38,14045,0.048138455,Ġpropri, propri,word_initial,False
+31,block_output,block_30_output,none,334,39,13597,0.048127905,Ġdating, dating,word_initial,False
+31,block_output,block_30_output,none,334,40,10518,0.048072487,ĠBusiness, Business,word_initial,False
+31,block_output,block_30_output,none,334,41,3311,0.047920264,Ġestim, estim,word_initial,False
+31,block_output,block_30_output,none,334,42,18453,0.047810234,Ã¤m,äm,continuation_or_standalone,False
+31,block_output,block_30_output,none,334,43,8362,0.04780891,Ġfunding, funding,word_initial,False
+31,block_output,block_30_output,none,334,44,44528,0.04757929,Ġexiting, exiting,word_initial,False
+31,block_output,block_30_output,none,334,45,39574,0.047457576,Ġanchored, anchored,word_initial,False
+31,block_output,block_30_output,none,334,46,44236,0.047214318,Ġmarkup, markup,word_initial,False
+31,block_output,block_30_output,none,334,47,28592,0.046912663,ĠÂµm, µm,word_initial,False
+31,block_output,block_30_output,none,334,48,20742,0.04684841,ajax,ajax,continuation_or_standalone,False
+31,block_output,block_30_output,none,334,49,3484,0.046829354,Ġstudents, students,word_initial,False
+31,block_output,block_30_output,none,334,50,37861,0.04662505,Ġpsychosocial, psychosocial,word_initial,False
+32,final_normalized_output,final_norm_after_block_31,none,296,1,26943,0.059121504,Tests,Tests,continuation_or_standalone,False
+32,final_normalized_output,final_norm_after_block_31,none,296,2,2941,0.059007935,03,03,continuation_or_standalone,False
+32,final_normalized_output,final_norm_after_block_31,none,296,3,387,0.05698027,Ġat, at,word_initial,False
+32,final_normalized_output,final_norm_after_block_31,none,296,4,41947,0.05694493,magnetic,magnetic,continuation_or_standalone,False
+32,final_normalized_output,final_norm_after_block_31,none,296,5,1089,0.056225915,Ġfind, find,word_initial,False
+32,final_normalized_output,final_norm_after_block_31,none,296,6,475,0.056072272,Ġ*, *,punctuation_or_symbol,False
+32,final_normalized_output,final_norm_after_block_31,none,296,7,44528,0.05563295,Ġexiting, exiting,word_initial,False
+32,final_normalized_output,final_norm_after_block_31,none,296,8,38710,0.055035353,Ġ\*\**, \*\**,punctuation_or_symbol,False
+32,final_normalized_output,final_norm_after_block_31,none,296,9,13841,0.05337479,Ġstake, stake,word_initial,False
+32,final_normalized_output,final_norm_after_block_31,none,296,10,15037,0.053309157,igration,igration,continuation_or_standalone,False
+32,final_normalized_output,final_norm_after_block_31,none,296,11,43752,0.05326833,ĠCNT, CNT,word_initial,False
+32,final_normalized_output,final_norm_after_block_31,none,296,12,26409,0.05204716,3333,3333,continuation_or_standalone,False
+32,final_normalized_output,final_norm_after_block_31,none,296,13,27809,0.051852234,ĠDATA, DATA,word_initial,False
+32,final_normalized_output,final_norm_after_block_31,none,296,14,47971,0.050773,chst,chst,continuation_or_standalone,False
+32,final_normalized_output,final_norm_after_block_31,none,296,15,7117,0.050768547,Ġlisted, listed,word_initial,False
+32,final_normalized_output,final_norm_after_block_31,none,296,16,40270,0.05039353,imaging,imaging,continuation_or_standalone,False
+32,final_normalized_output,final_norm_after_block_31,none,296,17,28503,0.050075497,"}}\,","}}\,",punctuation_or_symbol,False
+32,final_normalized_output,final_norm_after_block_31,none,296,18,17020,0.04986159,DATA,DATA,continuation_or_standalone,False
+32,final_normalized_output,final_norm_after_block_31,none,296,19,254,0.049805075,er,er,continuation_or_standalone,False
+32,final_normalized_output,final_norm_after_block_31,none,296,20,43618,0.04972347,532,532,continuation_or_standalone,False
+32,final_normalized_output,final_norm_after_block_31,none,296,21,38905,0.049716704,Reading,Reading,continuation_or_standalone,False
+32,final_normalized_output,final_norm_after_block_31,none,296,22,25731,0.04938975,":@""",":@""",punctuation_or_symbol,False
+32,final_normalized_output,final_norm_after_block_31,none,296,23,40438,0.04933317,Ġrecorder, recorder,word_initial,False
+32,final_normalized_output,final_norm_after_block_31,none,296,24,2947,0.04933004,"],[@","],[@",punctuation_or_symbol,False
+32,final_normalized_output,final_norm_after_block_31,none,296,25,42423,0.049093504,Ġinode, inode,word_initial,False
+32,final_normalized_output,final_norm_after_block_31,none,296,26,4533,0.049083505,Ġroll, roll,word_initial,False
+32,final_normalized_output,final_norm_after_block_31,none,296,27,28418,0.048885502,422,422,continuation_or_standalone,False
+32,final_normalized_output,final_norm_after_block_31,none,296,28,48763,0.048851218,eLife,eLife,continuation_or_standalone,False
+32,final_normalized_output,final_norm_after_block_31,none,296,29,9796,0.04878856,Ġfavour, favour,word_initial,False
+32,final_normalized_output,final_norm_after_block_31,none,296,30,50184,0.04855964,Cold,Cold,continuation_or_standalone,False
+32,final_normalized_output,final_norm_after_block_31,none,296,31,7663,0.048533093,Ġrecording, recording,word_initial,False
+32,final_normalized_output,final_norm_after_block_31,none,296,32,11322,0.048424274,Ġresolve, resolve,word_initial,False
+32,final_normalized_output,final_norm_after_block_31,none,296,33,43628,0.048350923,517,517,continuation_or_standalone,False
+32,final_normalized_output,final_norm_after_block_31,none,296,34,42815,0.048350777,793,793,continuation_or_standalone,False
+32,final_normalized_output,final_norm_after_block_31,none,296,35,1100,0.048210762,ines,ines,continuation_or_standalone,False
+32,final_normalized_output,final_norm_after_block_31,none,296,36,13115,0.048068296,ĠPakistan, Pakistan,word_initial,False
+32,final_normalized_output,final_norm_after_block_31,none,296,37,3541,0.047805652,Ġmemory, memory,word_initial,False
+32,final_normalized_output,final_norm_after_block_31,none,296,38,42714,0.047783017,}$:,}$:,punctuation_or_symbol,False
+32,final_normalized_output,final_norm_after_block_31,none,296,39,7778,0.047497276,charge,charge,continuation_or_standalone,False
+32,final_normalized_output,final_norm_after_block_31,none,296,40,22111,0.04740042,Ġretrieved, retrieved,word_initial,False
+32,final_normalized_output,final_norm_after_block_31,none,296,41,7963,0.047232628,Ġphotos, photos,word_initial,False
+32,final_normalized_output,final_norm_after_block_31,none,296,42,33930,0.047224402,Ġ510, 510,word_initial,False
+32,final_normalized_output,final_norm_after_block_31,none,296,43,3251,0.046957284,Se,Se,continuation_or_standalone,False
+32,final_normalized_output,final_norm_after_block_31,none,296,44,4689,0.046955477,}_{\,}_{\,punctuation_or_symbol,False
+32,final_normalized_output,final_norm_after_block_31,none,296,45,10463,0.046530843,Ġexit, exit,word_initial,False
+32,final_normalized_output,final_norm_after_block_31,none,296,46,45917,0.04618608,Ġvideot, videot,word_initial,False
+32,final_normalized_output,final_norm_after_block_31,none,296,47,5395,0.04615896,rices,rices,continuation_or_standalone,False
+32,final_normalized_output,final_norm_after_block_31,none,296,48,16261,0.046120252,Ġ02, 02,word_initial,False
+32,final_normalized_output,final_norm_after_block_31,none,296,49,24133,0.046078876,0009,0009,continuation_or_standalone,False
+32,final_normalized_output,final_norm_after_block_31,none,296,50,34848,0.046050634,Ġlett, lett,word_initial,False

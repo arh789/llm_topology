@@ -7,13 +7,14 @@ representation geometry.
 ## Current evidence state
 
 The package contains a research design, one behavioural case mapping, an
-executed model playground and one successful single-prompt hidden-state
-capture from Pythia 6.9B. The selected baseline includes the exact prompt,
-model revision, environment, artifact hashes, layer-wise measurements and
-figures. It does not establish stable topics, a generally optimal layer,
-causal mechanisms or evidence that semantic conflict corresponds to geometric
-curvature. Model weights remain in the shared cache under `D:\AI` and are not
-versioned here.
+executed model playground, one successful single-prompt hidden-state capture
+from Pythia 6.9B and three successful derived CPU analyses. R002 created the
+full-vocabulary static-basis score matrix; R003 tested an unnecessarily gated
+boundary policy; R004 retains the full-curve upper and lower elbow cutoffs at
+all states without that acceptance gate. The evidence does not establish stable
+topics, semantic opposition, a generally optimal layer, causal mechanisms or
+evidence that semantic conflict corresponds to geometric curvature. Model
+weights remain in the shared cache under `D:\AI` and are not versioned here.
 
 ## Reading order
 
@@ -33,6 +34,18 @@ versioned here.
    proof-of-concept pipeline, output contract and interpretation boundary.
 7. [`single_prompt_topology/runs/R001_lithium-initial-output-inspection__20261112T063540Z_pythia-6.9b_52ff8f97c2/manifest.json`](single_prompt_topology/runs/R001_lithium-initial-output-inspection__20261112T063540Z_pythia-6.9b_52ff8f97c2/manifest.json)
    — the selected successful baseline and artifact index.
+8. [`single_prompt_topology/runs/R002_lithium-static-basis-cutoff-feasibility__20261112T083025Z_pythia-6.9b_52ff8f97c2/manifest.json`](single_prompt_topology/runs/R002_lithium-static-basis-cutoff-feasibility__20261112T083025Z_pythia-6.9b_52ff8f97c2/manifest.json)
+   — the successful full-vocabulary score analysis reused by R003.
+9. [`single_prompt_topology/R003_PLAN.md`](single_prompt_topology/R003_PLAN.md)
+   — the preregistered contract and execution record for the score-region
+   boundary reanalysis.
+10. [`single_prompt_topology/runs/R003_lithium-score-region-boundaries__20261112T090711Z_pythia-6.9b_52ff8f97c2/manifest.json`](single_prompt_topology/runs/R003_lithium-score-region-boundaries__20261112T090711Z_pythia-6.9b_52ff8f97c2/manifest.json)
+    — the successful R003 lineage, method, component status and artifact index.
+11. [`single_prompt_topology/R004_PLAN.md`](single_prompt_topology/R004_PLAN.md)
+    — the pre-run contract and execution record for the ungated full-curve
+    cutoff analysis.
+12. [`single_prompt_topology/runs/R004_lithium-full-curve-cutoffs__20261112T092701Z_pythia-6.9b_52ff8f97c2/manifest.json`](single_prompt_topology/runs/R004_lithium-full-curve-cutoffs__20261112T092701Z_pythia-6.9b_52ff8f97c2/manifest.json)
+    — the successful R004 lineage, validation record and artifact index.
 
 ## Provenance
 
@@ -100,6 +113,14 @@ The committed baseline completed successfully using exact model revision
 `[33, 19, 4096]` BF16 tensor, used 12.79 GiB peak GPU memory and records hashes
 for every generated artifact in its manifest. Future run directories remain
 ignored until they are deliberately reviewed and selected for publication.
+
+R002 reused that capture to calculate a verified `[33, 50277]` matrix of
+contextual-target compatibility scores against the static input-embedding
+vocabulary. R003 reused those scores without loading the model or using the GPU,
+but added a secondary acceptance gate that was later identified as unnecessary.
+R004 removes that gate, calculates and uses one upper and one lower full-curve
+elbow at all 33 states, and assigns membership by exact cutoff rank. Semantic
+usefulness remains unestablished.
 
 ## Interpretation boundary
 

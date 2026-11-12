@@ -1,0 +1,176 @@
+{
+  "run_number": "R003",
+  "run_name": "lithium-score-region-boundaries",
+  "run_id": "R003_lithium-score-region-boundaries__20261112T090711Z_pythia-6.9b_52ff8f97c2",
+  "technical_id": "20261112T090711Z_pythia-6.9b_52ff8f97c2",
+  "source_run": "R002_lithium-static-basis-cutoff-feasibility__20261112T083025Z_pythia-6.9b_52ff8f97c2",
+  "ultimate_source_run": "R001_lithium-initial-output-inspection__20261112T063540Z_pythia-6.9b_52ff8f97c2",
+  "status": "successful",
+  "started_at": "2026-11-12T09:07:11.145737+00:00",
+  "completed_at": "2026-11-12T09:07:20.569152+00:00",
+  "required_components": [
+    "source_validation",
+    "boundary_analysis",
+    "region_membership",
+    "figures",
+    "validation"
+  ],
+  "components": {
+    "source_validation": {
+      "status": "successful",
+      "completed_at": "2026-11-12T09:07:11.248305+00:00",
+      "seconds": 0.09469529999478254,
+      "score_shape": [
+        33,
+        50277
+      ],
+      "validated_source_artifact_count": 5,
+      "source_status": "successful"
+    },
+    "boundary_analysis": {
+      "status": "successful",
+      "completed_at": "2026-11-12T09:07:11.973415+00:00",
+      "seconds": 0.7242068000050494,
+      "state_count": 33,
+      "agreement_tolerance": 0.2,
+      "boundary_band_size": 50
+    },
+    "region_membership": {
+      "status": "successful",
+      "completed_at": "2026-11-12T09:07:19.582079+00:00",
+      "seconds": 7.608495699998457,
+      "tail_membership_rows": 178979,
+      "trajectory_token_count": 23543,
+      "trajectory_rows": 776919
+    },
+    "figures": {
+      "status": "successful",
+      "completed_at": "2026-11-12T09:07:20.519256+00:00",
+      "seconds": 0.9363796999969054
+    },
+    "validation": {
+      "status": "successful",
+      "completed_at": "2026-11-12T09:07:20.569152+00:00",
+      "seconds": 0.04964090000430588
+    }
+  },
+  "model": {
+    "id": "EleutherAI/pythia-6.9b",
+    "revision": "c0e3eee36dc47af0c49f361c74cfe459c09f7f23",
+    "model_forward_executed": false,
+    "model_weights_loaded": false,
+    "source_score_matrix_recalculated": false
+  },
+  "input": {
+    "prompt": "Battery demand, mineral supply, electric vehicles, and energy storage all shape the market for lithium",
+    "prompt_sha256": "52ff8f97c22b72506ca9b7acfb9be4450726157f1a31c6a4ce3e112380cd7bf7",
+    "target_text": " lithium",
+    "target_token_id": 27747,
+    "target_position": 18
+  },
+  "pipeline": {
+    "script": "single_prompt_topology\\score_region_boundaries.py",
+    "script_sha256": "aa6c4bf51e9d8833eca224a4cd47ab344931234354091b3558a8365abda4a85d",
+    "pre_run_plan": "single_prompt_topology/R003_PLAN.md"
+  },
+  "environment": {
+    "python": "3.11.15",
+    "numpy": "2.4.4",
+    "pandas": "3.0.3",
+    "matplotlib": "3.10.9",
+    "safetensors": "0.8.0",
+    "device": "cpu"
+  },
+  "method": {
+    "metric": "cosine_similarity from the reused R002 score matrix",
+    "algorithm": "maximum normalized deviation below endpoint chord",
+    "exact_target_removed": true,
+    "agreement_tolerance": 0.2,
+    "boundary_band_size": 50,
+    "upper_full_candidate": "reused from R002 exact_target_removed/full",
+    "upper_sensitivity_candidate": "scores greater than zero only",
+    "lower_full_candidate": "full distribution ranked by -cosine_score",
+    "lower_sensitivity_candidate": "scores below zero ranked by -cosine_score",
+    "sign_boundary_role": "endpoint-sensitivity partition only; not a statistical, predictive, or causal threshold",
+    "decisions": [
+      "accepted_two_boundaries",
+      "accepted_upper_only",
+      "accepted_lower_only",
+      "rejected_unstable"
+    ],
+    "interpretation_boundary": "Regions describe layer-wise compatibility between one contextual target and static input embeddings. Negative cosine means anti-alignment, not predictive or causal suppression."
+  },
+  "source_artifacts": {
+    "vocabulary_scores.safetensors": {
+      "bytes": 6636828,
+      "sha256": "fc27fc791fd27c0a35bba377b99ce63c7164988ff7302a0f6ace1e57387ad479"
+    },
+    "vocabulary_tokens.csv": {
+      "bytes": 2612180,
+      "sha256": "214da769f5c4463838ddf1ff552e5773af7110b138c11b876bf73e9f45c11f96"
+    },
+    "state_metadata.csv": {
+      "bytes": 1268,
+      "sha256": "3f1047d5c14f55e13e1ae612a52a47cfe60677eb327c7f571bea5195a29c56aa"
+    },
+    "cutoff_candidates.csv": {
+      "bytes": 51659,
+      "sha256": "13799d553eab10d11203190e7828ea58ebc4289af923a6dd6939261cc153681f"
+    },
+    "cutoff_summary.csv": {
+      "bytes": 17305,
+      "sha256": "b31803e009dfc311496b738fa257d9cee1ce155e28a9bec7466c8f375cfd7092"
+    }
+  },
+  "artifacts": {
+    "region_boundaries.csv": {
+      "bytes": 21883,
+      "sha256": "583c9cc6069d05d167042adda5396800dbb8d81ab556ca4f2f414c2526e059e5"
+    },
+    "boundary_tokens.csv": {
+      "bytes": 997509,
+      "sha256": "66b950dc230599b4eb0c3969f8aaf3bfc119d973c771a86fdc71dbd682a1dedb"
+    },
+    "tail_tokens.csv.gz": {
+      "bytes": 4208132,
+      "sha256": "68ef953c4cbaf987a5a5ef217c3880364f237d57f543dc7733ce6907c709d713"
+    },
+    "token_region_trajectories.csv.gz": {
+      "bytes": 19256037,
+      "sha256": "b360313cc9e679099cda9e356f40b328bd0f2c20fcf329a2c96ccbad27c915ce"
+    },
+    "figures/region_boundaries_overview.png": {
+      "bytes": 318547,
+      "sha256": "0f024e1e5171661c0cefb71e3db0d1629eb028f715d56dc8a7c146720859e71a"
+    },
+    "figures/score_regions_selected_states.png": {
+      "bytes": 276473,
+      "sha256": "ac7193c69fac364cfb13bb024a8ba4a71a19fff8457d994f02cfa6264edb81b3"
+    }
+  },
+  "results": {
+    "state_count": 33,
+    "valid_vocabulary_size": 50277,
+    "target_removed_vocabulary_size": 50276,
+    "source_score_matrix_shape": [
+      33,
+      50277
+    ],
+    "region_result_counts": {
+      "accepted_lower_only": 1,
+      "accepted_two_boundaries": 28,
+      "accepted_upper_only": 4
+    },
+    "upper_boundary_decision_counts": {
+      "accepted_geometric": 32,
+      "rejected_unstable": 1
+    },
+    "lower_boundary_decision_counts": {
+      "accepted_geometric": 29,
+      "rejected_unstable": 4
+    },
+    "tail_membership_rows": 178979,
+    "trajectory_token_count": 23543,
+    "trajectory_rows": 776919
+  }
+}
