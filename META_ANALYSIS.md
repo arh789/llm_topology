@@ -2115,3 +2115,128 @@ This gives the project a concrete research hypothesis:
 Do increasingly negative token communities identify semantically coherent alternatives that the model systematically underexpresses, and can those alternatives be recovered through adversarial prompting?
 
 If the answer is yes, the pipeline would provide an empirical foundation for one of SDA-3's most important structural categories.
+
+### MA-0019 — ChatGPT account of positive and negative organisation in coherence
+
+- Entry timestamp: `2026-11-12T21:50:55+11:00`
+- Timezone: `Australia/Sydney`
+- Author and source: `external ChatGPT response supplied by the project owner`
+- Entry type: `interpretive hypothesis connecting semantic organisation, coherence and curvature density`
+- Related runs: `R002`, `R004`, `R005`; proposed `R006`
+- Preservation mode: `verbatim`
+- Timestamp note: the original ChatGPT post time was unavailable; the entry timestamp records when the supplied response was added to the metaanalysis.
+
+#### Verbatim input
+
+The strongest relationship is:
+
+> **High positive scores describe what the contextual representation is organising towards; high negative scores describe what it is organising away from. Coherence emerges partly from both processes.**
+```
+                    CONTEXT
+                       |
+             contextual target
+                       |
+          +------------+------------+
+          |                         |
+    HIGH POSITIVE              HIGH NEGATIVE
+          |                         |
+    aligned structure          opposed structure
+          |                         |
+    what coheres with          what would disrupt /
+    current interpretation     compete with it
+          |                         |
+          +------------+------------+
+                       |
+                 COHERENCE
+```
+
+### Positive scores
+
+If high-positive tokens form semantically related communities, they indicate the structure that is mutually compatible with the target representation.
+
+Increasing positive organisation could therefore mean:
+```
+many possibilities
+      ↓
+related concepts align
+      ↓
+dominant interpretation forms
+      ↓
+higher coherence
+```
+
+### Negative scores
+
+High-magnitude negative scores may be equally important.
+
+A coherent representation does not merely need to associate compatible concepts. It may also need to **differentiate itself from incompatible alternatives**.
+```
+coherence
+    =
+strong internal association
+    +
+strong differentiation from alternatives
+```
+
+So the negative population could reveal the **semantic boundary that makes the positive structure coherent**.
+
+### Where this becomes particularly interesting
+
+Suppose across layers:
+```
+Layer 5
+positive: weak, diffuse
+negative: weak, diffuse
+
+Layer 15
+positive: increasingly organised
+negative: increasingly organised
+
+Layer 25
+positive: clear topic structure
+negative: clear competing structure
+```
+
+Then the model may be progressively resolving ambiguity by simultaneously:
+```
+pulling compatible relationships together
+AND
+pushing incompatible relationships apart
+```
+
+That is potentially much more informative than analysing positive neighbours alone.
+
+### Connection to curvature density
+
+The most interesting region may occur where these forces compete.
+```
+strong positive structure
+          |
+          |  incompatible constraints
+          X
+          |
+strong negative structure
+```
+
+If a concept has meaningful relationships pulling it towards two incompatible semantic organisations, **coherence becomes harder to maintain**.
+
+That gives you the proposed relationship:
+```
+High positive organisation
+        → supports coherence
+
+High negative organisation
+        → establishes coherence boundary
+
+Strong competing positive/negative structures
+        → coherence instability
+
+Coherence instability
+        → candidate region of high curvature density
+```
+
+The important qualification is that negative cosine alone does not prove semantic suppression. But if the negative population forms coherent, relevant communities that systematically oppose the positive communities, then the interpretation becomes much stronger.
+
+So I would not treat the negative side as noise or merely the opposite end of a scale.
+
+**The positive network may tell you what interpretation the model is constructing; the negative network may tell you what competing interpretations have to be excluded for that construction to remain coherent.**
