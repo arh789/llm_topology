@@ -1206,3 +1206,417 @@ R004 supersedes R003 as the primary cutoff-membership dataset. R003 remains an
 immutable historical record of the discarded endpoint-agreement policy. The
 next analysis should inspect relationships and semantic composition within the
 R004 regions without redefining or revalidating the cutoffs.
+
+### MA-0010 — Curvature density, coherence and topological conflict hypothesis
+
+- Entry timestamp: `2026-11-12T20:42:00+11:00`
+- Timezone: `Australia/Sydney`
+- Authors: `ChatGPT external analysis`; `Codex assistant follow-on`
+- Entry type: `external research framing and follow-on assessment`
+- Related runs: `R004`
+- Preservation mode: `verbatim`
+- Source: ChatGPT response supplied by the project owner, followed by the
+  immediately preceding Codex response in the project thread
+- Timestamp note: the original ChatGPT UI post time and immediately preceding
+  Codex response time were unavailable; the entry timestamp records when both
+  verbatim texts were added to the project file
+
+#### External ChatGPT response — verbatim
+
+The key is to explain that curvature density is the proposed geometric signature of competing semantic constraints, while coherence measures how consistently those constraints can be represented together.
+
+Their relationship is a hypothesis to test, not an established mathematical equivalence.
+
+## Curvature Density and Semantic Coherence — Research Definition
+
+**Core hypothesis:** Regions containing competing or contradictory semantic relationships may exhibit distinctive local geometric curvature in transformer representations.
+
+### Definitions
+
+- **Coherence:** The degree to which semantic relationships remain mutually consistent and stable under perturbation, without excluding contradictory evidence.
+- **Coherence stability:** How reliably those relationships survive changes in context, wording or additional information.
+- **Semantic conflict density:** The concentration of competing or incompatible relationships within a defined semantic neighbourhood.
+- **Curvature density:** A proposed measure of local geometric structure, requiring an explicitly defined curvature estimator and neighbourhood.
+
+### Five research questions
+
+1. Where is coherence most stable?
+2. Where is coherence least stable?
+3. What addition A increases coherence without suppressing evidence?
+4. What addition B conceals contradiction by masking conflict?
+5. What trajectory follows from A versus B?
+
+### Hypothesised relationship
+```sql
+SEMANTIC RELATIONSHIPS
+|
++-- Compatible constraints
+|   `-- Coherence potentially stable
+|
++-- Competing constraints
+|   `-- Coherence potentially unstable
+|       |
+|       +-- A: Integrate conflicting evidence
+|       |   `-- Test for stable reorganisation
+|       |
+|       `-- B: Conceal conflicting evidence
+|           `-- Test for apparent stability
+|
+`-- REPRESENTATIONAL GEOMETRY
+    |
+    +-- Measure local curvature
+    +-- Identify geometric concentrations
+    +-- Compare with semantic conflict
+    `-- Track changes across transformer layers
+```
+
+### Experimental requirement
+
+Measure semantic coherence independently of geometric curvature.
+
+Determine whether:
+
+- High semantic conflict predicts distinctive local curvature.
+- Low semantic conflict predicts different geometric properties.
+- Addition A changes geometry while preserving conflicting evidence.
+- Addition B changes apparent coherence without resolving the conflict.
+- These relationships remain reproducible across transformer layers and controlled prompts.
+
+Do not assume high curvature means contradiction. Positive and negative curvature can reflect different geometric structures, and neither inherently establishes semantic conflict.
+
+**Research objective:** Determine whether local representational geometry predicts where coherence is stable, unstable, genuinely improved or merely made to appear stable.
+
+One additional distinction matters for the current Pythia project:
+
+The layer with the clearest topic relationships is not necessarily the layer where semantic conflict is most detectable.
+
+Those are two separate experimental targets:
+```vbnet
+Topic organisation
+    → Where are semantic relationships clearest?
+
+Coherence stability
+    → Where do relationships resist perturbation?
+
+Semantic conflict
+    → Where do competing constraints concentrate?
+
+Geometric curvature
+    → Does measured geometry distinguish these conditions?
+```
+
+I would have Codex establish topic organisation first, then test whether coherence stability and conflict correspond to reproducible geometric differences within the resulting neighbourhoods.
+
+#### Codex follow-on response — verbatim
+
+This response clarifies that my earlier interpretation was incomplete. You are not only looking for a boundary between a semantic neighbourhood and background vocabulary.
+
+You are looking for a possible geometric and topological signature of semantic conflict.
+
+The stronger inferred question is:
+
+> Where do competing semantic constraints produce the greatest strain, branching or reorganisation in representational structure, and what happens to that structure when the conflict is integrated versus concealed?
+
+## What ChatGPT gets right
+
+The response correctly separates three things:
+
+- Semantic conflict is the independently defined condition.
+- Coherence is the independently measured behavioural or relational outcome.
+- Curvature is a possible geometric correlate—not proof of either.
+
+That prevents circular reasoning such as:
+
+```text
+high curvature → semantic conflict
+semantic conflict → whatever produces high curvature
+```
+
+Its distinction between A and B is particularly important:
+
+```text
+A: integrate conflicting evidence
+   → both constraints remain represented
+   → relationships reorganise stably
+
+B: conceal conflict
+   → one constraint is weakened, excluded or masked
+   → output appears coherent without resolving the conflict
+```
+
+The observable response might look equally coherent in both cases. Their internal trajectories may differ.
+
+## Where topology changes the interpretation
+
+Curvature is local geometry. Topology concerns the organisation of relationships: components, branches, bridges, bottlenecks, cycles and their persistence as the relationship threshold changes.
+
+Competing constraints might therefore produce:
+
+- multiple semantic components around the same target;
+- bridge tokens connecting incompatible regions;
+- bottlenecks where many relationships depend on a few tokens;
+- branching rather than a single coherent neighbourhood;
+- unstable component membership under small prompt changes;
+- persistent alternative paths or cycles;
+- abrupt component merging at a critical similarity threshold.
+
+The object of interest may therefore be a region of concentrated topological change, not simply the point where a ranked score curve bends most.
+
+```text
+compatible constraints
+    → one persistent relational structure
+
+competing constraints
+    → branching / bottlenecks / multiple persistent structures
+
+genuine integration
+    → stable reorganisation preserving both branches
+
+concealment
+    → apparent simplification caused by one branch disappearing
+```
+
+That last distinction may be central to the project. Genuine coherence could produce a more complex but stable topology. Concealment could produce a simpler-looking topology by deleting contradictory evidence.
+
+## The current measurement does not yet measure this
+
+R004 calculates maximum deviation from an endpoint chord in a one-dimensional ranked similarity curve:
+
+```text
+contextual lithium → each static vocabulary token
+```
+
+It does not calculate:
+
+- mathematical curvature in the representation space;
+- curvature density;
+- token-to-token topology;
+- competing semantic constraints;
+- coherence stability.
+
+R004 provides a candidate neighbourhood scale. It tells us which population to inspect. It does not yet tell us how that population is topologically organised.
+
+Calling the R004 elbow “curvature density” would therefore overstate the evidence.
+
+## What “topic organisation first” should mean
+
+ChatGPT’s recommendation is sound if interpreted carefully. Before asking whether conflict deforms topology, we need a baseline showing that the measurement can recover ordinary semantic organisation.
+
+The sequence should be:
+
+1. Establish a controlled topic population.
+2. Capture contextual representations at every layer.
+3. Calculate pairwise relationships within that population.
+4. Construct a graph or threshold filtration.
+5. Establish its baseline components, bridges and persistence.
+6. Introduce compatible versus conflicting constraints.
+7. Introduce A and B.
+8. Measure behavioural coherence independently.
+9. Compare geometric and topological trajectories across layers.
+
+R004 can assist with step one as a vocabulary-selection baseline, but static embeddings cannot show pairwise geometry changing through the transformer. Controlled contextual representations will be required for that.
+
+## Strongest interpretation
+
+I now think you are looking for:
+
+> A critical semantic neighbourhood in which competing constraints create distinctive geometric and topological organisation, followed by the layer-wise trajectory through which the model either integrates those constraints or makes the conflict disappear.
+
+Maximum curvature density is one proposed locator for that region. The real research object is the topology of competing relationships and its stability under controlled perturbation.
+
+### MA-0011 — Operational cutoff capability and exact R004 calculation
+
+- Timestamp: `2026-11-12T20:45:19+11:00`
+- Timezone: `Australia/Sydney`
+- Author: `Codex assistant`
+- Source: the two immediately preceding Codex responses in the project conversation
+- Entry type: `methodological clarification`
+- Related runs: `R004`
+- Preservation mode: `verbatim`
+- Timestamp note: original interface post times were unavailable; this timestamp records when the material was added to the metaanalysis.
+
+#### Operational-use conclusion — verbatim
+
+Yes—we have established that I can calculate a useful operational cutoff.
+
+R004 demonstrated that the method can:
+
+- calculate an upper and lower cutoff at every layer;
+- reproduce the visible full-curve elbows;
+- adapt the included population to each layer rather than imposing a fixed token count;
+- produce manageable positive and negative populations;
+- preserve the tokens needed for composition, relationship and topology analysis.
+
+So the cutoff is useful for defining which tokens enter the next analysis:
+
+```text
+ranked vocabulary scores
+        ↓
+layer-specific cutoff
+        ↓
+candidate token population
+        ↓
+pairwise relationships and topology
+```
+
+What we have not established is that the cutoff represents:
+
+- a true semantic boundary;
+- maximum mathematical curvature;
+- maximum curvature density;
+- a topological transition;
+- semantic conflict;
+- a cutoff that generalises across prompts or models.
+
+The precise conclusion is:
+
+> R004 provides a reproducible and practically useful population-selection cutoff. Its semantic and topological usefulness must now be tested using the relationships among the selected tokens.
+
+That is sufficient to proceed. We no longer need to keep reworking the cutoff before examining the topology it exposes.
+
+#### Cutoff calculation — verbatim
+
+For each of the 33 recorded states, I began with the cosine similarity between the contextual `lithium` vector and every static vocabulary embedding:
+
+\[
+s_i=\cos(h_{\text{lithium},\,layer},e_i)
+\]
+
+The exact `lithium` token was removed, leaving 50,276 scores.
+
+## Upper cutoff
+
+1. Sort all scores from highest to lowest:
+
+\[
+y_1 \ge y_2 \ge \dots \ge y_N
+\]
+
+2. Normalize rank to \(x\in[0,1]\):
+
+\[
+x_i=\frac{i-1}{N-1}
+\]
+
+3. Normalize scores so the highest score is 1 and the lowest is 0:
+
+\[
+z_i=\frac{y_i-y_N}{y_1-y_N}
+\]
+
+4. Draw the straight endpoint chord:
+
+\[
+c_i=1-x_i
+\]
+
+5. Measure how far the score curve falls below that chord:
+
+\[
+d_i=c_i-z_i
+\]
+
+6. Select the rank with the largest deviation:
+
+\[
+i^*=\arg\max_i d_i
+\]
+
+That rank is the upper cutoff. The first \(i^*\) tokens become the positive head.
+
+```text
+highest score
+     ●
+      \
+       \  endpoint chord
+        \...........
+         \      ↑ greatest gap
+          \_____|____ score curve
+                    ●
+              lowest score
+```
+
+## Lower cutoff
+
+The same calculation was applied from the negative end:
+
+1. Sort the original scores from most negative upward.
+2. Negate them so anti-alignment magnitude is descending.
+3. Apply the same normalized chord-deviation calculation.
+4. Convert the selected value back to its original negative cosine score.
+5. Include exactly that many tokens from the negative end.
+
+Everything between the two cutoffs becomes the central body.
+
+## Exact membership
+
+R004 assigns tokens by rank rather than by comparing scores with the threshold:
+
+```text
+positive head = first upper_cutoff_rank tokens
+negative tail = first lower_cutoff_rank tokens from the negative end
+central body  = everything else
+```
+
+This prevents tied scores from accidentally including more tokens than the calculated cutoff rank.
+
+For example, at the input-embedding state:
+
+- Upper cutoff: rank 1,871, score approximately `0.04708`.
+- Lower cutoff: rank 1,316 from the negative end, score approximately `-0.03576`.
+
+## What the calculation actually is
+
+It is a maximum normalized endpoint-chord deviation method—an elbow or knee detector.
+
+It is not:
+
+- maximum mathematical curvature;
+- a second-derivative calculation;
+- curvature density in the representation space;
+- a semantic or topological boundary test.
+
+R004 also calculates descriptive diagnostics such as elbow strength, the score gap after the cutoff and local slope ratios. None of those diagnostics can reject or move the cutoff.
+
+### MA-0012 — Proposed R005 cutoff-population topology baseline
+
+- Entry timestamp: `2026-11-12T20:47:55+11:00`
+- Timezone: `Australia/Sydney`
+- Author: `Codex assistant`
+- Entry type: `proposed next step`
+- Related runs: `R004`; proposed `R005`
+- Preservation mode: `verbatim`
+- Source: immediately preceding assistant response in the project conversation
+- Timestamp note: the original UI post time was unavailable; the entry timestamp records when this verbatim response was added to the project file.
+
+#### Verbatim input
+
+Next should be **R005: cutoff-population topology baseline**.
+
+The immediate question is:
+
+> Do R004’s cutoffs isolate token populations with meaningful internal relationships, and how do those relationships change across layers?
+
+R005 should:
+
+1. Reuse R004’s upper and lower token populations at all 33 states.
+2. Load Pythia’s static input-embedding matrix from the exact existing model revision.
+3. For each state, construct a cosine-similarity nearest-neighbour graph among the selected tokens.
+4. Track:
+   - tokens entering and leaving each population;
+   - relationships that persist, emerge or disappear;
+   - upper-to-upper, lower-to-lower and upper-to-lower connectivity;
+   - community composition and stability across layers.
+5. Compare the observed structure with size-matched random token populations. This tests whether the cutoff selects more structure than we would expect by chance.
+6. Produce a small number of interpretable outputs:
+   - layer-by-layer network statistics;
+   - persistent and changing relationships;
+   - community membership trajectories;
+   - selected-layer network images;
+   - a concise findings report and metaanalysis entry.
+
+We should not calculate “curvature density” yet. First we need to establish that the selected population contains meaningful relational structure at all.
+
+A successful R005 would show coherent groups and relationship trajectories that outperform the random baseline. An unsuccessful but useful result would show that the cutoff populations are no more structured than comparable arbitrary populations.
+
+One important boundary remains: because the vocabulary embeddings are static, R005 would measure how the moving contextual `lithium` representation selects different regions of a fixed embedding topology. It would not yet demonstrate that the vocabulary tokens’ own contextual geometry changes through the transformer. That should be the subsequent controlled-context experiment if R005 finds usable structure.
