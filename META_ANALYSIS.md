@@ -2885,3 +2885,31 @@ And yes, I have the GitHub connector capabilities needed to create and update th
    - Analyse coherence, persistence, emergence, disappearance, positive/negative differences and ultimately whether the observed structure supports SDA-3.
 
 The immediate next action is therefore **inspect the repository conventions, create R009 and write the formal protocol before performing any further semantic analysis**.
+
+### MA-0027 — External ChatGPT begins direct GitHub authorship for R009
+
+- Entry timestamp: `2026-11-13T08:18:56+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `project owner`
+- Entry type: `operational handoff and repository-coordination note`
+- Related runs: `R008`; `planned R009`
+- Preservation mode: `project-owner direction verbatim; operational implications recorded separately`
+- Timestamp note: the original post time was unavailable; the entry timestamp
+  records when this direction was added to the metaanalysis.
+
+#### Project-owner direction — verbatim
+
+i am now getting chatgpt to start its analysis one state at the time. it will add its analysis to github itself. your next instructions most likely will be to inspect the repo to identify github's work. make a note of this in the metaanalysis file so you have a record that chatgpt will be adding work to the repo.
+
+#### Operational record
+
+- External ChatGPT is expected to add the state-by-state R009 semantic analysis
+  directly to the GitHub `chatgpt-analysis` repository.
+- The GitHub repository may therefore contain newer ChatGPT-authored work that
+  is not yet present in this independent local working repository.
+- Before future GitHub edits, synchronization or inspection, Codex must inspect
+  the current remote history and working paths, identify the ChatGPT-authored
+  additions and preserve them during reconciliation.
+- Codex must not assume that the last locally synchronized GitHub commit remains
+  the current remote state and must not overwrite or force-push over ChatGPT's
+  analysis work.
