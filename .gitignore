@@ -17,6 +17,7 @@ __pycache__/
 single_prompt_topology/runs/*
 !single_prompt_topology/runs/R009_lithium-community-semantic-classification/
 !single_prompt_topology/runs/R009_lithium-community-semantic-classification/*.md
+!single_prompt_topology/runs/R009_lithium-community-semantic-classification/R009_SUMMARY.html
 
 # Model weights and checkpoints
 *.bin
