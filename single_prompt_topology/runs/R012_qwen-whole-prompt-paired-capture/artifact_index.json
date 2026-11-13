@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T07:55:04.611762+00:00",
+  "generated_at": "2026-11-13T20:06:30.434971+00:00",
   "run_id": "R012_qwen-whole-prompt-paired-capture",
   "manifest_status": "successful",
   "artifacts": {
@@ -94,6 +94,10 @@
     "R012_MEASUREMENT_REPORT.md": {
       "bytes": 1931,
       "sha256": "b6b14ecd40b95144e6e7d0bce0d6f2fc38e88ae9bf44c477638397f9b265e512"
+    },
+    "R012_RUN_ANALYSIS_AND_RECOMMENDATIONS.html": {
+      "bytes": 26512,
+      "sha256": "ac62428c03f249d91fa1058b08b39aa1e71d7d2fe74c9f54ba5a7985d9e605b1"
     },
     "smoke_0_5b_bf16/artifact_hashes.json": {
       "bytes": 855,

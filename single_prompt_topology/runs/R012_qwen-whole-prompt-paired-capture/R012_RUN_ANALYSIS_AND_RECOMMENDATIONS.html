@@ -1,0 +1,1376 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>R012 Run Analysis and Recommendations</title>
+<style>
+body{margin:0;background:#111;color:#eee;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+main{max-width:1100px;margin:0 auto;padding:32px 24px 64px}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;font-size:14px}
+</style>
+</head>
+<body><main><pre>R012 now gives a fairly complete answer to two questions at once: what the whole-prompt topology pipeline needs technically, and what is wrong with using an instruction-bearing response position as the default measurement for SDA-style semantic neighbourhood analysis. R013 should preserve the first result and correct the second.
+
+# R012 Synthesis and Implications for R013
+
+## 1. What R012 was actually for
+
+R011 was intended to establish a generalised pipeline capable of accepting different models and measuring the layer-wise semantic topology of a complete prompt.
+
+R011 failed because the selected quantised CPU runtimes could not expose the required intermediate hidden states. The failure was an instrumentation problem, not evidence that the overall method or large-system-RAM approach was infeasible.
+
+R012 therefore existed to correct the model/runtime choice and complete the pipeline originally intended by R011.
+
+Its correct architecture became:
+
+```text id="h5emur"
+MODEL / RUNTIME
+      ↓
+CAPTURE FINAL-POSITION HIDDEN STATE
+AT EVERY TRANSFORMER DEPTH
+      ↓
+PROJECT EACH STATE AGAINST
+THE MODEL'S INPUT-EMBEDDING VOCABULARY
+      ↓
+SELECT POSITIVE / NEGATIVE REGIONS
+      ↓
+CONSTRUCT TOKEN NETWORKS
+      ↓
+DETECT COMMUNITIES
+      ↓
+COMPARE THROUGH DEPTH
+      ↓
+COMPARE CONTROLLED PROMPTS
+      ↓
+EXPORT CHATGPT-READABLE EVIDENCE
+      ↓
+STOP BEFORE SEMANTIC INTERPRETATION
+```
+
+The initial capture-only interpretation of R012 was therefore incomplete. R012 was reopened and completed rather than spawning another run.
+
+---
+
+# 2. What R012 technically established
+
+R012 validated the complete measured pipeline using Qwen2.5-7B-Instruct in BF16.
+
+The controlled prompts were:
+
+```text id="qxpa37"
+BASELINE
+What structure forms from electro pink, curvature density, Tokyo nightlife?
+
+VARIATION
+What structure forms from electro pink, Tokyo nightlife, curvature density?
+```
+
+Only the order of `curvature density` and `Tokyo nightlife` changed.
+
+No response token was generated.
+
+The measured position was the fixed final assistant-prefix position supplied by Qwen's official chat template.
+
+The 7B capture produced:
+
+```text id="z01prz"
+29 states
+=
+input embedding
++
+28 transformer outputs / terminal representation
+```
+
+with hidden width:
+
+```text id="5i49w8"
+3584
+```
+
+State 00 was exactly identical across the two prompts because the measured input token was identical before attention had incorporated the preceding context.
+
+Every subsequent state differed.
+
+This proved that a small ordering change in the concepts propagates through the entire whole-prompt representation.
+
+---
+
+# 3. The topology pipeline was then completed
+
+Each hidden state was projected against:
+
+```text id="umyekn"
+151,665 usable vocabulary embeddings
+```
+
+The model contained another 399 padded embedding rows, which were correctly excluded because they did not map to valid tokenizer IDs.
+
+R012 then reused the established R004 full-curve elbow method independently for positive and negative populations.
+
+It generated:
+
+```text id="2q10jw"
+2 prompts
+× 29 states
+× 2 sides
+=
+116 networks
+```
+
+containing:
+
+```text id="kl54ja"
+706,623 token memberships
+
+7,066,230 directed exact 10-NN edges
+
+1,181 state-local Louvain communities
+
+112 adjacent-state comparisons
+
+58 same-state baseline/variation comparisons
+```
+
+The measured evidence is now available through compact and full artefacts including:
+
+```text id="3szykv"
+vocabulary_scores.safetensors
+cutoffs.csv
+tail_tokens.csv.gz
+
+nodes.csv.gz
+edges.csv.gz
+
+community_nodes.csv
+community_edges.csv
+network_index.csv
+
+state_transitions.csv
+paired_state_comparisons.csv
+community_transition_evidence.csv
+
+chatgpt_community_networks.json
+chatgpt_layer_packets.md
+```
+
+This is sufficient for downstream semantic reconstruction without another model forward pass.
+
+---
+
+# 4. What R012 demonstrated about prompt-order sensitivity
+
+The perturbation begins small.
+
+At State 01:
+
+```text id="wf524i"
+average membership overlap ≈ .955
+average edge overlap       ≈ .884
+```
+
+The model is initially processing almost the same semantic material.
+
+The difference becomes progressively larger.
+
+By the final transformer region:
+
+```text id="5gdhun"
+S27
+
+positive membership Jaccard ≈ .821
+negative membership Jaccard ≈ .822
+
+positive edge Jaccard ≈ .632
+negative edge Jaccard ≈ .637
+```
+
+This means that merely reversing two concept phrases leaves most of the selected vocabulary in common, but substantially changes the relational network connecting those tokens.
+
+The important distinction is:
+
+```text id="zldb35"
+TOKEN MEMBERSHIP
+relatively stable
+
+RELATIONAL STRUCTURE
+less stable
+
+COMMUNITY PARTITION
+even less stable
+```
+
+This is especially visible at State 17:
+
+```text id="webtge"
+average membership ≈ .851
+average edge overlap ≈ .684
+average community ARI ≈ .366
+```
+
+The two prompts therefore contain largely similar semantic ingredients and many similar relations, yet organise them into substantially different communities.
+
+That is evidence for:
+
+```text id="iduior"
+SAME SUBSTRATE
+      ↓
+DIFFERENT COMPRESSION
+      ↓
+DIFFERENT PARENT BOUNDARIES
+```
+
+rather than simple replacement of one semantic neighbourhood by another.
+
+---
+
+# 5. The principal developmental trajectory
+
+R012 broadly reproduces one of the strongest findings from R010.
+
+The model does not preserve the concepts as three intact topical blocks.
+
+Instead the representation moves through approximately:
+
+```text id="y2fhs2"
+LEXICAL / OBJECT ASSOCIATIONS
+        ↓
+FEATURES AND PROPERTIES
+        ↓
+OPERATIONS
+        ↓
+RELATIONS BETWEEN FEATURES AND OPERATIONS
+        ↓
+HIGHER-ORDER COMPOSITION
+```
+
+The most defensible epochs are:
+
+```text id="pe0oww"
+S00
+FIXED CAPTURE ANCHOR
+│
+▼
+S01–05
+CONTEXT ACQUISITION
+│
+│ lexical, object, action and formal activation
+▼
+S06–09
+FEATURE ASSEMBLY
+│
+│ material, physical and spatial properties
+▼
+S10–18
+RELATIONAL ORGANISATION
+│
+│ environment, representation,
+│ transformation and social context
+▼
+S19–23
+COMPOSITION
+│
+│ interacting features become organised
+│ into higher-order structures
+▼
+S24–27
+SEMANTIC CONDENSATION
+│
+│ increasingly stable parent inventory,
+│ continuing repartition of communities
+▼
+S28
+TERMINAL NORMALISATION / RECODING
+```
+
+The recurring pattern is therefore again:
+
+```text id="jhcw8d"
+OBJECTS
+→ ATTRIBUTES / OPERATORS
+→ RELATIONS
+→ FUNCTIONAL OR COMPOSITIONAL STRUCTURE
+```
+
+---
+
+# 6. The higher-order semantic parents
+
+The three original concepts do not survive as three literal semantic parents.
+
+The strongest reconstructed parents are instead:
+
+## A. Transformation / composition
+
+Persistent terms include:
+
+```text id="hp0bgg"
+transform
+transformations
+altering
+transforms
+composition
+evolving
+Create
+classify
+form
+Construct
+```
+
+This is one of the strongest lineages.
+
+However, it is partially confounded by the prompt shell itself:
+
+```text id="mnm1ns"
+What structure forms from ...
+```
+
+Therefore R012 cannot determine how much of this parent originates from the three concepts and how much originates from the instruction.
+
+This becomes a central design problem for R013.
+
+---
+
+## B. Material / sensory / perceptual properties
+
+The trajectory contains:
+
+```text id="7bwfql"
+material
+paint
+painting
+laser
+spiral
+sensor
+sensors
+electrodes
+pixels
+silicone
+resin
+cardboard
+flakes
+cyan
+orange
+brown
+```
+
+The late representation is therefore not simply colour-related.
+
+It is better described as:
+
+&gt; sensory and material character.
+
+---
+
+## C. Spatial / environmental / place structure
+
+The representation develops through:
+
+```text id="yuevef"
+countries / locations
+apartments
+kitchens
+streets
+cities
+commercial environments
+service centres
+cafés
+Costco
+graveyard
+synagogue
+urban/place names
+```
+
+This supports a general:
+
+&gt; spatially situated environment
+
+parent more strongly than a literal `Tokyo` parent.
+
+---
+
+## D. Representation / information
+
+The lineage includes:
+
+```text id="mrk0vy"
+information
+report
+write
+line
+image
+pixels
+data
+parameters
+text
+XML
+system
+classification
+```
+
+Late states increasingly connect representation to transformation.
+
+At State 28 the variation contains a particularly explicit community around:
+
+```text id="kb1kc3"
+information
+transform
+image
+Create
+place
+word
+expression
+transforming
+```
+
+---
+
+## E. Social / institutional context
+
+Recurring material includes:
+
+```text id="cwth52"
+participants
+government
+policymakers
+negotiations
+jurisdiction
+curriculum
+organisation
+professional
+industries
+trade
+clubs
+business
+```
+
+This is significant but less consistently central than material, transformation and representation.
+
+It functions mainly as context.
+
+---
+
+# 7. The resulting semantic structure
+
+Across both prompt orderings, the smallest defensible higher-order architecture is approximately:
+
+```text id="7b0dli"
+SEMANTIC INTERSECTION
+│
+├── MATERIAL / SENSORY FIELD
+│
+├── SPATIAL / ENVIRONMENTAL FIELD
+│
+├── TRANSFORMATION / COMPOSITION
+│
+├── REPRESENTATION / INFORMATION
+│
+└── SOCIAL / INSTITUTIONAL CONTEXT
+```
+
+Their relations are more informative than the labels themselves:
+
+```text id="xyffl5"
+MATERIAL / SENSORY FEATURES
+            │
+            │ situated within
+            ▼
+SPATIAL / ENVIRONMENTAL CONTEXT
+            │
+            │ organised through
+            ▼
+TRANSFORMATION / COMPOSITION
+            │
+            │ expressed through
+            ▼
+REPRESENTATION
+            │
+            │ embedded within
+            ▼
+SOCIAL / INSTITUTIONAL CONTEXT
+```
+
+The model therefore does not strongly encode the intersection as a named aesthetic genre.
+
+The stronger interpretation is:
+
+&gt; A constructed sensory-spatial environment in which material and perceptual properties are transformed into compositional form and represented within a situated social or urban context.
+
+---
+
+# 8. What happened to the individual concepts
+
+## Electro pink
+
+The literal phrase disappears.
+
+Probable descendants include:
+
+```text id="xnsujb"
+electrodes
+laser
+colour
+cyan
+orange
+paint
+pixels
+image
+neon
+```
+
+The model appears to decompose it into:
+
+```text id="w0i7zk"
+electronic
++
+chromatic
++
+perceptual
++
+material
+```
+
+properties.
+
+`pink` itself does not appear among the exported community representatives or target-extreme tokens.
+
+---
+
+## Curvature density
+
+Neither `curvature` nor `density` survives literally in the inspected community evidence.
+
+Instead associated structures include:
+
+```text id="b2ieyp"
+spiral
+line
+height
+pixels
+sum
+composition
+parameters
+areas
+direction
+length
+nodes
+transform
+form
+```
+
+The defensible interpretation is:
+
+```text id="wehgoq"
+spatial / structural organisation
++
+composition
++
+transformation
+```
+
+rather than a literal geometry parent.
+
+---
+
+## Tokyo nightlife
+
+`Tokyo` does not survive among the recorded representatives/extremes.
+
+Indirect descendants include:
+
+```text id="6w6lbm"
+Japan          early only
+street
+cities
+clubs
+drinkers
+cafés
+commercial venues
+social activity
+neon
+Tonight
+```
+
+So its contribution is better represented as:
+
+```text id="luand0"
+place / urban context
++
+social activity
++
+venue / commercial environment
+```
+
+---
+
+# 9. Order-invariant versus order-sensitive meaning
+
+This is R012's strongest experimental contribution.
+
+The higher-order parent inventory is substantially more stable than the token and community structures.
+
+Both prompts repeatedly recover:
+
+```text id="96fvgn"
+transformation / composition
+material / sensory organisation
+representation
+spatial / place context
+social / institutional context
+```
+
+What changes with concept order is primarily:
+
+```text id="pk4qg1"
+which communities are grouped together
+
+which parent absorbs a community
+
+how autonomous the spatial/place branch remains
+
+whether social activity is integrated with sensory/material structure
+
+how representational structures are compressed
+
+where peripheral associations fall
+```
+
+Therefore:
+
+&gt; Parent identity is more stable than community identity.
+
+And:
+
+&gt; Relations between parents appear more invariant than the exact token neighbourhood from which those parents are reconstructed.
+
+This directly strengthens the parent-node direction developed from R010.
+
+---
+
+# 10. Late-state difference between the two orderings
+
+At State 27, the baseline:
+
+```text id="0ycdvp"
+electro pink
+→ curvature density
+→ Tokyo nightlife
+```
+
+maintains somewhat clearer separation between:
+
+```text id="afu65d"
+material / sensory
+place / venue
+city / chromatic
+representation
+```
+
+The variation:
+
+```text id="42hifo"
+electro pink
+→ Tokyo nightlife
+→ curvature density
+```
+
+more strongly integrates:
+
+```text id="s2h7in"
+material
+sensory
+social/activity
+representational
+```
+
+information.
+
+The difference is consistent with a recency/order effect:
+
+```text id="2yfsqv"
+Tokyo nightlife last
+→ greater autonomous place/venue organisation
+
+curvature density last
+→ greater compression into structural /
+  representational / sensory organisation
+```
+
+But one reversed pair cannot distinguish:
+
+```text id="8ry7wc"
+recency
+from
+specific B–C interaction
+```
+
+That becomes another R013 requirement.
+
+---
+
+# 11. Positive versus negative topology
+
+The negative side should not be interpreted as “suppressed”.
+
+It contains coherent semantic material including:
+
+```text id="kjaep2"
+law
+clubs
+trade
+sports
+institutional structure
+evaluation
+reporting
+study
+should / better
+neon
+BLUE / WHITE
+Tonight
+```
+
+The correct interpretation remains:
+
+&gt; geometric anti-alignment with the measured state.
+
+A notable R012 result is that negative-community partitioning is consistently more sensitive to order than positive-community partitioning, despite comparable token and edge overlap.
+
+For example:
+
+```text id="kwm041"
+S24–27 paired community ARI
+
+positive ≈ .484
+negative ≈ .341
+```
+
+So the negative side appears especially involved in reorganisation of alternatives, boundaries or contextual material.
+
+That is compatible with R010, but does not justify equating negative cosine with suppression.
+
+---
+
+# 12. State 28 changes how terminal states must be interpreted
+
+State 28 is not another transformer block.
+
+It is the final normalisation state.
+
+The S27→S28 transition is enormous:
+
+```text id="u2ebgw"
+membership Jaccard ≈ .129
+edge Jaccard       ≈ .026
+```
+
+Therefore:
+
+```text id="v36ppz"
+S27
+last transformer-computed representational organisation
+
+        ↓
+
+final normalisation
+
+        ↓
+
+S28
+terminal vocabulary-space recoding
+```
+
+The semantic content of S28 is useful because it is close to what the output head receives.
+
+But it must not be interpreted as another semantic reasoning step.
+
+Future pipelines should explicitly distinguish:
+
+```text id="j1paic"
+LAST BLOCK STATE
+from
+POST-NORMALISATION STATE
+```
+
+rather than treating both as equivalent transformer layers.
+
+---
+
+# 13. What R012 means for SDA-3 / GRD
+
+R012 strongly supports the hierarchy:
+
+```text id="5d5yxa"
+TOKENS
+least stable
+        ↓
+COMMUNITIES
+more stable but plastic
+        ↓
+PARENT STRUCTURES
+substantially more stable
+        ↓
+RELATIONS BETWEEN PARENTS
+strongest candidate for persistent semantic structure
+```
+
+So SDA/GRD should operate after parent reconstruction:
+
+```text id="j4wf20"
+MEASURED TOKEN NEIGHBOURHOOD
+        ↓
+COMMUNITIES
+        ↓
+PARENT RECONSTRUCTION
+        ↓
+PARENT RELATIONS
+        ↓
+STABILITY UNDER PERTURBATION
+        ↓
+GRD ROLES
+        ↓
+MINIMAL GENERATIVE STRUCTURE
+```
+
+not:
+
+```text id="vtaa8k"
+tokens
+→ assign C / S / A / HCU / E
+```
+
+The controlled perturbation is important because it provides empirical evidence for this hierarchy.
+
+A substantial fraction of the token network can change while the same higher-order parent structure remains recoverable.
+
+---
+
+# 14. The central experimental limitation exposed by R012
+
+R012 measures the hidden state of a fixed assistant-generation prefix in an instruction-tuned model.
+
+Therefore the measured state contains:
+
+```text id="luftaz"
+A/B/C semantic contribution
++
+"What structure forms from" contribution
++
+chat-template contribution
++
+instruction-following behaviour
++
+response-preparation contribution
++
+concept-order interaction
+```
+
+This explains why R012 contains large amounts of:
+
+```text id="id4b6s"
+code
+punctuation
+multilingual morphology
+formatting
+generic response operators
+```
+
+alongside genuine semantic structure.
+
+The pipeline is valid.
+
+The measurement target is simply broader than SDA-3 originally required.
+
+---
+
+# 15. The specific prompt-shell confound
+
+The largest example is:
+
+```text id="7p1gx6"
+transform / form / composition
+```
+
+This looks like a strong semantic lineage.
+
+But the instruction itself asks:
+
+```text id="9x5nea"
+What structure forms from ...
+```
+
+Therefore R012 cannot determine whether:
+
+```text id="pel457"
+transform / form
+```
+
+is:
+
+```text id="d3gta0"
+intrinsic to
+electro pink + curvature density + Tokyo nightlife
+```
+
+or partly caused by:
+
+```text id="ickoqo"
+structure + forms
+```
+
+in the shell.
+
+R013 should remove this ambiguity.
+
+---
+
+# 16. R013 should change the experimental question
+
+R012 asked:
+
+&gt; How does an instruction-tuned model organise an entire synthesis prompt immediately before answering?
+
+R013 should ask:
+
+&gt; What semantic topology is induced by the concepts themselves when they co-occur?
+
+The minimal input should therefore be approximately:
+
+```text id="hw9v0z"
+electro pink | curvature density | Tokyo nightlife |
+```
+
+with the final fixed delimiter used as the measurement anchor.
+
+Conceptually:
+
+```text id="drccka"
+A
+B
+C
+↓
+NEUTRAL FIXED ANCHOR
+↓
+layer-wise contextual state
+```
+
+This removes:
+
+```text id="z8m8ah"
+"What structure forms from"
+```
+
+as a semantic input.
+
+---
+
+# 17. Why a fixed anchor remains necessary
+
+R013 should not simply measure the final concept token.
+
+For:
+
+```text id="wxoarb"
+electro pink, curvature density, Tokyo nightlife
+                                      ↑
+```
+
+`nightlife` would simultaneously be:
+
+```text id="bc72wv"
+one of the concepts
++
+the measurement anchor
+```
+
+which reintroduces the asymmetry seen in R010.
+
+Instead:
+
+```text id="n3g5z6"
+electro pink | curvature density | Tokyo nightlife |
+                                                   ↑
+                                             fixed anchor
+```
+
+The same anchor should be used for every permutation.
+
+---
+
+# 18. R013 should test all six permutations
+
+R012 only compared:
+
+```text id="holnpu"
+A B C
+A C B
+```
+
+That cannot separate:
+
+```text id="gf02oi"
+order effects
+recency effects
+adjacency effects
+specific B–C interaction
+```
+
+R013 should use:
+
+```text id="yd2rr5"
+A B C
+A C B
+B A C
+B C A
+C A B
+C B A
+```
+
+with identical separators and identical capture rules.
+
+Then the topology can be decomposed into:
+
+```text id="zrrb5m"
+ORDER-INVARIANT CORE
+structures surviving all six permutations
+
+RECENCY EFFECT
+structures systematically associated with the last concept
+
+POSITION EFFECT
+structures associated with first / middle / final placement
+
+ADJACENCY EFFECT
+structures strengthened when two concepts are neighbouring
+
+INTERACTION EFFECT
+changes not explainable by position alone
+```
+
+This is considerably more informative than another two-prompt comparison.
+
+---
+
+# 19. R013 should ideally separate three experimental levels
+
+The clean design is:
+
+```text id="zddipk"
+LEVEL 1
+PURE SEMANTIC CO-CONTEXT
+
+A | B | C |
+          ↑
+capture
+```
+
+This is the primary SDA-style experiment.
+
+Then optionally:
+
+```text id="5gk0yo"
+LEVEL 2
+INSTRUCTION EFFECT
+
+What structure forms from A, B, C?
+```
+
+Compare with Level 1.
+
+Then:
+
+```text id="r984s3"
+LEVEL 3
+RESPONSE-CONSTRUCTION STATE
+
+chat assistant prefix
+```
+
+Compare with both.
+
+This separates:
+
+```text id="0gyeea"
+semantic neighbourhood
+from
+instruction-induced synthesis
+from
+answer preparation
+```
+
+R012 currently combines these.
+
+---
+
+# 20. Base model versus instruct model
+
+If the purpose of R013 is semantic topology rather than chatbot behaviour, a base causal model is methodologically cleaner.
+
+Instruction model:
+
+```text id="48788j"
+concepts
++
+chat template
++
+instruction tuning
++
+assistant prefix
+```
+
+Base model:
+
+```text id="1s5ccp"
+concepts
++
+fixed delimiter
+```
+
+The base model therefore better isolates ordinary contextual semantic integration.
+
+However, model comparison should remain controlled.
+
+The most defensible sequence would be:
+
+```text id="020daw"
+first:
+same Qwen family / architecture where possible
+to isolate the prompt-design change
+
+then:
+base versus instruct comparison
+as a separate variable
+```
+
+Changing prompt design and model training regime simultaneously would make attribution harder.
+
+---
+
+# 21. What R013 should preserve unchanged
+
+R012's downstream measurement machinery is now sufficiently validated.
+
+R013 should preserve, unless evidence forces a change:
+
+```text id="l5yo08"
+hidden-state capture contract
+
+static input-embedding projection
+
+full-curve positive / negative elbow method
+
+exact within-side 10-NN graphs
+
+deterministic Louvain communities
+
+community-level exports
+
+adjacent-state comparisons
+
+matched-prompt comparisons
+
+ChatGPT-readable JSON / Markdown evidence
+
+strict separation of measurement and interpretation
+```
+
+R013 is therefore not a new topology pipeline.
+
+It is a cleaner experimental input design using the established pipeline.
+
+---
+
+# 22. What should become model-general
+
+The reusable backend contract remains:
+
+```text id="76kwb9"
+capture_states(prompt)
+
+get_embedding_matrix()
+
+get_vocabulary()
+
+get_state_labels()
+
+get_model_metadata()
+```
+
+Everything downstream should consume those common objects rather than Qwen-specific internals.
+
+R012 validated the abstraction with one backend.
+
+R013 should avoid expanding into a large adapter framework unless another model is actually being tested.
+
+Generalisation should remain empirical rather than speculative.
+
+---
+
+# 23. Proposed R013 objective
+
+A suitable objective is:
+
+&gt; Measure the layer-wise semantic topology induced by a fixed set of concepts without an explicit synthesis instruction, and determine which token, community, parent and relational structures remain invariant under all permutations of concept order.
+
+This gives R013 three primary questions:
+
+```text id="aftd9g"
+1. What semantic structure emerges from A, B and C
+   without instructing the model what relation to construct?
+
+2. Which parts of that structure survive all concept orders?
+
+3. Which changes are attributable to position, recency,
+   adjacency or higher-order interaction?
+```
+
+---
+
+# 24. Proposed R013 pipeline
+
+```text id="nughgz"
+CONCEPT SET
+A, B, C
+│
+├── ABC
+├── ACB
+├── BAC
+├── BCA
+├── CAB
+└── CBA
+        ↓
+FIXED NEUTRAL ANCHOR
+        ↓
+ONE FORWARD PASS PER PERMUTATION
+        ↓
+LAYER-WISE ANCHOR STATES
+        ↓
+VOCABULARY PROJECTION
+        ↓
+POSITIVE / NEGATIVE REGIONS
+        ↓
+TOKEN NETWORKS
+        ↓
+COMMUNITIES
+        ↓
+STATE-LOCAL PARENTS
+        ↓
+CROSS-LAYER PARENT TRAJECTORIES
+        ↓
+CROSS-PERMUTATION STABILITY
+        ↓
+INVARIANT PARENT STRUCTURE
+```
+
+The final semantic product should then distinguish:
+
+```text id="4x3mai"
+CORE
+survives all orders
+
+POSITION-SENSITIVE
+depends on first / middle / final location
+
+RECENCY-SENSITIVE
+strengthened by appearing last
+
+ADJACENCY-SENSITIVE
+depends on neighbouring concepts
+
+UNSTABLE / RESIDUAL
+does not survive perturbation
+```
+
+---
+
+# 25. What success in R013 would mean
+
+R013 would be successful if it lets us make a substantially stronger claim than R012:
+
+R012 supports:
+
+&gt; Higher-order semantic parents survive a limited concept-order perturbation better than tokens or communities.
+
+R013 could establish:
+
+&gt; A specific parent-and-relation structure remains recoverable across the complete permutation space of the same semantic inputs, making it a credible candidate for the model's order-independent representation of that conceptual intersection.
+
+That would move the project from:
+
+```text id="vw66u7"
+semantic reconstruction
+```
+
+towards:
+
+```text id="upeuk3"
+semantic invariant identification
+```
+
+which is much closer to the original purpose of SDA-3.
+
+---
+
+# 26. Consolidated methodological progression
+
+The project now has a coherent sequence:
+
+```text id="yf7fk9"
+R010
+contextualised concept token
+        ↓
+learned:
+semantic structure evolves through parents and relations
+rather than static token categories
+
+R012
+whole-prompt response-initiation state
++
+controlled order perturbation
+        ↓
+learned:
+parent structures are more stable than
+tokens and communities;
+order changes compression and partitioning;
+instruction shell contaminates pure semantic attribution
+
+R013
+bare concept co-context
++
+neutral anchor
++
+complete permutation set
+        ↓
+should isolate:
+order-independent semantic parents
++
+position / recency / adjacency effects
+```
+
+The methodological direction can therefore be compressed to:
+
+```text id="ryuloo"
+R010
+WHAT STRUCTURES EXIST?
+
+R012
+WHICH STRUCTURES SURVIVE A PERTURBATION?
+
+R013
+WHICH STRUCTURES ARE INVARIANT TO ORDER
+WHEN THE INSTRUCTION SHELL IS REMOVED?
+```
+
+That is the clearest next experimental step.
+
+## Central conclusion
+
+R012 succeeded technically and analytically, but it also demonstrated that the whole-prompt assistant-prefix state is broader than the semantic object SDA-3 originally sought.
+
+Its strongest substantive result is:
+
+&gt; **Semantic invariance appears to increase with abstraction: tokens are highly plastic, communities are moderately plastic, parent structures are substantially more stable, and relations between parents are the strongest candidate for the model's persistent representation of a conceptual intersection.**
+
+Its strongest methodological result is:
+
+&gt; **To test that claim cleanly, R013 should remove the semantic instruction shell, use a fixed neutral anchor, run every permutation of the same concept set, preserve the validated R012 topology pipeline, and identify which parent relations survive all ordering changes.**</pre></main></body>
+</html>

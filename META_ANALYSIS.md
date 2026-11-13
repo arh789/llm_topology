@@ -6662,3 +6662,2548 @@ R012 stops before semantic topic labels, parent-node reconstruction, GRD/SDA
 roles or Phase B/C/D interpretation. Those tasks now belong to downstream
 ChatGPT analysis of `chatgpt_community_networks.json`,
 `chatgpt_layer_packets.md` and the supporting CSV evidence.
+
+
+### MA-0063 — ChatGPT response: inspection of completed R012 evidence
+
+- Entry timestamp: `2026-11-13T19:03:37+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `ChatGPT response supplied by project owner`
+
+There is one new commit since the last inspection:
+
+**`9825a959` — “Complete R012 whole-prompt topology pipeline”**
+
+It largely implements the correction we just established. **No R013 was created. R012 was reopened and completed.**
+
+### 1. R012's scope has been explicitly corrected
+
+The previous capture-only interpretation has been rejected in the repository itself. The meta-analysis now records:
+
+> “The capture-only conclusion recorded in MA-0061 was subsequently rejected as incomplete.”
+
+R012 is now defined as:
+
+```text
+GENERAL WHOLE-PROMPT TOPOLOGY PIPELINE
+
+model/runtime
+    ↓
+hidden-state capture
+    ↓
+vocabulary projection
+    ↓
+positive / negative region selection
+    ↓
+token networks
+    ↓
+communities
+    ↓
+cross-layer comparison
+    ↓
+paired-prompt comparison
+    ↓
+ChatGPT-readable evidence
+```
+
+Semantic interpretation still stops outside R012.
+
+That is the scope boundary we wanted.
+
+---
+
+### 2. The successful Qwen capture was retained rather than rerun
+
+Codex did **not** perform another transformer forward pass.
+
+It reused the validated Qwen2.5-7B trajectories:
+
+```text
+baseline S00–S28
+variation S00–S28
+```
+
+and proceeded downstream from them.
+
+So the original capture work was correctly treated as a **successful intermediate component**, not a completed run.
+
+---
+
+### 3. R012 now produces the evidence I need
+
+A new `r012_semantic_topology.py` performs the missing pipeline.
+
+The run now contains:
+
+```text
+vocabulary_scores.safetensors
+cutoffs.csv
+tail_tokens.csv.gz
+
+nodes.csv.gz
+edges.csv.gz
+
+network_index.csv
+community_nodes.csv
+community_edges.csv
+
+state_transitions.csv
+paired_state_comparisons.csv
+community_transition_evidence.csv
+
+chatgpt_community_networks.json
+chatgpt_layer_packets.md
+
+R012_MEASUREMENT_REPORT.md
+R012_COMPLETENESS_VERIFICATION.md
+```
+
+This is now directly analogous to the R008 evidence surface that made R009/R010 possible.
+
+I can analyse the current R012 outputs without needing Codex to interpret them.
+
+---
+
+### 4. Full-vocabulary projection has actually been performed
+
+For every one of the 29 states in each prompt, the captured whole-prompt vector was projected against the Qwen input vocabulary.
+
+The usable vocabulary is:
+
+```text
+151,665 tokenizer-addressable embeddings
+```
+
+Qwen's embedding matrix contained another 399 padded rows; these were correctly excluded because they do not correspond to usable token IDs.
+
+The resulting score tensor is:
+
+```text
+2 prompts
+× 29 states
+× 151,665 vocabulary tokens
+```
+
+So we now have the actual layer-wise vocabulary neighbourhoods.
+
+---
+
+### 5. R004's cut-off method was carried forward
+
+Codex reused the established full-curve maximum-deviation elbow method rather than inventing another semantic threshold.
+
+Positive and negative sides are independently selected:
+
+```text
+whole vocabulary projection
+        ↓
+positive-head elbow
+negative-tail elbow
+        ↓
+selected populations
+```
+
+No semantic interpretation is used to determine membership.
+
+This preserves an important methodological continuity with the Pythia work.
+
+---
+
+### 6. It generated the complete network set
+
+The completed run contains:
+
+```text
+2 prompts
+× 29 states
+× 2 sides
+=
+116 networks
+```
+
+Across them:
+
+- **706,623** selected token memberships
+- **7,066,230** directed exact 10-NN edges
+- **1,181** state-local Louvain communities
+
+Positive populations range from **4,186–8,785 tokens**.
+
+Negative populations range from **1,237–9,024 tokens**.
+
+Community counts range from **7–16 per network**.
+
+So there is now considerably more semantic evidence than R012 had during our previous inspection.
+
+---
+
+### 7. Cross-layer evolution is now measured
+
+There are exactly:
+
+```text
+2 prompts
+× 28 layer transitions
+× 2 sides
+=
+112 transition comparisons
+```
+
+For each transition we now have things such as:
+
+```text
+membership Jaccard
+edge Jaccard
+community adjusted Rand
+retained/new/disappeared edges
+shared tokens
+```
+
+This means we can now analyse:
+
+> how the semantic neighbourhood develops through the transformer,
+
+rather than merely observing hidden-vector displacement.
+
+---
+
+### 8. Prompt-order sensitivity is now measured structurally
+
+There are also:
+
+```text
+29 matched states
+× 2 sides
+=
+58 baseline-vs-variation comparisons
+```
+
+The prompts are still:
+
+```text
+BASELINE
+What structure forms from
+electro pink, curvature density, Tokyo nightlife?
+
+VARIATION
+What structure forms from
+electro pink, Tokyo nightlife, curvature density?
+```
+
+State 00 is now confirmed identical at **all three levels**:
+
+```text
+membership Jaccard = 1
+edge Jaccard       = 1
+community ARI      = 1
+```
+
+After contextual processing, they diverge.
+
+By the final state:
+
+```text
+                    positive       negative
+
+membership Jaccard   0.7756         0.7737
+edge Jaccard         0.5601         0.5583
+community ARI        0.3487         0.4515
+```
+
+That is much stronger evidence than the earlier statement that the vectors had merely diverged.
+
+A concept-order swap changes roughly a quarter of the selected neighbourhood by the final state and considerably reorganises its relational graph.
+
+---
+
+### 9. Two implementation errors occurred and were corrected
+
+Codex recorded rather than concealed them.
+
+The first attempt assumed:
+
+```text
+embedding matrix rows
+=
+tokenizer vocabulary size
+```
+
+which failed because Qwen has **399 padded embedding rows**.
+
+That assumption was corrected.
+
+The second attempt constructed correct graphs but seeded Louvain partly using **prompt identity**. Consequently:
+
+```text
+identical State 00 graph
++
+different random seed
+→ different community partition
+```
+
+which would have created a false prompt difference.
+
+That was correctly detected and fixed. The seed now depends only on:
+
+```text
+state
++
+side
+```
+
+Identical graphs therefore receive identical deterministic partitions.
+
+That correction is particularly important.
+
+---
+
+### 10. The ChatGPT evidence package is now genuinely usable
+
+`chatgpt_layer_packets.md` now gives, for every state and both prompts:
+
+```text
+positive communities
+negative communities
+
+community size
+representative tokens
+target-extreme tokens
+token classes
+
+strongest intercommunity connections
+paired structural statistics
+```
+
+For example, State 00 already exposes communities such as:
+
+```text
+transformations
+communications
+computational
+quantitative
+simulation
+investigations
+decomposition
+```
+
+and:
+
+```text
+calculating
+comparing
+providing
+indicates
+represents
+determined
+```
+
+alongside formal/punctuation/tokenisation communities.
+
+So **we are now at the equivalent starting point of R009**, except with a whole-prompt representation and a controlled comparison built in.
+
+---
+
+## One important qualification remains
+
+The **conceptual pipeline is now generalised**, but the implementation is not yet literally model-pluggable.
+
+The new plan defines a good minimal backend contract:
+
+```text
+capture_states(prompt)
+get_embedding_matrix()
+get_vocabulary()
+get_state_labels()
+get_model_metadata()
+```
+
+and says everything downstream should be model-independent.
+
+However, `r012_semantic_topology.py` currently hardcodes things including:
+
+```text
+MODEL_ID = Qwen/Qwen2.5-7B-Instruct
+MODEL_REVISION = ...
+EMBEDDING_KEY = model.embed_tokens.weight
+STATE_COUNT = 29
+HIDDEN_WIDTH = 3584
+
+Qwen cache path
+CUDA execution
+Qwen-specific state labels
+```
+
+The plan explicitly acknowledges this:
+
+> “R012 validates one direct Qwen implementation. It does not add registries, factories or untested model adapters.”
+
+So there is a distinction:
+
+```text
+GENERAL PIPELINE CONTRACT          YES
+GENERAL ANALYSIS LOGIC             largely YES
+FIRST VALIDATED BACKEND            Qwen YES
+ARBITRARY MODEL PLUG-IN TODAY      NO
+```
+
+That is not necessarily a defect in R012. It is sensible to validate the abstraction with one implementation before building adapters. But it matters given the original intention behind R011.
+
+There is also a tiny documentation inconsistency: `R012_PLAN.md` still says **“Current status: running”**, while the final manifest and completeness verification correctly say **`successful` / `PASS`**. That line should be updated.
+
+### Net change
+
+Previously:
+
+```text
+R012
+prompt
+→ hidden states
+→ STOP
+```
+
+Now:
+
+```text
+R012
+prompt
+→ hidden states
+→ vocabulary topology
+→ cut-offs
+→ token networks
+→ communities
+→ layer transitions
+→ prompt comparisons
+→ analysable evidence
+→ STOP BEFORE INTERPRETATION
+```
+
+So the substantive scope problem has been corrected. **R012 now contains enough measured evidence for us to begin the semantic/community/parent-node analysis directly.**
+
+
+### MA-0064 — ChatGPT response: proposed unified R012 semantic analysis
+
+- Entry timestamp: `2026-11-14T06:08:04+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `ChatGPT response supplied by project owner`
+
+Yes. R012 now contains enough measured evidence to support a **broadly equivalent R010 analysis in one overall analysis pass**, provided “single pass” means one execution containing several strictly separated analytical stages—not collapsing everything into one impressionistic read.
+
+R010 had:
+
+```text
+R008 measured networks
+        ↓
+R009 community semantic classification
+        ↓
+R010-A state-local parent reconstruction
+        ↓
+R010-B cross-layer structural evolution
+        ↓
+R010-C semantic ↔ measured topology comparison
+        ↓
+R010-D curvature / coherence / conflict analysis
+```
+
+R012 can now support essentially the same stack directly:
+
+```text
+R012 measured networks
+        ↓
+A. COMMUNITY SEMANTICS
+        ↓
+B. STATE-LOCAL PARENT RECONSTRUCTION
+        ↓
+C. CROSS-LAYER STRUCTURAL EVOLUTION
+        ↓
+D. BASELINE ↔ VARIATION COMPARISON
+        ↓
+E. SEMANTIC ↔ MEASURED TOPOLOGY
+        ↓
+F. COHERENCE / REORGANISATION
+        ↓
+FINAL GENERATIVE STRUCTURE
+```
+
+The important difference is that R012 is actually richer.
+
+R010 involved:
+
+```text
+33 states
+× 2 sides
+= 66 networks
+
+792 communities
+```
+
+R012 contains:
+
+```text
+29 states
+× 2 prompts
+× 2 sides
+= 116 networks
+
+1,181 communities
+```
+
+But R012 also gives me something R010 did not have:
+
+```text
+same semantic ingredients
++
+controlled order perturbation
+```
+
+So I can distinguish:
+
+```text
+STRUCTURE THAT PERSISTS
+likely intrinsic to the semantic combination
+
+STRUCTURE THAT CHANGES
+sensitive to ordering / framing
+
+STRUCTURE THAT CHANGES TEMPORARILY
+processing-path effect
+
+STRUCTURE THAT DIVERGES AND REMAINS DIFFERENT
+persistent prompt-order effect
+```
+
+That makes R012 potentially more informative than R010.
+
+## What I would analyse in one pass
+
+I would retain the R010 discipline internally.
+
+### A — Independent state reconstruction
+
+For every:
+
+```text
+prompt
+× state
+× side
+```
+
+I would inspect each community from its:
+
+- representative tokens;
+- target-extreme tokens;
+- size;
+- token classes;
+- internal/boundary connectivity;
+- relations to other communities.
+
+Then assign it to something like:
+
+```text
+semantic parent
+formal substrate
+irreducible semantic
+mixed / unresolved
+unclear
+```
+
+Critically, I would **not use later states to decide what an earlier community means**.
+
+That preserves the strongest methodological property of R010.
+
+### B — Parent structures
+
+Then independently infer the minimum defensible parents for each state:
+
+```text
+COMMUNITIES
+     ↓
+first-order parents
+     ↓
+higher-order parents
+     ↓
+state architecture
+```
+
+with explicit exclusion boundaries.
+
+This is where we can determine whether the semantic intersection actually produces structures such as:
+
+```text
+visual / chromatic intensity
+urban nocturnal environment
+density / spatial organisation
+synthetic / electronic culture
+perceptual complexity
+etc.
+```
+
+Those are only examples—I would derive them from the measured networks rather than presuppose them.
+
+### C — Layer-wise evolution
+
+Only after freezing the state-local reconstructions would I establish lineages:
+
+```text
+early domain structure
+        ↓
+operations / attributes
+        ↓
+relational organisation
+        ↓
+higher-order semantic synthesis
+        ↓
+terminal structure
+```
+
+That gives the R012 equivalent of R010 Phase B.
+
+### D — Paired semantic trajectory
+
+This is the major new component.
+
+At every layer:
+
+```text
+BASELINE
+electro pink
+→ curvature density
+→ Tokyo nightlife
+
+versus
+
+VARIATION
+electro pink
+→ Tokyo nightlife
+→ curvature density
+```
+
+I can ask:
+
+```text
+What parent structures exist in both?
+
+Which structures change coverage?
+
+Which split or merge differently?
+
+Which emerge earlier in one ordering?
+
+Which survive to the terminal state?
+
+Does ordering alter only the route,
+or the resulting semantic structure?
+```
+
+The existing paired metrics already tell us that the final structures are materially different:
+
+```text
+final membership Jaccard ≈ 0.77
+final edge Jaccard       ≈ 0.56
+```
+
+The semantic analysis can tell us **what those differences actually are**.
+
+### E — Semantic versus measured topology
+
+As with R010 Phase C:
+
+```text
+semantic restructuring
+vs
+membership change
+edge change
+community repartitioning
+```
+
+That lets us distinguish:
+
+```text
+GEOMETRIC CHANGE
+different tokens selected
+
+PARTITION CHANGE
+same neighbourhood reorganised
+
+SEMANTIC CHANGE
+similar measured substrate interpreted
+under a different parent structure
+```
+
+R012 is particularly well suited to this because the prompt pair provides a controlled perturbation.
+
+### F — Coherence and generative structure
+
+I could then apply the lessons from Phase D without forcing its old categories:
+
+```text
+Where is parent reconstruction hardest?
+
+Where does compression create ambiguity?
+
+Where does the model re-differentiate?
+
+Which parents survive both prompt orderings?
+
+Which relations are necessary for the
+semantic intersection to remain coherent?
+```
+
+The final result could therefore be:
+
+```text
+SEMANTIC NEIGHBOURHOOD
+        ↓
+STATE-LOCAL PARENTS
+        ↓
+PARENT LINEAGES
+        ↓
+ORDER-INVARIANT CORE
+        +
+ORDER-SENSITIVE STRUCTURES
+        ↓
+RELATIONS BETWEEN PARENTS
+        ↓
+MINIMAL GENERATIVE STRUCTURE
+```
+
+## What “single pass” should not mean
+
+I would not do this:
+
+```text
+read all 1,181 communities
+        ↓
+write one global interpretation
+```
+
+That would discard precisely what R010 taught us.
+
+The one-pass analysis should instead internally enforce:
+
+```text
+STATE-LOCAL
+before
+CROSS-STATE
+
+PROMPT-LOCAL
+before
+CROSS-PROMPT
+
+SEMANTIC
+before
+TOPOLOGICAL COMPARISON
+```
+
+So it can be **one execution**, but not one undifferentiated analytical operation.
+
+There is also no need to reproduce R009 as a separate run. R009 existed partly because R008 needed a semantic classification layer before R010. For R012 I can perform:
+
+```text
+community classification
++
+parent reconstruction
+```
+
+inside the same analysis while keeping the two evidential stages explicitly separate.
+
+The likely output would therefore be closer to a unified:
+
+```text
+R012 SEMANTIC TOPOLOGY ANALYSIS
+
+Phase A
+community semantics + local parent reconstruction
+
+Phase B
+baseline and variation layer trajectories
+
+Phase C
+paired structural invariants and divergences
+
+Phase D
+semantic/topological correspondence
+
+Phase E
+coherence, parent relations and final generative structure
+```
+
+So yes: **R012 is now sufficiently complete for me to carry out the equivalent of R009 + R010 in a single controlled analytical pass, with the added advantage that we can identify which semantic structures are invariant to concept order and which are order-sensitive.**
+
+
+### MA-0065 — R012 consolidated semantic-topology analysis
+
+- Entry timestamp: `2026-11-14T06:51:59+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `R012 semantic analysis supplied by project owner`
+
+The complete R012 semantic pass is now sufficiently resolved to give a stable result. No further model inference was required; this analysis used the measured R012 community, transition and paired-prompt evidence at repository head `9825a959`.
+
+## R012 — consolidated semantic-topology analysis
+
+The strongest result is not a literal cluster called *electro pink + curvature density + Tokyo nightlife*. Instead, the model progressively constructs a higher-order structure that can be compressed as:
+
+```text
+CONSTRUCTED SENSORY–SPATIAL ENVIRONMENT
+│
+├── MATERIAL / PERCEPTUAL FIELD
+│   ├── colour
+│   ├── paint
+│   ├── material
+│   ├── sensors
+│   ├── electrodes
+│   ├── pixels
+│   └── surface / object properties
+│
+├── SPATIAL / URBAN FIELD
+│   ├── places
+│   ├── streets
+│   ├── cities
+│   ├── venues
+│   ├── commercial environments
+│   └── social/activity environments
+│
+├── FORM / TRANSFORMATION
+│   ├── transform
+│   ├── composition
+│   ├── alteration
+│   ├── construction
+│   ├── form
+│   └── creation
+│
+└── REPRESENTATION
+    ├── image
+    ├── text
+    ├── information
+    ├── system
+    ├── data
+    └── classification
+```
+
+The minimal relation holding those parents together is:
+
+```text
+sensory/material properties
+        +
+spatial/urban context
+        ↓
+transformation / composition
+        ↓
+represented or constructed environment
+```
+
+So the strongest defensible answer to the original question is:
+
+> **A constructed sensory-spatial environment whose identity emerges from the transformation and representation of material/perceptual properties within an urban or socially situated context.**
+
+I would **not** yet call the measured structure “cyberpunk”, “Tokyo neon”, “synthwave” or anything similarly recognisable. Those would be plausible human interpretations of the structure, but the measured communities do not support them strongly enough.
+
+---
+
+# Phase A — state-local reconstruction
+
+The 29 states fall into a very clear developmental hierarchy.
+
+| States | Dominant organisation | Interpretation |
+|---|---|---|
+| S00 | fixed assistant-prefix geometry | control; not prompt semantics |
+| S01–05 | lexical, object, action and formal context | contextual uptake |
+| S06–09 | material, physical, spatial properties | feature assembly |
+| S10–18 | environment + transformation + representation + social relations | relational organisation |
+| S19–23 | form, composition, pixels, transformation, spatial context | semantic synthesis |
+| S24–27 | colour, material, urban/place, sensory and representational parents | late condensation |
+| S28 | broad conceptual recoding | final-normalisation state |
+
+The important point is that the model does **not** simply begin with:
+
+```text
+electro pink
+curvature density
+Tokyo nightlife
+```
+
+and retain those three domains.
+
+It dismantles them.
+
+The effective progression is closer to:
+
+```text
+LEXICAL CONCEPTS
+      ↓
+ATTRIBUTES / OBJECTS
+      ↓
+MATERIAL + SPATIAL + SOCIAL FEATURES
+      ↓
+OPERATIONS ON THOSE FEATURES
+      ↓
+RELATIONS BETWEEN OPERATIONS AND FEATURES
+      ↓
+CONSTRUCTED HIGHER-ORDER ENVIRONMENT
+```
+
+That resembles R010's:
+
+```text
+OBJECTS
+→ OPERATORS
+→ RELATIONS
+→ FUNCTION
+```
+
+despite the completely different model, prompt and measurement anchor.
+
+---
+
+# Phase B — the major semantic lineages
+
+Five defensible semantic parents persist sufficiently strongly to trace through depth.
+
+### T — Transformation / form
+
+This is the strongest positive lineage.
+
+```text
+early
+transformations
+transform
+difference
+control
+alteration
+
+        ↓
+
+middle
+transformations
+measurements
+altering
+transforms
+sum
+
+        ↓
+
+late
+composition
+evolving
+transform
+adaptation
+transforming
+
+        ↓
+
+S28
+transform
+Create
+classify
+form
+Construct
+```
+
+At S22 the baseline contains an unusually explicit community:
+
+```text
+transform
+recipe
+composition
+evolving
+transforms
+individual
+contained
+```
+
+By S28 the baseline has:
+
+```text
+transform
+Create
+compilers
+classify
+form
+disappear
+construct
+```
+
+and the variation has:
+
+```text
+information
+transform
+image
+Create
+place
+word
+expression
+transforming
+```
+
+This parent is therefore real.
+
+There is, however, a confound: the fixed instruction itself contains **“structure forms”**. We cannot determine from R012 alone how much of this lineage originates from A/B/C and how much comes from the task shell.
+
+It should therefore be labelled:
+
+> **strongly measured, partially source-ambiguous.**
+
+---
+
+### M — Material / sensory / perceptual field
+
+This parent becomes progressively clearer.
+
+```text
+S04
+material
+paint
+painting
+line
+height
+image
+
+S06–09
+valves
+cracks
+thermostat
+laser
+spiral
+kitchen
+apartment
+
+S14–18
+electrodes
+sensor
+scratched
+twilight
+kitchen
+cupboard
+
+S21
+pixels
+electrodes
+
+S24
+cyan
+orange
+brown
+
+S25–27
+silicone
+flakes
+resin
+sensors
+paint
+cardboard
+electrodes
+```
+
+By S27 this is one of the clearest components of both prompts.
+
+Baseline S27 contains:
+
+```text
+disgusting
+psychiatric
+sensor
+flakes
+sensors
+kilometres
+kitchen
+electrodes
+
+extreme:
+paint
+```
+
+Variation S27 contains:
+
+```text
+sensors
+disgusting
+kitchen
+flakes
+eating
+blogging
+classics
+organisation
+drinkers
+
+extreme:
+paint
+transforming
+```
+
+The parent has moved well beyond individual colour words. It has become something closer to:
+
+> **sensory/material character of an environment.**
+
+---
+
+### U — Spatial / urban / situated environment
+
+Early geographic names are noisy, but the lineage becomes increasingly coherent.
+
+```text
+Japan / countries
+        ↓
+apartments / kitchens / streets
+        ↓
+Portsmouth / Singapore / Cincinnati / Stuttgart
+        ↓
+urban and commercial places
+        ↓
+service centre
+café
+Costco
+graveyard
+synagogue
+street
+cities
+```
+
+Baseline S27 contains a distinct place/venue community:
+
+```text
+synagogue
+service centre
+Costco
+graveyard
+description
+Gaza
+...
+```
+
+and another:
+
+```text
+Portsmouth
+Cincinnati
+Syracuse
+Stuttgart
+brown
+Asheville
+Green
+
+extreme:
+Orange
+```
+
+This is considerably stronger evidence for an **environmental/place parent** than for “Tokyo” specifically.
+
+`Tokyo` itself does not occur among the recorded community representatives or target-extreme tokens.
+
+---
+
+### R — Representation / information
+
+This begins partially entangled with technical/formal substrate:
+
+```text
+information
+report
+line
+image
+write
+control
+```
+
+and develops into:
+
+```text
+pixels
+data
+parameters
+representation
+image
+system
+```
+
+At S28 it becomes explicit.
+
+Baseline:
+
+```text
+text
+image
+char
+name
+XML
+object
+```
+
+plus a small systems parent:
+
+```text
+system
+control
+information system
+```
+
+Variation:
+
+```text
+text
+PostgreSQL
+XML
+MySQL
+SQL
+```
+
+and:
+
+```text
+information
+transform
+image
+Create
+place
+word
+expression
+```
+
+Representation therefore becomes one of the mechanisms through which the other parents become jointly coherent.
+
+---
+
+### S — Social / institutional / economic context
+
+This lineage is distributed across both sides.
+
+Earlier:
+
+```text
+participants
+government
+policymakers
+negotiations
+jurisdiction
+```
+
+Middle:
+
+```text
+curriculum
+insecurity
+experimentation
+accessibility
+organisation
+```
+
+Late:
+
+```text
+professional
+industries
+trade
+sports
+clubs
+business
+```
+
+S28 positive expands this into:
+
+```text
+psychological
+economic
+opportunities
+insecurity
+philosophical
+political
+government
+```
+
+It is important, but it is not as consistently central as transformation/material/representation.
+
+I would classify it as predominantly **contextual/adjacent**, not the generative core.
+
+---
+
+# What happened to the original three concepts?
+
+This is one of R012's most useful results.
+
+## Electro pink
+
+It does not survive as a lexical parent.
+
+Instead there are dispersed descendants:
+
+```text
+electrodes
+laser
+colour
+cyan
+orange
+paint
+image
+pixels
+neon
+```
+
+So:
+
+```text
+ELECTRO PINK
+      ↓
+electronic / visual / chromatic / perceptual properties
+```
+
+This is a plausible decomposition supported by the evidence.
+
+`pink` itself does not occur among the exported community representatives/extremes.
+
+---
+
+## Curvature density
+
+This is even more strongly decomposed.
+
+There is no representative/extreme occurrence of either `curvature` or `density`.
+
+Instead the network contains things such as:
+
+```text
+spiral
+line
+height
+pixels
+sum
+composition
+parameters
+areas
+direction
+length
+nodes
+transform
+form
+```
+
+The safest interpretation is therefore:
+
+```text
+CURVATURE DENSITY
+       ↓
+spatial / structural organisation
++
+composition
++
+transformation
+```
+
+not:
+
+```text
+curvature density
+→ literal geometry parent
+```
+
+The latter would overstate the measurement.
+
+---
+
+## Tokyo nightlife
+
+Again the literal phrase disappears.
+
+Indirect descendants include:
+
+```text
+Japan             early
+cities
+street
+clubs             predominantly negative-side
+drinkers
+café
+commercial venues
+Snapchat
+neon              terminal negative-side
+Tonight           terminal negative-side
+```
+
+So the defensible decomposition is:
+
+```text
+TOKYO NIGHTLIFE
+      ↓
+urban/place context
++
+social/activity environment
++
+commercial/venue context
+```
+
+rather than a stable “Tokyo nightlife” parent.
+
+---
+
+# Phase C — effect of swapping concept order
+
+This is where R012 gives us something R010 could not.
+
+The higher-order parent inventory is quite stable, but its **internal organisation is not**.
+
+The paired trajectory is:
+
+```text
+                    Membership    Edges       Community ARI
+
+S01–07                 .927        .826          .500
+S08–12                 .839        .663          .480
+S13–18                 .865        .706          .473
+S19–23                 .811        .622          .454
+S24–27                 .819        .632          .412
+```
+
+Thus:
+
+```text
+EARLY
+same ingredients
+similar relationships
+different partitions
+
+        ↓
+
+MIDDLE
+larger neighbourhood divergence
+
+        ↓
+
+LATE
+many ingredients reconverge
+but their grouping remains increasingly order-sensitive
+```
+
+This is important.
+
+The order perturbation does **not primarily invent an entirely different semantic universe**.
+
+Instead it increasingly changes:
+
+> **which surviving concepts are grouped together and which parent is allowed to absorb them.**
+
+That is almost exactly the kind of behaviour R010 Phase D suggested.
+
+---
+
+# The most important order-sensitive state: S17
+
+S17 is exceptionally revealing.
+
+Across the two prompts:
+
+```text
+membership Jaccard ≈ .851
+edge Jaccard       ≈ .684
+community ARI      ≈ .366
+```
+
+So most of the neighbourhood is still shared.
+
+A large proportion of the relational substrate is still shared.
+
+Yet the community partitions are dramatically different.
+
+In other words:
+
+```text
+mostly the same tokens
++
+many of the same relations
+        ↓
+different semantic grouping
+```
+
+S17 therefore looks much more like **alternative compression** than alternative vocabulary selection.
+
+It is probably the clearest R012 analogue of the abstraction/coherence conflicts found in R010.
+
+---
+
+# Two different modes of order sensitivity
+
+R012 distinguishes two mechanisms.
+
+## Mode 1 — neighbourhood selection
+
+Strongest around S19–23.
+
+By S23:
+
+```text
+membership ≈ .785
+edge       ≈ .578
+```
+
+The two prompts are selecting materially different neighbourhoods.
+
+This is genuine semantic-selection divergence.
+
+---
+
+## Mode 2 — repartitioning over a shared substrate
+
+Especially S17 and S25–27.
+
+For example, S26:
+
+```text
+membership ≈ .826
+edge       ≈ .642
+ARI        ≈ .390
+```
+
+and S27:
+
+```text
+membership ≈ .822
+edge       ≈ .634
+ARI        ≈ .403
+```
+
+A large common substrate exists, but it is organised differently.
+
+This gives:
+
+```text
+SAME INGREDIENTS
+      ↓
+DIFFERENT COMPRESSION
+      ↓
+DIFFERENT PARENT BOUNDARIES
+```
+
+That may be the most consequential finding for SDA/GRD.
+
+---
+
+# Baseline versus variation at the last transformer block
+
+S27 is the correct terminal transformer state.
+
+## Baseline
+`electro pink → curvature density → Tokyo nightlife`
+
+The positive structure is more **differentiated**.
+
+```text
+MATERIAL / SENSORY
+sensor
+flakes
+paint
+electrodes
+kitchen
+
+SPATIAL / VENUE
+synagogue
+service centre
+Costco
+graveyard
+
+CITY / CHROMATIC
+Portsmouth
+Cincinnati
+Syracuse
+Stuttgart
+brown
+Green
+Orange
+
+REPRESENTATIONAL / TECHNICAL
+UI / image / parameters / configuration
+```
+
+The place/venue branch remains relatively autonomous.
+
+---
+
+## Variation
+`electro pink → Tokyo nightlife → curvature density`
+
+The same higher-order ingredients exist, but they are more integrated.
+
+One large positive community combines:
+
+```text
+sensors
+material
+eating
+blogging
+organisation
+drinkers
+paint
+transforming
+```
+
+Another combines:
+
+```text
+psychiatric
+joint venture
+Snapchat
+service centre
+description
+...
+```
+
+Thus the variation appears to integrate social/activity information more directly into material/perceptual organisation.
+
+The cautious interpretation is:
+
+```text
+Tokyo-nightlife-last
+→ greater preservation of place / venue distinctions
+
+curvature-density-last
+→ greater compression into structural /
+  representational / sensory organisation
+```
+
+This is **consistent with an order/recency effect**, but one pair cannot distinguish recency from some more specific interaction between B and C.
+
+---
+
+# Phase D — semantic trajectory versus measured topology
+
+The strongest internal structural transition, excluding State 00 and terminal normalisation, is:
+
+```text
+S05 → S06
+
+membership ≈ .409
+edge       ≈ .192
+```
+
+Semantically, this corresponds to movement from broad transformation/object associations towards a much more explicit:
+
+```text
+material
+physical
+spatial
+property
+```
+
+organisation.
+
+So here geometric change and semantic change coincide.
+
+A second major region is:
+
+```text
+S19 → S20
+S20 → S21
+```
+
+with membership around `.46` and edge retention around `.22`.
+
+This is also semantically meaningful.
+
+Around S21 we first get the particularly coherent combination:
+
+```text
+sum
+transform
+altering
+pixels
+electrodes
+environmental objects
+```
+
+So this appears to be the transition from:
+
+```text
+FEATURES
+→ COMPOSITION OF FEATURES
+```
+
+The late transitions behave differently:
+
+```text
+S24 → S25   membership .603
+S25 → S26   membership .580
+S26 → S27   membership .532
+```
+
+but community ARI drops markedly at S25–27.
+
+That means the final semantic development relies increasingly on:
+
+```text
+REPARTITION
+rather than
+WHOLESALE NEIGHBOURHOOD REPLACEMENT
+```
+
+Again, this reproduces an important R010 mechanism.
+
+---
+
+# Curvature / developmental epochs
+
+The best reconstruction is:
+
+```text
+S00
+FIXED ANCHOR
+│
+│  final assistant-prefix embedding only
+│
+▼
+S01–05
+CONTEXT ACQUISITION
+│
+│ lexical/object/action activation
+│
+▼
+S06–09
+FEATURE ASSEMBLY
+│
+│ material / physical / spatial properties
+│
+▼
+S10–18
+RELATIONAL ORGANISATION
+│
+│ environment + representation +
+│ transformation + social conditions
+│
+▼
+S19–23
+COMPOSITION
+│
+│ features become organised as interacting
+│ components of a constructed structure
+│
+▼
+S24–27
+SEMANTIC CONDENSATION
+│
+│ colour + material + place + social activity
+│ compressed/repartitioned beneath higher parents
+│
+▼
+S28
+TERMINAL RECODING
+```
+
+The strongest meaningful internal curvature points are approximately:
+
+```text
+S05→06    feature reorganisation
+S19→20    entry into late synthesis
+S20→21    composition / representation emergence
+S25→26    late repartition
+S26→27    late repartition
+```
+
+---
+
+# State 28 must be separated
+
+S28 is not another transformer reasoning step.
+
+It is final normalisation.
+
+And it causes:
+
+```text
+S27 → S28
+
+membership Jaccard ≈ .129
+edge Jaccard       ≈ .026
+```
+
+That is enormous.
+
+So:
+
+```text
+S27
+last transformer-computed organisation
+
+        ↓
+RMS/final normalisation
+
+S28
+different vocabulary projection geometry
+```
+
+The S28 semantic map is still interesting because it is the representation presented to the output head, but it must not be read as:
+
+> “The model suddenly changed its mind in its final layer.”
+
+It is better described as **terminal representational recoding**.
+
+This is an important correction to how future runs should interpret layer boundaries.
+
+---
+
+# What S28 recodes the structure into
+
+After normalisation the semantic parents become broader and much more recognisable.
+
+Baseline positive:
+
+```text
+PSYCHOSOCIAL / ECONOMIC
+psychological
+economic
+opportunities
+insecurity
+philosophical
+
+MATERIAL / COMMERCIAL ENVIRONMENT
+clinic
+luxury goods
+property
+vodka
+granite
+decor
+clothing
+services
+
+REPRESENTATION
+text
+image
+name
+XML
+object
+
+TRANSFORMATION
+transform
+Create
+classify
+form
+Construct
+
+PLACE / POLITICAL
+government
+political
+Shanghai
+Palestine
+Paris
+Barcelona
+
+SYSTEM
+system
+control
+information system
+```
+
+Variation compresses this more strongly into:
+
+```text
+PSYCHOSOCIAL / ECONOMIC / POLITICAL
+          +
+REPRESENTATION / DATA
+          +
+TRANSFORMATION / IMAGE / EXPRESSION
+```
+
+That difference is consistent with the S27 result.
+
+---
+
+# Where coherence is hardest to maintain
+
+If “coherence” is operationalised here as **stable community organisation under a minimal concept-order perturbation**, three regions stand out.
+
+### 1. S17 — strongest abstraction/partition conflict
+
+```text
+membership high
+edge overlap substantial
+ARI very low
+```
+
+The ingredients agree; their organisation does not.
+
+### 2. S20–23 — semantic-selection conflict
+
+The actual token neighbourhood increasingly differs.
+
+The prompts are no longer merely partitioning the same material differently.
+
+### 3. S25–27 — late parent-boundary conflict
+
+Neighbourhood overlap remains around `.82`, but community organisation remains unstable.
+
+This suggests the model has broadly decided **what matters**, but not one uniquely determined way of grouping those things.
+
+The late state therefore resembles:
+
+```text
+stable semantic ingredients
++
+several plausible parent organisations
+```
+
+rather than convergence on a single taxonomic partition.
+
+---
+
+# Positive versus negative architecture
+
+One of the strongest quantitative asymmetries concerns community stability.
+
+Across S13–18:
+
+```text
+paired community ARI
+
+positive ≈ .567
+negative ≈ .380
+```
+
+S19–23:
+
+```text
+positive ≈ .539
+negative ≈ .370
+```
+
+S24–27:
+
+```text
+positive ≈ .484
+negative ≈ .341
+```
+
+Yet membership and edge overlaps are similar between the two sides.
+
+So the anti-aligned vocabulary population is consistently **more sensitive in how it partitions** under concept-order changes.
+
+This resembles the R010 finding that negative-side structure was more closely connected to restructuring.
+
+But the same qualification remains essential:
+
+> **negative cosine does not mean suppression.**
+
+It contains real semantic families:
+
+```text
+institutional/social activity
+clubs
+law
+trade
+sport
+
+evaluation
+better
+BEST
+should
+unnecessary
+
+reporting/evidence
+report
+study
+indicates
+
+temporal/media/chromatic
+Tonight
+video
+neon
+BLUE
+WHITE
+```
+
+It is more appropriate to call these **anti-aligned contextual/boundary populations** than suppressed information.
+
+---
+
+# Order-invariant versus order-sensitive structure
+
+This is probably R012's most useful summary.
+
+## Order-invariant at the parent level
+
+Both prompts repeatedly recover:
+
+```text
+TRANSFORMATION / FORM
+MATERIAL / SENSORY CHARACTER
+REPRESENTATION
+SPATIAL / PLACE CONTEXT
+SOCIAL / INSTITUTIONAL CONTEXT
+```
+
+These survive substantial token and community rearrangement.
+
+## Order-sensitive
+
+The order changes:
+
+```text
+which parent absorbs which community
+
+how strongly place remains autonomous
+
+whether social activity joins material/sensory structure
+
+where chromatic information sits
+
+how representational structure is compressed
+
+the positive/negative placement of peripheral concepts
+```
+
+Therefore:
+
+> **Parent identity is considerably more stable than community identity.**
+
+That directly supports the direction R010 suggested for SDA-3.
+
+---
+
+# GRD reconstruction
+
+Applying GRD only after reconstructing the parents:
+
+```text
+G — GENERATIVE
+
+Transformation / composition
+Material-perceptual organisation
+Representation
+
+These jointly produce the emerging structure.
+
+
+B — BOUNDARY
+
+Institutional/evaluative/reporting structures
+Technical/formal constraints
+Anti-aligned alternative contextual organisations
+
+These define nearby but non-core possibilities.
+
+
+A — ADJACENT
+
+Urban/place context
+Psychosocial/economic context
+Social activity / venues
+
+Relevant and sometimes strongly integrated,
+but not consistently necessary to the core.
+
+
+E — EMERGING
+
+Representation / image / information / system
+
+This becomes increasingly coherent and explicit
+late in the trajectory.
+
+
+D — DECAYING
+
+Early generic object/manipulation categories
+and broad lexical associations lose independent
+semantic status as more functional parents appear.
+
+
+R — RESIDUAL
+
+Morphology
+multilingual fragments
+punctuation
+code syntax
+names without defensible contextual function
+
+These should not be forced into semantic parents.
+```
+
+I would **not** put `clubs`, `neon`, or other anti-aligned literal nightlife tokens automatically under `B`. Their geometry alone is insufficient. Some are simply adjacent/residual associations.
+
+---
+
+# The minimal parent hierarchy
+
+The strongest compressed architecture is therefore:
+
+```text
+SEMANTIC INTERSECTION
+│
+├── GENERATIVE PROCESS
+│   └── transformation / composition / construction
+│
+├── SUBJECT OF TRANSFORMATION
+│   ├── sensory/material properties
+│   └── spatial/environmental properties
+│
+├── MODE OF ORGANISATION
+│   └── representation / information / image / system
+│
+└── CONTEXT
+    ├── urban/place
+    └── social/economic/institutional
+```
+
+Or relationally:
+
+```text
+MATERIAL / SENSORY FEATURES
+             │
+             │ situated within
+             ▼
+SPATIAL / URBAN ENVIRONMENT
+             │
+             │ organised through
+             ▼
+TRANSFORMATION / COMPOSITION
+             │
+             │ made coherent through
+             ▼
+REPRESENTATION
+             │
+             │ contextualised by
+             ▼
+SOCIAL / ECONOMIC / INSTITUTIONAL FIELD
+```
+
+That is more defensible than any genre label.
+
+---
+
+# The most important methodological finding
+
+R012 also tells us something about the experimental design itself.
+
+R010 measured a contextualised **semantic token**.
+
+R012 measures a contextualised **response-initiation position**.
+
+Those are not equivalent.
+
+```text
+R010
+
+semantic concept token
+      ↓
+semantic neighbourhood relatively accessible
+
+
+R012
+
+assistant-prefix token
+with causal access to entire prompt
+      ↓
+semantic information
++
+instruction structure
++
+output preparation
++
+formatting/linguistic substrate
+```
+
+That explains why R012 contains much more:
+
+```text
+code
+punctuation
+multilingual morphology
+formatting
+generic response operators
+```
+
+than R010.
+
+So R012 successfully measures a **whole-prompt decision state**, but it is not yet a perfectly clean instrument for an SDA-style semantic intersection.
+
+The next methodological problem is therefore no longer hidden-state capture.
+
+It is **signal separation**:
+
+```text
+whole-prompt state
+        =
+prompt-shell contribution
++
+A/B/C semantic contribution
++
+order interaction
++
+response-preparation contribution
+```
+
+The current order perturbation isolates the **order interaction** extremely well.
+
+It does **not** isolate the prompt-shell contribution.
+
+That matters particularly for the persistent `transform/form` lineage because the shell itself asks:
+
+> “What **structure forms** from …?”
+
+---
+
+# What R012 establishes about SDA-3
+
+R012 substantially strengthens one conclusion from R010:
+
+```text
+TOKENS
+are unstable
+
+COMMUNITIES
+are more stable but still plastic
+
+PARENT STRUCTURES
+are substantially more stable
+
+RELATIONS BETWEEN PARENTS
+contain the most persistent semantic information
+```
+
+So the correct SDA/GRD analysis hierarchy is now even clearer:
+
+```text
+MEASURED NEIGHBOURHOOD
+        ↓
+COMMUNITIES
+        ↓
+PARENT RECONSTRUCTION
+        ↓
+PARENT STABILITY ACROSS PERTURBATION
+        ↓
+RELATIONS BETWEEN PARENTS
+        ↓
+GRD ROLES
+        ↓
+MINIMAL GENERATIVE STRUCTURE
+```
+
+Not:
+
+```text
+tokens
+→ immediately assign C/S/A/HCU/E
+```
+
+The controlled perturbation gives direct evidence for why.
+
+A quarter of the late token neighbourhood can change and community ARI can fall to roughly `.4`, while the same higher-order semantic parents remain recoverable.
+
+That means **semantic meaning is more invariant at the relational parent level than at the token or community level.**
+
+---
+
+## Final R012 conclusion
+
+The semantic structure that survives both concept orders is:
+
+```text
+                   CONSTRUCTED
+              SENSORY-SPATIAL FIELD
+                       │
+          ┌────────────┼────────────┐
+          │            │            │
+      material /    spatial /   representation
+       sensory        place          / image
+          │            │            │
+          └────────────┼────────────┘
+                       │
+              TRANSFORMATION /
+                COMPOSITION
+                       │
+                       ▼
+             coherent constructed
+                 environment
+                       │
+                       ▼
+             social / economic /
+            institutional context
+```
+
+The perturbation changes **how this structure is assembled**, not its basic higher-order inventory.
+
+That gives the strongest answer R012 currently supports:
+
+> **The intersection is represented less as a named aesthetic category than as a constructed perceptual environment: material and sensory properties are organised spatially, transformed into compositional form, and represented within an urban/social context. Concept order substantially changes the internal grouping of those components, but not the parent architecture that survives.**
+
+And the deeper methodological conclusion is:
+
+> **The stable semantic object is not the token neighbourhood itself. It is the higher-order relational structure that can be reconstructed across changing neighbourhoods and changing community partitions.**
+
+That is the strongest confirmation so far of the parent-node direction that emerged from R010.
+```text
+R012 SEMANTIC TOPOLOGY ANALYSIS
+
+Phase A
+community semantics + local parent reconstruction
+
+Phase B
+baseline and variation layer trajectories
+
+Phase C
+paired structural invariants and divergences
+
+Phase D
+semantic/topological correspondence
+
+Phase E
+coherence, parent relations and final generative structure
+```
+
+So yes: **R012 is now sufficiently complete for me to carry out the equivalent of R009 + R010 in a single controlled analytical pass, with the added advantage that we can identify which semantic structures are invariant to concept order and which are order-sensitive.**
+
+
+### MA-0066 — ChatGPT response: separating pure semantic topology from instruction effects
+
+- Entry timestamp: `2026-11-14T06:55:24+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `ChatGPT response supplied by project owner`
+
+Yes — if the objective is specifically to recover the **semantic neighbourhood produced by the concepts themselves**, leaving out `What structure forms from` is cleaner.
+
+R012 currently measures something closer to:
+```markdown
+"What structure forms from"
+        +
+electro pink
+        +
+curvature density
+        +
+Tokyo nightlife
+        ↓
+whole-prompt state
+```
+
+So the persistent `transform / form / composition` lineage cannot be cleanly attributed to the three concepts because `forms` and `structure` are themselves strong semantic inputs.
+
+A cleaner experiment would be:
+```
+electro pink
+curvature density
+Tokyo nightlife
+<fixed anchor>
+```
+
+and capture the hidden state at `<fixed anchor>`.
+
+The important part is **not** simply to capture the final concept token. If you use:
+```
+electro pink, curvature density, Tokyo nightlife
+                                      ↑
+                                  capture
+```
+
+then `nightlife` is simultaneously:
+
+1. one of the concepts being analysed; and
+2. the position whose contextual representation is being measured.
+
+That reintroduces the R010 problem.
+
+Instead:
+```
+electro pink
+curvature density
+Tokyo nightlife
+|
+↑
+fixed identical capture position
+```
+
+Conceptually:
+```css
+A
+B
+C
+↓
+neutral anchor
+↓
+whole-prefix representation
+```
+
+The anchor does not need to be literally `|`; it should be a **fixed, minimally semantic token or delimiter** chosen once and used for every experiment.
+
+The resulting measurement becomes much cleaner:
+```
+CONCEPTS
+   ↓
+transformer integration
+   ↓
+fixed anchor state
+   ↓
+vocabulary projection
+   ↓
+semantic neighbourhood
+```
+
+rather than:
+```diff
+CONCEPTS
++
+SEMANTIC QUESTION
++
+RESPONSE PREPARATION
+   ↓
+semantic neighbourhood
+```
+
+There is one trade-off. `What structure forms from...` tells the model explicitly to **integrate** A, B and C. A bare list merely gives it three adjacent concepts. The transformer will contextualise them jointly, but we cannot assume it is specifically computing their semantic intersection.
+
+So I would distinguish two experimental objectives.
+
+### Pure neighbourhood
+
+For:
+
+> What semantic structure is activated when A, B and C occur together?
+
+use:
+```css
+A
+B
+C
+<anchor>
+```
+
+This is probably the right default for SDA-style topology.
+
+### Explicit synthesis
+
+For:
+
+> What structure does the model construct when explicitly asked to synthesise A, B and C?
+
+use an instruction shell.
+
+But then the shell needs its own control.
+
+For example:
+```css
+CONTROL
+What structure forms from A, B, C?
+
+SHELL CONTROL
+What structure forms from X, Y, Z?
+```
+
+so that recurring `structure / form / transformation` effects can be separated from concept-specific effects.
+
+For your present goal, I would simplify even further:
+```
+electro pink | curvature density | Tokyo nightlife |
+```
+
+with the **last delimiter as the capture position**.
+
+Then test all six permutations:
+```less
+A | B | C |
+A | C | B |
+B | A | C |
+B | C | A |
+C | A | B |
+C | B | A |
+```
+
+This would let us separate:
+```vbnet
+SEMANTIC CORE
+structure surviving all permutations
+
+ORDER EFFECT
+structure changing with sequence
+
+RECENCY EFFECT
+structure associated with whichever concept is last
+
+PAIRWISE INTERACTION
+structure changing when two concepts are adjacent
+```
+
+That is substantially cleaner than R012's current two-prompt comparison.
+
+There is an additional improvement if the purpose is **semantic topology rather than chatbot behaviour**: use a **base model rather than an instruction-tuned model** where possible.
+
+With an instruct model:
+```diff
+concepts
++
+chat template
++
+assistant-generation prefix
++
+instruction-following training
+```
+
+all influence the measured state.
+
+With a base causal model:
+```
+concepts
++
+fixed delimiter
+```
+
+the interpretation is much closer to ordinary learned semantic co-contextualisation.
+
+So I would now regard the clean experimental hierarchy as:
+```markdown
+LEVEL 1 — PURE SEMANTIC TOPOLOGY
+
+A | B | C |
+          ↑
+       capture
+
+        ↓
+
+LEVEL 2 — ORDER ROBUSTNESS
+
+all permutations
+        ↓
+intersection / divergence
+
+        ↓
+
+LEVEL 3 — INSTRUCTION EFFECT
+
+"What structure forms from A, B, C?"
+        ↓
+compare against Level 1
+
+        ↓
+
+LEVEL 4 — RESPONSE CONSTRUCTION
+
+assistant-prefix state
+        ↓
+how semantic topology is converted
+into an answer
+```
+
+R012 inadvertently combined Levels **1, 3 and 4**.
+
+The next version can separate them.
+
+And for SDA-3's original purpose, **Level 1 is probably the one you actually wanted all along**.
+
+
+### MA-0067 — Codex reconciliation record: GitHub-authored R012 analysis import
+
+- Entry timestamp: `2026-11-14T07:06:12+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex`
+- Entry type: `repository reconciliation and provenance record`
+- Source repository commit: `fe617a926f18e3c20e9fb845d8e7e9c6b8cc17de`
+- Imported artifact: `single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/R012_RUN_ANALYSIS_AND_RECOMMENDATIONS.html`
+- Imported artifact SHA-256: `ac62428c03f249d91fa1058b08b39aa1e71d7d2fe74c9f54ba5a7985d9e605b1`
+
+The private parent repository was fast-forwarded from `9825a959` to GitHub
+commit `fe617a926`, which added the R012 synthesis and R013 recommendations as
+one HTML report. The report was then imported byte-for-byte into the
+authoritative local `llm_topology` repository. Its source and destination
+SHA-256 values matched.
+
+The pre-existing uncommitted meta-analysis entries MA-0063 through MA-0066
+were preserved. `R012_PLAN.md` was also corrected from the stale
+`Current status: running` line to `Current status: successful`, consistent with
+the completed manifest and completeness verification.
+
+No measured R012 data, network definitions, community assignments or semantic
+analysis content was altered during reconciliation.
