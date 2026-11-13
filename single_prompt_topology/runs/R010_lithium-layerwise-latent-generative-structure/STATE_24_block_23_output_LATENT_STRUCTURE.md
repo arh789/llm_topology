@@ -8,65 +8,23 @@
 - Protocol: `R010_ANALYSIS_PROTOCOL.md`
 - R009 communities: **12 positive-head + 12 negative-tail = 24**
 - R008 population: **2,883 positive-head + 2,620 negative-tail = 5,503 nodes**
-- Status: Phase-A independent reconstruction complete
+- Status: **clean Phase-A rerun complete**
 
-This file reconstructs State 24 only. Retrieval and graph inspection were
-restricted to `state_index=24 / block_23_output`. No later-state evidence was
-used.
+This file replaces the earlier State 24 reconstruction. The replacement was constructed independently from State 24 R008/R009 evidence only. The previous R010 State 24 reconstruction was not inspected before the replacement hypothesis was frozen.
+
+No State 25 semantic content was exposed during this rerun.
 
 ## Evidence inventory
-
-For every State 24 community, the reconstruction inspected the underlying R008
-community record before assigning a disposition or parent.
 
 Evidence used:
 
 1. `R009/STATE_24_block_23_output.md`;
 2. all 24 State 24 rows in R008 `community_nodes.csv`;
-3. the complete State 24 within-side relation set in R008
-   `community_edges.csv`;
-4. the State 24 section of `chatgpt_layer_packets.md`, including compact
-   cross-side relations.
+3. the complete State 24 within-side relation set in R008 `community_edges.csv`.
 
-The compressed token-level membership artifact was not decoded through the
-available GitHub text connector. No claim is made that complete token-by-token
-membership was inspected.
+The State 24 layer packet was deliberately not used because previous packet retrieval had crossed the State 24/25 boundary. The compressed token-level membership artifact was also not decoded through the GitHub text connector.
 
-## Underlying R008 community inspection
-
-### Positive head
-
-| Community | Size | Internal / boundary edges | Mean degree | Mean target cosine | Underlying identity |
-|---|---:|---:|---:|---:|---|
-| C0 | 388 | 1,566 / 2,230 | 13.82 | +0.03222 | Exploration, anticipation, prediction and developmental/process activity. |
-| C1 | 350 | 1,154 / 1,968 | 12.22 | +0.03119 | Inevitability, interpretation, routes and reappearance stem families; lexical form dominates. |
-| C2 | 329 | 1,376 / 1,947 | 14.28 | +0.03111 | Common grammatical/function words and lexical fragments. |
-| C3 | 274 | 1,021 / 1,562 | 13.15 | +0.03206 | Film/media production, publishing, learning and digital-interface activity. |
-| C4 | 243 | 1,061 / 1,166 | 13.53 | +0.03228 | Personal names, cities and geographic entities. |
-| C5 | 240 | 1,325 / 609 | 13.58 | +0.03300 | Mathematical/code punctuation and symbolic formatting. |
-| C6 | 230 | 801 / 1,427 | 13.17 | +0.03225 | Biomedical/pharmacological concepts mixed with gravitational/regenerative/freshness terms. |
-| C7 | 220 | 843 / 1,473 | 14.36 | +0.03215 | Measurement, quantification, interactions and computation mixed with example-related morphology. |
-| C8 | 175 | 643 / 1,262 | 14.56 | +0.03174 | Entrepreneurship/research/business activity mixed with social and healthcare terms. |
-| C9 | 162 | 536 / 1,074 | 13.25 | +0.03211 | Infant/health terms mixed with leisure, travel, shopping and everyday activity. |
-| C10 | 149 | 582 / 864 | 13.61 | +0.03166 | Temporal, evaluative and comparative/descriptive discourse language. |
-| C11 | 123 | 723 / 278 | 14.02 | +0.03017 | Numeric strings and short coded values. |
-
-### Negative tail
-
-| Community | Size | Internal / boundary edges | Mean degree | Mean target cosine | Underlying identity |
-|---|---:|---:|---:|---:|---|
-| C0 | 460 | 1,961 / 1,925 | 12.71 | -0.03148 | Short name-like, biomedical and technical/code fragments. |
-| C1 | 378 | 1,619 / 2,090 | 14.10 | -0.03169 | Administrative characterisation, recommendations, constitutional/legal and regulatory concepts. |
-| C2 | 267 | 1,080 / 1,488 | 13.66 | -0.03074 | Negative/intense evaluation, degree/frequency and bodily/physical descriptors. |
-| C3 | 260 | 1,061 / 1,344 | 13.33 | -0.03126 | Downregulation, encouragement, prohibition, suppression and verification/change actions. |
-| C4 | 253 | 1,028 / 1,298 | 13.26 | -0.03045 | Cardiovascular disease, cytokine biology, immunology and pathology. |
-| C5 | 199 | 928 / 1,032 | 14.51 | -0.03146 | Personal names mixed with geographic entities and regions. |
-| C6 | 196 | 759 / 1,129 | 13.51 | -0.03203 | Vehicles, roads, built environment and material/household objects. |
-| C7 | 144 | 610 / 811 | 14.10 | -0.03106 | Grammar/function fragments mixed with punctuation/tokenisation residue. |
-| C8 | 128 | 532 / 797 | 14.54 | -0.03170 | Monarchy, religion, empire and mythic/fantastical roles. |
-| C9 | 115 | 396 / 598 | 12.09 | -0.03148 | Multilingual words, suffixes and orthographic fragments. |
-| C10 | 113 | 350 / 703 | 12.42 | -0.03214 | Uppercase lexical stems, modal/status terms and code-like fragments. |
-| C11 | 107 | 573 / 317 | 13.67 | -0.02992 | Numeric strings, historical years and quantity words. |
+Accordingly, no cross-side bridge is retained in this rerun.
 
 ## Population accounting
 
@@ -102,7 +60,7 @@ Semantic-eligible denominator: **1,681 nodes**.
 
 ## Positive-side reconstruction
 
-### P+0 — Developmental process and quantitative-system analysis
+### P+0 — Developmental process and quantitative system analysis
 
 - **Primary children:** C0, C7
 - **Primary nodes:** 608
@@ -110,23 +68,13 @@ Semantic-eligible denominator: **1,681 nodes**.
 - **Semantic-eligible coverage:** 38.0%
 - **Confidence:** High
 
-**Evidence.** C0 contains exploration, anticipation, prediction, resolution,
-development and evolving processes. C7 contains measurement, size,
-quantification, interactions, computation, comparison and renormalisation. Their
-direct relation contains **390 token edges**, mean cosine **0.10425**, the
-strongest positive semantic pair in State 24. The minimum common generator is
-developmental system analysis: systems or situations are explored and predicted
-while being measured, quantified and represented through their interactions and
-computational structure.
+**Evidence.** C0 contains exploration, characterisation, anticipation, prediction, resolution and development. C7 contains measurement, quantification, interactions, computation, comparison and system-analysis concepts. Their direct relation is the strongest positive semantic connection: **390 token edges**, mean cosine **0.10425**.
 
-**Secondary links:** C3, C8 and C10. C0–C3 has **260 edges**, C7–C3 **234**;
-C0–C8 **257**, C7–C8 **112**; C0–C10 **202**, C7–C10 **69**. Media/learning,
-enterprise/healthcare activity and evaluative descriptors surround the process
-architecture without being necessary children.
+The minimum common generator is developmental system analysis: evolving situations are explored and predicted while being measured, quantified and compared.
 
-**Exclusion boundary.** C7 contains example-related morphology, but its
-measurement/quantification core is strong. C3 is mediated production/learning,
-C8 is research/business/social activity, and C10 is modifier-heavy.
+**Secondary links:** C3, C8, C6 and C10. C0–C3 has **260 edges**, C7–C3 **234**; C0–C8 **257**, C7–C8 **112**; C0–C6 **201**, C7–C6 **169**; C0–C10 **202**, C7–C10 **69**.
+
+**Exclusion boundary.** C3 is media/interface activity, C8 professional/enterprise activity, C6 biomedical/regenerative material and C10 discourse/evaluative description. A broader activity or information label would lose discrimination.
 
 ### P+1 — Mediated creative, research and professional activity
 
@@ -136,42 +84,31 @@ C8 is research/business/social activity, and C10 is modifier-heavy.
 - **Semantic-eligible coverage:** 28.1%
 - **Confidence:** Moderate / High
 
-**Evidence.** C3 contains filmmaking, publishing, learning, browsers,
-notifications, writing and digital media. C8 contains entrepreneurs,
-Researchers, sessions, negotiation, business, organisations, therapists,
-conversations and healthcare/professional activity. Their direct relation
-contains **222 token edges**, mean cosine **0.09422**. The common generator is
-mediated research/professional activity: knowledge work, creative production,
-communication and enterprise occur through media, learning and platform
-contexts.
+**Evidence.** C3 contains film/media production, publishing, learning and digital-interface activity. C8 contains entrepreneurship, research, business, organisations, healthcare and professional interaction. Their direct relation has **222 token edges**, mean cosine **0.09422**.
 
-**Secondary link:** P+0. C0–C3 has **260 edges**, C7–C3 **234**, C0–C8
-**257** and C7–C8 **112**.
+The common generator is mediated professional activity: research, enterprise, learning and organisational work are expressed through media, publishing and software/interface systems.
 
-**Exclusion boundary.** C3 is media/learning/platform oriented; C8 is
-enterprise/research/social-professional and includes healthcare. Their shared
-parent is not broadened to generic “activity”.
+**Secondary link:** P+0. C0–C3 **260**, C0–C8 **257**, C7–C3 **234**, C7–C8 **112**.
+
+**Exclusion boundary.** C3 is media/interface centred and C8 professional/enterprise centred. C6 and C9 contain health/everyday-life mixtures rather than professional information production.
 
 ### Positive irreducible and unresolved structures
 
-- **C6 — mixed-unresolved:** biomedical/pharmacological and
-  gravitational/regenerative/freshness structures coexist.
-- **C9 — mixed-unresolved:** infant/health and leisure/travel/retail/everyday
-  activity coexist.
-- **C10 — irreducible-semantic:** temporal, evaluative and comparative
-  descriptors; secondary relation to P+0.
+- **C6 — mixed-unresolved:** biomedical/pharmacological material mixed with physical, regenerative and freshness terms; secondary to P+0.
+- **C9 — mixed-unresolved:** infant/health terms mixed with leisure, travel, shopping and everyday activity.
+- **C10 — irreducible-semantic:** temporal, evaluative and comparative/descriptive discourse language; secondary to P+0.
 
 ### Positive formal/name substrate
 
-- C1 — lexical stem families
-- C2 — grammar/function words and fragments
-- C4 — names/geographic entities
+- C1 — incomplete inevitability/interpretation/reappearance stem families
+- C2 — grammar/function words and lexical fragments
+- C4 — personal names/cities/geographic entities
 - C5 — mathematical/code punctuation
-- C11 — numeric strings/codes
+- C11 — numeric strings/coded values
 
 ## Negative-side reconstruction
 
-### P-0 — Administrative/regulatory characterisation, adverse judgement and controlled change
+### P-0 — Administrative characterisation, adverse judgement and controlled change
 
 - **Primary children:** C1, C2, C3
 - **Primary nodes:** 905
@@ -179,24 +116,19 @@ parent is not broadened to generic “activity”.
 - **Semantic-eligible coverage:** 53.8%
 - **Confidence:** High
 
-**Evidence.** C1 contains administrative characterisation,
-recommendations, constitutional/legal and regulatory concepts. C2 contains
-negative/intense evaluation, frequency/degree and bodily descriptors. C3
-contains downregulation, encouragement, prohibition, suppression and
-verification/change actions. The structure is strongly triangulated:
-C1–C3 has **371 token edges**, mean cosine **0.09895**; C1–C2 **369** at
-**0.09768**; C2–C3 **324** at **0.09358**. The common generator is organised
-state judgement and control: conditions are characterised institutionally,
-evaluated for adverse or extreme qualities, and encouraged, prohibited,
-suppressed, activated or verified.
+**Evidence.** C1 contains administrative characterisation, recommendations, constitutional/legal and regulatory concepts. C2 contains negative/intense evaluation, degree and bodily descriptors. C3 contains downregulation, encouragement, prohibition, suppression and verification/change actions.
 
-**Secondary links:** C4 and P-1. C1–C4 has **278 edges**, linking pathology to
-administrative characterisation; C1–C8 has **194**, linking authority roles to
-the same institutional field.
+The triad is strongly connected:
 
-**Exclusion boundary.** C1 is administrative/descriptive, C2 evaluative and
-degree-oriented, and C3 intervention/change-oriented. The parent cannot be
-reduced to any one of these child functions.
+- C1–C3: **371 token edges**, mean cosine **0.09895**
+- C1–C2: **369**, mean cosine **0.09768**
+- C2–C3: **324**, mean cosine **0.09358**
+
+The minimum common generator is organised state control: conditions are administratively characterised, evaluated for adverse or extreme qualities, and acted upon through encouragement, prohibition, suppression or regulatory change.
+
+**Secondary links:** C4, C6 and P-1. C1–C4 **278**, C2–C4 **152**, C3–C4 **98** connect pathology to the control field. C1–C6 **202**, C2–C6 **125**, C3–C6 **113** connect material environments. C1–C8 **194**, C2–C8 **76**, C3–C8 **51** connect authority/role structure.
+
+**Exclusion boundary.** C4 remains a biomedical pathology ontology, C6 a physical/material environment and C8 an authority/mythic-role domain. They are adjacent to control but not constitutive of its minimum structure.
 
 ### P-1 — Territorial identity and institutional/mythic authority
 
@@ -206,61 +138,55 @@ reduced to any one of these child functions.
 - **Semantic-eligible coverage:** 19.5%
 - **Confidence:** Moderate / High
 
-**Evidence.** C5 contains personal names and geographic entities/regions. C8
-contains monarchy, religion, empire and mythic/fantastical authority roles.
-Their direct relation contains **145 token edges**, mean cosine **0.09701**.
-The common generator is authority and social identity situated within
-territorial/entity contexts.
+**Evidence.** C5 contains personal names plus geographic entities and regions. C8 contains monarchy, religion, empire and mythic/fantastical roles. Their direct relation has **145 token edges**, mean cosine **0.09701**.
 
-**Secondary link:** C6. C6–C8 has **124 edges** and C5–C6 **97**, showing that
-material/built settings contextualise territorial and authority structures.
+The minimum common generator is institutional and symbolic authority situated within territorial and social identity.
 
-**Exclusion boundary.** C5 is entity/territory-centred; C8 is authority/role
-centred. C6 remains a material environment rather than authority itself.
+**Secondary link:** C6. C5–C6 has **97 edges** and C6–C8 **124**, placing material/built settings around authority and territory.
+
+**Exclusion boundary.** C5 is entity/territory centred and C8 role/authority centred. C6 is physical/material rather than institutional authority.
 
 ### Negative irreducible structures
 
-- **C4 — irreducible-semantic:** cardiovascular/cytokine/immunological
-  pathology; secondary relation to P-0.
-- **C6 — irreducible-semantic:** vehicles, roads, built environment and
-  material/household objects; secondary relation to P-1.
+- **C4 — irreducible-semantic:** cardiovascular/cytokine/immunological pathology; secondary to P-0.
+- **C6 — irreducible-semantic:** vehicles, roads, built environment and material/household objects; secondary to P-0 and P-1.
 
 ### Negative formal/name substrate
 
 - C0 — short name-like, biomedical and technical/code fragments
-- C7 — grammar/function fragments plus punctuation/tokenisation residue
-- C9 — multilingual lexical/morphological fragments
+- C7 — grammar/function fragments mixed with punctuation/tokenisation residue
+- C9 — multilingual words/suffixes/orthographic fragments
 - C10 — uppercase lexical/status/code fragments
-- C11 — numeric strings/years
+- C11 — numeric strings/historical years/quantity words
 
 ## Community disposition table
 
-| Side | Community | Size | Primary disposition | Secondary links |
-|---|---|---:|---|---|
-| + | C0 | 388 | parent:P+0 | — |
-| + | C1 | 350 | formal-substrate | — |
-| + | C2 | 329 | formal-substrate | — |
-| + | C3 | 274 | parent:P+1 | P+0 |
-| + | C4 | 243 | formal-substrate | — |
-| + | C5 | 240 | formal-substrate | — |
-| + | C6 | 230 | mixed-unresolved | — |
-| + | C7 | 220 | parent:P+0 | — |
-| + | C8 | 175 | parent:P+1 | P+0 |
-| + | C9 | 162 | mixed-unresolved | — |
-| + | C10 | 149 | irreducible-semantic | P+0 |
-| + | C11 | 123 | formal-substrate | — |
-| − | C0 | 460 | formal-substrate | — |
-| − | C1 | 378 | parent:P-0 | — |
-| − | C2 | 267 | parent:P-0 | — |
-| − | C3 | 260 | parent:P-0 | — |
-| − | C4 | 253 | irreducible-semantic | P-0 |
-| − | C5 | 199 | parent:P-1 | — |
-| − | C6 | 196 | irreducible-semantic | P-1 |
-| − | C7 | 144 | formal-substrate | — |
-| − | C8 | 128 | parent:P-1 | P-0 |
-| − | C9 | 115 | formal-substrate | — |
-| − | C10 | 113 | formal-substrate | — |
-| − | C11 | 107 | formal-substrate | — |
+| Side | Community | Size | R009 identity | Primary disposition | Secondary links | Reason |
+|---|---|---:|---|---|---|---|
+| + | C0 | 388 | Exploration/anticipation/development | parent:P+0 | — | Developmental-process branch. |
+| + | C1 | 350 | Inevitability/interpretation/reappearance stems | formal-substrate | — | Morphological form dominates. |
+| + | C2 | 329 | Grammar/function words/fragments | formal-substrate | — | Lexical/function organisation. |
+| + | C3 | 274 | Film/media/publishing/interface activity | parent:P+1 | P+0 | Mediated professional activity branch. |
+| + | C4 | 243 | Names/cities/geographic entities | formal-substrate | — | Entity organisation. |
+| + | C5 | 240 | Mathematical/code punctuation | formal-substrate | — | Formatting organisation. |
+| + | C6 | 230 | Biomedical + physical/regenerative/freshness | mixed-unresolved | P+0 | Materially heterogeneous semantic partition. |
+| + | C7 | 220 | Measurement/quantification/computation | parent:P+0 | — | Quantitative-analysis branch. |
+| + | C8 | 175 | Entrepreneurship/research/business/healthcare | parent:P+1 | P+0 | Professional/enterprise branch. |
+| + | C9 | 162 | Infant health + leisure/travel/shopping | mixed-unresolved | — | Heterogeneous lived-health/everyday partition. |
+| + | C10 | 149 | Temporal/evaluative/comparative discourse | irreducible-semantic | P+0 | Contextual evaluative domain. |
+| + | C11 | 123 | Numeric strings/codes | formal-substrate | — | Numeric form. |
+| − | C0 | 460 | Short name-like/biomedical/technical fragments | formal-substrate | — | Fragmentary lexical/form organisation dominates. |
+| − | C1 | 378 | Administrative/legal/regulatory characterisation | parent:P-0 | — | Administrative-control branch. |
+| − | C2 | 267 | Negative/intense evaluation/degree | parent:P-0 | — | Adverse-judgement branch. |
+| − | C3 | 260 | Downregulation/prohibition/suppression/change | parent:P-0 | — | Controlled-change branch. |
+| − | C4 | 253 | Cardiovascular/cytokine pathology | irreducible-semantic | P-0 | Distinct medical ontology. |
+| − | C5 | 199 | Names + geographic entities/regions | parent:P-1 | — | Territorial/social-identity branch. |
+| − | C6 | 196 | Vehicles/roads/built/material objects | irreducible-semantic | P-0, P-1 | Physical/material setting. |
+| − | C7 | 144 | Grammar/punctuation/tokenisation residue | formal-substrate | — | Formal organisation. |
+| − | C8 | 128 | Monarchy/religion/empire/mythic roles | parent:P-1 | P-0 | Authority/role branch. |
+| − | C9 | 115 | Multilingual words/suffixes/fragments | formal-substrate | — | Orthographic/morphological form. |
+| − | C10 | 113 | Uppercase lexical/status/code fragments | formal-substrate | — | Lexical/code form. |
+| − | C11 | 107 | Numeric strings/years/quantity words | formal-substrate | — | Numeric form. |
 
 Every State 24 community has exactly one primary disposition.
 
@@ -268,166 +194,85 @@ Every State 24 community has exactly one primary disposition.
 
 | Parent | Identity | Children | Nodes | Side-relative | Semantic-eligible | Confidence |
 |---|---|---|---:|---:|---:|---|
-| P+0 | Developmental process and quantitative-system analysis | C0, C7 | 608 | 21.1% | 38.0% | High |
+| P+0 | Developmental process and quantitative system analysis | C0, C7 | 608 | 21.1% | 38.0% | High |
 | P+1 | Mediated creative, research and professional activity | C3, C8 | 449 | 15.6% | 28.1% | Moderate / High |
-| P-0 | Administrative/regulatory characterisation, adverse judgement and controlled change | C1, C2, C3 | 905 | 34.5% | 53.8% | High |
+| P-0 | Administrative characterisation, adverse judgement and controlled change | C1, C2, C3 | 905 | 34.5% | 53.8% | High |
 | P-1 | Territorial identity and institutional/mythic authority | C5, C8 | 327 | 12.5% | 19.5% | Moderate / High |
 
-Positive retained parents account for **1,057 nodes**, **36.7% of the positive
-population** and **66.1% of semantic-eligible positive nodes**.
+Positive retained parents account for **1,057 nodes**, **36.7% of the positive population** and **66.1% of semantic-eligible positive nodes**.
 
-Negative retained parents account for **1,232 nodes**, **47.0% of the negative
-population** and **73.3% of semantic-eligible negative nodes**.
+Negative retained parents account for **1,232 nodes**, **47.0% of the negative population** and **73.3% of semantic-eligible negative nodes**.
 
 ## Relations among parents
 
-### Positive-side relations
+### Positive side
 
-1. **P+0 ↔ P+1 — analytical development and mediated professional activity — High.**
-   C0–C3 has **260 edges**, C7–C3 **234**, C0–C8 **257** and C7–C8 **112**.
+1. **P+0 ↔ P+1 — developmental analysis and mediated professional activity — High.** C0–C3 **260**, C0–C8 **257**, C7–C3 **234**, C7–C8 **112**.
+2. **P+0 ↔ C6 — analysis/development and biomedical/regenerative structure — High but unresolved.** C0–C6 **201**, C7–C6 **169**.
+3. **P+1 ↔ C6 — professional activity and biomedical context — Moderate.** C3–C6 **93**, C8–C6 **135**.
+4. **C6 ↔ C9 — biomedical/regenerative and lived health/everyday activity — High but unresolved.** C6–C9 **164**, mean cosine **0.09350**.
 
-2. **P+0 ↔ C6 — process analysis and biomedical/regenerative structure — Moderate to High.**
-   C0–C6 has **201 edges**, C7–C6 **169**. C6 remains mixed rather than being
-   absorbed.
+### Negative side
 
-3. **P+0 ↔ C10 — process and temporal/evaluative description — Moderate.**
-   C0–C10 has **202 edges**, C7–C10 **69**.
-
-4. **C6 ↔ C9 — health/regeneration and everyday-life relation — Moderate.**
-   Their direct relation has **164 edges**, mean cosine **0.09350**, but both
-   communities are internally mixed and do not justify a clean health parent.
-
-### Negative-side relations
-
-1. **P-0 ↔ P-1 — control/judgement in authority context — High.**
-   C1–C8 has **194 edges**, C1–C5 **147**, C2–C8 **76** and C3–C8 **51**.
-
-2. **P-0 ↔ C4 — administrative/control and pathology — High.**
-   C1–C4 has **278 edges**, C2–C4 **152**, C3–C4 **98**.
-
-3. **P-1 ↔ C6 — territorial/authority structure and material setting — Moderate.**
-   C5–C6 has **97 edges**, C6–C8 **124**.
-
-4. **Negative C0 is highly connected but remains formal/fragmentary.**
-   Its relations to C5 (**292 edges**) and C4 (**275**) do not override the
-   underlying fragment-dominated organisation.
+1. **P-0 ↔ P-1 — control architecture in authority/territorial context — Moderate to High.** C1–C8 **194**, C2–C8 **76**, C3–C8 **51**; C1–C5 **147**, C2–C5 **57**, C3–C5 **31**.
+2. **P-0 ↔ C4 — control/judgement and clinical pathology — High.** C1–C4 **278**, C2–C4 **152**, C3–C4 **98**.
+3. **P-0 ↔ C6 — regulation/change and material environment — High.** C1–C6 **202**, C2–C6 **125**, C3–C6 **113**.
+4. **P-1 ↔ C6 — authority/territory and material setting — Moderate.** C5–C6 **97**, C8–C6 **124**.
 
 ## Cross-side bridge candidates
 
 No cross-side parent bridge is retained.
 
-The compact State 24 cross-side evidence is dominated by near-form or lexical
-relations such as `aiser`↔` Kaiser`, `Greek`↔` Greek`, adjacent years,
-`transmit`↔`transmitting` and `height`↔`Height`. These do not
-establish a parent-level semantic bridge.
-
-Plausible but unpromoted semantic correspondences include:
-
-- positive P+0 and negative P-0 through characterisation/change;
-- positive C6/C9 and negative C4 through biomedical/health structure;
-- positive C4 and negative P-1 through geographic/entity organisation.
+The State 24 packet/cross-side compact evidence was deliberately not inspected in this clean rerun because the historical packet retrieval crossed into State 25. The protocol permits absence of a bridge; no bridge is inferred from within-side evidence alone.
 
 ## Formal/representational substrate
 
-### Positive — 1,285 nodes / 44.6%
+Positive: **1,285 nodes / 44.6%**  
+Negative: **939 nodes / 35.8%**
 
-- lexical stem families;
-- grammar/function words and fragments;
-- personal names/geographic entities;
-- mathematical/code punctuation;
-- numeric strings.
-
-### Negative — 939 nodes / 35.8%
-
-- short name-like, biomedical and technical/code fragments;
-- grammar/function fragments and punctuation/tokenisation residue;
-- multilingual lexical/morphological fragments;
-- uppercase lexical/status/code fragments;
-- numeric strings/years.
+The substrate is primarily lexical/morphological fragments, names/entities, punctuation/tokenisation and numeric strings.
 
 ## Minimal state-level architecture
 
-```text
+~~~text
 STATE 24 — BLOCK 23 OUTPUT
 
-POSITIVE-HEAD ORGANISATION
-|
-+-- P+0 DEVELOPMENTAL PROCESS & QUANTITATIVE-SYSTEM ANALYSIS
-|   +-- C0 exploration/anticipation/prediction/development
-|   `-- C7 measurement/quantification/interaction/computation
-|       |
-|       +-- C6 biomedical/regenerative/physical         [secondary; mixed]
-|       `-- C10 temporal/evaluative descriptors        [secondary]
-|
-+-- P+1 MEDIATED CREATIVE / RESEARCH / PROFESSIONAL ACTIVITY
-|   +-- C3 media/publishing/learning/digital interface
-|   `-- C8 entrepreneurship/research/business/social-health
-|
-+-- C6 biomedical + regenerative/physical/freshness    [mixed unresolved]
-+-- C9 infant-health + leisure/travel/retail            [mixed unresolved]
-+-- C10 temporal/evaluative/comparative language       [irreducible]
-`-- C1,C2,C4,C5,C11                                   [formal/name substrate]
+POSITIVE
+├─ P+0 Developmental process + quantitative system analysis
+├─ P+1 Mediated creative/research + professional activity
+├─ biomedical/physical/regenerative/freshness terms [mixed unresolved]
+├─ infant health + leisure/travel/shopping           [mixed unresolved]
+└─ temporal/evaluative/comparative discourse        [irreducible]
 
-
-NEGATIVE-TAIL ORGANISATION
-|
-+-- P-0 ADMINISTRATIVE/REGULATORY CHARACTERISATION / ADVERSE JUDGEMENT / CONTROLLED CHANGE
-|   +-- C1 administrative/constitutional/regulatory characterisation
-|   +-- C2 negative/intense evaluation and degree
-|   `-- C3 downregulation/prohibition/suppression/change
-|       \
-|        -- C4 cardiovascular/cytokine pathology      [secondary]
-|
-+-- P-1 TERRITORIAL IDENTITY & INSTITUTIONAL/MYTHIC AUTHORITY
-|   +-- C5 names/geographic entities/regions
-|   `-- C8 monarchy/religion/empire/mythic roles
-|       \
-|        -- C6 vehicles/roads/material setting        [secondary]
-|
-+-- C4 cardiovascular/cytokine/immunology/pathology    [irreducible]
-+-- C6 vehicles/roads/built/material objects            [irreducible]
-`-- C0,C7,C9,C10,C11                                  [formal/name substrate]
-```
-
-The preferred State 24 reconstruction contains two positive and two negative
-multi-community parents. The positive side separates developmental/system
-analysis from mediated creative/research activity. The negative side contains a
-strongly triangulated administrative/regulatory, adverse-evaluation and
-controlled-change architecture, with territorial/institutional authority
-retained separately.
-
-This statement is local to State 24 and is not a cross-state trajectory claim.
+NEGATIVE
+├─ P-0 Administrative characterisation
+│      + adverse judgement
+│      + controlled change
+├─ P-1 Territorial identity
+│      + institutional/mythic authority
+├─ cardiovascular/cytokine pathology                [irreducible]
+└─ vehicles/roads/built/material objects             [irreducible]
+~~~
 
 ## Alternative reconstruction
 
-The strongest competing alternatives are:
+The strongest alternatives are:
 
-1. include positive C6 under P+0 as a biological/physical-systems child;
-2. create a positive health/lifestyle parent from C6+C9;
-3. restrict negative P-0 to C1+C3 and leave C2 irreducible;
-4. include negative C6 under P-1 as a material-setting child.
+1. **Positive:** create an embodied-health parent from C6+C9. This would be favoured if their **164-edge** relation is judged sufficient despite both communities' internal heterogeneity.
+2. **Positive:** absorb C3 into P+0 and leave C8 irreducible, yielding a broader developmental/information-production parent.
+3. **Negative:** restrict P-0 to C1+C3 and leave C2 irreducible as evaluative language. This would be favoured if judgement is treated as contextual rather than constitutive of control.
+4. **Negative:** leave C5 and C8 separate rather than retaining P-1. This would be favoured if territorial identity and symbolic authority are judged merely adjacent.
 
-The second and third alternatives are the most serious. The preferred
-reconstruction rejects a C6+C9 parent because both communities are materially
-mixed, while P-0 retains C2 because C1–C2, C1–C3 and C2–C3 all provide strong
-three-way support.
+The preferred reconstruction retains the four parents because each reduces complexity without erasing clear domain boundaries.
 
 ## Uncertainty record
 
-- **Positive P+1:** C8 contains healthcare/social terms alongside
-  entrepreneurship and business; confidence remains Moderate/High.
-- **Positive C6:** biomedical and gravitational/regenerative/freshness content
-  coexist.
-- **Positive C9:** infant/health and leisure/travel/retail content coexist.
-- **Negative P-0:** C2 includes degree/frequency and bodily descriptors as well
-  as adverse evaluation, but the triad is strongly supported.
-- **Negative P-1:** C8 includes mythic/fantastical roles as well as formal
-  monarchy/religion.
-- **Negative C6:** material-setting semantics are coherent and adjacent to
-  P-1, but remain discriminable.
-- **Full token membership:** the compressed token-level artifact was
-  inaccessible through the current GitHub text connector, so ambiguity was
-  preserved rather than silently resolved.
+- Positive P+1 is Moderate/High because C8 mixes enterprise, research, healthcare and social-professional activity.
+- Positive C6 and C9 form the strongest unretained pair but are both internally heterogeneous.
+- Negative P-0 is strongly triangulated; C2 is the main boundary ambiguity.
+- Negative P-1 is smaller than P-0 but has direct semantic and graph support.
+- Full token-level compressed membership was not inspected.
+- State 24 compact cross-side packet evidence was deliberately not inspected during this rerun.
 
 ## Verification
 
@@ -443,11 +288,12 @@ three-way support.
 - Every retained parent has an exclusion boundary: **yes**
 - Every State 24 community inspected at underlying R008 community-record level: **yes**
 - All State 24 within-side community relations inspected: **yes**
-- State 24 compact cross-side evidence inspected: **yes**
+- State 24 compact cross-side evidence inspected: **no — intentionally omitted to preserve isolation**
 - Full token-membership inspection falsely claimed: **no**
-- Later-state evidence used in State 24 inference: **no**
-- Strict state-isolation source exposure breach during this state: **no**
-- Materially ambiguous communities retained with explicit uncertainty: **yes**
+- Existing R010 State 24 reconstruction inspected before hypothesis freeze: **no**
+- State 25 semantic content exposed during this rerun: **no**
+- State 25 evidence used in State 24 inference: **no**
+- Strict state-isolation source exposure breach during this rerun: **no**
 - Cross-state continuity claims: **0**
 - SDA-3 role assignments: **0**
 - Optimal-layer claims: **0**
@@ -455,9 +301,6 @@ three-way support.
 
 ## R010 Phase-A boundary
 
-This reconstruction is frozen as an independent State 24 hypothesis. It must
-not be retroactively renamed or restructured merely to improve correspondence
-with another state.
+This clean State 24 replacement is frozen as an independent hypothesis. It was constructed only from State 24 semantic evidence and does not infer continuity with any other state.
 
-No persistence, emergence, disappearance, split, merge, polarity change,
-optimal-layer, SDA-3 or curvature inference is made here.
+No persistence, emergence, disappearance, split, merge, polarity change, optimal-layer, SDA-3 or curvature inference is made here.
