@@ -1,0 +1,176 @@
+{
+  "run_number": "R012",
+  "run_name": "qwen-whole-prompt-paired-capture",
+  "run_id": "R012_qwen-whole-prompt-paired-capture",
+  "run_type": "measured_paired_prompt_hidden_state_capture",
+  "status": "successful",
+  "started_at": "2026-11-13T06:55:15.4946459Z",
+  "completed_at": "2026-11-13T07:05:46.8235033Z",
+  "source_commit": "36333cce1916a75f180f64d02dfa9dc42bac7aec",
+  "required_components": [
+    "plan_lock",
+    "environment_probe",
+    "smoke_0_5b_capture",
+    "smoke_0_5b_validation",
+    "primary_7b_capture",
+    "primary_7b_validation",
+    "run_report"
+  ],
+  "components": {
+    "plan_lock": {
+      "status": "successful",
+      "plan": "single_prompt_topology/R012_PLAN.md"
+    },
+    "environment_probe": {
+      "status": "successful",
+      "python": "3.11.15",
+      "torch": "2.6.0+cu124",
+      "transformers": "5.12.1",
+      "accelerate": "1.14.0",
+      "safetensors": "0.8.0",
+      "cuda_available": true,
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "gpu_total_mib": 24564,
+      "gpu_free_mib_at_probe": 20512,
+      "model_cache": "D:/AI/cache/huggingface/hub",
+      "smoke_model_cached_at_probe": false,
+      "primary_model_cached_at_probe": false
+    },
+    "smoke_0_5b_capture": {
+      "status": "successful",
+      "completed_at": "2026-11-13T06:59:25.609876+00:00",
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+      "revision_resolved": "7ae557604adf67be50417f59c2c2f167def9a775",
+      "precision": "BF16",
+      "state_count": 25,
+      "hidden_width": 896,
+      "elapsed_seconds": 41.626284199999645,
+      "gpu_peak_allocated_bytes": 1019487232,
+      "response_generation_executed": false,
+      "artifact_directory": "smoke_0_5b_bf16"
+    },
+    "smoke_0_5b_validation": {
+      "status": "successful",
+      "artifact_hashes_verified": true,
+      "trajectory_shapes_verified": true,
+      "all_finite": true,
+      "deterministic_replay_exact": true,
+      "capture_token_matches": true,
+      "state_00_exact_equal": true,
+      "later_state_differs": true,
+      "minimum_cosine_similarity": 0.9963737726211548,
+      "minimum_cosine_state": 15,
+      "maximum_l2_distance": 24.91377830505371,
+      "maximum_l2_state": 24
+    },
+    "primary_7b_capture": {
+      "status": "successful",
+      "attempts": [
+        {
+          "attempt": 1,
+          "started_at": "2026-11-13T07:00:08.416256+00:00",
+          "stopped_at": "2026-11-13T07:03:12+00:00",
+          "result": "prematurely_interrupted_while_transfer_was_healthy",
+          "transport": "huggingface_hub_default_xet",
+          "initial_observation": "four shard locks and no console progress were visible from the restricted diagnostic process",
+          "corrected_observation": "later cache inspection showed three completed shards and 3.26 GB of the remaining shard before interruption",
+          "diagnostic_error": "healthy silent transfer was incorrectly classified as stalled",
+          "model_loaded": false,
+          "prompt_forward_executed": false
+        },
+        {
+          "attempt": 2,
+          "transport": "standard_http",
+          "environment": "HF_HUB_DISABLE_XET=1",
+          "result": "successful",
+          "completed_at": "2026-11-13T07:05:07.139099+00:00"
+        }
+      ],
+      "completed_at": "2026-11-13T07:05:07.139099+00:00",
+      "model_id": "Qwen/Qwen2.5-7B-Instruct",
+      "revision_resolved": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "precision": "BF16",
+      "state_count": 29,
+      "hidden_width": 3584,
+      "elapsed_seconds_for_successful_attempt": 91.58257990000129,
+      "gpu_peak_allocated_bytes": 15306347520,
+      "response_generation_executed": false,
+      "artifact_directory": "primary_7b_bf16"
+    },
+    "primary_7b_validation": {
+      "status": "successful",
+      "artifact_hashes_verified": true,
+      "trajectory_shapes_verified": true,
+      "all_finite": true,
+      "deterministic_replay_exact": true,
+      "capture_token_matches": true,
+      "capture_index_matches": true,
+      "state_00_exact_equal": true,
+      "later_state_differs": true,
+      "changed_post_embedding_states": 28,
+      "minimum_cosine_similarity": 0.9885432720184326,
+      "minimum_cosine_state": 28,
+      "maximum_l2_distance": 50.271339416503906,
+      "maximum_l2_state": 27
+    },
+    "run_report": {
+      "status": "successful",
+      "path": "single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/R012_CAPTURE_REPORT.md"
+    }
+  },
+  "inputs": {
+    "baseline": "What structure forms from electro pink, curvature density, Tokyo nightlife?",
+    "variation": "What structure forms from electro pink, Tokyo nightlife, curvature density?",
+    "controlled_change": "swap the order of curvature density and Tokyo nightlife",
+    "chat_template": "tokenizer official chat template",
+    "add_generation_prompt": true,
+    "capture_position": "final model-input position",
+    "response_generation_executed": false
+  },
+  "models": {
+    "smoke": {
+      "id": "Qwen/Qwen2.5-0.5B-Instruct",
+      "revision_requested": "main",
+      "precision": "BF16"
+    },
+    "primary": {
+      "id": "Qwen/Qwen2.5-7B-Instruct",
+      "revision_requested": "main",
+      "precision": "BF16"
+    }
+  },
+  "artifacts": {
+    "smoke_0_5b": {
+      "directory": "single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/smoke_0_5b_bf16",
+      "hash_manifest": "smoke_0_5b_bf16/artifact_hashes.json",
+      "status": "verified"
+    },
+    "primary_7b": {
+      "directory": "single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/primary_7b_bf16",
+      "hash_manifest": "primary_7b_bf16/artifact_hashes.json",
+      "status": "verified"
+    },
+    "report": {
+      "path": "R012_CAPTURE_REPORT.md",
+      "status": "written"
+    }
+  },
+  "failure_details": null,
+  "operational_notes": {
+    "download_fallback_used": true,
+    "download_fallback": "HF_HUB_DISABLE_XET=1",
+    "first_download_interruption_was_premature": true,
+    "response_generation_executed": false,
+    "semantic_interpretation_executed": false
+  },
+  "preexisting_worktree_changes_preserved": [
+    ".gitignore",
+    "META_ANALYSIS.md",
+    "README.md",
+    "single_prompt_topology/README.md",
+    "single_prompt_topology/R011_PLAN.md",
+    "single_prompt_topology/r011_runtime_probe.py",
+    "single_prompt_topology/r011_torchao_probe.py",
+    "single_prompt_topology/runs/R011_whole-prompt-semantic-perturbation-feasibility/"
+  ]
+}

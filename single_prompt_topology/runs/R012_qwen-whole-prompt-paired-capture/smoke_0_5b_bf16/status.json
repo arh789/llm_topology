@@ -1,0 +1,9 @@
+{
+  "status": "successful",
+  "completed_at": "2026-11-13T06:59:25.609876+00:00",
+  "stage": "smoke_0_5b",
+  "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+  "revision_requested": "main",
+  "revision_resolved": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "elapsed_seconds": 41.626284199999645
+}

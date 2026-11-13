@@ -1,0 +1,28 @@
+{
+  "run_id": "R012_qwen-whole-prompt-paired-capture",
+  "generated_at": "2026-11-13T07:09:38.1170915Z",
+  "algorithm": "sha256",
+  "self_excluded": true,
+  "artifact_count": 19,
+  "artifacts": {
+    "manifest.json": {"bytes": 6419, "sha256": "5e52d2dcc2775bd359bde61fb07101439939fd81bc938d3efef10372016ce576"},
+    "primary_7b_bf16/artifact_hashes.json": {"bytes": 857, "sha256": "c92b8386b9c92b69ca0be8ba8716a3124f04fc5961831c4ecf4cc0400db1c154"},
+    "primary_7b_bf16/baseline_hidden_states.safetensors": {"bytes": 207960, "sha256": "8a7b1d15ed84163a47768a30f69d5c92fb80fc3cf3d84155da93db388b31e81c"},
+    "primary_7b_bf16/layer_pair_metrics.csv": {"bytes": 1871, "sha256": "27b340deb5c398c7c9c9e9963dd04d84864899538a7d97e3974bec5dad4a8a25"},
+    "primary_7b_bf16/pair_validation.json": {"bytes": 396, "sha256": "fc050ef62604da39eaa5bad123789ae4a7b829e862a3ff036f53af891070384e"},
+    "primary_7b_bf16/prompt_records.json": {"bytes": 4025, "sha256": "dd26e4004e1ca82d4970d071167c2b04d67e66ecbad121c08685f9ea734bb948"},
+    "primary_7b_bf16/run_metadata.json": {"bytes": 1171, "sha256": "3c3ad7f9bbe2e0c17a390887484806063442f4fb10027490a5a2773c9d018c78"},
+    "primary_7b_bf16/status.json": {"bytes": 298, "sha256": "8a17b0717d3262bd815fc85c858d757fcce9e6455b4fc60def79e7a92240d34e"},
+    "primary_7b_bf16/variation_hidden_states.safetensors": {"bytes": 207960, "sha256": "7ebb9ea31d5eb122d9eed004bb431afb8ef6e0d12c4d8c39722c0ca1273f2f73"},
+    "R012_CAPTURE_REPORT.md": {"bytes": 4821, "sha256": "46da2a02f9a8fdbe9b8142bc12fd88b1212d957fc10b6ff4aab7b37f942e9da7"},
+    "R012_EXECUTION_LOG.md": {"bytes": 4653, "sha256": "a1bcbcda07942d78a8c0ba6dfe1a2530cca059b9852919cb72c6d64a9f1660ca"},
+    "smoke_0_5b_bf16/artifact_hashes.json": {"bytes": 855, "sha256": "7b874e49623d4c20bd4e2e3e7db0e00a444783c2a7ef03a1c501869d3b94b50d"},
+    "smoke_0_5b_bf16/baseline_hidden_states.safetensors": {"bytes": 44888, "sha256": "3fc5c5d361210e75256e952e7abcc67d24ed480e41bcdd589c359d0c32bac22a"},
+    "smoke_0_5b_bf16/layer_pair_metrics.csv": {"bytes": 1640, "sha256": "8e495186fa1e2fe240e3d84b9661c67edaf2b8d550896473cd30dfe3e4f72166"},
+    "smoke_0_5b_bf16/pair_validation.json": {"bytes": 394, "sha256": "7a54772852a20f1f161d6ba3a9b5bc2e6980e83ca18a95b432b909e3228e6e9a"},
+    "smoke_0_5b_bf16/prompt_records.json": {"bytes": 4023, "sha256": "b7e76b88d717e0ee59b92ed3cf1560182d0a096e5af8118feed03e398823a6ea"},
+    "smoke_0_5b_bf16/run_metadata.json": {"bytes": 1177, "sha256": "870b992fe8197c0f378f9eae9123e6d5eeab4370675e7ab4ba00726949240614"},
+    "smoke_0_5b_bf16/status.json": {"bytes": 301, "sha256": "1a890ce8058e92b6806c434fec6fccb4588a1eb00f124388d981c35de77f6718"},
+    "smoke_0_5b_bf16/variation_hidden_states.safetensors": {"bytes": 44888, "sha256": "6e3347d5cc71e1c0d87bacfcc3ec4d9371a74dd20c42d0c411f92bf1c13b567a"}
+  }
+}

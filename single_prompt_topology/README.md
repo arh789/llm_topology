@@ -272,6 +272,46 @@ and
 provide concise phase-level summaries. The complete 48-file package was
 imported byte-for-byte from private `chatgpt-analysis` head `44adff3`.
 
+## R011 whole-prompt perturbation feasibility
+
+R011 reserves the first measured cross-prompt experiment under the neutral name
+`whole-prompt-semantic-perturbation-feasibility`. Its locked contract is
+[`R011_PLAN.md`](R011_PLAN.md). The planned pair uses one fixed Qwen chat shell
+and changes only the order of `curvature density` and `Tokyo nightlife`, while
+capturing the final assistant-prefix position at every transformer state.
+
+The run failed at runtime readiness before any model was loaded. The installed
+`llama-cpp-python 0.3.34` interface exposes final embeddings but no per-layer
+hidden-state API. The isolated TorchAO fallback also failed: available packages
+did not provide a usable x86 CPU int4 execution path on this system. The exact
+probe reports, failed manifest and
+[`R011_RUNTIME_READINESS.md`](runs/R011_whole-prompt-semantic-perturbation-feasibility/R011_RUNTIME_READINESS.md)
+are retained as curated failure evidence.
+
+Neither prompt was executed, no large model was downloaded and no R011
+semantic, network or community result exists. The evidence supports a software
+instrumentation blocker, not a system-RAM capacity conclusion. The run number
+must not be reused.
+
+## R012 Qwen whole-prompt paired capture
+
+R012 corrects the R011 runtime choice by using original Hugging Face
+Transformers models in BF16 on the RTX 4090. Its locked contract is
+[`R012_PLAN.md`](R012_PLAN.md), and its factual result is
+[`R012_CAPTURE_REPORT.md`](runs/R012_qwen-whole-prompt-paired-capture/R012_CAPTURE_REPORT.md).
+
+The 0.5B smoke gate and 7B primary gate both succeeded. The 7B capture used
+`Qwen/Qwen2.5-7B-Instruct` revision
+`a09a35458c702b33eeacc393d103063234e8bc28`, recorded 29 states of width
+3,584 for each prompt, reproduced both trajectories exactly and generated no
+response token. State 00 was identical across the pair, while all 28
+post-embedding states differed. The minimum paired cosine was 0.988543 at the
+final normalized state, and maximum L2 displacement was 50.2713 at State 27.
+
+R012 establishes that a concept-order swap changes the whole-prompt
+final-position trajectory. Vocabulary projection, neighbourhood comparison,
+networks, communities and semantic interpretation remain later work.
+
 ## Run outputs
 
 Each execution writes a timestamped directory under `runs/` containing:

@@ -1,0 +1,14 @@
+{
+  "status": "successful",
+  "state_count": 25,
+  "hidden_width": 896,
+  "all_finite": true,
+  "deterministic_replay_exact": true,
+  "capture_token_matches": true,
+  "state_00_exact_equal": true,
+  "later_state_differs": true,
+  "minimum_cosine_similarity": 0.9963737726211548,
+  "minimum_cosine_state": 15,
+  "maximum_l2_distance": 24.91377830505371,
+  "maximum_l2_state": 24
+}

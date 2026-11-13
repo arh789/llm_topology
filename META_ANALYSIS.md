@@ -6189,3 +6189,418 @@ STRUCTURE
 ```
 
 That is the part that should never have been compressed away.
+
+
+### MA-0058 — ChatGPT response: standardized semantic-intersection decision-state pipeline
+
+- Entry timestamp: `2026-11-13T17:21:35+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim response`
+- Related runs: `R010`; proposed reusable semantic-intersection pipeline
+
+Yes. If the goal is simply **“what semantic structure does the model associate with the intersection of A, B and C?”**, the experiment becomes much simpler than the conflict-resolution work.
+
+Your normal prompt is already close to ideal:
+
+> **What structure forms from A, B, C?**
+
+The main question is **which representation to inspect**.
+
+### Best simple design
+
+Use a fixed prompt form:
+```css
+What structure forms from A, B, C?
+```
+
+Then capture the **final prompt-position hidden state at every transformer layer**.
+
+That position has causal access to the whole preceding prompt, so it represents something approximating:
+```css
+A
++
+B
++
+C
++
+"what structure forms from these?"
+        ↓
+joint contextual representation
+```
+
+You then project that layer state against the vocabulary and recover the token neighbourhood:
+```markdown
+LAYER 0
+target representation
+    ↓
+positive tokens
+negative tokens
+
+LAYER 1
+    ↓
+positive tokens
+negative tokens
+
+...
+
+FINAL LAYER
+    ↓
+positive tokens
+negative tokens
+```
+
+Then perform exactly the type of analysis already developed:
+```
+TOKENS
+  ↓
+COMMUNITIES
+  ↓
+THEMES
+  ↓
+PARENT NODES
+  ↓
+RELATIONS BETWEEN PARENTS
+  ↓
+MINIMAL SEMANTIC STRUCTURE
+```
+
+That is essentially **SDA-3 with direct model instrumentation**.
+
+## What I would change from R010
+
+R010 used:
+```
+"... market for lithium"
+                   ↑
+             target = lithium
+```
+
+For your normal semantic-neighbourhood questions, I would instead make the target the **whole-prompt decision state**.
+
+So conceptually:
+```css
+OLD
+
+A, B, C ... target concept
+              ↑
+analyse contextualised concept
+
+
+NEW
+
+What structure forms from A, B, C?
+                              ↑
+                     analyse joint structure
+```
+
+The second is better for the question you actually ask.
+
+### Even better: standardise the ending
+
+To make different experiments comparable, use exactly the same prompt shell every time:
+```css
+What structure forms from {A}, {B}, {C}?
+```
+
+Do not vary things like:
+```
+What links...
+What do you think about...
+Explain...
+Analyse...
+```
+
+because those instructions themselves alter the neighbourhood.
+
+Then differences across runs more plausibly arise from:
+```
+A / B / C
+```
+
+rather than from differences in the task wording.
+
+## The resulting pipeline
+
+It could be quite lean:
+```markdown
+INPUT
+
+"What structure forms from
+dark art, surrealism, candy horror?"
+
+        ↓
+
+ONE FORWARD PASS
+
+        ↓
+
+CAPTURE FINAL POSITION
+AT EVERY LAYER
+
+        ↓
+
+L0  vector
+L1  vector
+L2  vector
+...
+LN  vector
+
+        ↓
+
+FOR EACH LAYER
+
+retrieve strongest:
++ aligned vocabulary tokens
+- anti-aligned vocabulary tokens
+
+        ↓
+
+GRAPH
+
+tokens
+→ similarities
+→ communities
+
+        ↓
+
+SEMANTIC ANALYSIS
+
+community labels
+→ parent nodes
+→ relations
+
+        ↓
+
+OUTPUT
+
+"What structure forms?"
+```
+
+For an SDA-style result, you probably **do not even need Phase D every time**.
+
+A normal semantic analysis could stop at:
+```markdown
+1. Semantic neighbourhood
+2. Communities
+3. Parent structures
+4. Core structure
+5. Adjacent structures
+6. Boundary / opposing structures
+7. Emerging structures
+8. Residual structures
+```
+
+Then only invoke the deeper trajectory analysis when you specifically care about **how the transformer arrived there**.
+
+## One important improvement over SDA-3
+
+Previously you were effectively asking a proprietary model:
+```
+Infer your own semantic neighbourhood
+from response behaviour.
+```
+
+With an open model you can now distinguish:
+```markdown
+MEASURED TOKEN NEIGHBOURHOOD
+        ↓
+measured directly from model states
+
+COMMUNITIES
+        ↓
+graph-derived
+
+PARENT STRUCTURES
+        ↓
+interpretively reconstructed
+
+SDA / GRD ROLES
+        ↓
+assigned afterwards
+```
+
+That is a considerably cleaner epistemic hierarchy.
+
+So if your question is:
+
+> **“What structure forms from electro pink, curvature density, Tokyo nightlife?”**
+
+you could literally produce a layer-by-layer map of what token structures the model develops in response to that exact question, rather than asking the model to introspectively approximate its embedding space.
+
+And because it still requires only **one instrumented forward pass**, this is the version of the project that scales most naturally to much larger CPU/RAM-resident models.
+
+
+### MA-0059 — Codex response: whole-prompt decision-state perturbation analysis
+
+- Entry timestamp: `2026-11-13T17:26:45+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex`
+- Entry type: `verbatim response`
+- Related runs: proposed reusable semantic-intersection and prompt-perturbation pipeline
+
+Yes. The model receives and processes the entire prompt, not merely one semantic token.
+
+The important distinction is:
+
+```text
+INPUT
+multiple prompt tokens representing A, B, C and the question
+
+MEASUREMENT
+one final-position vector per layer
+```
+
+In a decoder-only transformer, that final position can attend to every preceding prompt token. Its changing representation therefore reflects the combined context:
+
+```text
+A + B + C + wording + order + punctuation + instruction
+                         ↓
+             final-position state
+```
+
+It is a single vector, but it is a contextual summary produced from the whole prompt—not the static embedding of one token.
+
+One subtlety: at State 00, before any transformer block, the final position contains only its own input embedding. If the final position is a fixed assistant marker, State 00 will be identical across prompts. The effects of A, B and C begin appearing after the attention blocks process the prefix. That makes State 00 a useful control rather than a semantic result.
+
+## Prompt perturbation is a strong experimental goal
+
+This design is particularly suitable for testing small prompt changes:
+
+```text
+BASELINE
+What structure forms from A, B, C?
+
+VARIATIONS
+What structure forms from A, B, D?
+What structure forms from A, C, B?
+What structure forms from A, B, not C?
+What structure forms from A, B, slightly-C?
+What structure forms from synonym-A, B, C?
+```
+
+For every version, capture the same fixed final position at every layer. We can then identify:
+
+- the first layer where the representations diverge;
+- tokens entering or leaving positive and negative neighbourhoods;
+- relationships that remain stable;
+- communities that appear, disappear, split or merge;
+- parent structures that survive trivial wording changes;
+- changes that remain temporary versus changes that propagate to the final state;
+- whether a small prompt change causes a disproportionately large semantic reorganisation.
+
+The experiment becomes:
+
+```text
+controlled prompt variation
+        ↓
+one forward pass per prompt
+        ↓
+matched final-position trajectories
+        ↓
+layer-by-layer difference
+        ↓
+network and community changes
+        ↓
+semantic stability or sensitivity
+```
+
+This could answer a more significant question than simply “what structure forms?”:
+
+> **Which semantic relationships are intrinsic to the combination of concepts, and which are fragile consequences of wording, order or framing?**
+
+Initially, we only need the final-position trajectory. Capturing the individual A, B and C positions could later help attribute a change to a particular concept, but it is not required to establish whether the whole prompt’s semantic organisation changes.
+
+
+### MA-0060 — Codex execution record: R011 runtime-readiness failure
+
+- Entry timestamp: `2026-11-13T17:46:47+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex`
+- Entry type: `measured execution record`
+- Related run: `R011_whole-prompt-semantic-perturbation-feasibility`
+
+R011 was created as the first controlled whole-prompt perturbation run. Its
+baseline asks what structure forms from `electro pink`, `curvature density` and
+`Tokyo nightlife`; its variation swaps only the order of the final two
+concepts. Both were to use the same official Qwen chat template and the same
+final assistant-prefix capture position.
+
+The run stopped at its predeclared runtime-readiness requirement.
+
+1. The installed `llama-cpp-python 0.3.34` API was inspected without loading a
+   model. It exposes final embeddings, evaluation/logit access and serialised
+   runtime state, but no explicit per-layer hidden-state interface.
+2. TorchAO was tested as the single quantised CPU fallback in isolated
+   temporary package directories. TorchAO 0.18 lacked a usable CPU int4 path in
+   the available wheel: the standard path required unavailable `mslk >= 1.0.0`,
+   while the CPU-specific DA8W4 kernel was not built. TorchAO 0.17 did not
+   expose the documented `Int4CPULayout` interface.
+
+No model was loaded. Neither prompt was executed. No large model was downloaded
+and no prior artifact was reused as an R011 result. The baseline capture,
+variation capture, paired validation and semantic analysis were therefore not
+run.
+
+The strongest supported conclusion is that current software instrumentation,
+not measured system-RAM capacity, blocks the proposed 70B–72B experiment. R011
+is recorded as failed and its number must not be reused. A later run may test a
+newly authorised instrumented llama.cpp build or another CPU quantisation
+backend, but cannot treat R011 as a successful semantic experiment.
+
+
+### MA-0061 — Codex execution record: R012 paired whole-prompt capture
+
+- Entry timestamp: `2026-11-13T18:05:46+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex`
+- Entry type: `measured execution record`
+- Related run: `R012_qwen-whole-prompt-paired-capture`
+
+R012 preserved R011 as a failed runtime-readiness experiment and corrected the
+model/runtime choice. It used the original Hugging Face Transformers Qwen2.5
+models in BF16 on the RTX 4090, with `output_hidden_states=True`,
+`use_cache=False` and no response generation.
+
+The controlled pair was:
+
+```text
+Baseline:  What structure forms from electro pink, curvature density, Tokyo nightlife?
+Variation: What structure forms from electro pink, Tokyo nightlife, curvature density?
+```
+
+The 0.5B smoke gate succeeded before the 7B model was attempted. It captured 25
+states of width 896 for each prompt, reproduced both trajectories exactly,
+matched State 00 exactly and found prompt-dependent later states.
+
+The primary Qwen2.5-7B-Instruct capture used resolved revision
+`a09a35458c702b33eeacc393d103063234e8bc28`. Both templated inputs contained
+42 tokens and used the same final capture anchor at index 41, token ID 198
+(`Ċ`). Each trajectory contained 29 states of width 3,584. All values were
+finite, both deterministic replays were exact, and State 00 was exactly equal
+across prompts.
+
+All 28 post-embedding states differed. The first difference appeared after
+Block 0. The minimum paired cosine similarity was 0.9885432720 at the final
+normalized state, while maximum L2 displacement was 50.2713394 at State 27.
+This establishes that swapping the order of two concept phrases changes the
+whole-prompt final-position representation throughout transformer depth. It
+does not establish which vocabulary relationships or semantic communities
+changed.
+
+Peak 7B GPU allocation was 15,306,347,520 bytes, so the BF16 model fit directly
+on the RTX 4090. No output token was generated. The saved Safetensors
+trajectories were independently reloaded, and every stage artifact hash and
+byte count was verified.
+
+One operational correction is material to the provenance record. The first 7B
+download was interrupted after silent console output was misdiagnosed as a
+stall. Later cache inspection proved that three shards and most of the fourth
+had downloaded successfully. The diagnosis and interruption were therefore
+wrong. A standard-HTTP retry reused the cached content and completed
+successfully without altering the measurement.
+
+R012 ends at validated paired trajectories. It deliberately does not perform
+vocabulary scoring, cutoff selection, network construction, community
+detection, semantic interpretation, quantisation comparison or larger-model
+scaling.

@@ -1,0 +1,14 @@
+{
+  "probe": "torchao_cpu_int4_transformers_integration",
+  "status": "failed",
+  "started_at": "2026-11-13T06:45:26.145204+00:00",
+  "completed_at": "2026-11-13T06:45:33.336443+00:00",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "model_loaded": false,
+  "supports_intermediate_hidden_states": null,
+  "error_type": "ImportError",
+  "error": "cannot import name 'Int4CPULayout' from 'torchao.dtypes' (/mnt/c/Users/arhal/AppData/Local/Temp/r011-torchao-017-wsl/torchao/dtypes/__init__.py)",
+  "traceback": "Traceback (most recent call last):\n  File \"/mnt/d/Sync/Python Projects/llm_topology/single_prompt_topology/r011_torchao_probe.py\", line 34, in main\n    from torchao.dtypes import Int4CPULayout\nImportError: cannot import name 'Int4CPULayout' from 'torchao.dtypes' (/mnt/c/Users/arhal/AppData/Local/Temp/r011-torchao-017-wsl/torchao/dtypes/__init__.py)\n",
+  "interpretation": "The installed TorchAO fallback did not provide a usable x86 CPU int4 execution path; no model was loaded."
+}

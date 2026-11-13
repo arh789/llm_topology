@@ -21,6 +21,17 @@ independently reconstructs candidate latent parent structures at every state,
 tracks their cross-state evolution and compares that semantic trajectory with
 R008's measured topology. R010 Phase D then operationalises separate geometric,
 partition and semantic curvature measures plus a coherence-difficulty score.
+R011 then attempted to establish a quantised CPU/RAM capture path for matched
+whole-prompt perturbations. It failed before model loading: the installed
+llama.cpp binding exposes no per-layer hidden-state API, and the tested TorchAO
+fallback did not supply a usable x86 CPU int4 path. The failure is retained as
+runtime-readiness evidence; no R011 semantic result exists.
+R012 corrected that runtime choice by using Transformers BF16 models on the
+RTX 4090. It successfully captured matched final-position trajectories for
+Qwen2.5-0.5B-Instruct and Qwen2.5-7B-Instruct. In the 7B run, State 00 was
+identical and all 28 post-embedding states changed after swapping the order of
+two concept phrases. R012 establishes prompt-order sensitivity in the measured
+trajectory, but does not yet identify which semantic networks changed.
 
 R005 found greater nearest-neighbour density and positive/negative segregation
 than a size-matched random null at all 33 states, but its communities also
@@ -121,6 +132,14 @@ and are not versioned here.
     — the canonical Phase-C insight summary.
 34. [`single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_D_INSIGHTS.md`](single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_D_INSIGHTS.md)
     — the canonical Phase-D insight summary.
+35. [`single_prompt_topology/R011_PLAN.md`](single_prompt_topology/R011_PLAN.md)
+    — the locked whole-prompt paired-perturbation capture contract.
+36. [`single_prompt_topology/runs/R011_whole-prompt-semantic-perturbation-feasibility/R011_RUNTIME_READINESS.md`](single_prompt_topology/runs/R011_whole-prompt-semantic-perturbation-feasibility/R011_RUNTIME_READINESS.md)
+    — the failed quantised CPU runtime decision and exact stop boundary.
+37. [`single_prompt_topology/R012_PLAN.md`](single_prompt_topology/R012_PLAN.md)
+    — the corrected Transformers paired-capture contract.
+38. [`single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/R012_CAPTURE_REPORT.md`](single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/R012_CAPTURE_REPORT.md)
+    — validated 0.5B and 7B prompt-order trajectories and scope boundary.
 
 ## Provenance
 
