@@ -104,6 +104,9 @@ and geometric curvature. Model weights remain in the shared cache under
 27. [`single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_C_SEMANTIC_TOPOLOGY_COMPARISON.md`](single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_C_SEMANTIC_TOPOLOGY_COMPARISON.md)
     — the comparison between the inferred semantic trajectory and R008's
     measured membership, edge, community and modularity changes.
+28. [`single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/phase_d/PHASE_D_TASK.md`](single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/phase_d/PHASE_D_TASK.md)
+    — the external task definition for a future curvature and coherence
+    analysis; no Phase-D measurements or conclusions are present yet.
 
 ## Provenance
 
@@ -119,8 +122,8 @@ by external ChatGPT and imported byte-for-byte at remote commit `49a4b0a`.
 R010 was also authored externally in the private parent repository. Its final
 Phase-A verification passed at remote commit `28e3653`; Phase B was added at
 `a62646f`, Phase C at `3f82f28`, and the expanded Phase-B insights artifact was
-finalised at `11bc912`. The complete 39-file package was imported byte-for-byte
-from remote head `11bc912`.
+finalised at `11bc912`. A Phase-D task definition was added at `3711712`. The
+complete 40-file package was imported byte-for-byte from remote head `3711712`.
 GitHub may temporarily lead while external analysis is active, so its history
 must be fetched and reconciled before later edits or pushes. This repository
 remains the authoritative project working copy after that reconciliation.

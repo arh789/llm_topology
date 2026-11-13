@@ -251,8 +251,11 @@ Phase C's
 compares that semantic trajectory with R008's measured topology. It identifies
 global resets, community re-partitioning and semantic abstraction over stable
 geometry. The comparison does not assign SDA-3 roles, select an optimal layer
-or infer curvature/coherence. The complete 39-file package was imported
-byte-for-byte from private `chatgpt-analysis` head `11bc912`.
+or infer curvature/coherence. A later
+[`PHASE_D_TASK.md`](runs/R010_lithium-layerwise-latent-generative-structure/phase_d/PHASE_D_TASK.md)
+defines a future curvature/coherence analysis without performing it. The
+complete 40-file package was imported byte-for-byte from private
+`chatgpt-analysis` head `3711712`.
 
 ## Run outputs
 

@@ -5444,3 +5444,35 @@ repository. Its local Git blob SHA
 `8191a5eadf33d3b898c7429c98fde5cfb7d932cc` exactly matches the GitHub blob at
 external head `11bc912`. The curated R010 package now contains 39 Markdown
 files.
+
+
+### MA-0050 — Phase-D task-definition import during protected push
+
+- Entry timestamp: `2026-11-13T16:30:30+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex reconciliation record`
+- Entry type: `provenance, verification and repository housekeeping`
+- Related runs: `R008`; `R010`; `proposed R010 Phase D`
+- External repository: `arh789/chatgpt-analysis`
+- External imported head: `3711712b0ecddd549345dd493bd1d7d036c9e100`
+
+#### Record
+
+While Codex was performing the user-authorised push, the private collaboration
+repository advanced from `11bc912` to `3711712`. The lease-protected branch
+update did not overwrite that work. Inspection showed that the new commit adds
+one file:
+
+- `phase_d/PHASE_D_TASK.md`
+
+The file defines a possible Phase-D curvature and coherence analysis, including
+separate geometric, partition and semantic curvature concepts, a candidate
+coherence-difficulty measurement and the priority regions S14–S17, S21–S24 and
+S30–S32. It is a task definition only; it does not contain new measurements or
+completed Phase-D findings.
+
+The file was imported into the standalone local repository before retrying the
+push. Its local Git blob SHA
+`1ef8a8b24a6d5b851a9c8b593334a01764a47871` exactly matches the GitHub blob at
+external head `3711712`. The curated R010 package now contains 40 Markdown
+files recursively.
