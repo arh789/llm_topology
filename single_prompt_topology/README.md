@@ -331,6 +331,45 @@ and
 Semantic topic labelling, parent reconstruction and GRD/SDA interpretation
 remain later ChatGPT work rather than R012 measurements.
 
+## R013 bare-concept permutation topology
+
+R013 removes R012's synthesis question, chat template and assistant-generation
+prefix. Its locked contract is [`R013_PLAN.md`](R013_PLAN.md). The same three
+concepts are supplied as bare text in all six possible orders, followed by one
+fixed newline anchor. The production entry point is `r013_run.py`.
+
+The anchor probe established one shared token ID (`198`), equal 12-token input
+lengths and exactly identical State 00 vectors across all permutations. Every
+`29 × 3,584` BF16 trajectory reproduced exactly, and no response was generated.
+The unchanged R012 measurement method then produced:
+
+- 2,465,642 selected permutation/state/side memberships;
+- 24,656,420 exact directed 10-nearest-neighbour edges;
+- 348 permutation/state/side networks;
+- 3,654 state-local Louvain communities;
+- 336 within-permutation adjacent-state comparisons;
+- 870 matched-state permutation-pair comparisons; and
+- separate item-level support records for 770,924 token instances and
+  8,210,395 undirected-edge instances across the six permutations.
+
+The smallest cross-permutation membership Jaccard was `0.320201` and the
+smallest edge Jaccard was `0.125235`, both for `BAC` versus `CAB` at State 09
+on the positive side. At final State 28, the 6/6 core contained 5,214 positive
+tokens and 20,212 positive edges, plus 5,011 negative tokens and 19,219
+negative edges. These are structural measurements, not semantic identities or
+independent causal estimates of position, recency or adjacency effects.
+
+The factual result is in
+[`R013_MEASUREMENT_REPORT.md`](runs/R013_qwen-bare-concept-permutation-topology/R013_MEASUREMENT_REPORT.md),
+the exact coverage check is in
+[`R013_COMPLETENESS_VERIFICATION.md`](runs/R013_qwen-bare-concept-permutation-topology/R013_COMPLETENESS_VERIFICATION.md),
+and the downstream analysis surfaces are
+[`chatgpt_community_networks.json`](runs/R013_qwen-bare-concept-permutation-topology/chatgpt_community_networks.json)
+and
+[`chatgpt_layer_packets.md`](runs/R013_qwen-bare-concept-permutation-topology/chatgpt_layer_packets.md).
+Semantic parent reconstruction and order-effect interpretation remain later
+ChatGPT work.
+
 ## Run outputs
 
 Each execution writes a timestamped directory under `runs/` containing:

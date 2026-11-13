@@ -1,0 +1,132 @@
+{
+  "generated_at": "2026-11-13T21:26:27.174325+00:00",
+  "run_id": "R013_qwen-bare-concept-permutation-topology",
+  "manifest_status": "successful",
+  "artifacts": {
+    "chatgpt_community_networks.json": {
+      "bytes": 9230771,
+      "sha256": "0fbdfc80a6ef956f8c3195ef217ff96a6532f241c97cf7b0d7ccf67a6b18f51d"
+    },
+    "chatgpt_layer_packets.md": {
+      "bytes": 1387710,
+      "sha256": "3960004084cbaca5ffd851700a45793e88794bbc276a379774a0e97a99907a93"
+    },
+    "community_edges.csv": {
+      "bytes": 1481857,
+      "sha256": "0f09552e2943a2f530c4bbfb16ebd135d631ea23b96eb338d0923ef02a685d20"
+    },
+    "community_nodes.csv": {
+      "bytes": 2224276,
+      "sha256": "18f6054a6d1064c7f48d8fbe5ba0fe02c61ca32c73fdeb1015a2785d1014199e"
+    },
+    "community_transition_evidence.csv": {
+      "bytes": 1324409,
+      "sha256": "67f787dcdb61836b69c36999765b45736a04d62fad60a4d3b4fdf9eed6885d21"
+    },
+    "cutoffs.csv": {
+      "bytes": 46452,
+      "sha256": "4f440653d532b9a0a2de1a821391069e425792a645ff35c27f627d5a46e7c7dc"
+    },
+    "edge_permutation_support.csv.gz": {
+      "bytes": 45830783,
+      "sha256": "80f2408e931d98f8835f83f1d7ac7313ab124284574febafc9c0f99d6992aa3e"
+    },
+    "edges.csv.gz": {
+      "bytes": 266841313,
+      "sha256": "8e845550dc12b9d5882990d8154dfb70bb9471c7882396d71080d1b84c74ea10"
+    },
+    "manifest.json": {
+      "bytes": 10971,
+      "sha256": "0f2bd1033482d4954924b196c2759c079ff4af86430066b6c07dffaddb3dbfeb"
+    },
+    "network_index.csv": {
+      "bytes": 91355,
+      "sha256": "9b0c8c7598ab858c937f655bf879fc65f4ab9f51faa0bd7faab36c6f765dd74f"
+    },
+    "nodes.csv.gz": {
+      "bytes": 62955770,
+      "sha256": "8aa4e30391b6a461ce00b859b0def81bc80aab7c65c5dc2c3390d6e26b826940"
+    },
+    "pairwise_permutation_comparisons.csv": {
+      "bytes": 115757,
+      "sha256": "1155893ee5ae9ec3eb06e4e03da201b7336c8df9fc6f513b0eb3a4632df99b63"
+    },
+    "permutation_invariance.csv": {
+      "bytes": 50144,
+      "sha256": "092cce433e8259c342e67703e738b09d1b20a15ab6756662fca708e0c20c53a6"
+    },
+    "primary_7b_bf16/ABC_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "498b9f991943467d6e3fb6e0fe353f47a6bb3b915362b2478514252bc0a825aa"
+    },
+    "primary_7b_bf16/ACB_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "a3619372fbfeafa540070c55baca85826978c24550a7da2cca14666bef2de39a"
+    },
+    "primary_7b_bf16/artifact_hashes.json": {
+      "bytes": 1457,
+      "sha256": "4ca84443f1cd2f8b805ac40b7bbc7328231366cef9ab1233efd44b55e2d975a1"
+    },
+    "primary_7b_bf16/BAC_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "c3aa10b6733a33cc4e8e42ac2fc175bbb5d97091851b8ad7900fb0817b226218"
+    },
+    "primary_7b_bf16/BCA_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "e5b9846a92c81d0d1309d49d79a287beb9b9f821fd8fc151b8fd2d8a4f294677"
+    },
+    "primary_7b_bf16/CAB_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "d4d6304eea9b8869da1a79f5e8279375d99ed8a9a17e5b3f61e396840ca25cd3"
+    },
+    "primary_7b_bf16/CBA_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "7d6305fb3923dd4cb8c7c43518a4b966f409377e7d18e3c694cda38cb037c82d"
+    },
+    "primary_7b_bf16/pairwise_hidden_state_metrics.csv": {
+      "bytes": 30705,
+      "sha256": "fb845c81f95232e66f78c60f4e4b8cb432d1e50eb7c61e96415e16126020502b"
+    },
+    "primary_7b_bf16/permutation_validation.json": {
+      "bytes": 954,
+      "sha256": "1939b084cb12b77ee0298d00ba558fa25a886b46ea6611d0fcaca0c810a8cd89"
+    },
+    "primary_7b_bf16/prompt_records.json": {
+      "bytes": 6119,
+      "sha256": "6ef4395d8f70978529e64c9e77100d64cad0fbe03a36217797c165a7d2bc3d07"
+    },
+    "primary_7b_bf16/run_metadata.json": {
+      "bytes": 1631,
+      "sha256": "49d7f1302b2398bd2a99f7f18ef134ad35efdd62c951404451efa301ee394575"
+    },
+    "primary_7b_bf16/status.json": {
+      "bytes": 291,
+      "sha256": "43e0813dd92a3b76773b882c58251b26e6f6a1b45ad5f565a6c669dabe7aa16f"
+    },
+    "R013_COMPLETENESS_VERIFICATION.md": {
+      "bytes": 800,
+      "sha256": "e2b3206ee2f118289b14ccd64b48eaf44a88c48bf9b11328fbdc0a6ac81b3fdc"
+    },
+    "R013_MEASUREMENT_REPORT.md": {
+      "bytes": 1931,
+      "sha256": "7e58a7cf77ca4ff539be8df3088437566da5d0cda5cf988e2095f75007e5d0a9"
+    },
+    "state_transitions.csv": {
+      "bytes": 50236,
+      "sha256": "1749ff8dff113b4de844162eeb7661fbf6bb490d73b7bcd2436cf830ea22622f"
+    },
+    "tail_tokens.csv.gz": {
+      "bytes": 59838355,
+      "sha256": "e2adc90404b9bce42c717fd6fbd08174df49bb7e2a992c351f906109193c0198"
+    },
+    "token_permutation_support.csv.gz": {
+      "bytes": 7653331,
+      "sha256": "6b5195ea9353261013ad845bd73cf866ce32b8c748db046e185b045ab40ab058"
+    },
+    "vocabulary_scores.safetensors": {
+      "bytes": 105559072,
+      "sha256": "ae59d831e349e351893dda94efa5fd97dfe008603c91ade59dd6df3d97dbce3d"
+    }
+  },
+  "excluded_mutable_log": "R013_EXECUTION_LOG.md"
+}

@@ -9235,3 +9235,901 @@ perturbation-based invariance and capture-anchor selection.
 
 No measured run artifacts, pipeline code or prior analysis content was altered
 during this reconciliation.
+
+
+### MA-0069 — ChatGPT response: proposed R013 experimental design
+
+- Entry timestamp: `2026-11-14T07:44:08+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim external analysis`
+
+No R013 files currently exist in the repository. The next step should therefore be to **freeze the R013 experimental design before writing or running code**.
+
+The sequence should be:
+
+```text
+R012 finding
+instruction shell + assistant prefix contaminate pure semantic attribution
+        ↓
+R013 objective
+measure the concepts themselves
+        ↓
+six controlled permutations
+        ↓
+fixed non-semantic capture anchor
+        ↓
+reuse R012 measurement pipeline
+        ↓
+identify order-invariant semantic structure
+```
+
+## 1. Freeze the R013 research question
+
+R013 should answer:
+
+> **What layer-wise semantic topology is induced by the same three concepts when no explicit synthesis instruction is supplied, and which higher-order structures remain invariant across every ordering of those concepts?**
+
+The concepts remain:
+
+```text
+A = electro pink
+B = curvature density
+C = Tokyo nightlife
+```
+
+R013 should **not** initially investigate another concept set, another model family, response generation or GRD.
+
+---
+
+## 2. Keep the R012 model fixed
+
+Use the same primary model as R012:
+
+```text
+Qwen2.5-7B-Instruct
+revision:
+a09a35458c702b33eeacc393d103063234e8bc28
+
+BF16
+Hugging Face Transformers
+RTX 4090
+```
+
+This is important.
+
+Changing both:
+
+```text
+prompt design
++
+model
+```
+
+would make comparison with R012 ambiguous.
+
+A base-model experiment is worthwhile later, but should be a separate experiment after R013 establishes the effect of removing the instruction shell.
+
+---
+
+## 3. Remove the semantic instruction shell
+
+Do **not** use:
+
+```text
+What structure forms from A, B, C?
+```
+
+Use only the concepts plus a fixed delimiter/anchor.
+
+Conceptually:
+
+```text
+A
+B
+C
+<anchor>
+```
+
+The most important design requirement is:
+
+> the measured position must not itself be one of A, B or C.
+
+Otherwise the final concept becomes both a semantic input and the measurement location.
+
+---
+
+## 4. Select and validate the fixed anchor
+
+This should happen before the main capture.
+
+The anchor should be:
+
+- identical in every permutation;
+- exactly one tokenizer token if possible;
+- minimally semantic;
+- outside the three concepts;
+- placed after all concepts;
+- not an assistant-generation marker.
+
+A simple raw-text form such as:
+
+```text
+electro pink
+curvature density
+Tokyo nightlife
+
+```
+
+with the final newline token as the capture position is a strong candidate, especially because Qwen already tokenises newline as a known fixed token in R012.
+
+But this should be **verified**, not assumed.
+
+The anchor probe should establish:
+
+```text
+exact token ID
+exact capture index
+identical anchor token across all permutations
+identical State 00 vector across all permutations
+```
+
+If the newline or chosen delimiter tokenises unexpectedly, select another fixed delimiter before proceeding.
+
+---
+
+# 5. Generate all six permutations
+
+R013's primary controlled set should be exactly:
+
+```text
+ABC
+ACB
+BAC
+BCA
+CAB
+CBA
+```
+
+For example:
+
+```text
+electro pink
+curvature density
+Tokyo nightlife
+<anchor>
+```
+
+```text
+electro pink
+Tokyo nightlife
+curvature density
+<anchor>
+```
+
+and so forth.
+
+Everything except concept order must remain identical:
+
+```text
+same words
+same separators
+same anchor
+same model
+same revision
+same precision
+same runtime
+same capture rule
+```
+
+This is the central experiment.
+
+---
+
+# 6. Capture every layer for every permutation
+
+For each of the six inputs:
+
+```text
+input embedding state
++
+every transformer-block output
++
+final normalisation state
+```
+
+Capture only the anchor position.
+
+No response generation.
+
+The result should be:
+
+```text
+6 permutations
+×
+29 Qwen states
+×
+3584 hidden dimensions
+```
+
+with deterministic replay validation.
+
+R012's important distinction should be preserved explicitly:
+
+```text
+S27
+last transformer block
+
+S28
+post-normalisation representation
+```
+
+Do not interpret S28 as another transformer reasoning step.
+
+---
+
+# 7. Validate the capture before topology analysis
+
+Before projecting anything into vocabulary space, require:
+
+```text
+all six trajectories present
+all tensor shapes correct
+all values finite
+resolved model identity correct
+anchor position identical
+anchor token ID identical
+State 00 exactly equal across all six permutations
+deterministic replay exact
+all post-context states permitted to differ
+```
+
+If State 00 differs, stop: the experiment is not controlled correctly.
+
+---
+
+# 8. Reuse the R012 topology machinery unchanged
+
+Once the trajectories validate, apply the established pipeline:
+
+```text
+hidden state
+    ↓
+cosine against fixed input-embedding vocabulary
+    ↓
+full-curve elbow
+    ↓
+positive_head / negative_tail
+    ↓
+exact 10-NN graph
+    ↓
+deterministic Louvain
+    ↓
+community evidence
+```
+
+Do **not** invent new:
+
+- cut-off rules;
+- graph parameters;
+- community algorithms;
+- semantic classification systems.
+
+The value of R013 comes from changing the experimental input while keeping the measurement method stable.
+
+---
+
+# 9. Extend comparison from pairs to six-way permutations
+
+R012 had:
+
+```text
+baseline
+vs
+variation
+```
+
+R013 needs all pairwise comparisons between six permutations.
+
+There are:
+
+```text
+6 choose 2 = 15
+```
+
+prompt pairs.
+
+For every:
+
+```text
+state × side × permutation pair
+```
+
+calculate the existing R012 measures:
+
+```text
+membership Jaccard
+edge Jaccard
+community ARI
+population difference
+community-count difference
+```
+
+This produces the raw evidence for order sensitivity.
+
+---
+
+# 10. Add permutation-level invariance summaries
+
+This is the genuinely new measured component.
+
+For each state and side, derive at least:
+
+### Token invariance
+
+Tokens present across:
+
+```text
+6/6 permutations
+5/6
+4/6
+...
+```
+
+The 6/6 set is the strongest candidate for the order-invariant vocabulary core.
+
+### Edge invariance
+
+Likewise:
+
+```text
+edges present in 6/6 graphs
+5/6
+4/6
+...
+```
+
+This is more important than token invariance because R012 showed that relations can change while membership remains similar.
+
+### Pairwise stability distribution
+
+For each state:
+
+```text
+mean Jaccard
+minimum Jaccard
+maximum Jaccard
+
+mean edge Jaccard
+minimum edge Jaccard
+maximum edge Jaccard
+
+mean ARI
+minimum ARI
+maximum ARI
+```
+
+Do not collapse these immediately into one composite.
+
+---
+
+# 11. Preserve enough metadata to identify position effects
+
+Every permutation should explicitly record where each concept appears:
+
+| Permutation | Position 1 | Position 2 | Position 3 |
+|---|---|---|---|
+| ABC | A | B | C |
+| ACB | A | C | B |
+| BAC | B | A | C |
+| BCA | B | C | A |
+| CAB | C | A | B |
+| CBA | C | B | A |
+
+This allows downstream analysis to ask:
+
+```text
+Does structure X strengthen whenever A is last?
+
+Does structure Y occur whenever B precedes C?
+
+Does structure Z survive irrespective of position?
+```
+
+That is how R013 begins separating:
+
+```text
+order
+position
+recency
+adjacency
+interaction
+```
+
+without needing to assume the cause in advance.
+
+---
+
+# 12. Export a ChatGPT-readable evidence package
+
+The evidence surface should be analogous to R012, but permutation-aware.
+
+At minimum:
+
+```text
+community_nodes.csv
+community_edges.csv
+network_index.csv
+
+state_transitions.csv
+
+pairwise_permutation_comparisons.csv
+permutation_invariance.csv
+community_transition_evidence.csv
+
+chatgpt_community_networks.json
+chatgpt_layer_packets.md
+
+manifest.json
+R013_MEASUREMENT_REPORT.md
+R013_COMPLETENESS_VERIFICATION.md
+```
+
+The layer packets should expose all six prompt variants at each state.
+
+---
+
+# 13. Stop before semantic interpretation
+
+Codex's R013 job should end at:
+
+```text
+measured permutation topology
++
+complete evidence exports
+```
+
+It should **not** infer:
+
+```text
+semantic parents
+SDA roles
+GRD roles
+coherence
+semantic curvature
+order-invariant meaning
+```
+
+Those should come afterwards from analysis of the evidence.
+
+This preserves the separation that worked in R010/R012:
+
+```text
+CODE
+→ measurement
+
+CHATGPT
+→ semantic reconstruction
+```
+
+---
+
+# 14. Then perform the semantic analysis
+
+Once the measured R013 evidence exists, the semantic pass should proceed:
+
+```text
+each permutation independently
+        ↓
+each state independently
+        ↓
+community semantics
+        ↓
+parent reconstruction
+        ↓
+cross-layer parent trajectories
+        ↓
+cross-permutation parent matching
+        ↓
+order-invariant parents
+        ↓
+order-invariant parent relations
+```
+
+Only after those reconstructions are frozen should we classify structures as:
+
+```text
+CORE
+POSITION-SENSITIVE
+RECENCY-SENSITIVE
+ADJACENCY-SENSITIVE
+INTERACTION-SENSITIVE
+RESIDUAL
+```
+
+This is where R013 answers the real research question.
+
+---
+
+## What should **not** be added yet
+
+Keep R013 bounded.
+
+Do not yet add:
+
+```text
+a different concept set
+a base Qwen model
+larger Qwen models
+multiple anchor types
+pairwise concept deletion experiments
+response generation
+Leiden/Infomap comparisons
+different k values
+new curvature composites
+```
+
+Those are legitimate later robustness experiments, but adding them now would make it harder to identify what R013 actually established.
+
+## Immediate next action
+
+The next concrete repository change should therefore be:
+
+```text
+projects/llm-topology/single_prompt_topology/R013_PLAN.md
+```
+
+freezing:
+
+1. objective;
+2. same Qwen2.5-7B-Instruct backend;
+3. bare concept input;
+4. chosen fixed anchor and its validation;
+5. six permutations;
+6. layer-wise anchor capture;
+7. unchanged R012 projection/network/community methodology;
+8. 15 pairwise comparisons plus six-way invariance measurements;
+9. required artefacts;
+10. stop boundary before semantic interpretation.
+
+Only **after that plan is frozen** should Codex write the R013 execution code.
+
+
+### MA-0070 — ChatGPT response: R013 specification review
+
+- Entry timestamp: `2026-11-14T07:55:37+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`, followed by user comment
+- Entry type: `verbatim external analysis with appended supervised guidance`
+
+Codex's response is now very close to the correct R013 specification. It has understood both the objective and the stop boundary. I would approve it with **one substantive methodological correction and several precision additions**.
+
+The substantive correction is this claim:
+
+> “separating … position, adjacency or recency”
+
+Six permutations let us measure systematic dependence on those factors, but they do **not cleanly identify all of them as independent causal effects**.
+
+With three concepts:
+
+```text
+position 3
+=
+last position
+=
+recency
+```
+
+so a “recency effect” cannot be distinguished from a generic third-position effect.
+
+Likewise, with only six permutations of one three-concept set, adjacency and interaction effects can be described from their invariance patterns, but a full factorial attribution would be underdetermined. There is no replication across different concept sets.
+
+So I would change the intended interpretation from:
+
+```text
+SEPARATE
+
+position
+recency
+adjacency
+interaction
+```
+
+to:
+
+```text
+MEASURE
+
+order invariance
+
+position dependence
+
+last-position / recency dependence
+
+pairwise adjacency dependence
+
+residual order interactions
+```
+
+with the explicit caveat:
+
+> R013 identifies structural dependencies associated with these conditions; it does not yet establish independently estimated causal effects for each condition.
+
+That is the main correction.
+
+The rest is largely sound.
+
+## Exact expected coverage should be frozen
+
+Codex should put the expected counts directly into the plan:
+
+```text
+6 permutations
+× 29 states
+× 2 sides
+=
+348 networks
+```
+
+Within-permutation adjacent-state comparisons:
+
+```text
+6
+× 28 transitions
+× 2 sides
+=
+336 transition rows
+```
+
+Pairwise permutation comparisons:
+
+```text
+C(6,2)
+× 29 states
+× 2 sides
+
+15 × 29 × 2
+=
+870 matched-state pair comparisons
+```
+
+Those numbers should become completeness assertions, just as R012 had exact expected counts.
+
+## Six-way invariance needs a stricter definition
+
+“6/6, 5/6, 4/6 etc.” is correct, but Codex should specify precisely what is counted.
+
+For each `state × side`:
+
+```text
+TOKEN SUPPORT
+
+token_id
+→ number of permutations containing token
+
+6/6
+5/6
+4/6
+...
+```
+
+and independently:
+
+```text
+EDGE SUPPORT
+
+(token_a, token_b)
+→ number of permutation graphs containing edge
+
+6/6
+5/6
+4/6
+...
+```
+
+The important point is that these are **not the same invariant**:
+
+```text
+token survives 6/6
+≠
+its relationships survive 6/6
+```
+
+R012 showed why this distinction matters.
+
+Community invariance is harder and should **not** be reduced to “community appears in N/6 permutations” unless a defensible community-matching algorithm is specified. Communities have local IDs and can split or merge.
+
+For R013 measurement, I would keep community comparison primarily as:
+
+```text
+pairwise ARI
++
+community overlap / transition evidence
+```
+
+and leave higher-order cross-permutation community matching to the semantic analysis.
+
+## The anchor criterion is correct, but State 00 should be treated as a hard experimental control
+
+Codex already says:
+
+> identical anchor token ID and State 00 vector across all permutations.
+
+That should be elevated to:
+
+```text
+IF STATE 00 IS NOT EXACTLY IDENTICAL
+→ STOP THE RUN
+```
+
+because it is the cleanest proof that the measured position itself is controlled.
+
+The anchor probe should verify:
+
+```text
+same tokenizer
+same raw-text construction
+same anchor token ID
+same capture index rule
+single-token anchor
+same State 00 embedding
+```
+
+The **capture index itself need not necessarily have the same integer value** if tokenised permutation lengths unexpectedly differ, provided it is always the final anchor token. But preferably the six inputs should tokenise to equal length, and that should be recorded.
+
+## “Newline anchor” should remain a candidate until probed
+
+Codex has this right:
+
+> “newline as the candidate anchor, with explicit acceptance and fallback criteria.”
+
+Do not hard-code newline into the research design before the probe establishes that it is:
+
+```text
+one token
+stable across all six inputs
+not merged unexpectedly
+unambiguously the measured position
+```
+
+If newline fails, choose another minimal delimiter and freeze it before the main run.
+
+## One wording change to the success criterion
+
+This:
+
+> “The final measured output should support distinctions such as order-invariant, position-sensitive, recency-sensitive, adjacency-sensitive, interaction-sensitive”
+
+should become:
+
+> “The final measured output should provide sufficient evidence for downstream analysis to test whether structures are order-invariant or systematically associated with concept position, final-position/recency, adjacency, or residual ordering interactions.”
+
+That keeps semantic attribution outside Codex's measurement run and avoids overclaiming identifiability.
+
+## The corrected pipeline is therefore
+
+```text
+HOUSEKEEPING
+MA-0069
+        ↓
+FREEZE R013 PLAN
+        ↓
+DEFINE SIX PERMUTATIONS
+        ↓
+PROBE NEUTRAL ANCHOR
+        ↓
+VERIFY CONTROL
+same anchor
+same State 00
+        ↓
+CAPTURE
+6 × 29 × 3584
+        ↓
+DETERMINISTIC REPLAY
+        ↓
+R012 TOPOLOGY PIPELINE
+unchanged
+        ↓
+348 NETWORKS
+        ↓
+336 WITHIN-PERMUTATION
+LAYER TRANSITIONS
+        ↓
+870 PAIRWISE
+PERMUTATION COMPARISONS
+        ↓
+TOKEN SUPPORT ACROSS 6
+EDGE SUPPORT ACROSS 6
+        ↓
+CHATGPT EVIDENCE EXPORT
+        ↓
+STOP
+```
+
+Then my separate analysis becomes:
+
+```text
+348 measured networks
+        ↓
+state-local community inspection
+        ↓
+parents for each permutation
+        ↓
+layer-wise trajectories
+        ↓
+cross-permutation parent matching
+        ↓
+ORDER-INVARIANT CORE
+        +
+POSITION-ASSOCIATED VARIATION
+        +
+LAST-POSITION / RECENCY-ASSOCIATED VARIATION
+        +
+ADJACENCY-ASSOCIATED VARIATION
+        +
+UNRESOLVED INTERACTION
+```
+
+So I would **not send Codex back to rethink the task**. Its understanding is now essentially correct. I would only amend the R013 plan to avoid claiming that six permutations of one concept triplet can independently disentangle position, recency, adjacency and interaction, and freeze the exact expected output counts and invariance definitions above.
+
+**User comment:** ChatGPT is most likely overengineering its feedback, and no further changes should be taken.
+
+
+### MA-0071 — Codex run record: R013 bare-concept permutation topology
+
+- Entry timestamp: `2026-11-14T08:27:41+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex`
+- Entry type: `measured run execution and verification record`
+- Run: `R013_qwen-bare-concept-permutation-topology`
+- Model: `Qwen/Qwen2.5-7B-Instruct`
+- Revision: `a09a35458c702b33eeacc393d103063234e8bc28`
+- Manifest status: `successful`
+
+R013 executed the same three bare concepts in all six possible orders without
+R012's synthesis question, chat template, system message or assistant-generation
+prefix. Every input ended in one fixed newline anchor. The tokenizer probe
+established one shared anchor token ID (`198`), equal 12-token input lengths and
+the same capture-index rule. The six State 00 vectors were exactly equal.
+
+All six BF16 trajectories had shape `29 × 3,584`, contained only finite values
+and reproduced exactly on deterministic replay. No response generation was
+performed. The full production entry point reused R012's projection, full-curve
+elbow, exact 10-nearest-neighbour and deterministic Louvain functions without
+changing their parameters.
+
+The completed measured coverage is:
+
+- 174 permutation-state cutoff rows;
+- 2,465,642 selected permutation/state/side memberships;
+- 24,656,420 directed exact 10-nearest-neighbour edges;
+- 348 permutation/state/side networks;
+- 3,654 state-local communities;
+- 336 within-permutation adjacent-state comparisons;
+- 870 matched-state permutation-pair comparisons;
+- 696 token/edge support-summary rows;
+- 770,924 item-level token-support rows; and
+- 8,210,395 item-level undirected-edge-support rows.
+
+State 00 membership, edges and deterministic community partitions were
+identical across all 15 permutation pairs on both sides. Every State 00 token
+and edge had 6/6 support.
+
+The smallest measured cross-permutation membership Jaccard was `0.320201` and
+the smallest edge Jaccard was `0.125235`, both for `BAC` versus `CAB` at State
+09 on the positive side. At final State 28, the positive 6/6 core contained
+5,214 tokens and 20,212 edges; the negative 6/6 core contained 5,011 tokens and
+19,219 edges. The mean final pairwise membership Jaccards were `0.695902`
+positive and `0.686297` negative, while mean final edge Jaccards were `0.463593`
+positive and `0.454062` negative.
+
+Independent post-run verification recomputed the byte count and SHA-256 for all
+31 indexed artifacts, reloaded every `29 × 3,584` trajectory and reconciled the
+348 network, 336 transition, 870 pairwise-comparison, 696 invariance-summary and
+3,654 community rows. No verification error was found.
+
+These findings establish substantial order-associated structural variation
+together with a non-empty cross-permutation core. R013 does not assign semantic
+meaning to either result and does not independently identify causal position,
+recency, adjacency or interaction effects. Semantic community and parent
+reconstruction remain a separate downstream ChatGPT task.

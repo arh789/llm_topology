@@ -1,0 +1,44 @@
+{
+  "status": "successful",
+  "permutation_count": 6,
+  "permutations": [
+    "ABC",
+    "ACB",
+    "BAC",
+    "BCA",
+    "CAB",
+    "CBA"
+  ],
+  "state_count": 29,
+  "hidden_width": 3584,
+  "all_finite": true,
+  "deterministic_replay_exact": true,
+  "anchor_text": "\\n",
+  "anchor_single_token": true,
+  "anchor_token_id": 198,
+  "anchor_token": "Ċ",
+  "anchor_matches_all_permutations": true,
+  "state_00_exact_equal_all_permutations": true,
+  "input_token_counts": {
+    "ABC": 12,
+    "ACB": 12,
+    "BAC": 12,
+    "BCA": 12,
+    "CAB": 12,
+    "CBA": 12
+  },
+  "pair_count": 15,
+  "pair_state_metric_rows": 435,
+  "minimum_cosine_similarity": 0.7918420433998108,
+  "minimum_cosine_identity": {
+    "source": "BAC",
+    "target": "CAB",
+    "state_index": 9
+  },
+  "maximum_l2_distance": 201.7161102294922,
+  "maximum_l2_identity": {
+    "source": "BAC",
+    "target": "CBA",
+    "state_index": 27
+  }
+}
