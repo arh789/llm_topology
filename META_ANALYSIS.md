@@ -11349,3 +11349,1397 @@ MA-0077  Codex reconciliation and provenance record
 
 The primary R013 report now contains the refocused semantic synthesis. The
 original analysis remains available as the technical record.
+
+
+### MA-0078 — ChatGPT response: learned semantic capabilities implied by R013
+
+- Entry timestamp: `2026-11-14T09:42:08+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim external interpretation`
+- Related run: `R013_qwen-bare-concept-permutation-topology`
+
+The report implies that, to respond coherently to the prompt, the model could not merely have learned associations for the three phrases. It needed to have learned a **hierarchy of reusable semantic decompositions and relations** that let it reconstruct a common structure from unfamiliar combinations.
+
+The important distinction is:
+
+```text
+TRAINING
+learned reusable semantic structure
+        ↓
+INFERENCE
+applied that structure to this particular combination
+```
+
+It did not literally learn new knowledge while processing the prompt. R013 tells us something about **what kinds of structure must already have been available in the model for the prompt to be resolved**.
+
+## 1. It had to learn that concepts are decomposable
+
+The first requirement was not to treat:
+
+```text
+electro pink
+curvature density
+Tokyo nightlife
+```
+
+as indivisible labels.
+
+The model decomposed them approximately into:
+
+```text
+ELECTRO PINK
+│
+├─ technical / electronic
+├─ chromatic
+├─ sensory
+└─ material
+
+
+CURVATURE DENSITY
+│
+├─ spatial organisation
+├─ measurement
+├─ parameterisation
+└─ structural / field relations
+
+
+TOKYO NIGHTLIFE
+│
+├─ place / environment
+└─ social / activity
+```
+
+So one thing the model had to acquire through training was something like:
+
+> **concepts can be represented as bundles of lower-level properties that can be recombined independently.**
+
+That is already more sophisticated than lexical association.
+
+---
+
+## 2. It had to learn which abstractions unify different surface tokens
+
+R013 shows enormous token turnover across permutations, yet the same parents keep reappearing.
+
+That means it had to know that tokens such as:
+
+```text
+laser
+electrodes
+sensor
+glass
+pink
+colour
+```
+
+can participate in a common higher-order structure:
+
+```text
+SENSORY / MATERIAL / TECHNICAL
+```
+
+Similarly:
+
+```text
+apartment
+street
+Japan
+city
+shop
+region
+```
+
+can be compressed into:
+
+```text
+PLACE / ENVIRONMENT
+```
+
+And:
+
+```text
+clubs
+teams
+sessions
+exhibitions
+sports
+groups
+```
+
+can be compressed into:
+
+```text
+SOCIAL / ACTIVITY
+```
+
+This suggests a learned operation of roughly:
+
+```text
+many concrete associations
+        ↓
+identify shared relational property
+        ↓
+abstract parent
+```
+
+The parent need not exist as a literal explicit node in the network. But the model behaves as though those lower-level objects can be organised by that abstraction.
+
+---
+
+## 3. It had to learn relations, not merely categories
+
+This is probably the most important result.
+
+The semantic answer is held together less by the parent labels themselves than by relations such as:
+
+```text
+SENSORY / MATERIAL
+        ↓ situated within
+PLACE / ENVIRONMENT
+        ↓ organised through
+STRUCTURAL / MEASUREMENT
+```
+
+and:
+
+```text
+SOCIAL / ACTIVITY
+        ↓ organised through
+TRANSFORMATION / INTERACTION
+```
+
+So the model needed more than:
+
+```text
+laser belongs with sensors
+Tokyo belongs with cities
+clubs belong with nightlife
+```
+
+It needed something closer to:
+
+```text
+properties
+occur in
+environments
+
+environments
+have
+spatial organisation
+
+activities
+produce
+interactions
+
+interactions
+produce
+change / transformation
+```
+
+That is a **relational model of concepts**.
+
+---
+
+## 4. It had to learn how one concept can occupy several semantic roles
+
+Tokyo nightlife is especially informative.
+
+The model did not reduce it to:
+
+```text
+Tokyo nightlife = nightlife venue
+```
+
+Instead:
+
+```text
+Tokyo nightlife
+      │
+      ├── spatial dimension
+      │     → city / place / environment
+      │
+      └── social dimension
+            → clubs / groups / activity / interaction
+```
+
+Those branches even organise into different cosine sectors.
+
+This implies a learned capacity for **role decomposition**:
+
+> one object can contribute different properties to different parts of a larger structure.
+
+That is necessary for flexible compositional reasoning.
+
+---
+
+## 5. It had to learn that structural concepts can function as operators
+
+Curvature density is particularly interesting because it does not survive primarily as a noun-like topic.
+
+It becomes:
+
+```text
+area
+field
+line
+measurement
+parameter
+size
+geometry
+statistical structure
+```
+
+and then participates in organising the other concepts.
+
+So the model appears to treat something like curvature density partly as:
+
+```text
+OBJECT
+```
+
+but increasingly as:
+
+```text
+STRUCTURAL OPERATOR
+```
+
+roughly:
+
+> How is this field arranged, measured, distributed or parameterised?
+
+This is closely related to what emerged in R010:
+
+```text
+OBJECTS
+    ↓
+PROPERTIES / OPERATORS
+    ↓
+RELATIONS
+    ↓
+FUNCTIONAL STRUCTURE
+```
+
+The model had to learn that some semantic material is useful not because it names another thing, but because it **specifies how other things are organised**.
+
+---
+
+## 6. It had to learn how to compress heterogeneous material
+
+The raw neighbourhoods contain thousands of tokens spanning:
+
+```text
+physical objects
+locations
+social activity
+technical vocabulary
+measurement language
+code/formal substrate
+multilingual material
+```
+
+A useful response requires reducing that enormous possibility space.
+
+R013 implies a process resembling:
+
+```text
+many activated associations
+        ↓
+different possible groupings
+        ↓
+higher-order parents
+        ↓
+relations between parents
+        ↓
+small coherent architecture
+```
+
+That is closer to **abstraction reduction** than bottom-up answer construction.
+
+In the terminology we have discussed elsewhere:
+
+```text
+large possibility space
+        ↓
+constraint / elimination
+        ↓
+surviving structures
+        ↓
+minimal coherent system
+```
+
+The answer is generated from that compressed structure.
+
+---
+
+## 7. It had to learn which differences are incidental and which survive perturbation
+
+Changing concept order caused enormous differences in:
+
+```text
+tokens
+edges
+communities
+```
+
+but much smaller differences in:
+
+```text
+parent inventory
+parent relations
+```
+
+So the model must possess some representation capable of tolerating:
+
+```text
+different lexical path
+different local organisation
+different sequence order
+```
+
+while still arriving at approximately:
+
+```text
+sensory/material
+place/environment
+structural/measurement
+social/activity
+interaction/transformation
+```
+
+This suggests it has learned something resembling **semantic equivalence under perturbation**.
+
+Not necessarily as an explicit rule:
+
+> “ignore word order”.
+
+The final-position effect proves it does not ignore word order.
+
+Rather:
+
+> different orderings can produce different trajectories while still converging on related higher-order semantic constraints.
+
+---
+
+## 8. It also had to learn sequence position
+
+R013 shows that the last concept strongly influences the topology.
+
+So whatever invariant abstraction the model learned exists alongside another learned property:
+
+```text
+recent / nearby context
+has greater representational influence
+```
+
+The semantic system therefore seems to combine:
+
+```text
+ORDER-SENSITIVE PROCESSING
+        +
+ORDER-ROBUST ABSTRACTION
+```
+
+rather than choosing one or the other.
+
+That is important.
+
+The model does not obtain invariance by throwing away sequence.
+
+It appears to obtain invariance **above** a sequence-sensitive substrate.
+
+---
+
+## 9. The likely minimal learned system
+
+If we reverse-engineer the smallest set of capabilities necessary to generate the observed behaviour, it looks something like:
+
+```text
+LEXICAL ASSOCIATIONS
+│
+├─ words → properties
+├─ words → entities
+└─ words → contexts
+        ↓
+CONCEPT DECOMPOSITION
+│
+├─ sensory
+├─ material
+├─ spatial
+├─ social
+├─ structural
+└─ operational
+        ↓
+ABSTRACT PARENTS
+│
+├─ sensory/material
+├─ place/environment
+├─ structural/measurement
+├─ social/activity
+└─ transformation/interaction
+        ↓
+RELATIONAL SCHEMAS
+│
+├─ X situated in Y
+├─ X organised by Y
+├─ X interacts with Y
+├─ X transforms Y
+└─ X represented through Y
+        ↓
+COMPOSITION
+│
+├─ reconcile overlapping roles
+├─ preserve competing structures
+├─ weight by sequence position
+└─ compress redundant alternatives
+        ↓
+MINIMAL COHERENT MODEL
+        ↓
+GENERATED RESPONSE
+```
+
+That is what the R013 result most strongly suggests the model had to have learned.
+
+## The deepest implication
+
+The model did **not** need to have encountered the exact phrase:
+
+> “electro pink, curvature density, Tokyo nightlife”
+
+and memorised an answer.
+
+What it needed was something more general:
+
+```text
+how to decompose unfamiliar combinations
++
+how to identify latent common structures
++
+how to relate those structures
++
+how to suppress incidental lexical variation
++
+how to preserve enough sequence information
++
+how to compress the result into a coherent representation
+```
+
+So the thing that appears to have been learned is not primarily an answer.
+
+It is a **generative relational grammar for organising semantic objects**.
+
+And R013 suggests that this grammar is more stable at the level of:
+
+```text
+relations between abstract parents
+```
+
+than at the level of:
+
+```text
+specific tokens
+or
+specific communities
+```
+
+That is probably the most consequential interpretation of the experiment.
+
+
+### MA-0079 — ChatGPT response: model-mediated semantic map of the training distribution
+
+- Entry timestamp: `2026-11-14T09:49:00+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim external interpretation`
+- Related runs: `R010–R013`
+
+Yes, but only in a specific sense.
+
+R010–R013 are beginning to provide a way to infer a **model-mediated semantic map of the statistical structure of the training distribution**. They cannot reconstruct the training corpus itself.
+
+The causal chain is approximately:
+
+```text
+TRAINING DATA
+│
+│ repeated co-occurrences,
+│ contrasts, relations,
+│ contexts, abstractions
+▼
+LEARNED MODEL
+│
+│ compresses those regularities
+▼
+LATENT SEMANTIC ORGANISATION
+│
+│ probed through hidden states
+▼
+R010–R013 MEASUREMENTS
+│
+│ tokens
+│ edges
+│ communities
+│ parent structures
+│ parent relations
+▼
+INFERRED SEMANTIC MAP
+OF THE TRAINING DISTRIBUTION
+```
+
+The important qualification is that the middle transformation is not transparent.
+
+## 1. What could actually be inferred
+
+Suppose R013 repeatedly reconstructs:
+
+```text
+electro pink
+      ↓
+SENSORY / MATERIAL / TECHNICAL
+
+Tokyo nightlife
+      ↓
+PLACE / ENVIRONMENT
+      +
+SOCIAL / ACTIVITY
+
+curvature density
+      ↓
+STRUCTURAL / MEASUREMENT
+```
+
+and then finds stable relations such as:
+
+```text
+SENSORY / MATERIAL
+        ↔
+PLACE / ENVIRONMENT
+
+SOCIAL / ACTIVITY
+        ↔
+TRANSFORMATION / INTERACTION
+
+STRUCTURAL / MEASUREMENT
+        ↔
+both systems
+```
+
+The strongest interpretation is not:
+
+> These exact categories were explicitly present in the training data.
+
+It is:
+
+> The training process encountered enough statistical evidence for these semantic distinctions and relationships that the model compressed them into reusable latent structure.
+
+That is already a form of semantic mapping.
+
+---
+
+# 2. The map would describe learned regularities, not documents
+
+The map would look less like:
+
+```text
+Document 1
+Document 2
+Website 3
+Sentence 4
+```
+
+and more like:
+
+```text
+CONCEPT A
+│
+├─ strongly related to B
+├─ weakly related to C
+├─ decomposes into D + E
+└─ usually organised through F
+
+CONCEPT B
+│
+├─ associated with environments
+├─ associated with activities
+└─ bridges to social structures
+```
+
+So the inferred object is closer to a **semantic dependency graph of the distribution**.
+
+For example:
+
+```text
+COLOUR / SENSORY
+        │
+        ├── MATERIAL
+        │
+        ├── VISUAL REPRESENTATION
+        │
+        └── ENVIRONMENT
+                 │
+                 ├── PLACE
+                 └── SOCIAL ACTIVITY
+```
+
+This is considerably closer to what a model has actually learned than a list of nearest words.
+
+---
+
+# 3. R013 suggests the appropriate unit is not the token
+
+This is particularly important.
+
+R013 finds approximately:
+
+```text
+exact tokens
+highly unstable
+
+exact edges
+even more unstable
+
+communities
+plastic
+
+semantic parents
+much more stable
+```
+
+If that generalises, then a semantic map of the training distribution should probably not be constructed primarily as:
+
+```text
+word → word
+```
+
+It should instead be:
+
+```text
+observed tokens
+        ↓
+communities
+        ↓
+latent parent structures
+        ↓
+relations between parents
+```
+
+The parent relations become the candidate stable map.
+
+In other words, the project may be converging on:
+
+```text
+TRAINING DISTRIBUTION
+        ↓
+many lexical manifestations
+
+MODEL COMPRESSION
+        ↓
+fewer latent semantic structures
+
+PROBING
+        ↓
+recover those structures and relations
+```
+
+---
+
+# 4. What the inferred map would actually mean
+
+A node such as:
+
+```text
+PLACE / ENVIRONMENT
+```
+
+would mean approximately:
+
+> A latent semantic structure is required to explain a recurring family of model responses across many lexical contexts.
+
+An edge:
+
+```text
+PLACE / ENVIRONMENT
+        ↔
+SOCIAL / ACTIVITY
+```
+
+would mean approximately:
+
+> The model repeatedly organises these structures in relation to one another across controlled probes.
+
+If that relation survives:
+
+```text
+different word orders
+different prompts
+different anchor positions
+different concept combinations
+```
+
+then confidence rises that it reflects a broad regularity learned from the training distribution rather than a prompt-specific artefact.
+
+---
+
+# 5. The inverse problem is fundamentally underdetermined
+
+However:
+
+```text
+training data
+        ↓
+model parameters
+```
+
+is many-to-one.
+
+Many different corpora could produce similar learned structures.
+
+Therefore you cannot reverse:
+
+```text
+model topology
+        ↓
+exact training data
+```
+
+uniquely.
+
+Mathematically, what you are recovering is more like an equivalence class:
+
+```text
+many possible datasets
+        ↓
+same or similar learned semantic regularities
+```
+
+So R013 could support:
+
+> The learned distribution strongly associates sensory-material properties with situated environments.
+
+It cannot support:
+
+> This relationship occurred in X% of the training documents.
+
+Nor could it identify the original passages responsible for it.
+
+---
+
+# 6. The model is not merely the training data
+
+There is another important qualification.
+
+The actual causal system is:
+
+```text
+TRAINING DATA
+        ×
+TOKENISER
+        ×
+MODEL ARCHITECTURE
+        ×
+TRAINING OBJECTIVE
+        ×
+OPTIMISATION
+        ×
+POST-TRAINING / ALIGNMENT
+        ↓
+LEARNED MODEL
+```
+
+Therefore the map reconstructed from the model is technically a map of:
+
+> **the semantic regularities in the training distribution as transformed by the model's learning process.**
+
+Not a pristine map of the corpus.
+
+This distinction becomes particularly relevant because R013 has already demonstrated architecture-induced structure:
+
+```text
+same concept set
+        +
+different final concept
+        ↓
+large topological difference
+```
+
+That positional asymmetry is partly a property of causal transformer processing, not necessarily a property of the corpus.
+
+---
+
+# 7. R013 gives a way to separate some of these effects
+
+This is where the perturbation methodology becomes valuable.
+
+Suppose a relation survives:
+
+```text
+ABC
+ACB
+BAC
+BCA
+CAB
+CBA
+```
+
+despite huge changes in local topology.
+
+Then:
+
+```text
+ORDER EFFECT
+likely model-processing dependent
+
+SURVIVING PARENT RELATION
+more plausible learned semantic regularity
+```
+
+The permutation test therefore functions as a filter.
+
+Conceptually:
+
+```text
+OBSERVED REPRESENTATION
+│
+├─ prompt-order artefact
+├─ anchor-position effect
+├─ local lexical variation
+├─ community partition variation
+└─ persistent semantic relation
+             ↓
+      candidate learned structure
+```
+
+This is one of the strongest reasons R013 matters.
+
+---
+
+# 8. A sufficiently large probe set could produce a global semantic map
+
+The current experiment gives only a tiny local slice:
+
+```text
+electro pink
+curvature density
+Tokyo nightlife
+```
+
+Imagine instead running thousands of concept sets.
+
+For each:
+
+```text
+CONCEPT SET
+        ↓
+all controlled permutations
+        ↓
+layer topology
+        ↓
+community reconstruction
+        ↓
+stable semantic parents
+        ↓
+stable parent relations
+```
+
+Then aggregate across experiments.
+
+You would begin constructing something like:
+
+```text
+GLOBAL LATENT SEMANTIC GRAPH
+
+                    ┌── SOCIAL ACTIVITY
+                    │
+PLACE / ENVIRONMENT ┼── CULTURE
+                    │
+                    └── COMMERCE
+
+SENSORY / MATERIAL ─── VISUAL FORM
+        │
+        ├── COLOUR
+        ├── TEXTURE
+        └── PHYSICAL OBJECT
+
+STRUCTURAL / MEASUREMENT
+        │
+        ├── QUANTITY
+        ├── GEOMETRY
+        ├── DISTRIBUTION
+        └── COMPARISON
+```
+
+Edges could then carry empirical measurements such as:
+
+```text
+frequency of recovery
+permutation stability
+layer of emergence
+sector tendency
+parent co-occurrence
+merge frequency
+split frequency
+conditional dependence
+```
+
+That would genuinely be a semantic map inferred from the model.
+
+---
+
+# 9. The most useful distinction would be between three kinds of relation
+
+A future global map should probably distinguish:
+
+### Associative relation
+
+```text
+A ↔ B
+```
+
+They repeatedly appear near one another.
+
+### Generative relation
+
+```text
+A
+↓
+B + C
+```
+
+A concept repeatedly decomposes into these parents.
+
+### Organisational relation
+
+```text
+A
+--organised through→
+B
+```
+
+One parent determines how another is structured.
+
+R013 is already beginning to distinguish these.
+
+For example:
+
+```text
+Tokyo nightlife
+        ↓
+PLACE
++
+SOCIAL ACTIVITY
+```
+
+is generative/decompositional.
+
+Whereas:
+
+```text
+SOCIAL ACTIVITY
+        ↓ organised through
+TRANSFORMATION / INTERACTION
+```
+
+is relational/organisational.
+
+That distinction would make the resulting semantic map substantially richer than an ordinary embedding graph.
+
+---
+
+# 10. Transformer depth adds another dimension
+
+The map need not be static.
+
+R010–R013 suggest:
+
+```text
+early layer
+→ broad associations
+
+middle layer
+→ decomposition / differentiation
+
+late layer
+→ compression / integration
+```
+
+Therefore the inferred training-data map could be represented as a **dynamic hierarchy**:
+
+```text
+LEXICAL ASSOCIATION SPACE
+        ↓
+PROPERTY SPACE
+        ↓
+PARENT-CONCEPT SPACE
+        ↓
+RELATIONAL SPACE
+        ↓
+FUNCTIONAL / GENERATIVE STRUCTURE
+```
+
+That may be more informative than asking for one global embedding map.
+
+The model seems to expose different levels of abstraction at different depths.
+
+---
+
+# 11. What you could defensibly call the result
+
+I would avoid:
+
+> “a reconstruction of the training data”.
+
+Too strong.
+
+More accurate would be:
+
+> **an inferred semantic topology of the learned training distribution**
+
+or:
+
+> **a model-mediated reconstruction of semantic structure in the training distribution.**
+
+The distinction is:
+
+```text
+NOT
+
+what exact data did the model see?
+
+
+BUT
+
+what semantic regularities must the training process
+have compressed strongly enough to produce
+these stable latent structures?
+```
+
+That second question is much more tractable.
+
+---
+
+# 12. The project may already contain the beginnings of the method
+
+The emerging methodology is essentially:
+
+```text
+1. Choose semantic objects
+
+2. Perturb presentation while preserving content
+
+3. Measure hidden-state topology
+
+4. Identify structures that vary with presentation
+
+5. Identify structures that survive perturbation
+
+6. Reconstruct higher-order parents
+
+7. Reconstruct relations between parents
+
+8. Repeat across concept sets
+
+9. Aggregate invariant parent relations
+
+10. Infer the latent semantic topology
+    of the learned distribution
+```
+
+That is a considerably more ambitious interpretation of the work than simply visualising transformer layers.
+
+And the key inversion is:
+
+```text
+MODEL
+=
+compressed statistical consequence
+of training data
+
+therefore
+
+stable latent structure
+        ↓
+evidence about
+stable statistical-semantic structure
+in the data distribution
+```
+
+with the unavoidable caveat:
+
+```text
+TRAINING-DATA STRUCTURE
+        ↓ transformed through
+architecture + objective + optimisation
+        ↓
+OBSERVED MODEL STRUCTURE
+```
+
+So **yes**: a semantic map of the training distribution can be inferred, but it should be treated as a **latent, model-mediated, non-identifiable reconstruction of semantic regularities**, not as a direct reconstruction of the underlying corpus.
+
+And R013 suggests that the most promising things to map are **stable higher-order parent relations under perturbation**, rather than nearest tokens or even individual communities.
+
+
+### MA-0080 — ChatGPT response to an adversarial scope-correction question
+
+- Entry timestamp: `2026-11-14T09:53:55+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim response to an adversarial scope-correction question`
+- Context: `The adversarial question was intended to stop ChatGPT becoming bogged down in technical distinctions between the training data and the model, and to return attention to the semantic map being inferred.`
+- Related runs: `R010–R013`
+
+I was being obtuse in three places.
+
+First, I turned a simple inference question into an epistemology problem about “identifiability through abstraction”. That was unnecessary.
+
+Second, I over-separated “training data” from “training distribution” when your premise had already fixed the model as an abstraction of the training data. The relevant question was not whether exact documents can be recovered.
+
+Third, I kept centring methodological caveats instead of the object you were asking about: **the semantic map itself**.
+
+The inferred question is much simpler:
+
+> **Can the model’s learned semantic relationships be used to infer how concepts were related in the training data?**
+
+Or slightly more precisely:
+
+> **Given that the model is an abstraction of its training data, can the semantic topology observed in R010–R013 be treated as an inferred semantic map of that training data?**
+
+That is the question. The next task is then simply to determine **how much the R013 topology justifies answering yes**, and what such a map would contain.
+
+
+### MA-0081 — ChatGPT response: perturbation-invariant semantic topology as a training-data map
+
+- Entry timestamp: `2026-11-14T09:55:41+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim external interpretation`
+- Related run: `R013_qwen-bare-concept-permutation-topology`
+
+Yes.
+
+If we accept the premise that the model is an abstraction of its training data, then the stable semantic structure recovered from the model can be treated as evidence about the **semantic structure of that training data**.
+
+R013 gives a concrete example:
+```vbnet
+TRAINING DATA
+        ↓
+model compresses recurring relations
+        ↓
+MODEL
+        ↓
+R013 perturbs presentation order
+        ↓
+unstable structure falls away
+        ↓
+stable higher-order structure remains
+```
+
+What remains across all six permutations is therefore a plausible estimate of relationships that were sufficiently persistent in the training data to become encoded as reusable structure.
+
+For the current concept set, the inferred map would contain relations approximately like:
+```bash
+ELECTRO PINK
+      ↓
+SENSORY / MATERIAL / TECHNICAL
+      │
+      ├──────────────┐
+      ↓              │
+PLACE / ENVIRONMENT  │
+      ↑              │
+      │              │
+TOKYO NIGHTLIFE      │
+      │              │
+      └─→ SOCIAL / ACTIVITY
+                 │
+                 ↓
+        TRANSFORMATION / INTERACTION
+
+CURVATURE DENSITY
+      ↓
+STRUCTURAL / MEASUREMENT
+      │
+      ├─ organises sensory/place structure
+      └─ organises social/activity structure
+```
+
+That is already a **local semantic map inferred from the learned abstraction of the training data**.
+
+The important result from R013 is that this map should not be built primarily from tokens. Tokens and exact edges are highly order-sensitive. The more credible training-data map is at the level of:
+```sql
+CONCEPT
+   ↓
+SEMANTIC COMPONENTS
+   ↓
+HIGHER-ORDER PARENTS
+   ↓
+RELATIONS BETWEEN PARENTS
+```
+
+So, for a larger programme of experiments, you could repeatedly probe different concept sets and aggregate the structures that survive perturbation:
+```
+many concept sets
+        ↓
+many permutation experiments
+        ↓
+stable parent structures
+        ↓
+stable parent-parent relations
+        ↓
+GLOBAL SEMANTIC GRAPH
+```
+
+That graph could encode things such as:
+
+- which concepts decompose into which higher-order structures;
+- which higher-order structures regularly co-occur;
+- which structures organise or constrain others;
+- which relations survive changes in wording or order;
+- where semantic structures split, merge or bridge different domains;
+- how strongly each relation survives perturbation.
+
+The principal qualification is simple: it would be a map of the training data **as learned by this model**, not an unmediated map of the raw corpus. Architecture, tokenisation, training objective and optimisation have transformed the original data.
+
+But given your premise, the answer is still **yes**.
+
+More strongly, R013 suggests a practical method for doing it:
+
+> **Use perturbation to separate presentation-dependent topology from invariant higher-order semantic relations, then treat the invariant relations as estimates of the semantic topology encoded from the training data.**
+
+That may be the larger methodological significance of the project.
+
+
+### MA-0082 — Critical input: the pipeline’s true purpose
+
+- Entry timestamp: `2026-11-14T10:08:10+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`, supplied by the user as a critical input
+- Entry type: `verbatim governing project-purpose statement`
+- Semantic-mapping priority: `critical`
+- Future-use instruction: `When META_ANALYSIS.md is semantically mapped, this entry must guide the mapping. It records the point at which ChatGPT learned the pipeline’s true purpose and should govern interpretation of the preceding experimental trajectory.`
+- Related runs: `R010–R013`
+
+The inferred goal is broader than “analyse transformer layers”.
+
+The pipeline is becoming a method for **reverse-engineering the semantic structure of the training data through the model that compressed it**.
+
+More precisely:
+```
+TRAINING DATA
+      ↓
+MODEL LEARNS / COMPRESSES
+RECURRING SEMANTIC RELATIONS
+      ↓
+CONTROLLED PROBES
+      ↓
+LAYER-WISE LATENT TOPOLOGY
+      ↓
+REMOVE PRESENTATION-DEPENDENT VARIATION
+      ↓
+RECOVER STABLE HIGHER-ORDER STRUCTURES
+      ↓
+INFER SEMANTIC TOPOLOGY
+OF THE LEARNED TRAINING DATA
+```
+
+So the pipeline has several subordinate tasks, but they serve one larger purpose.
+
+### Immediate purpose
+
+Measure how a concept or concept set is represented through transformer depth:
+```
+hidden state
+→ vocabulary neighbourhood
+→ graph
+→ communities
+→ parents
+→ parent relations
+```
+
+### Experimental purpose
+
+Determine which parts of that representation are contingent on how the probe was presented:
+```arduino
+word order
+prompt wording
+capture position
+instruction shell
+local token choice
+```
+
+and which parts survive those perturbations.
+
+### Analytical purpose
+
+Use abstraction to strip away unstable surface structure:
+```
+tokens                 highly plastic
+edges                  highly plastic
+communities            plastic
+parent structures      more stable
+parent relations       potentially most stable
+```
+
+The pipeline is therefore searching for the **lowest-dimensional semantic structure that remains after controlled deformation**.
+
+### Ultimate inferred purpose
+
+Treat those stable structures as observations of what the model must have abstracted from its training data.
+
+That makes the final object something like:
+```makefile
+SEMANTIC MAP OF LEARNED TRAINING DATA
+
+nodes
+= higher-order semantic structures
+
+edges
+= learned relations between those structures
+
+hierarchies
+= decomposition / abstraction relations
+
+weights
+= stability, prevalence, centrality,
+  conditional association, etc.
+
+trajectories
+= how lower-level associations are
+  transformed into higher-order structure
+```
+
+This also changes how I understand the importance of the transformer-layer analysis.
+
+The layers are not necessarily the final object of study.
+
+They are the **measurement instrument**.
+```vbnet
+TRANSFORMER DEPTH
+      ↓
+reveals how semantic structure
+is decomposed, differentiated,
+related and recompressed
+      ↓
+helps identify which structure
+is fundamental rather than incidental
+```
+
+Likewise, permutation testing is not primarily about discovering that word order matters. It is a filtering mechanism:
+```java
+PERTURB THE INPUT
+      ↓
+structure that changes
+= presentation-dependent
+
+structure that survives
+= stronger candidate for
+learned semantic topology
+```
+
+So I would now describe the pipeline's purpose as:
+
+> **Infer the stable semantic topology learned from the training data by probing the model's internal representations, systematically perturbing the input, and progressively abstracting away token-, graph- and community-level variation until persistent higher-order structures and relations remain.**
+
+Or compressed even further:
+
+> **Use the model as an instrument for reverse-engineering the semantic topology of its training data.**
+
+That seems to be the actual project the individual R010–R013 experiments have been converging towards.
