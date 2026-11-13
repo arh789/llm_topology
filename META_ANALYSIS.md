@@ -3122,3 +3122,703 @@ lowest target-cosine tokens; those are a separate `most_extreme_tokens` field.
 The generator verifies all 792 joins, exact R008/R009 community-size agreement
 and the presence of at least ten representative tokens per community before it
 writes the HTML report.
+
+### MA-0032 — GPT proposal for layer-wise latent generative structure inference
+
+- Entry timestamp: `2026-11-13T11:30:32+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `external GPT response supplied by the project owner`
+- Entry type: `proposed next-stage analytical framing`
+- Related runs: `R008`; `R009`; `proposed R010`
+- Preservation mode: `verbatim`
+- Timestamp note: the original response time was unavailable; the entry
+  timestamp records when this response was added to the metaanalysis.
+
+#### GPT response — verbatim
+
+Yes. After inspecting `R009_SUMMARY.html`, I think this is a better next analysis than simply matching similarly named communities across layers.
+
+The key shift is:
+
+```text
+Previous proposed task
+community at layer N
+        ↓
+find corresponding community at layer N+1
+
+Your proposed task
+communities observed at layer N
+        ↓
+infer the latent parent structures
+that could generate that collection
+        ↓
+reconstruct the layer-level semantic architecture
+        ↓
+repeat independently for every layer
+        ↓
+only then compare architectures across layers
+```
+
+That gets much closer to the actual research question: **what structure is the transformer representation organising into, and how does that structure develop?**
+
+## Why the summary supports this approach
+
+The communities are clearly not just a sequence of isolated topics. Within a layer, several communities frequently look like different manifestations of a higher-order common structure.
+
+For example, the summary shows at **Block 27 / State 28**:
+
+```text
+POSITIVE
+characterisation / quantification / testing
+entrepreneurship / conversation / intervention
+biomedical / infant health
+navigation / search / software
+food / sleep / affect
+temporal / evaluative language
+interpretation / examples
+
+NEGATIVE
+administrative characterisation / regulation
+prohibition / adverse change
+vehicles / built environment
+cardiovascular pathology
+monarchy / religion / bureaucracy / mythology
+```
+
+Treating those as eleven independent semantic objects loses something.
+
+Several plausible higher-order parents immediately appear:
+
+```text
+PROCESS / KNOWLEDGE FORMATION
+├─ characterisation
+├─ quantification
+├─ testing
+├─ interpretation
+└─ search/navigation
+
+SOCIAL / ORGANISATIONAL ACTION
+├─ entrepreneurship
+├─ conversations
+├─ interventions
+└─ administration/regulation
+
+BIOLOGICAL / HEALTH SYSTEM
+├─ infant health
+├─ biomedical/pharmacological material
+└─ cardiovascular pathology
+
+CHANGE / CONTROL
+├─ intervention
+├─ regulation
+├─ prohibition
+└─ adverse change
+
+PHYSICAL / MATERIAL WORLD
+├─ vehicles
+├─ built environment
+└─ material objects
+```
+
+Those inferred parents potentially explain the observed communities more economically than the communities explain themselves.
+
+That is exactly the sort of abstraction the next analysis should attempt.
+
+---
+
+# I would make one important terminology change
+
+I would call them **latent parent candidates**, not simply parent nodes.
+
+Nothing in R008 has measured those nodes directly.
+
+We would be making the inference:
+
+\[
+\text{observed communities}
+\rightarrow
+\text{candidate latent generating structure}
+\]
+
+rather than claiming:
+
+\[
+\text{measured parent node}
+\rightarrow
+\text{communities}
+\]
+
+That distinction matters later if this becomes formal research.
+
+The question for each layer becomes:
+
+> **What minimum set of higher-order semantic structures could plausibly generate the observed community organisation at this state?**
+
+That is a very strong question.
+
+---
+
+# The crucial methodological constraint
+
+Each state should initially be analysed **in isolation**.
+
+Do not let State 14's inferred parents influence State 15's parent inference.
+
+Otherwise we would almost inevitably manufacture continuity.
+
+So:
+
+```text
+STATE 00
+communities
+    ↓
+infer parent candidates
+    ↓
+freeze result
+
+STATE 01
+communities
+    ↓
+infer parent candidates
+    ↓
+freeze result
+
+...
+
+STATE 32
+communities
+    ↓
+infer parent candidates
+    ↓
+freeze result
+```
+
+Only after all 33 are frozen:
+
+```text
+State-level latent structures
+        ↓
+cross-state comparison
+```
+
+This preserves the same methodological logic that made R009 useful.
+
+---
+
+# I would infer more than one level
+
+A single parent for an entire layer will often become so abstract that it explains everything and therefore nothing.
+
+Instead:
+
+```text
+COMMUNITIES
+    ↓
+LATENT PARENT CANDIDATES
+    ↓
+RELATIONS BETWEEN PARENTS
+    ↓
+LAYER-LEVEL GENERATIVE STRUCTURE
+```
+
+For example:
+
+```text
+Layer N
+
+                         [SYSTEM / PROCESS]
+                           /           \
+                          /             \
+               [KNOWLEDGE]             [CONTROL]
+                /      \                /      \
+       measurement    search       regulation   change
+          |             |             |           |
+       communities   communities   communities communities
+
+
+                 [BIOLOGICAL SYSTEM]
+                    /          \
+                health       pathology
+                  |              |
+             communities     communities
+```
+
+The interesting object is then not merely the parents.
+
+It is the **graph formed between the inferred parents**.
+
+---
+
+# Positive and negative populations should remain separate initially
+
+This is especially important.
+
+We should not begin with:
+
+> positive = what the model believes  
+> negative = what the model suppresses
+
+Instead construct something like:
+
+```text
+                  LATENT PARENT A
+                   /           \
+             positive         negative
+             children         children
+
+                  LATENT PARENT B
+                   /           \
+             positive         negative
+             children         children
+```
+
+A parent might occur only on one side.
+
+Or related variants might appear on opposite sides.
+
+For example, the summary repeatedly contains something resembling:
+
+```text
+POSITIVE
+measurement
+analysis
+development
+interaction
+
+NEGATIVE
+characterisation
+regulation
+prohibition
+constraint
+```
+
+That could eventually turn out to represent a larger axis such as:
+
+```text
+OPEN TRANSFORMATION / EXPLORATION
+             ↕
+CONTROL / CONSTRAINT / REGULATION
+```
+
+But that should be **discovered**, not imposed.
+
+This is where the eventual SDA-3 test could become particularly interesting.
+
+---
+
+# Non-semantic communities should not be discarded
+
+The summary also makes clear why this matters.
+
+Every layer contains combinations of:
+
+- semantic/topic
+- mixed
+- lexical/morphological
+- named entities
+- numeric
+- formatting/tokeniser
+
+The lexical and formatting populations should probably not be forced underneath semantic parents.
+
+Instead:
+
+```text
+Layer structure
+
+SEMANTIC STRUCTURE
+├─ parent A
+├─ parent B
+└─ parent C
+
+REPRESENTATIONAL / FORM STRUCTURE
+├─ lexical morphology
+├─ formatting
+├─ numeric
+└─ named-entity organisation
+```
+
+That gives us an additional possibility:
+
+**the transformer may be changing not only what semantic structure it represents, but the proportion of its neighbourhood organised semantically versus formally.**
+
+That is itself potentially part of the trajectory.
+
+---
+
+# The representative tokens make this analysis substantially stronger
+
+The new summary is especially useful because every community now includes its top ten **degree-central representative tokens**.
+
+That means parent inference should use:
+
+```text
+Broad R009 identity
+        +
+community type
+        +
+confidence
+        +
+top-10 structurally central tokens
+        +
+community size
+```
+
+rather than relying on my earlier prose labels alone.
+
+For example, if I labelled something:
+
+> Biomedical, psychological and theoretical-system concepts
+
+but its graph-central tokens are:
+
+```text
+periodontal
+renormalization
+phenomenological
+pulmonary
+dopaminergic
+...
+```
+
+the parent inference needs to explain the actual token structure, not merely accept the broad label.
+
+That gives us an important adversarial check on R009.
+
+---
+
+# I would also weight parent candidates
+
+Not every inferred parent should count equally.
+
+Suppose a layer has:
+
+```text
+Parent A
+covers 1,400 community nodes
+
+Parent B
+covers 600
+
+Parent C
+covers 120
+```
+
+Those are structurally different.
+
+So each candidate should report something like:
+
+| Parent candidate | Child communities | Node coverage | Sides | Confidence |
+|---|---:|---:|---|---|
+| Process / transformation | 5 | 31% | + / − | High |
+| Biological systems | 4 | 22% | + / − | High |
+| Institutional control | 3 | 14% | − | Moderate |
+| Social activity | 2 | 8% | + | Moderate |
+
+Node-weighted coverage is much more informative than simply saying four communities belong to one parent.
+
+---
+
+# Then the second analysis becomes genuinely about evolution
+
+Once every layer has been reconstructed independently, we can ask:
+
+```text
+Does parent A survive?
+        |
+        +-- same structure
+        |
+        +-- strengthens
+        |
+        +-- weakens
+        |
+        +-- broadens
+        |
+        +-- narrows
+        |
+        +-- splits
+        |
+        +-- merges
+        |
+        +-- changes polarity
+        |
+        +-- disappears
+        |
+        `-- reappears
+```
+
+This allows an actual **semantic developmental trajectory** to emerge.
+
+Not:
+
+> C3 became C7.
+
+But:
+
+> A broad physical-material structure initially organised around chemistry and materials, later fragmented into biomedical, physical-object and technological structures, while process/measurement structures became increasingly dominant.
+
+That would be a much more meaningful description of transformer processing.
+
+---
+
+# The summary already hints that such an evolution may exist
+
+This is preliminary only, but the sampled states show a striking change.
+
+### Input embedding — State 00
+
+The positive structure is heavily centred on the literal neighbourhood of lithium:
+
+```text
+chemistry
+├─ elements
+├─ inorganic substances
+├─ metals/minerals
+└─ electrochemistry
+
+applied physical systems
+├─ electricity
+├─ energy storage
+├─ thermal processes
+└─ digital technology
+
+biological/pharmacological substance space
+├─ medicine
+├─ drugs
+└─ medical intervention
+```
+
+That looks strongly **entity/material-associated**.
+
+---
+
+### Early layers
+
+By Block 7, the structure has shifted towards:
+
+```text
+PROCESS / ORGANISATION
+├─ work
+├─ management
+├─ access
+├─ finance
+└─ employment
+
+INFORMATION SYSTEMS
+├─ database
+├─ data processing
+└─ software
+
+SCIENTIFIC / BIOLOGICAL SYSTEMS
+├─ biomedical
+├─ molecular systems
+└─ physical dynamics
+```
+
+While the negative side contains:
+
+```text
+assessment
+constraint
+destruction/change
+institutional roles
+pathology
+physical objects
+```
+
+This already looks less like lexical association with **lithium** and more like a collection of abstract relational structures.
+
+---
+
+### Middle layers
+
+Around State 16 the positive side includes:
+
+```text
+transformation
+interaction
+exploration
+development
+measurement
+management
+communication
+temporal sequencing
+```
+
+That looks increasingly **process-oriented**.
+
+Meanwhile the negative side contains:
+
+```text
+characterisation/configuration
+regulation
+distribution
+evaluation
+pathology
+institutional hierarchy
+physical objects
+```
+
+Potentially:
+
+```text
+dynamic process
+        versus
+bounded/static/control structure
+```
+
+Again, that is only a hypothesis at this point.
+
+---
+
+### Late layers
+
+By States 28–31 there is a recurring organisation around:
+
+```text
+POSITIVE
+measurement
+quantification
+testing
+development
+interpretation
+business/social interaction
+software/information systems
+biomedical activity
+
+NEGATIVE
+characterisation
+regulation
+prohibition
+pathology
+built/material objects
+institutional hierarchy
+intense evaluation
+```
+
+This is exactly why your proposed analysis is interesting.
+
+There appears to be enough regularity for **higher-order generators** to be inferred.
+
+---
+
+### Final normalisation
+
+State 32 reorganises substantially:
+
+```text
+POSITIVE
+data / testing / measurement
+reporting / recording
+acquisition / retrieval / extraction
+computing infrastructure
+family / education / management
+biomedical / physical systems
+
+NEGATIVE
+structural characterisation
+intense evaluation
+deterioration / destruction
+pathology
+authority / ceremonial hierarchy
+physical environment
+government / social hierarchy
+```
+
+That looks like a potentially meaningful final reorganisation rather than merely another community reshuffle.
+
+And R008 independently tells us that the transition into final normalisation is one of the largest measured discontinuities.
+
+That gives us a particularly useful future test:
+
+> Does the inferred semantic architecture also undergo a major reorganisation where the measured topology says it should?
+
+If yes, the semantic interpretation and geometric evidence begin to reinforce one another.
+
+---
+
+# I would therefore define the next analysis as follows
+
+## R010 — Layer-wise Latent Generative Structure Inference
+
+Primary question:
+
+> **What higher-order latent semantic structure best explains the communities observed at each transformer state, and how does that structure evolve across states?**
+
+For every state:
+
+```text
+1. Inspect all communities.
+2. Preserve + / − side.
+3. Inspect R009 identity + representative tokens + size.
+4. Infer candidate parent structures.
+5. Assign each community to zero, one or multiple candidate parents.
+6. Record evidence for each assignment.
+7. Report parent coverage.
+8. Identify relationships between parents.
+9. Infer the minimal layer-level generative structure.
+10. Record alternatives and uncertainty.
+11. Freeze the state.
+```
+
+Then, only after State 32:
+
+```text
+33 independently inferred structures
+        ↓
+align parent structures across states
+        ↓
+identify:
+- persistence
+- strengthening / weakening
+- split / merge
+- appearance / disappearance
+- polarity change
+- abstraction increase/decrease
+        ↓
+infer transformer semantic trajectory
+```
+
+## Then compare that trajectory against R008
+
+After the semantic trajectory is inferred:
+
+```text
+semantic structural change
+        ↕
+R008 membership Jaccard
+edge Jaccard
+community ARI
+population size
+network structure
+```
+
+This is important because it gives us two independently derived descriptions:
+
+```text
+semantic interpretation
+"What seems to be changing?"
+
+measured topology
+"Where did the network actually change?"
+```
+
+Their agreement or disagreement becomes evidence.
+
+---
+
+## The strongest version of your idea
+
+I would formulate the central inversion like this:
+
+> **Do not ask what topic each community represents. Ask what latent structure would have to exist for this particular collection of communities to be generated at this transformer state.**
+
+Then:
+
+> **Do not ask whether individual communities persist across layers. Ask whether the latent generating structure itself persists, transforms, fragments, combines or is replaced.**
+
+That is a substantially more powerful analysis.
+
+It moves the project from **community classification** to **reverse ontological reconstruction of the transformer state**.
+
+And importantly, it delays SDA-3 until after we know what larger structures actually emerge, rather than searching the communities for C/S/A/HCU/E and thereby risking fitting the data to the framework.
