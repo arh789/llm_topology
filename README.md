@@ -19,7 +19,8 @@ R009 applies a fixed descriptive taxonomy to all 792 state-local R008
 communities across 33 states and passes its structural completeness check. R010
 independently reconstructs candidate latent parent structures at every state,
 tracks their cross-state evolution and compares that semantic trajectory with
-R008's measured topology.
+R008's measured topology. R010 Phase D then operationalises separate geometric,
+partition and semantic curvature measures plus a coherence-difficulty score.
 
 R005 found greater nearest-neighbour density and positive/negative segregation
 than a size-matched random null at all 33 states, but its communities also
@@ -27,11 +28,13 @@ contain tokenizer and morphological structure. R009 records model-generated
 candidate identities for those communities; R010 adds state-local generative
 interpretations and a cross-state synthesis rather than new measurements. Its
 Phase-C comparison finds partial, non-reducible correspondence between semantic
-change and measured topology. Neither establishes semantic coherence or SDA-3
-roles. The evidence does not establish semantic opposition, a generally
-optimal layer, causal mechanisms or a correspondence between semantic conflict
-and geometric curvature. Model weights remain in the shared cache under
-`D:\AI` and are not versioned here.
+change and measured topology. Phase D finds that difficult-to-compress states
+tend to be followed by repartitioning and supports selective compression plus
+re-differentiation rather than conflict elimination. These are single-prompt,
+operational measurements and interpretations: they do not establish SDA-3
+roles, manifold curvature, a generally optimal layer, causal mechanisms or
+cross-prompt generality. Model weights remain in the shared cache under `D:\AI`
+and are not versioned here.
 
 ## Reading order
 
@@ -105,8 +108,13 @@ and geometric curvature. Model weights remain in the shared cache under
     — the comparison between the inferred semantic trajectory and R008's
     measured membership, edge, community and modularity changes.
 28. [`single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/phase_d/PHASE_D_TASK.md`](single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/phase_d/PHASE_D_TASK.md)
-    — the external task definition for a future curvature and coherence
-    analysis; no Phase-D measurements or conclusions are present yet.
+    — the initial curvature and coherence task definition.
+29. [`single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/phase_d/R010_PHASE_D_MEASUREMENT_PROTOCOL.md`](single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/phase_d/R010_PHASE_D_MEASUREMENT_PROTOCOL.md)
+    — the frozen operational definitions and measurement procedure.
+30. [`single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/phase_d/R010_PHASE_D_MEASUREMENT_RESULTS.md`](single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/phase_d/R010_PHASE_D_MEASUREMENT_RESULTS.md)
+    — the state/transition measurements and quantitative results.
+31. [`single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/phase_d/R010_PHASE_D_CONFLICT_RESOLUTION_REPORT.md`](single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/phase_d/R010_PHASE_D_CONFLICT_RESOLUTION_REPORT.md)
+    — the final Phase-D conflict-resolution interpretation and limitations.
 
 ## Provenance
 
@@ -123,7 +131,9 @@ R010 was also authored externally in the private parent repository. Its final
 Phase-A verification passed at remote commit `28e3653`; Phase B was added at
 `a62646f`, Phase C at `3f82f28`, and the expanded Phase-B insights artifact was
 finalised at `11bc912`. A Phase-D task definition was added at `3711712`. The
-complete 40-file package was imported byte-for-byte from remote head `3711712`.
+Phase-D measurement results and final report were completed at `96041ea` and
+`4e5541d`. The complete 45-file package was imported byte-for-byte from remote
+head `4e5541d`.
 GitHub may temporarily lead while external analysis is active, so its history
 must be fetched and reconciled before later edits or pushes. This repository
 remains the authoritative project working copy after that reconciliation.

@@ -5476,3 +5476,93 @@ push. Its local Git blob SHA
 `1ef8a8b24a6d5b851a9c8b593334a01764a47871` exactly matches the GitHub blob at
 external head `3711712`. The curated R010 package now contains 40 Markdown
 files recursively.
+
+
+### MA-0051 — ChatGPT response: Phase-D completion insight
+
+- Entry timestamp: `2026-11-13T16:47:50+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim response`
+- Related runs: `R008`; `R010 Phase D`
+
+Phase D is now complete for the current R010 capture and committed to Git.
+
+The strongest result is that **conflict resolution is not primarily elimination**. The transformer repeatedly appears to:
+```css
+preserve competing structures
+→ attempt compression
+→ tolerate a difficult intermediate state
+→ repartition when necessary
+→ assign different functional roles
+→ integrate compatible structures
+→ sequence complementary functions
+→ isolate a functional core
+```
+
+The clearest evidence is S21→S23. S21→S22 has almost no positive geometric change (**0.054**) but high semantic curvature (**0.731**), while positive coherence difficulty rises **0.401 → 0.745**. S22→S23 then has very high partition curvature (**0.831**) and semantic curvature (**0.796**), while difficulty falls **0.745 → 0.432**. That looks remarkably like **abstraction creates conflict → repartitioning resolves it**.
+
+The negative side resolves earlier. Negative difficulty peaks at **S10 = 0.885**, then falls to **0.219 at S11** as characterisation, evaluation, constraint and controlled change stabilise into the T-C control architecture. Across internal transitions, the strongest quantitative relationship is **source coherence difficulty → subsequent partition curvature: ρ = 0.502**. In other words, states that are difficult to compress tend to be followed by community reorganisation.
+
+Another important result is that **integration does not necessarily remove conflict**. S26→S27 creates the 72.1%-coverage positive parent with the highest positive semantic-curvature score (**0.898**), but coherence improves only slightly. The much larger improvement occurs S27→S28, when another distinction is restored. This supports **selective compression plus re-differentiation**, rather than monotonically collapsing everything into one concept.
+
+The terminal state is also revealing. S32 is **not** the point of maximum global coherence: positive difficulty actually rises slightly from **0.547 → 0.604**, and its workflow parent covers only **51.3%** of semantic-eligible positive material. The model appears to need a coherent **functional core**, not complete reconciliation of everything represented.
+
+That changes the main conclusion to:
+
+> **The transformer appears to address conflicting information by discovering a higher-order organisation in which useful competing structures can coexist. Structures that cannot be integrated need not be erased; they can remain peripheral while the model constructs a sufficiently coherent functional pathway for output.**
+
+A single “curvature density” score was also tested and should **not** replace the three separate measures. Geometric, partition and semantic curvature capture genuinely different phenomena; combining them hides important cases such as S21→S22.
+
+Committed and verified:
+
+- `phase_d/R010_PHASE_D_MEASUREMENT_RESULTS.md` — commit `96041ea8b905bd86ef9965c12d066288d8c41527`
+- `phase_d/R010_PHASE_D_CONFLICT_RESOLUTION_REPORT.md` — commit `4e5541df676ecd06d3f24bf78bbe84ed99351b58`
+
+At this point, the strongest next step is probably **replication across prompts**, because we now have a specific falsifiable hypothesis about how transformer layers handle conflicting information.
+
+
+### MA-0052 — Completed R010 Phase-D package import
+
+- Entry timestamp: `2026-11-13T16:48:16+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex reconciliation record`
+- Entry type: `provenance, verification and repository housekeeping`
+- Related runs: `R008`; `R009`; `R010 Phase D`
+- External repository: `arh789/chatgpt-analysis`
+- External protocol commit: `f41f5450222dadb3142adfc7900c6017d212cd0a`
+- External measurement-results commit: `96041ea8b905bd86ef9965c12d066288d8c41527`
+- External final-report/imported head: `4e5541df676ecd06d3f24bf78bbe84ed99351b58`
+
+#### Record
+
+External ChatGPT completed Phase D after the task definition imported in
+MA-0050. Five additional artifacts were added beneath `phase_d/`:
+
+- `R010_PHASE_D_MEASUREMENT_PROTOCOL.md`;
+- `R010_PHASE_D_CONFLICT_RESOLUTION_ADDENDUM.md`;
+- `R010_PHASE_D_CONFLICT_RESOLUTION_PRELIMINARY.md`;
+- `R010_PHASE_D_MEASUREMENT_RESULTS.md`; and
+- `R010_PHASE_D_CONFLICT_RESOLUTION_REPORT.md`.
+
+The package operationalises geometric, partition and semantic curvature
+separately and defines a coherence-difficulty measure rather than collapsing
+them into one curvature-density score. Its strongest reported quantitative
+relationship is source coherence difficulty predicting subsequent partition
+curvature (`ρ = 0.502`). The final interpretation is that conflict resolution
+often proceeds through selective compression, repartitioning, functional-role
+assignment and re-differentiation, while peripheral structures can remain
+represented outside a sufficiently coherent functional core.
+
+All five local Git blob SHAs exactly match their counterparts at external head
+`4e5541d`:
+
+- addendum: `e0812618f4488ca206aea62360a191824a38c8de`;
+- preliminary analysis: `b78077884dd2fb5ccba1a81967d82c8ef81da945`;
+- final report: `6135e02d4e39d188887349049db885c5209d741c`;
+- measurement protocol: `c2f722a22eabd0766122246a8373a3a10491f43c`;
+- measurement results: `4e2d5aba4b7d88499d82886df093ae40e295ff47`.
+
+The curated R010 package now contains 45 Markdown files recursively. Phase D
+is complete for this capture, but replication across prompts remains required
+before treating the conflict-resolution pattern as general.

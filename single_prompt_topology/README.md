@@ -251,11 +251,21 @@ Phase C's
 compares that semantic trajectory with R008's measured topology. It identifies
 global resets, community re-partitioning and semantic abstraction over stable
 geometry. The comparison does not assign SDA-3 roles, select an optimal layer
-or infer curvature/coherence. A later
+or infer curvature/coherence. The later
 [`PHASE_D_TASK.md`](runs/R010_lithium-layerwise-latent-generative-structure/phase_d/PHASE_D_TASK.md)
-defines a future curvature/coherence analysis without performing it. The
-complete 40-file package was imported byte-for-byte from private
-`chatgpt-analysis` head `3711712`.
+was implemented through a frozen
+[`R010_PHASE_D_MEASUREMENT_PROTOCOL.md`](runs/R010_lithium-layerwise-latent-generative-structure/phase_d/R010_PHASE_D_MEASUREMENT_PROTOCOL.md),
+quantitative
+[`R010_PHASE_D_MEASUREMENT_RESULTS.md`](runs/R010_lithium-layerwise-latent-generative-structure/phase_d/R010_PHASE_D_MEASUREMENT_RESULTS.md)
+and final
+[`R010_PHASE_D_CONFLICT_RESOLUTION_REPORT.md`](runs/R010_lithium-layerwise-latent-generative-structure/phase_d/R010_PHASE_D_CONFLICT_RESOLUTION_REPORT.md).
+Phase D keeps geometric, partition and semantic curvature separate and finds
+that high coherence difficulty tends to precede community repartitioning. It
+supports conflict resolution by selective compression, functional-role
+assignment and re-differentiation rather than wholesale elimination. These
+results remain specific to the current prompt and operational definitions. The
+complete 45-file package was imported byte-for-byte from private
+`chatgpt-analysis` head `4e5541d`.
 
 ## Run outputs
 
