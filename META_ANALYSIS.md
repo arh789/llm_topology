@@ -3051,3 +3051,74 @@ That is a materially different task from R009 classification.
 One additional consequence of the update is operational: **the GitHub/local divergence problem has been resolved and documented**. The authoritative local repository now contains R009 byte-for-byte, while GitHub contains the corresponding provenance record. Future work can therefore proceed from `c6a8d3` without needing to reconstruct or re-import the R009 state files.
 
 The repository is now in a clean state for the **cross-state synthesis stage**. No further state-local classification or structural verification is required before beginning it.
+
+### MA-0030 — R009 interactive descriptive summary
+
+- Entry timestamp: `2026-11-13T11:07:09+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex`
+- Entry type: `derived interpretive-report artifact and validation record`
+- Related runs: `R008`; `R009`
+
+#### Artifact created
+
+`single_prompt_topology/runs/R009_lithium-community-semantic-classification/R009_SUMMARY.html`
+was generated from the 33 authoritative R009 state Markdown files. The report
+contains all 792 classified community instances across the 33 recorded states:
+392 positive-head and 400 negative-tail communities.
+
+The self-contained report includes:
+
+- layer-wise positive-head and negative-tail community-count trajectories;
+- a side-selectable state-by-taxonomy heatmap;
+- a searchable, filterable and paginated community explorer;
+- state-level summaries and the complete community tables; and
+- the R009 provenance and interpretation boundary.
+
+`single_prompt_topology/generate_r009_summary.py` is the deterministic report
+generator. It validates the complete state range, total and side-specific
+community counts, state-side-local community-ID continuity, taxonomy values and
+confidence values before writing the report.
+
+#### Validation
+
+- Embedded report data: 33 states and 792 community records.
+- Side totals: 392 positive-head and 400 negative-tail records.
+- JavaScript syntax: passed a Node syntax check.
+- Portability: one complete HTML document with embedded CSS, JavaScript and
+  data; no external resource loads or network API calls were found.
+- Direct desktop-browser visual inspection was not used because the browser
+  security policy rejected local `file://` navigation; that control was not
+  bypassed.
+
+#### Interpretation boundary
+
+This artifact is the R009 **summary**, not `R009_SYNTHESIS.md`. It aggregates
+and makes the existing state-local classifications inspectable. It does not
+normalize topic labels, infer cross-state identity or persistence, assess
+semantic coherence, choose an optimal layer, assign SDA-3 roles or establish
+any new measured fact.
+
+### MA-0031 — Top-ten representative tokens added to the R009 summary
+
+- Entry timestamp: `2026-11-13T11:13:45+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex`
+- Entry type: `report extension and source-definition record`
+- Related runs: `R008`; `R009`
+
+The R009 HTML summary now displays ten representative tokens for every one of
+the 792 community instances in both the searchable explorer and the complete
+state-by-state tables. These tokens are read from R008
+`chatgpt_community_networks.json` and joined to R009 by the exact state index,
+side and state-side-local community ID.
+
+“Top” has a specific R008 meaning here: representatives are ordered by
+descending node degree inside the undirected state-side community graph, with
+token ID as the deterministic tie-breaker. The report uses the first ten of the
+twelve representatives exported by R008. They are not the ten highest or
+lowest target-cosine tokens; those are a separate `most_extreme_tokens` field.
+
+The generator verifies all 792 joins, exact R008/R009 community-size agreement
+and the presence of at least ten representative tokens per community before it
+writes the HTML report.

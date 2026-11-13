@@ -77,6 +77,10 @@ and geometric curvature. Model weights remain in the shared cache under
     — all 33 state-local community-classification files.
 20. [`single_prompt_topology/runs/R009_lithium-community-semantic-classification/R009_COMPLETENESS_VERIFICATION.md`](single_prompt_topology/runs/R009_lithium-community-semantic-classification/R009_COMPLETENESS_VERIFICATION.md)
     — the exactly-once count, schema and protocol-boundary verification.
+21. [`single_prompt_topology/runs/R009_lithium-community-semantic-classification/R009_SUMMARY.html`](single_prompt_topology/runs/R009_lithium-community-semantic-classification/R009_SUMMARY.html)
+    — a self-contained interactive summary of the 792 state-local community
+    classifications and their top ten graph-degree representative tokens
+    across all 33 transformer states.
 
 ## Provenance
 

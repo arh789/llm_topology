@@ -193,6 +193,23 @@ check reports 392 positive-head and 400 negative-tail instances, for all 792
 R008 communities exactly once with valid schemas, taxonomy values and
 confidence values.
 
+[`R009_SUMMARY.html`](runs/R009_lithium-community-semantic-classification/R009_SUMMARY.html)
+is the self-contained interactive R009 summary. It aggregates every
+classification across all 33 states, shows positive/negative community counts,
+provides a taxonomy heatmap, supports filtering and search, and preserves a
+complete state-by-state table. Every community includes its top 10 R008
+representative tokens, ranked by descending degree within that state-side
+community graph with token ID as the tie-breaker. The report is generated from
+the 33 state Markdown files and R008 `chatgpt_community_networks.json` with:
+
+```powershell
+& 'C:\Users\arhal\anaconda3\envs\myenv\python.exe' single_prompt_topology\generate_r009_summary.py
+```
+
+The report is a descriptive index, not cross-state semantic synthesis. It does
+not normalize broad-identity labels, infer that similarly named communities
+persist across states, judge coherence or assign SDA-3 roles.
+
 The R009 labels are model-generated interpretations of measured R008
 communities, not new measurements or proof of semantic coherence. No
 cross-state synthesis, SDA-3 role assignment, optimal-layer judgement or
@@ -219,7 +236,7 @@ selected as curated evidence. The reviewed baseline at
 is deliberately
 committed as the first reproducible evidence package; its `manifest.json`
 records the exact model revision and hashes for every artifact. R009 is also
-tracked as a curated text-only interpretive package. Other later run outputs
+tracked as a curated interpretive package. Other later run outputs
 should remain local unless they are explicitly selected for comparison or
 publication.
 
