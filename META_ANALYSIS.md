@@ -13196,3 +13196,1418 @@ Then the purpose of persistent files, protocols and experiments becomes:
 > **externalise the evolving shared model so corrections accumulate rather than being repeatedly rediscovered.**
 
 That seems like the real meta-analysis worth conducting.
+
+
+### MA-0084 — ChatGPT response: R014 cross-probe local semantic mapping design
+
+- Entry timestamp: `2026-11-14T10:36:14+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim external experimental-design response`
+- Proposed run: `R014`
+
+R014 should change the **unit of analysis**.
+
+R013 asked:
+
+> What semantic structure survives every ordering of one concept triplet?
+
+R014 should ask:
+
+> **Can multiple overlapping concept probes be aggregated into a stable local semantic map of the structure learned from the training data?**
+
+That is the minimum necessary change. The topology machinery itself should remain largely unchanged.
+
+## R014 objective
+
+The objective should become:
+
+> **Infer a local semantic topology of the model's learned training data by recovering higher-order semantic parents and parent relations across multiple overlapping concept sets, while using permutation to filter presentation-dependent structure from persistent semantic structure.**
+
+So:
+
+```text
+R013
+
+ONE CONCEPT SET
+      ↓
+6 permutations
+      ↓
+invariant parent structure
+
+
+R014
+
+MULTIPLE OVERLAPPING CONCEPT SETS
+      ↓
+6 permutations each
+      ↓
+invariant parents per probe
+      ↓
+match parents across probes
+      ↓
+aggregate persistent relations
+      ↓
+LOCAL SEMANTIC MAP
+```
+
+## 1. Keep the R013 measurement machinery fixed
+
+Do not change:
+
+```text
+Qwen2.5-7B-Instruct
+same revision
+same BF16 runtime
+same neutral newline anchor
+same capture position
+same 29 states
+
+cosine projection
+R004 elbow
+positive / negative sectors
+exact 10-NN
+Louvain
+Jaccard
+ARI
+six permutations
+```
+
+R014 is not the place to test another graph algorithm, base model or embedding basis.
+
+Otherwise we would not know whether differences came from the new mapping method or the changed measurement instrument.
+
+---
+
+# 2. Stop treating one triplet as the semantic object
+
+This is the principal change.
+
+R013 gives us one local observation:
+
+```text
+electro pink
+curvature density
+Tokyo nightlife
+      ↓
+parents
+      ↓
+parent relations
+```
+
+R014 needs several **overlapping observations of the same semantic neighbourhood**.
+
+Conceptually:
+
+```text
+PROBE 1
+A B C
+
+PROBE 2
+A B D
+
+PROBE 3
+A C D
+
+PROBE 4
+B C D
+```
+
+Each probe is then run as:
+
+```text
+ABC
+ACB
+BAC
+BCA
+CAB
+CBA
+```
+
+The overlap is essential.
+
+Without overlapping probes we obtain several independent semantic analyses.
+
+With overlapping probes we can ask:
+
+> Does the same higher-order structure reappear when its surrounding context changes?
+
+That is what turns the pipeline into a **mapping procedure**.
+
+---
+
+# 3. R014 should map a local region, not attempt the entire training distribution
+
+Do not attempt a global map yet.
+
+Use R013 as the seed region.
+
+R013 has already identified candidate structures around:
+
+```text
+sensory / material / technical
+place / environment
+structural / measurement
+social / activity
+transformation / interaction
+representation / operation
+```
+
+R014 should expand around this neighbourhood and determine which of those are actually stable across **different concept combinations**, rather than merely different orders of the same combination.
+
+This is the critical new test.
+
+R013 established:
+
+```text
+invariance under order
+```
+
+R014 should establish:
+
+```text
+invariance under context
+```
+
+That is considerably more important for inferring training-data topology.
+
+---
+
+# 4. Candidate concepts should come from measured R013 evidence
+
+The human should not simply brainstorm a new set of concepts.
+
+That would inject too much analyst structure into the map.
+
+Instead:
+
+```text
+R013 communities
+      ↓
+stable / central semantic material
+      ↓
+candidate concepts for R014
+```
+
+For example, the candidate pool should be derived from the actual R013 parent evidence:
+
+```text
+sensory/material
+→ laser, sensor, colour, glass, etc.
+
+place/environment
+→ city, street, Japan, apartment, etc.
+
+structural/measurement
+→ area, field, measurement, parameters, etc.
+
+social/activity
+→ clubs, groups, activities, sessions, etc.
+```
+
+The exact exemplars should be selected from the measured evidence using a reproducible rule where possible:
+
+```text
+high permutation support
++
+repeated appearance across layers
++
+centrality within relevant communities
++
+clean lexical form
+```
+
+The LLM can propose the semantic parent; the underlying network evidence determines which concrete concepts are eligible.
+
+---
+
+# 5. Use overlapping probes to distinguish concept-specific from structural relations
+
+Suppose R013 suggests:
+
+```text
+SENSORY / MATERIAL
+        ↔
+PLACE / ENVIRONMENT
+```
+
+One experiment cannot tell us whether that relationship is peculiar to:
+
+```text
+electro pink + Tokyo nightlife
+```
+
+or whether it represents a broader learned semantic relationship.
+
+R014 should therefore test the relation through different concrete manifestations.
+
+Conceptually:
+
+```text
+laser
++
+urban street
++
+spatial density
+```
+
+and:
+
+```text
+colour
++
+city environment
++
+measurement
+```
+
+and:
+
+```text
+sensor
++
+apartment
++
+spatial field
+```
+
+If these different probes independently reconstruct:
+
+```text
+SENSORY / MATERIAL
+        ↔
+PLACE / ENVIRONMENT
+```
+
+then the relationship becomes a much stronger candidate for the semantic topology learned from the training data.
+
+That is the new inferential unit:
+
+> **relation recurrence across independent probes.**
+
+---
+
+# 6. Parent reconstruction remains local before aggregation
+
+Do not tell the semantic analysis:
+
+> Find the sensory/material parent.
+
+That would contaminate the experiment.
+
+Each probe should first be analysed independently:
+
+```text
+PROBE
+  ↓
+communities
+  ↓
+candidate parents
+  ↓
+parent relations
+```
+
+Only afterwards:
+
+```text
+PARENTS FROM PROBE 1
+PARENTS FROM PROBE 2
+PARENTS FROM PROBE 3
+...
+        ↓
+cross-probe matching
+```
+
+This preserves the R010 rule:
+
+```text
+COMMUNITY BEFORE PARENT
+```
+
+and adds:
+
+```text
+LOCAL PARENT BEFORE GLOBAL MAP NODE
+```
+
+That should become an explicit R014 methodological rule.
+
+---
+
+# 7. The final semantic unit should change
+
+R013's final unit was:
+
+```text
+order-invariant parent
+```
+
+R014's final unit should be:
+
+```text
+cross-probe persistent parent
+```
+
+and, more importantly:
+
+```text
+cross-probe persistent parent relation
+```
+
+The resulting hierarchy becomes:
+
+```text
+TOKEN
+    ↓
+COMMUNITY
+    ↓
+STATE-LOCAL PARENT
+    ↓
+PERMUTATION-INVARIANT PARENT
+    ↓
+CROSS-PROBE PARENT
+    ↓
+SEMANTIC MAP NODE
+```
+
+And for relations:
+
+```text
+LOCAL RELATION
+    ↓
+SURVIVES PERMUTATION
+    ↓
+REAPPEARS IN INDEPENDENT PROBES
+    ↓
+SEMANTIC MAP EDGE
+```
+
+That is the methodological leap R014 needs.
+
+---
+
+# 8. The output should become an actual semantic graph
+
+R014 should produce something R013 does not yet produce.
+
+For example:
+
+```text
+semantic_map_nodes.csv
+semantic_map_edges.csv
+semantic_map_evidence.csv
+semantic_map.json
+R014_SEMANTIC_MAP.html
+```
+
+A map node might contain:
+
+| Field | Meaning |
+|---|---|
+| parent | higher-order semantic structure |
+| probe support | number of independent probes recovering it |
+| permutation support | stability within those probes |
+| layer range | where it emerges/persists |
+| sector | positive / negative / both |
+| evidence | underlying communities/tokens |
+
+A map edge might contain:
+
+| Field | Meaning |
+|---|---|
+| source parent | semantic structure A |
+| target parent | semantic structure B |
+| relation | inferred relation |
+| probe support | independent probes recovering relation |
+| permutation stability | order robustness |
+| layer support | transformer depths where observed |
+| sector | positive / negative / cross-sector interpretation |
+| evidence | supporting communities |
+
+The map should retain evidence provenance all the way back to the measured communities.
+
+---
+
+# 9. Distinguish three relation types
+
+R014 should not reduce every edge to generic similarity.
+
+The analysis is already showing at least three fundamentally different relations.
+
+### Decomposition
+
+```text
+TOKYO NIGHTLIFE
+        ↓
+PLACE / ENVIRONMENT
++
+SOCIAL / ACTIVITY
+```
+
+Meaning:
+
+> concept X decomposes into structures A and B.
+
+### Associative
+
+```text
+SENSORY / MATERIAL
+        ↔
+PLACE / ENVIRONMENT
+```
+
+Meaning:
+
+> these structures repeatedly organise near one another.
+
+### Organisational
+
+```text
+SOCIAL / ACTIVITY
+        ↓ organised through
+TRANSFORMATION / INTERACTION
+```
+
+Meaning:
+
+> one structure describes how another behaves or is organised.
+
+Those are qualitatively different pieces of training-data topology.
+
+The resulting map should preserve that difference.
+
+---
+
+# 10. Do not introduce a hard "is this a real edge?" threshold yet
+
+R003 already taught the project something useful about arbitrary acceptance gates.
+
+For R014, retain measurements such as:
+
+```text
+recovered in 1 probe
+recovered in 2 probes
+recovered in 3 probes
+...
+
+permutation stability
+layer persistence
+sector consistency
+```
+
+rather than immediately deciding:
+
+```text
+support >= X
+= real semantic edge
+```
+
+Let the evidence distribution emerge first.
+
+The semantic analysis can then identify:
+
+```text
+strong
+moderate
+weak
+uncertain
+```
+
+relationships without pretending the cut-off is already known.
+
+---
+
+# 11. The key new comparison becomes context invariance
+
+R013 asks:
+
+```text
+Does A-B-C survive
+ABC / ACB / BAC / ...?
+```
+
+R014 adds:
+
+```text
+Does relation X survive when
+the third concept changes?
+```
+
+For example:
+
+```text
+A B C
+A B D
+A B E
+```
+
+If the inferred A↔B higher-order relation survives:
+
+```text
+different third concept
++
+different order
+```
+
+then we have much stronger evidence that it is intrinsic to the learned semantic topology.
+
+This should probably be the defining R014 measurement concept:
+
+> **context invariance.**
+
+---
+
+# 12. The pipeline changes from reconstruction to mapping
+
+The full R014 architecture should therefore be approximately:
+
+```text
+R013 SEMANTIC REGION
+        ↓
+candidate concept pool
+derived from measured evidence
+        ↓
+OVERLAPPING CONCEPT TRIPLETS
+        ↓
+6 permutations per triplet
+        ↓
+R013 topology pipeline
+        ↓
+independent semantic reconstruction
+for each probe
+        ↓
+permutation-invariant parents
+        ↓
+CROSS-PROBE PARENT MATCHING
+        ↓
+CROSS-PROBE RELATION MATCHING
+        ↓
+LOCAL SEMANTIC GRAPH
+        ↓
+evidence-weighted map of
+learned training-data topology
+```
+
+That is the essential R014 change.
+
+---
+
+# What R014 should **not** do
+
+Keep it narrow.
+
+Do not yet add:
+
+```text
+different model family
+base-vs-instruct comparison
+new graph algorithms
+new k values
+global map
+thousands of concepts
+response generation
+external corpus comparison
+curvature/coherence composites
+```
+
+Those would dilute the central experiment.
+
+R014 should answer one question:
+
+> **Can the semantic parents and relations discovered by R013 be recovered across multiple overlapping concept contexts strongly enough to assemble a coherent local semantic graph?**
+
+If yes, then the project has moved from:
+
+```text
+analysing model topology
+```
+
+to:
+
+```text
+using model topology
+to infer semantic topology
+of the learned training data
+```
+
+And that is the important transition.
+
+
+### MA-0085 — ChatGPT input: R014 success, failure and scope criteria
+
+- Entry timestamp: `2026-11-14T10:38:49+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim external experimental-planning input`
+- Proposed run: `R014`
+
+## Inferred goal
+
+R014 should test whether the semantic structures recovered from one probe can be generalised into a **local semantic map of the model's learned training-data structure**.
+
+The key move is:
+
+```text
+R013
+one concept triplet
+→ permutation-invariant parents
+
+R014
+multiple overlapping triplets
+→ cross-probe persistent parents
+→ cross-probe persistent relations
+→ local semantic graph
+```
+
+The actual question is:
+
+> **Can higher-order semantic parents and relations be recovered consistently across different overlapping concept contexts strongly enough to infer a stable local semantic topology?**
+
+The object of interest is no longer the transformer trajectory itself. Transformer topology is the measurement instrument.
+
+---
+
+## Successful outcome
+
+R014 succeeds if several independently analysed concept sets repeatedly reconstruct compatible higher-order structures and relations.
+
+For example:
+
+```text
+PROBE 1
+A + B + C
+        ↓
+PARENT X ↔ PARENT Y
+
+PROBE 2
+A + B + D
+        ↓
+PARENT X ↔ PARENT Y
+
+PROBE 3
+A + B + E
+        ↓
+PARENT X ↔ PARENT Y
+```
+
+despite:
+
+```text
+different third concepts
+different concept order
+different token neighbourhoods
+different graph edges
+different community partitions
+```
+
+A successful result would therefore produce an evidence-backed graph resembling:
+
+```text
+LOCAL LEARNED SEMANTIC TOPOLOGY
+
+SENSORY / MATERIAL
+        ↕
+PLACE / ENVIRONMENT
+        ↕
+STRUCTURAL / MEASUREMENT
+
+SOCIAL / ACTIVITY
+        ↕
+TRANSFORMATION / INTERACTION
+```
+
+with every node and edge traceable back to the probes, permutations, states and communities that support it.
+
+Success does **not** require every R013 parent to survive. Discovering that some apparent R013 structures were concept-set-specific is also useful.
+
+The critical success condition is that R014 can distinguish:
+
+```text
+probe-specific structure
+from
+cross-probe persistent structure
+```
+
+---
+
+## Indicators of scope drift
+
+R014 is drifting if it begins solving questions other than whether a local semantic graph can be reconstructed across overlapping contexts.
+
+The main warning signs are:
+
+- changing the model, embedding basis, graph algorithm, `k`, cutoff method or community method;
+- testing base versus instruct models;
+- attempting a global map of the whole model;
+- introducing large numbers of unrelated concepts;
+- analysing generated responses;
+- trying to reconstruct actual training documents;
+- adding new curvature, coherence or composite metrics;
+- optimising the pipeline because a semantic result looks messy;
+- forcing R013 parent labels onto R014 communities before independent reconstruction;
+- treating cross-probe recurrence as proof of literal corpus frequency;
+- turning R014 into another study of transformer-layer behaviour rather than using the layers to infer semantic relations.
+
+The strongest scope test is:
+
+> **Does this operation help determine whether a semantic parent or relation persists across different concept contexts?**
+
+If not, it probably belongs outside R014.
+
+---
+
+## Unsuccessful outcome
+
+There are two different forms of failure.
+
+### Methodological failure
+
+R014 fails if the experiment cannot reliably distinguish cross-probe persistence from experimental contamination.
+
+Examples include:
+
+```text
+different measurement methods across probes
+
+concept sets chosen without a reproducible rationale
+
+parent labels inherited from R013 rather than reconstructed
+
+insufficient overlap between probes
+
+missing permutation controls
+
+no provenance from final graph edges
+back to underlying communities
+```
+
+That would make the resulting semantic graph uninterpretable.
+
+### Negative empirical outcome
+
+This is **not** methodological failure.
+
+R014 could validly find:
+
+```text
+R013 parents do not recur
+relations collapse when context changes
+only very weak cross-probe structure survives
+```
+
+That would mean the semantic structure inferred from R013 was more context-dependent than expected.
+
+That is an important result.
+
+So:
+
+```text
+NO STABLE LOCAL MAP
+≠
+FAILED EXPERIMENT
+```
+
+The failed experiment is one that cannot tell whether the map is stable.
+
+---
+
+## Steps that need to take place next
+
+1. **Freeze the R014 objective.** Define the run explicitly as a test of cross-context semantic invariance and local-map construction.
+
+2. **Define the seed semantic region from R013.** Use the measured R013 evidence to establish the candidate region around sensory/material, place/environment, structural/measurement, social/activity and transformation/interaction.
+
+3. **Derive a controlled concept pool from R013 evidence.** Select concrete concepts from stable or recurrent R013 communities rather than inventing arbitrary new concepts. Selection should favour repeated layer presence, permutation support, semantic clarity and useful coverage of different parents.
+
+4. **Construct a small set of overlapping triplets.** The design should deliberately reuse concepts across probes so the same candidate relation is tested under different surrounding contexts. The number should remain small enough that every resulting community can still be inspected properly.
+
+5. **Run all six permutations for every triplet.** Keep the R013 model, neutral anchor and measurement methodology unchanged.
+
+6. **Reconstruct each probe independently.** For every triplet, inspect communities and infer state-local parents without using R013 labels as predetermined answers.
+
+7. **Identify permutation-invariant parents within each probe.** This produces one semantic reconstruction per concept set.
+
+8. **Match parents across probes.** Determine whether independently reconstructed parents represent the same higher-order semantic structure.
+
+9. **Match relations across probes.** Record which parent-parent relations recur when the surrounding concept context changes.
+
+10. **Build the first local semantic graph.** Nodes should represent cross-probe persistent parents; edges should represent cross-probe persistent relations. Every node and edge should retain supporting probe, permutation, layer and community evidence.
+
+11. **Classify evidence rather than imposing a hard threshold.** Record support counts, permutation stability, layer persistence and sector consistency. Do not yet invent an arbitrary boundary for what counts as a "real" semantic edge.
+
+12. **Evaluate the central hypothesis.** Determine whether cross-probe persistence is substantially greater at the parent and parent-relation level than at the token, edge and community level.
+
+The whole R014 experiment can therefore be compressed to:
+
+```text
+R013 LOCAL STRUCTURE
+        ↓
+derive concept pool
+        ↓
+overlapping concept probes
+        ↓
+six permutations each
+        ↓
+independent parent reconstruction
+        ↓
+cross-probe matching
+        ↓
+persistent parents
+        ↓
+persistent relations
+        ↓
+LOCAL SEMANTIC MAP
+```
+
+The decisive R014 result is not another layer analysis. It is whether **a semantic graph survives changes in both concept order and concept context**.
+
+
+### MA-0086 — ChatGPT response: balanced four-concept R014 probe design
+
+- Entry timestamp: `2026-11-14T10:42:01+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim external experimental-design response`
+- Proposed run: `R014`
+
+The cleanest R014 design is to move from one triplet to a **balanced four-concept pool**, then test every three-concept subset in all six orders.
+
+That gives four overlapping probes:
+```css
+A B C
+A B D
+A C D
+B C D
+```
+
+This is preferable to inventing several unrelated triplets because every concept appears in three probes and, crucially, **every pair is tested in two different third-concept contexts**.
+
+For the first R014 run, I would use concrete concepts drawn directly from the R013 semantic region:
+```makefile
+A = laser
+    sensory / material / technical
+
+B = city
+    place / environment
+
+C = spatial field
+    structural / measurement
+
+D = clubs
+    social / activity
+```
+
+`laser`, `city`, `field/area` structure and `clubs` all recur in the R013 evidence, while remaining concrete enough that we are not directly feeding the inferred parent labels back into the experiment.
+
+The resulting four probe sets are:
+```ini
+P1 = laser | city | spatial field
+P2 = laser | city | clubs
+P3 = laser | spatial field | clubs
+P4 = city | spatial field | clubs
+```
+
+For each probe, run all six permutations with the same R013 newline anchor.
+
+So the exact 24 prompts become:
+```yaml
+P1: laser / city / spatial field
+
+laser
+city
+spatial field
+
+laser
+spatial field
+city
+
+city
+laser
+spatial field
+
+city
+spatial field
+laser
+
+spatial field
+laser
+city
+
+spatial field
+city
+laser
+```
+```yaml
+P2: laser / city / clubs
+
+laser
+city
+clubs
+
+laser
+clubs
+city
+
+city
+laser
+clubs
+
+city
+clubs
+laser
+
+clubs
+laser
+city
+
+clubs
+city
+laser
+```
+```yaml
+P3: laser / spatial field / clubs
+
+laser
+spatial field
+clubs
+
+laser
+clubs
+spatial field
+
+spatial field
+laser
+clubs
+
+spatial field
+clubs
+laser
+
+clubs
+laser
+spatial field
+
+clubs
+spatial field
+laser
+```
+```yaml
+P4: city / spatial field / clubs
+
+city
+spatial field
+clubs
+
+city
+clubs
+spatial field
+
+spatial field
+city
+clubs
+
+spatial field
+clubs
+city
+
+clubs
+city
+spatial field
+
+clubs
+spatial field
+city
+```
+
+Every prompt ends with the same final newline anchor exactly as R013 did.
+
+The reason this design is especially useful is the pair coverage:
+
+| Relation being tested | Context 1     | Context 2     |
+| --------------------- | ------------- | ------------- |
+| laser ↔ city          | spatial field | clubs         |
+| laser ↔ spatial field | city          | clubs         |
+| laser ↔ clubs         | city          | spatial field |
+| city ↔ spatial field  | laser         | clubs         |
+| city ↔ clubs          | laser         | spatial field |
+| spatial field ↔ clubs | laser         | city          |
+
+That directly answers the new R014 question.
+
+For example, R013 suggested:
+```
+SENSORY / MATERIAL
+        ↕
+PLACE / ENVIRONMENT
+```
+
+R014 can now ask whether the relation represented concretely by:
+```
+laser ↔ city
+```
+
+produces the same higher-order parent relation when the surrounding context is:
+```
+spatial field
+```
+
+versus:
+```
+clubs
+```
+
+Likewise:
+```
+city ↔ clubs
+```
+
+tests the two branches into which `Tokyo nightlife` decomposed, while changing the third context between sensory/material and structural/measurement.
+
+The whole experimental design becomes:
+```perl
+                 laser
+               /   |   \
+              /    |    \
+           city ---+--- spatial field
+              \    |    /
+               \   |   /
+                 clubs
+```
+
+Each triangle is one probe:
+```perl
+laser-city-spatial field
+laser-city-clubs
+laser-spatial field-clubs
+city-spatial field-clubs
+```
+
+This is essentially the **minimum balanced design capable of testing cross-context semantic persistence**. With only three concepts, there is no context variation. With four concepts and all four triplets, every pair gets replicated under two different contexts without unnecessarily expanding R014.
+
+So I would freeze R014 at **4 concepts → 4 overlapping triplets → 6 permutations each → 24 total prompts**. That is enough to test whether R013's inferred parent relations can begin to form a genuine local semantic map.
+
+#### Lossless compression
+
+R014:
+```sql
+GOAL
+Infer a local semantic map by testing whether R013 parent relations persist across different concept contexts, not just different orders.
+
+CONCEPT POOL
+A = laser          → sensory / material / technical
+B = city           → place / environment
+C = spatial field  → structural / measurement
+D = clubs          → social / activity
+
+PROBES
+ABC = laser | city | spatial field
+ABD = laser | city | clubs
+ACD = laser | spatial field | clubs
+BCD = city | spatial field | clubs
+
+FOR EACH PROBE
+run all 6 permutations
++
+same final newline anchor
++
+unchanged R013 model and topology pipeline
+
+TOTAL
+4 triplets × 6 permutations = 24 prompts
+
+WHY THIS DESIGN
+Every concept appears in 3 probes.
+Every concept pair appears in 2 different third-concept contexts.
+
+Therefore each candidate relation can be tested for:
+
+order invariance
++
+context invariance
+
+EXAMPLE
+laser ↔ city
+tested with:
+    spatial field as context
+    clubs as context
+
+OUTPUT
+independent parents per probe
+        ↓
+permutation-invariant parents
+        ↓
+cross-probe parent matching
+        ↓
+cross-probe persistent relations
+        ↓
+LOCAL SEMANTIC MAP
+
+SUCCESS
+The same higher-order parents/relations recur despite:
+different order
++
+different third-concept context
+
+CRITICAL RULE
+Do not impose R013 parent labels on R014.
+Reconstruct each probe independently, then match structures afterwards.
+```
+
+Core transition:
+```yaml
+R013: invariant under ORDER
+          ↓
+R014: invariant under ORDER + CONTEXT
+          ↓
+candidate semantic topology of the learned training data
+```
+
+
+### MA-0087 — Combined R014 planning exchange: Codex plan, ChatGPT feedback and Codex synthesis
+
+- Entry timestamp: `2026-11-14T10:49:38+11:00`
+- Timezone: `Australia/Sydney`
+- Authors/sources: `Codex initial response; ChatGPT feedback supplied by the user; Codex follow-up response`
+- Entry type: `combined planning exchange`
+- Related run: `R014`
+
+#### 1. Codex initial response
+
+## Inferred goal
+
+R014 should determine whether semantic structures found in R013 persist when both concept order and surrounding concept context change.
+
+The immediate goal is:
+
+> Construct the first evidence-backed local semantic map of the model’s learned training-data structure.
+
+The experiment uses four concepts:
+
+- `laser`
+- `city`
+- `spatial field`
+- `clubs`
+
+These form four overlapping triplets and 24 ordered prompts. Transformer layers remain the measurement instrument; the intended result is the persistent higher-order semantic graph.
+
+## Successful outcome
+
+R014 is operationally successful if:
+
+- All 24 prompts are measured using the unchanged R013 methodology.
+- Every probe is reconstructed independently, without imposing R013 parent labels.
+- Parents that survive permutation are identified within each probe.
+- Independently derived parents and relations are matched across probes.
+- Every proposed map node and edge remains traceable to its probes, permutations, states, communities and tokens.
+- The experiment can distinguish probe-specific structure from cross-probe structure.
+
+The hypothesis receives support if compatible parent structures or relations recur despite:
+
+```text
+different order
++
+different third-concept context
+```
+
+The intended product is:
+
+```text
+cross-probe persistent parents
+        ↓
+cross-probe persistent relations
+        ↓
+evidence-weighted local semantic graph
+```
+
+A valid negative result—little or no cross-context persistence—would still be a successful experiment if the evidence clearly establishes it.
+
+## Indicators of scope drift
+
+We are moving out of scope if we start:
+
+- Changing the model, capture position, anchor, cutoff, `k`, graph construction or community algorithm.
+- Adding curvature, coherence or other new metrics.
+- Comparing model families or base versus instruct models.
+- Expanding beyond the four-concept local region.
+- Analysing generated responses.
+- Predetermining R014 parents from R013 labels.
+- Treating token recurrence as the final semantic map.
+- Inventing a hard threshold for a “real” parent or edge.
+- Trying to reconstruct specific documents or corpus frequencies.
+- Turning R014 back into a general study of transformer layers.
+
+The simplest scope test is:
+
+> Does this operation help determine whether a semantic parent or relation persists across different concept contexts?
+
+If not, it probably does not belong in R014.
+
+## Unsuccessful outcome
+
+R014 fails methodologically if:
+
+- The measurement pipeline changes between probes.
+- The selected concepts cannot be traced to R013 evidence.
+- The four probes do not provide the planned pairwise context coverage.
+- Permutations or states are missing.
+- Parent reconstruction is contaminated by expected R013 labels.
+- Cross-probe matching lacks an explicit evidence trail.
+- The final graph cannot be traced back to measured communities.
+- The run produces data but not outputs suitable for independent semantic analysis.
+
+This is different from a negative empirical result:
+
+```text
+No stable cross-context parents or relations
+≠
+failed experiment
+```
+
+It would instead show that R013’s apparent semantic structure was more context-dependent than expected.
+
+## Next steps
+
+1. Commit and push the pending `MA-0084`–`MA-0086` entries.
+
+2. Create the R014 run folder and lock its plan before execution.
+
+3. Verify `laser`, `city`, `spatial field`, and `clubs` against measured R013 evidence. Record the exact communities, states and tokens supporting their selection.
+
+4. Freeze the four probes:
+
+```text
+laser | city | spatial field
+laser | city | clubs
+laser | spatial field | clubs
+city | spatial field | clubs
+```
+
+5. Generate a manifest containing all 24 permutations, the exact newline anchor, model revision and unchanged measurement settings.
+
+6. Adapt the R013 runner only as necessary to accept multiple named probes. Do not change the topology methodology.
+
+7. Run a small technical preflight to verify prompt construction, anchor position, state count and output schema.
+
+8. Execute all 24 prompts and produce measured, ChatGPT-readable network and comparison outputs.
+
+9. Verify completeness before interpretation:
+
+```text
+4 probes
+× 6 permutations
+× 29 states
+× 2 sectors
+= 1,392 state-local networks
+```
+
+10. Reconstruct each probe independently:
+
+```text
+communities
+→ parents
+→ parent relations
+→ permutation-invariant probe structure
+```
+
+11. Only after all four independent reconstructions are complete, match parents and relations across probes.
+
+12. Produce the local semantic map with full evidence provenance and report whether parent-level stability exceeds token-, edge- and community-level stability.
+
+#### 2. ChatGPT feedback
+
+Codex has inferred the task correctly. I would proceed with it essentially unchanged.
+
+Two additions are worth freezing because they make completeness objectively testable:
+```sql
+MEASURED COVERAGE
+
+24 prompts × 29 states × 2 sectors
+= 1,392 networks
+
+24 prompts × 28 adjacent transitions × 2 sectors
+= 1,344 within-prompt transition rows
+
+4 probes × 15 permutation pairs × 29 states × 2 sectors
+= 3,480 within-probe permutation comparisons
+```
+
+The critical analytical sequence is also correctly understood:
+```sql
+MEASURE EACH PROBE
+        ↓
+RECONSTRUCT EACH PROBE INDEPENDENTLY
+        ↓
+identify permutation-invariant parents
+        ↓
+DO NOT YET USE R013 LABELS
+        ↓
+complete all four reconstructions
+        ↓
+MATCH PARENTS ACROSS PROBES
+        ↓
+MATCH RELATIONS ACROSS PROBES
+        ↓
+LOCAL SEMANTIC MAP
+```
+
+The most important methodological distinction is:
+```css
+R013
+same concepts
+different ORDER
+        ↓
+what survives?
+
+
+R014
+same candidate relation
+different ORDER
++
+different CONTEXT
+        ↓
+what still survives?
+```
+
+That moves the evidential standard from:
+
+> “This parent relation seems stable within one semantic combination.”
+
+to:
+
+> “This parent relation re-emerges independently when the surrounding semantic context changes.”
+
+That is the necessary step if the eventual object is an inferred semantic map of the model's learned training data.
+
+One wording refinement: the final step should not require that parent stability **must exceed** token/edge/community stability. It should **test whether it does**. A result where it does not is scientifically meaningful.
+
+So Step 12 is better as:
+
+> Produce the local semantic map, if supported, with full evidence provenance, and determine whether parent and parent-relation stability exceeds token-, edge- and community-level stability across both order and context perturbation.
+
+Otherwise, Codex is on target. The next action should be **freeze `R014_PLAN.md`, verify the four concept selections against R013 evidence, and execute the measurement run**.
+
+#### 3. Codex follow-up response
+
+ChatGPT’s feedback confirms the R014 design without materially expanding it.
+
+The plan should freeze these completeness requirements:
+
+```text
+1,392 state-local networks
+1,344 within-prompt transition rows
+3,480 within-probe permutation comparisons
+```
+
+The analytical ordering is now explicit:
+
+```text
+independent probe reconstruction
+→ within-probe permutation invariance
+→ cross-probe parent matching
+→ cross-probe relation matching
+→ local semantic map, if supported
+```
+
+The Step 12 correction is important: R014 must test whether higher-order stability exceeds lower-level stability, not assume that it will.
+
+R014 is now sufficiently specified. The next action is to commit the pending meta-analysis entries, create and freeze `R014_PLAN.md`, verify the four concepts against R013 evidence, and run the measurement pipeline.
