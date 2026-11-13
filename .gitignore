@@ -18,6 +18,8 @@ single_prompt_topology/runs/*
 !single_prompt_topology/runs/R009_lithium-community-semantic-classification/
 !single_prompt_topology/runs/R009_lithium-community-semantic-classification/*.md
 !single_prompt_topology/runs/R009_lithium-community-semantic-classification/R009_SUMMARY.html
+!single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/
+!single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/*.md
 
 # Model weights and checkpoints
 *.bin

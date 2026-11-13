@@ -3822,3 +3822,244 @@ That is a substantially more powerful analysis.
 It moves the project from **community classification** to **reverse ontological reconstruction of the transformer state**.
 
 And importantly, it delays SDA-3 until after we know what larger structures actually emerge, rather than searching the communities for C/S/A/HCU/E and thereby risking fitting the data to the framework.
+
+
+### MA-0033 — ChatGPT phase separation and R010 protocol recommendation
+
+- Entry timestamp: `2026-11-13T11:33:04+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `external ChatGPT response supplied by the project owner`
+- Entry type: `proposed next-stage protocol and sequencing guidance`
+- Related runs: `R008`; `R009`; `proposed R010`
+- Preservation mode: `verbatim`
+- Timestamp note: the original response time was unavailable; the entry
+  timestamp records when this response was added to the metaanalysis.
+
+#### ChatGPT response — verbatim
+
+The next work should be split into **two strictly separated phases**: first reconstruct each transformer state independently; only afterwards compare those reconstructions across states.
+
+```text
+R010-A
+33 independent layer reconstructions
+        ↓
+R010-B
+cross-layer structural evolution
+        ↓
+R010-C
+comparison against measured R008 topology
+        ↓
+later
+SDA-3 / coherence / curvature testing
+```
+
+The steps I need to take next are:
+
+1. **Write and lock the R010 analysis protocol before inspecting layers comparatively.** The primary question should be:
+
+   > What minimum set of latent parent structures could plausibly generate the observed communities at this transformer state?
+
+   The protocol must explicitly prohibit using other states to influence the reconstruction of the current state.
+
+2. **Define the evidence allowed for each community.** For every state I should use:
+   - R009 broad identity;
+   - R009 structure type;
+   - R009 confidence;
+   - community size;
+   - R008 top-ten degree-central representative tokens;
+   - positive/negative side;
+   - broader R008 community evidence only when the summary is insufficient.
+
+   The R009 label should be treated as evidence, not ground truth.
+
+3. **Define what counts as a latent parent candidate.** A parent should explain multiple observed communities through a common higher-order relation. It should be the **broadest structure that remains discriminative**, not an abstraction such as “things”, “systems” or “processes” that could explain almost anything.
+
+   Each candidate should record:
+   - parent identity;
+   - child communities;
+   - side(s);
+   - total node coverage;
+   - percentage of the state population covered;
+   - confidence;
+   - evidence;
+   - plausible alternative parent;
+   - communities it deliberately does **not** explain.
+
+4. **Allow hierarchical reconstruction rather than forcing one abstraction level.**
+
+   ```text
+   community
+       ↓
+   first-order parent
+       ↓
+   higher-order parent
+       ↓
+   state-level architecture
+   ```
+
+   For example:
+
+   ```text
+   measurement ─┐
+   testing     ─┼─ KNOWLEDGE FORMATION
+   interpretation┘
+
+   prohibition ─┐
+   regulation  ─┼─ CONTROL / CONSTRAINT
+   suppression ─┘
+   ```
+
+5. **Keep semantic organisation separate from representational/form organisation.** Lexical, formatting, numeric and named-entity communities should not automatically be forced beneath semantic parents.
+
+   Each state may therefore contain something like:
+
+   ```text
+   SEMANTIC ARCHITECTURE
+   ├─ parent A
+   ├─ parent B
+   └─ parent C
+
+   REPRESENTATIONAL ARCHITECTURE
+   ├─ morphology
+   ├─ formatting
+   ├─ numerics
+   └─ names/geography
+   ```
+
+6. **Analyse positive and negative populations separately before relating them.** I should first infer:
+
+   ```text
+   positive communities → positive parent candidates
+   negative communities → negative parent candidates
+   ```
+
+   Only then ask whether a larger parent appears to organise both sides. This prevents importing assumptions such as positive = central or negative = suppressed.
+
+7. **Produce one frozen reconstruction for State 00.** It should contain:
+   - all communities accounted for;
+   - candidate parents;
+   - community→parent assignments;
+   - node-weighted parent coverage;
+   - relationships between parents;
+   - minimal state-level architecture;
+   - unresolved communities;
+   - alternative reconstruction;
+   - confidence.
+
+   State 00 then becomes immutable during the first pass.
+
+8. **Repeat exactly the same procedure for States 01–32, one state at a time.** I should not inspect the next state's inferred architecture while constructing the current one. This is the equivalent of the contamination control used successfully in R009.
+
+9. **Run a completeness/adversarial verification after State 32.** Before synthesis I need to establish:
+   - all 33 states reconstructed;
+   - every relevant community accounted for;
+   - no parent exists solely because it was expected from another state;
+   - broad abstractions have not swallowed unrelated communities;
+   - competing interpretations remain visible;
+   - coverage percentages reconcile.
+
+10. **Only then perform cross-state alignment of the latent parents.** The unit of comparison becomes the inferred parent structure, not community ID.
+
+    For every parent trajectory:
+
+    ```text
+    appearance
+    persistence
+    strengthening
+    weakening
+    broadening
+    narrowing
+    splitting
+    merging
+    polarity change
+    disappearance
+    re-emergence
+    ```
+
+11. **Reconstruct the global transformer trajectory.** This is where we can finally ask whether something like the following actually occurs:
+
+    ```text
+    lexical/entity association
+              ↓
+    domain organisation
+              ↓
+    process organisation
+              ↓
+    relational / control structure
+              ↓
+    final task-oriented reorganisation
+    ```
+
+    That trajectory must emerge from the 33 independent reconstructions rather than being imposed beforehand.
+
+12. **Compare semantic structural change against R008's measured discontinuities.** This is the crucial validation step.
+
+    Compare changes in inferred architecture with:
+    - membership Jaccard;
+    - edge Jaccard;
+    - community ARI;
+    - population sizes;
+    - intercommunity organisation;
+    - the known major discontinuities, particularly input→Block 0 and Block 30→final norm.
+
+    The important question becomes:
+
+    > When the measured network changes sharply, does the independently inferred semantic architecture also change sharply?
+
+13. **Only after that should SDA-3 be tested.** At that stage we can ask whether the recurrent higher-order structures actually support:
+    - Central;
+    - Suppressed;
+    - Adjacent;
+    - HCU;
+    - Emerging.
+
+    This makes SDA-3 a hypothesis being tested against the reconstructed topology rather than the taxonomy used to construct it.
+
+14. **Curvature/coherence comes last.** If semantic reorganisation, polarity conflict and measured network discontinuity converge at particular layers, then we have a defensible basis for testing whether those regions correspond to the proposed high-curvature/coherence-instability concept.
+
+The **immediate next action** is therefore not to start interpreting State 00 yet. It is to create and lock **`R010_ANALYSIS_PROTOCOL.md`**, defining the parent-inference rules, evidence hierarchy, output schema, contamination controls and completion criteria. Once that is fixed, State 00 can be reconstructed.
+
+
+### MA-0034 — R010 external analysis import and short-term Git reconciliation
+
+- Entry timestamp: `2026-11-13T14:39:29+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex reconciliation record`
+- Entry type: `provenance, verification and repository housekeeping`
+- Related runs: `R008`; `R009`; `R010`
+- External repository: `arh789/chatgpt-analysis`
+- External final Phase-A verification commit: `28e3653f5fd06ad3edb6c79a2d0d57713c44c514`
+- External imported head: `cd14435ddab576f42d222bb3b685d0d5de4c1ba0`
+
+#### Record
+
+External ChatGPT completed R010 Phase A in the private parent repository. The
+work consists of a locked protocol, 33 independent state-local latent-structure
+reconstructions, a final completeness verification and a later concise
+layerwise community/parent map.
+
+The final verification reports:
+
+- 33 of 33 state files;
+- 392 positive-head and 400 negative-tail communities;
+- 792 of 792 primary dispositions exactly once;
+- zero node-accounting, parent-node, side-relative coverage or
+  semantic-eligible coverage mismatches;
+- contiguous state-local parent identifiers;
+- complete exclusion boundaries and alternative reconstructions;
+- clean isolated reruns of States 06, 07, 23 and 24;
+- zero Phase-A cross-state evolution, SDA-3, optimal-layer or curvature claims.
+
+The final Phase-A result is **PASS**. Phase B is authorised by the external
+artifact but was deliberately not started during this reconciliation.
+
+All 36 R010 Markdown files were imported into the authoritative standalone
+local project repository. Each local Git blob SHA was compared with the
+corresponding blob SHA at external head `cd14435`; all 36 matched exactly.
+
+The local repository remains a project-only Git repository with no monorepo
+remote attached. The private `chatgpt-analysis/projects/llm-topology` directory
+continues as the temporary external collaboration surface while the project is
+active. External changes must therefore be imported, hash-verified and recorded
+before the local repository is treated as reconciled. A separate publication
+folder or repository will be created only after the project is finished.

@@ -216,6 +216,31 @@ cross-state synthesis, SDA-3 role assignment, optimal-layer judgement or
 curvature interpretation has yet been performed. The text-only package was
 imported byte-for-byte from `chatgpt-analysis` commit `49a4b0a`.
 
+## R010 state-local latent structure reconstruction
+
+R010 is a second interpretive analysis rather than a measured pipeline run. Its
+locked contract is
+[`R010_ANALYSIS_PROTOCOL.md`](runs/R010_lithium-layerwise-latent-generative-structure/R010_ANALYSIS_PROTOCOL.md).
+For each state, external ChatGPT independently inferred the minimum plausible
+set of higher-order parent structures that could account for the observed R009
+communities. Positive and negative populations were analysed separately before
+cross-side relations were considered, and state-local parent identifiers carry
+no cross-state continuity meaning.
+
+The package contains 33 frozen state reconstructions. The final
+[`R010_PHASE_A_COMPLETENESS_VERIFICATION.md`](runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_A_COMPLETENESS_VERIFICATION.md)
+accounts for all 392 positive-head and 400 negative-tail communities exactly
+once, reports zero node or parent-coverage mismatches and records clean isolated
+reruns for States 06, 07, 23 and 24. Its result is **PASS**. The concise
+[`R010_LAYERWISE_COMMUNITY_PARENT_MAP.md`](runs/R010_lithium-layerwise-latent-generative-structure/R010_LAYERWISE_COMMUNITY_PARENT_MAP.md)
+indexes the resulting state-local dispositions and parents.
+
+R010 Phase A is interpretive evidence built from R008 and R009. Phase B has not
+begun: parent correspondence, cross-state trajectories, SDA-3 assignments,
+optimal-layer judgements and curvature interpretations remain unperformed.
+The complete 36-file package was imported byte-for-byte from private
+`chatgpt-analysis` head `cd14435`.
+
 ## Run outputs
 
 Each execution writes a timestamped directory under `runs/` containing:
@@ -235,8 +260,8 @@ selected as curated evidence. The reviewed baseline at
 `runs/R001_lithium-initial-output-inspection__20261112T063540Z_pythia-6.9b_52ff8f97c2/`
 is deliberately
 committed as the first reproducible evidence package; its `manifest.json`
-records the exact model revision and hashes for every artifact. R009 is also
-tracked as a curated interpretive package. Other later run outputs
+records the exact model revision and hashes for every artifact. R009 and R010
+are also tracked as curated interpretive packages. Other later run outputs
 should remain local unless they are explicitly selected for comparison or
 publication.
 
