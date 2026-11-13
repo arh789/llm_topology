@@ -216,6 +216,62 @@ cross-state synthesis, SDA-3 role assignment, optimal-layer judgement or
 curvature interpretation has yet been performed. The text-only package was
 imported byte-for-byte from `chatgpt-analysis` commit `49a4b0a`.
 
+## R010 state-local latent structure reconstruction
+
+R010 is a second interpretive analysis rather than a measured pipeline run. Its
+locked contract is
+[`R010_ANALYSIS_PROTOCOL.md`](runs/R010_lithium-layerwise-latent-generative-structure/R010_ANALYSIS_PROTOCOL.md).
+For each state, external ChatGPT independently inferred the minimum plausible
+set of higher-order parent structures that could account for the observed R009
+communities. Positive and negative populations were analysed separately before
+cross-side relations were considered, and state-local parent identifiers carry
+no cross-state continuity meaning.
+
+The package contains 33 frozen state reconstructions. The final
+[`R010_PHASE_A_COMPLETENESS_VERIFICATION.md`](runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_A_COMPLETENESS_VERIFICATION.md)
+accounts for all 392 positive-head and 400 negative-tail communities exactly
+once, reports zero node or parent-coverage mismatches and records clean isolated
+reruns for States 06, 07, 23 and 24. Its result is **PASS**. The concise
+[`R010_LAYERWISE_COMMUNITY_PARENT_MAP.md`](runs/R010_lithium-layerwise-latent-generative-structure/R010_LAYERWISE_COMMUNITY_PARENT_MAP.md)
+indexes the resulting state-local dispositions and parents.
+
+R010 Phase A is interpretive evidence built from R008 and R009. Phase B's
+[`R010_PHASE_B_STRUCTURAL_EVOLUTION.md`](runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_B_STRUCTURAL_EVOLUTION.md)
+infers cross-state correspondence families and a non-monotonic trajectory: the
+positive side remains plastic around an increasingly abstract
+operational/inquiry/process spine, while the negative side stabilises earlier
+around control/characterisation/adverse change and authority/territorial order.
+The later
+[`R010_PHASE_B_INSIGHTS.md`](runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_B_INSIGHTS.md)
+expands that interpretation as a progression from ontology through operators
+and functional dependencies to a final procedure-like organisation.
+
+Phase C's
+[`R010_PHASE_C_SEMANTIC_TOPOLOGY_COMPARISON.md`](runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_C_SEMANTIC_TOPOLOGY_COMPARISON.md)
+compares that semantic trajectory with R008's measured topology. It identifies
+global resets, community re-partitioning and semantic abstraction over stable
+geometry. The comparison does not assign SDA-3 roles, select an optimal layer
+or infer curvature/coherence. The later
+[`PHASE_D_TASK.md`](runs/R010_lithium-layerwise-latent-generative-structure/phase_d/PHASE_D_TASK.md)
+was implemented through a frozen
+[`R010_PHASE_D_MEASUREMENT_PROTOCOL.md`](runs/R010_lithium-layerwise-latent-generative-structure/phase_d/R010_PHASE_D_MEASUREMENT_PROTOCOL.md),
+quantitative
+[`R010_PHASE_D_MEASUREMENT_RESULTS.md`](runs/R010_lithium-layerwise-latent-generative-structure/phase_d/R010_PHASE_D_MEASUREMENT_RESULTS.md)
+and final
+[`R010_PHASE_D_CONFLICT_RESOLUTION_REPORT.md`](runs/R010_lithium-layerwise-latent-generative-structure/phase_d/R010_PHASE_D_CONFLICT_RESOLUTION_REPORT.md).
+Phase D keeps geometric, partition and semantic curvature separate and finds
+that high coherence difficulty tends to precede community repartitioning. It
+supports conflict resolution by selective compression, functional-role
+assignment and re-differentiation rather than wholesale elimination. These
+results remain specific to the current prompt and operational definitions. The
+canonical
+[`R010_PHASE_A_INSIGHTS.md`](runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_A_INSIGHTS.md),
+[`R010_PHASE_C_INSIGHTS.md`](runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_C_INSIGHTS.md)
+and
+[`R010_PHASE_D_INSIGHTS.md`](runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_D_INSIGHTS.md)
+provide concise phase-level summaries. The complete 48-file package was
+imported byte-for-byte from private `chatgpt-analysis` head `44adff3`.
+
 ## Run outputs
 
 Each execution writes a timestamped directory under `runs/` containing:
@@ -235,8 +291,8 @@ selected as curated evidence. The reviewed baseline at
 `runs/R001_lithium-initial-output-inspection__20261112T063540Z_pythia-6.9b_52ff8f97c2/`
 is deliberately
 committed as the first reproducible evidence package; its `manifest.json`
-records the exact model revision and hashes for every artifact. R009 is also
-tracked as a curated interpretive package. Other later run outputs
+records the exact model revision and hashes for every artifact. R009 and R010
+are also tracked as curated interpretive packages. Other later run outputs
 should remain local unless they are explicitly selected for comparison or
 publication.
 
