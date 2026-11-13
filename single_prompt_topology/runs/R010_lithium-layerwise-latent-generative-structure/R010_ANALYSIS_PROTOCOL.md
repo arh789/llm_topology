@@ -113,7 +113,12 @@ transformation with final layer normalisation.
 
 For the state currently under analysis, use evidence in this order.
 
-### Primary evidence
+### Mandatory evidence
+
+Every community must be inspected at the underlying R008 level before its R010
+disposition or parent assignment is finalised.
+
+For the state currently under analysis, use:
 
 1. The corresponding R009 state file.
 2. The same state's records in `R009_SUMMARY.html`, including:
@@ -125,15 +130,25 @@ For the state currently under analysis, use evidence in this order.
    - top ten R008 graph-degree representative tokens.
 3. The corresponding state-side communities in
    `R008/chatgpt_community_networks.json`.
+4. The underlying R008 community membership in `R008/nodes.csv.gz`.
+5. The underlying within-side graph evidence in `R008/edges.csv.gz` and/or
+   `R008/community_edges.csv` as needed to understand the community's
+   organisation and relation to other communities.
+6. `R008/cross_side_edges.csv.gz` when evaluating a proposed cross-side bridge.
 
-### Escalation evidence
+The HTML report and R009 prose are indexing and interpretive aids. They are not
+sufficient evidence by themselves for a final R010 parent assignment.
 
-Use only when the primary evidence does not support a stable higher-order
-interpretation:
+For **every** community, the analyst must inspect its underlying membership
+rather than relying only on the broad identity or top-ten representatives.
+Where the full community is large, inspection may use systematic membership
+slices or summaries, but those must derive from the complete R008 membership,
+not only from the compact R009/R008 representative samples.
 
-4. `R008/community_nodes.csv`
-5. `R008/community_edges.csv`
-6. complete R008 node/edge evidence where needed
+The R009 broad identity is evidence, not ground truth. Where the R009 prose
+identity conflicts with the underlying membership or graph-central
+representative evidence, the discrepancy must be recorded and the parent
+inference must follow the stronger underlying evidence.
 
 The R009 broad identity is evidence, not ground truth. Where the R009 prose
 identity conflicts with the representative-token evidence, the discrepancy
