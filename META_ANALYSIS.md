@@ -5596,3 +5596,596 @@ Git blob SHAs exactly match the corresponding files at external head
 - Phase D: `3eb46a9dddce64f303154d75bfb0fb2119192515`.
 
 The curated R010 package now contains 48 Markdown files recursively.
+
+
+### MA-0054 — ChatGPT insight: generative parent-node organisation
+
+- Entry timestamp: `2026-11-13T16:56:37+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim insight`
+- Related runs: `R009`; `R010`
+
+It suggests a much better way to organise a topic’s semantic neighbourhood than simply clustering by topical similarity.
+
+The key principle is:
+
+> **A semantic neighbourhood should be organised around the smallest set of higher-order parent structures that explain the relations between clusters, while preserving unresolved or competing structures instead of forcing them into one parent.**
+
+That gives a hierarchy like:
+```sql
+TOPIC
+│
+├─ Core parent structures
+│  ├─ communities that share a discriminative relation
+│  └─ define the dominant interpretation
+│
+├─ Competing parent structures
+│  ├─ alternative explanations
+│  └─ retained until evidence favours integration or separation
+│
+├─ Boundary / constraint parents
+│  └─ define what limits or opposes the core
+│
+├─ Adjacent satellites
+│  └─ relevant but not constitutive of the core
+│
+├─ Emerging structures
+│  └─ currently weak but increasingly integrable
+│
+└─ Residual / mixed structures
+   └─ remain outside the parent hierarchy until a defensible relation appears
+```
+
+The Phase D result implies several rules for constructing parent nodes.
+
+First, **parent nodes should represent relations, not merely broad topics**. A bad parent is:
+```
+business + health + software + research
+→ "professional topics"
+```
+
+A better parent is:
+```diff
+research
++ measurement
++ enterprise
++ communication
+→ organised information-producing activity
+```
+
+The second parent explains *why* those communities belong together.
+
+Second, every parent should have an **exclusion boundary**:
+```
+PARENT
+What does it explain?
+
+BOUNDARY
+What closely related material does it not explain?
+```
+
+Without that, parent nodes become progressively broader until they are meaningless.
+
+Third, **mixed communities should remain mixed** when necessary. Do not force:
+```
+community
+→ nearest plausible parent
+```
+
+Instead:
+```css
+community
+├─ relation to Parent A
+├─ relation to Parent B
+└─ unresolved
+```
+
+until a later analysis shows whether it should:
+```
+split
+absorb
+integrate
+remain satellite
+```
+
+Fourth, the hierarchy should be allowed to **change abstraction level**.
+
+For example:
+```markdown
+DOMAIN LEVEL
+health
+business
+technology
+research
+
+        ↓
+
+OPERATION LEVEL
+measure
+analyse
+communicate
+transform
+
+        ↓
+
+RELATIONAL LEVEL
+analysis informs transformation
+constraints bound transformation
+
+        ↓
+
+FUNCTIONAL LEVEL
+information acquisition
+→ evaluation
+→ state change
+→ reporting
+```
+
+This is probably the strongest practical implication of R010: **the correct parent node is often not one level above the communities; it may emerge only after asking what common function or relation those communities jointly perform.**
+
+So for analysing any topic, I would now organise its neighbourhood approximately as:
+```sql
+1. Identify communities
+        ↓
+2. Infer candidate parents
+        ↓
+3. Record competing parents
+        ↓
+4. Define exclusion boundaries
+        ↓
+5. Separate core / boundary / satellite / residual
+        ↓
+6. Test whether parents can be compressed
+        ↓
+7. Re-differentiate if compression creates ambiguity
+        ↓
+8. Infer relations between surviving parents
+        ↓
+9. Construct the minimal functional architecture
+```
+
+The end product is therefore not merely a topic map.
+
+It becomes:
+```sql
+SEMANTIC NEIGHBOURHOOD
+        ↓
+PARENT STRUCTURE
+        ↓
+RELATIONS BETWEEN PARENTS
+        ↓
+FUNCTIONAL GENERATIVE SYSTEM
+```
+
+That is probably the most important methodological consequence: **parent-node analysis should aim to reconstruct the generative structure that makes the neighbourhood coherent, not just produce a cleaner taxonomy of its contents.**
+
+
+### MA-0055 — ChatGPT response: SDA-3 within a broader structural protocol
+
+- Entry timestamp: `2026-11-13T16:58:42+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim response`
+- Related runs: `R009`; `R010`
+
+SDA-3 should probably move from being the **primary ontology** to being one layer inside a broader structural protocol.
+
+The old logic is roughly:
+```
+semantic neighbourhood
+        ↓
+classify tokens / clusters as
+C / S / A / HCU / E
+        ↓
+interpret topic
+```
+
+R010 suggests the stronger structure is:
+```
+semantic neighbourhood
+        ↓
+community detection
+        ↓
+parent reconstruction
+        ↓
+conflict / ambiguity analysis
+        ↓
+relations between parents
+        ↓
+functional architecture
+        ↓
+SDA-style positional classification
+        ↓
+conclusion
+```
+
+So SDA-3 becomes a description of **where structures sit relative to the current solution**, rather than the mechanism used to construct the solution.
+
+A revised protocol could be:
+```markdown
+1. OBJECTS
+What semantic communities exist?
+
+2. PARENTS
+What minimum higher-order structures explain them?
+
+3. BOUNDARIES
+What does each parent explain,
+and what must remain outside it?
+
+4. CONFLICT
+Which communities or parents support
+competing interpretations?
+
+5. ROLE
+For each surviving structure:
+C  central/generative
+S  displaced/suppressed
+A  adjacent/satellite
+H  residual/carryover
+E  emerging/integrating
+
+6. RELATIONS
+How do the surviving parents interact?
+support
+constrain
+oppose
+enable
+depend on
+transform
+
+7. RESOLUTION
+Should competing structures:
+separate
+merge
+be subordinated
+receive different roles
+remain unresolved?
+
+8. FUNCTION
+What minimal functional system do
+the surviving relations imply?
+
+9. CONCLUSION
+What answer survives the full structure?
+```
+
+The biggest change concerns **S — Suppressed**. It should no longer contain everything negatively related to the centre.
+
+R010 suggests splitting:
+```
+OLD S
+
+Suppressed
+   ↓
+   ├─ genuinely displaced alternatives
+   └─ functionally important constraints
+```
+
+into:
+```
+D — Displaced
+interpretations losing support
+
+B — Boundary
+constraints that remain structurally important
+```
+
+Similarly, HCU is better interpreted more generally as **Residual**:
+```
+R — Residual
+strongly represented material that does not
+participate in the emerging generative structure
+```
+
+That produces something closer to:
+```css
+G — Generative / central
+B — Boundary / constraint
+A — Adjacent / satellite
+E — Emerging / integrating
+D — Displaced / decaying
+R — Residual
+```
+
+This is essentially the GRD structure we discussed, but R010 now gives it a more precise place.
+
+The key improvement is that these roles should be assigned to **parents and communities**, not merely individual tokens.
+
+For example:
+```yaml
+TOPIC
+│
+├─ G: dominant generative parent
+│
+├─ B: constraint / boundary parent
+│
+├─ A: relevant satellite parent
+│
+├─ E: structure becoming integrated
+│
+├─ D: previously plausible parent losing status
+│
+└─ R: material that remains associated
+       but does not contribute to the solution
+```
+
+And roles should be **dynamic**:
+```css
+A → E → G
+G → A
+G → D
+R → E
+E → A
+B → B
+```
+
+That is important because R010 showed repeated:
+
+- disappearance;
+- reappearance;
+- absorption;
+- re-differentiation;
+- integration.
+
+A static category assignment loses that information.
+
+The related protocols should therefore also change.
+
+Your **Objects → Relations → Trajectory → Trajectory determinants** framework now fits very naturally:
+```bash
+OBJECTS
+communities + parents
+
+RELATIONS
+support / constrain / compete / enable
+
+TRAJECTORY
+merge / split / emerge / decay / persist
+
+DETERMINANTS
+what evidence or constraint causes the transition?
+```
+
+OSE also fits cleanly:
+```sql
+OBJECTIVE
+What functional answer must emerge?
+
+STATE
+What communities, parents, conflicts and constraints exist?
+
+EXECUTION
+Resolve conflicts through:
+selection
+partition
+integration
+role assignment
+sequencing
+
+UPDATE
+Re-evaluate the structure after each resolution
+```
+
+So the protocols are beginning to converge on one deeper architecture:
+```perl
+DISCOVER
+What exists?
+
+COMPRESS
+What parents explain it?
+
+CONTEST
+What interpretations conflict?
+
+BOUND
+What constrains possible solutions?
+
+REORGANISE
+What must split, merge or change role?
+
+RELATE
+How do surviving parents interact?
+
+FUNCTIONALISE
+What process or system do those relations imply?
+
+REDUCE
+What survives as the strongest conclusion?
+
+UPDATE
+What evidence would cause restructuring?
+```
+
+That should probably become the **parent protocol**, with SDA-3/GRD, OSE and Objects–Relations–Trajectory acting as specialised views within it.
+
+The major methodological shift is:
+
+> **Do not begin by classifying semantic material. Begin by reconstructing the smallest generative structure that explains it; then classify the roles that the resulting structures play.**
+
+That is much closer to what R010 suggests the transformer itself is doing.
+
+
+### MA-0056 — ChatGPT response: recursive GRD structure-building protocol
+
+- Entry timestamp: `2026-11-13T17:00:02+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim response`
+- Related runs: `R010 Phase D`
+
+I would make two major changes: **add parent-structure reconstruction before role assignment**, and treat **coherence as a diagnostic process rather than another GRD role**.
+
+I would also tighten several definitions based on Phase D: `Residual` should mean *not integrated*, not necessarily deliberately excluded; `Emerging` and `Decaying` should describe changes in explanatory power; and conflict needs an explicit resolution stage.
+
+# Generative Role Dynamics (GRD) Protocol
+
+## STRUCTURE
+
+What minimum set of parent structures explains the observed information?
+
+Do not force all information into a parent. Preserve mixed, irreducible or competing structures where necessary.
+
+## GENERATIVE
+
+Which structures most strongly generate or support the conclusion?
+
+## BOUNDARY
+
+Which constraints define the limits of viable conclusions?
+
+What possibilities are ruled out, restricted or made conditional?
+
+## ADJACENT
+
+Which structures are relevant to the conclusion but are not determinative?
+
+## EMERGING
+
+Which currently peripheral structures are gaining explanatory power or becoming increasingly integrable?
+
+## DECAYING
+
+Which previously plausible structures are losing explanatory power as the evidence is organised?
+
+## RESIDUAL
+
+Which associations remain present but cannot be defensibly integrated into the developing explanation?
+
+## CONFLICT
+
+Which surviving structures support incompatible interpretations, roles or organisations?
+
+Do not assume one must immediately be discarded.
+
+## COHERENCE
+
+Where is the structure hardest to compress without losing important distinctions?
+
+Identify:
+
+- competing parent structures;
+- mixed or unresolved material;
+- over-broad abstractions;
+- structures connected strongly but serving different functions.
+
+## RESOLUTION
+
+How should the conflict be handled?
+
+Test whether the competing structures should be:
+
+- preserved separately;
+- partitioned;
+- subordinated;
+- absorbed;
+- assigned different roles;
+- integrated under a broader parent;
+- sequenced as complementary functions;
+- or left unresolved.
+
+Re-differentiate structures if compression reduces rather than increases coherence.
+
+## FUNCTION
+
+What minimum higher-order relationship makes the surviving structures jointly coherent?
+
+Where appropriate, convert thematic relationships into a functional system or workflow.
+
+## CONCLUSION
+
+What survives after structure, boundaries, conflict and resolution are accounted for?
+
+State the strongest conclusion supported by the resulting functional structure, while leaving residual uncertainty attached only to the propositions it genuinely affects.
+
+The conceptual architecture is now:
+```css
+STRUCTURE
+    ↓
+GRD ROLES
+G / B / A / E / D / R
+    ↓
+CONFLICT
+    ↓
+COHERENCE TEST
+    ↓
+RESOLUTION
+    ↓
+FUNCTIONAL ORGANISATION
+    ↓
+CONCLUSION
+```
+
+The most important change is that **`COHERENCE` no longer asks merely where things are difficult**. It asks whether the current compression is actually valid. Phase D showed that a broader parent can *reduce* coherence, requiring re-differentiation before a better higher-order structure becomes possible.
+
+I would therefore regard this as a substantial improvement over the original GRD: it changes it from a classification protocol into a **recursive structure-building and conflict-resolution protocol**.
+
+
+### MA-0057 — ChatGPT response: irreducible GRD execution hierarchy
+
+- Entry timestamp: `2026-11-13T17:02:34+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim response`
+- Related runs: `R010 Phase D`
+
+You’re right. The compression removed the protocol’s hierarchy. It should preserve the actual execution structure:
+
+# Generative Role Dynamics (GRD)
+
+## 1. STRUCTURE
+
+What minimum set of parent structures explains the topic?
+
+## 2. ROLES
+
+Classify the surviving structures:
+
+- **G — Generative:** What most strongly supports the conclusion?
+- **B — Boundary:** What constrains or rules out competing conclusions?
+- **A — Adjacent:** What matters but is not decisive?
+- **E — Emerging:** What is gaining explanatory power?
+- **D — Decaying:** What is losing explanatory power?
+- **R — Residual:** What remains associated but cannot be defensibly integrated?
+
+## 3. CONFLICT
+
+Which structures support incompatible interpretations or roles?
+
+## 4. COHERENCE
+
+Where is coherence hardest to establish or maintain?
+
+Identify over-compression, mixed structures, competing parents and unresolved relations.
+
+## 5. RESOLUTION
+
+For each conflict, determine whether to:
+
+**preserve → partition → subordinate → absorb → differentiate roles → integrate → sequence → leave unresolved**
+
+Re-differentiate whenever compression reduces coherence.
+
+## 6. FUNCTION
+
+What minimum higher-order relation or workflow makes the surviving structures coherent?
+
+## 7. CONCLUSION
+
+What survives the full structure?
+
+State the strongest conclusion supported by the resulting functional organisation.
+
+The irreducible sequence is:
+```vbnet
+STRUCTURE
+→ ROLES
+→ CONFLICT
+→ COHERENCE
+→ RESOLUTION
+→ FUNCTION
+→ CONCLUSION
+```
+
+That is the part that should never have been compressed away.
