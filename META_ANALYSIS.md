@@ -9207,3 +9207,31 @@ the completed manifest and completeness verification.
 
 No measured R012 data, network definitions, community assignments or semantic
 analysis content was altered during reconciliation.
+
+
+### MA-0068 — Codex reconciliation record: GitHub-authored methodology import
+
+- Entry timestamp: `2026-11-14T07:34:44+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex`
+- Entry type: `repository reconciliation and provenance record`
+- Source repository commit: `b5e093736e267b2976e352231145f234c53242a3`
+- Imported artifact: `METHODOLOGY.md`
+- Imported artifact SHA-256: `4050318f242417446e655f81a2bbdfd30b0d1a849c0115e8d11acc815151204d`
+
+The private parent repository was fast-forwarded from `043d131` to GitHub
+commit `b5e0937`, which added the initial LLM topology methodology document.
+The file was imported byte-for-byte into the authoritative local
+`llm_topology` repository, and its source and destination SHA-256 values
+matched. The project README now links to the imported methodology as a key
+artifact.
+
+The methodology distinguishes standard analytical tools from the project's
+distinctive methodological composition. It assigns the greatest explanatory
+burden to fixed-basis layer projection, positive/negative semantic networks,
+community-as-evidence treatment, semantic-parent reconstruction, separation of
+geometric/partition/semantic change, coherence as compression resistance,
+perturbation-based invariance and capture-anchor selection.
+
+No measured run artifacts, pipeline code or prior analysis content was altered
+during this reconciliation.

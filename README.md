@@ -149,6 +149,8 @@ and are not versioned here.
     — all 29 states, both prompts and both sectors in a readable analytical packet.
 41. [`single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/R012_COMPLETENESS_VERIFICATION.md`](single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/R012_COMPLETENESS_VERIFICATION.md)
     — exact coverage and integrity verification.
+42. [`METHODOLOGY.md`](METHODOLOGY.md)
+    — the methodological division between standard analytical tools and the project's distinctive semantic-topology machinery.
 
 ## Provenance
 
