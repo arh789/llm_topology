@@ -8,8 +8,9 @@ representation geometry.
 
 The package contains a research design, one behavioural case mapping, an
 executed model playground, one successful single-prompt hidden-state capture
-from Pythia 6.9B, five successful measured derived analyses and two completed
-interpretive runs. R002 created the full-vocabulary static-basis
+from Pythia 6.9B, one successful paired whole-prompt Qwen capture and topology
+run, five earlier measured derived analyses and two completed interpretive
+runs. R002 created the full-vocabulary static-basis
 score matrix; R003 tested an unnecessarily gated boundary policy; R004 retains
 the full-curve upper and lower elbow cutoffs at all states without that
 acceptance gate; R005 constructs exact static embedding relationship networks
@@ -27,11 +28,13 @@ llama.cpp binding exposes no per-layer hidden-state API, and the tested TorchAO
 fallback did not supply a usable x86 CPU int4 path. The failure is retained as
 runtime-readiness evidence; no R011 semantic result exists.
 R012 corrected that runtime choice by using Transformers BF16 models on the
-RTX 4090. It successfully captured matched final-position trajectories for
-Qwen2.5-0.5B-Instruct and Qwen2.5-7B-Instruct. In the 7B run, State 00 was
-identical and all 28 post-embedding states changed after swapping the order of
-two concept phrases. R012 establishes prompt-order sensitivity in the measured
-trajectory, but does not yet identify which semantic networks changed.
+RTX 4090. After an initially incomplete capture-only checkpoint, it completed
+the intended generalised pipeline for Qwen2.5-7B-Instruct: 116 positive/negative
+networks, 1,181 state-local communities, 112 adjacent-state comparisons and 58
+same-state paired-prompt comparisons. The smallest paired membership and edge
+Jaccards both occurred at final State 28 on the negative side (0.773731 and
+0.558323). Complete measured exports are available for downstream ChatGPT
+semantic analysis; R012 itself adds no semantic labels or GRD/SDA roles.
 
 R005 found greater nearest-neighbour density and positive/negative segregation
 than a size-matched random null at all 33 states, but its communities also
@@ -137,9 +140,15 @@ and are not versioned here.
 36. [`single_prompt_topology/runs/R011_whole-prompt-semantic-perturbation-feasibility/R011_RUNTIME_READINESS.md`](single_prompt_topology/runs/R011_whole-prompt-semantic-perturbation-feasibility/R011_RUNTIME_READINESS.md)
     — the failed quantised CPU runtime decision and exact stop boundary.
 37. [`single_prompt_topology/R012_PLAN.md`](single_prompt_topology/R012_PLAN.md)
-    — the corrected Transformers paired-capture contract.
+    — the corrected generalised paired whole-prompt topology contract.
 38. [`single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/R012_CAPTURE_REPORT.md`](single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/R012_CAPTURE_REPORT.md)
-    — validated 0.5B and 7B prompt-order trajectories and scope boundary.
+    — the validated 0.5B and 7B capture checkpoint.
+39. [`single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/R012_MEASUREMENT_REPORT.md`](single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/R012_MEASUREMENT_REPORT.md)
+    — the completed network/community measurement and factual findings.
+40. [`single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/chatgpt_layer_packets.md`](single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/chatgpt_layer_packets.md)
+    — all 29 states, both prompts and both sectors in a readable analytical packet.
+41. [`single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/R012_COMPLETENESS_VERIFICATION.md`](single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/R012_COMPLETENESS_VERIFICATION.md)
+    — exact coverage and integrity verification.
 
 ## Provenance
 

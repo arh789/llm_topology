@@ -2,10 +2,11 @@
   "run_number": "R012",
   "run_name": "qwen-whole-prompt-paired-capture",
   "run_id": "R012_qwen-whole-prompt-paired-capture",
-  "run_type": "measured_paired_prompt_hidden_state_capture",
+  "run_type": "measured_paired_prompt_whole_prompt_semantic_topology",
   "status": "successful",
   "started_at": "2026-11-13T06:55:15.4946459Z",
-  "completed_at": "2026-11-13T07:05:46.8235033Z",
+  "completed_at": "2026-11-13T07:52:55.485703+00:00",
+  "reopened_at": "2026-11-13T18:31:37+11:00",
   "source_commit": "36333cce1916a75f180f64d02dfa9dc42bac7aec",
   "required_components": [
     "plan_lock",
@@ -14,6 +15,12 @@
     "smoke_0_5b_validation",
     "primary_7b_capture",
     "primary_7b_validation",
+    "projection_and_cutoffs",
+    "split_networks_and_communities",
+    "within_prompt_transitions",
+    "paired_prompt_comparisons",
+    "chatgpt_exports",
+    "completeness_validation",
     "run_report"
   ],
   "components": {
@@ -113,9 +120,78 @@
       "maximum_l2_distance": 50.271339416503906,
       "maximum_l2_state": 27
     },
-    "run_report": {
+    "capture_checkpoint": {
       "status": "successful",
       "path": "single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/R012_CAPTURE_REPORT.md"
+    },
+    "projection_and_cutoffs": {
+      "status": "successful",
+      "completed_at": "2026-11-13T07:47:21.035177+00:00",
+      "seconds": 12.952851599999121,
+      "score_shape": [
+        2,
+        29,
+        151665
+      ],
+      "vocabulary_size": 151665,
+      "excluded_capture_token_id": 198,
+      "cutoff_rows": 58,
+      "membership_rows": 706623,
+      "embedding_shard": "model-00001-of-00004.safetensors",
+      "full_embedding_rows": 152064,
+      "usable_tokenizer_rows": 151665,
+      "padded_embedding_rows_excluded": 399,
+      "model_forward_executed": false
+    },
+    "split_networks_and_communities": {
+      "status": "successful",
+      "completed_at": "2026-11-13T07:52:55.098545+00:00",
+      "seconds": 334.06209830000444,
+      "network_count": 116,
+      "node_rows": 706623,
+      "directed_edge_rows": 7066230,
+      "community_rows": 1181,
+      "intercommunity_edge_rows": 5441
+    },
+    "within_prompt_transitions": {
+      "status": "successful",
+      "completed_at": "2026-11-13T07:52:55.100098+00:00",
+      "seconds": 0.0004181000040262006,
+      "transition_rows": 112,
+      "minimum_membership_jaccard": 0.016018718502519798,
+      "minimum_edge_jaccard": 0.0007568544153910007
+    },
+    "paired_prompt_comparisons": {
+      "status": "successful",
+      "completed_at": "2026-11-13T07:52:55.101435+00:00",
+      "seconds": 0.00030390000029001385,
+      "paired_comparison_rows": 58,
+      "minimum_membership_jaccard": 0.7737309120924474,
+      "minimum_edge_jaccard": 0.5583230357326743
+    },
+    "chatgpt_exports": {
+      "status": "successful",
+      "completed_at": "2026-11-13T07:52:55.240092+00:00",
+      "seconds": 0.138024799998675,
+      "json_networks": 116,
+      "markdown_state_sections": 29,
+      "semantic_labels_added": false
+    },
+    "completeness_validation": {
+      "status": "successful",
+      "completed_at": "2026-11-13T07:52:55.248597+00:00",
+      "seconds": 0.007070200001180638,
+      "networks_verified": 116,
+      "nodes_verified": 706623,
+      "directed_edges_verified": 7066230,
+      "communities_verified": 1181,
+      "state_zero_pair_identity_verified": true
+    },
+    "run_report": {
+      "status": "successful",
+      "completed_at": "2026-11-13T07:52:55.251641+00:00",
+      "seconds": 0.003151699995214585,
+      "path": "single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/R012_MEASUREMENT_REPORT.md"
     }
   },
   "inputs": {
@@ -152,16 +228,98 @@
     },
     "report": {
       "path": "R012_CAPTURE_REPORT.md",
-      "status": "written"
+      "status": "capture_checkpoint_only"
+    },
+    "vocabulary_scores.safetensors": {
+      "bytes": 35186504,
+      "sha256": "3c6f646870e79ab3a20bab5b2c7236e0b09bc311e792dc254648c0eec5b296d9"
+    },
+    "cutoffs.csv": {
+      "bytes": 15997,
+      "sha256": "9ec12194f744efda5557eee81f6b887a5a96796977dce57d78dc64dd688258af"
+    },
+    "tail_tokens.csv.gz": {
+      "bytes": 17091655,
+      "sha256": "bd737241769d5c57835bac0659d27138b2cc9856c28fbfa9cd11b47950701b7b"
+    },
+    "network_index.csv": {
+      "bytes": 31302,
+      "sha256": "963aaa15875c89655c7f896a5d456d215378f72c949f9c091b03b7772ae407b1"
+    },
+    "nodes.csv.gz": {
+      "bytes": 18011110,
+      "sha256": "57636df92abcefca07d4b3d543ba5b9f263dec5a472e5b5cc439de984048327f"
+    },
+    "edges.csv.gz": {
+      "bytes": 76264965,
+      "sha256": "bd50fd1dbe736c13ea06012e7c37b50f07188b4d1eb5f1a40cf3479d34c5d5d5"
+    },
+    "community_nodes.csv": {
+      "bytes": 719537,
+      "sha256": "daaedc5c23824b42934c1a3a951888d930b45652b6eb0b833b98233481715656"
+    },
+    "community_edges.csv": {
+      "bytes": 490468,
+      "sha256": "9705ea0c74c17360e46b0ad99a64ea065c779959d62d2f1efc912809bde8fc44"
+    },
+    "state_transitions.csv": {
+      "bytes": 17532,
+      "sha256": "4c027cbc89813ac25cfb445d6bbc71159de242eee0ec2d6506e40b89ee5d5695"
+    },
+    "paired_state_comparisons.csv": {
+      "bytes": 7319,
+      "sha256": "f5a57edc3f8cdc6bd78819ed1fa60e8c41d532e038e152f2ff4ab445da212c9c"
+    },
+    "community_transition_evidence.csv": {
+      "bytes": 203995,
+      "sha256": "ade6f19aee7a5599c00a67a4dda89d94ee880789d36710dd18df119128e8c2a3"
+    },
+    "chatgpt_community_networks.json": {
+      "bytes": 2744201,
+      "sha256": "253c4def36d7d89c8121bfddd097d630076ca9b12b3d8c3eb1049179cd72a3a6"
+    },
+    "chatgpt_layer_packets.md": {
+      "bytes": 450452,
+      "sha256": "98b610536cf3df07d2bc3628b2b2c358d70397f98a586c569c783011ddd74f20"
+    },
+    "R012_COMPLETENESS_VERIFICATION.md": {
+      "bytes": 598,
+      "sha256": "ef30eda6bc848944b3877fb7bc5192d1cd7bc3f42410aacb3f0676254833b072"
+    },
+    "R012_MEASUREMENT_REPORT.md": {
+      "bytes": 1931,
+      "sha256": "b6b14ecd40b95144e6e7d0bce0d6f2fc38e88ae9bf44c477638397f9b265e512"
     }
   },
   "failure_details": null,
+  "status_history": [
+    {
+      "at": "2026-11-13T07:05:46.8235033Z",
+      "status_recorded": "successful",
+      "scope": "hidden-state capture checkpoint",
+      "later_assessment": "incomplete against the intended R011 general-pipeline objective"
+    },
+    {
+      "at": "2026-11-13T18:31:37+11:00",
+      "status_recorded": "running",
+      "reason": "R012 reopened to complete vocabulary projection, networks, communities, comparisons and ChatGPT-readable measured exports"
+    },
+    {
+      "at": "2026-11-13T18:52:55+11:00",
+      "status_recorded": "successful",
+      "scope": "complete paired whole-prompt semantic-topology measurement",
+      "reason": "all required components and completeness validation passed"
+    }
+  ],
   "operational_notes": {
     "download_fallback_used": true,
     "download_fallback": "HF_HUB_DISABLE_XET=1",
     "first_download_interruption_was_premature": true,
     "response_generation_executed": false,
-    "semantic_interpretation_executed": false
+    "semantic_interpretation_executed": false,
+    "model_forward_reexecution_planned": false,
+    "semantic_topology_pipeline_status": "successful",
+    "model_forward_reexecuted": false
   },
   "preexisting_worktree_changes_preserved": [
     ".gitignore",
@@ -172,5 +330,47 @@
     "single_prompt_topology/r011_runtime_probe.py",
     "single_prompt_topology/r011_torchao_probe.py",
     "single_prompt_topology/runs/R011_whole-prompt-semantic-perturbation-feasibility/"
-  ]
+  ],
+  "analysis_attempts": [
+    {
+      "started_at": "2026-11-13T07:38:40.444943+00:00",
+      "status": "failed",
+      "completed_at": "2026-11-13T07:38:41.458203+00:00",
+      "component": "projection_and_cutoffs",
+      "error_type": "RuntimeError",
+      "message": "Unexpected embedding shape: (152064, 3584)"
+    },
+    {
+      "started_at": "2026-11-13T07:40:17.306759+00:00",
+      "status": "failed",
+      "completed_at": "2026-11-13T07:46:16.531037+00:00",
+      "component": "completeness_validation",
+      "error_type": "RuntimeError",
+      "message": "Identical State 00 inputs did not produce identical topology."
+    },
+    {
+      "started_at": "2026-11-13T07:47:08.082447+00:00",
+      "status": "successful",
+      "completed_at": "2026-11-13T07:52:55.485703+00:00",
+      "seconds": 347.40320839999913
+    }
+  ],
+  "pipeline": {
+    "script": "single_prompt_topology/r012_semantic_topology.py",
+    "script_sha256": "51fe6f8db580d00459b69bebadd60a182bb30a11c41e63320b0d02e348f2dabb",
+    "plan": "single_prompt_topology/R012_PLAN.md",
+    "plan_sha256": "eea6d1f4faaad3cc1e57bb103644bb0aec5b0947deb4714329ee853982969bb9",
+    "model_backend": "direct Qwen Transformers capture artifacts",
+    "downstream_analysis": "model-independent"
+  },
+  "results": {
+    "network_count": 116,
+    "selected_membership_rows": 706623,
+    "directed_edge_rows": 7066230,
+    "community_count": 1181,
+    "adjacent_transition_rows": 112,
+    "paired_comparison_rows": 58,
+    "minimum_paired_membership_jaccard": 0.7737309120924474,
+    "minimum_paired_edge_jaccard": 0.5583230357326743
+  }
 }

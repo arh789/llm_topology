@@ -1,26 +1,35 @@
-# R012 pre-run plan: Qwen whole-prompt paired capture
+# R012 plan: generalised whole-prompt semantic topology
 
-## Run identity
+## Run identity and status history
 
 - Run number: `R012`
-- Neutral run name: `qwen-whole-prompt-paired-capture`
-- Run type: measured paired-prompt hidden-state capture
-- Initial status: `running`
-- Runtime: Hugging Face Transformers with CUDA
-- Smoke-test model: `Qwen/Qwen2.5-0.5B-Instruct`, BF16
-- Primary model: `Qwen/Qwen2.5-7B-Instruct`, BF16
+- Existing run directory: `R012_qwen-whole-prompt-paired-capture`
+- Run type: measured paired-prompt whole-prompt semantic topology
+- Current status: `running`
+- First validated backend: Hugging Face Transformers +
+  `Qwen/Qwen2.5-7B-Instruct`, BF16
 
-R012 corrects the runtime choice that caused R011 to fail. R011 remains an
-immutable failed feasibility record. R012 uses the original Transformers model
-format because the experiment requires the hidden state returned at every
-transformer depth.
+The directory name is retained for provenance. It does not limit the run to
+capture. R012 is the corrected implementation of the general pipeline intended
+by R011. The Qwen capture is an intermediate prerequisite, not the final
+research output.
+
+R012 was initially marked successful after hidden-state capture. Subsequent
+scope review established that this was a failure of completion criteria: the
+run had not produced semantic-network evidence suitable for ChatGPT analysis.
+The capture artifacts remain valid and immutable, while the overall run is
+reopened as `running` until the downstream measured pipeline completes.
 
 ## Objective
 
-Validate a minimal, reproducible method for measuring how a controlled prompt
-change alters the final model-input representation across transformer depth.
-The smoke test establishes the capture mechanism. The 7B run is the first
-research-quality capture.
+Implement and validate a generalised whole-prompt semantic-topology pipeline
+using a model/runtime that exposes intermediate hidden states. Convert the
+existing paired Qwen trajectories through vocabulary projection, full-curve
+region selection, token-network construction, community detection,
+cross-layer comparison, paired-prompt comparison and ChatGPT-readable measured
+exports.
+
+Semantic interpretation remains outside R012.
 
 ## Controlled prompt pair
 
@@ -39,21 +48,39 @@ What structure forms from electro pink, Tokyo nightlife, curvature density?
 The only intended change is the order of `curvature density` and
 `Tokyo nightlife`.
 
+## Minimal backend contract
+
+A model backend must provide the equivalent of:
+
+1. `capture_states(prompt)`
+2. `get_embedding_matrix()`
+3. `get_vocabulary()`
+4. `get_state_labels()`
+5. `get_model_metadata()`
+
+R012 validates one direct Qwen implementation. It does not add registries,
+factories or untested model adapters. Everything after those five inputs is
+model-independent.
+
 ## Measurement contract
 
-- Use the tokenizer's official chat template with `add_generation_prompt=True`.
-- Do not generate a response token.
-- Capture the final model-input position, which has causal access to the full
-  templated prefix.
-- Request `output_hidden_states=True` and `use_cache=False`.
-- Retain one vector per exposed state, not every prompt-token vector.
-- Transformers exposes the input embedding followed by block outputs, with the
-  last state including the architecture's final normalisation.
-- Save the exact templated text, token IDs, decoded tokens, capture position,
-  model revision, dtype, shape, timings and GPU-memory observations.
-- Re-run each forward pass and require deterministic equality.
-- Require matching state shapes, identical State 00 vectors and at least one
-  differing later state across the paired prompts.
+- Reuse the already validated final-position hidden-state trajectories.
+- Project every state against the fixed input-embedding vocabulary with cosine
+  similarity.
+- Determine positive-head and negative-tail membership independently with the
+  R004 full-curve maximum-deviation elbow method; do not add acceptance gates.
+- Exclude neither side on interpretive grounds. Negative cosine means geometric
+  anti-alignment, not established suppression or contradiction.
+- Within each prompt, state and side, create an exact 10-nearest-neighbour graph
+  in the fixed input-embedding space.
+- Symmetrise an edge when either directed relation exists.
+- Detect state-local communities with deterministic unweighted NetworkX
+  Louvain partitions.
+- Compare adjacent states within each prompt and compare the paired prompts at
+  identical states.
+- Preserve token IDs as stable join keys. Community IDs remain local to one
+  prompt, state and side.
+- Export measured evidence without semantic topic labels or GRD/SDA roles.
 
 ## Required components
 
@@ -63,51 +90,88 @@ The only intended change is the order of `curvature density` and
 4. `smoke_0_5b_validation`
 5. `primary_7b_capture`
 6. `primary_7b_validation`
-7. `run_report`
+7. `projection_and_cutoffs`
+8. `split_networks_and_communities`
+9. `within_prompt_transitions`
+10. `paired_prompt_comparisons`
+11. `chatgpt_exports`
+12. `completeness_validation`
+13. `run_report`
 
-The run is successful only if all seven components succeed. Any failed capture
-or validation marks the run failed and prevents later stages from using its
-data.
+The run is successful only if all thirteen components succeed.
+
+## Required coverage and artifacts
+
+- 2 prompts × 29 states × 2 sides = **116** networks.
+- 2 prompts × 28 adjacent transitions × 2 sides = **112** within-prompt
+  transition rows.
+- 29 states × 2 sides = **58** same-state paired-prompt comparison rows.
+- Every selected token belongs to exactly one state-local community.
+- Every edge endpoint belongs to its corresponding network.
+
+Required outputs include:
+
+- `vocabulary_scores.safetensors`
+- `cutoffs.csv`
+- `tail_tokens.csv.gz`
+- `network_index.csv`
+- `nodes.csv.gz`
+- `edges.csv.gz`
+- `community_nodes.csv`
+- `community_edges.csv`
+- `state_transitions.csv`
+- `paired_state_comparisons.csv`
+- `community_transition_evidence.csv`
+- `chatgpt_community_networks.json`
+- `chatgpt_layer_packets.md`
+- `R012_COMPLETENESS_VERIFICATION.md`
+- updated `manifest.json`
+- updated factual run report
 
 ## Execution order
 
-1. Persist this plan and a `running` manifest.
-2. Validate the existing CUDA Transformers environment and shared model cache.
-3. Download and run Qwen2.5-0.5B-Instruct from `D:\AI\cache`.
-4. Validate both prompt captures and deterministic replay.
-5. Only after smoke success, download and run Qwen2.5-7B-Instruct in BF16.
-6. Validate the paired 7B trajectories and persist a factual run report.
-7. Stop before vocabulary scoring, networks, semantic interpretation or larger
-   models.
+1. Preserve and verify the existing capture artifacts.
+2. Reopen the manifest as `running` and record the scope-correction history.
+3. Load only the cached Qwen tokenizer and input-embedding tensor; do not load
+   the full model or perform another forward pass.
+4. Project both trajectories and calculate full-curve cutoffs.
+5. Construct all split networks and state-local communities.
+6. Calculate adjacent-state and paired-prompt structural comparisons.
+7. Export complete token-level evidence and compact ChatGPT-readable packets.
+8. Validate coverage, referential integrity, finiteness and artifact hashes.
+9. Mark the run `successful` only after every required component passes.
 
 ## Success criteria
 
+- All required components and exact coverage counts pass.
 - No model weights are stored in the repository.
-- Both models use the same fixed prompt pair and capture rule.
-- Every expected state is present, finite and the correct hidden width.
-- Deterministic replay is exact for both prompts.
-- State 00 is identical across the prompt pair.
-- At least one later state differs.
-- All curated artifacts have recorded byte counts and SHA-256 hashes.
-- The manifest is completed as `successful` only after both model stages pass.
+- The model is not re-run and no response token is generated.
+- Cutoffs are derived from the complete score curve by the locked R004 method.
+- ChatGPT can reconstruct every network and inspect every community from the
+  exported JSON/Markdown/CSV evidence.
+- Measurement remains distinct from semantic interpretation.
+- A null paired-prompt difference is accepted if the evidence is complete.
 
 ## Outside scope
 
 - response generation;
-- vocabulary scoring, cutoffs, networks or community detection;
-- semantic interpretation of prompt differences;
+- semantic topic labels or parent-node reconstruction;
+- GRD, SDA-3 or Phase B/C/D interpretation;
+- additional prompt variations;
 - quantisation comparisons;
-- Qwen2.5-14B, 32B or 72B;
+- larger models;
+- adapter registries or speculative abstraction layers;
 - modification of R011;
 - committing or pushing Git changes.
 
 ## Failure conditions
 
-- CUDA or required packages are unavailable;
-- the official chat template cannot be applied;
-- hidden states are missing, non-finite or have unexpected dimensions;
-- capture anchors differ across prompts;
-- deterministic replay differs;
-- State 00 differs across prompts;
-- no later state differs; or
-- the smoke stage fails and the 7B stage is nevertheless attempted.
+- any required capture artifact fails hash or identity validation;
+- the input embedding or tokenizer cannot be loaded from the shared cache;
+- any state projection is missing, non-finite or dimensionally inconsistent;
+- any state-side lacks a valid interior elbow or the two populations overlap;
+- any of the 116 networks, 112 transitions or 58 paired comparisons is absent;
+- nodes, edges or communities fail referential-integrity checks;
+- semantic labels are introduced into measured artifacts;
+- ChatGPT-readable exports omit measured networks or communities; or
+- the manifest is marked successful before all validation passes.

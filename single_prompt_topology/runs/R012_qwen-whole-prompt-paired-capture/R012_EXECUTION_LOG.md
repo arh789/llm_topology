@@ -91,6 +91,71 @@ without using silence alone as a reason to stop it.
 - All artifact hashes and byte counts were independently verified.
 - Both Safetensors trajectories were independently reloaded and verified.
 
-R012 is complete and successful. No vocabulary projection, cutoff calculation,
-network construction, community detection or semantic interpretation was
-performed.
+This was initially recorded as completion. That conclusion was later rejected:
+hidden-state capture was only the prerequisite for the intended generalised
+pipeline, not the required final output.
+
+## 2026-11-13 18:31 AEDT — scope correction and run reopening
+
+- The user assessed the capture-only R012 result as a failed/incomplete run.
+- The valid capture artifacts and their validation history are preserved.
+- The manifest was returned to `running`; the earlier `successful` record is
+  retained in `status_history` as a capture checkpoint that failed the broader
+  completion criteria.
+- R012 will now reuse the 7B trajectories without another model forward pass.
+- Required remaining stages are vocabulary projection, full-curve cutoffs,
+  116 split networks, state-local communities, 112 adjacent-state comparisons,
+  58 paired-prompt comparisons, ChatGPT-readable exports and completeness
+  validation.
+- Semantic topic labels, parent reconstruction and GRD/SDA interpretation
+  remain outside this measured run.
+
+## 2026-11-13 18:39 AEDT — topology attempt 1 failed closed
+
+- Failure occurred during `projection_and_cutoffs`, before vocabulary scores or
+  networks were written.
+- Qwen's model embedding table contains 152,064 rows, while its tokenizer
+  exposes usable token IDs 0–151,664 (151,665 IDs).
+- The first implementation incorrectly required embedding-row count to equal
+  tokenizer length.
+- The recovery is to exclude the 399 padded, tokenizer-inaccessible embedding
+  rows and analyse only the usable vocabulary. This matches the established
+  pipeline rule of limiting the embedding table to real tokenizer IDs.
+- The manifest recorded the failed attempt. The same R012 production entry
+  point will be retried after the bounded correction; no model forward pass is
+  needed.
+
+## 2026-11-13 18:46 AEDT — topology attempt 2 failed completeness validation
+
+- Projection, cutoffs and all 116 token networks completed.
+- State 00 paired memberships and edges were exactly identical on both sides,
+  as required.
+- Louvain community partitions were not identical because the seed included
+  `prompt_index`; adjusted Rand scores were 0.781914 for the positive side and
+  0.402330 for the negative side despite identical graphs.
+- Final completeness validation rejected the run and the manifest was marked
+  `failed`. The partially produced outputs are not accepted as results.
+- Recovery: use the same deterministic Louvain seed for the same state/side
+  analysis slot regardless of prompt. This makes identical graphs comparable
+  while retaining deterministic state-local community detection.
+- The full production entry point will be rerun rather than promoting the
+  pre-validation files.
+
+## 2026-11-13 18:52 AEDT — topology attempt 3 completed and verified
+
+- The production entry point completed in 347.6 seconds.
+- It reused the validated 7B trajectories; no model forward pass or response
+  generation occurred.
+- Usable vocabulary projection excluded 399 padded embedding rows that do not
+  correspond to tokenizer IDs.
+- Full-curve elbows produced 706,623 selected prompt/state/side memberships.
+- All 116 exact split networks completed, containing 7,066,230 directed 10-NN
+  edges and 1,181 state-local communities.
+- All 112 adjacent-state comparisons and 58 paired-prompt comparisons were
+  written.
+- State 00 membership, edges and deterministic communities matched exactly
+  across prompts on both sides.
+- Complete JSON and Markdown packets were created without semantic labels.
+- Independent post-run parsing reconciled every row count and verified all 34
+  indexed artifacts by byte count and SHA-256.
+- The manifest is `successful`. No commit or push was performed.
