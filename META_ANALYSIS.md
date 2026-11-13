@@ -10789,7 +10789,8 @@ R013 therefore advances the project from asking whether semantic topology can be
 
 This is the entry I would add immediately before beginning the actual R013 semantic analysis.
 
-### MA-0072 — ChatGPT analysis record: R013 cross-permutation semantic topology
+
+### MA-0074 — ChatGPT analysis record: R013 cross-permutation semantic topology
 
 - Entry date: `2026-11-14`
 - Author/source: `ChatGPT`
@@ -10935,3 +10936,416 @@ This tests whether final-position dominance, an early/middle invariance minimum,
 late reconvergence and parent stability above exact token/edge stability
 generalise beyond the current concept triplet.
 
+
+### MA-0075 — ChatGPT response: completed R013 semantic analysis
+
+- Entry timestamp: `2026-11-14T09:17:50+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim external semantic-analysis report`
+- Related run: `R013_qwen-bare-concept-permutation-topology`
+
+The complete R013 semantic analysis is finished and recorded.
+
+The report is at:
+
+`projects/llm-topology/single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/R013_RUN_ANALYSIS_AND_RECOMMENDATIONS.html`
+
+It follows the R012 report as the methodological guide while adapting the analysis to all six permutations. Report commit:
+
+`d2e721ee745be6dfcb1be80b2ba14d2e794177ca` — **Add R013 semantic topology analysis**
+
+The corresponding executed-analysis record has also been appended as **MA-0072** to `META_ANALYSIS.md`. Commit:
+
+`daaf756d2c0abda78c7502154376c2fa4ad1e3d4` — **Record R013 semantic topology analysis**
+
+The principal findings are:
+
+- **Final position is the strongest positional determinant.** At every post-context state S01–S28, pairs sharing the same final concept have greater membership Jaccard, edge Jaccard and community ARI than the other permutation relationships. This is recorded conservatively as a final-position/anchor-proximity/recency association.
+- **Order divergence peaks around S09.** Six-way token and edge invariance falls sharply from S01 and reaches its minimum around S09 before gradually reconverging. BAC versus CAB at S09 is the maximum observed divergence: membership `0.320201`, edge `0.125235`, ARI `0.312774`, hidden-state cosine `0.791842`.
+- **Severe topological divergence does not imply equivalent semantic divergence.** Inspection of the underlying BAC/CAB S09 communities still recovers broadly the same higher-order parents. Order is changing selection, grouping and relations much more than it is replacing the semantic parent inventory.
+- **Six parent families survive the permutation analysis:** sensory/material/technical; spatial/environmental/place; structural/measurement; social/activity/institutional; transformation/interaction/distribution; and representation/operation.
+- **The cosine sectors have a stable semantic asymmetry.** Sensory/material is strongly positive-aligned; place/environment predominantly positive; social/activity predominantly negative; structural/measurement spans both; transformation/interaction becomes especially prominent in the negative middle/late topology. Negative remains geometric anti-alignment, not suppression.
+- **The original concepts decompose rather than remain intact:** `electro pink → technical + chromatic + sensory/material`; `curvature density → structural + measurement/parameterisation + spatial-field`; `Tokyo nightlife → place/environment + social/activity`, with the latter two branches tending towards different cosine sectors.
+- **R012's instruction confound is now empirically clearer.** Sensory/place/social structures survive strongly into R013, but R012's strong positive transformation/composition and persistent representation/information lineages become substantially more phase- and sector-dependent. The synthesis instruction and assistant-prefix state were therefore contributing materially to those R012 structures.
+- **The neutral anchor removes identity contamination but not positional asymmetry.** `State 00` is exactly identical across all permutations, yet the concept immediately preceding the anchor strongly influences subsequent topology. A neutral token is therefore not a position-neutral measurement.
+- **S28 is both a major reset and a convergence.** S27→S28 has only about `0.068` membership Jaccard and `0.009` edge Jaccard within trajectories, yet cross-permutation overlap rises markedly. S28 remains terminal normalisation/output-facing recoding rather than another reasoning layer.
+
+The minimum semantic architecture reconstructed from R013 is:
+```
+POSITIVE-ALIGNED CORE
+
+SENSORY / MATERIAL / TECHNICAL
+            ↕
+SPATIAL / ENVIRONMENTAL / PLACE
+            ↕
+STRUCTURAL / MEASUREMENT
+            ↓
+late REPRESENTATION / OPERATION
+
+
+NEGATIVE-ALIGNED CORE
+
+SOCIAL / ACTIVITY / INSTITUTIONAL
+            ↕
+TRANSFORMATION / INTERACTION / DISTRIBUTION
+            ↕
+STRUCTURAL / CATEGORICAL ORGANISATION
+```
+
+The strongest project-level result is now considerably better supported than it was after R012:
+
+> **Semantic invariance survives permutation primarily at the level of higher-order parent structure, while exact tokens, relations and communities remain strongly order-conditioned.**
+
+At S27, only about **24% of unique tokens** and **6% of unique edges** survive all six permutations, yet the same broad higher-order parent families remain reconstructable across all six trajectories.
+
+The report therefore advances the R012 hypothesis from a **two-prompt indication** to a **complete six-permutation result**, while adding an important qualification: the surviving invariant exists despite—and is shaped by—a strong final-position bias in the causal sequence.
+
+
+### MA-0076 — ChatGPT response: refocus R013 on semantic synthesis
+
+- Entry timestamp: `2026-11-14T09:22:30+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim external report critique and revision guidance`
+- Related run: `R013_qwen-bare-concept-permutation-topology`
+
+Yes. The R013 report is over-weighted towards **experimental validation and methodological interpretation**, whereas the R012 report used those only as scaffolding for the actual semantic result.
+
+The useful part of `R012_RUN_ANALYSIS_AND_RECOMMENDATIONS.html` was essentially:
+
+```text
+WHAT STRUCTURE FORMS?
+        ↓
+WHAT ARE THE MAJOR PARENTS?
+        ↓
+HOW ARE THEY RELATED?
+        ↓
+HOW DOES THAT STRUCTURE EVOLVE THROUGH DEPTH?
+        ↓
+WHAT HAPPENS TO EACH ORIGINAL CONCEPT?
+        ↓
+WHAT CHANGES WHEN ORDER CHANGES?
+        ↓
+WHAT IS THE MINIMUM GENERATIVE STRUCTURE?
+```
+
+R013 should do exactly that, with the six permutations giving us a stronger basis.
+
+Most of the present R013 report belongs elsewhere:
+
+```text
+measurement coverage        → R013_MEASUREMENT_REPORT
+anchor validation           → completeness / methodology
+348 networks etc.           → measurement report
+causal-identification caveats → methodology / brief limitations
+R012-v-R013 pipeline details → meta-analysis
+```
+
+The semantic report should centre on the result.
+
+A better R013 report would probably be only about these sections:
+
+## 1. What structure forms
+
+The six permutations converge on a two-sector semantic organisation.
+
+```text
+POSITIVE
+
+SENSORY / MATERIAL / TECHNICAL
+              ↕
+PLACE / ENVIRONMENT
+              ↕
+STRUCTURAL / MEASUREMENT
+
+
+NEGATIVE
+
+SOCIAL / ACTIVITY
+              ↕
+TRANSFORMATION / INTERACTION
+              ↕
+STRUCTURAL / CATEGORICAL
+```
+
+That is the core finding.
+
+## 2. What the three concepts become
+
+```text
+ELECTRO PINK
+│
+├─ electronic / technical
+├─ colour / sensory
+└─ material properties
+
+
+CURVATURE DENSITY
+│
+├─ spatial organisation
+├─ measurement
+├─ parameterisation
+└─ field / structural relations
+
+
+TOKYO NIGHTLIFE
+│
+├─ place / environment
+└─ social / activity
+```
+
+The particularly interesting result is that **Tokyo nightlife splits across the positive and negative sectors**:
+
+```text
+Tokyo nightlife
+      │
+      ├─ PLACE / ENVIRONMENT       positive
+      │
+      └─ SOCIAL / ACTIVITY         negative
+```
+
+That is semantically much more useful than saying the negative sector has a certain ARI.
+
+## 3. How the parents relate
+
+The strongest persistent positive relation is:
+
+```text
+SENSORY / MATERIAL
+        ↕
+PLACE / ENVIRONMENT
+        ↕
+STRUCTURAL ORGANISATION
+```
+
+The strongest persistent negative relation is:
+
+```text
+SOCIAL / ACTIVITY
+        ↕
+TRANSFORMATION / INTERACTION
+        ↕
+STRUCTURAL / CATEGORICAL ORGANISATION
+```
+
+The semantic intersection is therefore not merely:
+
+```text
+electro pink
++
+curvature density
++
+Tokyo nightlife
+```
+
+It becomes something more like:
+
+> **A sensory-material environment organised spatially and structurally, accompanied by a social/activity system defined through interactions and transformations.**
+
+That should be the centre of the report.
+
+## 4. How it develops through the transformer
+
+Not twenty pages of statistics. Something closer to:
+
+```text
+S01–S03
+CONCEPT ACTIVATION
+│
+├─ sensory / technical
+├─ place
+├─ structural
+└─ social associations
+        ↓
+S04–S09
+DECOMPOSITION
+│
+├─ concepts cease behaving as intact phrases
+├─ semantic components separate
+└─ order produces maximum divergence
+        ↓
+S10–S18
+DIFFERENTIATION
+│
+├─ sensory + place consolidate positively
+└─ social + interaction consolidate negatively
+        ↓
+S19–S23
+COMPRESSION
+│
+├─ parent inventory simplifies
+└─ exact token differences remain large
+        ↓
+S24–S27
+REINTEGRATION
+│
+├─ structural and transformational relations return
+└─ broad parent architecture converges
+        ↓
+S28
+OUTPUT-FACING RECODING
+```
+
+## 5. What survives every ordering
+
+This is the distinctive R013 question.
+
+The answer appears to be:
+
+```text
+NOT invariant:
+exact tokens
+exact edges
+community boundaries
+
+MORE invariant:
+parent identities
+
+MOST promising invariant:
+relations between parent families
+```
+
+But instead of making that the report about statistics, the semantic statement should be:
+
+> Regardless of whether electro pink, curvature density or Tokyo nightlife appears first, middle or last, the model repeatedly reconstructs the same broad semantic system: sensory-material properties embedded in place and organised structurally, alongside a social/activity field organised through interactions.
+
+That is the useful result.
+
+## 6. What ordering actually changes
+
+Ordering does not primarily create an entirely different semantic world.
+
+It changes:
+
+```text
+which parent dominates
+which communities combine
+which structure remains autonomous
+which relations become explicit
+how much of a concept is absorbed into another parent
+```
+
+The final concept has the strongest influence, but the parent inventory substantially survives it.
+
+So:
+
+```text
+ORDER
+    ↓
+changes semantic emphasis and compression
+
+more than
+
+ORDER
+    ↓
+changes the fundamental parent architecture
+```
+
+That is a much more useful interpretation of the R013 permutation experiment.
+
+## 7. What R013 corrects from R012
+
+This also deserves a short semantic section.
+
+R012 made:
+
+```text
+TRANSFORMATION / COMPOSITION
+```
+
+look exceptionally central.
+
+R013 shows that once:
+
+```text
+"What structure forms from..."
+```
+
+is removed, transformation remains present but is no longer the universal positive organising parent.
+
+That means R012 was partly measuring:
+
+```text
+concept semantics
++
+the instruction to synthesise them
+```
+
+R013 reveals more of the concepts' own organisation.
+
+Likewise, representation/information is much less continuously central until the terminal stages.
+
+## 8. Minimum generative structure
+
+This should probably be the report's endpoint:
+
+```text
+CONCEPTUAL INTERSECTION
+│
+├─ SENSORY / MATERIAL
+│       │
+│       └─ embedded in
+│
+├─ PLACE / ENVIRONMENT
+│       │
+│       └─ organised by
+│
+├─ STRUCTURAL / MEASUREMENT
+│
+└─ SOCIAL / ACTIVITY
+        │
+        └─ organised through
+            TRANSFORMATION / INTERACTION
+```
+
+Or compressed:
+
+> **A situated sensory-material field structured spatially and quantitatively, with an associated social/activity field whose organisation is relational and dynamic.**
+
+That is the kind of conclusion the R012 report reached and the current R013 report should have reached much sooner.
+
+So yes: **the current R013 report is getting lost in the sauce**. It should be rewritten as the R012-style semantic synthesis, while the existing version can remain as a technical/analytical record if useful.
+
+
+### MA-0077 — Codex reconciliation record: GitHub-authored R013 semantic reports
+
+- Entry timestamp: `2026-11-14T09:36:05+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex`
+- Entry type: `repository reconciliation and provenance record`
+- Related run: `R013_qwen-bare-concept-permutation-topology`
+- Source GitHub head: `1d0caf573d5c490e81ebb4d5deb1aa17af142334`
+
+GitHub advanced by four commits after the prior verified parent-repository
+commit `8a49b8a44f03540790968ec50bd031d143e94c1a`:
+
+1. `d2e721ee745be6dfcb1be80b2ba14d2e794177ca` added the original R013
+   analysis report.
+2. `daaf756d2c0abda78c7502154376c2fa4ad1e3d4` added the executed R013
+   semantic-analysis record to `META_ANALYSIS.md`.
+3. `84d4e43` preserved the original method-heavy report as
+   `R013_TECHNICAL_ANALYSIS.html`.
+4. `1d0caf573d5c490e81ebb4d5deb1aa17af142334` rewrote
+   `R013_RUN_ANALYSIS_AND_RECOMMENDATIONS.html` around the semantic synthesis.
+
+Both HTML reports were imported into the authoritative local project without
+altering measured R013 artefacts. The remote analysis record was also imported.
+
+The GitHub-authored record incorrectly reused `MA-0072`. Reconciliation
+corrected that heading to `MA-0074`, shifted the two later local ChatGPT
+entries from `MA-0074` and `MA-0075` to `MA-0075` and `MA-0076`, and
+preserved their content. This entry records the resulting continuous sequence.
+
+The reconciled evidence order is therefore:
+
+```text
+MA-0073  proposed R013 semantic-analysis protocol
+MA-0074  executed R013 semantic-analysis record
+MA-0075  ChatGPT completion summary supplied to Codex
+MA-0076  ChatGPT critique requesting semantic-report refocus
+MA-0077  Codex reconciliation and provenance record
+```
+
+The primary R013 report now contains the refocused semantic synthesis. The
+original analysis remains available as the technical record.
