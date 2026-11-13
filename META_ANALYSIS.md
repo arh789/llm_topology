@@ -10133,3 +10133,658 @@ together with a non-empty cross-permutation core. R013 does not assign semantic
 meaning to either result and does not independently identify causal position,
 recency, adjacency or interaction effects. Semantic community and parent
 reconstruction remain a separate downstream ChatGPT task.
+
+
+### MA-0072 — ChatGPT response: R013 repository inspection
+
+- Entry timestamp: `2026-11-14T08:36:00+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim external repository analysis`
+
+The repository has advanced substantially since the last inspection. Current head is:
+
+`3ee99431ae9e17bfbba36650554a95b00693db24` — **Complete R013 bare-concept permutation topology**
+
+There are two commits after the methodology file was added:
+
+```text
+b5e0937  Add initial LLM topology methodology entry
+    ↓
+9476209  Reconcile LLM topology methodology
+    ↓
+3ee9943  Complete R013 bare-concept permutation topology
+```
+
+## R013 has been completed successfully
+
+Codex did not merely create the plan. It implemented and executed the entire measurement run:
+
+```text
+R013_PLAN.md
+r013_capture_hidden_states.py
+r013_semantic_topology.py
+r013_run.py
+        ↓
+R013_qwen-bare-concept-permutation-topology/
+```
+
+The manifest is:
+
+```text
+status: successful
+```
+
+and completeness verification is:
+
+```text
+PASS
+```
+
+### Experimental design
+
+The actual inputs are exactly the six intended bare permutations:
+
+```text
+ABC
+electro pink
+curvature density
+Tokyo nightlife
+
+ACB
+electro pink
+Tokyo nightlife
+curvature density
+
+BAC
+curvature density
+electro pink
+Tokyo nightlife
+
+BCA
+curvature density
+Tokyo nightlife
+electro pink
+
+CAB
+Tokyo nightlife
+electro pink
+curvature density
+
+CBA
+Tokyo nightlife
+curvature density
+electro pink
+```
+
+There is:
+
+```text
+no chat template
+no special tokens
+no synthesis question
+no assistant prefix
+no generated response
+```
+
+All six inputs contain exactly **12 tokens**.
+
+The final newline is the capture anchor:
+
+```text
+anchor token ID = 198
+token = Ċ
+capture index = 11
+```
+
+The anchor is identical across all permutations.
+
+Most importantly:
+
+```text
+State 00 exact equality across all six = PASS
+```
+
+So the experimental control is clean.
+
+## The R012 measurement methodology was preserved
+
+The R013 plan explicitly locks:
+
+```text
+cosine projection
+        ↓
+R004 full-curve elbow
+        ↓
+positive / negative sectors
+        ↓
+exact 10-NN
+        ↓
+deterministic Louvain
+```
+
+No new graph, cut-off or community method was introduced.
+
+It also incorporates the causal-identification qualification we discussed:
+
+> R013 measures structural dependencies associated with order, concept position, final-position/recency, adjacency and residual ordering interactions. It does not claim to independently identify these as separate causal effects.
+
+So Codex correctly avoided the main overclaim.
+
+## Exact coverage passed
+
+The expected counts were frozen and all achieved:
+
+```text
+6 × 29 × 2
+= 348 networks
+
+6 × 28 × 2
+= 336 adjacent-state comparisons
+
+15 permutation pairs × 29 × 2
+= 870 matched-state comparisons
+```
+
+Actual totals:
+
+```text
+2,465,642 selected token memberships
+
+24,656,420 directed 10-NN edges
+
+3,654 communities
+
+770,924 token-support records
+
+8,210,395 edge-support records
+
+696 invariance-summary rows
+```
+
+Every network has exactly ten directed neighbours per node.
+
+Every selected token belongs to exactly one community.
+
+All six `29 × 3584` trajectories replay exactly and contain only finite values.
+
+## Six-way invariance has been implemented correctly
+
+Token and edge survival are measured independently across:
+
+```text
+1/6
+2/6
+3/6
+4/6
+5/6
+6/6
+```
+
+This is important because:
+
+```text
+token invariant
+≠
+relationship invariant
+```
+
+At State 28, for example:
+
+```text
+POSITIVE
+
+6/6 token core = 5,214 tokens
+6/6 edge core  = 20,212 edges
+
+
+NEGATIVE
+
+6/6 token core = 5,011 tokens
+6/6 edge core  = 19,219 edges
+```
+
+Approximately 44.5% of all unique positive State-28 tokens occur in every permutation, versus only about 17.5% of unique positive edges.
+
+Negative is similar:
+
+```text
+6/6 tokens ≈ 42.8%
+6/6 edges  ≈ 16.4%
+```
+
+Even before semantic analysis, that is a significant structural observation:
+
+```text
+WHAT IS PRESENT
+is substantially more invariant than
+
+HOW THOSE THINGS ARE RELATED
+```
+
+That is exactly the distinction R013 was designed to measure.
+
+## There is also substantial order-associated divergence
+
+The strongest measured divergence occurs at:
+
+```text
+BAC vs CAB
+State 09
+positive_head
+```
+
+with:
+
+```text
+membership Jaccard = 0.320201
+edge Jaccard       = 0.125235
+community ARI      = 0.312774
+```
+
+Notice the comparison:
+
+```text
+BAC
+curvature density
+electro pink
+Tokyo nightlife
+
+CAB
+Tokyo nightlife
+electro pink
+curvature density
+```
+
+Both place **electro pink in the middle**, while B and C exchange first/last positions.
+
+That will be particularly interesting when we later inspect the semantics, but R013 correctly does not interpret it yet.
+
+At final State 28, the mean pairwise overlap across all permutations is still substantial:
+
+```text
+                     positive     negative
+
+membership Jaccard     .696         .686
+edge Jaccard           .464         .454
+```
+
+So R013 has empirically produced both:
+
+```text
+NON-EMPTY INVARIANT CORE
+        +
+SUBSTANTIAL ORDER-ASSOCIATED VARIATION
+```
+
+which is exactly the outcome the experiment was intended to make measurable.
+
+## The evidence package is complete
+
+The run now contains:
+
+```text
+community_nodes.csv
+community_edges.csv
+network_index.csv
+
+state_transitions.csv
+pairwise_permutation_comparisons.csv
+permutation_invariance.csv
+community_transition_evidence.csv
+
+token_permutation_support.csv.gz
+edge_permutation_support.csv.gz
+
+chatgpt_community_networks.json
+chatgpt_layer_packets.md
+
+R013_MEASUREMENT_REPORT.md
+R013_COMPLETENESS_VERIFICATION.md
+manifest.json
+artifact_index.json
+```
+
+`chatgpt_layer_packets.md` is about **1.39 MB**, covering all 29 states and six permutations.
+
+`chatgpt_community_networks.json` is about **9.23 MB**, covering all **348 networks**.
+
+So the evidence surface required for the separate semantic analysis exists.
+
+## Meta-analysis was also updated
+
+`META_ANALYSIS.md` now contains:
+
+- the proposed R013 design;
+- the later correction concerning causal identifiability;
+- the user's instruction that no further methodological expansion was necessary;
+- **MA-0071**, the completed R013 run record.
+
+MA-0071 explicitly preserves the interpretation boundary:
+
+```text
+measurement complete
+        ↓
+semantic community analysis
+parent reconstruction
+invariance interpretation
+        ↓
+NOT YET PERFORMED
+```
+
+## Current project state
+
+The project has therefore reached:
+
+```text
+R010
+semantic-parent trajectory methodology
+        ↓
+R012
+two-order whole-prompt perturbation
+        ↓
+identified instruction/anchor contamination
+        ↓
+R013
+bare concepts
+neutral fixed anchor
+all six permutations
+        ↓
+348 measured semantic networks
+        ↓
+token invariance
+edge invariance
+community comparison
+        ↓
+READY FOR SEMANTIC ANALYSIS
+```
+
+I do not see an obvious scope failure in R013. **Codex has completed the measurement task and stopped at the correct boundary.**
+
+The next substantive task is now ours: reconstruct the six semantic trajectories and determine **which higher-order parents and parent relations actually survive all permutations**, rather than merely which tokens and edges survive.
+
+
+### MA-0073 — ChatGPT analysis plan: R013 cross-permutation semantic invariance reconstruction
+
+- Entry timestamp: `2026-11-14T08:32:00+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `proposed downstream semantic-analysis protocol`
+- Related run: `R013_qwen-bare-concept-permutation-topology`
+- Measurement source: completed R013 measured evidence
+- Analysis status: `not yet executed`
+
+The next meta-analysis entry should record the **purpose and protocol of the downstream R013 semantic analysis**, without implying that its findings already exist.
+
+R013 has completed the measurement problem and produced sufficient evidence for a single controlled semantic-analysis pass. The run contains all six permutations of the same three concepts, measured at the same fixed newline anchor, using the same Qwen2.5-7B-Instruct model and R012 topology methodology.
+
+The downstream analysis therefore does not require another model forward pass or further Codex-supervised execution. Its task is to reconstruct the higher-order semantic organisation contained in the existing 348 measured networks and determine which semantic structures survive permutation of the three inputs.
+
+The concepts are:
+
+```text
+A = electro pink
+B = curvature density
+C = Tokyo nightlife
+```
+
+and the measured permutations are:
+
+```text
+ABC
+ACB
+BAC
+BCA
+CAB
+CBA
+```
+
+The central analytical question is:
+
+> Which higher-order semantic structures and relations remain recoverable across every ordering of the same concepts, and which structures vary systematically with ordering conditions?
+
+The analysis must distinguish measured invariance from semantic invariance. R013 already measures token and edge support across all six permutations, pairwise membership Jaccard, edge Jaccard and community ARI. These quantities establish whether vocabulary items, graph relations and community partitions persist. They do not by themselves establish whether the same higher-order semantic structure persists.
+
+The semantic analysis therefore proceeds through the following hierarchy:
+
+```text
+MEASURED TOKEN NETWORKS
+        ↓
+STATE-LOCAL COMMUNITIES
+        ↓
+SEMANTIC COMMUNITY INTERPRETATION
+        ↓
+STATE-LOCAL PARENT STRUCTURES
+        ↓
+PARENT RELATIONS
+        ↓
+CROSS-LAYER PARENT TRAJECTORIES
+        ↓
+CROSS-PERMUTATION PARENT MATCHING
+        ↓
+ORDER-INVARIANT SEMANTIC CORE
+        +
+ORDER-ASSOCIATED VARIATION
+```
+
+The first analytical stage is independent reconstruction of each permutation at each transformer state. Every underlying community must be inspected rather than inferred from the aggregate network statistics alone.
+
+Community dispositions should remain compatible with the R010 method:
+
+```text
+parent:<id>
+formal-substrate
+irreducible-semantic
+mixed-unresolved
+unclear
+```
+
+A community must not be forced into a semantic parent merely to improve compression. Formal, multilingual, morphological, tokenisation-heavy or otherwise uninterpretable structures may remain outside the semantic reconstruction.
+
+Each retained parent should represent the smallest higher-order structure capable of explaining the relevant communities and should retain an exclusion boundary identifying what the parent does not explain.
+
+The state-local reconstruction must occur before cross-state or cross-permutation reasoning. Later transformer states must not be used to retroactively determine what an earlier community meant.
+
+The second stage reconstructs the layer-wise semantic trajectory independently for each of the six permutations.
+
+For each parent lineage, the analysis should identify events such as:
+
+```text
+persistence
+appearance
+reappearance
+split
+merge
+absorption
+replacement
+re-differentiation
+loss of independent parent status
+```
+
+This produces six independent accounts of how semantic organisation develops through transformer depth.
+
+The third stage compares matched states across all six permutations. The analysis should determine whether apparently different communities instantiate the same higher-order semantic parent despite token or partition differences.
+
+This is necessary because R012 showed that:
+
+```text
+token membership
+        ↓
+edge structure
+        ↓
+community partition
+```
+
+can become progressively less stable while broadly similar parent structures remain recoverable.
+
+R013 provides a stronger test because the semantic structure can now be compared across the complete permutation set rather than one reversed pair.
+
+The principal invariance hierarchy to be tested is:
+
+```text
+TOKEN INVARIANCE
+        ↓
+EDGE INVARIANCE
+        ↓
+COMMUNITY STABILITY
+        ↓
+PARENT INVARIANCE
+        ↓
+PARENT-RELATION INVARIANCE
+```
+
+R013 has already established that a non-empty 6/6 measured core exists while substantial order-associated variation also occurs.
+
+At State 28:
+
+```text
+positive 6/6 token core = 5,214
+positive 6/6 edge core  = 20,212
+
+negative 6/6 token core = 5,011
+negative 6/6 edge core  = 19,219
+```
+
+The measured result also shows that token presence is substantially more invariant than exact graph relations. The semantic analysis must determine whether abstraction restores further invariance at the parent and parent-relation levels.
+
+The strongest measured cross-permutation divergence occurs for:
+
+```text
+BAC versus CAB
+State 09
+positive_head
+
+membership Jaccard = 0.320201
+edge Jaccard       = 0.125235
+community ARI      = 0.312774
+```
+
+This region requires underlying-community inspection because it provides a direct test of whether severe neighbourhood and relational divergence corresponds to severe semantic divergence, or whether different measured structures still compress into similar higher-order parents.
+
+The analysis should identify at least five classes of cross-permutation result:
+
+```text
+ORDER-INVARIANT CORE
+
+A parent or parent relation recoverable across all six permutations.
+
+
+POSITION-ASSOCIATED VARIATION
+
+A structure whose presence, prominence or parent assignment varies systematically with the position of one concept.
+
+
+FINAL-POSITION / RECENCY-ASSOCIATED VARIATION
+
+A structure repeatedly associated with whichever concept occupies the final concept position.
+
+
+ADJACENCY-ASSOCIATED VARIATION
+
+A structure associated with particular concepts occurring next to one another.
+
+
+UNRESOLVED ORDER INTERACTION
+
+A difference that cannot be reduced defensibly to the simpler positional patterns.
+```
+
+These are descriptive dependency categories, not independently identified causal effects. With one three-concept permutation set, final position and recency are confounded, and adjacency, position and higher-order interaction are not fully orthogonal experimental variables.
+
+The analysis must therefore avoid claims that R013 independently estimates causal recency, adjacency or interaction effects.
+
+A major comparison should be made between the two geometric sectors:
+
+```text
+positive_head
+negative_tail
+```
+
+Negative cosine remains geometric anti-alignment, not established suppression or contradiction. Any semantic role assigned to negative-side structures must follow inspection of their actual communities.
+
+R010 and R012 suggest that negative-side community structure may be particularly sensitive to reorganisation. R013 can test whether this remains true across the full permutation set.
+
+The analysis should also distinguish the final transformer-block state from final normalisation:
+
+```text
+S27 = output after the final transformer block
+S28 = post-normalisation representation
+```
+
+S28 may be analysed as the representation delivered towards the output head, but its change from S27 must not be interpreted as another transformer reasoning step.
+
+The final semantic synthesis should reconstruct the minimum higher-order architecture capable of explaining what survives all six permutations.
+
+The desired endpoint is therefore not a list of invariant tokens or even invariant communities. It is:
+
+```text
+ORDER-INVARIANT PARENTS
+        ↓
+RELATIONS BETWEEN THOSE PARENTS
+        ↓
+MINIMAL GENERATIVE STRUCTURE
+```
+
+The analysis should then compare this semantic invariant against the measured hierarchy:
+
+```text
+6/6 tokens
+6/6 edges
+pairwise community stability
+semantic-parent stability
+parent-relation stability
+```
+
+The central hypothesis to test, rather than assume, is:
+
+> Semantic invariance increases with abstraction: exact tokens and graph relations may vary substantially under concept reordering while higher-order parent structures and the relations between them remain comparatively stable.
+
+Possible outcomes include:
+
+1. strong parent and parent-relation invariance despite token/network variation;
+2. stable parents but order-sensitive relations between them;
+3. different parents produced by different concept orders;
+4. only a weak semantic core surviving all permutations; or
+5. no defensible higher-order invariant beyond the measured token/edge core.
+
+Any of these outcomes is valid if supported by the underlying communities.
+
+The analysis should preserve the R010/R012 evidential ordering:
+
+```text
+COMMUNITY BEFORE PARENT
+
+STATE-LOCAL BEFORE CROSS-STATE
+
+PERMUTATION-LOCAL BEFORE CROSS-PERMUTATION
+
+MEASURED TOPOLOGY BEFORE SEMANTIC INTERPRETATION
+
+PARENT IDENTITY BEFORE ROLE ASSIGNMENT
+
+INVARIANCE BEFORE GENERATIVE SYNTHESIS
+```
+
+No new model inference, graph construction, cutoff selection or community detection is required.
+
+The completed R013 artefacts are the sole measurement source for this phase.
+
+The expected final product is a consolidated R013 semantic-topology analysis containing:
+
+```text
+1. state-local semantic reconstruction;
+2. parent structures for each permutation;
+3. six layer-wise parent trajectories;
+4. cross-permutation parent correspondences;
+5. order-invariant parents;
+6. invariant and order-sensitive parent relations;
+7. semantic interpretation of major measured divergence regions;
+8. positive/negative-sector comparison;
+9. distinction between S27 and terminal S28 recoding;
+10. the minimum generative structure surviving all six permutations;
+11. explicit uncertainty where attribution to position, recency, adjacency or interaction remains underdetermined.
+```
+
+R013 therefore advances the project from asking whether semantic topology can be reconstructed to testing whether the reconstructed higher-order topology is invariant under controlled permutation of identical semantic inputs.
+
+This is the entry I would add immediately before beginning the actual R013 semantic analysis.
