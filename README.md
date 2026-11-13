@@ -8,9 +8,10 @@ representation geometry.
 
 The package contains a research design, one behavioural case mapping, an
 executed model playground, one successful single-prompt hidden-state capture
-from Pythia 6.9B, one successful paired whole-prompt Qwen capture and topology
-run, five earlier measured derived analyses and two completed interpretive
-runs. R002 created the full-vocabulary static-basis
+from Pythia 6.9B, one successful paired whole-prompt Qwen topology run, one
+successful six-permutation bare-concept Qwen topology run, five earlier
+measured derived analyses and two completed interpretive runs. R002 created the
+full-vocabulary static-basis
 score matrix; R003 tested an unnecessarily gated boundary policy; R004 retains
 the full-curve upper and lower elbow cutoffs at all states without that
 acceptance gate; R005 constructs exact static embedding relationship networks
@@ -35,6 +36,14 @@ same-state paired-prompt comparisons. The smallest paired membership and edge
 Jaccards both occurred at final State 28 on the negative side (0.773731 and
 0.558323). Complete measured exports are available for downstream ChatGPT
 semantic analysis; R012 itself adds no semantic labels or GRD/SDA roles.
+R013 removes the synthesis shell and assistant prefix, captures a controlled
+newline anchor after all six orderings of the same three bare concepts, and
+reuses the R012 measurement method unchanged. It produces 348 networks, 3,654
+state-local communities, 336 adjacent-state comparisons and 870 matched-state
+permutation-pair comparisons. The smallest cross-order membership and edge
+Jaccards were 0.320201 and 0.125235. Separate token and edge support evidence
+identifies the structures present in 1/6 through 6/6 permutations without
+semantically interpreting them.
 
 R005 found greater nearest-neighbour density and positive/negative segregation
 than a size-matched random null at all 33 states, but its communities also
@@ -151,6 +160,16 @@ and are not versioned here.
     — exact coverage and integrity verification.
 42. [`METHODOLOGY.md`](METHODOLOGY.md)
     — the methodological division between standard analytical tools and the project's distinctive semantic-topology machinery.
+43. [`single_prompt_topology/R013_PLAN.md`](single_prompt_topology/R013_PLAN.md)
+    — the locked bare-concept six-permutation measurement contract.
+44. [`single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/R013_MEASUREMENT_REPORT.md`](single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/R013_MEASUREMENT_REPORT.md)
+    — the completed R013 measurement coverage and factual structural findings.
+45. [`single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/chatgpt_layer_packets.md`](single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/chatgpt_layer_packets.md)
+    — all six permutations, 29 states and both sectors in a readable analytical packet.
+46. [`single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/chatgpt_community_networks.json`](single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/chatgpt_community_networks.json)
+    — the complete compact measured network package for downstream semantic analysis.
+47. [`single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/R013_COMPLETENESS_VERIFICATION.md`](single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/R013_COMPLETENESS_VERIFICATION.md)
+    — exact capture, network, comparison, invariance and referential-integrity verification.
 
 ## Provenance
 

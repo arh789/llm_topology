@@ -31,6 +31,16 @@ single_prompt_topology/runs/*
 !single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/**/*.md
 !single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/**/*.json
 !single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/**/*.csv
+!single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/
+!single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/*.md
+!single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/*.json
+!single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/*.csv
+!single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/**/
+!single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/**/*.md
+!single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/**/*.json
+!single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/**/*.csv
+single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/*.gz
+single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/**/*.gz
 
 # Model weights and checkpoints
 *.bin

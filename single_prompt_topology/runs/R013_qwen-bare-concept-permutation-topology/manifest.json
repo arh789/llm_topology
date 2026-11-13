@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "run_id": "R013_qwen-bare-concept-permutation-topology",
+  "status": "successful",
+  "started_at": "2026-11-13T21:04:39.560523+00:00",
+  "completed_at": "2026-11-13T21:26:27.172316+00:00",
+  "failure_details": null,
+  "source_git_commit": "e437fa462f65eeb067b450c9819ed1c22a2abcc8",
+  "source_git_status": "M META_ANALYSIS.md\n?? single_prompt_topology/R013_PLAN.md\n?? single_prompt_topology/r013_capture_hidden_states.py\n?? single_prompt_topology/r013_run.py\n?? single_prompt_topology/r013_semantic_topology.py",
+  "objective": "Measure order-invariant and order-associated semantic topology for six bare-concept permutations at a controlled final anchor.",
+  "model": {
+    "id": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "precision": "bfloat16",
+    "cache_only": true
+  },
+  "expected": {
+    "permutations": 6,
+    "states": 29,
+    "hidden_width": 3584,
+    "sides": 2,
+    "networks": 348,
+    "adjacent_state_comparisons": 336,
+    "matched_state_pair_comparisons": 870
+  },
+  "required_components": [
+    "plan_lock",
+    "environment_probe",
+    "anchor_probe",
+    "primary_capture",
+    "capture_validation",
+    "projection_and_cutoffs",
+    "split_networks_and_communities",
+    "within_permutation_transitions",
+    "pairwise_permutation_comparisons",
+    "permutation_invariance",
+    "chatgpt_exports",
+    "completeness_validation",
+    "run_report"
+  ],
+  "components": {
+    "plan_lock": {
+      "status": "successful",
+      "completed_at": "2026-11-13T21:04:39.560523+00:00",
+      "path": "single_prompt_topology/R013_PLAN.md",
+      "sha256": "0c7086278914ce0dea8e82be4f5411686b55576a5163763b5c01a1dc50fddd68"
+    },
+    "environment_probe": {
+      "status": "successful",
+      "completed_at": "2026-11-13T21:04:39.560523+00:00",
+      "python": "3.11.15 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:12:15) [MSC v.1942 64 bit (AMD64)]",
+      "executable": "C:\\Users\\arhal\\anaconda3\\envs\\myenv\\python.exe",
+      "torch": "2.6.0+cu124",
+      "transformers": "5.12.1",
+      "numpy": "2.4.4",
+      "pandas": "3.0.3",
+      "networkx": "3.6.1",
+      "sklearn": "1.8.0",
+      "safetensors": "0.8.0",
+      "gpu_name": "NVIDIA GeForce RTX 4090",
+      "gpu_total_bytes": 25756696576,
+      "gpu_free_bytes": 24159191040
+    },
+    "anchor_probe": {
+      "status": "successful",
+      "completed_at": "2026-11-13T21:04:53.963427+00:00",
+      "anchor_text": "\\n",
+      "anchor_token_id": 198,
+      "anchor_token": "Ċ",
+      "single_token": true,
+      "final_anchor_matches_all_permutations": true,
+      "input_token_counts": {
+        "ABC": 12,
+        "ACB": 12,
+        "BAC": 12,
+        "BCA": 12,
+        "CAB": 12,
+        "CBA": 12
+      }
+    },
+    "primary_capture": {
+      "status": "successful",
+      "completed_at": "2026-11-13T21:05:17.217837+00:00",
+      "permutation_count": 6,
+      "state_count": 29,
+      "hidden_width": 3584,
+      "response_generation_executed": false
+    },
+    "capture_validation": {
+      "status": "successful",
+      "completed_at": "2026-11-13T21:05:17.254013+00:00",
+      "state_00_exact_equal_all_permutations": true,
+      "deterministic_replay_exact": true,
+      "all_finite": true,
+      "pair_state_metric_rows": 435
+    },
+    "projection_and_cutoffs": {
+      "status": "successful",
+      "completed_at": "2026-11-13T21:06:10.322538+00:00",
+      "seconds": 37.865363299999444,
+      "score_shape": [
+        6,
+        29,
+        151665
+      ],
+      "vocabulary_size": 151665,
+      "excluded_capture_token_id": 198,
+      "cutoff_rows": 174,
+      "membership_rows": 2465642,
+      "embedding_shard": "model-00001-of-00004.safetensors",
+      "full_embedding_rows": 152064,
+      "usable_tokenizer_rows": 151665,
+      "padded_embedding_rows_excluded": 399,
+      "model_forward_executed": false
+    },
+    "split_networks_and_communities": {
+      "status": "successful",
+      "completed_at": "2026-11-13T21:26:26.169192+00:00",
+      "seconds": 1215.8449051999996,
+      "network_count": 348,
+      "node_rows": 2465642,
+      "directed_edge_rows": 24656420,
+      "community_rows": 3654,
+      "intercommunity_edge_rows": 17496
+    },
+    "within_permutation_transitions": {
+      "status": "successful",
+      "completed_at": "2026-11-13T21:26:26.171185+00:00",
+      "seconds": 0.0002783999989333097,
+      "transition_rows": 336,
+      "minimum_membership_jaccard": 0.01518796992481203,
+      "minimum_edge_jaccard": 0.0009206972747360667
+    },
+    "pairwise_permutation_comparisons": {
+      "status": "successful",
+      "completed_at": "2026-11-13T21:26:26.173189+00:00",
+      "seconds": 0.0003555000002961606,
+      "pairwise_comparison_rows": 870,
+      "minimum_membership_jaccard": 0.3202005730659026,
+      "minimum_edge_jaccard": 0.12523483085957426
+    },
+    "permutation_invariance": {
+      "status": "successful",
+      "completed_at": "2026-11-13T21:26:26.174362+00:00",
+      "seconds": 2.2500000341096893e-05,
+      "summary_rows": 696,
+      "token_support_rows": 770924,
+      "edge_support_rows": 8210395,
+      "support_levels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "token_and_edge_support_separate": true
+    },
+    "chatgpt_exports": {
+      "status": "successful",
+      "completed_at": "2026-11-13T21:26:26.557051+00:00",
+      "seconds": 0.3808779000009963,
+      "json_networks": 348,
+      "markdown_state_sections": 29,
+      "semantic_labels_added": false
+    },
+    "completeness_validation": {
+      "status": "successful",
+      "completed_at": "2026-11-13T21:26:26.575063+00:00",
+      "seconds": 0.016726899999412126,
+      "networks_verified": 348,
+      "nodes_verified": 2465642,
+      "directed_edges_verified": 24656420,
+      "communities_verified": 3654,
+      "state_zero_all_pairs_identity_verified": true,
+      "token_support_rows_verified": 770924,
+      "edge_support_rows_verified": 8210395
+    },
+    "run_report": {
+      "status": "successful",
+      "completed_at": "2026-11-13T21:26:26.579929+00:00",
+      "seconds": 0.002916600000389735,
+      "path": "single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/R013_MEASUREMENT_REPORT.md"
+    }
+  },
+  "artifacts": {
+    "vocabulary_scores.safetensors": {
+      "bytes": 105559072,
+      "sha256": "ae59d831e349e351893dda94efa5fd97dfe008603c91ade59dd6df3d97dbce3d"
+    },
+    "cutoffs.csv": {
+      "bytes": 46452,
+      "sha256": "4f440653d532b9a0a2de1a821391069e425792a645ff35c27f627d5a46e7c7dc"
+    },
+    "tail_tokens.csv.gz": {
+      "bytes": 59838355,
+      "sha256": "e2adc90404b9bce42c717fd6fbd08174df49bb7e2a992c351f906109193c0198"
+    },
+    "network_index.csv": {
+      "bytes": 91355,
+      "sha256": "9b0c8c7598ab858c937f655bf879fc65f4ab9f51faa0bd7faab36c6f765dd74f"
+    },
+    "nodes.csv.gz": {
+      "bytes": 62955770,
+      "sha256": "8aa4e30391b6a461ce00b859b0def81bc80aab7c65c5dc2c3390d6e26b826940"
+    },
+    "edges.csv.gz": {
+      "bytes": 266841313,
+      "sha256": "8e845550dc12b9d5882990d8154dfb70bb9471c7882396d71080d1b84c74ea10"
+    },
+    "community_nodes.csv": {
+      "bytes": 2224276,
+      "sha256": "18f6054a6d1064c7f48d8fbe5ba0fe02c61ca32c73fdeb1015a2785d1014199e"
+    },
+    "community_edges.csv": {
+      "bytes": 1481857,
+      "sha256": "0f09552e2943a2f530c4bbfb16ebd135d631ea23b96eb338d0923ef02a685d20"
+    },
+    "state_transitions.csv": {
+      "bytes": 50236,
+      "sha256": "1749ff8dff113b4de844162eeb7661fbf6bb490d73b7bcd2436cf830ea22622f"
+    },
+    "pairwise_permutation_comparisons.csv": {
+      "bytes": 115757,
+      "sha256": "1155893ee5ae9ec3eb06e4e03da201b7336c8df9fc6f513b0eb3a4632df99b63"
+    },
+    "permutation_invariance.csv": {
+      "bytes": 50144,
+      "sha256": "092cce433e8259c342e67703e738b09d1b20a15ab6756662fca708e0c20c53a6"
+    },
+    "token_permutation_support.csv.gz": {
+      "bytes": 7653331,
+      "sha256": "6b5195ea9353261013ad845bd73cf866ce32b8c748db046e185b045ab40ab058"
+    },
+    "edge_permutation_support.csv.gz": {
+      "bytes": 45830783,
+      "sha256": "80f2408e931d98f8835f83f1d7ac7313ab124284574febafc9c0f99d6992aa3e"
+    },
+    "community_transition_evidence.csv": {
+      "bytes": 1324409,
+      "sha256": "67f787dcdb61836b69c36999765b45736a04d62fad60a4d3b4fdf9eed6885d21"
+    },
+    "chatgpt_community_networks.json": {
+      "bytes": 9230771,
+      "sha256": "0fbdfc80a6ef956f8c3195ef217ff96a6532f241c97cf7b0d7ccf67a6b18f51d"
+    },
+    "chatgpt_layer_packets.md": {
+      "bytes": 1387710,
+      "sha256": "3960004084cbaca5ffd851700a45793e88794bbc276a379774a0e97a99907a93"
+    },
+    "R013_COMPLETENESS_VERIFICATION.md": {
+      "bytes": 800,
+      "sha256": "e2b3206ee2f118289b14ccd64b48eaf44a88c48bf9b11328fbdc0a6ac81b3fdc"
+    },
+    "R013_MEASUREMENT_REPORT.md": {
+      "bytes": 1931,
+      "sha256": "7e58a7cf77ca4ff539be8df3088437566da5d0cda5cf988e2095f75007e5d0a9"
+    }
+  },
+  "status_history": [],
+  "execution_attempts": [
+    {
+      "started_at": "2026-11-13T21:04:39.560523+00:00",
+      "status": "successful",
+      "completed_at": "2026-11-13T21:26:27.172316+00:00",
+      "seconds": 1254.7154093999989
+    }
+  ],
+  "interpretation_boundary": "R013 produces measured topology and invariance evidence only; semantic parents, SDA/GRD roles, coherence and semantic curvature are excluded.",
+  "pipeline": {
+    "orchestrator": "single_prompt_topology/r013_run.py",
+    "capture_script": "single_prompt_topology/r013_capture_hidden_states.py",
+    "topology_script": "single_prompt_topology/r013_semantic_topology.py",
+    "topology_script_sha256": "a71d2e5fe2308a5f7a361cfdfb238b9c72d0bf37613ce3cc62c48ec33f36ea3c",
+    "plan": "single_prompt_topology/R013_PLAN.md",
+    "plan_sha256": "0c7086278914ce0dea8e82be4f5411686b55576a5163763b5c01a1dc50fddd68",
+    "measurement_functions_reused_from": "single_prompt_topology/r012_semantic_topology.py",
+    "model_backend": "direct Qwen Transformers capture artifacts",
+    "downstream_analysis": "model-independent"
+  },
+  "results": {
+    "network_count": 348,
+    "selected_membership_rows": 2465642,
+    "directed_edge_rows": 24656420,
+    "community_count": 3654,
+    "adjacent_transition_rows": 336,
+    "pairwise_comparison_rows": 870,
+    "invariance_summary_rows": 696,
+    "token_support_rows": 770924,
+    "edge_support_rows": 8210395,
+    "minimum_pairwise_membership_jaccard": 0.3202005730659026,
+    "minimum_pairwise_edge_jaccard": 0.12523483085957426,
+    "final_positive_six_of_six_tokens": 5214,
+    "final_positive_six_of_six_edges": 20212,
+    "final_negative_six_of_six_tokens": 5011,
+    "final_negative_six_of_six_edges": 19219
+  }
+}
