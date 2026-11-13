@@ -5,7 +5,7 @@
 - Run number: `R012`
 - Existing run directory: `R012_qwen-whole-prompt-paired-capture`
 - Run type: measured paired-prompt whole-prompt semantic topology
-- Current status: `running`
+- Current status: `successful`
 - First validated backend: Hugging Face Transformers +
   `Qwen/Qwen2.5-7B-Instruct`, BF16
 
