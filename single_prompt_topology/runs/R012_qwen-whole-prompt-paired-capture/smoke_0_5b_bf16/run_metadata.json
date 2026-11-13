@@ -1,0 +1,35 @@
+{
+  "status": "successful",
+  "completed_at": "2026-11-13T06:59:25.429187+00:00",
+  "stage": "smoke_0_5b",
+  "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+  "revision_requested": "main",
+  "revision_resolved": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "model_class": "Qwen2ForCausalLM",
+  "tokenizer_class": "Qwen2Tokenizer",
+  "transformers_version": "5.12.1",
+  "torch_version": "2.6.0+cu124",
+  "cuda_runtime": "12.4",
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "dtype": "torch.bfloat16",
+  "layer_count": 24,
+  "state_count": 25,
+  "hidden_width": 896,
+  "tokenizer_load_seconds": 6.828457600000547,
+  "model_load_seconds": 21.90376620000461,
+  "capture_seconds": {
+    "baseline": 0.6114572000005865,
+    "variation": 0.043010000001231674
+  },
+  "replay_seconds": {
+    "baseline": 0.05399990000296384,
+    "variation": 0.038033299999369774
+  },
+  "elapsed_seconds": 41.44684000000416,
+  "gpu_total_bytes": 25756696576,
+  "gpu_free_before_load_bytes": 24159191040,
+  "gpu_free_after_capture_bytes": 22995271680,
+  "gpu_peak_allocated_bytes": 1019487232,
+  "gpu_peak_reserved_bytes": 1077936128,
+  "response_generation_executed": false
+}

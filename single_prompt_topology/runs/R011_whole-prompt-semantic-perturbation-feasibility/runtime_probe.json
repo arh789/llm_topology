@@ -1,0 +1,44 @@
+{
+  "probe": "llama_cpp_intermediate_state_api",
+  "status": "successful",
+  "completed_at": "2026-11-13T06:36:39.333337+00:00",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "llama_cpp_python": "0.3.34",
+  "module_path": "/root/.venvs/semantic-seo-lab/lib/python3.12/site-packages/llama_cpp/__init__.py",
+  "model": {
+    "path": "/mnt/d/AI/cache/huggingface/hub/models--bartowski--Qwen2.5-7B-Instruct-GGUF/snapshots/8911e8a47f92bac19d6f5c64a2e2095bd2f7d031/Qwen2.5-7B-Instruct-Q5_K_M.gguf",
+    "exists": true,
+    "bytes": 5444831936,
+    "loaded": false
+  },
+  "high_level_api": {
+    "__getstate__": "(self)",
+    "__setstate__": "(self, state)",
+    "create_embedding": "(self, input: 'Union[str, List[str]]', model: 'Optional[str]' = None) -> 'CreateEmbeddingResponse'",
+    "embed": "(self, input: 'Union[str, List[str]]', normalize: 'bool' = False, truncate: 'bool' = True, return_count: 'bool' = False)",
+    "eval": "(self, tokens: 'Sequence[int]')",
+    "eval_logits": null,
+    "eval_tokens": null,
+    "load_state": "(self, state: 'LlamaState') -> 'None'",
+    "save_state": "(self) -> 'LlamaState'"
+  },
+  "low_level_api": {
+    "LLAMA_SPLIT_MODE_TENSOR": null,
+    "ggml_abort_callback": null,
+    "ggml_backend_sched_eval_callback": null,
+    "llama_get_embeddings": "(ctx: 'llama_context_p', /) -> 'CtypesArray[ctypes.c_float]'",
+    "llama_get_embeddings_ith": "(ctx: 'llama_context_p', i: 'Union[ctypes.c_int32, int]', /) -> 'CtypesArray[ctypes.c_float]'",
+    "llama_get_embeddings_seq": "(ctx: 'llama_context_p', seq_id: 'Union[llama_seq_id, int]', /) -> 'CtypesArray[ctypes.c_float]'",
+    "llama_log_callback": null,
+    "llama_max_tensor_buft_overrides": "() -> 'int'",
+    "llama_model_set_tensor_data_t": null,
+    "llama_model_tensor_override": null,
+    "llama_progress_callback": null,
+    "llama_set_abort_callback": "(ctx: 'llama_context_p', abort_callback: 'Callable[[ctypes.c_void_p], None]', abort_callback_data: 'ctypes.c_void_p', /)",
+    "llama_set_embeddings": "(ctx: 'llama_context_p', embeddings: 'bool', /)"
+  },
+  "explicit_intermediate_candidates": [],
+  "supports_intermediate_hidden_states": false,
+  "interpretation": "No explicit API for per-layer intermediate hidden states was exposed."
+}

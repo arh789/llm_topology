@@ -20,6 +20,17 @@ single_prompt_topology/runs/*
 !single_prompt_topology/runs/R009_lithium-community-semantic-classification/R009_SUMMARY.html
 !single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/
 !single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/*.md
+!single_prompt_topology/runs/R011_whole-prompt-semantic-perturbation-feasibility/
+!single_prompt_topology/runs/R011_whole-prompt-semantic-perturbation-feasibility/*.md
+!single_prompt_topology/runs/R011_whole-prompt-semantic-perturbation-feasibility/*.json
+!single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/
+!single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/*.md
+!single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/*.json
+!single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/*.csv
+!single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/**/
+!single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/**/*.md
+!single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/**/*.json
+!single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/**/*.csv
 
 # Model weights and checkpoints
 *.bin
@@ -27,6 +38,8 @@ single_prompt_topology/runs/*
 *.pt
 *.pth
 *.safetensors
+!single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/*.safetensors
+!single_prompt_topology/runs/R012_qwen-whole-prompt-paired-capture/**/*.safetensors
 
 # Editor and operating-system files
 .vscode/

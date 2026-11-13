@@ -1,0 +1,107 @@
+{
+  "run_number": "R011",
+  "run_name": "whole-prompt-semantic-perturbation-feasibility",
+  "run_id": "R011_whole-prompt-semantic-perturbation-feasibility",
+  "run_type": "measured_paired_prompt_capture_feasibility",
+  "status": "failed",
+  "started_at": "2026-11-13T06:35:13.1316401Z",
+  "completed_at": "2026-11-13T06:45:47.1859764Z",
+  "required_components": [
+    "plan_lock",
+    "runtime_capability_probe",
+    "same_architecture_baseline_capture",
+    "same_architecture_variation_capture",
+    "paired_capture_validation",
+    "large_model_readiness_decision"
+  ],
+  "components": {
+    "plan_lock": {
+      "status": "successful",
+      "plan": "single_prompt_topology/R011_PLAN.md"
+    },
+    "runtime_capability_probe": {
+      "status": "failed",
+      "installed_llama_cpp": {
+        "status": "successful",
+        "completed_at": "2026-11-13T06:36:39.333337+00:00",
+        "runtime": "llama-cpp-python 0.3.34",
+        "model_loaded": false,
+        "supports_intermediate_hidden_states": false,
+        "result": "unsupported",
+        "evidence": "runtime_probe.json"
+      },
+      "fallback_quantized_cpu_runtime": {
+        "status": "failed",
+        "runtime": "TorchAO",
+        "versions_tested": [
+          "0.18.0",
+          "0.17.0"
+        ],
+        "model_loaded": false,
+        "result": "no usable x86 CPU int4 execution path in the available wheels",
+        "evidence": "torchao_probe.json"
+      }
+    },
+    "same_architecture_baseline_capture": {
+      "status": "not_run_due_to_runtime_failure"
+    },
+    "same_architecture_variation_capture": {
+      "status": "not_run_due_to_runtime_failure"
+    },
+    "paired_capture_validation": {
+      "status": "not_run_due_to_runtime_failure"
+    },
+    "large_model_readiness_decision": {
+      "status": "failed",
+      "decision": "do not download or load a 70B–72B model until an instrumentable quantised CPU runtime is established",
+      "evidence": "R011_RUNTIME_READINESS.md"
+    }
+  },
+  "inputs": {
+    "baseline": "What structure forms from electro pink, curvature density, Tokyo nightlife?",
+    "variation": "What structure forms from electro pink, Tokyo nightlife, curvature density?",
+    "controlled_change": "swap the order of curvature density and Tokyo nightlife",
+    "capture_position": "final assistant-prefix/model-input position",
+    "generation_executed": false
+  },
+  "model_candidates": {
+    "same_architecture_probe": {
+      "id": "bartowski/Qwen2.5-7B-Instruct-GGUF",
+      "quantization": "Q5_K_M",
+      "path": "D:\\AI\\cache\\huggingface\\hub\\models--bartowski--Qwen2.5-7B-Instruct-GGUF\\snapshots\\8911e8a47f92bac19d6f5c64a2e2095bd2f7d031\\Qwen2.5-7B-Instruct-Q5_K_M.gguf",
+      "bytes": 5444831936
+    },
+    "primary_large_model": {
+      "id": "Qwen/Qwen2.5-72B-Instruct",
+      "quantization": "Q4_K_M",
+      "download_authorized": false
+    },
+    "fallback_large_model": {
+      "id": "Qwen/Qwen3-32B",
+      "quantization": "Q6_K_or_Q5_K_M",
+      "download_authorized": false
+    }
+  },
+  "artifacts": {
+    "runtime_probe.json": {
+      "bytes": 2338,
+      "sha256": "c88138d97784d75b783f25b4e187cc96369b43466e211c1fbaef899bb31b6e8c"
+    },
+    "torchao_probe.json": {
+      "bytes": 1097,
+      "sha256": "cd1e732ba419452fb07de1cb27ba62b0f2af63e550ba4c98e9aa6ce626041ce5"
+    },
+    "R011_RUNTIME_READINESS.md": {
+      "bytes": 2750,
+      "sha256": "92559943de8f762803b7fd1830bebf481107e3dc7753e80ba19d1a3958175501"
+    }
+  },
+  "failure_details": {
+    "fatal_component": "runtime_capability_probe",
+    "summary": "The installed llama.cpp runtime exposes no per-layer hidden-state API, and the tested TorchAO fallback lacks a usable x86 CPU int4 path.",
+    "model_loaded": false,
+    "prompt_forward_executed": false,
+    "large_model_downloaded": false,
+    "stale_results_used": false
+  }
+}
