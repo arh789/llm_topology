@@ -264,8 +264,13 @@ that high coherence difficulty tends to precede community repartitioning. It
 supports conflict resolution by selective compression, functional-role
 assignment and re-differentiation rather than wholesale elimination. These
 results remain specific to the current prompt and operational definitions. The
-complete 45-file package was imported byte-for-byte from private
-`chatgpt-analysis` head `4e5541d`.
+canonical
+[`R010_PHASE_A_INSIGHTS.md`](runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_A_INSIGHTS.md),
+[`R010_PHASE_C_INSIGHTS.md`](runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_C_INSIGHTS.md)
+and
+[`R010_PHASE_D_INSIGHTS.md`](runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_D_INSIGHTS.md)
+provide concise phase-level summaries. The complete 48-file package was
+imported byte-for-byte from private `chatgpt-analysis` head `44adff3`.
 
 ## Run outputs
 

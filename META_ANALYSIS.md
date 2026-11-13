@@ -5566,3 +5566,33 @@ All five local Git blob SHAs exactly match their counterparts at external head
 The curated R010 package now contains 45 Markdown files recursively. Phase D
 is complete for this capture, but replication across prompts remains required
 before treating the conflict-resolution pattern as general.
+
+
+### MA-0053 — Canonical R010 phase-insight reports import
+
+- Entry timestamp: `2026-11-13T16:49:43+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex reconciliation record`
+- Entry type: `provenance, verification and repository housekeeping`
+- Related runs: `R010 Phase A`; `R010 Phase C`; `R010 Phase D`
+- External repository: `arh789/chatgpt-analysis`
+- External imported head: `44adff39d2b44b816c0ad2af32fbaf3f89653abe`
+
+#### Record
+
+After the Phase-D completion package, external ChatGPT added three canonical
+phase-level insight summaries:
+
+- `R010_PHASE_A_INSIGHTS.md`;
+- `R010_PHASE_C_INSIGHTS.md`; and
+- `R010_PHASE_D_INSIGHTS.md`.
+
+All three files were imported into the standalone local repository. Their local
+Git blob SHAs exactly match the corresponding files at external head
+`44adff3`:
+
+- Phase A: `9d36b508984a8581c9cb6996ddfeeb99a57c3197`;
+- Phase C: `149f4e074de32dc17c814f6d05a28164b126310f`;
+- Phase D: `3eb46a9dddce64f303154d75bfb0fb2119192515`.
+
+The curated R010 package now contains 48 Markdown files recursively.

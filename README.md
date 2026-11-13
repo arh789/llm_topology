@@ -115,6 +115,12 @@ and are not versioned here.
     — the state/transition measurements and quantitative results.
 31. [`single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/phase_d/R010_PHASE_D_CONFLICT_RESOLUTION_REPORT.md`](single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/phase_d/R010_PHASE_D_CONFLICT_RESOLUTION_REPORT.md)
     — the final Phase-D conflict-resolution interpretation and limitations.
+32. [`single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_A_INSIGHTS.md`](single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_A_INSIGHTS.md)
+    — the canonical Phase-A insight summary.
+33. [`single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_C_INSIGHTS.md`](single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_C_INSIGHTS.md)
+    — the canonical Phase-C insight summary.
+34. [`single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_D_INSIGHTS.md`](single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_D_INSIGHTS.md)
+    — the canonical Phase-D insight summary.
 
 ## Provenance
 
@@ -132,8 +138,9 @@ Phase-A verification passed at remote commit `28e3653`; Phase B was added at
 `a62646f`, Phase C at `3f82f28`, and the expanded Phase-B insights artifact was
 finalised at `11bc912`. A Phase-D task definition was added at `3711712`. The
 Phase-D measurement results and final report were completed at `96041ea` and
-`4e5541d`. The complete 45-file package was imported byte-for-byte from remote
-head `4e5541d`.
+`4e5541d`. Canonical Phase-A, Phase-C and Phase-D insight summaries were added
+through remote head `44adff3`. The complete 48-file package was imported
+byte-for-byte from that head.
 GitHub may temporarily lead while external analysis is active, so its history
 must be fetched and reconciled before later edits or pushes. This repository
 remains the authoritative project working copy after that reconciliation.
