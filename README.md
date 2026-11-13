@@ -98,7 +98,10 @@ and geometric curvature. Model weights remain in the shared cache under
 25. [`single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_B_STRUCTURAL_EVOLUTION.md`](single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_B_STRUCTURAL_EVOLUTION.md)
     — the cross-state correspondence families, structural epochs and semantic
     transition record.
-26. [`single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_C_SEMANTIC_TOPOLOGY_COMPARISON.md`](single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_C_SEMANTIC_TOPOLOGY_COMPARISON.md)
+26. [`single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_B_INSIGHTS.md`](single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_B_INSIGHTS.md)
+    — an expanded interpretive account of the ontology-to-procedure trajectory
+    inferred from Phase B.
+27. [`single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_C_SEMANTIC_TOPOLOGY_COMPARISON.md`](single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_C_SEMANTIC_TOPOLOGY_COMPARISON.md)
     — the comparison between the inferred semantic trajectory and R008's
     measured membership, edge, community and modularity changes.
 
@@ -115,8 +118,9 @@ Selected, documented snapshots may be published separately to the private
 by external ChatGPT and imported byte-for-byte at remote commit `49a4b0a`.
 R010 was also authored externally in the private parent repository. Its final
 Phase-A verification passed at remote commit `28e3653`; Phase B was added at
-`a62646f` and Phase C at `3f82f28`. The complete 38-file package was imported
-byte-for-byte from remote head `3f82f28`.
+`a62646f`, Phase C at `3f82f28`, and the expanded Phase-B insights artifact was
+finalised at `11bc912`. The complete 39-file package was imported byte-for-byte
+from remote head `11bc912`.
 GitHub may temporarily lead while external analysis is active, so its history
 must be fetched and reconciled before later edits or pushes. This repository
 remains the authoritative project working copy after that reconciliation.

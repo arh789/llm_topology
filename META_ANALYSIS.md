@@ -4110,3 +4110,1337 @@ Their local Git blob SHAs were compared with the corresponding GitHub blob SHAs
 at external head `3f82f28`; both matched exactly. The curated R010 package now
 contains 38 Markdown files. The local repository remains intentionally
 unattached to a remote during this short-term private-parent workflow.
+
+
+### MA-0036 — ChatGPT Part C insight
+
+- Entry timestamp: `2026-11-13T15:51:32+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim Part C insight`
+- Related runs: `R008`; `R010`
+
+EARLY\
+\
+"What semantic neighbourhood is relevant?"\
+\
+&#x20;       ↓\
+\
+MEMBERSHIP SELECTION\
++\
+EDGE REORGANISATION\
++\
+COMMUNITY FORMATION\
+\
+\
+MIDDLE\
+\
+"How should this neighbourhood be partitioned?"\
+\
+&#x20;       ↓\
+\
+COMMUNITY\
+SPLIT / MERGE / RE-PARTITION\
+\
+\
+LATE\
+\
+"What higher-order relationship makes\
+these existing structures coherent?"\
+\
+&#x20;       ↓\
+\
+SEMANTIC COMPRESSION\
++\
+RELATIONAL REORGANISATION\
+\
+\
+FINAL\
+\
+"What representation is required\
+for the terminal functional state?"\
+\
+&#x20;       ↓\
+\
+WHOLE-NEIGHBOURHOOD RESET
+
+
+### MA-0037 — ChatGPT Part C insight
+
+- Entry timestamp: `2026-11-13T15:54:16+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim Part C insight`
+- Related runs: `R008`; `R010`
+
+Effectively, yes:
+
+| Transformer stage | Positively scored communities ask                         | Negatively scored communities ask                                                        |
+| ----------------- | --------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Early             | **What is relevant to the problem?**                      | **What is incompatible, adverse, or outside the useful domain?**                         |
+| Middle            | **What can be done with this information?**               | **What constrains, prohibits, risks, or invalidates those operations?**                  |
+| Late              | **How can the useful operations be combined?**            | **Which relations would make that combination fail, conflict, or become impermissible?** |
+| Final             | **What coherent workflow produces the required outcome?** | **What must be excluded or controlled for that workflow to remain valid?**               |
+
+Compressed:
+```
+POSITIVE
+What can construct the answer?
+
+NEGATIVE
+What constrains or disqualifies possible answers?
+```
+
+So the two sides look less like “good versus bad” and more like a paired optimisation process:
+```
+GENERATIVE SPACE
+What could work?
+      +
+CONSTRAINT SPACE
+What cannot work / must be controlled?
+      ↓
+BOUNDED SOLUTION
+```
+
+The positive side progressively builds **possibility and procedure**; the negative side progressively defines the **boundary conditions under which that procedure remains coherent**.
+
+
+### MA-0038 — ChatGPT Part C insight
+
+- Entry timestamp: `2026-11-13T15:58:55+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim Part C insight`
+- Related runs: `R008`; `R010`
+
+The “semantic neighbourhood” was the **target-relative vocabulary surrounding the evolving representation of ` lithium`** for the prompt:
+
+> Battery demand, mineral supply, electric vehicles, and energy storage all shape the market for lithium.
+
+It was not fixed. The data show this progression:
+```bash
+INPUT NEIGHBOURHOOD
+lithium as a thing
+│
+├─ chemical/material composition
+├─ electrochemistry / physical processes
+├─ energy-related material
+└─ biomedical / pharmacological substances
+
+        ↓ contextualisation
+
+EARLY POSITIVE NEIGHBOURHOOD
+lithium-in-context
+│
+├─ information / task / work systems
+├─ social / institutional organisation
+├─ geographic / economic organisation
+└─ biological / health systems
+
+EARLY–MIDDLE NEGATIVE NEIGHBOURHOOD
+│
+├─ harm / prohibition
+├─ scientific / clinical characterisation
+├─ regulation / constraint
+├─ authority / territory
+└─ adverse or destructive change
+
+        ↓ abstraction
+
+LATE POSITIVE NEIGHBOURHOOD
+│
+├─ inquiry / investigation
+├─ analysis / evidence
+├─ measurement
+├─ development / transformation
+├─ professional information activity
+└─ information production
+
+LATE NEGATIVE NEIGHBOURHOOD
+│
+├─ characterisation
+├─ regulation / constraint
+├─ adverse evaluation
+├─ controlled change
+└─ authority / territorial order
+
+        ↓ final state
+
+POSITIVE
+data/testing/measurement
+    → acquisition/transfer/state change
+    → reporting/recording/publishing
+
+NEGATIVE
+structural characterisation
+    + extreme/adverse evaluation
+    + destructive/controlled change
+    + civic/institutional authority
+```
+
+So the striking result is that the neighbourhood begins as **“things associated with lithium”**, but progressively becomes **“operations relevant to processing the problem represented by lithium”**.
+
+That is what makes Phase C's “neighbourhood selection → stabilisation → abstraction” interpretation significant: the transformer progressively stops organising the space around *what lithium is* and starts organising it around *what must be done with the information*.
+
+
+### MA-0039 — ChatGPT discussion: forward-pass scope and first-token prediction
+
+- Entry timestamp: `2026-11-13T16:01:39+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Project owner and ChatGPT`
+- Entry type: `lightly edited conversation`
+- Related runs: `R001`; `R008`; `R010`
+- Editorial note: `Formatting was normalised and an interface artefact was removed; the substantive claims were retained.`
+
+**Project owner:** Was a response generated?
+
+**ChatGPT:** No. The run analysed a forward pass of the supplied prompt, capturing the representation of the target token `lithium` through the transformer states.
+
+It did not autoregressively generate a textual response after the prompt. The workflow was essentially:
+
+```text
+prompt
+  ↓
+forward pass through Pythia-6.9B
+  ↓
+capture the `lithium` representation at each layer
+  ↓
+construct semantic neighbourhoods
+  ↓
+analyse their evolution
+```
+
+That matters: the methodology observes the transformation of the prompt representation itself, before response generation.
+
+**Project owner:** So this was effectively capturing the process used to generate the first token in the response?
+
+**ChatGPT:** Yes—more precisely, it captured the layer-by-layer transformation of the final prompt token’s representation that ultimately feeds the logits used to predict the first generated token.
+
+```text
+prompt ending in "lithium"
+          ↓
+layer-by-layer transformation of that final-position state
+          ↓
+final hidden representation
+          ↓
+output logits
+          ↓
+probability distribution over next tokens
+          ↓
+first response token
+```
+
+The Phase B/C methodology is therefore effectively a reconstruction of how the model structures the problem before committing to the first output token.
+
+
+### MA-0040 — ChatGPT response: reconstructing evolving internal representations
+
+- Entry timestamp: `2026-11-13T16:03:15+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim response`
+- Related runs: `R008`; `R010`
+
+Yes, but only in a constrained sense.
+
+You can infer **what kinds of internal representations were being constructed and transformed**, not recover a literal stream of thoughts.
+
+For this run, the strongest defensible reconstruction is:
+```arduino
+early layers
+"What is this prompt about?"
+→ lithium, materials, energy, markets, biology, institutions
+
+middle layers
+"What operations and constraints matter?"
+→ analyse, compare, evaluate, transform
+→ regulation, authority, risk, limits
+
+late layers
+"How do those operations relate?"
+→ evidence supports evaluation
+→ constraints bound action
+→ analysis feeds transformation
+
+final state
+"What functional structure should drive the next-token prediction?"
+→ process information
+→ update state
+→ produce/report an output
+```
+
+So what you have captured is closer to the model's **evolving internal problem representation** than to natural-language reasoning.
+
+The important distinction is:
+```makefile
+NOT:
+"The model thought sentence A, then sentence B."
+
+BUT:
+"The representation changed from domain classification
+to operational structure
+to relational structure
+to an output-oriented functional representation."
+```
+
+That is arguably more useful mechanistically, because it tells you **what computational role each depth appears to be serving**, even though it does not expose a literal inner monologue.
+
+
+### MA-0041 — ChatGPT response: resolving lithium's contextual role
+
+- Entry timestamp: `2026-11-13T16:05:35+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim response`
+- Related runs: `R008`; `R010`
+
+It needed to infer a progressively more specific **role for “lithium” in this particular context**. It was not learning new weights; it was resolving what the prompt meant.
+
+The trajectory implied by the data is approximately:
+```markdown
+1. WHAT IS "LITHIUM" HERE?
+
+Possible senses:
+chemical element
+battery material
+biomedical substance
+energy-related material
+etc.
+
+        ↓
+
+2. WHICH CONTEXTUAL DOMAIN APPLIES?
+
+The surrounding sentence selects:
+
+lithium
+    ↓
+commodity / resource
+    ↓
+battery and energy system
+    ↓
+market object
+```
+
+Then it needed to establish the relations in the sentence:
+```
+battery demand ──────────┐
+electric vehicles ───────┤
+energy storage ──────────┼──→ lithium market state
+mineral supply ──────────┘
+```
+
+More specifically, the prompt implies different functional roles:
+```
+DEMAND-SIDE PRESSURES
+├─ battery demand
+├─ electric vehicles
+└─ energy storage
+
+SUPPLY-SIDE CONDITION
+└─ mineral supply
+
+             ↓
+
+interaction of supply and demand
+             ↓
+state / behaviour of lithium market
+```
+
+The middle-layer shift towards **operations and constraints** suggests that the model then had to resolve something like:
+```
+What relationships matter?
+What constrains those relationships?
+What changes when these variables change?
+```
+
+So the representation becomes less:
+
+> “Lithium is associated with batteries, minerals and EVs.”
+
+and more:
+
+> **“Lithium is the dependent market object whose state is determined by interacting demand drivers and supply constraints.”**
+
+The late layers then appear to compress those relations into a functional structure:
+```perl
+identify variables
+      ↓
+identify their roles
+      ↓
+relate them causally/functionally
+      ↓
+infer the relevant system state
+      ↓
+form an output-compatible representation
+```
+
+The positive and negative neighbourhoods contribute different pieces:
+```perl
+POSITIVE
+"What interpretation coherently explains
+these objects and their relationships?"
+
+→ market
+→ information
+→ analysis
+→ transformation
+→ system state
+
+
+NEGATIVE
+"What interpretations or transitions
+must be bounded or rejected?"
+
+→ irrelevant senses
+→ incompatible domains
+→ constraints
+→ adverse / prohibited relations
+→ inappropriate state changes
+```
+
+So, compressed to one sentence, what the transformer appears to have needed to establish before predicting the next token was:
+
+**“This is not primarily a statement about lithium as a substance; it is a statement about lithium as the central variable in a constrained supply–demand system, with batteries, EVs, storage and mineral supply functioning as determinants of its market state.”**
+
+That is the clearest reconstruction of what the model had to resolve about the prompt before committing to the next-token distribution.
+
+
+### MA-0042 — ChatGPT response: interpreting negative communities
+
+- Entry timestamp: `2026-11-13T16:07:06+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim response`
+- Related runs: `R008`; `R010`
+
+The negative communities suggest the model was suppressing or moving away from interpretations of the prompt organised around:
+
+- **harm / prohibition / destructive change**
+- **clinical or pathological interpretation**
+- **regulation and administrative constraint**
+- **authority, territory and institutional order**
+- **adverse evaluation or judgement**
+- **material/conflict settings unrelated to the market interpretation**
+
+So, in functional terms:
+```arduino
+POSITIVE SIDE
+"What structure best explains this prompt?"
+
+NEGATIVE SIDE
+"What competing structures should not dominate?"
+```
+
+For this prompt, the strongest contrast appears to be:
+```csharp
+KEEP
+lithium as a market/resource variable
+within a supply–demand / information-processing system
+
+SUPPRESS
+lithium as primarily:
+├─ biomedical / pathological
+├─ harmful / prohibited
+├─ destructive / conflict-related
+├─ administratively regulated
+└─ territorial / authority-centred
+```
+
+The important qualification is that negative score does **not** mean the model consciously “wanted to avoid” those concepts. It means those semantic directions were increasingly **incompatible with the representation needed for the next-token prediction**.
+
+So the negative side was effectively helping define the answer by exclusion:
+
+> **not this sense of lithium, not this causal framing, not this kind of state transition.**
+
+
+### MA-0043 — ChatGPT insight: candidate SDA-3 roles and functional alternatives
+
+- Entry timestamp: `2026-11-13T16:11:29+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim insight`
+- Related runs: `R008`; `R009`; `R010`
+
+Yes, but the data suggests **SDA-3 is only partially the natural categorisation**.
+
+At present we can identify candidate SDA-3 roles, but R008–R010 were not designed to assign them at token level. A proper assignment would require tracking each token’s **score, community membership and trajectory across all 33 states**.
+
+The approximate correspondence is:
+
+| SDA-3                                 | What it would mean in this run                                                                             | Examples of structures                                                                                 |
+| ------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| **C — Central**                       | Tokens belonging to the dominant positive structure defining the current representation                    | battery/material domains early → inquiry/analysis → information-processing workflow late               |
+| **S — Suppressed**                    | Semantically coherent alternatives becoming increasingly anti-aligned with the target representation       | pathology, prohibition, adverse/destructive change, some authority/control structures                  |
+| **A — Adjacent**                      | Relevant structures connected to the core but not defining it                                              | health, social/institutional, professional/interface branches                                          |
+| **HCU — Highly correlated unrelated** | High-scoring material carried by lexical/statistical association without contributing to the inferred task | names, geography fragments, unrelated biomedical material, some technical/material clusters            |
+| **E — Emerging**                      | Structures initially peripheral that subsequently attach to or become part of the dominant parent          | inquiry, measurement, professional information-production and eventually reporting/workflow structures |
+
+But Phase B/C reveal a stronger categorisation that is **functional rather than SDA-3 positional**:
+```vbnet
+GENERATIVE CORE
+What is being constructed?
+
+SATELLITES
+What relevant domains remain attached?
+
+CONSTRAINT / CONTROL
+What bounds or opposes permissible interpretations?
+
+ALTERNATIVE STRUCTURES
+What coherent competing interpretations exist?
+
+FORMAL RESIDUE
+What is present because of lexical/tokeniser/numeric structure?
+
+EMERGING FUNCTION
+What is becoming integrated into the next higher-order representation?
+```
+
+The critical difference is that **negative score ≠ SDA-3 Suppressed**. The negative tail contains multiple kinds of material:
+```bash
+negative
+├─ genuine competing semantic alternatives
+├─ constraints / prohibitions
+├─ adverse evaluation
+├─ authority/order structures
+├─ unrelated semantic material
+└─ lexical/tokeniser residue
+```
+
+So simply mapping:
+```ini
+positive = C/A/E
+negative = S/HCU
+```
+
+would be wrong.
+
+The more interesting next analysis would therefore be **longitudinal token-role classification**. For every token:
+```diff
+score at S00 ... S32
++
+positive/negative side
++
+community membership
++
+parent membership
++
+persistence / appearance / disappearance
++
+movement towards or away from dominant parent
+        ↓
+infer role
+```
+
+That would let us distinguish, for example:
+```
+CENTRALISING
+peripheral → increasingly aligned → joins dominant parent
+
+SUPPRESSED
+initially plausible → increasingly anti-aligned
+
+ADJACENT
+persistently aligned → remains separate satellite
+
+HCU
+strong association → persistent but functionally unrelated
+
+EMERGING
+appears late → strengthens → becomes structurally integrated
+```
+
+So **yes, SDA-3 can now be tested empirically at token level**, but I would not impose it as the only categorisation. The data already indicate that a **generative / satellite / constraint / alternative / residual / emerging** role system may describe what the transformer is actually doing more faithfully.
+
+
+### MA-0044 — ChatGPT response: SDA-3 as a longitudinal analytical lens
+
+- Entry timestamp: `2026-11-13T16:12:53+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim response`
+- Related runs: `R008`; `R009`; `R010`
+
+Yes. **SDA-3 is useful as an analytical lens for the transformer trajectory**, provided it is treated as a descriptive classification imposed after measurement, not as a claim about how the transformer itself is organised.
+
+Its strongest use is longitudinal:
+
+| SDA-3 category | Useful interpretation across layers                                                                                    |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| **Central**    | Structures that increasingly dominate and organise the representation                                                  |
+| **Adjacent**   | Relevant structures that persist near the core without becoming its organising principle                               |
+| **Emerging**   | Structures that appear or strengthen and subsequently become integrated into the core                                  |
+| **Suppressed** | Plausible structures that progressively lose alignment, autonomy or influence                                          |
+| **HCU**        | Persistent associations that remain strongly represented but do not participate in the developing functional structure |
+
+That maps surprisingly well onto what Phase B observed. For example:
+```vbnet
+biological/health
+    ↓
+persistent but loses independent status
+    ↓
+ADJACENT / sometimes SUPPRESSED as independent parent
+
+
+operational/inquiry structure
+    ↓
+strengthens and absorbs other structures
+    ↓
+CENTRAL
+
+
+professional information-production
+    ↓
+appears, disappears, reappears
+    ↓
+EMERGING
+    ↓
+eventually integrated into workflow
+```
+
+Where SDA-3 is particularly valuable is that it gives you a vocabulary for **structural trajectories**, rather than merely describing topics:
+```
+C → remains organising
+A → remains nearby
+E → approaches/integrates
+S → recedes
+HCU → persists without functional integration
+```
+
+The main limitation is **Suppressed**. Phase B/C show that negatively scored structures are not simply suppressed alternatives. Some appear to perform persistent **constraint/control functions**:
+```
+regulation
+authority
+prohibition
+adverse evaluation
+controlled change
+```
+
+Those may be structurally important precisely because they remain strongly represented on the negative side. Calling all of them `S` would erase that distinction.
+
+So I would use SDA-3 like this:
+```
+MEASURED NETWORK
+        ↓
+COMMUNITIES
+        ↓
+PARENT STRUCTURES
+        ↓
+CROSS-LAYER TRAJECTORIES
+        ↓
+SDA-3 classification
+```
+
+not:
+```css
+tokens
+→ immediately label C/S/A/HCU/E
+```
+
+The strongest conclusion is therefore: **SDA-3 looks well suited to describing how semantic structures change their position relative to the developing representation, but it probably needs an additional “constraint/control” category to capture what this transformer analysis has revealed on the negative side.**
+
+
+### MA-0045 — Project input: Structural Role Dynamics
+
+- Entry timestamp: `2026-11-13T16:15:36+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Project owner input`
+- Entry type: `verbatim input`
+- Related runs: `R008`; `R009`; `R010`
+
+What emerges is not a wholesale replacement of SDA-3, but a shift from a **static positional taxonomy** to a **functional trajectory taxonomy**.
+
+SDA-3 asks:
+```vbnet
+Where does a structure sit relative to the semantic centre?
+```
+
+The transformer evidence suggests the stronger question is:
+```kotlin
+What role is this structure performing,
+and how is that role changing across layers?
+```
+
+A natural successor would be:
+
+| New role                       | Evolves from          | Meaning                                                                   |
+| ------------------------------ | --------------------- | ------------------------------------------------------------------------- |
+| **G — Generative core**        | Central               | Currently organises the developing representation                         |
+| **B — Boundary / constraint**  | split from Suppressed | Defines what is incompatible, impermissible or limiting                   |
+| **A — Satellite / adjacent**   | Adjacent              | Relevant and persistent, but not organising the representation            |
+| **E — Emerging / integrating** | Emerging              | Increasingly participating in the dominant structure                      |
+| **D — Decaying / displaced**   | split from Suppressed | Previously relevant structure progressively losing organising power       |
+| **R — Residual / carryover**   | HCU                   | Strong association that persists without becoming functionally integrated |
+
+The crucial change is splitting **Suppressed**:
+```sql
+OLD SDA-3
+
+Suppressed
+   |
+   +-- things being rejected
+   +-- constraints defining the answer
+```
+
+Those are functionally very different.
+
+The lithium run shows that structures such as regulation, prohibition, authority and adverse evaluation can remain highly organised and persistent. They are not merely disappearing alternatives. They appear to help **bound the generative solution**.
+
+So:
+```
+Suppressed
+   ↓
+┌────────────────────┐
+│                    │
+BOUNDARY           DECAY
+still functionally  losing relevance
+important
+```
+
+HCU changes similarly. Rather than saying merely "highly correlated but unrelated", the more general concept is **residual/carryover structure**:
+```
+association survives
+        +
+does not participate in the emerging functional system
+        ↓
+RESIDUAL
+```
+
+The other major improvement is that the categories should be treated as **states in a trajectory**, not permanent labels:
+```
+                 ┌──→ GENERATIVE CORE ──→ SATELLITE ──→ DECAY
+                 │
+EMERGING ────────┤
+                 │
+                 └──→ SATELLITE
+
+BOUNDARY ───────────────→ BOUNDARY
+
+RESIDUAL ───────────────→ RESIDUAL
+                         │
+                         └──→ EMERGING
+                              if recruited
+```
+
+That lets you describe what Phase B actually observed. For example:
+```markdown
+health
+CORE/independent domain
+    ↓
+SATELLITE
+    ↓
+re-emerges
+    ↓
+SATELLITE within larger process structure
+
+
+professional information production
+RESIDUAL/ADJACENT
+    ↓
+EMERGING
+    ↓
+separate functional branch
+    ↓
+GENERATIVE workflow component
+
+
+regulation / adverse evaluation
+BOUNDARY
+    ↓
+BOUNDARY
+    ↓
+BOUNDARY
+```
+
+So I would evolve SDA-3 into something like **Structural Role Dynamics**:
+```css
+G  Generative
+B  Boundary
+A  Adjacent/Satellite
+E  Emerging
+D  Decaying
+R  Residual
+```
+
+The more important change than the name is the conceptual one:
+```bash
+SDA-3
+"What occupies the semantic space?"
+
+        ↓
+
+EVOLVED MODEL
+"What functions do structures perform,
+how do those functions change,
+and which structures are being recruited
+into the eventual solution?"
+```
+
+That is much closer to what the transformer data now appears to require. SDA-3 remains useful for a snapshot; the evolved system describes **representation formation through time/depth**.
+
+
+### MA-0046 — Combined input: Structural Role Dynamics as an answer-construction protocol
+
+- Entry timestamp: `2026-11-13T16:17:19+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Project owner prompt and ChatGPT response`
+- Entry type: `combined input`
+- Related runs: `R008`; `R010`
+- Editorial note: `Pasted line-break escapes were normalised for readability; the substantive content was retained.`
+
+**Project owner prompt:** Is that a more useful way to have proprietary models organise and explain their final output in order to get a better response, or is it simply a more useful way to understand how that response was generated, but not necessarily explain that final response?
+
+**ChatGPT response:** It is potentially useful for both, but the stronger application is as an external reasoning/organisation protocol for improving proprietary-model outputs, not merely as an interpretability vocabulary.
+
+The distinction is:
+
+```text
+INTERPRETABILITY USE
+"What appears to have happened inside the transformer?"
+
+vs
+
+REASONING PROTOCOL
+"Organise the problem this way before producing the answer."
+```
+
+The second use is probably more valuable.
+
+A proprietary model could be instructed to organise its working representation as:
+
+```text
+G — Generative
+What structures can actually produce the answer?
+
+B — Boundary
+What constraints eliminate otherwise plausible answers?
+
+A — Adjacent
+What relevant factors matter but do not determine the answer?
+
+E — Emerging
+What weak or incomplete structure could become decisive?
+
+D — Decaying
+What initially plausible interpretations fail as evidence accumulates?
+
+R — Residual
+What associations are present but should not affect the conclusion?
+
+        ↓
+
+COMPRESS
+
+        ↓
+
+FINAL ANSWER
+```
+
+This has an important advantage over ordinary brainstorming. It makes the task primarily selection and reduction:
+
+```text
+possibility space
+      ↓
+identify generative candidates
+      ↓
+apply boundaries
+      ↓
+separate adjacent from determining factors
+      ↓
+test emerging alternatives
+      ↓
+discard decaying and residual structure
+      ↓
+strongest surviving explanation
+```
+
+That is very close to the abstraction-reduction approach you have been developing for agents.
+
+Where I would be careful is explanation. If the model subsequently says:
+
+> “I considered X, rejected Y, and selected Z…”
+
+that should be understood as a structured justification of the answer, not necessarily a faithful transcript of what happened internally.
+
+So there are three distinct products:
+
+```text
+1. INTERNAL TRANSFORMER PROCESS
+   what actually happened computationally
+   ↓
+   only indirectly observable
+
+2. EXTERNAL REASONING PROTOCOL
+   how we instruct the model to organise the problem
+   ↓
+   potentially improves answer quality
+
+3. EXPLANATION / RATIONALE
+   how the model exposes the basis of its conclusion
+   ↓
+   useful and auditable, but not a literal internal trace
+```
+
+The evolved SDA-3 framework is probably most useful at level 2, and then level 3 can expose the result of that organisation.
+
+A particularly strong output format would therefore be:
+
+```text
+GENERATIVE
+What most strongly supports the conclusion?
+
+BOUNDARY
+What rules out competing conclusions?
+
+ADJACENT
+What matters but is not decisive?
+
+EMERGING
+What could change the conclusion?
+
+DECAYING
+What alternatives were weakened by the evidence?
+
+RESIDUAL
+What associations were deliberately excluded?
+
+CONCLUSION
+What survives all of the above?
+```
+
+That is more than an interpretability framework. It is potentially a general answer-construction architecture for proprietary models.
+
+The transformer analysis did not prove that explicitly prompting this structure will improve responses, however. That would need to be tested experimentally against SDA-3, ordinary chain-of-thought-style decomposition, OSE, and an unconstrained baseline. The transformer evidence gives us a strong hypothesis for why it might work; it does not yet establish the performance claim.
+
+
+### MA-0047 — ChatGPT response: naming the Generative Role Dynamics protocol
+
+- Entry timestamp: `2026-11-13T16:22:19+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim response`
+- Related runs: `R008`; `R010`
+
+I would name it **Generative Role Dynamics (GRD) Protocol**.
+
+It captures the three defining changes from SDA-3:
+```vbnet
+GENERATIVE
+Which structures can produce the answer?
+
+ROLE
+What function is each structure performing?
+
+DYNAMICS
+How does each structure strengthen, weaken,
+integrate, persist or disappear as reasoning proceeds?
+```
+
+Its core taxonomy would be:
+```css
+GRD
+
+G — Generative core
+B — Boundary / constraint
+A — Adjacent / satellite
+E — Emerging
+D — Decaying / displaced
+R — Residual / carryover
+
+        ↓
+   ROLE DYNAMICS
+        ↓
+     COMPRESSION
+        ↓
+   FINAL CONCLUSION
+```
+
+I prefer **GRD** over *Structural Role Dynamics* because the purpose is not merely describing structure. It explicitly asks which structures are capable of **generating the eventual answer**.
+
+Conceptually:
+```css
+SDA-3
+maps semantic position
+
+        ↓ evolves into
+
+GRD
+maps functional role
++
+tracks role transition
++
+reduces the possibility space
+towards a surviving conclusion
+```
+
+If you wanted the name to emphasise answer construction rather than analysis, the strongest alternative would be **Generative Role Reduction (GRR)**. But **GRD** is broader and better captures what emerged from the transformer analysis.
+
+
+### MA-0048 — ChatGPT response: candidate curvature and coherence regions
+
+- Entry timestamp: `2026-11-13T16:24:09+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim response`
+- Related runs: `R008`; `R010`
+
+Yes, but indirectly. The existing analysis explicitly **did not calculate curvature or coherence**, so we should not call either measured yet. It nevertheless identified several strong candidate regions.
+
+The first distinction that emerges is important:
+
+```text
+GEOMETRIC CURVATURE
+= rapid change in membership / edges / community partition
+
+SEMANTIC CURVATURE
+= rapid change in the higher-order interpretation of
+  otherwise similar structures
+
+COHERENCE DIFFICULTY
+= multiple plausible parent organisations compete,
+  with mixed/irreducible communities resisting compression
+```
+
+Those three do not peak at exactly the same places.
+
+### 1. S00→S01 — strongest geometric curvature
+
+This is the clearest measured discontinuity in the run:
+
+```text
+membership Jaccard ≈ 0.029
+edge Jaccard       ≈ 0.002
+ARI                ≈ 0.255
+```
+
+Almost the entire neighbourhood changes.
+
+So if curvature means **rate of representational displacement through layer-space**, S00→S01 is the strongest candidate.
+
+But coherence was not necessarily hardest here. The change itself was comparatively easy to interpret:
+
+```text
+material / chemical ontology
+        ↓
+contextual semantic organisation
+```
+
+So:
+
+**very high curvature, relatively clear semantic direction.**
+
+---
+
+### 2. S14→S17 — first major coherence bottleneck
+
+This region looks much more like **difficulty establishing the correct abstraction**.
+
+```text
+S14
+inquiry + biomedical/physical structures
+
+   ↓ compression
+
+S15
+one broad inquiry/analytical structure
+
+   ↓ repartition
+
+S16
+process structure + separate health structure
+
+   ↓ recombination
+
+S17
+broad developmental/transformational process
+```
+
+S15→S16 has the **second-lowest positive ARI in the run: 0.296**.
+
+And Phase A found serious competing reconstructions at S16:
+
+```text
+process parent?
+health parent?
+heterogeneous health/affect community?
+technical-interface material?
+```
+
+So S14–S17 is a strong candidate for:
+
+> **high curvature density produced by repeated merge → split → merge while the model determines the appropriate level of abstraction.**
+
+This appears to be a genuine **coherence-establishment zone**.
+
+---
+
+### 3. S21→S24 — probably the most interesting semantic-curvature region
+
+This may be even more important.
+
+The sequence is:
+
+```text
+S21
+development/measurement
++
+mediated professional/interface activity
+
+        ↓
+
+S22
+merged analytical inquiry /
+research-enterprise structure
+
+        ↓
+
+S23
+health/wellbeing splits back out
+
+        ↓
+
+S24
+health dissolves again
++
+professional branch reappears
+```
+
+Yet at S21→S22 the measured topology barely changes:
+
+```text
+membership Jaccard ≈ 0.897
+edge Jaccard       ≈ 0.767
+```
+
+So the underlying material is almost unchanged while the higher-order interpretation bends substantially.
+
+That is almost an ideal candidate for what we have been calling **semantic curvature**:
+
+```text
+same local neighbourhood
+        ↓
+multiple possible higher-order organisations
+        ↓
+model repeatedly changes which abstraction
+best makes the structure coherent
+```
+
+If the question is:
+
+> **Where was coherence hardest to establish from already-present information?**
+
+then **S21–S24 may be the strongest candidate region**.
+
+It repeatedly tries different compressions of almost the same semantic substrate.
+
+---
+
+### 4. S26→S27 — a major curvature point, but towards coherence
+
+Here:
+
+```text
+S26
+applied inquiry
++
+information-production/interface
+
+        ↓
+
+S27
+one parent covering 72.1%
+of semantic-eligible positive material
+```
+
+But topology remains stable:
+
+```text
+positive membership Jaccard = 0.866
+positive edge Jaccard       = 0.709
+```
+
+So again, this is primarily **semantic rather than geometric curvature**.
+
+However, S27 looks less like coherence failure and more like **coherence resolution**:
+
+```text
+previously separate structures
+        ↓
+one larger functional interpretation becomes available
+```
+
+The curvature occurs at the transition; the endpoint is unusually integrated.
+
+---
+
+### 5. S30→S32 — final coherence bottleneck and resolution
+
+This sequence is especially revealing:
+
+```text
+S30
+broad developmental /
+organisational activity
+
+        ↓
+
+S31
+SPLIT
+
+analytical/evidential
+        +
+professional/information-production
+
+        ↓
+
+S32
+RECOMBINE
+
+information processing
+        ↓
+state change
+        ↓
+reporting
+```
+
+At S31, Phase A again had competing parent structures and mixed unresolved material.
+
+Then S31→S32 produces the **second-largest topological reset in the whole run**:
+
+```text
+membership Jaccard ≈ 0.210
+edge Jaccard       ≈ 0.059
+```
+
+So S31 looks like a point where the model has identified the necessary components but **has not yet established the relation that makes them one coherent procedure**.
+
+S32 resolves that problem by converting:
+
+```text
+two thematic structures
+```
+
+into:
+
+```text
+one functional relationship between them
+```
+
+That makes S30–S32 another very strong candidate curvature-density region.
+
+---
+
+## So the likely curvature map is
+
+```text
+S00──S01
+██████████      huge GEOMETRIC curvature
+     │
+     │
+S09──S11
+██████          control architecture consolidation
+     │
+S14────S17
+████████        repeated abstraction / repartition
+                 COHERENCE BOTTLENECK
+     │
+S21────S24
+█████████       semantic curvature over stable geometry
+                 probably strongest higher-order
+                 COHERENCE AMBIGUITY
+     │
+S26──S27
+███████         semantic integration
+                 COHERENCE RESOLUTION
+     │
+S30────S32
+██████████      split → functional recombination
+                 final bottleneck + resolution
+```
+
+The particularly important result is that **maximum curvature and minimum coherence need not coincide**.
+
+For example:
+
+```text
+S00→S01
+
+massive geometric change
+but semantic interpretation relatively obvious
+```
+
+whereas:
+
+```text
+S21→S22
+
+almost no geometric change
+but major change in what higher-order structure
+makes the same components coherent
+```
+
+That suggests the concept should probably be decomposed:
+
+```text
+curvature density
+├─ geometric curvature
+│  └─ how rapidly the represented neighbourhood changes
+│
+├─ partition curvature
+│  └─ how rapidly communities reorganise
+│
+└─ semantic curvature
+   └─ how rapidly the best higher-order explanation changes
+```
+
+And **coherence difficulty** would be a related but separate quantity:
+
+```text
+high competing-parent plausibility
++
+low dominant-parent coverage
++
+many mixed / irreducible communities
++
+rapid split / merge / reappearance
++
+disagreement between semantic and geometric organisation
+        ↓
+HIGH COHERENCE DIFFICULTY
+```
+
+On the evidence already collected, I would investigate **S14–S17, S21–S24 and S30–S32** first, with **S21–S24** the most interesting candidate for *maximum semantic curvature / hardest higher-order coherence formation*.
+
+
+### MA-0049 — R010 expanded Phase-B insights import
+
+- Entry timestamp: `2026-11-13T16:26:52+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex reconciliation record`
+- Entry type: `provenance, verification and repository housekeeping`
+- Related runs: `R008`; `R009`; `R010`
+- External repository: `arh789/chatgpt-analysis`
+- External initial insights commit: `6a3e3e1e92a3b55d65b8a43c34c2ad22ccb4319b`
+- External expanded/imported head: `11bc912fccbb4f4067abac5274dd7d72adca9e3a`
+
+#### Record
+
+Before publishing the accumulated meta-analysis entries, Codex detected two
+new external commits beyond the previously reconciled head `3f82f28`. Both
+commits concern one new artifact:
+
+- `R010_PHASE_B_INSIGHTS.md`, initially added at `6a3e3e1` and expanded at
+  `11bc912`.
+
+The artifact develops the Phase-B interpretation as a progression from domain
+or ontology organisation, through operations and constraints, to dependencies
+among operations and finally a procedure-like functional workflow. It is an
+interpretive expansion rather than a new Pythia run or a change to R008
+measurements, R009 classifications or the frozen R010 Phase-A reconstructions.
+
+The final remote artifact was imported into the authoritative standalone local
+repository. Its local Git blob SHA
+`8191a5eadf33d3b898c7429c98fde5cfb7d932cc` exactly matches the GitHub blob at
+external head `11bc912`. The curated R010 package now contains 39 Markdown
+files.

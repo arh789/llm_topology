@@ -241,14 +241,18 @@ infers cross-state correspondence families and a non-monotonic trajectory: the
 positive side remains plastic around an increasingly abstract
 operational/inquiry/process spine, while the negative side stabilises earlier
 around control/characterisation/adverse change and authority/territorial order.
+The later
+[`R010_PHASE_B_INSIGHTS.md`](runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_B_INSIGHTS.md)
+expands that interpretation as a progression from ontology through operators
+and functional dependencies to a final procedure-like organisation.
 
 Phase C's
 [`R010_PHASE_C_SEMANTIC_TOPOLOGY_COMPARISON.md`](runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_C_SEMANTIC_TOPOLOGY_COMPARISON.md)
 compares that semantic trajectory with R008's measured topology. It identifies
 global resets, community re-partitioning and semantic abstraction over stable
 geometry. The comparison does not assign SDA-3 roles, select an optimal layer
-or infer curvature/coherence. The complete 38-file package was imported
-byte-for-byte from private `chatgpt-analysis` head `3f82f28`.
+or infer curvature/coherence. The complete 39-file package was imported
+byte-for-byte from private `chatgpt-analysis` head `11bc912`.
 
 ## Run outputs
 
