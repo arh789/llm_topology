@@ -3,370 +3,71 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>R013 Run Analysis and Recommendations</title>
+<title>R013 Semantic Synthesis</title>
 <style>
 body{margin:0;background:#111;color:#eee;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 main{max-width:1100px;margin:0 auto;padding:32px 24px 64px}
 pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;font-size:14px}
 </style>
 </head>
-<body><main><pre>R013 provides the first clean six-permutation test of the project's central semantic-invariance hypothesis. It removes R012's synthesis question and assistant-prefix capture, keeps the same Qwen2.5-7B-Instruct model and topology machinery, and measures the same three concepts through a fixed newline anchor.
+<body><main><pre>R013 answers the semantic question more cleanly than R012 because the same three concepts were measured in all six orders without the synthesis instruction or assistant-generation prefix.
 
-# R013 Semantic-Topology Analysis and Implications
+# R013 Semantic Synthesis
 
-## 1. What R013 was actually for
+## 1. Central result
 
-R012 established that higher-order semantic parents appeared more stable than exact token neighbourhoods and community partitions under one controlled order perturbation.
+Across all six permutations, the model repeatedly reconstructs the same broad semantic architecture even though the exact tokens, graph edges and community boundaries change substantially with concept order.
 
-But R012 also exposed two confounds:
+The most stable higher-order structure is:
 
 ```text
-semantic concepts
+POSITIVE-ALIGNED STRUCTURE
+
+SENSORY / MATERIAL / TECHNICAL
+              ↕
+PLACE / ENVIRONMENT
+              ↕
+STRUCTURAL / MEASUREMENT
+
+
+NEGATIVE-ALIGNED STRUCTURE
+
+SOCIAL / ACTIVITY / INSTITUTIONAL
+              ↕
+TRANSFORMATION / INTERACTION
+              ↕
+STRUCTURAL / CATEGORICAL
+```
+
+The central finding is therefore not that the model discovers one named topic.
+
+It is that the three concepts repeatedly decompose into a small set of higher-order semantic parents and relations that survive concept reordering much better than their exact lexical and network realisation.
+
+A compact description is:
+
+&gt; A situated sensory-material field organised spatially and structurally, accompanied by a social/activity field whose organisation is relational and dynamic.
+
+---
+
+# 2. What happened to the three original concepts
+
+The concepts do not remain intact.
+
+They decompose.
+
+## Electro pink
+
+The strongest descendants are:
+
+```text
+electronic / technical
 +
-"What structure forms from" instruction
+chromatic
 +
-chat template
+sensory
 +
-assistant-generation prefix
+material
 ```
-
-R013 therefore changed the experimental input while preserving the measured topology pipeline.
-
-The concepts remained:
-
-```text
-A = electro pink
-B = curvature density
-C = Tokyo nightlife
-```
-
-All six possible permutations were measured:
-
-```text
-ABC
-ACB
-BAC
-BCA
-CAB
-CBA
-```
-
-Each concept occupied one line and every prompt ended in the same single-token newline anchor.
-
-The primary question became:
-
-&gt; Which higher-order semantic structures survive every ordering of the same concepts when no explicit synthesis instruction is supplied?
-
-R013 does not prove that an order-invariant structure must exist. A null invariant core would also have been a valid result.
-
----
-
-## 2. Technical completion and experimental control
-
-R013 used the same primary model as R012:
-
-```text
-Qwen/Qwen2.5-7B-Instruct
-revision a09a35458c702b33eeacc393d103063234e8bc28
-BF16
-Hugging Face Transformers
-RTX 4090
-```
-
-The fixed capture anchor was:
-
-```text
-newline
-token ID 198
-token Ċ
-capture index 11
-```
-
-All six raw inputs tokenised to exactly 12 tokens.
-
-The anchor probe passed every required control:
-
-```text
-same anchor token
-same capture rule
-same token count
-same State 00 vector
-deterministic replay exact
-all states finite
-no response generation
-```
-
-State 00 was exactly identical across all six permutations.
-
-Therefore every later difference arises only after contextual processing.
-
----
-
-## 3. Measurement coverage
-
-R013 produced:
-
-```text
-6 permutations
-× 29 states
-× 2 sides
-=
-348 networks
-```
-
-The completed evidence contains:
-
-```text
-2,465,642 selected token memberships
-24,656,420 directed exact 10-NN edges
-3,654 state-local communities
-336 adjacent-state comparisons
-870 matched-state permutation-pair comparisons
-770,924 item-level token-support rows
-8,210,395 item-level edge-support rows
-```
-
-The R012 downstream measurement method was retained:
-
-```text
-hidden state
-    ↓
-cosine projection into fixed input-embedding vocabulary
-    ↓
-R004 full-curve positive / negative elbow
-    ↓
-exact 10-nearest-neighbour graph
-    ↓
-deterministic Louvain communities
-    ↓
-cross-layer and cross-permutation comparison
-```
-
-No new graph, cutoff or community algorithm was introduced.
-
----
-
-# 4. The strongest measured result: final-position dominance
-
-The complete six-permutation design reveals a structural effect that R012 could not isolate.
-
-Pairs sharing the same final concept are substantially more similar than pairs sharing the first concept, the middle concept, or no fixed position.
-
-This occurs in:
-
-```text
-hidden-state cosine
-token membership
-edge structure
-community partition
-```
-
-and it occurs at every post-context state.
-
-Across S01-S28, the mean same-last comparison exceeded the mean of the other permutation relationships at:
-
-```text
-28 / 28 states for membership Jaccard
-28 / 28 states for edge Jaccard
-28 / 28 states for community ARI
-```
-
-The minimum same-last advantage at any state was still approximately:
-
-```text
-membership Jaccard +0.080
-edge Jaccard       +0.102
-community ARI      +0.006
-```
-
-The effect is strongest in the early and middle transformer.
-
-For example, across S10-S18 on the positive side:
-
-```text
-same final concept:
-membership ≈ 0.591
-edge       ≈ 0.350
-ARI        ≈ 0.423
-
-no fixed position:
-membership ≈ 0.386
-edge       ≈ 0.169
-ARI        ≈ 0.390
-```
-
-The negative side shows nearly the same membership and edge pattern.
-
-This should be interpreted as a strong:
-
-&gt; final-position / anchor-proximity / recency association
-
-rather than as an independently identified causal recency effect.
-
-The final concept is immediately adjacent to the neutral anchor in a causal transformer. R013 removes the identity confound of measuring a concept token directly, but it does not remove sequential positional asymmetry.
-
-The six-permutation design is valuable precisely because it lets the order-invariant core be identified despite this effect.
-
----
-
-# 5. Order divergence has a clear trajectory
-
-Cross-permutation invariance falls rapidly after contextual processing begins.
-
-The six-way invariant core reaches its minimum around State 09.
-
-Selected states show:
-
-```text
-                 positive                 negative
-            token  edge              token  edge
-S01         0.524  0.258             0.507  0.238
-S09         0.126  0.019             0.134  0.022
-S27         0.244  0.060             0.241  0.059
-S28         0.445  0.175             0.428  0.164
-```
-
-Thus the representation passes through an order-sensitive bottleneck:
-
-```text
-COMMON ANCHOR
-      ↓
-rapid contextual differentiation
-      ↓
-MAXIMUM ORDER DIVERGENCE
-around S09
-      ↓
-gradual reconvergence
-      ↓
-late transformer consolidation
-      ↓
-terminal recoding / convergence
-```
-
-The minimum average cross-permutation hidden-state cosine also occurs around State 09.
-
-The most divergent measured pair is:
-
-```text
-BAC versus CAB
-State 09
-positive_head
-
-membership Jaccard = 0.320201
-edge Jaccard       = 0.125235
-community ARI      = 0.312774
-hidden cosine      = 0.791842
-```
-
-This is important because BAC and CAB both place electro pink in the middle. They differ by exchanging curvature density and Tokyo nightlife between first and final positions.
-
-The maximum divergence therefore aligns strongly with the final-position effect.
-
----
-
-# 6. Within-trajectory development is not the same as cross-permutation divergence
-
-The largest within-permutation layer resets are:
-
-```text
-S00 → S01
-context first enters the fixed anchor
-
-S27 → S28
-final normalisation recodes the last block representation
-```
-
-Inside the transformer, adjacent-state topology generally becomes more stable through depth.
-
-Average adjacent-state membership Jaccard rises from roughly:
-
-```text
-S07 → S08   ≈ 0.428
-S10 → S11   ≈ 0.495
-S16 → S17   ≈ 0.599
-S24 → S25   ≈ 0.674
-S25 → S26   ≈ 0.698
-```
-
-Therefore the strong cross-permutation divergence around S09 is not simply a consequence of every trajectory becoming locally unstable.
-
-The trajectories are becoming internally organised while simultaneously becoming different from one another.
-
-This is consistent with:
-
-```text
-same concepts
-+
-different order
-        ↓
-different route through semantic organisation
-```
-
-rather than random representational noise.
-
----
-
-# 7. Developmental epochs
-
-The most defensible R013 progression is:
-
-```text
-S00
-FIXED ANCHOR
-│
-▼
-S01-S03
-BROAD CONTEXT ACQUISITION
-│
-│ sensory, place, social, transformation,
-│ representation and formal material all activate
-▼
-S04-S09
-ORDER-CONDITIONED DECOMPOSITION
-│
-│ permutation differences expand;
-│ concept-derived fields separate;
-│ six-way invariance reaches its minimum
-▼
-S10-S18
-SECTOR DIFFERENTIATION / RELATIONAL STABILISATION
-│
-│ positive sensory-place organisation persists;
-│ negative social-transform / structural organisation persists;
-│ exact token topology remains order-sensitive
-▼
-S19-S23
-SEMANTIC COMPRESSION
-│
-│ positive topology simplifies towards sensory/place;
-│ negative topology remains social/relational;
-│ cross-permutation overlap begins recovering
-▼
-S24-S27
-LATE REINTEGRATION
-│
-│ transformation and representation re-enter
-│ positive communities;
-│ invariant membership continues recovering
-▼
-S28
-POST-NORMALISATION RECODING
-│
-└── stronger cross-permutation convergence
-    but not another transformer reasoning step
-```
-
-This differs from R012 in an important way.
-
-R012's instruction-bearing representation produced a more continuously explicit transformation / composition lineage.
-
-R013 instead shows a long middle region in which sensory/place structure and social/relational structure are more autonomous.
-
----
-
-# 8. Higher-order parent A: sensory / material / technical structure
-
-This is the most stable positive-side parent.
 
 Recurring evidence includes:
 
@@ -376,10 +77,10 @@ sensor
 sensors
 electrodes
 pink
+colour / color
 brown
 green
 orange
-colour / color
 glass
 silicone
 optical
@@ -389,89 +90,37 @@ smartphone
 microphone
 ```
 
-Representative communities repeatedly combine sensory and physical objects.
+Unlike R012, pink itself now survives repeatedly among community representatives.
 
-Examples include:
+The most defensible higher-order parent is:
 
-```text
-sensor + laser + pumps + granite + apartment + cracks
+&gt; sensory / material / technical character.
 
-laser + sensors + questionnaire + apartment + chemotherapy
-
-sensor + laser + kitchen + distributor + batteries
-
-laser + electrodes + brown + read / image-related material
-```
-
-Across the six transformer trajectories, sensory/material evidence occurs on the positive side in roughly 23-27 of the 27 transformer-block states per permutation and essentially never appears as a comparable negative-side lineage in the inspected community summaries.
-
-This makes it the cleanest sector-specific semantic parent in R013.
-
-It is also the strongest surviving descendant of electro pink.
+This parent is strongly concentrated on the positive side.
 
 ---
 
-# 9. Higher-order parent B: spatial / environmental / place structure
+## Curvature density
 
-A second persistent positive lineage contains:
+The literal words curvature and density do not persist prominently among the recorded community representatives.
 
-```text
-apartment
-kitchen
-street
-shop
-city / cities
-region
-country
-Japan
-Bronx
-Stuttgart
-Sacramento
-Montreal
-Pakistan
-Rome
-China
-suburban / downtown
-```
-
-This is broader than a literal Tokyo parent.
-
-The stable abstraction is:
-
-&gt; spatially situated environment / place.
-
-It frequently co-occurs with the sensory/material field.
-
-The strongest recurring positive parent relation in the community evidence is therefore:
+Instead the concept decomposes into:
 
 ```text
-SENSORY / MATERIAL
-        ↕
-PLACE / ENVIRONMENT
-```
-
-This relationship persists even when exact tokens and graph edges change substantially.
-
-Late-state examples combine:
-
-```text
-laser / sensors
+spatial organisation
 +
-kitchen / apartment / shopping / city-place vocabulary
+measurement
++
+parameterisation
++
+field / structural relations
 ```
-
-rather than retaining the original concepts as isolated phrases.
-
----
-
-# 10. Higher-order parent C: structural / measurement organisation
-
-R013 makes a structural parent more explicit than R012.
 
 Recurring evidence includes:
 
 ```text
-area / areas
+area
+areas
 line
 field
 space
@@ -488,159 +137,284 @@ control
 direction
 ```
 
-Literal curvature and density do not survive prominently among the recorded community representatives/extreme tokens.
+The appropriate parent is therefore:
 
-Instead their contribution is better reconstructed as:
+&gt; structural / measurement organisation.
 
-```text
-spatial organisation
-+
-measurement
-+
-field / area structure
-+
-parameterisation
-```
-
-This parent appears in both positive and negative sectors.
-
-That is important: curvature density does not reduce to one aligned topic. It contributes a structural relation that can organise either the selected positive neighbourhood or the anti-aligned contextual neighbourhood.
-
-When curvature density occupies the final concept position, structural/measurement material becomes especially prominent through parts of the middle transformer, although the effect is not uniform enough to treat this as a pure causal position estimate.
+Unlike sensory/material, this structure is not confined to one cosine sector. It contributes to both positive and negative organisation.
 
 ---
 
-# 11. Higher-order parent D: social / activity / institutional structure
+## Tokyo nightlife
 
-The strongest persistent negative-side semantic parent contains:
+Tokyo nightlife splits most clearly.
+
+It produces two different parent structures:
 
 ```text
-Clubs
-Activities
-groups
-team
-FIFA
-tennis
-sports
-exhibitions
-sessions
-participants
-contractors
-employees
-communities
-weddings
-relationships
+TOKYO NIGHTLIFE
+│
+├─ PLACE / ENVIRONMENT
+│      mostly positive
+│
+└─ SOCIAL / ACTIVITY
+       mostly negative
 ```
 
-From approximately the early-middle transformer onward this parent is present in nearly every negative-side trajectory.
-
-Examples include communities organised around:
+The place branch contains:
 
 ```text
-clubs + exhibitions + activities + sessions + communities
+Japan
+cities
+streets
+urban places
+shops
+apartments
+kitchens
+regions
+countries
+Bronx
+Stuttgart
+Sacramento
+Montreal
+Pakistan
+Rome
+China
+```
+
+The social/activity branch contains:
+
+```text
+clubs
+activities
+groups
+teams
+sessions
+exhibitions
+participants
+sports
+tennis
+FIFA
+relationships
+communities
+```
+
+This is one of the strongest semantic findings in R013.
+
+A single input concept is not represented as one parent. Its spatial and social components separate and occupy different parts of the measured topology.
+
+---
+
+# 3. The positive semantic system
+
+The positive side is dominated by a persistent relationship between:
+
+```text
+SENSORY / MATERIAL
+        ↕
+PLACE / ENVIRONMENT
+```
+
+This relation appears throughout the run in many different local forms.
+
+Examples include communities combining:
+
+```text
+sensor + laser + apartment + granite + cracks
+
+laser + kitchen + distributors + batteries
+
+sensors + brown + glass + shopping / city material
+
+electrodes + laser + technical objects + place names
+```
+
+The meaning is not merely colour or electronics.
+
+The model repeatedly constructs something closer to:
+
+&gt; sensory and technical properties situated within a physical or urban environment.
+
+Structural / measurement material frequently attaches to this pair:
+
+```text
+SENSORY / MATERIAL
+        ↕
+PLACE / ENVIRONMENT
+        ↕
+STRUCTURAL / MEASUREMENT
+```
+
+This is the strongest candidate for the positive-side semantic invariant.
+
+---
+
+# 4. The negative semantic system
+
+The negative side is not a collection of suppressed concepts.
+
+It contains coherent organisation.
+
+Its dominant semantic structure is:
+
+```text
+SOCIAL / ACTIVITY
+        ↕
+TRANSFORMATION / INTERACTION
+```
+
+and frequently:
+
+```text
+STRUCTURAL / CATEGORICAL
+        ↕
+SOCIAL / ACTIVITY
+```
+
+Recurring communities include:
+
+```text
+clubs + exhibitions + activities + sessions
 
 tennis + FIFA + sports + rivalry
 
 groups + teams + areas + activities
 
-participants + contractors + employees
+interactions + transformations + distributions + comparisons
+
+relationships + manipulation + fragmentation + change
 ```
 
-This should not be called suppression.
+The appropriate interpretation is:
 
-The measured meaning remains:
+&gt; a social/activity field organised through interactions, transformations and categorical relations.
 
-&gt; coherent social/activity structure lying in the negative cosine sector relative to the evolving anchor representation.
+This is especially important because it explains why Tokyo nightlife does not reduce to a place parent.
 
-This lineage is a major descendant of Tokyo nightlife.
+Its social component forms a distinct relational structure.
+
+Negative cosine remains geometric anti-alignment with the anchor state, not suppression.
 
 ---
 
-# 12. Higher-order parent E: transformation / interaction / distribution
+# 5. The structural / measurement parent links both sectors
 
-Another strong negative-side lineage contains:
+Curvature density contributes something different from the other two concepts.
 
-```text
-transformations
-interactions
-interact
-relationships
-comparisons
-distribution / distributions
-fragmentation
-manipulation
-change
-disruption
-process / processes
-```
-
-This parent is especially clear in the middle and terminal negative topology.
-
-For example, State 28 repeatedly contains large negative communities organised around:
+Its descendants repeatedly appear as:
 
 ```text
-strengthened
-surveys
-interactions
-transformations
-dissemination
-Distribution
-comparisons
-fragmentation
-manipulation
+area
+line
+field
+space
+size
+number
+factor
+parameters
+measurement
+statistical
+weighting
+geometry
+polygon
 ```
 
-The important R012 comparison is that transformation/composition was one of R012's strongest positive semantic parents.
+This material does not remain one isolated topic.
 
-R013 does not reproduce that trajectory in the same form.
+Instead it operates as an organising relation.
 
-Transformation remains real, but it becomes:
+On the positive side it helps organise:
+
+```text
+sensory / material
++
+place / environment
+```
+
+On the negative side it helps organise:
+
+```text
+social / activity
++
+categorical / relational structure
+```
+
+This makes structural / measurement organisation the closest thing R013 has to a cross-sector parent.
+
+---
+
+# 6. Transformation remains real, but R012 overstated its centrality
+
+R012 reconstructed a strong positive parent around:
+
+```text
+transformation
+composition
+form
+altering
+constructing
+```
+
+R013 changes that interpretation.
+
+Transformation still appears repeatedly, but it is:
 
 ```text
 less continuously positive
-more relational
-more negative-side
 more phase-dependent
+more relational
+more strongly represented on the negative side
 ```
 
-This strongly supports the R012 concern that the instruction:
+In the middle and late negative topology, recurring evidence includes:
 
 ```text
-"What structure forms from ..."
+transformations
+interactions
+distribution
+distributions
+fragmentation
+manipulation
+comparisons
+change
+disruption
+process
 ```
 
-was contributing to the earlier transformation/form/composition lineage.
+This means the R012 transformation parent was not imaginary.
 
-The R012 parent was not wholly artificial, because transformation reappears in R013. But its strength and role were partly instruction-induced.
+But its apparent dominance was partly produced by the instruction:
+
+```text
+What structure forms from ...
+```
+
+R013 removes that instruction and reveals a different organisation.
+
+Transformation becomes a relation inside the semantic system rather than the universal parent of the whole system.
 
 ---
 
-# 13. Higher-order parent F: representation / operation
+# 7. Representation / information is also less central than R012 suggested
 
-A representation/operation lineage remains present, but it is less continuously dominant than in R012.
-
-Evidence includes:
+R012 contained a persistent parent around:
 
 ```text
 information
-data
 report
 image
-read
-write
-input
+data
 text
-word
-language
 system
-state
-question
-answer
+classification
+representation
 ```
 
-It is visible early, weakens substantially through much of the middle transformer, then becomes strong again near S27-S28.
+R013 still contains this material, but its trajectory changes.
 
-At State 28 the positive side repeatedly contains communities such as:
+It is visible early, becomes much less dominant through the middle transformer, then becomes strong again near S27-S28.
+
+Late positive communities include:
 
 ```text
 text
@@ -656,7 +430,7 @@ service
 country
 ```
 
-and action-oriented vocabulary such as:
+and action-oriented material such as:
 
 ```text
 set
@@ -670,143 +444,225 @@ answer
 write
 ```
 
-This suggests that R012's persistent representation/information parent was also partly amplified by measuring an assistant-generation prefix.
+The better interpretation is:
 
-R013 instead shows representation as:
+&gt; representation / operation is an early contextual coordinate and a late output-facing organisation, not a continuously dominant semantic parent.
 
-&gt; an early contextual coordinate and a late output-facing organisation,
-
-rather than a continuously dominant semantic parent.
+This supports the conclusion that R012's assistant-prefix measurement was contributing response-preparation structure.
 
 ---
 
-# 14. What happened to the original concepts
+# 8. How the semantic structure develops through the transformer
 
-## Electro pink
+The six trajectories support the following developmental sequence.
 
-R013 provides clearer evidence for this concept than R012.
+## S01-S03 — broad context acquisition
 
-Unlike R012, pink itself appears repeatedly among community representatives/extreme tokens.
+The anchor begins incorporating all three concepts.
 
-Other recurring descendants include:
-
-```text
-laser
-sensor
-electrodes
-colour / color
-brown
-green
-orange
-glass
-silicone
-optical
-wave
-```
-
-The defensible decomposition is:
+The representation activates:
 
 ```text
-electronic / technical
-+
-chromatic
-+
-sensory
-+
-material
+sensory / technical
+place
+social activity
+structural relations
+transformation
+representation
 ```
 
-This is the most directly recoverable concept-derived parent.
+The parent inventory is broad and weakly differentiated.
+
+Order already matters, but most semantic families are still simultaneously active.
 
 ---
 
-## Curvature density
+## S04-S09 — decomposition and maximum order divergence
 
-The literal terms curvature and density are not prominent in the inspected community representatives/extreme tokens.
+The original phrases stop behaving like intact units.
 
-Their recurrent descendants are more abstract:
-
-```text
-area
-line
-field
-space
-size
-parameters
-measurement
-statistical
-weighting
-geometry
-polygon
-number
-factor
-```
-
-The concept therefore appears to decompose into:
+Their components separate.
 
 ```text
-structural organisation
-+
-measurement / parameterisation
-+
-spatial field relations
+electro pink
+→ sensory / material / technical
+
+curvature density
+→ structural / measurement
+
+Tokyo nightlife
+→ place
+  +
+  social / activity
 ```
 
-rather than remaining a literal geometry phrase.
+Cross-permutation similarity falls sharply.
+
+State 09 is the strongest divergence point.
+
+This is not semantic collapse.
+
+It is the point at which different concept orders produce the most different local organisations of broadly similar semantic material.
 
 ---
 
-## Tokyo nightlife
+## S10-S18 — sector differentiation
 
-Tokyo and nightlife do not persist prominently as literal representatives.
+The semantic system becomes more clearly divided.
 
-Instead the concept divides into two higher-order branches:
+Positive topology increasingly favours:
 
 ```text
-PLACE / ENVIRONMENT
-positive-dominant
-
-Japan
-cities
-streets
-urban places
-shops
-apartments
-named locations
-
-        +
-
-SOCIAL / ACTIVITY
-negative-dominant
-
-clubs
-activities
-groups
-teams
-sessions
-exhibitions
-sports / social gatherings
+sensory / material
++
+place / environment
 ```
 
-This split is one of R013's clearest semantic results.
+Negative topology increasingly favours:
 
-A single input concept can therefore contribute different semantic components to different cosine sectors.
+```text
+social / activity
++
+transformation / interaction
++
+structural / categorical
+```
+
+Exact token and community topology remains strongly order-sensitive, but the higher-order parent inventory is becoming clearer.
 
 ---
 
-# 15. The strongest divergence still preserves higher-order meaning
+## S19-S23 — semantic compression
 
-The BAC versus CAB State-09 comparison is the best adversarial test.
+The positive side simplifies around sensory/place organisation.
 
-Measured topology differs drastically:
+The negative side retains social/relational organisation.
+
+Exact network overlap remains modest, but the number of defensible parent families required to explain the communities decreases.
+
+The representation is becoming easier to describe semantically even while exact topology remains plastic.
+
+---
+
+## S24-S27 — late reintegration
+
+Transformation, representation and structural organisation re-enter the positive topology more clearly.
+
+The broad parent architecture converges across permutations.
+
+The final transformer block therefore contains a more integrated system than the mid-transformer states.
+
+S27 is the correct endpoint for transformer-computed semantic organisation.
+
+---
+
+## S28 — output-facing recoding
+
+S28 is not another transformer layer.
+
+It is post-normalisation.
+
+It performs a very large vocabulary-space recoding while simultaneously making the six permutations more similar again.
+
+Its positive topology becomes strongly representation/operation-oriented.
+
+Its negative topology becomes strongly interaction/distribution-oriented.
+
+S28 is therefore useful as an output-facing representation, but it should not be read as another reasoning step.
+
+---
+
+# 9. Order changes emphasis more than architecture
+
+The six permutations produce very different exact token networks.
+
+But they do not usually produce entirely different semantic worlds.
+
+Order changes:
 
 ```text
-membership Jaccard 0.320
-edge Jaccard       0.125
-ARI                0.313
+which parent dominates
+which communities combine
+which structures remain autonomous
+which relations become explicit
+which parent absorbs a mixed community
+how strongly each concept-derived branch is expressed
 ```
 
-Yet underlying communities on both sides still recover broadly similar parent families.
+What order does not usually change is the broad inventory of higher-order parents.
+
+The dominant result is therefore:
+
+```text
+ORDER
+    ↓
+changes semantic emphasis
+and compression
+
+more than
+
+ORDER
+    ↓
+changes the fundamental
+parent architecture
+```
+
+This is the key semantic interpretation of the permutation experiment.
+
+---
+
+# 10. Final position is the strongest positional influence
+
+Pairs sharing the same final concept are consistently more similar than pairs sharing the first or middle concept.
+
+This holds through the entire post-context trajectory.
+
+The final concept therefore strongly biases:
+
+```text
+token selection
+edge structure
+community organisation
+parent prominence
+```
+
+But it does not erase the invariant parent architecture.
+
+This makes the surviving semantic structure more informative.
+
+It survives despite a strong positional bias.
+
+The appropriate interpretation is:
+
+&gt; concept order changes the route and emphasis of semantic organisation, while a smaller higher-order architecture remains recoverable beneath those changes.
+
+---
+
+# 11. The strongest adversarial test: BAC versus CAB at S09
+
+The most divergent pair is:
+
+```text
+BAC
+curvature density
+electro pink
+Tokyo nightlife
+
+CAB
+Tokyo nightlife
+electro pink
+curvature density
+```
+
+At S09 their measured topology differs sharply:
+
+```text
+membership Jaccard = 0.320
+edge Jaccard       = 0.125
+community ARI      = 0.313
+```
+
+Yet underlying community inspection still recovers broadly similar semantic parents.
 
 BAC positive contains:
 
@@ -817,8 +673,8 @@ apartment
 report
 sensor
 smartphone
-place names
 colour
+place names
 ```
 
 CAB positive contains:
@@ -830,10 +686,10 @@ batteries
 optical / statistical material
 sensor
 country / location material
-portfolio / word material
+word / portfolio material
 ```
 
-Their exact communities are very different, but both remain compressible into:
+Both still compress into:
 
 ```text
 sensory / technical
@@ -842,168 +698,38 @@ structural / measurement
 representation
 ```
 
-The negative sides likewise retain:
+Their negative sides likewise retain:
 
 ```text
 social / activity
 comparison / transformation
-structural / area
+structural / categorical
 formal substrate
 ```
 
-Therefore the strongest measured network divergence does not produce an equally strong semantic-parent divergence.
+This is the strongest evidence in R013 that:
 
-This is direct evidence for:
-
-&gt; parent identity being more stable than exact neighbourhood topology.
+&gt; exact topology can diverge severely while higher-order semantic parent structure remains recognisably similar.
 
 ---
 
-# 16. Community identity remains highly plastic
+# 12. What actually survives all six permutations
 
-R013 does not show that communities themselves become invariant.
+The exact invariant core is relatively small by the final transformer block.
 
-Even pairs sharing the same final concept retain only moderate community ARI.
-
-For example, through S10-S18 on the positive side:
+At S27, only about:
 
 ```text
-same-last membership ≈ 0.591
-same-last edges      ≈ 0.350
-same-last ARI        ≈ 0.423
+24% of unique tokens
+6% of unique edges
 ```
 
-The final-position condition preserves much more token and edge structure than it preserves exact community assignment.
+occur in all six permutations.
 
-This means:
-
-```text
-same semantic ingredients
-        ↓
-similar local relations
-        ↓
-still-plastic community boundaries
-```
-
-The community remains an intermediate geometric object, not the final semantic unit.
-
-This strongly reinforces the R010/R012 rule:
-
-&gt; communities are evidence for parent reconstruction, not topics in themselves.
-
----
-
-# 17. The most stable parent relations
-
-The full community audit reveals two especially persistent relational architectures.
-
-## Positive sector
-
-The strongest recurring relation is:
+Yet all six trajectories still recover the same broad semantic families:
 
 ```text
-SENSORY / MATERIAL
-        ↕
-PLACE / ENVIRONMENT
-```
-
-Structural/measurement material repeatedly attaches to this pair.
-
-Across the middle and late transformer, sensory-place communities or strong inter-community links recur in every permutation trajectory even though their local membership differs.
-
-Late states increasingly reconnect:
-
-```text
-sensory
-+
-transformation
-+
-representation
-```
-
-as the representation approaches the output-facing state.
-
----
-
-## Negative sector
-
-The strongest recurring relations are:
-
-```text
-SOCIAL / ACTIVITY
-        ↕
-TRANSFORMATION / INTERACTION
-
-and
-
-STRUCTURAL / CATEGORICAL
-        ↕
-SOCIAL / ACTIVITY
-```
-
-These relations survive extensive order-dependent token turnover.
-
-The result is not one universal semantic chain shared identically by every state.
-
-It is better described as a persistent two-sector architecture whose local realisation remains plastic.
-
----
-
-# 18. The minimum order-invariant semantic architecture
-
-The smallest defensible cross-permutation reconstruction is:
-
-```text
-POSITIVE-ALIGNED CORE
-
-SENSORY / MATERIAL / TECHNICAL
-            ↕
-SPATIAL / ENVIRONMENTAL / PLACE
-            ↕
-STRUCTURAL / MEASUREMENT
-            ↓
-late REPRESENTATION / OPERATION
-
-
-NEGATIVE-ALIGNED CORE
-
-SOCIAL / ACTIVITY / INSTITUTIONAL
-            ↕
-TRANSFORMATION / INTERACTION / DISTRIBUTION
-            ↕
-STRUCTURAL / CATEGORICAL ORGANISATION
-```
-
-The two sectors are measured independently and should not be drawn as though direct positive-negative graph edges were observed between them.
-
-The broader conceptual intersection is therefore not best represented as a named aesthetic genre.
-
-It is closer to:
-
-&gt; sensory and technical properties situated in an environment, organised through structural relations, alongside a social/activity field whose interactions and transformations form a distinct anti-aligned contextual structure.
-
-This architecture survives permutation better than its exact vocabulary or community boundaries.
-
----
-
-# 19. Does semantic invariance increase with abstraction?
-
-R013 provides substantially stronger support for the R012 hypothesis, but with one qualification.
-
-At the final transformer block, S27:
-
-```text
-only about 24% of unique tokens
-are present in all six permutations
-
-only about 6% of unique edges
-are present in all six permutations
-```
-
-Yet all six trajectories still recover the broad parent families:
-
-```text
-sensory / material
+sensory / material / technical
 place / environment
 structural / measurement
 social / activity
@@ -1011,453 +737,169 @@ transformation / interaction
 representation / operation
 ```
 
-Therefore:
+This establishes an important hierarchy:
 
 ```text
 EXACT TOKENS
 highly order-sensitive
 
 EXACT EDGES
-more order-sensitive
+even more order-sensitive
 
-COMMUNITY PARTITIONS
+COMMUNITY BOUNDARIES
 plastic
 
-PARENT FAMILIES
-substantially recoverable across all orders
+PARENT STRUCTURES
+substantially more stable
 ```
 
-This supports:
+The strongest candidate for semantic invariance is therefore not the exact neighbourhood.
 
-&gt; semantic invariance increases with abstraction from measured tokens towards higher-order parent structure.
-
-However, R013 does not justify the stronger universal claim that parent relations are always more invariant than parent identities.
-
-The same broad relations recur across trajectories, but their state-local expression, parent absorption and community realisation remain order-sensitive.
-
-The stronger conclusion should therefore be:
-
-&gt; parent relations are persistent candidates for invariant structure, but their invariance is trajectory-level rather than an exact 6/6 state-local identity.
+It is the higher-order organisation reconstructed from that neighbourhood.
 
 ---
 
-# 20. State 28 is both a reset and a convergence
+# 13. The minimum generative structure
 
-S27 is the final transformer-block output.
-
-S28 is final normalisation.
-
-The S27 → S28 transition is enormous within each permutation:
+The smallest structure capable of explaining the six trajectories is:
 
 ```text
-average membership Jaccard ≈ 0.068
-average edge Jaccard       ≈ 0.009
+CONCEPTUAL INTERSECTION
+│
+├─ SENSORY / MATERIAL / TECHNICAL
+│       │
+│       └─ situated within
+│
+├─ PLACE / ENVIRONMENT
+│       │
+│       └─ organised through
+│
+├─ STRUCTURAL / MEASUREMENT
+│
+└─ SOCIAL / ACTIVITY / INSTITUTIONAL
+        │
+        └─ organised through
+            TRANSFORMATION / INTERACTION
 ```
 
-Yet cross-permutation convergence increases sharply.
-
-From S27 to S28:
+The representation / operation parent becomes increasingly important near the output-facing end:
 
 ```text
-positive mean membership:
-0.535 → 0.696
-
-negative mean membership:
-0.534 → 0.686
-
-positive mean edge overlap:
-0.297 → 0.464
-
-negative mean edge overlap:
-0.297 → 0.454
+STRUCTURE
+    ↓
+late REPRESENTATION / OPERATION
 ```
 
-Six-way invariant membership also rises:
+The result is not a named aesthetic category.
+
+It is a relational system.
+
+A compact verbal reconstruction is:
+
+&gt; A sensory-material environment structured spatially and quantitatively, with an associated social/activity field whose behaviour is organised through interactions and transformations.
+
+---
+
+# 14. What R013 changes about R012
+
+R012's useful semantic result was approximately:
 
 ```text
-positive tokens:
-24.4% → 44.5%
-
-negative tokens:
-24.1% → 42.8%
-
-positive edges:
-6.0% → 17.5%
-
-negative edges:
-5.9% → 16.4%
-```
-
-Thus final normalisation performs two things simultaneously in the fixed vocabulary basis:
-
-```text
-large state-local recoding
+material / sensory
 +
-cross-permutation convergence
+spatial / environment
++
+transformation / composition
++
+representation / information
++
+social / institutional
 ```
 
-This is analytically important but must not be interpreted as another transformer reasoning step.
+R013 shows which parts survive when the synthesis shell is removed.
 
-S27 remains the correct endpoint for transformer-computed semantic organisation.
-
-S28 is useful as the output-facing recoding of that organisation.
-
----
-
-# 21. What R013 changes about the R012 interpretation
-
-Several R012 conclusions survive strongly.
-
-## Robust across both designs
+## Strongly preserved
 
 ```text
-sensory / material structure
-spatial / environmental structure
-social / institutional / activity structure
-community plasticity
-parent stability above community identity
-positive / negative semantic asymmetry
+sensory / material
+place / environment
+social / activity
 ```
 
-These are likely intrinsic to the concept set and topology method rather than artefacts of the synthesis shell.
+These appear intrinsic to the concept combination.
 
----
+## Reorganised
 
-## Partially design-dependent
+```text
+structural / measurement
+```
 
-R012's strong positive:
+becomes more independent and more clearly linked to curvature density.
+
+## Reduced or repositioned
 
 ```text
 transformation / composition
-```
-
-lineage becomes much more phase-dependent and negative-side in R013.
-
-This indicates substantial contribution from:
-
-```text
-"What structure forms from ..."
-```
-
-in R012.
-
-Likewise, R012's persistent:
-
-```text
 representation / information
 ```
 
-lineage is less continuously central in R013 and becomes especially strong again only near the output-facing terminal state.
+remain real, but no longer dominate the whole trajectory.
 
-This is consistent with the assistant-prefix measurement contributing response-preparation structure in R012.
+Transformation becomes more relational and negative-side.
 
----
+Representation becomes more early/terminal and output-facing.
 
-## Newly clarified by R013
-
-R013 makes:
+The clean R013 design therefore separates:
 
 ```text
-structural / measurement organisation
-```
-
-a more distinct parent rather than folding it primarily into transformation/composition.
-
-It also reveals a cleaner sector split:
-
-```text
-sensory / place
-mostly positive
-
-social / interaction
-mostly negative
-```
-
-which R012's instruction-bearing state partially compressed together.
-
----
-
-# 22. The instruction shell acted as both confound and stabilising scaffold
-
-R013 can be compared directly with the R012 ABC versus ACB pair.
-
-For the same ordering contrast, R012 was much more topologically similar.
-
-Across S10-S18 on the positive side:
-
-```text
-R012
-membership ≈ 0.855
-edge       ≈ 0.686
-
-R013 ABC vs ACB
-membership ≈ 0.396
-edge       ≈ 0.177
-```
-
-The negative side is almost identical in pattern.
-
-This does not isolate one causal variable because R013 changed both:
-
-```text
-instruction / chat context
-and
-capture anchor
-```
-
-But the result is clear at the experimental-design level:
-
-&gt; the R012 prompt-and-assistant-prefix configuration imposed a large shared representational scaffold that greatly reduced order sensitivity.
-
-R013 therefore exposes much more of the order-dependent co-context geometry.
-
-The shell was not merely adding semantic contamination. It was also constraining the representation towards a common synthesis task.
-
----
-
-# 23. What R013 says about the neutral-anchor design
-
-The neutral anchor succeeds at one task:
-
-```text
-the measured token itself
-is no longer one of the concepts
-```
-
-State 00 equality proves that control.
-
-But R013 also shows that a final causal anchor does not create positional symmetry.
-
-The final concept remains nearest to the anchor and dominates structural similarity.
-
-Therefore:
-
-```text
-NEUTRAL TOKEN ID
-does not imply
-POSITION-NEUTRAL REPRESENTATION
-```
-
-This is not a failure of R013.
-
-It is a measured property of the design and of causal sequence processing.
-
-The six-permutation invariant core should therefore be interpreted as:
-
-&gt; structure surviving a strong final-position bias,
-
-which makes the surviving parent architecture more rather than less informative.
-
----
-
-# 24. Implications for SDA / GRD
-
-R013 strengthens the hierarchy developed from R010 and R012:
-
-```text
-MEASURED STATE
-      ↓
-VOCABULARY NEIGHBOURHOOD
-      ↓
-TOKEN RELATIONS
-      ↓
-COMMUNITIES
-      ↓
-SEMANTIC PARENTS
-      ↓
-PARENT RELATIONS
-      ↓
-PERTURBATION STABILITY
-      ↓
-ROLE ASSIGNMENT
-```
-
-The important refinement is that role assignment should also retain cosine-sector information.
-
-For example:
-
-```text
-sensory/material
-repeatedly positive-aligned
-
-social/activity
-repeatedly negative-aligned
-
-structural/measurement
-cross-sector
-
-transformation/interaction
-strongly negative in the middle/late run
-
-representation/operation
-positive early and terminal
-```
-
-These are empirical sector tendencies.
-
-They should not be converted automatically into psychological labels such as:
-
-```text
-positive = central
-negative = suppressed
-```
-
-GRD remains downstream of parent reconstruction.
-
----
-
-# 25. Main methodological limitations
-
-R013 is stronger than R012 but not final.
-
-## One concept triplet
-
-The parent architecture is demonstrated for:
-
-```text
-electro pink
-curvature density
-Tokyo nightlife
-```
-
-It is not yet evidence that the same developmental pattern generalises to arbitrary concept sets.
-
----
-
-## Final-position and recency remain confounded
-
-The last concept is also the concept nearest the anchor.
-
-Therefore R013 establishes a strong final-position / proximity / recency association but cannot separate those mechanisms cleanly.
-
----
-
-## Static input-embedding basis
-
-Every state is interpreted relative to one fixed lexical geometry.
-
-This is deliberate and useful for cross-layer comparability, but it is not the only possible coordinate basis.
-
----
-
-## Louvain communities are geometric partitions
-
-Community IDs are local and algorithm-dependent.
-
-The semantic analysis therefore correctly treats them as evidence rather than final topics.
-
----
-
-## Semantic parent reconstruction remains interpretive
-
-Parent labels are constrained by community evidence, exclusions and cross-permutation comparison, but they are not directly measured model variables.
-
-The report therefore distinguishes:
-
-```text
-measured topology
+concept-induced structure
 from
-semantic reconstruction
+instruction-induced synthesis structure
 ```
 
-throughout.
+more successfully than R012.
 
 ---
 
-# 26. Recommended next experiment
+# 15. Project-level implication
 
-The strongest next step is not to change the topology method.
+R010 suggested that semantic communities could be compressed into higher-order parent structures.
 
-It is to test whether the R013 findings replicate.
+R012 suggested that those parents survived one order perturbation better than exact tokens and communities.
 
-A subsequent run should use:
+R013 provides the stronger test.
 
-```text
-same model
-same neutral-anchor design
-same six-permutation protocol
-same topology machinery
-different concept triplet
-```
+All six possible orderings produce large changes in exact topology, yet the same broad semantic parents and relations remain recoverable.
 
-The first replication question should be:
-
-&gt; Does the same pattern recur: strong final-position dependence, minimum order invariance in the early-middle transformer, later reconvergence, and higher parent stability than exact token/edge stability?
-
-Only after replication should the project add another major variable such as:
-
-```text
-base model versus instruct model
-alternative embedding basis
-alternative community algorithm
-multi-position pooling
-```
-
-Changing the analytical machinery before testing replication would make it harder to determine whether R013 discovered a model-general structural phenomenon or a concept-set-specific pattern.
-
----
-
-# 27. Consolidated progression from R010 to R013
+The project progression is therefore:
 
 ```text
 R010
-WHAT STRUCTURES FORM THROUGH DEPTH?
+WHAT STRUCTURES FORM?
         ↓
-learned:
-communities compress into higher-order parents;
-geometry, partition and semantics can change independently
-
-
 R012
-WHICH STRUCTURES SURVIVE ONE ORDER PERTURBATION
-IN AN INSTRUCTION-BEARING RESPONSE STATE?
+WHICH STRUCTURES SURVIVE
+A LIMITED PERTURBATION?
         ↓
-learned:
-parents survive better than tokens / communities;
-instruction shell and assistant prefix contaminate
-pure semantic attribution
-
-
 R013
-WHICH STRUCTURES SURVIVE ALL SIX ORDERS
-WITHOUT THE SYNTHESIS INSTRUCTION?
-        ↓
-learned:
-final position strongly controls exact topology;
-a non-empty exact invariant core survives;
-higher-order parent families survive much more strongly;
-the natural concept structure is sector-differentiated
-rather than one forced synthesis chain
+WHICH STRUCTURES SURVIVE
+THE COMPLETE ORDER PERMUTATION?
 ```
+
+The answer from R013 is:
+
+&gt; The exact network is strongly order-conditioned, but a smaller higher-order semantic architecture survives beneath it.
 
 ---
 
-# Central conclusions
+# 16. Central conclusion
 
-R013 supports five principal conclusions.
+The semantic result of R013 is:
 
-First:
+&gt; **Electro pink, curvature density and Tokyo nightlife do not converge on a single topic. They decompose into a sensory-material field, a spatial/environmental field, a structural/measurement field and a social/activity field. The positive topology is held together mainly by sensory-material and place relations; the negative topology is held together mainly by social/activity and transformation/interaction relations. Concept order strongly changes the local network and community organisation, but this higher-order parent architecture remains recoverable across all six permutations.**
 
-&gt; Concept order substantially changes hidden-state direction, selected vocabulary, graph edges and community organisation, with the strongest divergence around State 09.
+The most important project-level inference is therefore:
 
-Second:
-
-&gt; The final concept is the dominant positional determinant of similarity. Pairs sharing the same last concept are more similar than other permutation relationships at every post-context state.
-
-Third:
-
-&gt; Exact topology is far less invariant than higher-order semantic structure. Even when only a small minority of exact edges survive all six permutations, the same broad sensory/material, place, structural, social, transformation and representation parents remain recoverable.
-
-Fourth:
-
-&gt; Removing R012's synthesis shell materially changes the semantic architecture. Sensory/place/social parents remain robust, while transformation/composition and representation/information become more phase- and sector-dependent. This confirms that part of R012's higher-order structure was task-induced.
-
-Fifth:
-
-&gt; The strongest candidate for the order-independent semantic intersection is not a named topic but a relational architecture: sensory/material properties situated in place, structural organisation spanning the representation, and a distinct social/activity-interaction field in the anti-aligned sector.
-
-The most defensible project-level conclusion is therefore:
-
-&gt; **Semantic invariance survives permutation primarily at the level of higher-order parent structure, while exact tokens, relations and communities remain strongly order-conditioned. R013 converts this from a two-prompt suggestion into a six-permutation result, while also showing that the surviving invariant is shaped by a persistent final-position bias inherent in the causal measurement design.**
+&gt; **Semantic invariance appears at a higher level of abstraction than token or community invariance. The model's persistent representation of the conceptual intersection is better described by relations between higher-order semantic parents than by a fixed vocabulary neighbourhood.**
 </pre></main></body>
 </html>
