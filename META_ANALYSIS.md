@@ -4063,3 +4063,50 @@ continues as the temporary external collaboration surface while the project is
 active. External changes must therefore be imported, hash-verified and recorded
 before the local repository is treated as reconciled. A separate publication
 folder or repository will be created only after the project is finished.
+
+
+### MA-0035 — R010 Phase B and Phase C external analysis import
+
+- Entry timestamp: `2026-11-13T15:10:58+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex reconciliation record`
+- Entry type: `provenance, verification and repository housekeeping`
+- Related runs: `R008`; `R009`; `R010`
+- External repository: `arh789/chatgpt-analysis`
+- External Phase-B commit: `a62646f65cf896b2dea99b4b357149ef854c5ef8`
+- External Phase-C/imported head: `3f82f28cfdec21ae54c910521f7b7886e5b2415e`
+
+#### Record
+
+External ChatGPT completed the remaining authorised R010 synthesis phases after
+the Phase-A package had been reconciled locally. The two new artifacts are:
+
+- `R010_PHASE_B_STRUCTURAL_EVOLUTION.md`, which infers cross-state
+  correspondence among the frozen state-local parent candidates; and
+- `R010_PHASE_C_SEMANTIC_TOPOLOGY_COMPARISON.md`, which compares the Phase-B
+  semantic trajectory with the pre-existing R008 measured topology.
+
+Phase B reports a coherent but non-monotonic trajectory. Positive-side parent
+organisation remains plastic and increasingly integrates around an
+operational/inquiry/process/information-workflow spine. Negative-side parent
+organisation stabilises earlier around a control/characterisation/adverse-change
+backbone and a persistent authority/territory/institutional-order structure.
+
+Phase C finds partial rather than one-to-one correspondence between semantic
+and measured structural change. It distinguishes global topological resets,
+community re-partitioning and semantic abstraction over stable geometry. The
+input-embedding to Block-0 transition and the Block-30 to final-normalisation
+transition are the strongest joint semantic/topological resets. Several later
+positive-side semantic merges and splits occur while measured membership and
+edges remain comparatively stable, whereas coarse negative-side semantic
+restructuring tracks measured topology more closely.
+
+Neither artifact modifies R008 measurements or the frozen R010 Phase-A state
+reconstructions. Neither assigns SDA-3 roles, chooses an optimal layer or makes
+curvature/coherence claims.
+
+Both files were imported into the authoritative standalone local repository.
+Their local Git blob SHAs were compared with the corresponding GitHub blob SHAs
+at external head `3f82f28`; both matched exactly. The curated R010 package now
+contains 38 Markdown files. The local repository remains intentionally
+unattached to a remote during this short-term private-parent workflow.

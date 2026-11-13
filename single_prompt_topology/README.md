@@ -235,11 +235,20 @@ reruns for States 06, 07, 23 and 24. Its result is **PASS**. The concise
 [`R010_LAYERWISE_COMMUNITY_PARENT_MAP.md`](runs/R010_lithium-layerwise-latent-generative-structure/R010_LAYERWISE_COMMUNITY_PARENT_MAP.md)
 indexes the resulting state-local dispositions and parents.
 
-R010 Phase A is interpretive evidence built from R008 and R009. Phase B has not
-begun: parent correspondence, cross-state trajectories, SDA-3 assignments,
-optimal-layer judgements and curvature interpretations remain unperformed.
-The complete 36-file package was imported byte-for-byte from private
-`chatgpt-analysis` head `cd14435`.
+R010 Phase A is interpretive evidence built from R008 and R009. Phase B's
+[`R010_PHASE_B_STRUCTURAL_EVOLUTION.md`](runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_B_STRUCTURAL_EVOLUTION.md)
+infers cross-state correspondence families and a non-monotonic trajectory: the
+positive side remains plastic around an increasingly abstract
+operational/inquiry/process spine, while the negative side stabilises earlier
+around control/characterisation/adverse change and authority/territorial order.
+
+Phase C's
+[`R010_PHASE_C_SEMANTIC_TOPOLOGY_COMPARISON.md`](runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_C_SEMANTIC_TOPOLOGY_COMPARISON.md)
+compares that semantic trajectory with R008's measured topology. It identifies
+global resets, community re-partitioning and semantic abstraction over stable
+geometry. The comparison does not assign SDA-3 roles, select an optimal layer
+or infer curvature/coherence. The complete 38-file package was imported
+byte-for-byte from private `chatgpt-analysis` head `3f82f28`.
 
 ## Run outputs
 

@@ -17,16 +17,18 @@ for those populations; and R008 exports 66 separate positive/negative networks
 in complete and ChatGPT-readable forms after two documented failed attempts.
 R009 applies a fixed descriptive taxonomy to all 792 state-local R008
 communities across 33 states and passes its structural completeness check. R010
-independently reconstructs candidate latent parent structures at every state
-and passes its Phase-A completeness and state-isolation verification.
+independently reconstructs candidate latent parent structures at every state,
+tracks their cross-state evolution and compares that semantic trajectory with
+R008's measured topology.
 
 R005 found greater nearest-neighbour density and positive/negative segregation
 than a size-matched random null at all 33 states, but its communities also
 contain tokenizer and morphological structure. R009 records model-generated
 candidate identities for those communities; R010 adds state-local generative
-interpretations rather than new measurements. Neither establishes semantic
-coherence or SDA-3 roles. R010 Phase B cross-state alignment has not begun. The
-evidence does not establish semantic opposition, a generally
+interpretations and a cross-state synthesis rather than new measurements. Its
+Phase-C comparison finds partial, non-reducible correspondence between semantic
+change and measured topology. Neither establishes semantic coherence or SDA-3
+roles. The evidence does not establish semantic opposition, a generally
 optimal layer, causal mechanisms or a correspondence between semantic conflict
 and geometric curvature. Model weights remain in the shared cache under
 `D:\AI` and are not versioned here.
@@ -93,6 +95,12 @@ and geometric curvature. Model weights remain in the shared cache under
 24. [`single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_A_COMPLETENESS_VERIFICATION.md`](single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_A_COMPLETENESS_VERIFICATION.md)
     — the final 33-state, 792-community accounting, coverage and isolation
     verification.
+25. [`single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_B_STRUCTURAL_EVOLUTION.md`](single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_B_STRUCTURAL_EVOLUTION.md)
+    — the cross-state correspondence families, structural epochs and semantic
+    transition record.
+26. [`single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_C_SEMANTIC_TOPOLOGY_COMPARISON.md`](single_prompt_topology/runs/R010_lithium-layerwise-latent-generative-structure/R010_PHASE_C_SEMANTIC_TOPOLOGY_COMPARISON.md)
+    — the comparison between the inferred semantic trajectory and R008's
+    measured membership, edge, community and modularity changes.
 
 ## Provenance
 
@@ -106,9 +114,9 @@ Selected, documented snapshots may be published separately to the private
 `chatgpt-analysis` repository for external analysis. R009 was authored there
 by external ChatGPT and imported byte-for-byte at remote commit `49a4b0a`.
 R010 was also authored externally in the private parent repository. Its final
-Phase-A verification passed at remote commit `28e3653`; the complete 36-file
-package, including the later concise map, was imported byte-for-byte from
-remote head `cd14435`.
+Phase-A verification passed at remote commit `28e3653`; Phase B was added at
+`a62646f` and Phase C at `3f82f28`. The complete 38-file package was imported
+byte-for-byte from remote head `3f82f28`.
 GitHub may temporarily lead while external analysis is active, so its history
 must be fetched and reconciled before later edits or pushes. This repository
 remains the authoritative project working copy after that reconciliation.
