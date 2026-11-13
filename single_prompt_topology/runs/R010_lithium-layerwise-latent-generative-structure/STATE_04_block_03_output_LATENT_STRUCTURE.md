@@ -97,19 +97,6 @@ Total nodes: **3,100**
 | Disposition class | Nodes | Side share |
 |---|---:|---:|
 | Retained semantic parents | 1,529 | 49.3% |
-| Formal/name substrate | 1,188 | 38.3% |
-| Irreducible semantic | 0 | 0.0% |
-| Mixed unresolved | 390 | 12.6% |
-| Unclear | 0 | 0.0% |
-| **Total** | **3,107** | **100.2%** |
-
-The negative accounting above reveals an arithmetic inconsistency if C0 is
-treated wholly as formal substrate: the listed community sizes sum to 3,100,
-so disposition totals must also sum to 3,100. The corrected accounting is:
-
-| Disposition class | Nodes | Side share |
-|---|---:|---:|
-| Retained semantic parents | 1,529 | 49.3% |
 | Formal/name substrate | 1,181 | 38.1% |
 | Irreducible semantic | 0 | 0.0% |
 | Mixed unresolved | 390 | 12.6% |
