@@ -293,12 +293,14 @@ semantic, network or community result exists. The evidence supports a software
 instrumentation blocker, not a system-RAM capacity conclusion. The run number
 must not be reused.
 
-## R012 Qwen whole-prompt paired capture
+## R012 generalised Qwen whole-prompt semantic topology
 
 R012 corrects the R011 runtime choice by using original Hugging Face
-Transformers models in BF16 on the RTX 4090. Its locked contract is
-[`R012_PLAN.md`](R012_PLAN.md), and its factual result is
-[`R012_CAPTURE_REPORT.md`](runs/R012_qwen-whole-prompt-paired-capture/R012_CAPTURE_REPORT.md).
+Transformers models in BF16 on the RTX 4090. Its corrected contract is
+[`R012_PLAN.md`](R012_PLAN.md). The validated capture checkpoint remains in
+[`R012_CAPTURE_REPORT.md`](runs/R012_qwen-whole-prompt-paired-capture/R012_CAPTURE_REPORT.md),
+while the completed result is
+[`R012_MEASUREMENT_REPORT.md`](runs/R012_qwen-whole-prompt-paired-capture/R012_MEASUREMENT_REPORT.md).
 
 The 0.5B smoke gate and 7B primary gate both succeeded. The 7B capture used
 `Qwen/Qwen2.5-7B-Instruct` revision
@@ -308,9 +310,26 @@ response token. State 00 was identical across the pair, while all 28
 post-embedding states differed. The minimum paired cosine was 0.988543 at the
 final normalized state, and maximum L2 displacement was 50.2713 at State 27.
 
-R012 establishes that a concept-order swap changes the whole-prompt
-final-position trajectory. Vocabulary projection, neighbourhood comparison,
-networks, communities and semantic interpretation remain later work.
+The capture-only checkpoint was initially marked successful, then rejected as
+incomplete against the intended R011 general-pipeline objective. R012 was
+reopened and the valid trajectories were projected against the usable Qwen
+input vocabulary. The completed run contains:
+
+- 706,623 selected positive/negative prompt-state memberships;
+- 7,066,230 exact directed 10-nearest-neighbour edges;
+- 116 prompt/state/side networks;
+- 1,181 state-local Louvain communities;
+- 112 within-prompt adjacent-state comparisons; and
+- 58 same-state paired-prompt comparisons.
+
+The smallest paired membership Jaccard was 0.773731 and the smallest paired
+edge Jaccard was 0.558323, both at final State 28 on the negative side. State
+00 was identical across prompts. The full measured evidence is exported in
+[`chatgpt_community_networks.json`](runs/R012_qwen-whole-prompt-paired-capture/chatgpt_community_networks.json)
+and
+[`chatgpt_layer_packets.md`](runs/R012_qwen-whole-prompt-paired-capture/chatgpt_layer_packets.md).
+Semantic topic labelling, parent reconstruction and GRD/SDA interpretation
+remain later ChatGPT work rather than R012 measurements.
 
 ## Run outputs
 

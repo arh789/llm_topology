@@ -6604,3 +6604,61 @@ R012 ends at validated paired trajectories. It deliberately does not perform
 vocabulary scoring, cutoff selection, network construction, community
 detection, semantic interpretation, quantisation comparison or larger-model
 scaling.
+
+
+### MA-0062 — Codex execution record: R012 corrected generalised pipeline completion
+
+- Entry timestamp: `2026-11-13T18:52:55+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex`
+- Entry type: `measured execution record and scope correction`
+- Related run: `R012_qwen-whole-prompt-paired-capture`
+
+The capture-only conclusion recorded in MA-0061 was subsequently rejected as
+incomplete. R012 existed to implement the generalised whole-prompt topology
+pipeline intended by R011, so validated hidden states were a prerequisite, not
+the final outcome. The valid Qwen capture artifacts were retained, the manifest
+was reopened as `running`, and the required completion boundary was expanded to
+vocabulary projection, region selection, networks, communities, cross-layer
+comparison, paired-prompt comparison and ChatGPT-readable measured exports.
+
+R012 then reused the two validated Qwen2.5-7B-Instruct trajectories without
+another model forward pass. Each of the 29 states was projected against the
+151,665 tokenizer-addressable input embeddings. Qwen's additional 399 padded
+embedding rows were excluded because they do not correspond to usable token
+IDs. Positive-head and negative-tail populations were selected independently
+with the established R004 full-curve maximum-deviation elbow method.
+
+The completed evidence contains:
+
+- 706,623 selected prompt/state/side token memberships;
+- 7,066,230 directed exact 10-nearest-neighbour edges;
+- 116 networks (2 prompts × 29 states × 2 sides);
+- 1,181 state-local Louvain communities;
+- 112 within-prompt adjacent-state comparisons; and
+- 58 same-state paired-prompt comparisons.
+
+Two implementation failures were preserved rather than hidden. The first
+attempt incorrectly required the padded model embedding row count to equal the
+usable tokenizer length and stopped before projection. The second completed all
+graphs but failed final validation because its Louvain seed included prompt
+identity, allowing identical State 00 graphs to receive different partitions.
+The corrected seed depends only on state and side, and the full entry point was
+rerun. State 00 then matched exactly across prompts in membership, edges and
+community partition.
+
+The smallest paired-prompt membership Jaccard was 0.773731 at State 28 on the
+negative side. The smallest paired edge Jaccard was also at that state and side,
+at 0.558323. Positive populations ranged from 4,186 to 8,785 tokens; negative
+populations ranged from 1,237 to 9,024. Community counts ranged from 7 to 16 per
+network. These are structural measurements, not semantic interpretations.
+
+Independent post-run verification parsed the CSV and gzip artifacts, reconciled
+all required counts, confirmed all 116 JSON networks and all 29 Markdown state
+packets, and matched byte counts and SHA-256 values for all 34 indexed files.
+The final manifest is `successful`.
+
+R012 stops before semantic topic labels, parent-node reconstruction, GRD/SDA
+roles or Phase B/C/D interpretation. Those tasks now belong to downstream
+ChatGPT analysis of `chatgpt_community_networks.json`,
+`chatgpt_layer_packets.md` and the supporting CSV evidence.
