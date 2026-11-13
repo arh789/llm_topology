@@ -118,40 +118,50 @@ For the state currently under analysis, use evidence in this order.
 Every community must be inspected at the underlying R008 level before its R010
 disposition or parent assignment is finalised.
 
-For the state currently under analysis, use:
+For **every** community in the current state, inspect:
 
-1. The corresponding R009 state file.
-2. The same state's records in `R009_SUMMARY.html`, including:
-   - broad identity;
-   - structure type;
-   - confidence;
+1. The corresponding R009 state record and summary entry as interpretive context.
+2. The underlying R008 `community_nodes.csv` record, including:
    - community size;
-   - side;
-   - top ten R008 graph-degree representative tokens.
-3. The corresponding state-side communities in
-   `R008/chatgpt_community_networks.json`.
-4. The underlying R008 community membership in `R008/nodes.csv.gz`.
-5. The underlying within-side graph evidence in `R008/edges.csv.gz` and/or
-   `R008/community_edges.csv` as needed to understand the community's
-   organisation and relation to other communities.
-6. `R008/cross_side_edges.csv.gz` when evaluating a proposed cross-side bridge.
+   - internal-edge count;
+   - boundary-edge count;
+   - mean degree;
+   - target-cosine range and mean;
+   - graph-degree representatives;
+   - target-extreme tokens;
+   - token-class composition.
+3. The current state's R008 `community_edges.csv` relations to other
+   communities on the same side.
+4. The corresponding state packet or compact network evidence where it helps
+   interpret those graph relations.
 
 The HTML report and R009 prose are indexing and interpretive aids. They are not
 sufficient evidence by themselves for a final R010 parent assignment.
 
-For **every** community, the analyst must inspect its underlying membership
-rather than relying only on the broad identity or top-ten representatives.
-Where the full community is large, inspection may use systematic membership
-slices or summaries, but those must derive from the complete R008 membership,
-not only from the compact R009/R008 representative samples.
+### Mandatory escalation for material ambiguity
+
+Inspect the complete R008 node membership from `nodes.csv.gz`, and relevant
+token-level edges from `edges.csv.gz`, whenever the underlying compact
+community record leaves a material ambiguity that could change:
+
+- the community's primary disposition;
+- whether a parent candidate should exist;
+- which parent receives the community;
+- an exclusion boundary;
+- a cross-side bridge;
+- a High versus Moderate structural conclusion.
+
+Use `cross_side_edges.csv.gz` when a proposed cross-side bridge cannot be
+established or rejected from the compact cross-side evidence.
+
+Where a runtime cannot decode a compressed token-level artifact, the state must
+not conceal that limitation. Either use another accessible underlying R008
+representation that resolves the ambiguity, or retain the affected assignment
+as unresolved/provisional rather than claiming the unavailable evidence was
+inspected.
 
 The R009 broad identity is evidence, not ground truth. Where the R009 prose
-identity conflicts with the underlying membership or graph-central
-representative evidence, the discrepancy must be recorded and the parent
-inference must follow the stronger underlying evidence.
-
-The R009 broad identity is evidence, not ground truth. Where the R009 prose
-identity conflicts with the representative-token evidence, the discrepancy
+identity conflicts with the underlying R008 community record, the discrepancy
 must be recorded and the parent inference must follow the stronger underlying
 evidence.
 
