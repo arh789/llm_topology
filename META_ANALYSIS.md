@@ -10788,3 +10788,150 @@ The expected final product is a consolidated R013 semantic-topology analysis con
 R013 therefore advances the project from asking whether semantic topology can be reconstructed to testing whether the reconstructed higher-order topology is invariant under controlled permutation of identical semantic inputs.
 
 This is the entry I would add immediately before beginning the actual R013 semantic analysis.
+
+### MA-0072 — ChatGPT analysis record: R013 cross-permutation semantic topology
+
+- Entry date: `2026-11-14`
+- Author/source: `ChatGPT`
+- Entry type: `downstream semantic analysis and synthesis record`
+- Run: `R013_qwen-bare-concept-permutation-topology`
+- Measurement source: completed R013 artefacts only
+- Analysis report: `single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/R013_RUN_ANALYSIS_AND_RECOMMENDATIONS.html`
+- Report commit: `d2e721ee745be6dfcb1be80b2ba14d2e794177ca`
+
+ChatGPT completed the downstream semantic analysis of R013 using the existing
+348 measured permutation/state/side networks, their 3,654 state-local
+communities, the 870 matched-state permutation-pair comparisons, six-way
+token/edge support evidence and adjacent-state trajectories. No model forward
+pass, cutoff change, graph reconstruction or community re-detection was
+performed during this analysis.
+
+The strongest measured positional result is that permutations sharing the same
+final concept are more similar than the other permutation relationships at
+every post-context state S01-S28. This holds separately for membership
+Jaccard, edge Jaccard and community ARI. The effect is therefore recorded as a
+strong final-position / anchor-proximity / recency association rather than an
+independently identified causal recency effect.
+
+Cross-permutation invariance falls rapidly after contextualisation and reaches
+its strongest divergence around State 09. At the maximum measured divergence,
+BAC versus CAB at State 09 positive_head, membership Jaccard is `0.320201`,
+edge Jaccard is `0.125235`, community ARI is `0.312774`, and the paired
+hidden-state cosine is `0.791842`. Underlying-community inspection shows that
+this severe topological divergence does not erase the same broad semantic
+parent inventory. The difference is substantially one of selection, grouping
+and relation rather than wholesale semantic replacement.
+
+The cross-permutation semantic reconstruction retains six recurring parent
+families:
+
+1. sensory / material / technical;
+2. spatial / environmental / place;
+3. structural / measurement organisation;
+4. social / activity / institutional;
+5. transformation / interaction / distribution; and
+6. representation / operation.
+
+Their sector organisation is itself comparatively stable. Sensory/material is
+strongly positive-aligned; place/environment is predominantly positive;
+social/activity is predominantly negative-aligned; transformation/interaction
+is strongly represented in the negative middle/late topology;
+structural/measurement spans both sectors; and representation/operation is
+strongest early and again near the terminal output-facing state. Negative
+cosine remains geometric anti-alignment and is not redefined as suppression.
+
+The original concepts decompose approximately as follows:
+
+```text
+electro pink
+→ electronic / technical + chromatic + sensory / material
+
+curvature density
+→ structural organisation + measurement / parameterisation
+  + spatial-field relations
+
+Tokyo nightlife
+→ place / environment [predominantly positive]
+  + social / activity [predominantly negative]
+```
+
+The strongest recurring positive parent relation is sensory/material ↔
+place/environment, with structural/measurement material repeatedly attaching
+to that organisation. The strongest recurring negative relations are
+social/activity ↔ transformation/interaction and structural/categorical ↔
+social/activity. These are trajectory-level semantic reconstructions from the
+underlying communities rather than new R013 measured metrics.
+
+R013 therefore supports the R012 hypothesis that semantic invariance increases
+with abstraction. At S27 only about 24% of unique tokens and about 6% of unique
+edges have 6/6 support, while all six trajectories still recover the broad
+parent families above. The stronger claim that parent relations are always
+more invariant than parent identities is not established; parent relations are
+persistent candidates for invariant structure, but their state-local
+realisation remains order-sensitive.
+
+R013 also corrects part of the R012 interpretation. R012's strong positive
+transformation/composition lineage becomes much more phase-dependent and more
+negative-side/relational after removal of the synthesis question. Its
+persistent representation/information lineage also weakens through the middle
+transformer and becomes strong again near the output-facing terminal state.
+This supports the conclusion that the R012 synthesis shell and assistant-prefix
+measurement contributed materially to those structures. Sensory/material,
+place/environment and social/activity parents survive both designs much more
+robustly.
+
+The neutral anchor successfully removes the measured-concept identity confound:
+State 00 is exactly identical across all six permutations. It does not create a
+position-neutral representation. The final concept remains immediately
+adjacent to the anchor and exerts the strongest positional effect. The
+six-permutation invariant core should therefore be interpreted as structure
+surviving a strong final-position bias.
+
+S27 remains the final transformer-computed state. S28 is post-normalisation.
+S27→S28 is a very large within-permutation vocabulary-space reset
+(average membership Jaccard about `0.068`, edge Jaccard about `0.009`) while
+simultaneously increasing cross-permutation convergence. S28 is therefore
+treated as terminal output-facing recoding rather than another reasoning step.
+
+The minimum defensible order-invariant architecture is:
+
+```text
+POSITIVE-ALIGNED CORE
+
+SENSORY / MATERIAL / TECHNICAL
+            ↕
+SPATIAL / ENVIRONMENTAL / PLACE
+            ↕
+STRUCTURAL / MEASUREMENT
+            ↓
+late REPRESENTATION / OPERATION
+
+
+NEGATIVE-ALIGNED CORE
+
+SOCIAL / ACTIVITY / INSTITUTIONAL
+            ↕
+TRANSFORMATION / INTERACTION / DISTRIBUTION
+            ↕
+STRUCTURAL / CATEGORICAL ORGANISATION
+```
+
+The two cosine sectors remain separately measured; this diagram does not imply
+observed graph edges between positive and negative networks.
+
+The resulting project-level conclusion is:
+
+> Semantic invariance survives permutation primarily at the level of
+> higher-order parent structure, while exact tokens, relations and communities
+> remain strongly order-conditioned. R013 converts this from a two-prompt
+> suggestion into a six-permutation result, while also showing that the
+> surviving invariant is shaped by a persistent final-position bias inherent
+> in the causal measurement design.
+
+The recommended next experiment is replication rather than further pipeline
+expansion: hold the R013 model, neutral-anchor six-permutation design and
+topology machinery fixed while substituting a different three-concept set.
+This tests whether final-position dominance, an early/middle invariance minimum,
+late reconvergence and parent stability above exact token/edge stability
+generalise beyond the current concept triplet.
+
