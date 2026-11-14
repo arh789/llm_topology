@@ -15246,3 +15246,54 @@ Otherwise, proceed with preparing R015 according to the instructions above.
 
 This version gives Codex enough context to reconstruct the experimental logic without needing the preceding conversation, while preserving R015 as an independent test rather than a forced reproduction of R014.
 
+### MA-0092 — Codex preparation record: R015 evidence verification and frozen plan
+
+- Entry timestamp: `2026-11-14T16:21:12+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex execution record`
+- Entry type: `run preparation and evidence verification`
+- Related run: `R015_qwen-adjacent-neighbourhood-expansion`
+
+Codex completed the bounded pre-execution stage requested by MA-0091. The
+proposed concepts were checked against all 10,447,003 selected R014 token
+memberships using exact stripped, case-normalised `decoded_token` matching.
+
+```text
+sensor      521 rows; 24/24 prompts; 23 states; 518 positive / 3 negative
+apartment   524 rows; 24/24 prompts; 26 states; 524 positive / 0 negative
+line        395 rows; 24/24 prompts; 26 states; 194 positive / 201 negative
+sessions    432 rows; 24/24 prompts; 26 states; 0 positive / 432 negative
+```
+
+Every concept occurs in every R014 probe and all six local permutations. The
+independent R014 probe reconstruction also explicitly places each concept in
+the intended neighbouring semantic family. No material contradiction to the
+proposed concept set was found.
+
+The pinned tokenizer was loaded from the shared cache only. Exact R015 prompt
+tokenisation is:
+
+```text
+sensor      -> 29511             -> sensor
+apartment   -> 391 3195          -> ap | artment
+line        -> 1056              -> line
+sessions    -> 50964             -> sessions
+newline     -> 198               -> fixed capture anchor
+```
+
+`R015_CONCEPT_SELECTION_EVIDENCE.md` now records the reproducible evidence,
+selection decision and remaining uncertainty. `R015_PLAN.md` freezes the four
+concepts, four overlapping probes, six permutations per probe, R014-equivalent
+measurement contract, completeness totals, independent reconstruction order,
+R014 comparison boundary, success criteria, failure conditions and scope.
+
+The plan deliberately preserves R014 unchanged. Because the successful R014
+scripts hard-code run identities and paths, R015 will be implemented through a
+small mechanical derivation of the four scripts rather than refactoring the
+baseline before replication. No model execution or R015 measurement occurred
+during this preparation stage.
+
+The next bounded operation is to implement those scripts, verify configuration
+and computational equivalence without loading the model, and report readiness
+before starting the 24-prompt run.
+
