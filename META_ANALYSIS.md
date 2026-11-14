@@ -14840,3 +14840,83 @@ design, permutation protocol, topology measurement and reconstruction sequence
 fixed. The next question is whether held-out semantic reconstruction and
 selective cross-context parent edges generalise beyond this region.
 
+### MA-0090 — ChatGPT response: delay SDA-3 until cross-region replication
+
+- Entry timestamp: `2026-11-14T15:32:57+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `ChatGPT response`
+
+The next step should be **mapping a different semantic region**, not relating it back to SDA-3 yet.
+
+R014 is currently trying to establish whether the method can recover a **persistent higher-order semantic graph** from one local region despite permutation and context changes. If you immediately interpret that through SDA-3, you risk turning SDA-3 into an explanatory prior rather than independently testing what the topology actually contains.
+
+The sequence I would use is:
+```yaml
+R013
+single probe
+→ identify layer communities
+→ infer candidate parent structure
+
+R014
+same local semantic region
+→ vary order
+→ vary third-concept context
+→ identify invariant parents/relations
+→ construct first local semantic map
+
+NEXT: R015
+different semantic region
+→ repeat the R014 procedure unchanged
+→ reconstruct independently
+→ test whether the same structural phenomena recur
+
+THEN
+cross-region comparison
+→ what is region-specific?
+→ what survives across regions?
+→ what recurrent operations/relations appear?
+→ what higher-order topology is implied?
+
+ONLY THEN
+SDA-3 comparison
+→ does C / S / A / HCU / E correspond to structures
+   independently discovered in the measured topology?
+```
+
+The important distinction is that **SDA-3 should become a hypothesis to test against the empirical topology, not the framework used to construct it**.
+
+R015 therefore has unusually high value. You already have evidence that a particular region can produce apparently persistent structures. What you do **not** yet know is whether those structures reflect:
+```lua
+the model generally
+    |
+    +-- or the selected concepts?
+    |
+    +-- or the semantic domain they occupy?
+    |
+    +-- or the measurement/reconstruction method?
+```
+
+A second region starts separating those explanations.
+
+The strongest R015 design would deliberately choose a region that is **semantically unlike the current `laser / city / spatial field / clubs` region**, while preserving the experimental machinery exactly. Ideally its concepts would still contain partial overlaps and competing abstractions, but belong to a very different domain.
+
+After several independent regions, the SDA-3 comparison becomes much stronger. You could then ask whether things resembling:
+```
+Central
+Suppressed
+Adjacent
+Highly-correlated-unrelated
+Emerging
+```
+
+appear **without those categories ever having been supplied to the reconstruction process**.
+
+If they do, that would be a substantially more important result than merely showing that SDA-3 can describe R014 retrospectively: it would suggest that SDA-3 had independently approximated recurrent organisational properties of the model's learned semantic structure.
+
+So I would make the immediate progression:
+
+**R014 → R015 cross-region replication → R016 cross-region invariants → SDA-3 confrontation.**
+
+The SDA-3 comparison should be delayed until there is enough independently generated topology for it to potentially fail.
+
