@@ -370,6 +370,54 @@ and
 Semantic parent reconstruction and order-effect interpretation remain later
 ChatGPT work.
 
+## R014 overlapping-context semantic topology
+
+R014 keeps the R013 model, final newline anchor, hidden-state capture,
+full-curve cutoff, exact 10-nearest-neighbour graph and state-local Louvain
+community methods unchanged. Its locked contract is
+[`R014_PLAN.md`](R014_PLAN.md), and the concrete concept selection is justified
+from measured R013 evidence in
+[`R014_CONCEPT_SELECTION_EVIDENCE.md`](R014_CONCEPT_SELECTION_EVIDENCE.md).
+
+Four concepts form four overlapping probes:
+
+- `laser | city | spatial field`;
+- `laser | city | clubs`;
+- `laser | spatial field | clubs`; and
+- `city | spatial field | clubs`.
+
+Each probe is measured in all six orders, giving 24 prompts. Every concept pair
+therefore appears in two different third-concept contexts. The validated run
+contains:
+
+- 10,447,003 selected prompt/state/side memberships;
+- 104,470,030 exact directed 10-nearest-neighbour edges;
+- 1,392 prompt/state/side networks;
+- 14,686 state-local Louvain communities;
+- 1,344 within-prompt adjacent-state comparisons;
+- 3,480 within-probe matched-state permutation comparisons; and
+- separate 1/6 through 6/6 token and edge support evidence within each probe.
+
+The smallest within-probe membership Jaccard was `0.289351` for `P3_ABC`
+versus `P3_CAB` at State 13 on the negative side. The smallest within-probe
+edge Jaccard was `0.104801` for the same prompt pair at State 10 on the
+positive side. State 00 topology is identical across every prompt; later
+differences arise after contextual processing.
+
+The factual result is in
+[`R014_MEASUREMENT_REPORT.md`](runs/R014_qwen-overlapping-context-semantic-map/R014_MEASUREMENT_REPORT.md),
+the exact coverage check is in
+[`R014_COMPLETENESS_VERIFICATION.md`](runs/R014_qwen-overlapping-context-semantic-map/R014_COMPLETENESS_VERIFICATION.md),
+and the downstream analysis surfaces are
+[`chatgpt_community_networks.json`](runs/R014_qwen-overlapping-context-semantic-map/chatgpt_community_networks.json)
+and
+[`chatgpt_layer_packets.md`](runs/R014_qwen-overlapping-context-semantic-map/chatgpt_layer_packets.md).
+
+R014 stops before interpretation. Each probe must first be semantically
+reconstructed independently without imposing R013 parent labels. Cross-probe
+parent and relation matching, and the decision whether the evidence supports a
+local semantic map, remain downstream analytical work.
+
 ## Run outputs
 
 Each execution writes a timestamped directory under `runs/` containing:

@@ -1,0 +1,204 @@
+{
+  "generated_at": "2026-11-14T01:45:13.768216+00:00",
+  "run_id": "R014_qwen-overlapping-context-semantic-map",
+  "manifest_status": "successful",
+  "artifacts": {
+    "chatgpt_community_networks.json": {
+      "bytes": 37741738,
+      "sha256": "0129721715c25d4d2706809750a6d10b6d8316d0c46f2645d724bfce7a0d31c2"
+    },
+    "chatgpt_layer_packets.md": {
+      "bytes": 5529922,
+      "sha256": "1256d6236d615ff229ede936948829e8b6d27121649758e60146fa205f236224"
+    },
+    "community_edges.csv": {
+      "bytes": 6696397,
+      "sha256": "b5205e9b930e251467ec88a15f11781b6d0e60d1f3561d4198ae740160a2b5c7"
+    },
+    "community_nodes.csv": {
+      "bytes": 9025156,
+      "sha256": "c91a0da002980157be9cc5125f25ab50e2ddd86e7853171775aa2902bb3d3172"
+    },
+    "community_transition_evidence.csv": {
+      "bytes": 6687216,
+      "sha256": "4e72cc3e829a8e52848431f8bec33e2e67d9532b5a51e1cb8ce69d338965784d"
+    },
+    "cutoffs.csv": {
+      "bytes": 191206,
+      "sha256": "d40588c95bae93d8c6de8c9a30199bd3b0d9b01844c112f136034fad76964e1a"
+    },
+    "edge_permutation_support.csv.gz": {
+      "bytes": 209523632,
+      "sha256": "da6c5b5da0ba4f861c8878e893aa903cf162cd56a0554cbea20d49dac962692a"
+    },
+    "edges.csv.gz": {
+      "bytes": 1137717255,
+      "sha256": "7168a6b89b623d869e82d92814a353ea395cec7088aa354228a1ab450328a5fb"
+    },
+    "manifest.json": {
+      "bytes": 13856,
+      "sha256": "8a2c698eba2ed4e1b5b8748ee04126f448a7cef1564a775b3463102d56c93227"
+    },
+    "network_index.csv": {
+      "bytes": 378076,
+      "sha256": "09eca22dc07ca70ce47a66a53b3f44d56cd33e5e7495b9031912288c5a75b651"
+    },
+    "nodes.csv.gz": {
+      "bytes": 267850133,
+      "sha256": "7483b963a9292149b63989f492bca34c7945337b9820e15003a20c52967eeb8e"
+    },
+    "pairwise_permutation_comparisons.csv": {
+      "bytes": 521103,
+      "sha256": "62c42ff89775dda361b36bedc202eb5d931710c480231d63f9920f27e6e36faf"
+    },
+    "permutation_invariance.csv": {
+      "bytes": 208763,
+      "sha256": "08eb2d4ec054a9715a95a943ef031eeba1680926182e3b8dab75b5c791a2b8c3"
+    },
+    "primary_7b_bf16/artifact_hashes.json": {
+      "bytes": 4196,
+      "sha256": "b0c4745845b9fcab61371f70fd1b30d85f02672cc81a4a75c18cf61cb1f743fa"
+    },
+    "primary_7b_bf16/P1_ABC_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "b633f729eee0e45b41f3798bf66e59c7080eaf4395c1d7f97a31e851249b3a62"
+    },
+    "primary_7b_bf16/P1_ACB_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "cc402bc260c1c58abec7f21ae4e3058eee80f56bf810659716b5fa0f1d632acf"
+    },
+    "primary_7b_bf16/P1_BAC_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "0c1fc47253f9916ffcd240863b2ba6a5ec99289e6eb5d981a8ba68852c051b14"
+    },
+    "primary_7b_bf16/P1_BCA_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "a7faf3f61939f58f0e81bff193c862c2f018904c6d73358d213b7e8e8403b1d7"
+    },
+    "primary_7b_bf16/P1_CAB_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "53f94a5092a6d05aa156d65be0c136dda5d1276fa2503f572a2593df54a14901"
+    },
+    "primary_7b_bf16/P1_CBA_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "4b03ed77dcab003663ba87f1c61658539bab052a2798f023835642d575d6d802"
+    },
+    "primary_7b_bf16/P2_ABC_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "a9a24fff387a100873e7461cc2a43f277452fc8355c9b8d3b25b0998f054ca07"
+    },
+    "primary_7b_bf16/P2_ACB_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "ba2cd01d245aafeed66fcf162f83ef19aeb62cb6a10a66f4ae3615eb36be5217"
+    },
+    "primary_7b_bf16/P2_BAC_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "28875f244e8e4a6491eb72c87f5a686f4e84a3348b3be2cc6f2bf623c1d71031"
+    },
+    "primary_7b_bf16/P2_BCA_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "f7967a0f3d871d905af901f1cc9402af3d436c984cba4675553cc3b78350c6d0"
+    },
+    "primary_7b_bf16/P2_CAB_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "ae0703c3325a12c10ef40cd73d9125d6b183d46d1b3adf7d5679705d92b363c6"
+    },
+    "primary_7b_bf16/P2_CBA_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "665a71ef07994f0c4f525ac297a9c83751924f41c9feba0f0767422b4b6d3910"
+    },
+    "primary_7b_bf16/P3_ABC_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "057d97440b8bae692b4f2d02ffbe1ebda0f9ba375915ca73f228478b8bab754d"
+    },
+    "primary_7b_bf16/P3_ACB_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "8324ae2bd44aea5917639e9eff9b4196322a32b60b7cd8bfa8625d4c31e89a84"
+    },
+    "primary_7b_bf16/P3_BAC_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "232229106371cd6f54f06d4494977b0a40443d7136ccb550c6676582636eb419"
+    },
+    "primary_7b_bf16/P3_BCA_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "df198fc221717c15ca70c9f20f6eb2baa861c6aa320e6e01665d1580dc8581a4"
+    },
+    "primary_7b_bf16/P3_CAB_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "5253de6a388286f00f224fd67bda6f352386c499a89e6196d9cfcd3d7e399039"
+    },
+    "primary_7b_bf16/P3_CBA_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "b5585b18fbf47a8acdbe853fc325896df6f43cd82872ce28537a20e571e97f50"
+    },
+    "primary_7b_bf16/P4_ABC_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "52ad6492a01a99d0e290e39b5106f866f8538984f222ef92d2e7fb82625774b3"
+    },
+    "primary_7b_bf16/P4_ACB_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "ed28a1bcf1d45c61654050951d642457b8c4697073562b4cc7a606ff622ba414"
+    },
+    "primary_7b_bf16/P4_BAC_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "cb3fa4a7e882b58c6cdf722ad30d31fbf7b36a43eb64fe6a50ee904a9c66c75c"
+    },
+    "primary_7b_bf16/P4_BCA_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "5e4b3e9f634f0ad01856c4666df283ebb07fb86032a65e7c607ce3b4da6e2141"
+    },
+    "primary_7b_bf16/P4_CAB_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "d095a08dfbfbb40c66b3b1d5b35c0bb0effc1db7727f1553d2e9d77783b3caea"
+    },
+    "primary_7b_bf16/P4_CBA_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "11c456a718f9ace7db4ac4e26a7c664dd95a5ec221f55e4a808587956fc60778"
+    },
+    "primary_7b_bf16/pairwise_hidden_state_metrics.csv": {
+      "bytes": 152244,
+      "sha256": "ade995e72eacc1feb4b04dbb6a96ab5e93f6cecf5a16d963c25fdbcca3735536"
+    },
+    "primary_7b_bf16/permutation_validation.json": {
+      "bytes": 2206,
+      "sha256": "ab316e8fe2345cea0ee6e8f3a826dee1ebd7c972540850a2a8f2e1bcf214c7a8"
+    },
+    "primary_7b_bf16/prompt_records.json": {
+      "bytes": 27353,
+      "sha256": "a3f55f99fb321bbc09fb56a66e41d09c01ae155221bc50ca1dd4802c00203ec8"
+    },
+    "primary_7b_bf16/run_metadata.json": {
+      "bytes": 2947,
+      "sha256": "c755c0d56f76b5e5cf96af769a046c457426aafe9c9d4bd930a743d4fb67482a"
+    },
+    "primary_7b_bf16/status.json": {
+      "bytes": 290,
+      "sha256": "7dc29a13745a2b882592a9527931c408d3ce15956c9d728152cca9ab63bc05e9"
+    },
+    "R014_COMPLETENESS_VERIFICATION.md": {
+      "bytes": 837,
+      "sha256": "dafc9b56b1d32b3a67ef3dd8739f16afee3b2955a216a6fc82791ebd3baa4b18"
+    },
+    "R014_MEASUREMENT_REPORT.md": {
+      "bytes": 2497,
+      "sha256": "375bea62c28550aef99da26c63cda44f5ff14df818e88da49bac048d3ef531b3"
+    },
+    "state_transitions.csv": {
+      "bytes": 213611,
+      "sha256": "8ea1682c1c0a6a2d6c23f3266b57e68a019e61c0249c0c9d4419c85f91bae797"
+    },
+    "tail_tokens.csv.gz": {
+      "bytes": 254391154,
+      "sha256": "7a8a698141a3b6da826049e77a21ba9a3275111592403c3440a378bd39b8154b"
+    },
+    "token_permutation_support.csv.gz": {
+      "bytes": 33871075,
+      "sha256": "8efdc7c18ae3f5cccafa1f511a818acb32b167c6d7ab55c717ab88304b907779"
+    },
+    "vocabulary_scores.safetensors": {
+      "bytes": 422235760,
+      "sha256": "4ec7910c9a316f6e29cf35970c0adc69df4d3091f243a8eb3b44bc8c6ef70cff"
+    }
+  },
+  "excluded_mutable_log": "R014_EXECUTION_LOG.md"
+}

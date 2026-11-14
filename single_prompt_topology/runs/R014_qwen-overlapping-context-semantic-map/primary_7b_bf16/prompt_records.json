@@ -1,0 +1,1382 @@
+{
+  "P1_ABC": {
+    "prompt_id": "P1_ABC",
+    "probe_id": "P1",
+    "local_permutation": "ABC",
+    "probe_concept_keys": [
+      "A",
+      "B",
+      "C"
+    ],
+    "probe_concepts": [
+      "laser",
+      "city",
+      "spatial field"
+    ],
+    "concept_key_order": [
+      "A",
+      "B",
+      "C"
+    ],
+    "position_1": "laser",
+    "position_2": "city",
+    "position_3": "spatial field",
+    "raw_prompt": "laser\ncity\nspatial field\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      75,
+      12080,
+      198,
+      8926,
+      198,
+      2154,
+      22433,
+      2070,
+      198
+    ],
+    "decoded_tokens": [
+      "l",
+      "aser",
+      "Ċ",
+      "city",
+      "Ċ",
+      "sp",
+      "atial",
+      "Ġfield",
+      "Ċ"
+    ],
+    "input_token_count": 9,
+    "capture_index": 8,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P1_ABC_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P1_ACB": {
+    "prompt_id": "P1_ACB",
+    "probe_id": "P1",
+    "local_permutation": "ACB",
+    "probe_concept_keys": [
+      "A",
+      "B",
+      "C"
+    ],
+    "probe_concepts": [
+      "laser",
+      "city",
+      "spatial field"
+    ],
+    "concept_key_order": [
+      "A",
+      "C",
+      "B"
+    ],
+    "position_1": "laser",
+    "position_2": "spatial field",
+    "position_3": "city",
+    "raw_prompt": "laser\nspatial field\ncity\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      75,
+      12080,
+      198,
+      2154,
+      22433,
+      2070,
+      198,
+      8926,
+      198
+    ],
+    "decoded_tokens": [
+      "l",
+      "aser",
+      "Ċ",
+      "sp",
+      "atial",
+      "Ġfield",
+      "Ċ",
+      "city",
+      "Ċ"
+    ],
+    "input_token_count": 9,
+    "capture_index": 8,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P1_ACB_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P1_BAC": {
+    "prompt_id": "P1_BAC",
+    "probe_id": "P1",
+    "local_permutation": "BAC",
+    "probe_concept_keys": [
+      "A",
+      "B",
+      "C"
+    ],
+    "probe_concepts": [
+      "laser",
+      "city",
+      "spatial field"
+    ],
+    "concept_key_order": [
+      "B",
+      "A",
+      "C"
+    ],
+    "position_1": "city",
+    "position_2": "laser",
+    "position_3": "spatial field",
+    "raw_prompt": "city\nlaser\nspatial field\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      8926,
+      198,
+      75,
+      12080,
+      198,
+      2154,
+      22433,
+      2070,
+      198
+    ],
+    "decoded_tokens": [
+      "city",
+      "Ċ",
+      "l",
+      "aser",
+      "Ċ",
+      "sp",
+      "atial",
+      "Ġfield",
+      "Ċ"
+    ],
+    "input_token_count": 9,
+    "capture_index": 8,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P1_BAC_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P1_BCA": {
+    "prompt_id": "P1_BCA",
+    "probe_id": "P1",
+    "local_permutation": "BCA",
+    "probe_concept_keys": [
+      "A",
+      "B",
+      "C"
+    ],
+    "probe_concepts": [
+      "laser",
+      "city",
+      "spatial field"
+    ],
+    "concept_key_order": [
+      "B",
+      "C",
+      "A"
+    ],
+    "position_1": "city",
+    "position_2": "spatial field",
+    "position_3": "laser",
+    "raw_prompt": "city\nspatial field\nlaser\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      8926,
+      198,
+      2154,
+      22433,
+      2070,
+      198,
+      75,
+      12080,
+      198
+    ],
+    "decoded_tokens": [
+      "city",
+      "Ċ",
+      "sp",
+      "atial",
+      "Ġfield",
+      "Ċ",
+      "l",
+      "aser",
+      "Ċ"
+    ],
+    "input_token_count": 9,
+    "capture_index": 8,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P1_BCA_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P1_CAB": {
+    "prompt_id": "P1_CAB",
+    "probe_id": "P1",
+    "local_permutation": "CAB",
+    "probe_concept_keys": [
+      "A",
+      "B",
+      "C"
+    ],
+    "probe_concepts": [
+      "laser",
+      "city",
+      "spatial field"
+    ],
+    "concept_key_order": [
+      "C",
+      "A",
+      "B"
+    ],
+    "position_1": "spatial field",
+    "position_2": "laser",
+    "position_3": "city",
+    "raw_prompt": "spatial field\nlaser\ncity\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      2154,
+      22433,
+      2070,
+      198,
+      75,
+      12080,
+      198,
+      8926,
+      198
+    ],
+    "decoded_tokens": [
+      "sp",
+      "atial",
+      "Ġfield",
+      "Ċ",
+      "l",
+      "aser",
+      "Ċ",
+      "city",
+      "Ċ"
+    ],
+    "input_token_count": 9,
+    "capture_index": 8,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P1_CAB_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P1_CBA": {
+    "prompt_id": "P1_CBA",
+    "probe_id": "P1",
+    "local_permutation": "CBA",
+    "probe_concept_keys": [
+      "A",
+      "B",
+      "C"
+    ],
+    "probe_concepts": [
+      "laser",
+      "city",
+      "spatial field"
+    ],
+    "concept_key_order": [
+      "C",
+      "B",
+      "A"
+    ],
+    "position_1": "spatial field",
+    "position_2": "city",
+    "position_3": "laser",
+    "raw_prompt": "spatial field\ncity\nlaser\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      2154,
+      22433,
+      2070,
+      198,
+      8926,
+      198,
+      75,
+      12080,
+      198
+    ],
+    "decoded_tokens": [
+      "sp",
+      "atial",
+      "Ġfield",
+      "Ċ",
+      "city",
+      "Ċ",
+      "l",
+      "aser",
+      "Ċ"
+    ],
+    "input_token_count": 9,
+    "capture_index": 8,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P1_CBA_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P2_ABC": {
+    "prompt_id": "P2_ABC",
+    "probe_id": "P2",
+    "local_permutation": "ABC",
+    "probe_concept_keys": [
+      "A",
+      "B",
+      "D"
+    ],
+    "probe_concepts": [
+      "laser",
+      "city",
+      "clubs"
+    ],
+    "concept_key_order": [
+      "A",
+      "B",
+      "D"
+    ],
+    "position_1": "laser",
+    "position_2": "city",
+    "position_3": "clubs",
+    "raw_prompt": "laser\ncity\nclubs\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      75,
+      12080,
+      198,
+      8926,
+      198,
+      76285,
+      198
+    ],
+    "decoded_tokens": [
+      "l",
+      "aser",
+      "Ċ",
+      "city",
+      "Ċ",
+      "clubs",
+      "Ċ"
+    ],
+    "input_token_count": 7,
+    "capture_index": 6,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P2_ABC_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P2_ACB": {
+    "prompt_id": "P2_ACB",
+    "probe_id": "P2",
+    "local_permutation": "ACB",
+    "probe_concept_keys": [
+      "A",
+      "B",
+      "D"
+    ],
+    "probe_concepts": [
+      "laser",
+      "city",
+      "clubs"
+    ],
+    "concept_key_order": [
+      "A",
+      "D",
+      "B"
+    ],
+    "position_1": "laser",
+    "position_2": "clubs",
+    "position_3": "city",
+    "raw_prompt": "laser\nclubs\ncity\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      75,
+      12080,
+      198,
+      76285,
+      198,
+      8926,
+      198
+    ],
+    "decoded_tokens": [
+      "l",
+      "aser",
+      "Ċ",
+      "clubs",
+      "Ċ",
+      "city",
+      "Ċ"
+    ],
+    "input_token_count": 7,
+    "capture_index": 6,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P2_ACB_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P2_BAC": {
+    "prompt_id": "P2_BAC",
+    "probe_id": "P2",
+    "local_permutation": "BAC",
+    "probe_concept_keys": [
+      "A",
+      "B",
+      "D"
+    ],
+    "probe_concepts": [
+      "laser",
+      "city",
+      "clubs"
+    ],
+    "concept_key_order": [
+      "B",
+      "A",
+      "D"
+    ],
+    "position_1": "city",
+    "position_2": "laser",
+    "position_3": "clubs",
+    "raw_prompt": "city\nlaser\nclubs\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      8926,
+      198,
+      75,
+      12080,
+      198,
+      76285,
+      198
+    ],
+    "decoded_tokens": [
+      "city",
+      "Ċ",
+      "l",
+      "aser",
+      "Ċ",
+      "clubs",
+      "Ċ"
+    ],
+    "input_token_count": 7,
+    "capture_index": 6,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P2_BAC_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P2_BCA": {
+    "prompt_id": "P2_BCA",
+    "probe_id": "P2",
+    "local_permutation": "BCA",
+    "probe_concept_keys": [
+      "A",
+      "B",
+      "D"
+    ],
+    "probe_concepts": [
+      "laser",
+      "city",
+      "clubs"
+    ],
+    "concept_key_order": [
+      "B",
+      "D",
+      "A"
+    ],
+    "position_1": "city",
+    "position_2": "clubs",
+    "position_3": "laser",
+    "raw_prompt": "city\nclubs\nlaser\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      8926,
+      198,
+      76285,
+      198,
+      75,
+      12080,
+      198
+    ],
+    "decoded_tokens": [
+      "city",
+      "Ċ",
+      "clubs",
+      "Ċ",
+      "l",
+      "aser",
+      "Ċ"
+    ],
+    "input_token_count": 7,
+    "capture_index": 6,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P2_BCA_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P2_CAB": {
+    "prompt_id": "P2_CAB",
+    "probe_id": "P2",
+    "local_permutation": "CAB",
+    "probe_concept_keys": [
+      "A",
+      "B",
+      "D"
+    ],
+    "probe_concepts": [
+      "laser",
+      "city",
+      "clubs"
+    ],
+    "concept_key_order": [
+      "D",
+      "A",
+      "B"
+    ],
+    "position_1": "clubs",
+    "position_2": "laser",
+    "position_3": "city",
+    "raw_prompt": "clubs\nlaser\ncity\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      76285,
+      198,
+      75,
+      12080,
+      198,
+      8926,
+      198
+    ],
+    "decoded_tokens": [
+      "clubs",
+      "Ċ",
+      "l",
+      "aser",
+      "Ċ",
+      "city",
+      "Ċ"
+    ],
+    "input_token_count": 7,
+    "capture_index": 6,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P2_CAB_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P2_CBA": {
+    "prompt_id": "P2_CBA",
+    "probe_id": "P2",
+    "local_permutation": "CBA",
+    "probe_concept_keys": [
+      "A",
+      "B",
+      "D"
+    ],
+    "probe_concepts": [
+      "laser",
+      "city",
+      "clubs"
+    ],
+    "concept_key_order": [
+      "D",
+      "B",
+      "A"
+    ],
+    "position_1": "clubs",
+    "position_2": "city",
+    "position_3": "laser",
+    "raw_prompt": "clubs\ncity\nlaser\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      76285,
+      198,
+      8926,
+      198,
+      75,
+      12080,
+      198
+    ],
+    "decoded_tokens": [
+      "clubs",
+      "Ċ",
+      "city",
+      "Ċ",
+      "l",
+      "aser",
+      "Ċ"
+    ],
+    "input_token_count": 7,
+    "capture_index": 6,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P2_CBA_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P3_ABC": {
+    "prompt_id": "P3_ABC",
+    "probe_id": "P3",
+    "local_permutation": "ABC",
+    "probe_concept_keys": [
+      "A",
+      "C",
+      "D"
+    ],
+    "probe_concepts": [
+      "laser",
+      "spatial field",
+      "clubs"
+    ],
+    "concept_key_order": [
+      "A",
+      "C",
+      "D"
+    ],
+    "position_1": "laser",
+    "position_2": "spatial field",
+    "position_3": "clubs",
+    "raw_prompt": "laser\nspatial field\nclubs\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      75,
+      12080,
+      198,
+      2154,
+      22433,
+      2070,
+      198,
+      76285,
+      198
+    ],
+    "decoded_tokens": [
+      "l",
+      "aser",
+      "Ċ",
+      "sp",
+      "atial",
+      "Ġfield",
+      "Ċ",
+      "clubs",
+      "Ċ"
+    ],
+    "input_token_count": 9,
+    "capture_index": 8,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P3_ABC_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P3_ACB": {
+    "prompt_id": "P3_ACB",
+    "probe_id": "P3",
+    "local_permutation": "ACB",
+    "probe_concept_keys": [
+      "A",
+      "C",
+      "D"
+    ],
+    "probe_concepts": [
+      "laser",
+      "spatial field",
+      "clubs"
+    ],
+    "concept_key_order": [
+      "A",
+      "D",
+      "C"
+    ],
+    "position_1": "laser",
+    "position_2": "clubs",
+    "position_3": "spatial field",
+    "raw_prompt": "laser\nclubs\nspatial field\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      75,
+      12080,
+      198,
+      76285,
+      198,
+      2154,
+      22433,
+      2070,
+      198
+    ],
+    "decoded_tokens": [
+      "l",
+      "aser",
+      "Ċ",
+      "clubs",
+      "Ċ",
+      "sp",
+      "atial",
+      "Ġfield",
+      "Ċ"
+    ],
+    "input_token_count": 9,
+    "capture_index": 8,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P3_ACB_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P3_BAC": {
+    "prompt_id": "P3_BAC",
+    "probe_id": "P3",
+    "local_permutation": "BAC",
+    "probe_concept_keys": [
+      "A",
+      "C",
+      "D"
+    ],
+    "probe_concepts": [
+      "laser",
+      "spatial field",
+      "clubs"
+    ],
+    "concept_key_order": [
+      "C",
+      "A",
+      "D"
+    ],
+    "position_1": "spatial field",
+    "position_2": "laser",
+    "position_3": "clubs",
+    "raw_prompt": "spatial field\nlaser\nclubs\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      2154,
+      22433,
+      2070,
+      198,
+      75,
+      12080,
+      198,
+      76285,
+      198
+    ],
+    "decoded_tokens": [
+      "sp",
+      "atial",
+      "Ġfield",
+      "Ċ",
+      "l",
+      "aser",
+      "Ċ",
+      "clubs",
+      "Ċ"
+    ],
+    "input_token_count": 9,
+    "capture_index": 8,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P3_BAC_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P3_BCA": {
+    "prompt_id": "P3_BCA",
+    "probe_id": "P3",
+    "local_permutation": "BCA",
+    "probe_concept_keys": [
+      "A",
+      "C",
+      "D"
+    ],
+    "probe_concepts": [
+      "laser",
+      "spatial field",
+      "clubs"
+    ],
+    "concept_key_order": [
+      "C",
+      "D",
+      "A"
+    ],
+    "position_1": "spatial field",
+    "position_2": "clubs",
+    "position_3": "laser",
+    "raw_prompt": "spatial field\nclubs\nlaser\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      2154,
+      22433,
+      2070,
+      198,
+      76285,
+      198,
+      75,
+      12080,
+      198
+    ],
+    "decoded_tokens": [
+      "sp",
+      "atial",
+      "Ġfield",
+      "Ċ",
+      "clubs",
+      "Ċ",
+      "l",
+      "aser",
+      "Ċ"
+    ],
+    "input_token_count": 9,
+    "capture_index": 8,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P3_BCA_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P3_CAB": {
+    "prompt_id": "P3_CAB",
+    "probe_id": "P3",
+    "local_permutation": "CAB",
+    "probe_concept_keys": [
+      "A",
+      "C",
+      "D"
+    ],
+    "probe_concepts": [
+      "laser",
+      "spatial field",
+      "clubs"
+    ],
+    "concept_key_order": [
+      "D",
+      "A",
+      "C"
+    ],
+    "position_1": "clubs",
+    "position_2": "laser",
+    "position_3": "spatial field",
+    "raw_prompt": "clubs\nlaser\nspatial field\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      76285,
+      198,
+      75,
+      12080,
+      198,
+      2154,
+      22433,
+      2070,
+      198
+    ],
+    "decoded_tokens": [
+      "clubs",
+      "Ċ",
+      "l",
+      "aser",
+      "Ċ",
+      "sp",
+      "atial",
+      "Ġfield",
+      "Ċ"
+    ],
+    "input_token_count": 9,
+    "capture_index": 8,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P3_CAB_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P3_CBA": {
+    "prompt_id": "P3_CBA",
+    "probe_id": "P3",
+    "local_permutation": "CBA",
+    "probe_concept_keys": [
+      "A",
+      "C",
+      "D"
+    ],
+    "probe_concepts": [
+      "laser",
+      "spatial field",
+      "clubs"
+    ],
+    "concept_key_order": [
+      "D",
+      "C",
+      "A"
+    ],
+    "position_1": "clubs",
+    "position_2": "spatial field",
+    "position_3": "laser",
+    "raw_prompt": "clubs\nspatial field\nlaser\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      76285,
+      198,
+      2154,
+      22433,
+      2070,
+      198,
+      75,
+      12080,
+      198
+    ],
+    "decoded_tokens": [
+      "clubs",
+      "Ċ",
+      "sp",
+      "atial",
+      "Ġfield",
+      "Ċ",
+      "l",
+      "aser",
+      "Ċ"
+    ],
+    "input_token_count": 9,
+    "capture_index": 8,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P3_CBA_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P4_ABC": {
+    "prompt_id": "P4_ABC",
+    "probe_id": "P4",
+    "local_permutation": "ABC",
+    "probe_concept_keys": [
+      "B",
+      "C",
+      "D"
+    ],
+    "probe_concepts": [
+      "city",
+      "spatial field",
+      "clubs"
+    ],
+    "concept_key_order": [
+      "B",
+      "C",
+      "D"
+    ],
+    "position_1": "city",
+    "position_2": "spatial field",
+    "position_3": "clubs",
+    "raw_prompt": "city\nspatial field\nclubs\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      8926,
+      198,
+      2154,
+      22433,
+      2070,
+      198,
+      76285,
+      198
+    ],
+    "decoded_tokens": [
+      "city",
+      "Ċ",
+      "sp",
+      "atial",
+      "Ġfield",
+      "Ċ",
+      "clubs",
+      "Ċ"
+    ],
+    "input_token_count": 8,
+    "capture_index": 7,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P4_ABC_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P4_ACB": {
+    "prompt_id": "P4_ACB",
+    "probe_id": "P4",
+    "local_permutation": "ACB",
+    "probe_concept_keys": [
+      "B",
+      "C",
+      "D"
+    ],
+    "probe_concepts": [
+      "city",
+      "spatial field",
+      "clubs"
+    ],
+    "concept_key_order": [
+      "B",
+      "D",
+      "C"
+    ],
+    "position_1": "city",
+    "position_2": "clubs",
+    "position_3": "spatial field",
+    "raw_prompt": "city\nclubs\nspatial field\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      8926,
+      198,
+      76285,
+      198,
+      2154,
+      22433,
+      2070,
+      198
+    ],
+    "decoded_tokens": [
+      "city",
+      "Ċ",
+      "clubs",
+      "Ċ",
+      "sp",
+      "atial",
+      "Ġfield",
+      "Ċ"
+    ],
+    "input_token_count": 8,
+    "capture_index": 7,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P4_ACB_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P4_BAC": {
+    "prompt_id": "P4_BAC",
+    "probe_id": "P4",
+    "local_permutation": "BAC",
+    "probe_concept_keys": [
+      "B",
+      "C",
+      "D"
+    ],
+    "probe_concepts": [
+      "city",
+      "spatial field",
+      "clubs"
+    ],
+    "concept_key_order": [
+      "C",
+      "B",
+      "D"
+    ],
+    "position_1": "spatial field",
+    "position_2": "city",
+    "position_3": "clubs",
+    "raw_prompt": "spatial field\ncity\nclubs\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      2154,
+      22433,
+      2070,
+      198,
+      8926,
+      198,
+      76285,
+      198
+    ],
+    "decoded_tokens": [
+      "sp",
+      "atial",
+      "Ġfield",
+      "Ċ",
+      "city",
+      "Ċ",
+      "clubs",
+      "Ċ"
+    ],
+    "input_token_count": 8,
+    "capture_index": 7,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P4_BAC_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P4_BCA": {
+    "prompt_id": "P4_BCA",
+    "probe_id": "P4",
+    "local_permutation": "BCA",
+    "probe_concept_keys": [
+      "B",
+      "C",
+      "D"
+    ],
+    "probe_concepts": [
+      "city",
+      "spatial field",
+      "clubs"
+    ],
+    "concept_key_order": [
+      "C",
+      "D",
+      "B"
+    ],
+    "position_1": "spatial field",
+    "position_2": "clubs",
+    "position_3": "city",
+    "raw_prompt": "spatial field\nclubs\ncity\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      2154,
+      22433,
+      2070,
+      198,
+      76285,
+      198,
+      8926,
+      198
+    ],
+    "decoded_tokens": [
+      "sp",
+      "atial",
+      "Ġfield",
+      "Ċ",
+      "clubs",
+      "Ċ",
+      "city",
+      "Ċ"
+    ],
+    "input_token_count": 8,
+    "capture_index": 7,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P4_BCA_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P4_CAB": {
+    "prompt_id": "P4_CAB",
+    "probe_id": "P4",
+    "local_permutation": "CAB",
+    "probe_concept_keys": [
+      "B",
+      "C",
+      "D"
+    ],
+    "probe_concepts": [
+      "city",
+      "spatial field",
+      "clubs"
+    ],
+    "concept_key_order": [
+      "D",
+      "B",
+      "C"
+    ],
+    "position_1": "clubs",
+    "position_2": "city",
+    "position_3": "spatial field",
+    "raw_prompt": "clubs\ncity\nspatial field\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      76285,
+      198,
+      8926,
+      198,
+      2154,
+      22433,
+      2070,
+      198
+    ],
+    "decoded_tokens": [
+      "clubs",
+      "Ċ",
+      "city",
+      "Ċ",
+      "sp",
+      "atial",
+      "Ġfield",
+      "Ċ"
+    ],
+    "input_token_count": 8,
+    "capture_index": 7,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P4_CAB_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P4_CBA": {
+    "prompt_id": "P4_CBA",
+    "probe_id": "P4",
+    "local_permutation": "CBA",
+    "probe_concept_keys": [
+      "B",
+      "C",
+      "D"
+    ],
+    "probe_concepts": [
+      "city",
+      "spatial field",
+      "clubs"
+    ],
+    "concept_key_order": [
+      "D",
+      "C",
+      "B"
+    ],
+    "position_1": "clubs",
+    "position_2": "spatial field",
+    "position_3": "city",
+    "raw_prompt": "clubs\nspatial field\ncity\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      76285,
+      198,
+      2154,
+      22433,
+      2070,
+      198,
+      8926,
+      198
+    ],
+    "decoded_tokens": [
+      "clubs",
+      "Ċ",
+      "sp",
+      "atial",
+      "Ġfield",
+      "Ċ",
+      "city",
+      "Ċ"
+    ],
+    "input_token_count": 8,
+    "capture_index": 7,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P4_CBA_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  }
+}

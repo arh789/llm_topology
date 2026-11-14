@@ -41,6 +41,16 @@ single_prompt_topology/runs/*
 !single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/**/*.csv
 single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/*.gz
 single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/**/*.gz
+!single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/
+!single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/*.md
+!single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/*.json
+!single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/*.csv
+!single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/**/
+!single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/**/*.md
+!single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/**/*.json
+!single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/**/*.csv
+single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/*.gz
+single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/**/*.gz
 
 # Model weights and checkpoints
 *.bin
