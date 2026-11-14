@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>R014 Local Semantic Map</title>
+<style>
+:root{color-scheme:dark}body{margin:0;background:#101216;color:#e9ebef;font-family:Georgia,"Times New Roman",serif;font-size:18px;line-height:1.65}main{max-width:980px;margin:auto;padding:48px 28px 80px}h1,h2,h3{font-family:Arial,Helvetica,sans-serif;line-height:1.2;color:#fff}h1{font-size:2.5rem;margin-bottom:1.2rem}h2{font-size:1.6rem;margin-top:3rem;padding-top:1.2rem;border-top:1px solid #343945}h3{font-size:1.2rem;margin-top:2rem}p{margin:.85rem 0}pre{background:#171a20;border:1px solid #343945;border-radius:9px;padding:18px 20px;overflow:auto;white-space:pre;line-height:1.45;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88rem}blockquote{margin:1.4rem 0;padding:.2rem 0 .2rem 1.2rem;border-left:4px solid #7d8796;color:#f4f5f6;font-size:1.05em}table{border-collapse:collapse;width:100%;margin:1.4rem 0;font-family:Arial,Helvetica,sans-serif;font-size:.92rem}th,td{padding:.65rem .7rem;border-bottom:1px solid #343945;text-align:left;vertical-align:top}th{color:#fff}strong{color:#fff}.note{color:#b8bfca}.lead{font-size:1.08em;color:#f3f4f6}@media(max-width:700px){body{font-size:16px}main{padding:28px 16px 60px}h1{font-size:2rem}pre{font-size:.76rem;padding:13px}table{font-size:.82rem}}</style>
+</head>
+<body><main>
+<h1>R014 Local Semantic Map</h1>
+
+<p class="lead">R014 is the first run in the project that tests whether a semantic structure survives changes in both <strong>concept order</strong> and <strong>surrounding concept context</strong>. The result is positive: the four independently reconstructed probes converge on the same local parent structure and on a non-random set of parent relations.</p>
+
+<h2>1. Central result</h2>
+
+<p>The recovered local topology is not a complete graph in which every semantic family is equally related to every other family. It has a stable shape:</p>
+
+<pre>POSITIVE-ALIGNED REGION
+
+TECHNICAL / SENSING ───────── PLACE / ENVIRONMENT
+          \                     /
+           \                   /
+            SPATIAL / STRUCTURAL
+                    
+
+NEGATIVE-ALIGNED REGION
+
+            SPATIAL / STRUCTURAL
+                  /          \
+                 /            \
+SOCIAL / GROUP ACTIVITY ── INTERACTION / CHANGE</pre>
+
+<p><strong>Spatial / structural organisation is the principal semantic bridge.</strong> It participates in the positive technical/place system and independently reappears in the negative social/interaction system. The positive and negative token graphs remain separately measured; the repeated parent identity across sectors is a semantic reconstruction, not a measured cross-sector edge.</p>
+
+<blockquote>The smallest useful description of the R014 region is: technical and sensing structures are situated in places and organised spatially; spatial organisation also structures social/group activity, which is in turn organised through interaction and change.</blockquote>
+
+<h2>2. Why R014 is stronger than R013</h2>
+
+<p>R013 showed that parent structure survived all six orderings of one fixed triplet. R014 changes the third-concept context as well.</p>
+
+<pre>R013
+same concepts
+different order
+      ↓
+ORDER INVARIANCE
+
+R014
+different overlapping concept sets
++
+different order
+      ↓
+ORDER + CONTEXT INVARIANCE</pre>
+
+<p>The four independently analysed probes were:</p>
+
+<pre>P1  laser | city | spatial field
+P2  laser | city | clubs
+P3  laser | spatial field | clubs
+P4  city | spatial field | clubs</pre>
+
+<p>Every seed pair is therefore tested under two different third-concept contexts.</p>
+
+<h2>3. The decisive result: the missing concept comes back</h2>
+
+<p>Each probe deliberately omits one seed concept. If the four concepts really occupy one learned semantic neighbourhood, the remaining three should contain enough structure to reconstruct the missing region. That is what happens.</p>
+
+<table>
+<thead><tr><th>Probe</th><th>Held-out seed</th><th>What reappears</th></tr></thead>
+<tbody>
+<tr><td>P1</td><td>clubs</td><td>Literal <strong>clubs</strong> reappears in all 6 orders across 24 post-context states; the broader social/activity field is persistent on the negative side.</td></tr>
+<tr><td>P2</td><td>spatial field</td><td><strong>field/area</strong> structure reappears in all 6 orders and across all 28 post-context states.</td></tr>
+<tr><td>P3</td><td>city</td><td>Literal <strong>city</strong> reappears in 5/6 orders; the broader place/environment parent remains strong even when the city token itself is absent.</td></tr>
+<tr><td>P4</td><td>laser</td><td>Literal <strong>laser</strong> reappears in all 6 orders across 26 post-context states; technical/sensing structure is present in about 95% of S06-S27 positive networks.</td></tr>
+</tbody>
+</table>
+
+<p>None of <em>laser</em>, <em>city</em>, <em>field</em>, <em>area</em> or <em>clubs</em> appears in the common State-00 community summaries. The held-out recurrence is therefore post-context rather than a property of the identical pre-context anchor state.</p>
+
+<blockquote>R014 therefore exhibits semantic graph completion: neighbouring concepts reconstruct a missing part of the same learned semantic region.</blockquote>
+
+<h2>4. Independent probe reconstruction</h2>
+
+<h3>P1 — laser | city | spatial field</h3>
+<p>The positive topology reconstructs <strong>technical sensing/apparatus</strong>, <strong>built/place environment</strong>, and <strong>spatial/measurement organisation</strong>. The negative topology reconstructs <strong>social/group activity</strong> and <strong>interaction/change</strong>. The important result is that the social branch appears even though <em>clubs</em> is absent.</p>
+
+<h3>P2 — laser | city | clubs</h3>
+<p>The same technical and environmental parents recur positively, while clubs/groups/activity form the dominant negative social field. <strong>Spatial/structural organisation re-emerges despite spatial field being omitted.</strong></p>
+
+<h3>P3 — laser | spatial field | clubs</h3>
+<p>This is the most order-sensitive probe. Nevertheless it again reconstructs technical sensing, spatial organisation and social activity, while <strong>place/environment reappears despite city being omitted</strong>. Even the most divergent P3 permutations retain the same parent inventory while changing the tokens and community boundaries substantially.</p>
+
+<h3>P4 — city | spatial field | clubs</h3>
+<p>This provides the strongest held-out test. <strong>Laser and the wider sensing/technical field reappear despite no technical seed being present.</strong> The negative side again reconstructs social/group activity plus interaction/change.</p>
+
+<h2>5. Cross-probe parent matching</h2>
+
+<p>Only after all four probes were reconstructed independently were their compatible parent families matched. Six recurring parents result:</p>
+
+<pre>CORE
+1. TECHNICAL / SENSING
+2. PLACE / ENVIRONMENT
+3. SPATIAL / STRUCTURAL
+4. SOCIAL / GROUP ACTIVITY
+5. INTERACTION / CHANGE
+
+SECONDARY / OUTPUT-FACING
+6. REPRESENTATION / INFORMATION</pre>
+
+<p>The first five constitute the core local map. Representation/information recurs in every probe but is less central and more sensitive to the output-facing measurement state.</p>
+
+<h2>6. The cross-context edges</h2>
+
+<p>After parent matching, relation recurrence was audited over S06-S27. The values below are downstream semantic diagnostics: the fraction of permutation-state networks in which the relation was instantiated either inside a community or through an inter-community edge.</p>
+
+<table>
+<thead><tr><th>Relation</th><th>Sector</th><th>P1</th><th>P2</th><th>P3</th><th>P4</th><th>Mean</th></tr></thead>
+<tbody>
+<tr><td><strong>technical ↔ place</strong></td><td>positive</td><td>.86</td><td>.80</td><td>.83</td><td>.77</td><td><strong>.82</strong></td></tr>
+<tr><td><strong>spatial ↔ social</strong></td><td>negative</td><td>.89</td><td>.72</td><td>.82</td><td>.80</td><td><strong>.81</strong></td></tr>
+<tr><td>technical ↔ spatial</td><td>positive</td><td>.48</td><td>.58</td><td>.60</td><td>.52</td><td>.54</td></tr>
+<tr><td>social ↔ interaction</td><td>negative</td><td>.42</td><td>.48</td><td>.44</td><td>.64</td><td>.50</td></tr>
+<tr><td>place ↔ spatial</td><td>positive</td><td>.43</td><td>.48</td><td>.48</td><td>.41</td><td>.45</td></tr>
+<tr><td>spatial ↔ interaction</td><td>negative</td><td>.37</td><td>.36</td><td>.38</td><td>.49</td><td>.40</td></tr>
+</tbody>
+</table>
+
+<p>The strongest relations recur in <strong>all four probes</strong>, not merely under different orderings of the same probe.</p>
+
+<h2>7. The weak edges matter too</h2>
+
+<p>The graph is not a generic co-activation cloud. Direct relations are much weaker for:</p>
+
+<pre>technical ↔ social       mean ≈ .24
+place ↔ social           mean ≈ .29
+technical ↔ interaction  mean ≈ .18
+place ↔ interaction      mean ≈ .17</pre>
+
+<p>This negative evidence is important. Merely putting two concepts into the same prompt does not make their reconstructed parents equally connected. The recovered map has selective structure.</p>
+
+<p>The result is therefore better represented as:</p>
+
+<pre>TECHNICAL ─────── PLACE
+     \             /
+      \           /
+        SPATIAL
+        /     \
+       /       \
+  SOCIAL ─── INTERACTION</pre>
+
+<p>rather than:</p>
+
+<pre>TECHNICAL
+  ↕ ↕ ↕ ↕
+PLACE ↔ SPATIAL ↔ SOCIAL ↔ INTERACTION
+  ↕ ↕ ↕ ↕
+everything related equally to everything</pre>
+
+<h2>8. Spatial structure is the bridge node</h2>
+
+<p>The most consequential structural finding is the role of the spatial/structural parent.</p>
+
+<p>On the positive side it connects:</p>
+
+<pre>technical / sensing
+        ↕
+spatial / structural
+        ↕
+place / environment</pre>
+
+<p>On the negative side it connects:</p>
+
+<pre>spatial / structural
+        ↕
+social / group activity
+        ↕
+interaction / change</pre>
+
+<p>This suggests that spatial/structural organisation is not merely another topic in the region. It acts as an organising abstraction capable of relating physical/technical environments to activity and relational structure.</p>
+
+<h2>9. Interaction/change is a genuinely latent node</h2>
+
+<p>No R014 seed concept directly names <em>interaction/change</em>. Yet manipulation, comparison, interaction, transformation, distribution, fragmentation and related vocabulary independently recur across all four probes, predominantly on the negative side.</p>
+
+<p>This makes interaction/change particularly informative for the training-data-map interpretation:</p>
+
+<pre>INPUT CONCEPTS
+laser / city / spatial field / clubs
+        ↓
+MODEL RECONSTRUCTION
+technical / place / spatial / social
+        +
+INTERACTION / CHANGE
+        ↑
+not explicitly supplied</pre>
+
+<p>The map therefore contains structure that was not simply copied from the probe vocabulary.</p>
+
+<h2>10. How the map develops through depth</h2>
+
+<pre>S01-S03
+technical + place activate strongly on the positive side;
+spatial structure appears strongly on the negative side
+
+        ↓
+
+S04-S09
+social/group activity emerges;
+order differences expand;
+the two-sector structure begins to separate
+
+        ↓
+
+S10-S18
+the complete local map is clearest:
+positive technical-place-spatial
+negative spatial-social-interaction
+
+        ↓
+
+S19-S23
+the parent structure persists while exact topology remains plastic
+
+        ↓
+
+S24-S27
+technical/place dominate the positive side;
+social remains nearly universal on the negative side;
+the parent graph remains recoverable across probes
+
+        ↓
+
+S28
+terminal recoding:
+representation/information becomes strongly positive-facing;
+social/interaction remain strongly negative-facing</pre>
+
+<h2>11. Parent structure survives much more strongly than exact topology</h2>
+
+<p>At S27, averaged across the four probes, only about <strong>one fifth of unique tokens</strong> and roughly <strong>4–5% of unique edges</strong> survive all six orders within a probe. P4 is especially severe: only about 14–15% of unique tokens and 2–3% of edges have 6/6 support.</p>
+
+<p>Yet the same core parent families and the same strongest relations are recoverable in all four probes.</p>
+
+<pre>EXACT TOKENS
+low invariance
+
+EXACT EDGES
+very low invariance
+
+COMMUNITY BOUNDARIES
+plastic
+
+PARENT FAMILIES
+cross-probe persistent
+
+PARENT RELATIONS
+cross-probe structured and selective</pre>
+
+<p>This is stronger than R013 because the invariance now survives <strong>context substitution</strong> as well as order permutation.</p>
+
+<h2>12. What R014 tells us about the inferred training-data map</h2>
+
+<p>Under the project premise that the model is an abstraction of its training data, R014 provides the first evidence-backed local semantic map of the learned training distribution.</p>
+
+<p>The inferred local structure is approximately:</p>
+
+<pre>TECHNICAL / SENSING
+        │
+        ├──────── PLACE / ENVIRONMENT
+        │               │
+        └──── SPATIAL / STRUCTURAL
+                        │
+                        ├──────── SOCIAL / GROUP ACTIVITY
+                        │                 │
+                        └──── INTERACTION / CHANGE</pre>
+
+<p>This should not be read as a reconstruction of particular documents. It is an inference about the semantic relationships that were learned strongly enough to reappear across different orders and different surrounding contexts.</p>
+
+<p>The held-out tests are especially important: the local neighbourhood can reconstruct a missing node from its neighbours. That is exactly the behaviour expected from a coherent latent semantic graph.</p>
+
+<h2>13. What R014 changes about the purpose of the pipeline</h2>
+
+<p>R014 makes the project's larger purpose operational rather than merely conceptual.</p>
+
+<pre>R010
+reconstruct semantic structure through depth
+
+R012
+test limited perturbation stability
+
+R013
+identify order-invariant parent structure
+
+R014
+identify order + context-invariant parent relations
+        ↓
+construct local semantic graph
+        ↓
+infer learned training-data topology</pre>
+
+<p>Transformer layers are therefore increasingly the <strong>measurement instrument</strong>, not the final object of study.</p>
+
+<h2>14. Central conclusion</h2>
+
+<blockquote><strong>R014 supports the existence of a local semantic topology that survives both order and context perturbation. The strongest structure is a technical/sensing–place–spatial system on the positive side and a spatial–social–interaction system on the negative side, with spatial/structural organisation acting as the principal parent-level bridge. The graph is selective rather than complete, and omitted seed concepts can be reconstructed from their semantic neighbours.</strong></blockquote>
+
+<blockquote><strong>This is the first run in the project that supports treating persistent cross-probe parent relations—not merely token associations or one-prompt communities—as candidate edges in an inferred semantic map of the model's learned training data.</strong></blockquote>
+
+<h2>15. Recommended next step</h2>
+
+<p>The next experiment should test whether this mapping procedure itself generalises to a <strong>different local semantic region</strong> while keeping the R014 measurement and reconstruction protocol fixed.</p>
+
+<p>The question is no longer whether this one map can be expanded indefinitely. It is whether independent regions produce the same pattern:</p>
+
+<pre>overlapping probes
+        ↓
+held-out semantic reconstruction
+        ↓
+cross-context parent recurrence
+        ↓
+selective persistent edges
+        ↓
+local semantic graph</pre>
+
+<p>If that replicates, the project has a scalable method for progressively assembling a larger model-mediated semantic map of the learned training distribution.</p>
+
+<p class="note">Structured map artefacts: R014_SEMANTIC_MAP_NODES.csv, R014_SEMANTIC_MAP_EDGES.csv and R014_SEMANTIC_MAP.json. Independent probe reconstruction record: R014_PROBE_RECONSTRUCTIONS.md.</p>
+</main></body></html>
