@@ -14920,3 +14920,329 @@ So I would make the immediate progression:
 
 The SDA-3 comparison should be delayed until there is enough independently generated topology for it to potentially fail.
 
+### MA-0091 — Input: ChatGPT’s instructions to Codex for R015
+
+- Entry timestamp: `2026-11-14T16:09:58+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `input — ChatGPT instructions to Codex for R015`
+
+Use this prompt for Codex:
+
+You are working in the existing `arh789/chatgpt-analysis` repository, within the LLM topology project.
+
+Your task is to define and prepare **R015 as a local semantic-neighbourhood expansion of R014**.
+
+## Context
+
+R014 measured the four concepts:
+
+- `laser`
+- `city`
+- `spatial field`
+- `clubs`
+
+R014 used overlapping three-concept probes, all concept permutations, and the existing transformer-layer/community methodology to determine whether semantic structures persisted despite changes in concept order and third-concept context.
+
+Its downstream reconstruction recovered six recurrent parent families:
+
+1. technical / sensing
+2. place / environment
+3. spatial / structural
+4. social / group activity
+5. interaction / change
+6. representation / information
+
+The first four corresponded closely to the four seed regions. `interaction / change` emerged independently rather than being supplied as a seed. `representation / information` was recurrent but secondary and more output-position sensitive.
+
+Important R014 findings included:
+
+- technical/sensing ↔ place/environment was the strongest recurrent positive relation;
+- spatial/structural ↔ social/group activity was the strongest recurrent negative relation;
+- spatial/structural behaved as the main parent-level bridge;
+- each probe could reconstruct the semantic region associated with its held-out seed;
+- the inferred topology was structured rather than simply showing generic co-activation.
+
+The purpose of R015 is **not** to move to a distant semantic region and not yet to compare the results with SDA-3.
+
+R015 should instead test whether the R014 topology extends coherently into **adjacent semantic space**.
+
+## R015 concepts
+
+Freeze the following exact lowercase concept strings:
+
+- `sensor`
+- `apartment`
+- `line`
+- `sessions`
+
+They are intended as neighbouring replacements for the R014 seeds:
+
+```text
+R014 seed          R015 concept       R014 recovered family
+------------------------------------------------------------
+laser              sensor             technical / sensing
+city               apartment          place / environment
+spatial field      line               spatial / structural
+clubs              sessions           social / group activity
+```
+
+These concepts were chosen because they appeared recurrently within the corresponding R014 reconstructed families.
+
+The selection deliberately avoids using the inferred parent labels themselves as prompts.
+
+Do **not** substitute:
+
+- `technical`
+- `environment`
+- `spatial`
+- `structural`
+- `social`
+- `group`
+- `interaction`
+- `change`
+- `representation`
+- `information`
+
+as R015 seed concepts.
+
+Do not introduce `interaction / change` or `representation / information` as explicit R015 seeds. Their behaviour as previously emergent or secondary parents should remain available as an independent test.
+
+## Core research question
+
+R015 should answer:
+
+> Does the semantic topology recovered in R014 continue, deform, split, merge or terminate when the observation window moves to neighbouring concepts within the same semantic region?
+
+A stronger formulation is:
+
+> If all four R014 seeds are replaced by neighbouring concepts recovered from their respective R014 semantic families, does independent reconstruction recover substantially the same higher-order semantic structure?
+
+## Experimental principle
+
+R015 should be, as far as possible, a **rerun of the R014 design with only the four concept inputs changed**.
+
+Do not introduce unnecessary methodological changes.
+
+Preserve the existing:
+
+- model and revision;
+- tokenizer;
+- hidden-state capture methodology;
+- anchor/control state;
+- layer coverage;
+- graph construction;
+- threshold/cut-off methodology;
+- positive/negative sector treatment;
+- community detection;
+- permutation design;
+- state definitions;
+- output artefact structure;
+- semantic reconstruction procedure;
+- validation and completeness checks.
+
+Any unavoidable deviation from R014 must be explicitly documented and justified.
+
+## Probe design
+
+Follow the same balanced overlapping-context logic used in R014.
+
+From the four concepts:
+
+```text
+sensor
+apartment
+line
+sessions
+```
+
+construct the four three-concept probes, each holding out exactly one concept:
+
+```text
+P1: sensor | apartment | line
+    held out: sessions
+
+P2: sensor | apartment | sessions
+    held out: line
+
+P3: sensor | line | sessions
+    held out: apartment
+
+P4: apartment | line | sessions
+    held out: sensor
+```
+
+For each probe, measure all six concept-order permutations exactly as in R014.
+
+The held-out concept test is important. Determine whether the missing semantic region is reconstructed from the remaining three neighbouring concepts.
+
+## Critical methodological constraint
+
+Do **not** impose the R014 parent labels on R015 communities.
+
+R015 must first be reconstructed independently.
+
+For each probe:
+
+1. inspect the underlying measured communities;
+2. infer the most defensible parent candidates from the recurrent community content;
+3. identify persistent relations within that probe;
+4. record evidence across permutations, states, layers and sectors;
+5. only after all four probe reconstructions are complete, perform cross-probe matching;
+6. only after the R015 map exists independently, compare it with R014.
+
+The R014 labels may be used later for comparison, but they must not become the ontology through which R015 is initially interpreted.
+
+Avoid circular validation.
+
+## Required comparisons
+
+Once the R015 map has been reconstructed independently, compare R015 with R014 at three levels.
+
+### 1. Parent continuity
+
+Determine for each R014 parent whether R015 shows:
+
+- persistence;
+- deformation;
+- split;
+- merge;
+- disappearance;
+- replacement;
+- stronger/weaker expression;
+- sector migration.
+
+### 2. Relation continuity
+
+Compare recurrent parent relations, especially the R014 relations:
+
+```text
+technical/sensing ↔ place/environment
+technical/sensing ↔ spatial/structural
+place/environment ↔ spatial/structural
+spatial/structural ↔ social/group activity
+social/group activity ↔ interaction/change
+spatial/structural ↔ interaction/change
+technical/sensing ↔ representation/information
+```
+
+Do not assume these relations must recur. Treat their persistence or failure as evidence.
+
+### 3. Emergent structures
+
+Determine whether semantic families corresponding to the previous R014 emergent structures:
+
+```text
+interaction / change
+representation / information
+```
+
+reappear even though neither is supplied as an R015 seed.
+
+This is an important test of whether those structures belong to the neighbourhood rather than being incidental artefacts of the original prompt set.
+
+## Interpretation
+
+The strongest possible positive result would be:
+
+> R015 independently reconstructs substantially the same higher-order semantic organisation as R014 despite replacing every original seed with a neighbouring concept.
+
+That would strengthen the interpretation that R014 recovered a local semantic topology rather than merely decomposing the literal prompt concepts.
+
+A meaningful negative result is equally important. If the structure changes sharply, identify where the boundary appears and which substitutions caused the topology to reorganise.
+
+Do not smooth contradictory evidence into apparent continuity.
+
+## Repository work
+
+Before making changes:
+
+1. inspect the current repository state;
+2. inspect the complete R014 implementation, plan, configuration, execution artefacts and semantic-map analysis;
+3. identify exactly which R014 files should be reused, copied or parameterised for R015;
+4. verify that no later repository changes already implement or alter this experiment.
+
+Use the existing project structure and naming conventions.
+
+Create an R015 plan and any required configuration/execution files in the corresponding `single_prompt_topology` structure.
+
+Do not modify R014 artefacts.
+
+Prefer reuse or parameterisation of proven R014 code over unnecessary duplication, provided this does not alter R014 reproducibility.
+
+## Required records
+
+At minimum, preserve:
+
+- R015 objective;
+- exact four concept strings;
+- concept-selection rationale;
+- exact probe definitions;
+- permutation definitions;
+- model/tokenizer/configuration;
+- methodological equivalence with R014;
+- any deviations from R014;
+- execution log;
+- completeness verification;
+- measurement report;
+- independent probe reconstructions;
+- cross-probe parent matching;
+- held-out reconstruction evidence;
+- semantic-map nodes;
+- semantic-map edges;
+- final R015 semantic map;
+- explicit R014 ↔ R015 comparison;
+- caveats and unsupported claims.
+
+Every inferred node and edge should remain traceable back to measured communities, states, permutations, sectors and tokens.
+
+## Objective–State–Execution discipline
+
+Before execution, explicitly state:
+
+### Objective
+- What is the stated objective?
+- What is the inferred objective?
+- What constitutes success?
+- What constitutes failure?
+- What is inside scope?
+- What is outside scope?
+- What evidence supports the proposed experiment?
+
+### State
+- What currently exists in the repository?
+- Is R014 complete and reproducible?
+- Which files and methods establish the R014 baseline?
+- Are the four proposed R015 concepts supported by R014 evidence?
+- Which assumptions remain uncertain?
+
+### Execution
+Proceed through bounded operations, verifying each result before continuing.
+
+Do not allow scope drift into:
+
+- distant-region replication;
+- SDA-3 comparison;
+- changing the measurement methodology;
+- introducing new seed families;
+- prematurely interpreting R015 through the R014 ontology.
+
+## Immediate task
+
+Inspect the repository and R014 evidence first.
+
+Then produce the strongest evidence-supported R015 experimental plan using:
+
+```text
+sensor
+apartment
+line
+sessions
+```
+
+If the repository evidence materially contradicts the assumption that these four concepts are appropriate neighbouring replacements, report that contradiction explicitly and identify the strongest evidence-supported alternative set before changing the experiment.
+
+Otherwise, proceed with preparing R015 according to the instructions above.
+
+This version gives Codex enough context to reconstruct the experimental logic without needing the preceding conversation, while preserving R015 as an independent test rather than a forced reproduction of R014.
+
