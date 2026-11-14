@@ -1,0 +1,7 @@
+node_id,label,probe_support,sector_tendency,map_role,held_out_evidence,notes
+N1,technical / sensing,4/4,positive,core,"P4 omits laser; literal laser reappears in 6/6 permutations across 26 post-context states","laser sensor sensors electrodes batteries optical wavelength device signal"
+N2,place / environment,4/4,positive-dominant,core,"P3 omits city; literal city reappears in 5/6 permutations and broader place evidence is strong","city apartment kitchen urban street regions named places"
+N3,spatial / structural,4/4,both sectors,bridge,"P2 omits spatial field; field/area material reappears in 6/6 permutations across all 28 post-context states","field area line space parameters statistical measurement geometry"
+N4,social / group activity,4/4,negative,core,"P1 omits clubs; literal clubs reappear in 6/6 permutations across 24 post-context states","clubs groups activities sessions teams exhibitions sports"
+N5,interaction / change,4/4,negative-dominant,emergent,"No R014 seed concept directly names this parent; it emerges independently across all four probes","interaction manipulation comparison transformation distribution fragmentation change"
+N6,representation / information,4/4,positive / terminal,secondary,"No seed concept directly names this parent; report/data/image/system vocabulary recurs across probes","less central and more capture/output-position sensitive than N1-N5"
