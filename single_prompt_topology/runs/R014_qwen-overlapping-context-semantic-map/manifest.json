@@ -1,0 +1,385 @@
+{
+  "schema_version": 1,
+  "run_id": "R014_qwen-overlapping-context-semantic-map",
+  "status": "successful",
+  "started_at": "2026-11-14T00:03:16.962286+00:00",
+  "completed_at": "2026-11-14T01:45:13.766710+00:00",
+  "failure_details": null,
+  "source_git_commit": "e5299b205a296a8721ae114449add57b870650f9",
+  "source_git_status": "M .gitignore\n?? single_prompt_topology/R014_CONCEPT_SELECTION_EVIDENCE.md\n?? single_prompt_topology/R014_PLAN.md\n?? single_prompt_topology/r014_capture_hidden_states.py\n?? single_prompt_topology/r014_config.py\n?? single_prompt_topology/r014_run.py\n?? single_prompt_topology/r014_semantic_topology.py",
+  "objective": "Measure order and context invariance across four overlapping concept probes and 24 controlled final-anchor prompts.",
+  "model": {
+    "id": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "precision": "bfloat16",
+    "cache_only": true
+  },
+  "expected": {
+    "probes": 4,
+    "prompts": 24,
+    "permutations_per_probe": 6,
+    "states": 29,
+    "hidden_width": 3584,
+    "sides": 2,
+    "networks": 1392,
+    "adjacent_state_comparisons": 1344,
+    "within_probe_matched_state_pair_comparisons": 3480
+  },
+  "required_components": [
+    "plan_lock",
+    "concept_selection_lock",
+    "environment_probe",
+    "anchor_probe",
+    "primary_capture",
+    "capture_validation",
+    "projection_and_cutoffs",
+    "split_networks_and_communities",
+    "within_prompt_transitions",
+    "within_probe_permutation_comparisons",
+    "within_probe_invariance",
+    "chatgpt_exports",
+    "completeness_validation",
+    "run_report"
+  ],
+  "components": {
+    "plan_lock": {
+      "status": "successful",
+      "completed_at": "2026-11-14T00:03:16.962286+00:00",
+      "path": "single_prompt_topology/R014_PLAN.md",
+      "sha256": "581beac492d9b6f5b1be69109ab1f427c4b02a7d3194db516f93557ac381a630"
+    },
+    "concept_selection_lock": {
+      "status": "successful",
+      "completed_at": "2026-11-14T00:03:16.962286+00:00",
+      "path": "single_prompt_topology/R014_CONCEPT_SELECTION_EVIDENCE.md",
+      "sha256": "effe2ac2152da32980b81da33a599d29be0156111b3f4a7e504094145c3aeb97"
+    },
+    "environment_probe": {
+      "status": "successful",
+      "completed_at": "2026-11-14T00:03:16.962286+00:00",
+      "python": "3.11.15 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:12:15) [MSC v.1942 64 bit (AMD64)]",
+      "executable": "C:\\Users\\arhal\\anaconda3\\envs\\myenv\\python.exe",
+      "torch": "2.6.0+cu124",
+      "transformers": "5.12.1",
+      "numpy": "2.4.4",
+      "pandas": "3.0.3",
+      "networkx": "3.6.1",
+      "sklearn": "1.8.0",
+      "safetensors": "0.8.0",
+      "gpu_name": "NVIDIA GeForce RTX 4090",
+      "gpu_total_bytes": 25756696576,
+      "gpu_free_bytes": 24159191040
+    },
+    "anchor_probe": {
+      "status": "successful",
+      "completed_at": "2026-11-14T00:03:33.703960+00:00",
+      "anchor_text": "\\n",
+      "anchor_token_id": 198,
+      "anchor_token": "Ċ",
+      "single_token": true,
+      "final_anchor_matches_all_prompts": true,
+      "input_token_counts": {
+        "P1_ABC": 9,
+        "P1_ACB": 9,
+        "P1_BAC": 9,
+        "P1_BCA": 9,
+        "P1_CAB": 9,
+        "P1_CBA": 9,
+        "P2_ABC": 7,
+        "P2_ACB": 7,
+        "P2_BAC": 7,
+        "P2_BCA": 7,
+        "P2_CAB": 7,
+        "P2_CBA": 7,
+        "P3_ABC": 9,
+        "P3_ACB": 9,
+        "P3_BAC": 9,
+        "P3_BCA": 9,
+        "P3_CAB": 9,
+        "P3_CBA": 9,
+        "P4_ABC": 8,
+        "P4_ACB": 8,
+        "P4_BAC": 8,
+        "P4_BCA": 8,
+        "P4_CAB": 8,
+        "P4_CBA": 8
+      }
+    },
+    "primary_capture": {
+      "status": "successful",
+      "completed_at": "2026-11-14T00:03:49.432008+00:00",
+      "probe_count": 4,
+      "prompt_count": 24,
+      "permutations_per_probe": 6,
+      "state_count": 29,
+      "hidden_width": 3584,
+      "response_generation_executed": false
+    },
+    "capture_validation": {
+      "status": "successful",
+      "completed_at": "2026-11-14T00:03:49.534492+00:00",
+      "state_00_exact_equal_all_prompts": true,
+      "deterministic_replay_exact": true,
+      "all_finite": true,
+      "pair_state_metric_rows": 1740
+    },
+    "projection_and_cutoffs": {
+      "status": "successful",
+      "completed_at": "2026-11-14T00:07:08.456886+00:00",
+      "seconds": 180.1410044999975,
+      "score_shape": [
+        24,
+        29,
+        151665
+      ],
+      "vocabulary_size": 151665,
+      "excluded_capture_token_id": 198,
+      "cutoff_rows": 696,
+      "membership_rows": 10447003,
+      "embedding_shard": "model-00001-of-00004.safetensors",
+      "full_embedding_rows": 152064,
+      "usable_tokenizer_rows": 151665,
+      "padded_embedding_rows_excluded": 399,
+      "model_forward_executed": false
+    },
+    "split_networks_and_communities": {
+      "status": "successful",
+      "completed_at": "2026-11-14T01:45:10.081151+00:00",
+      "seconds": 5881.622904399999,
+      "network_count": 1392,
+      "node_rows": 10447003,
+      "directed_edge_rows": 104470030,
+      "community_rows": 14686,
+      "intercommunity_edge_rows": 70725
+    },
+    "within_prompt_transitions": {
+      "status": "successful",
+      "completed_at": "2026-11-14T01:45:10.082156+00:00",
+      "seconds": 0.00026060000163852237,
+      "transition_rows": 1344,
+      "minimum_membership_jaccard": 0.012364545707140873,
+      "minimum_edge_jaccard": 0.0006472984807523893
+    },
+    "within_probe_permutation_comparisons": {
+      "status": "successful",
+      "completed_at": "2026-11-14T01:45:10.084162+00:00",
+      "seconds": 0.00027119999867863953,
+      "pairwise_comparison_rows": 3480,
+      "minimum_membership_jaccard": 0.28935052138927664,
+      "minimum_edge_jaccard": 0.10480095468314923
+    },
+    "within_probe_invariance": {
+      "status": "successful",
+      "completed_at": "2026-11-14T01:45:10.085161+00:00",
+      "seconds": 1.9199997041141614e-05,
+      "summary_rows": 2784,
+      "token_support_rows": 3244887,
+      "edge_support_rows": 34622652,
+      "support_levels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "token_and_edge_support_separate": true
+    },
+    "chatgpt_exports": {
+      "status": "successful",
+      "completed_at": "2026-11-14T01:45:11.725831+00:00",
+      "seconds": 1.6398740000004182,
+      "json_networks": 1392,
+      "markdown_state_sections": 29,
+      "semantic_labels_added": false
+    },
+    "completeness_validation": {
+      "status": "successful",
+      "completed_at": "2026-11-14T01:45:11.750977+00:00",
+      "seconds": 0.023933099997520912,
+      "networks_verified": 1392,
+      "nodes_verified": 10447003,
+      "directed_edges_verified": 104470030,
+      "communities_verified": 14686,
+      "state_zero_all_pairs_identity_verified": true,
+      "token_support_rows_verified": 3244887,
+      "edge_support_rows_verified": 34622652
+    },
+    "run_report": {
+      "status": "successful",
+      "completed_at": "2026-11-14T01:45:11.754196+00:00",
+      "seconds": 0.002518400000553811,
+      "path": "single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/R014_MEASUREMENT_REPORT.md"
+    }
+  },
+  "artifacts": {
+    "vocabulary_scores.safetensors": {
+      "bytes": 422235760,
+      "sha256": "4ec7910c9a316f6e29cf35970c0adc69df4d3091f243a8eb3b44bc8c6ef70cff"
+    },
+    "cutoffs.csv": {
+      "bytes": 191206,
+      "sha256": "d40588c95bae93d8c6de8c9a30199bd3b0d9b01844c112f136034fad76964e1a"
+    },
+    "tail_tokens.csv.gz": {
+      "bytes": 254391154,
+      "sha256": "7a8a698141a3b6da826049e77a21ba9a3275111592403c3440a378bd39b8154b"
+    },
+    "network_index.csv": {
+      "bytes": 378076,
+      "sha256": "09eca22dc07ca70ce47a66a53b3f44d56cd33e5e7495b9031912288c5a75b651"
+    },
+    "nodes.csv.gz": {
+      "bytes": 267850133,
+      "sha256": "7483b963a9292149b63989f492bca34c7945337b9820e15003a20c52967eeb8e"
+    },
+    "edges.csv.gz": {
+      "bytes": 1137717255,
+      "sha256": "7168a6b89b623d869e82d92814a353ea395cec7088aa354228a1ab450328a5fb"
+    },
+    "community_nodes.csv": {
+      "bytes": 9025156,
+      "sha256": "c91a0da002980157be9cc5125f25ab50e2ddd86e7853171775aa2902bb3d3172"
+    },
+    "community_edges.csv": {
+      "bytes": 6696397,
+      "sha256": "b5205e9b930e251467ec88a15f11781b6d0e60d1f3561d4198ae740160a2b5c7"
+    },
+    "state_transitions.csv": {
+      "bytes": 213611,
+      "sha256": "8ea1682c1c0a6a2d6c23f3266b57e68a019e61c0249c0c9d4419c85f91bae797"
+    },
+    "pairwise_permutation_comparisons.csv": {
+      "bytes": 521103,
+      "sha256": "62c42ff89775dda361b36bedc202eb5d931710c480231d63f9920f27e6e36faf"
+    },
+    "permutation_invariance.csv": {
+      "bytes": 208763,
+      "sha256": "08eb2d4ec054a9715a95a943ef031eeba1680926182e3b8dab75b5c791a2b8c3"
+    },
+    "token_permutation_support.csv.gz": {
+      "bytes": 33871075,
+      "sha256": "8efdc7c18ae3f5cccafa1f511a818acb32b167c6d7ab55c717ab88304b907779"
+    },
+    "edge_permutation_support.csv.gz": {
+      "bytes": 209523632,
+      "sha256": "da6c5b5da0ba4f861c8878e893aa903cf162cd56a0554cbea20d49dac962692a"
+    },
+    "community_transition_evidence.csv": {
+      "bytes": 6687216,
+      "sha256": "4e72cc3e829a8e52848431f8bec33e2e67d9532b5a51e1cb8ce69d338965784d"
+    },
+    "chatgpt_community_networks.json": {
+      "bytes": 37741738,
+      "sha256": "0129721715c25d4d2706809750a6d10b6d8316d0c46f2645d724bfce7a0d31c2"
+    },
+    "chatgpt_layer_packets.md": {
+      "bytes": 5529922,
+      "sha256": "1256d6236d615ff229ede936948829e8b6d27121649758e60146fa205f236224"
+    },
+    "R014_COMPLETENESS_VERIFICATION.md": {
+      "bytes": 837,
+      "sha256": "dafc9b56b1d32b3a67ef3dd8739f16afee3b2955a216a6fc82791ebd3baa4b18"
+    },
+    "R014_MEASUREMENT_REPORT.md": {
+      "bytes": 2497,
+      "sha256": "375bea62c28550aef99da26c63cda44f5ff14df818e88da49bac048d3ef531b3"
+    }
+  },
+  "status_history": [],
+  "execution_attempts": [
+    {
+      "started_at": "2026-11-14T00:03:16.962286+00:00",
+      "status": "successful",
+      "completed_at": "2026-11-14T01:45:13.766710+00:00",
+      "seconds": 6065.4512316
+    }
+  ],
+  "interpretation_boundary": "R014 produces measured within-probe topology and invariance evidence only; semantic parents, cross-probe map nodes/edges, SDA/GRD roles, coherence and semantic curvature are excluded.",
+  "pipeline": {
+    "orchestrator": "single_prompt_topology/r014_run.py",
+    "capture_script": "single_prompt_topology/r014_capture_hidden_states.py",
+    "topology_script": "single_prompt_topology/r014_semantic_topology.py",
+    "topology_script_sha256": "5f88cbeefa07733f3ecdcca1e8307b91c5d7e12f5927f90e1461f0b5d4071809",
+    "plan": "single_prompt_topology/R014_PLAN.md",
+    "plan_sha256": "581beac492d9b6f5b1be69109ab1f427c4b02a7d3194db516f93557ac381a630",
+    "concept_selection_evidence": "single_prompt_topology/R014_CONCEPT_SELECTION_EVIDENCE.md",
+    "concept_selection_evidence_sha256": "effe2ac2152da32980b81da33a599d29be0156111b3f4a7e504094145c3aeb97",
+    "prompt_config": "single_prompt_topology/r014_config.py",
+    "prompt_config_sha256": "00d0b52b59d51052363b1e6c19eb381a85be283c1f6d25706362ff607b71af35",
+    "measurement_functions_reused_from": "single_prompt_topology/r012_semantic_topology.py",
+    "model_backend": "direct Qwen Transformers capture artifacts",
+    "downstream_analysis": "independent semantic reconstruction per probe, followed by cross-probe parent and relation matching"
+  },
+  "results": {
+    "network_count": 1392,
+    "selected_membership_rows": 10447003,
+    "directed_edge_rows": 104470030,
+    "community_count": 14686,
+    "adjacent_transition_rows": 1344,
+    "pairwise_comparison_rows": 3480,
+    "invariance_summary_rows": 2784,
+    "token_support_rows": 3244887,
+    "edge_support_rows": 34622652,
+    "minimum_within_probe_membership_jaccard": 0.28935052138927664,
+    "minimum_within_probe_edge_jaccard": 0.10480095468314923,
+    "final_six_of_six_cores": {
+      "P1": {
+        "positive_head": {
+          "unique_tokens": 13970,
+          "six_of_six_tokens": 4871,
+          "unique_edges": 143002,
+          "six_of_six_edges": 15864
+        },
+        "negative_tail": {
+          "unique_tokens": 13802,
+          "six_of_six_tokens": 4789,
+          "unique_edges": 139799,
+          "six_of_six_edges": 15888
+        }
+      },
+      "P2": {
+        "positive_head": {
+          "unique_tokens": 12114,
+          "six_of_six_tokens": 4648,
+          "unique_edges": 123050,
+          "six_of_six_edges": 16022
+        },
+        "negative_tail": {
+          "unique_tokens": 12532,
+          "six_of_six_tokens": 4721,
+          "unique_edges": 127372,
+          "six_of_six_edges": 16677
+        }
+      },
+      "P3": {
+        "positive_head": {
+          "unique_tokens": 13967,
+          "six_of_six_tokens": 4535,
+          "unique_edges": 143504,
+          "six_of_six_edges": 14161
+        },
+        "negative_tail": {
+          "unique_tokens": 13564,
+          "six_of_six_tokens": 4333,
+          "unique_edges": 139051,
+          "six_of_six_edges": 13365
+        }
+      },
+      "P4": {
+        "positive_head": {
+          "unique_tokens": 16111,
+          "six_of_six_tokens": 3497,
+          "unique_edges": 169936,
+          "six_of_six_edges": 8228
+        },
+        "negative_tail": {
+          "unique_tokens": 16127,
+          "six_of_six_tokens": 3469,
+          "unique_edges": 170683,
+          "six_of_six_edges": 8622
+        }
+      }
+    }
+  }
+}

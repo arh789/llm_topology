@@ -14611,3 +14611,71 @@ independent probe reconstruction
 The Step 12 correction is important: R014 must test whether higher-order stability exceeds lower-level stability, not assume that it will.
 
 R014 is now sufficiently specified. The next action is to commit the pending meta-analysis entries, create and freeze `R014_PLAN.md`, verify the four concepts against R013 evidence, and run the measurement pipeline.
+
+
+### MA-0088 — R014 measured execution and completeness record
+
+- Entry timestamp: `2026-11-14T12:46:32+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex execution record`
+- Entry type: `measured run record`
+- Related run: `R014_qwen-overlapping-context-semantic-map`
+
+R014 executed the frozen four-concept, four-probe design using the unchanged
+R013 Qwen2.5-7B-Instruct capture and topology method. The four probes were:
+
+```text
+P1 = laser | city | spatial field
+P2 = laser | city | clubs
+P3 = laser | spatial field | clubs
+P4 = city | spatial field | clubs
+```
+
+All six within-probe permutations were captured at the same final newline
+anchor, giving 24 prompts. Capture passed all technical gates:
+
+- 29 states of width 3,584 per prompt;
+- one shared anchor token, ID `198`;
+- exact deterministic replay;
+- finite hidden states;
+- exact State 00 equality across all 24 prompts; and
+- no response generation.
+
+The completed measured coverage is:
+
+```text
+1,392 state-local positive/negative networks
+1,344 within-prompt adjacent-state comparisons
+3,480 within-probe matched-state permutation comparisons
+2,784 invariance summary rows
+10,447,003 selected token memberships
+104,470,030 directed exact 10-nearest-neighbour edges
+14,686 state-local communities
+3,244,887 token-support rows
+34,622,652 edge-support rows
+```
+
+The production manifest is `successful`, and an independent post-run check
+confirmed the exact row counts, unique network/transition/comparison keys, six
+prompts per probe-state-side group, all 14,686 community rows and all 1,392
+networks in `chatgpt_community_networks.json`.
+
+Measured extrema recorded by the run include:
+
+- minimum within-probe membership Jaccard: `0.289351`, `P3_ABC` versus
+  `P3_CAB`, State 13, negative tail;
+- minimum within-probe edge Jaccard: `0.104801`, the same prompt pair at State
+  10, positive head; and
+- minimum adjacent-state membership Jaccard: `0.012365`, `P1_CAB` negative
+  tail, State 00 to State 01.
+
+At final State 28, the 6/6 token cores range from 3,469 to 4,871 tokens across
+probe and side, while the 6/6 edge cores range from 8,228 to 16,677 edges.
+These are structural measurements, not semantic identities.
+
+R014 deliberately stops before semantic interpretation. No parent labels,
+cross-probe map nodes or edges, SDA/GRD roles, coherence claims or semantic
+curvature claims were added. The next analytical stage is to reconstruct each
+probe independently, identify its permutation-invariant parents and relations,
+and only then match those structures across probes to determine whether a
+local semantic map is supported.

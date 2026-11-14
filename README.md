@@ -9,8 +9,9 @@ representation geometry.
 The package contains a research design, one behavioural case mapping, an
 executed model playground, one successful single-prompt hidden-state capture
 from Pythia 6.9B, one successful paired whole-prompt Qwen topology run, one
-successful six-permutation bare-concept Qwen topology run, five earlier
-measured derived analyses and two completed interpretive runs. R002 created the
+successful six-permutation bare-concept Qwen topology run, one successful
+four-probe overlapping-context Qwen topology run, five earlier measured
+derived analyses and two completed interpretive runs. R002 created the
 full-vocabulary static-basis
 score matrix; R003 tested an unnecessarily gated boundary policy; R004 retains
 the full-curve upper and lower elbow cutoffs at all states without that
@@ -44,6 +45,12 @@ permutation-pair comparisons. The smallest cross-order membership and edge
 Jaccards were 0.320201 and 0.125235. Separate token and edge support evidence
 identifies the structures present in 1/6 through 6/6 permutations without
 semantically interpreting them.
+R014 extends that exact method to four overlapping concept triplets and all 24
+within-triplet orders. It produces 1,392 networks, 14,686 state-local
+communities, 1,344 adjacent-state comparisons and 3,480 within-probe
+permutation comparisons. The complete measured exports support independent
+semantic reconstruction of each probe before any cross-probe parent or
+relation matching. R014 itself does not infer the local semantic map.
 
 R005 found greater nearest-neighbour density and positive/negative segregation
 than a size-matched random null at all 33 states, but its communities also
@@ -170,6 +177,18 @@ and are not versioned here.
     — the complete compact measured network package for downstream semantic analysis.
 47. [`single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/R013_COMPLETENESS_VERIFICATION.md`](single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/R013_COMPLETENESS_VERIFICATION.md)
     — exact capture, network, comparison, invariance and referential-integrity verification.
+48. [`single_prompt_topology/R014_PLAN.md`](single_prompt_topology/R014_PLAN.md)
+    — the locked four-probe overlapping-context measurement contract.
+49. [`single_prompt_topology/R014_CONCEPT_SELECTION_EVIDENCE.md`](single_prompt_topology/R014_CONCEPT_SELECTION_EVIDENCE.md)
+    — the measured R013 evidence supporting the four concrete R014 concepts.
+50. [`single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/R014_MEASUREMENT_REPORT.md`](single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/R014_MEASUREMENT_REPORT.md)
+    — the completed R014 measurement coverage and factual structural findings.
+51. [`single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/chatgpt_layer_packets.md`](single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/chatgpt_layer_packets.md)
+    — all four probes, 24 prompts, 29 states and both sectors in a readable analytical packet.
+52. [`single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/chatgpt_community_networks.json`](single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/chatgpt_community_networks.json)
+    — the complete compact measured network package for downstream independent semantic reconstruction.
+53. [`single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/R014_COMPLETENESS_VERIFICATION.md`](single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/R014_COMPLETENESS_VERIFICATION.md)
+    — exact network, transition, comparison, invariance and export verification.
 
 ## Provenance
 
