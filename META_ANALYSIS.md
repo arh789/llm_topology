@@ -14679,3 +14679,164 @@ curvature claims were added. The next analytical stage is to reconstruct each
 probe independently, identify its permutation-invariant parents and relations,
 and only then match those structures across probes to determine whether a
 local semantic map is supported.
+
+### MA-0089 — ChatGPT semantic analysis record: R014 local semantic map
+
+- Entry date: `2026-11-14`
+- Author/source: `ChatGPT`
+- Entry type: `downstream semantic reconstruction and cross-probe map record`
+- Related run: `R014_qwen-overlapping-context-semantic-map`
+- Analysis report: `single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/R014_RUN_ANALYSIS_AND_RECOMMENDATIONS.html`
+- Independent reconstruction record: `single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/R014_PROBE_RECONSTRUCTIONS.md`
+- Structured map artefacts: `R014_SEMANTIC_MAP_NODES.csv`, `R014_SEMANTIC_MAP_EDGES.csv`, `R014_SEMANTIC_MAP.json`
+
+ChatGPT completed the downstream R014 semantic phase using only the completed
+measured R014 artefacts. No model forward pass, cutoff change, graph
+reconstruction or community re-detection was performed.
+
+The four probes were reconstructed independently before any cross-probe parent
+matching:
+
+```text
+P1 = laser | city | spatial field
+P2 = laser | city | clubs
+P3 = laser | spatial field | clubs
+P4 = city | spatial field | clubs
+```
+
+Each independent reconstruction recovered compatible higher-order families.
+Only after those reconstructions were complete were the compatible structures
+matched into six cross-probe parents:
+
+1. technical / sensing;
+2. place / environment;
+3. spatial / structural;
+4. social / group activity;
+5. interaction / change; and
+6. representation / information.
+
+The first five form the core local semantic map. Representation/information is
+retained as a secondary/output-facing node because it recurs across all probes
+but is more sensitive to capture/output position.
+
+A critical R014 result is held-out semantic reconstruction. Each probe omits
+one seed concept, yet the missing semantic region is reconstructed from the
+remaining three:
+
+- P1 omits `clubs`; literal clubs reappears in all six permutations across 24
+  post-context states, and the negative-side social/activity field is
+  persistent.
+- P2 omits `spatial field`; field/area material reappears in all six
+  permutations across all 28 post-context states.
+- P3 omits `city`; literal city reappears in five of six permutations, while
+  the broader place/environment parent remains strong.
+- P4 omits `laser`; literal laser reappears in all six permutations across 26
+  post-context states, and technical/sensing structure is present in about 95%
+  of S06-S27 positive networks.
+
+None of `laser`, `city`, `field`, `area` or `clubs` appears in the common
+State-00 community summaries. The held-out recurrence is therefore
+post-context rather than inherited from the identical pre-context anchor
+state. This is recorded as semantic graph-completion evidence: neighbouring
+concepts reconstruct a missing region of the same learned semantic
+neighbourhood.
+
+Cross-probe parent relations were then audited over S06-S27. A relation was
+counted as instantiated when its two reconstructed families occurred either in
+one community or in distinct communities joined by an inter-community edge.
+These are downstream semantic diagnostics rather than original R014 measured
+metrics.
+
+The strongest recurring relations are:
+
+```text
+positive:
+technical <-> place          mean support ≈ .82
+technical <-> spatial        mean support ≈ .54
+place <-> spatial            mean support ≈ .45
+
+negative:
+spatial <-> social           mean support ≈ .81
+social <-> interaction       mean support ≈ .50
+spatial <-> interaction      mean support ≈ .40
+```
+
+Every relation above recurs in all four probes. Direct technical-social,
+technical-interaction and place-interaction relations are substantially weaker.
+The resulting graph is therefore selective rather than a generic co-activation
+cloud.
+
+The minimum cross-context semantic topology is:
+
+```text
+POSITIVE-ALIGNED REGION
+
+TECHNICAL / SENSING -------- PLACE / ENVIRONMENT
+          \                   /
+           \                 /
+            SPATIAL / STRUCTURAL
+
+
+NEGATIVE-ALIGNED REGION
+
+            SPATIAL / STRUCTURAL
+                  /          \
+                 /            \
+SOCIAL / GROUP ACTIVITY ---- INTERACTION / CHANGE
+```
+
+Spatial/structural organisation is therefore the principal parent-level bridge.
+The positive and negative token graphs remain separately measured; repeated
+parent identity across sectors does not imply an observed cross-sector graph
+edge.
+
+Interaction/change is itself a significant latent node because no R014 seed
+concept directly names it. Manipulation, comparison, interaction,
+transformation, distribution, fragmentation and related material independently
+recur across all four probes.
+
+The strongest adversarial probe is P3, which has the lowest within-probe
+topological overlap. Even there, the most divergent permutations retain the
+same technical, place, spatial, social and interaction parent inventory. This
+extends the R013 result: severe token/community divergence does not imply
+equivalent parent-level semantic divergence.
+
+At S27, averaged across R014 probes, only about one fifth of unique tokens and
+roughly 4-5% of exact edges have 6/6 within-probe support, while the core parent
+families and strongest relations recur across all four probes. Parent-level
+semantic stability therefore exceeds exact token/edge stability under both
+order and context perturbation.
+
+Under the project premise that the model is an abstraction of its training
+data, R014 is the first run to support an evidence-backed local semantic map of
+the learned training distribution rather than merely one prompt's latent
+structure. The inferred local map is characterised by a technical/place/spatial
+positive system and a spatial/social/interaction negative system, with
+spatial/structural organisation acting as the main semantic bridge.
+
+The project progression is now:
+
+```text
+R010
+reconstruct semantic structure through depth
+
+R012
+test limited perturbation stability
+
+R013
+identify order-invariant parent structure
+
+R014
+identify order + context-invariant parent relations
+        ↓
+construct local semantic graph
+        ↓
+infer learned training-data topology
+```
+
+The recommended next experiment is replication of the R014 mapping procedure
+in a different local semantic region while holding the model, neutral-anchor
+design, permutation protocol, topology measurement and reconstruction sequence
+fixed. The next question is whether held-out semantic reconstruction and
+selective cross-context parent edges generalise beyond this region.
+

@@ -1,0 +1,11 @@
+edge_id,source,target,sector,probe_support,mean_network_support,min_probe_support,max_probe_support,interpretation
+E1,N1,N2,positive,4/4,0.82,0.77,0.86,"technical/sensing structure is repeatedly situated with place/environment structure"
+E2,N1,N3,positive,4/4,0.54,0.48,0.60,"technical/sensing structure repeatedly couples to spatial/structural organisation"
+E3,N2,N3,positive,4/4,0.45,0.41,0.48,"place/environment structure repeatedly couples to spatial organisation"
+E4,N3,N4,negative,4/4,0.81,0.72,0.89,"spatial/structural organisation repeatedly couples to social/group activity"
+E5,N4,N5,negative,4/4,0.50,0.42,0.64,"social/group activity repeatedly couples to interaction/change"
+E6,N3,N5,negative,4/4,0.40,0.36,0.49,"spatial/structural organisation repeatedly couples to interaction/change"
+E7,N1,N6,positive,4/4,0.37,0.33,0.42,"technical/sensing structure repeatedly couples to representation/reporting"
+E8,N1,N4,mixed / weak,4/4,0.24,0.14,0.36,"direct technical-social relation is comparatively weak"
+E9,N2,N4,mixed / weak,4/4,0.29,0.12,0.39,"direct place-social relation is weaker and more context-sensitive than the core edges"
+E10,N1,N5,positive / weak,4/4,0.18,0.15,0.21,"direct technical-interaction relation is weak"
