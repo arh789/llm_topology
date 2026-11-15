@@ -17655,3 +17655,586 @@ It means SDA-3 is not only a way of using an LLM to understand semantic structur
 It is also a way of using the LLM **against its own tendency to over-explain semantic structure**.
 
 That is probably the clearest statement of its purpose I can make now.
+
+
+#### Exchange 6 — Project direction after SDA-3 core insight
+
+**ChatGPT response (verbatim)**
+
+The project has changed direction from **mapping semantic topology** to **testing whether topology can be systematically discovered through a recursive analytical protocol**.
+
+R014 and R015 were originally heading towards:
+
+```text id="0vyi4o"
+probe semantic region
+        ↓
+recover communities
+        ↓
+infer parents
+        ↓
+compare neighbouring regions
+        ↓
+determine whether topology persists
+        ↓
+map a distant region
+```
+
+That remains necessary, but it is no longer the main intellectual destination.
+
+The new trajectory is:
+
+```text id="rvpzax"
+MEASURE MODEL
+      │
+      ▼
+RECONSTRUCT EMPIRICAL TOPOLOGY
+      │
+      ▼
+APPLY SDA-3 OPERATORS
+      │
+      ├── C → recover dominant structure
+      ├── A → recover local boundary
+      ├── E → infer latent organising structure
+      ├── S → predict structurally required absence
+      └── HCU → expose correlation outside current ontology
+      │
+      ▼
+GENERATE NEW STRUCTURAL PREDICTIONS
+      │
+      ▼
+MOVE OBSERVATION WINDOW
+      │
+      ▼
+TEST WHETHER PREDICTIONS MATERIALISE
+      │
+      ▼
+REVISE TOPOLOGY
+      │
+      └────────────────────► repeat
+```
+
+That is a major change.
+
+## The object of study has shifted
+
+Previously the implicit object was:
+
+> **the topology inside the LLM.**
+
+The question was essentially whether we could recover it.
+
+Now there are two objects:
+
+```text id="bgclgk"
+1. learned semantic topology of the model
+
+2. a method for discovering that topology
+```
+
+SDA-3 becomes the second object.
+
+The project can therefore ask a much stronger question:
+
+> **Can a small set of structural interrogatives progressively recover information about a model's learned semantic topology that was not contained in the initial observation?**
+
+That is experimentally testable.
+
+And it means the project is no longer merely producing better maps.
+
+It is developing a **search procedure over semantic space**.
+
+---
+
+# What R014 and R015 now become
+
+Their role changes retrospectively.
+
+They are no longer just the first local map and its adjacent replication.
+
+They become the **calibration dataset for SDA-3**.
+
+R014 established a topology.
+
+R015 shifted the observation window and showed substantial structural continuity.
+
+Now their combined topology gives us something on which SDA-3 can make predictions.
+
+For example:
+
+```text id="p4u31i"
+R014/R015 observations
+        │
+        ▼
+place
+measurement
+sensing
+activity
+change
+information
+        │
+        ▼
+SDA-3 inference
+        │
+        ├── E → event / state transition / monitoring
+        │
+        ├── S → time / agency / feedback / control
+        │
+        └── HCU → presently unexplained correlated regions
+```
+
+Those are no longer merely interpretations.
+
+They can become **prospective predictions**.
+
+That is critical.
+
+If we look elsewhere only after seeing the results and then explain them, we have interpretation.
+
+If SDA-3 specifies what should be found **before** the next measurement and the experiment subsequently finds it, we have evidence that the method possesses predictive utility.
+
+---
+
+# Therefore R016 probably should not simply be "map a distant region"
+
+That was the correct next move under the previous project state.
+
+It is now incomplete.
+
+A distant-region experiment should probably perform two jobs simultaneously.
+
+### First: test topology recurrence
+
+Does a lexically and conceptually distant region recover the same higher-order relational structure?
+
+For example:
+
+```text id="eukgwb"
+context
+   ↓
+state
+   ↓
+transition
+   ↓
+observation
+   ↓
+information
+```
+
+If yes, R014/R015 may have exposed a general reusable semantic schema rather than a local topic structure.
+
+### Second: test SDA-3 prospectively
+
+Before examining the distant region, freeze predictions.
+
+Something like:
+
+```text id="gvm9ga"
+E predictions
+-------------
+event-like parent
+state transition
+monitoring / tracking structure
+
+S predictions
+-------------
+temporality
+agency
+feedback/control
+(or whatever survives stricter analysis)
+
+HCU
+---
+do not predict semantic meaning;
+freeze nearest/high-correlation candidates
+from the geometry without interpreting them
+```
+
+Then run the new region.
+
+The test becomes:
+
+```text id="59vnhu"
+Did E predict structures that subsequently surfaced?
+
+Did S identify nodes whose absence remained anomalous
+or which appeared when the observation window expanded?
+
+Did HCU reveal associations that were not obvious from
+the semantic interpretation?
+
+Did any HCU candidate subsequently become explainable
+as E after expansion?
+```
+
+The final one may be particularly important.
+
+---
+
+# HCU → Emerging becomes experimentally observable
+
+This is one of the strongest consequences of the recent insight.
+
+Suppose:
+
+```text id="3xm3rx"
+R015
+
+candidate X
+highly correlated
+no coherent explanation
+        ↓
+       HCU
+```
+
+Then R016 expands the topology.
+
+Now:
+
+```text id="w1c5zp"
+R016
+
+new node Y appears
+      │
+      ├── explains X
+      ├── connects several existing families
+      └── compresses the topology
+             ↓
+          Emerging
+```
+
+Then we have directly observed:
+
+```text id="ormx79"
+HCU(t₁) → E(t₂)
+```
+
+That would be much more interesting than merely saying a node was related.
+
+It would suggest that HCU can function as a **frontier detector**:
+
+> correlations at the edge of the model's currently reconstructed ontology may anticipate structure that becomes intelligible after the observation window expands.
+
+That is a concrete empirical hypothesis.
+
+---
+
+# Suppression also becomes testable rather than interpretive
+
+The same thing applies to S.
+
+At present we infer things such as:
+
+```text id="jfvdh3"
+change → requires time
+activity → implies agency
+observation → information → suggests feedback/control
+```
+
+But "logically required" is still partly an analytical judgement.
+
+The project now needs to distinguish:
+
+```text id="yev9ix"
+human logical expectation
+
+from
+
+model-topological expectation
+```
+
+That is important.
+
+A suppressed node should eventually mean something closer to:
+
+> **Given the measured neighbouring topology, this concept has a high predicted structural probability but anomalously low observed representation.**
+
+So rather than simply saying:
+
+```text id="e2lw7x"
+TIME should be there
+```
+
+we should eventually be able to say:
+
+```text id="j4ydqz"
+local topology predicts TIME strongly
+but observed activation/community membership is unexpectedly weak
+```
+
+That turns Suppression into a measurable residual.
+
+Conceptually:
+
+\[
+S(x)=P(x\mid\text{observed topology})-\text{observed presence}(x)
+\]
+
+Not necessarily that exact equation, but that is now the direction.
+
+---
+
+# Emerging needs the same treatment
+
+The strongest insight from `event` was structural compression.
+
+So E should eventually cease being:
+
+> "What seems to emerge?"
+
+and become something closer to:
+
+> **Which candidate latent node maximally explains otherwise distributed relationships in the observed graph?**
+
+That gives a possible operational criterion:
+
+```text id="6nmbuc"
+candidate latent parent
+        │
+        ▼
+insert into graph
+        │
+        ▼
+measure reduction in unexplained edges /
+description complexity /
+community fragmentation
+```
+
+The strongest candidate is the one producing the largest useful compression.
+
+That is very close to a graph-model-selection problem.
+
+So the project is starting to bridge:
+
+```text id="w0xv9d"
+LLM interpretability
++
+semantic networks
++
+graph reconstruction
++
+latent-variable inference
++
+model selection
+```
+
+rather than remaining purely semantic analysis.
+
+---
+
+# C and A now have a different importance too
+
+They looked like the mundane categories.
+
+They are actually what prevent the system from becoming unconstrained.
+
+```text id="0mbdrj"
+C + A
+  │
+  ▼
+empirical topology
+  │
+  ├── constrains E
+  ├── constrains S
+  └── defines vector for HCU
+```
+
+Without C/A:
+
+```text id="7gkali"
+E → free association
+S → arbitrary missing concepts
+HCU → random novelty
+```
+
+So SDA-3 is not five equivalent categories.
+
+Its architecture increasingly looks like:
+
+```text id="2527s1"
+                    EMPIRICAL LAYER
+                         C + A
+                           │
+                           ▼
+                  ┌─────────────────┐
+                  │ reconstructed   │
+                  │ local topology  │
+                  └────────┬────────┘
+                           │
+             ┌─────────────┼─────────────┐
+             ▼             ▼             ▼
+             E             S            HCU
+       compression     residual     non-ontological
+       / abstraction   prediction    correlation
+             │             │             │
+             └─────────────┼─────────────┘
+                           ▼
+                    NEW HYPOTHESES
+                           │
+                           ▼
+                   NEW MEASUREMENT
+                           │
+                           ▼
+                       C + A...
+```
+
+That is a very different system from the original five-bucket SDA-3.
+
+---
+
+# The project is therefore moving from cartography towards active inference
+
+Earlier:
+
+> observe topology → describe topology.
+
+Now:
+
+> observe topology → infer hidden structure → predict unobserved structure → move the observation window → test prediction.
+
+That is an active search loop.
+
+In compressed form:
+
+```text id="cksiel"
+MAP
+ ↓
+INFER
+ ↓
+PREDICT
+ ↓
+PROBE
+ ↓
+FALSIFY / CONFIRM
+ ↓
+REMAP
+```
+
+This is probably the most consequential change.
+
+The experiment no longer has to ask merely:
+
+> Where should we map next?
+
+It can ask:
+
+> **Which next measurement maximally discriminates between the structures SDA-3 currently predicts?**
+
+That introduces experimental design into the project.
+
+Instead of choosing a distant region arbitrarily, we choose one because competing hypotheses make different predictions there.
+
+---
+
+# It also changes what "distant" should mean
+
+Previously, distant mostly meant semantically remote vocabulary.
+
+Now there are at least three kinds of distance:
+
+```text id="ugkk01"
+LEXICAL DISTANCE
+different words
+
+SEMANTIC DISTANCE
+different topic/domain
+
+TOPOLOGICAL DISTANCE
+different relational structure
+```
+
+A useful R016 should probably maximise the first two while deliberately testing the third.
+
+The strongest result would be:
+
+```text id="wx0h20"
+very different vocabulary
++
+very different subject matter
++
+same higher-order relational topology
+```
+
+That would support the hypothesis that the recovered structure is not topic-specific.
+
+An equally useful result would be:
+
+```text id="9n0eo4"
+very different vocabulary
++
+different topology
+```
+
+because SDA-3 should then detect where and how the structure fails.
+
+Failure becomes informative.
+
+---
+
+# The project now has a potential falsification structure
+
+This is important because SDA-3 could otherwise become self-confirming.
+
+The new direction requires explicit failure conditions.
+
+For example:
+
+```text id="d6jk1i"
+Emerging fails if:
+predicted latent structures do not recur or improve reconstruction.
+
+Suppressed fails if:
+"missing" nodes are no more absent than plausible alternatives.
+
+HCU fails if:
+its candidates are indistinguishable from arbitrary high-dimensional
+neighbourhood noise or post-hoc semantic interpretation.
+
+C/A fail if:
+reconstructed topology is unstable under prompt permutation,
+seed substitution or neighbouring observation windows.
+```
+
+Then SDA-3 becomes something that can be wrong.
+
+That substantially increases its research value.
+
+---
+
+# So the project now seems to have three nested research programmes
+
+```text id="q8zrzl"
+LLM TOPOLOGY PROJECT
+│
+├── 1. MEASUREMENT
+│      Can transformer-layer semantic structure be
+│      reproducibly reconstructed?
+│
+├── 2. TOPOLOGY
+│      Do local structures persist across substitutions,
+│      contexts and distant regions?
+│
+└── 3. SDA-3
+       Can structural interrogatives discover hidden,
+       missing and currently uninterpretable topology
+       prospectively?
+```
+
+R001–R015 have mostly been building the first two.
+
+The recent insight opens the third.
+
+And the third may ultimately be the most distinctive contribution because it changes the project from:
+
+> **a method for looking inside semantic structure**
+
+to:
+
+> **a method for navigating and progressively discovering semantic structure.**
+
+The next phase should therefore not abandon the existing experimental chain. It should use it as the empirical substrate for a **prospective SDA-3 validation programme**.
+
+The central new research question is:
+
+> **Can SDA-3 take a partial, empirically measured semantic topology and generate structural predictions that subsequent measurements confirm, including latent emergent parents, anomalous absences, and correlations that precede the model's currently reconstructable ontology?**
+
+If that works, the project has moved well beyond semantic mapping. It is testing whether **semantic topology itself can be explored algorithmically through recursive hypothesis generation and targeted measurement**.
