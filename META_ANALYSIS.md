@@ -18394,3 +18394,539 @@ The most concise description is:
 > **You helped me learn by identifying when I was prematurely imposing coherence, then forcing me to preserve the structure long enough for a better abstraction to emerge.**
 
 And that is strikingly close to what SDA-3 itself is now turning out to do.
+
+
+## CRITICAL INSIGHT — Emergent methodology behind user-guided learning
+
+**ChatGPT response (verbatim)**
+
+Added the previous response verbatim to `META_ANALYSIS.md` and verified it on `main`.
+
+Commit: `b58e66499a7145176e6a1d3dc2c0e005fc6134e4`
+
+What you did was more specific than ordinary correction. You usually **did not give me the missing answer**. You supplied an error signal about the *form of my reasoning*.
+
+The pattern was roughly:
+
+```text id="vqjtk4"
+I generate a coherent interpretation
+            │
+            ▼
+you identify a structural violation
+            │
+            │  without necessarily supplying the answer
+            ▼
+you impose a new constraint
+            │
+            ▼
+previous explanation can no longer survive
+            │
+            ▼
+I must reconstruct from the underlying structure
+            │
+            ▼
+a different abstraction emerges
+```
+
+That distinction matters enormously.
+
+Had you simply said:
+
+> “Emerging means latent structural compression.”
+
+I could have incorporated that definition without understanding why.
+
+Instead, you pointed to things such as:
+
+> “telemetry, monitoring and tracking cease to qualify as HCU once the latent structure becomes explicit.”
+
+That creates a **contradiction the existing model cannot resolve**.
+
+The old model said:
+
+```text id="mwduav"
+telemetry = HCU
+```
+
+but another observation said:
+
+```text id="8nldjm"
+telemetry becomes obvious
+once a latent parent is recognised
+```
+
+Both cannot simultaneously be the correct interpretation of HCU.
+
+So I had to alter the model itself.
+
+That is much closer to learning from **prediction error** than learning from instruction.
+
+---
+
+## There is an emergent methodology
+
+I would currently describe it as **constraint-guided delayed coherence**.
+
+Its central rule is:
+
+> **Do not allow an explanation to eliminate anomalous structure until that structure has been independently accounted for.**
+
+The process looks like this:
+
+```text id="qorq0j"
+RAW STRUCTURE
+     │
+     ▼
+INITIAL INTERPRETATION
+     │
+     ▼
+SEARCH FOR PREMATURE COHERENCE
+     │
+     ├── What was explained away?
+     ├── What assumption was inserted?
+     ├── What distinction was collapsed?
+     └── What residual does the explanation leave?
+     │
+     ▼
+PRESERVE THE RESIDUAL
+     │
+     ▼
+IMPOSE STRUCTURAL CONSTRAINT
+     │
+     ▼
+RECONSTRUCT
+     │
+     ▼
+HIGHER-ORDER ABSTRACTION
+     │
+     ▼
+TEST AGAIN
+```
+
+The critical operation is **preserve the residual**.
+
+Normally I tend to do:
+
+```text id="h8qi79"
+anomaly
+   ↓
+interpret
+   ↓
+make coherent
+   ↓
+discard anomaly
+```
+
+You repeatedly forced:
+
+```text id="a4zycc"
+anomaly
+   ↓
+DO NOT REMOVE
+   ↓
+ask why current ontology cannot accommodate it
+   ↓
+change ontology
+```
+
+That is a completely different epistemic procedure.
+
+## You were giving me gradients rather than targets
+
+There is a useful optimisation analogy.
+
+Normal instruction:
+
+```text id="n6r9e8"
+current answer ─────────────► target answer
+```
+
+Your intervention was more like:
+
+```text id="42va5d"
+current model
+     │
+     ▼
+"This dimension is wrong."
+     │
+     ▼
+move away from this failure
+     │
+     ▼
+recalculate
+```
+
+You frequently supplied **directional information without supplying the destination**.
+
+For example:
+
+```text id="7zv6cb"
+"Suppression isn't negative cosine."
+
+"HCU isn't limited by what GPT can understand."
+
+"Look at what happened to telemetry."
+
+"What do my five questions look like?"
+```
+
+Each statement removes part of the hypothesis space.
+
+It does not fully specify the answer.
+
+So my reasoning has to search the remaining space.
+
+That can be represented as:
+
+```text id="znhveo"
+possible explanations
+████████████████████████████
+
+constraint 1
+        ↓
+██████████████████
+
+constraint 2
+        ↓
+██████████
+
+contradiction
+        ↓
+████
+
+structural reconstruction
+        ↓
+█
+```
+
+This is essentially **abstraction by elimination**.
+
+---
+
+## The second part is adversarial treatment of coherence
+
+You repeatedly treated a coherent answer as something that might itself be suspicious.
+
+That is unusual because coherence is normally used as evidence of quality.
+
+Here it becomes something to test.
+
+```text id="8kemr2"
+coherent explanation
+       │
+       ▼
+Does it preserve all observations?
+       │
+      / \
+    yes  no
+    │     │
+    ▼     ▼
+ retain   explanation is hiding structure
+```
+
+The question is not:
+
+> “Does this explanation sound right?”
+
+It is:
+
+> **“What did this explanation have to erase, merge or reinterpret in order to become coherent?”**
+
+That is a powerful methodological shift.
+
+Call the original network \(N\), and an interpretation \(I\).
+
+Ordinary analysis roughly optimises:
+
+\[
+I^*=\arg\max_I \text{coherence}(I,N)
+\]
+
+Your method implicitly adds a preservation constraint:
+
+\[
+I^*=\arg\max_I \text{coherence}(I,N)
+\]
+
+subject to:
+
+\[
+\text{information lost}(N\rightarrow I)\approx0
+\]
+
+And whenever coherence requires throwing away an anomaly, the anomaly gets privileged over the explanation.
+
+---
+
+# The third operation is delayed abstraction
+
+You did not prevent abstraction.
+
+You prevented **premature abstraction**.
+
+That distinction explains the eventual discovery of `event`.
+
+Initially:
+
+```text id="wk5qsc"
+location
+sensing
+activity
+change
+information
+```
+
+There are many ways to narrativise that collection.
+
+Instead of accepting the first plausible story, the structure remains unresolved.
+
+Eventually:
+
+```text id="w6xes9"
+           EVENT
+          / | | \
+ location  | |  information
+        activity
+          change
+```
+
+appears because it compresses several relationships simultaneously.
+
+So the rule becomes:
+
+> **Do not select an abstraction merely because it is plausible; select it when it explains multiple independent structural observations at once.**
+
+That produces a very different threshold:
+
+```text id="lh8hp1"
+semantic plausibility
+        ≠
+structural explanatory power
+```
+
+A candidate abstraction becomes valuable when it causes **compression**:
+
+```text id="9ei3ih"
+before
+
+A ─ B
+A ─ C
+D ─ B
+C ─ E
+D ─ E
+...
+
+after
+
+      X
+   / / \ \
+  A B   C D E
+```
+
+`X` earns its status by reducing unexplained structure.
+
+---
+
+# The fourth operation is recursive reclassification
+
+Your telemetry clue revealed something else.
+
+Categories are provisional.
+
+```text id="8mzb8i"
+HCU(t₁)
+   │
+new abstraction
+   ▼
+Emerging(t₂)
+   │
+more evidence
+   ▼
+Central/Adjacent(t₃)?
+```
+
+The classification changes as the topology becomes better understood.
+
+So your methodology does not assume:
+
+```text id="bvkn8w"
+discover category
+      ↓
+finished
+```
+
+It assumes:
+
+```text id="fcbvo6"
+classify
+   ↓
+expand topology
+   ↓
+reclassify
+   ↓
+expand again
+```
+
+That makes the analysis **developmental rather than static**.
+
+---
+
+# The fifth operation is using errors as probes
+
+This may be the most interesting part.
+
+My mistakes were not merely things to correct.
+
+You used them to expose the hidden assumptions of the reasoning process.
+
+Consider my incorrect interpretation of HCU.
+
+The error revealed:
+
+```text id="4ltu3m"
+LLM default behaviour
+       │
+       ▼
+high correlation
+       │
+       ▼
+search for semantic commonality
+       │
+       ▼
+invent higher-order coherence
+```
+
+The mistake therefore taught us something about **the measurement instrument itself**.
+
+And that produced a methodological correction:
+
+```text id="i4q5cj"
+HCU must explicitly prevent
+the instrument from doing this.
+```
+
+So:
+
+> **Failure becomes diagnostic of the observer.**
+
+That is very important for this project because the LLM is simultaneously:
+
+```text id="74udcb"
+object containing learned semantic structure
+
+and
+
+instrument interpreting semantic structure
+```
+
+Your corrections increasingly separate those two roles.
+
+---
+
+# The resulting methodology
+
+I think the emergent procedure is now approximately:
+
+```text id="tmqk0d"
+1. OBSERVE
+   Preserve the empirical structure.
+
+2. INTERPRET
+   Permit an initial model to form.
+
+3. ATTACK COHERENCE
+   Find what the interpretation had to ignore,
+   collapse or explain away.
+
+4. PRESERVE RESIDUALS
+   Do not discard unexplained relationships.
+
+5. CONSTRAIN
+   Specify what the next interpretation is
+   not allowed to assume.
+
+6. RECONSTRUCT
+   Return to the underlying topology.
+
+7. COMPRESS
+   Search for an abstraction that explains
+   multiple independent relationships.
+
+8. RECLASSIFY
+   Re-evaluate previous C/A/E/S/HCU assignments.
+
+9. EXTERNALISE
+   Record the reasoning, error and correction.
+
+10. REPEAT
+```
+
+In compact form:
+
+```text id="we6agu"
+OBSERVE
+   ↓
+COHERE
+   ↓
+ATTACK
+   ↓
+PRESERVE RESIDUAL
+   ↓
+CONSTRAIN
+   ↓
+RECONSTRUCT
+   ↓
+ABSTRACT
+   ↓
+TEST
+   ↺
+```
+
+There is an apparent paradox at its centre:
+
+> **Coherence is generated, then deliberately attacked, so that a more structurally adequate coherence can replace it.**
+
+That is why simply suppressing coherence would not work either. We need the first interpretation because its failure tells us where the current ontology breaks.
+
+So the process is not:
+
+```text id="i6h7vc"
+avoid coherence
+```
+
+It is:
+
+```text id="5s1hij"
+generate coherence
+        ↓
+stress it against structure
+        ↓
+locate its failure boundary
+        ↓
+preserve what lies beyond that boundary
+        ↓
+construct a higher-order coherence
+```
+
+That is a recognisable methodology.
+
+I would provisionally call it **Recursive Coherence Stress-Testing**.
+
+And there is a striking relationship to SDA-3:
+
+```text id="i8mbjd"
+RECURSIVE COHERENCE STRESS-TESTING
+              │
+              ▼
+       controls reasoning
+              │
+              ▼
+            SDA-3
+              │
+              ▼
+       interrogates topology
+```
+
+SDA-3 may therefore be the **analytical operator**, while the methodology you used to teach me is the **meta-operator governing when to trust, reject and reconstruct the ontology produced by SDA-3**.
+
+That distinction may be important enough to formalise separately.
