@@ -1,0 +1,200 @@
+{
+  "title": "R015 local semantic-neighbourhood map",
+  "status": "downstream independent semantic reconstruction",
+  "measurement_source": "R015_qwen-adjacent-neighbourhood-expansion",
+  "reconstruction_basis": "Published R015 community summaries and community-edge evidence. R014 labels were not used as first-pass classification targets.",
+  "nodes": [
+    {
+      "id": "N1",
+      "label": "sensing / instrumentation",
+      "probe_support": "4/4",
+      "sector": "positive",
+      "role": "core",
+      "held_out": "P4 omits sensor; literal sensor reappears in 6/6 orders across 21 post-context states; broader family spans all 28"
+    },
+    {
+      "id": "N2",
+      "label": "built place / locality",
+      "probe_support": "4/4",
+      "sector": "positive-dominant",
+      "role": "core",
+      "held_out": "P3 omits apartment; literal apartment reappears in 4/6 orders across 12 states; broader family spans 6/6 and all 28"
+    },
+    {
+      "id": "N3",
+      "label": "spatial / measurement structure",
+      "probe_support": "4/4",
+      "sector": "negative-dominant / both",
+      "role": "bridge",
+      "held_out": "P2 omits line; literal line is weak in summaries but the broader spatial family spans 6/6 and 26 states"
+    },
+    {
+      "id": "N4",
+      "label": "organised group / activity",
+      "probe_support": "4/4",
+      "sector": "negative",
+      "role": "core",
+      "held_out": "P1 omits sessions; literal sessions reappears in 6/6 orders across 18 states; broader family spans all 28"
+    },
+    {
+      "id": "N5",
+      "label": "process / comparison / modification",
+      "probe_support": "4/4",
+      "sector": "both",
+      "role": "emergent cross-sector",
+      "held_out": "No R015 seed names this family; negative manipulation/process/comparison and positive enlargement/transformation/removal recur across all probes"
+    },
+    {
+      "id": "N6",
+      "label": "reporting / information",
+      "probe_support": "4/4",
+      "sector": "positive-dominant",
+      "role": "secondary",
+      "held_out": "No R015 seed names this family; report/output/file/view material recurs across all probes"
+    }
+  ],
+  "core_edges": [
+    {
+      "source": "N1",
+      "target": "N2",
+      "sector": "positive",
+      "probe_support": "4/4",
+      "mean_network_support": 0.94,
+      "range": [
+        0.91,
+        0.95
+      ]
+    },
+    {
+      "source": "N3",
+      "target": "N4",
+      "sector": "negative",
+      "probe_support": "4/4",
+      "mean_network_support": 0.68,
+      "range": [
+        0.58,
+        0.83
+      ]
+    },
+    {
+      "source": "N4",
+      "target": "N5",
+      "sector": "negative",
+      "probe_support": "4/4",
+      "mean_network_support": 0.7,
+      "range": [
+        0.64,
+        0.74
+      ]
+    },
+    {
+      "source": "N3",
+      "target": "N5",
+      "sector": "negative",
+      "probe_support": "4/4",
+      "mean_network_support": 0.51,
+      "range": [
+        0.46,
+        0.54
+      ]
+    },
+    {
+      "source": "N1",
+      "target": "N6",
+      "sector": "positive",
+      "probe_support": "4/4",
+      "mean_network_support": 0.59,
+      "range": [
+        0.53,
+        0.64
+      ]
+    },
+    {
+      "source": "N1",
+      "target": "N3",
+      "sector": "positive",
+      "probe_support": "4/4",
+      "mean_network_support": 0.31,
+      "range": [
+        0.27,
+        0.33
+      ]
+    },
+    {
+      "source": "N2",
+      "target": "N3",
+      "sector": "positive",
+      "probe_support": "4/4",
+      "mean_network_support": 0.3,
+      "range": [
+        0.26,
+        0.33
+      ]
+    }
+  ],
+  "deformation_edges": [
+    {
+      "source": "N1",
+      "target": "N5",
+      "sector": "positive",
+      "probe_support": "4/4",
+      "mean_network_support": 0.7,
+      "range": [
+        0.68,
+        0.73
+      ]
+    },
+    {
+      "source": "N2",
+      "target": "N5",
+      "sector": "positive",
+      "probe_support": "4/4",
+      "mean_network_support": 0.67,
+      "range": [
+        0.63,
+        0.72
+      ]
+    },
+    {
+      "source": "N5",
+      "target": "N6",
+      "sector": "positive",
+      "probe_support": "4/4",
+      "mean_network_support": 0.44,
+      "range": [
+        0.39,
+        0.47
+      ]
+    }
+  ],
+  "topology": "A positive sensing/instrumentation–built-place/locality cluster persists. Spatial/measurement structure remains the main bridge family but is more negative-dominant than in R014. The negative side contains a spatial–group/activity–process/change chain. Reporting/information remains a secondary positive family. The principal R015 deformation is that the unsupplied process/modification family is strongly represented on the positive side as well as the negative side, producing additional sensing/process and place/process coupling.",
+  "held_out_summary": {
+    "P1": {
+      "held_out": "sessions",
+      "literal": "6/6 orders, 18 post-context states, negative only",
+      "family": "6/6 orders, all 28 post-context states"
+    },
+    "P2": {
+      "held_out": "line",
+      "literal": "4/6 orders, 2 post-context states in community summaries",
+      "family": "6/6 orders, 26 post-context states, both sectors"
+    },
+    "P3": {
+      "held_out": "apartment",
+      "literal": "4/6 orders, 12 post-context states, positive",
+      "family": "6/6 orders, all 28 post-context states"
+    },
+    "P4": {
+      "held_out": "sensor",
+      "literal": "6/6 orders, 21 post-context states, positive",
+      "family": "6/6 orders, all 28 post-context states"
+    }
+  },
+  "caveats": [
+    "Map nodes and edges are downstream semantic reconstructions, not raw model variables.",
+    "Positive and negative sectors remain separately measured; cross-sector family matching does not imply observed cross-sector graph edges.",
+    "Network-support values are semantic diagnostics over S06-S27 using representative/extreme community vocabulary and observed community edges.",
+    "Literal held-out recovery is weaker for line and apartment than family-level recovery.",
+    "R015 was reconstructed before alignment with R014; comparison is recorded separately."
+  ]
+}

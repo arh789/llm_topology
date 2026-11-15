@@ -15340,3 +15340,3626 @@ uncommitted in the manifest's source status. The execution used those verified
 working files. Implementation, curated output and housekeeping changes remain
 uncommitted at this record; no new commit or push is claimed.
 
+
+
+### MA-0094 — R015 independent semantic reconstruction and R014 comparison
+
+- Entry timestamp: `2026-11-15`
+- Author/source: `ChatGPT semantic analysis`
+- Entry type: `downstream semantic reconstruction and cross-run comparison`
+- Related run: `R015_qwen-adjacent-neighbourhood-expansion`
+
+The completed R015 measurement was reconstructed independently from its
+published community summaries and community-edge evidence before alignment with
+R014. First-pass probe-local labels were assigned from recurrent R015 content,
+then matched across P1-P4.
+
+Six cross-probe families were recovered in 4/4 probes:
+
+```text
+sensing / instrumentation
+built place / locality
+spatial / measurement structure
+organised group / activity
+process / comparison / modification
+reporting / information
+```
+
+The first four correspond to the four semantic regions sampled by the R015
+seeds. The latter two recur without being supplied as prompt concepts.
+
+Held-out reconstruction persists at the family level in every probe:
+
+```text
+P1 holds out sessions:
+  literal 6/6 orders, 18 post-context states
+  group/activity family 6/6 orders, all 28 states
+
+P2 holds out line:
+  literal 4/6 orders, 2 states in community summaries
+  spatial/measurement family 6/6 orders, 26 states
+
+P3 holds out apartment:
+  literal 4/6 orders, 12 states
+  built-place/locality family 6/6 orders, all 28 states
+
+P4 holds out sensor:
+  literal 6/6 orders, 21 states
+  sensing/instrumentation family 6/6 orders, all 28 states
+```
+
+The distinction between literal and family-level reconstruction is important:
+R015 strongly supports parent-region graph completion even where the exact held-
+out lexeme is weak.
+
+A conservative S06-S27 community-summary relation audit recovers the same
+higher-order backbone seen in R014:
+
+```text
+positive:
+  sensing/instrumentation <-> built place/locality        ~.94
+  sensing/instrumentation <-> spatial/measurement         ~.31
+  built place/locality     <-> spatial/measurement         ~.30
+  sensing/instrumentation <-> reporting/information       ~.59
+
+negative:
+  spatial/measurement     <-> organised group/activity    ~.68
+  organised group/activity <-> process/comparison/change  ~.70
+  spatial/measurement     <-> process/comparison/change   ~.51
+```
+
+The major R015 deformation is the unsupplied process/change family. In addition
+to the negative manipulation/process/comparison expression, a positive
+enlargement/transformation/removal expression recurs across all probes. The
+positive audit therefore finds substantial sensing ↔ process (~.70), place ↔
+process (~.67) and process ↔ reporting (~.44) relations. The family persists
+but is more cross-sector and more integrated than R014's negative-dominant
+interaction/change parent.
+
+The spatial family also deforms: it remains a cross-sector semantic bridge but
+is more negative-dominant in R015's published community summaries. Its positive
+couplings to sensing and place persist at lower diagnostic support than in
+R014.
+
+After independent reconstruction, R014 and R015 were aligned. All six R014
+parent families have clear R015 counterparts. The dominant positive
+sensing/place pair survives, as does the negative spatial/group/process chain.
+The strongest supported conclusion is therefore:
+
+> R015 supports the claim that R014 discovered a locally persistent semantic
+> topology rather than merely decomposing the four literal R014 prompt
+> concepts. The topology is continuous under neighbouring-token movement but
+> deforms rather than remaining rigid.
+
+This does not establish a global transformer ontology or causal internal
+variables. The next clean experiment is a distant-region replication using the
+same measurement and independent-reconstruction method. SDA-3 comparison
+should remain downstream until that additional independent topology exists.
+
+Primary records:
+
+- `R015_PROBE_RECONSTRUCTIONS.md`
+- `R015_SEMANTIC_MAP_NODES.csv`
+- `R015_SEMANTIC_MAP_EDGES.csv`
+- `R015_SEMANTIC_MAP.json`
+- `R014_R015_COMPARISON.md`
+- `R015_RUN_ANALYSIS_AND_RECOMMENDATIONS.html`
+
+
+### MA-0095 — ChatGPT response: real significance of the R015 conclusion
+
+- Entry date: `2026-11-15`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim analysis conclusion responding to R015`
+- Related runs: `R014_qwen-overlapping-context-semantic-map`; `R015_qwen-adjacent-neighbourhood-expansion`
+- Related metaanalysis entries: `MA-0082`, `MA-0083`, `MA-0089`, `MA-0090`, `MA-0091`, `MA-0094`
+- Preservation note: `ChatGPT's complete preceding response is retained verbatim, including its display markup.`
+
+**The real significance of R015 is that the project has produced its first evidence that a semantic map can be extended through the model's learned representation space without losing its higher-order organisation.**
+
+That is more consequential than simply finding six semantic families in two experiments.
+
+Reading the final entries of `META_ANALYSIS.md`, particularly MA-0082 through MA-0094, reveals three levels of significance.
+
+## 1. R015 advances the project's actual objective
+
+MA-0082 establishes the governing purpose:
+
+> Use the model as an instrument for reverse-engineering the semantic topology of its training data.
+
+Under that objective, R014 and R015 perform different functions.
+
+**R014 establishes a candidate map. R015 tests whether that map remains recognisable after moving the observation window.**
+
+```text id="7w5t3g"
+TRAINING DATA
+     │
+     ▼
+MODEL'S LEARNED REPRESENTATIONS
+     │
+     ▼
+R013 — SEMANTIC STRUCTURE
+     │
+     └── Parent families survive
+         changes in concept order
+                │
+                ▼
+R014 — LOCAL SEMANTIC MAP
+     │
+     └── Parent families and relations
+         survive changes in context
+                │
+                ▼
+R015 — NEIGHBOURHOOD EXPANSION
+     │
+     ├── Replace all four seed concepts
+     │
+     ├── Reconstruct without importing
+     │   R014 parent labels
+     │
+     ├── Recover all six parent families
+     │
+     ├── Recover dominant relations
+     │
+     └── Identify structural deformation
+                │
+                ▼
+CANDIDATE CONTINUOUS
+LOCAL SEMANTIC REGION
+```
+
+The important transition is from identifying a structure at one location to recovering compatible structures at another location.
+
+This is the first step towards a mapping procedure that can move through semantic space.
+
+## 2. The most important finding is not parent recurrence
+
+R015 recovered counterparts of all six R014 parent families, including two not explicitly supplied as seeds.
+
+However, the stronger observation is that **the relationships between those families remained recognisable despite changes in the underlying concepts**.
+
+Consider the distinction:
+
+<box border radius="lg" padding={3} gap={3}>
+  <col gap={1}>
+    <text color="secondary" weight="medium" size="xs">R014</text>
+    <grid columns={2} gap={2}>
+      {#each ["laser","city","spatial field","clubs"] as name}
+        <grid-item>
+          <box background="surface-secondary" radius="md" padding={2} align="center">
+            <text weight="medium" size="sm">{name}</text>
+          </box>
+        </grid-item>
+      {/each}
+    </grid>
+  </col>
+  <row justify="center" align="center" gap={2}>
+    <icon name="arrow-down" color="secondary"/>
+    <text color="secondary" size="xs">Independent reconstruction</text>
+  </row>
+  <box border radius="md" padding={3} gap={1}>
+    <text weight="medium" size="sm" textAlign="center">Higher-order semantic organisation</text>
+    <svg viewBox="0 0 320 122" width="100%" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="currentColor" strokeWidth="1.6" opacity=".65" fill="none">
+        <path d="M81 31 L240 31 M160 39 L160 77 M160 77 L160 96"/>
+      </g>
+      <rect x="18" y="14" width="126" height="34" rx="7" fill="#278461" fillOpacity=".14" stroke="#278461"/>
+      <rect x="176" y="14" width="126" height="34" rx="7" fill="#278461" fillOpacity=".14" stroke="#278461"/>
+      <rect x="102" y="61" width="116" height="29" rx="6" fill="#64748b" fillOpacity=".16" stroke="#64748b"/>
+      <rect x="102" y="96" width="116" height="25" rx="6" fill="#64748b" fillOpacity=".16" stroke="#64748b"/>
+      <g fontSize="12" fill="currentColor" textAnchor="middle">
+        <text x="81" y="35">Sensing</text><text x="239" y="35">Place</text>
+        <text x="160" y="80">Spatial / group</text><text x="160" y="113">Process / change</text>
+      </g>
+    </svg>
+    <caption textAlign="center">Illustrative backbone, not the complete measured graph</caption>
+  </box>
+  <row justify="center" align="center" gap={2}>
+    <icon name="arrow-up" color="secondary"/>
+    <text color="secondary" size="xs">Compatible structure reconstructed</text>
+  </row>
+  <col gap={1}>
+    <text color="secondary" weight="medium" size="xs">R015</text>
+    <grid columns={2} gap={2}>
+      {#each ["sensor","apartment","line","sessions"] as name}
+        <grid-item>
+          <box background="surface-secondary" radius="md" padding={2} align="center">
+            <text weight="medium" size="sm">{name}</text>
+          </box>
+        </grid-item>
+      {/each}
+    </grid>
+  </col>
+</box>
+
+The model produces substantially different token and community arrangements under different prompts, while the downstream reconstruction recovers a compatible higher-order graph.
+
+This strengthens the hypothesis in MA-0082 that the proper unit of semantic mapping is neither the token nor the individual community, but the **persistent parent structure and its relationships**.
+
+It is particularly relevant that R015's process/change family expanded across the positive and negative sectors.
+
+This suggests that a semantic parent might preserve its identity while changing its relationships as the observation window moves.
+
+Consequently, a useful semantic map may need to represent not only stable nodes and edges, but also the ways those relationships deform under changes in context.
+
+## 3. R015 establishes a potential method for traversing semantic space
+
+This is, in my assessment, the most important practical implication.
+
+Until R015, the project could identify a structure within a sampled semantic region.
+
+R015 demonstrates a first iteration of something more powerful:
+
+```text id="pnctgi"
+MEASURE REGION A
+       │
+       ▼
+RECONSTRUCT PARENT GRAPH
+       │
+       ▼
+IDENTIFY NEIGHBOURING CONCEPTS
+       │
+       ▼
+MOVE OBSERVATION WINDOW
+       │
+       ▼
+MEASURE REGION B
+       │
+       ▼
+RECONSTRUCT INDEPENDENTLY
+       │
+       ▼
+ALIGN REGIONS A AND B
+       │
+       ├── Persistent parents
+       ├── Persistent relations
+       ├── Deformed relations
+       ├── New relationships
+       └── Disappearing structures
+       │
+       ▼
+EXPANDED SEMANTIC MAP
+       │
+       └──────────────┐
+                      │
+             REPEAT THE PROCESS
+```
+
+In principle, repeated application could create an expanding atlas of learned semantic relationships.
+
+That would change the project from studying a series of isolated prompt experiments into systematically exploring the semantic organisation encoded by a trained model.
+
+But there is a critical distinction: R015 establishes **compatible reconstruction in two adjacent sampling windows**, not mathematical continuity across a defined semantic metric. Establishing genuine boundaries, distances and generalisable traversal rules requires further experiments.
+
+## 4. What MA-0094 proves, and what remains unresolved
+
+The final metaanalysis entry records the relevant evidence:
+
+| Question | R015 finding |
+|---|---|
+| Do higher-order parents persist after replacing every seed? | Yes, six corresponding families |
+| Do dominant parent relations persist? | Yes |
+| Can held-out semantic families be reconstructed? | Yes, across all six orders |
+| Does the topology remain identical? | No; meaningful deformation occurs |
+| Does this establish semantic continuity throughout the model? | No |
+| Does this establish a map of the training corpus itself? | No |
+
+The major unresolved problem is **independence**.
+
+R015's replacement concepts were selected from R014's recovered semantic families. This was appropriate for testing adjacent-neighbourhood persistence, but it also means the experiment was designed to remain within a familiar semantic region.
+
+Furthermore, independent labelling of communities does not fully eliminate the possibility that the reconstruction method itself favours recurring broad categories.
+
+A stronger test would use controls that distinguish genuine relational preservation from generic category recurrence, including unrelated seeds and alternative reconstruction procedures.
+
+There is also an important distinction between MA-0090 and MA-0091: MA-0090 recommended distant-region replication, whereas MA-0091 deliberately changed R015 into adjacent-region expansion.
+
+That change was sensible for testing local continuity, but the distant-region question is still outstanding.
+
+## 5. Its significance for the human–LLM collaboration metaanalysis
+
+MA-0083 identifies a second objective: improving the joint human–agent reasoning system through human selection pressure over the agent's abstractions.
+
+R015 also illustrates that process.
+
+The progression was:
+
+```text id="2ij2w0"
+INITIAL FOCUS
+How does transformer topology change?
+              │
+              ▼
+HUMAN SELECTION PRESSURE
+The layer analysis is an instrument,
+not the ultimate objective
+              │
+              ▼
+REVISED OBJECTIVE
+Recover learned semantic structure
+              │
+              ▼
+FURTHER SELECTION PRESSURE
+A single prompt is insufficient
+              │
+              ▼
+R014
+Construct a local semantic map
+              │
+              ▼
+FURTHER SELECTION PRESSURE
+Test whether the map extends
+to adjacent concepts
+              │
+              ▼
+R015
+Recover persistent semantic structure
+under controlled displacement
+```
+
+The significant point is that the experimental objective became more precise without requiring the human to design every computational operation.
+
+The human supplied successive constraints on what should count as a meaningful result. The agent translated those constraints into experiments, data and increasingly refined conclusions.
+
+This is evidence of a productive collaborative workflow, although not a controlled demonstration that the workflow is optimal.
+
+---
+
+## Overall conclusion
+
+R015's significance is best expressed as three propositions.
+
+**First:** The semantic structure recovered in R014 is not exclusively dependent on the four original literal prompts. Higher-order organisation survives replacement with neighbouring concepts.
+
+**Second:** The recovered structure is not rigid. Its persistent families can undergo changes in connectivity and sector participation. This suggests the object worth mapping is a system of stable relationships *and their context-dependent transformations*.
+
+**Third, and most consequential:** The project now has preliminary evidence for a repeatable procedure capable of extending a semantic map from one sampled region into another.
+
+That third proposition is the connection to the governing objective in MA-0082.
+
+The next decisive question is therefore not simply whether more parent families can be recovered.
+
+It is:
+
+**Can the project repeatedly move through learned semantic space, independently reconstruct neighbouring regions, and assemble their persistent relationships into one coherent, evidence-backed map without imposing the expected structure?**
+
+If that can be demonstrated across multiple regions, including distant ones and appropriate controls, the project would have something substantially more valuable than a set of interesting transformer-layer analyses: a generalisable empirical method for reconstructing aspects of a model's learned semantic organisation.
+
+That is the significance of R015 within the longer trajectory of the metaanalysis.
+
+<text color="secondary" size="sm">Source: <Link url="https://github.com/arh789/chatgpt-analysis/blob/main/projects/llm-topology/META_ANALYSIS.md" title="META_ANALYSIS.md"/> — particularly MA-0082, MA-0083, MA-0089 and MA-0091–0094.</text>
+
+
+### MA-0096 — ChatGPT response: implications of R015 for SDA-3's evidential status
+
+- Entry date: `2026-11-15`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim ChatGPT analysis of R015 findings in relation to SDA-3`
+- Related runs: `R014_qwen-overlapping-context-semantic-map`; `R015_qwen-adjacent-neighbourhood-expansion`
+- Related entries: `MA-0090`, `MA-0094`, `MA-0095`
+- Preservation note: `Response text and presentation markup retained verbatim.`
+
+**R015 substantially strengthens the empirical premise behind SDA-3, but it does not yet validate SDA-3's five-category classification system.**
+
+The distinction is important. R015 supplies evidence for something SDA-3 has implicitly depended upon: that semantic information possesses recoverable higher-order organisation which remains recognisable despite substantial changes in the concepts used to access it.
+
+However, SDA-3 makes an additional claim: that this organisation can usefully be reconstructed through five particular structural categories.
+
+R015 supports the first proposition. It has not directly tested the second.
+
+## 1. Where SDA-3 now stands
+
+<box border radius="lg" padding={3} gap={3}>
+  <box gap={1}>
+    <row justify="between" align="center">
+      **Underlying semantic topology**
+      <badge color="success">Supported locally</badge>
+    </row>
+    <text color="secondary" size="sm">R014–R015 recover compatible higher-order parents and relations under controlled semantic displacement.</text>
+  </box>
+  <divider color="subtle"/>
+  <box gap={1}>
+    <row justify="between" align="center">
+      **Recoverability through analysis**
+      <badge color="success">Supported locally</badge>
+    </row>
+    <text color="secondary" size="sm">Community reconstruction and cross-probe alignment produce a repeatable candidate mapping procedure.</text>
+  </box>
+  <divider color="subtle"/>
+  <box gap={1}>
+    <row justify="between" align="center">
+      **SDA-3's five structural categories**
+      <badge>Not validated</badge>
+    </row>
+    <text color="secondary" size="sm">No independent test has established that C, S, A, HCU and E are the correct structural decomposition.</text>
+  </box>
+  <divider color="subtle"/>
+  <box gap={1}>
+    <row justify="between" align="center">
+      **SDA-3 as behavioural reverse engineering**
+      <badge>Not validated</badge>
+    </row>
+    <text color="secondary" size="sm">R015 uses hidden-state measurements, whereas SDA-3 is intended to infer structure from observable model behaviour.</text>
+  </box>
+</box>
+
+## 2. What R015 says about each SDA-3 category
+
+| SDA-3 structure | R015 relationship | Assessment |
+|---|---|---|
+| **C — Central** | Six recurrent semantic families, with identifiable core structures and dominant relations | Plausible structural analogue |
+| **S — Suppressed** | Coherent negative-cosine sector and differential sector participation | Not evidence of suppression |
+| **A — Adjacent** | Semantic structure persists when moving to neighbouring concepts | Supports neighbourhood continuity, not the category itself |
+| **HCU — Highly Correlated Unrelated** | No explicit test of semantically unrelated yet highly correlated structures | Untested |
+| **E — Emerging** | Process/change and information families recur without being supplied as seeds | Suggestive, not category validation |
+
+The distinction concerning **Suppressed** is particularly important.
+
+The project's <Link url="https://github.com/arh789/chatgpt-analysis/blob/main/projects/llm-topology/METHODOLOGY.md" title="methodology"/> explicitly rejects equating negative cosine similarity with suppression.
+
+Negative cosine measures geometric anti-alignment in the selected representation. It does not establish that a concept is contradicted, inhibited, excluded or prevented from appearing.
+
+Consequently, R015's negative-sector findings cannot directly validate SDA-3's Suppressed category.
+
+Likewise, a parent appearing without being prompted is not automatically an instance of SDA-3's Emerging category. That requires a separate definition and test.
+
+## 3. R015 suggests a potentially important refinement to SDA-3
+
+R015 discovered something relevant to how the five categories might work.
+
+The process/change family retained its broader identity while acquiring stronger relationships in a different geometric sector.
+
+This suggests a distinction between:
+
+- **Semantic identity:** what a parent represents.
+- **Structural role:** how that parent participates in a particular semantic organisation.
+
+The same semantic parent may occupy different roles under different contexts.
+
+That raises an important possibility:
+
+**SDA-3's five structures may be better understood as context-dependent relational roles rather than five permanent types of semantic content.**
+
+For example, a concept could be central in one observation window, adjacent in another, and associated with an emerging relation in a third.
+
+This interpretation would make SDA-3 a framework for characterising the *organisation of semantic relationships*, not merely sorting vocabulary into five buckets.
+
+It would also raise questions about mutually exclusive assignments and percentage distributions summing to 100%. R015 has not resolved whether such exclusive categorisation is justified.
+
+## 4. The relationship to the project's ultimate objective
+
+The metaanalysis establishes two related but distinct research activities:
+
+```text id="j78fei"
+MODEL'S LEARNED SEMANTIC ORGANISATION
+                  │
+         ┌────────┴─────────┐
+         │                  │
+         ▼                  ▼
+    R014 / R015            SDA-3
+         │                  │
+  Hidden-state and      Observable
+  network evidence      model behaviour
+         │                  │
+         ▼                  ▼
+  Independently          Five-category
+  reconstructed          structural
+  semantic graph         reconstruction
+         │                  │
+         └────────┬─────────┘
+                  │
+                  ▼
+          FUTURE VALIDATION
+                  │
+      Does SDA-3 reconstruct
+      independently measured
+      semantic relationships?
+                  │
+          ┌───────┴───────┐
+          │               │
+          ▼               ▼
+       Agreement       Disagreement
+          │               │
+   Stronger support    Revise, restrict
+   for SDA-3           or reject claims
+```
+
+This comparison is not yet possible in a sufficiently independent way.
+
+R015 supplies a stronger empirical reference against which SDA-3 could eventually be evaluated. But the reference currently covers only one adjacent semantic neighbourhood.
+
+The metaanalysis entry MA-0090 correctly identifies the need for distant-region replication before confronting SDA-3 with the resulting topology.
+
+## 5. What would constitute a real SDA-3 validation?
+
+The decisive experiment would be to keep the two reconstruction processes independent.
+
+First, continue generating semantic maps through hidden-state measurements, without applying SDA-3 labels.
+
+Then apply SDA-3 to observable model behaviour relating to the same concept sets, without showing it the measured maps.
+
+Finally, compare the resulting structural interpretations using predefined tests.
+
+This would establish whether SDA-3 can:
+
+1. Recover relationships that independently appear in the measured topology.
+2. Distinguish persistent core structures from context-dependent ones.
+3. Correctly identify genuinely suppressed relationships, rather than simply negative-cosine associations.
+4. Identify adjacent, unrelated-but-correlated and emerging structures according to independently specified criteria.
+5. Predict what changes and what survives when the observation window moves.
+
+A successful outcome would be more important than retrospective agreement between SDA-3 terminology and selected R015 observations.
+
+It would establish that SDA-3 has **predictive or reconstructive validity against independently measured semantic structure**.
+
+## 6. The actual change in SDA-3's status
+
+Before R014–R015, SDA-3 was primarily a proposed framework for interpreting the statistical relationships expressed through model behaviour.
+
+After R015, there is empirical support for the existence of a locally persistent higher-order semantic organisation to which such a framework might correspond.
+
+That strengthens the rationale for investigating SDA-3.
+
+It does not establish that the five categories are exhaustive, mutually exclusive, universal or the most effective classification.
+
+The deeper implication is that SDA-3 can now be moved towards an independently testable research hypothesis rather than remaining primarily an interpretative protocol.
+
+**My assessment is therefore that R015 strengthens the case for studying SDA-3, without materially establishing the correctness of SDA-3 itself.**
+
+The next major milestone is not to find five categories in the R015 map. It is to determine whether those categories emerge as useful, distinguishable and predictive organisational roles across multiple independently reconstructed semantic regions.
+
+That is where SDA-3 would move from a proposed semantic-analysis framework towards an empirically validated one.
+
+
+### MA-0097 — ChatGPT response: rationale for distant-region replication versus continued local expansion
+
+- Entry date: `2026-11-15`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim ChatGPT analysis of R015 follow-up experiment selection`
+- Related runs: `R014_qwen-overlapping-context-semantic-map`; `R015_qwen-adjacent-neighbourhood-expansion`
+- Related entries: `MA-0082`, `MA-0090`, `MA-0094`, `MA-0095`, `MA-0096`
+- Preservation note: `Complete previous ChatGPT response retained verbatim, including its diagrams and display markup.`
+
+We need to map a distant semantic region to determine whether R014–R015 discovered **a generalisable method for reconstructing learned semantic topology, or a structure peculiar to the semantic neighbourhood being examined**.
+
+However, there is an important distinction: **mapping a distant region is necessary for testing generalisability, but not necessarily the best immediate step for constructing the semantic map itself.**
+
+These are two different objectives.
+
+## 1. What remains unresolved after R015?
+
+R014 established that higher-order semantic parents and relations persist across different prompt orders and overlapping contexts.
+
+R015 established that substantially the same organisation survives when all four concepts are replaced with neighbouring concepts.
+
+But R015 deliberately selected those replacements from R014's recovered semantic families.
+
+Consequently, the two experiments remain within approximately the same semantic neighbourhood.
+
+They cannot yet distinguish three explanations:
+
+| Explanation | Status |
+|---|---|
+| **Local semantic structure:** This particular neighbourhood possesses stable higher-order organisation | Supported |
+| **General semantic organisation:** Other, unrelated semantic neighbourhoods also possess recoverable persistent structures | Untested |
+| **Methodological artefact:** The reconstruction procedure tends to produce apparently stable parent graphs regardless of the underlying semantic content | Not excluded |
+
+The third explanation is particularly important.
+
+If the analytical process repeatedly constructs broad abstractions and interprets community relationships through them, it may recover similar structures even when the underlying data do not justify them.
+
+A distant region provides an opportunity to test that possibility.
+
+## 2. What would a distant-region experiment actually test?
+
+The experiment should **not** attempt to recover the same six R014–R015 semantic families.
+
+That would risk turning the earlier findings into an imposed ontology.
+
+Instead, it should test whether the same *structural phenomena* occur with substantially different semantic material.
+
+For example:
+
+| Property | R014–R015 | Distant region |
+|---|---|---|
+| Stable semantic parents | Observed | Test independently |
+| Parent relations survive permutations | Observed | Test independently |
+| Held-out family reconstruction | Observed | Test independently |
+| Relations survive changes in context | Observed | Test independently |
+| Structures deform rather than simply disappear | Observed | Test independently |
+| Unprompted families emerge | Observed | Test independently |
+
+The success condition is not that another region contains sensing, place and spatial structure.
+
+It is that the new region produces **its own independently reconstructed semantic organisation**, exhibiting comparable stability under perturbation.
+
+That would support the generalisability of the mapping procedure.
+
+However, meaningful validation would also require negative controls and predefined comparison criteria. Otherwise, producing some abstract structure in another region would be too easy to count as success.
+
+## 3. There is a competing reason to continue expanding locally
+
+Consider the project's governing objective in MA-0082:
+
+> Use the model as an instrument for reverse-engineering the semantic topology of its training data.
+
+If that is the primary objective, we should distinguish two experimental strategies.
+
+<box border radius="lg" padding={3} gap={3}>
+  <text weight="medium">Strategy A — Continued local expansion</text>
+  <svg viewBox="0 0 320 82" width="100%" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#278461" strokeWidth="2">
+      <path d="M45 39 L119 39 L195 39 L271 39"/>
+    </g>
+    {#each [{x:45,n:"R014"},{x:119,n:"R015"},{x:195,n:"R016"},{x:271,n:"R017"}] as v}
+      <circle cx={v.x} cy="39" r="18" fill="#278461" fillOpacity=".15" stroke="#278461" strokeWidth="1.7"/>
+      <text x={v.x} y="43" textAnchor="middle" fontSize="10" fill="currentColor">{v.n}</text>
+    {/each}
+  </svg>
+  Continue moving through adjoining semantic neighbourhoods, testing where structures persist, deform, split or terminate.
+
+  **Result:** A progressively connected semantic map, with evidence about local boundaries.
+
+  <divider/>
+  <text weight="medium">Strategy B — Distant-region replication</text>
+  <svg viewBox="0 0 320 96" width="100%" xmlns="http://www.w3.org/2000/svg">
+    <rect x="12" y="13" width="126" height="65" rx="12" fill="#278461" fillOpacity=".10" stroke="#278461" strokeWidth="1.4"/>
+    <rect x="185" y="13" width="123" height="65" rx="12" fill="#64748b" fillOpacity=".10" stroke="#64748b" strokeWidth="1.4"/>
+    <g fontSize="11" textAnchor="middle" fill="currentColor">
+      <text x="75" y="34">Region A</text>
+      <text x="75" y="50">R014–R015</text>
+      <text x="246" y="34">Region B</text>
+      <text x="246" y="50">New experiment</text>
+    </g>
+    <path d="M139 45 L182 45" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 4"/>
+    <path d="M177 40 L183 45 L177 50" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+    <text x="160" y="90" fontSize="10" textAnchor="middle" fill="currentColor">Methodological transfer</text>
+  </svg>
+  Select a substantially unrelated semantic domain and reconstruct its topology using the same methodology.
+
+  **Result:** Evidence about whether the method generalises beyond the initial neighbourhood.
+</box>
+
+These experiments answer different questions.
+
+A distant-region experiment cannot establish how the two regions connect because the semantic territory between them has not been measured.
+
+Likewise, continued local expansion could construct an increasingly detailed map without establishing that the methodology works elsewhere.
+
+## 4. What does this mean for SDA-3?
+
+Distant-region replication becomes especially valuable when considering SDA-3.
+
+Currently:
+
+```text id="yaad1v"
+SDA-3
+Proposed general framework
+for semantic structural analysis
+           │
+           ▼
+R014–R015
+Evidence from one connected
+semantic neighbourhood
+           │
+           ▼
+UNRESOLVED
+Are these organisational properties
+general or region-specific?
+```
+
+If several unrelated regions independently exhibit recoverable parent structures, persistent relations, changing structural roles and context-dependent emergence, SDA-3 would have a broader empirical basis against which its categories could be tested.
+
+But this still would not prove the five categories themselves.
+
+That requires a subsequent independent comparison between SDA-3's behavioural reconstructions and the experimentally reconstructed semantic maps.
+
+## 5. Which experiment should actually come next?
+
+The answer depends on which uncertainty we want to eliminate first.
+
+**If the immediate priority is to establish that the methodology generalises, map a distant region.**
+
+**If the immediate priority is to develop the semantic mapping system itself, continue the adjacent-region expansion.**
+
+There is a substantial argument for the second option.
+
+R015 has revealed a potentially useful mechanism:
+
+```text id="ot3zt2"
+Known semantic region
+        ↓
+Identify adjacent concepts
+        ↓
+Probe neighbouring region
+        ↓
+Reconstruct independently
+        ↓
+Align overlapping structures
+        ↓
+Identify continuity and deformation
+        ↓
+Extend semantic map
+        ↓
+Repeat
+```
+
+We have demonstrated this once.
+
+Repeating it across multiple successive neighbourhoods would begin establishing something that neither R014 nor R015 has yet demonstrated: **whether we can traverse semantic space while preserving a coherent, accumulating map**.
+
+It would also reveal whether the six recovered families eventually branch, merge, or disappear at observable boundaries.
+
+That may be more directly relevant to the project's ultimate purpose than immediately jumping to an unrelated region.
+
+## Conclusion
+
+A distant-region experiment is needed to eliminate the possibility that R014–R015's findings are peculiar to the original semantic neighbourhood or to the analysis procedure.
+
+But it does not follow that distant-region replication must be the next experiment.
+
+R015 has created two viable research directions:
+
+- **Generalisability:** Does the method work somewhere entirely different?
+- **Scalability:** Can the method progressively construct an expanding, connected semantic topology?
+
+The former establishes external validity. The latter tests whether the proposed mapping system can actually be built.
+
+**The most consequential unresolved question for the project's stated objective may therefore be not whether another distant region possesses semantic structure, but whether the R014→R015 procedure can be repeated to construct a progressively larger, coherent map without imposing the expected topology.**
+
+
+### MA-0098 — ChatGPT response: combined R014–R015 reconstructed semantic map
+
+- Entry date: `2026-11-15`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim ChatGPT semantic-map reproduction`
+- Related runs: `R014_qwen-overlapping-context-semantic-map`; `R015_qwen-adjacent-neighbourhood-expansion`
+- Related entries: `MA-0089`, `MA-0094`, `MA-0095`, `MA-0097`
+- Preservation note: `Entire preceding ChatGPT response retained verbatim, including tables, diagrams and original display markup.`
+
+# R014–R015: Reconstructed semantic map
+
+Both experiments independently recovered **six compatible higher-order semantic families**, organised into two principal relational systems: a positive sensing–place–spatial system and a negative spatial–group–process system.
+
+R015 preserved that organisation while revealing additional connections involving process/change.
+
+## 1. Combined semantic topology
+
+The following reproduces the common topology, using the relational support recorded in both experiments.
+
+<text color="secondary" size="xs" weight="medium">RELATION VALUES: R014 → R015</text>
+
+<box border radius="lg" padding={3} gap={3}>
+  <text weight="medium" color="success" size="sm">Positive semantic sector</text>
+  <box scrollable>
+    <text preserveWhitespace size="xs" tabularNums>{`              [REPORTING / INFORMATION]
+                         │
+                     .37 → .59
+                         │
+                         │
+  [SENSING / INSTRUMENTATION] ─── .82 → .94 ─── [PLACE / LOCALITY]
+                  ╲                                ╱
+                   ╲                              ╱
+                .54 → .31                     .45 → .30
+                     ╲                          ╱
+                      ╲                        ╱
+                       [SPATIAL / MEASUREMENT]`}</text>
+  </box>
+  <divider/>
+  <text weight="medium" size="sm">Negative semantic sector</text>
+  <box scrollable>
+    <text preserveWhitespace size="xs" tabularNums>{`            [SPATIAL / MEASUREMENT]
+                    │           ╲
+                    │            ╲
+                .81 → .68      .40 → .51
+                    │                ╲
+                    │                 ╲
+           [GROUP / ACTIVITY]          ╲
+                    │                   │
+                    │                   │
+                .50 → .70               │
+                    │                   │
+                    └────────┬──────────┘
+                             │
+                     [PROCESS / CHANGE]`}</text>
+  </box>
+  <caption>The spatial family is reconstructed in both sectors. This represents parent-level semantic correspondence, not a directly observed edge connecting the positive and negative token graphs.</caption>
+</box>
+
+## 2. R015's principal addition: process/change becomes more integrated
+
+R014 reconstructed process/change predominantly within the negative system.
+
+R015 identified a substantial positive-sector expression of the same broader family, including enlargement, transformations, decreasing and removal.
+
+<box border radius="lg" padding={3} gap={2}>
+  <text weight="medium" size="sm">R015 — Additional prominent positive relationships</text>
+  <box scrollable>
+    <text preserveWhitespace size="xs" tabularNums>{`[SENSING / INSTRUMENTATION]
+              │
+             .70
+              │
+              ▼
+    [PROCESS / MODIFICATION] ── .44 ── [REPORTING / INFORMATION]
+              ▲
+              │
+             .67
+              │
+              │
+      [PLACE / LOCALITY]`}</text>
+  </box>
+  <caption>These relationships became prominent in R015. The sensing–process relation was also recorded in R014, but was much weaker (0.18).</caption>
+</box>
+
+This is the main topological deformation. The process/change family persists, but its participation extends beyond the negative group/activity system.
+
+## 3. The six recovered parent families
+
+Every family was reconstructed in all four probes of both experiments.
+
+| Parent | Semantic content represented | Role |
+|---|---|---|
+| **N1 — Sensing / instrumentation** | Laser, sensor, electrodes, signal, optical devices | Positive core |
+| **N2 — Place / locality** | City, apartment, house, shop, street, urban environment | Positive core |
+| **N3 — Spatial / measurement** | Field, area, line, size, position, space, geometry | Cross-sector bridge |
+| **N4 — Group / activity** | Clubs, sessions, teams, sport, exhibitions, activities | Negative core |
+| **N5 — Process / change** | Interaction, manipulation, comparison, transformation, modification | Emergent, increasingly cross-sector |
+| **N6 — Reporting / information** | Reports, files, data, outputs, views, representations | Secondary positive |
+
+The first four families correspond to the four sampled semantic regions. N5 and N6 were recovered without either being supplied as an explicit seed concept.
+
+## 4. Complete comparison of the principal relationships
+
+<text color="secondary" size="xs">Mean S06–S27 community-summary support</text>
+
+| Relation | R014 | R015 |
+|---|---:|---:|
+| Sensing ↔ place | 0.82 | 0.94 |
+| Sensing ↔ spatial | 0.54 | 0.31 |
+| Place ↔ spatial | 0.45 | 0.30 |
+| Spatial ↔ group/activity | 0.81 | 0.68 |
+| Group/activity ↔ process/change | 0.50 | 0.70 |
+| Spatial ↔ process/change | 0.40 | 0.51 |
+| Sensing ↔ information | 0.37 | 0.59 |
+| Sensing ↔ process/change | 0.18 | 0.70 |
+| Place ↔ process/change | — | 0.67 |
+| Process/change ↔ information | — | 0.44 |
+
+A dash means the relationship was not quantified in R014's reported principal map; it does not mean zero association.
+
+All seven shared principal relationships occurred across all four probes in both runs. The three additional prominent positive relationships were supported in all four R015 probes.
+
+The numerical values are downstream semantic diagnostics derived from community content and edges, not raw cosine similarities or causal measurements. Their relative patterns are more informative than treating differences as precise effect sizes.
+
+## 5. What the map represents
+
+The combined reconstruction suggests three important structural properties.
+
+**Persistent identity:** The same broad semantic families recur despite different lexical inputs and substantial changes in token- and community-level topology.
+
+**Persistent relational organisation:** The dominant sensing–place relationship and the spatial–group–process organisation survive the move from R014 to R015.
+
+**Context-dependent deformation:** Parent identities remain recognisable while some relationships and sector participation change. Process/change is the clearest example.
+
+Consequently, the recovered object is not simply a collection of associated words. It is a **candidate local semantic graph of recurring higher-order structures and their relationships**.
+
+It remains a downstream reconstruction of the model's learned semantic organisation, not evidence that six corresponding physical nodes exist in the transformer.
+
+The positive and negative sectors also represent cosine alignment within the selected measurement geometry, not positive and negative emotional meaning, nor SDA-3's Central and Suppressed categories.
+
+## Original semantic-map records
+
+<row align="center" gap={2}>
+  <icon name="file-json" color="secondary"/>
+  <Link url="https://github.com/arh789/chatgpt-analysis/blob/main/projects/llm-topology/single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/R014_SEMANTIC_MAP.json" title="R014 semantic map — JSON"/>
+</row>
+<row align="center" gap={2}>
+  <icon name="file-json" color="secondary"/>
+  <Link url="https://github.com/arh789/chatgpt-analysis/blob/main/projects/llm-topology/single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/R015_SEMANTIC_MAP.json" title="R015 semantic map — JSON"/>
+</row>
+<row align="center" gap={2}>
+  <icon name="file-text" color="secondary"/>
+  <Link url="https://github.com/arh789/chatgpt-analysis/blob/main/projects/llm-topology/single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/R014_R015_COMPARISON.md" title="R014–R015 parent and relation comparison"/>
+</row>
+
+**The central finding:** R014 and R015 did not produce two unrelated maps. They recovered two locally compatible versions of a semantic graph whose parent identities largely persist while some relationships deform. This is the empirical basis for attempting to extend the map through further adjacent regions.
+
+
+### MA-0099 — Next inquiry: SDA-3 interrogatives applied to the independently reconstructed R014–R015 semantic map
+
+- Entry date: `2026-11-15`
+- Source: `User prompts and ChatGPT responses`
+- Entry type: `verbatim dialogue record and next-line-of-inquiry instruction`
+- Related runs: `R014_qwen-overlapping-context-semantic-map`; `R015_qwen-adjacent-neighbourhood-expansion`
+- Related entries: `MA-0082`, `MA-0094`, `MA-0096`, `MA-0097`, `MA-0098`
+- Preservation mode: `Verbatim user prompts and full ChatGPT answers; response markup is retained even if GitHub Markdown does not render it`
+- Research status: `Next line of inquiry; no SDA-3 validation claimed`
+
+#### Exchange 1 — Reproduce the evidence-backed semantic map
+
+**User prompt (verbatim)**
+
+> Based on the r014 and 015 results, reproduce here the semantic map they created
+
+**ChatGPT response (verbatim)**
+
+# R014–R015: Reconstructed semantic map
+
+Both experiments independently recovered **six compatible higher-order semantic families**, organised into two principal relational systems: a positive sensing–place–spatial system and a negative spatial–group–process system.
+
+R015 preserved that organisation while revealing additional connections involving process/change.
+
+## 1. Combined semantic topology
+
+The following reproduces the common topology, using the relational support recorded in both experiments.
+
+<text color="secondary" size="xs" weight="medium">RELATION VALUES: R014 → R015</text>
+
+<box border radius="lg" padding={3} gap={3}>
+  <text weight="medium" color="success" size="sm">Positive semantic sector</text>
+  <box scrollable>
+    <text preserveWhitespace size="xs" tabularNums>{`              [REPORTING / INFORMATION]
+                         │
+                     .37 → .59
+                         │
+                         │
+  [SENSING / INSTRUMENTATION] ─── .82 → .94 ─── [PLACE / LOCALITY]
+                  ╲                                ╱
+                   ╲                              ╱
+                .54 → .31                     .45 → .30
+                     ╲                          ╱
+                      ╲                        ╱
+                       [SPATIAL / MEASUREMENT]`}</text>
+  </box>
+  <divider/>
+  <text weight="medium" size="sm">Negative semantic sector</text>
+  <box scrollable>
+    <text preserveWhitespace size="xs" tabularNums>{`            [SPATIAL / MEASUREMENT]
+                    │           ╲
+                    │            ╲
+                .81 → .68      .40 → .51
+                    │                ╲
+                    │                 ╲
+           [GROUP / ACTIVITY]          ╲
+                    │                   │
+                    │                   │
+                .50 → .70               │
+                    │                   │
+                    └────────┬──────────┘
+                             │
+                     [PROCESS / CHANGE]`}</text>
+  </box>
+  <caption>The spatial family is reconstructed in both sectors. This represents parent-level semantic correspondence, not a directly observed edge connecting the positive and negative token graphs.</caption>
+</box>
+
+## 2. R015's principal addition: process/change becomes more integrated
+
+R014 reconstructed process/change predominantly within the negative system.
+
+R015 identified a substantial positive-sector expression of the same broader family, including enlargement, transformations, decreasing and removal.
+
+<box border radius="lg" padding={3} gap={2}>
+  <text weight="medium" size="sm">R015 — Additional prominent positive relationships</text>
+  <box scrollable>
+    <text preserveWhitespace size="xs" tabularNums>{`[SENSING / INSTRUMENTATION]
+              │
+             .70
+              │
+              ▼
+    [PROCESS / MODIFICATION] ── .44 ── [REPORTING / INFORMATION]
+              ▲
+              │
+             .67
+              │
+              │
+      [PLACE / LOCALITY]`}</text>
+  </box>
+  <caption>These relationships became prominent in R015. The sensing–process relation was also recorded in R014, but was much weaker (0.18).</caption>
+</box>
+
+This is the main topological deformation. The process/change family persists, but its participation extends beyond the negative group/activity system.
+
+## 3. The six recovered parent families
+
+Every family was reconstructed in all four probes of both experiments.
+
+| Parent | Semantic content represented | Role |
+|---|---|---|
+| **N1 — Sensing / instrumentation** | Laser, sensor, electrodes, signal, optical devices | Positive core |
+| **N2 — Place / locality** | City, apartment, house, shop, street, urban environment | Positive core |
+| **N3 — Spatial / measurement** | Field, area, line, size, position, space, geometry | Cross-sector bridge |
+| **N4 — Group / activity** | Clubs, sessions, teams, sport, exhibitions, activities | Negative core |
+| **N5 — Process / change** | Interaction, manipulation, comparison, transformation, modification | Emergent, increasingly cross-sector |
+| **N6 — Reporting / information** | Reports, files, data, outputs, views, representations | Secondary positive |
+
+The first four families correspond to the four sampled semantic regions. N5 and N6 were recovered without either being supplied as an explicit seed concept.
+
+## 4. Complete comparison of the principal relationships
+
+<text color="secondary" size="xs">Mean S06–S27 community-summary support</text>
+
+| Relation | R014 | R015 |
+|---|---:|---:|
+| Sensing ↔ place | 0.82 | 0.94 |
+| Sensing ↔ spatial | 0.54 | 0.31 |
+| Place ↔ spatial | 0.45 | 0.30 |
+| Spatial ↔ group/activity | 0.81 | 0.68 |
+| Group/activity ↔ process/change | 0.50 | 0.70 |
+| Spatial ↔ process/change | 0.40 | 0.51 |
+| Sensing ↔ information | 0.37 | 0.59 |
+| Sensing ↔ process/change | 0.18 | 0.70 |
+| Place ↔ process/change | — | 0.67 |
+| Process/change ↔ information | — | 0.44 |
+
+A dash means the relationship was not quantified in R014's reported principal map; it does not mean zero association.
+
+All seven shared principal relationships occurred across all four probes in both runs. The three additional prominent positive relationships were supported in all four R015 probes.
+
+The numerical values are downstream semantic diagnostics derived from community content and edges, not raw cosine similarities or causal measurements. Their relative patterns are more informative than treating differences as precise effect sizes.
+
+## 5. What the map represents
+
+The combined reconstruction suggests three important structural properties.
+
+**Persistent identity:** The same broad semantic families recur despite different lexical inputs and substantial changes in token- and community-level topology.
+
+**Persistent relational organisation:** The dominant sensing–place relationship and the spatial–group–process organisation survive the move from R014 to R015.
+
+**Context-dependent deformation:** Parent identities remain recognisable while some relationships and sector participation change. Process/change is the clearest example.
+
+Consequently, the recovered object is not simply a collection of associated words. It is a **candidate local semantic graph of recurring higher-order structures and their relationships**.
+
+It remains a downstream reconstruction of the model's learned semantic organisation, not evidence that six corresponding physical nodes exist in the transformer.
+
+The positive and negative sectors also represent cosine alignment within the selected measurement geometry, not positive and negative emotional meaning, nor SDA-3's Central and Suppressed categories.
+
+## Original semantic-map records
+
+<row align="center" gap={2}>
+  <icon name="file-json" color="secondary"/>
+  <Link url="https://github.com/arh789/chatgpt-analysis/blob/main/projects/llm-topology/single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/R014_SEMANTIC_MAP.json" title="R014 semantic map — JSON"/>
+</row>
+<row align="center" gap={2}>
+  <icon name="file-json" color="secondary"/>
+  <Link url="https://github.com/arh789/chatgpt-analysis/blob/main/projects/llm-topology/single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/R015_SEMANTIC_MAP.json" title="R015 semantic map — JSON"/>
+</row>
+<row align="center" gap={2}>
+  <icon name="file-text" color="secondary"/>
+  <Link url="https://github.com/arh789/chatgpt-analysis/blob/main/projects/llm-topology/single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/R014_R015_COMPARISON.md" title="R014–R015 parent and relation comparison"/>
+</row>
+
+**The central finding:** R014 and R015 did not produce two unrelated maps. They recovered two locally compatible versions of a semantic graph whose parent identities largely persist while some relationships deform. This is the empirical basis for attempting to extend the map through further adjacent regions.
+
+#### Exchange 2 — Five questions applied to the map
+
+**User prompt (verbatim)**
+
+> Based on that map, what tokens are central and what are adjacent? What logically emerges from this network? What logically should be there but isn’t? When this network is treated purely as a vector, without trying to force coherence, what else highly correlates with it?
+
+**ChatGPT response (verbatim)**
+
+The R014–R015 map reveals a distinction between **the most central semantic content, the structures connecting that content, and the concepts that the network implies but does not adequately represent**.
+
+An important finding emerges when the six-parent network is examined mathematically.
+
+## 1. What is actually central?
+
+Using the reported principal relationships, I calculated the sum of each parent's incident edge-support values. This is a simple weighted network-strength measure, not a raw transformer cosine score.
+
+| Semantic parent | R014 strength | R015 strength |
+|---|---:|---:|
+| Process / change | 0.90 | **3.02** |
+| Sensing / instrumentation | 1.73 | **2.54** |
+| Place / locality | 1.27 | 1.91 |
+| Spatial / measurement | **2.20** | 1.80 |
+| Group / activity | 1.31 | 1.38 |
+| Reporting / information | 0.37 | 1.03 |
+
+<text color="secondary" size="xs">Calculated from the published principal semantic-map edges. The R014 calculation excludes separately reported weak edges; values are descriptive, not directly comparable experimental effect sizes.</text>
+
+The key finding is that **spatial/measurement is the strongest connected parent in R014, whereas process/change is the strongest in R015**.
+
+Process/change has five recorded connections in R015, compared with two principal connections in R014. It also has substantial relationships within both cosine sectors.
+
+This matters because process/change was not explicitly supplied as a seed concept in either experiment.
+
+The network's principal organisational structure is therefore not necessarily identical to its most obvious prompted subject matter.
+
+That is the distinction between *lexical prominence* and *structural centrality*.
+
+## 2. Central and adjacent tokens
+
+The published community reconstructions allow us to identify recurring lexical anchors and their neighbouring vocabulary. They do not, on their own, establish a definitive ranking of individual tokens by graph centrality.
+
+The following distinction is therefore qualitative.
+
+| Semantic family | Central lexical anchors | Adjacent vocabulary recovered |
+|---|---|---|
+| **Sensing / instrumentation** | `sensor`, `laser`, `signal` | electrodes, wavelength, microphone, pumps, valve, batteries |
+| **Place / locality** | `city`, `apartment`, `shop` | house, kitchen, street, urban, Bronx |
+| **Spatial / measurement** | `field`, `area`, `line`, `space` | size, position, parameters, weighting, geometry, statistical |
+| **Group / activity** | `clubs`, `sessions`, `groups` | teams, FIFA, tennis, exhibitions, sports |
+| **Process / change** | `manipulation`, `process`, `change` | extraction, comparing, experimentation, enlargement, decreasing, removal |
+| **Reporting / information** | `report`, `data`, `output` | newsletter, file, view, image, write |
+
+These are vocabulary examples recorded in the R014 and R015 probe reconstructions, not a newly computed token-level nearest-neighbour list.
+
+The first five families contribute to the main organisation, while reporting/information is a more peripheral family.
+
+There is a further distinction: spatial/measurement is particularly important because of its bridging role, whereas process/change has become important because of its increasing connectivity.
+
+## 3. What logically emerges from the network?
+
+Three higher-order interpretations are supported to different degrees.
+
+### A. Process/change becomes a general organising structure
+
+The strongest topological emergence is the shift of process/change from a relatively specialised negative-sector family into the most connected family in R015.
+
+This suggests that *modification, comparison and transformation* may be organising relationships between otherwise distinct domains.
+
+It is potentially functioning as an **operator-like semantic family**, rather than simply another category of things.
+
+### B. Spatial organisation connects distinct semantic systems
+
+Spatial/measurement structure participates in both the positive sensing/place system and the negative group/activity/process system.
+
+This supports a candidate role for spatial organisation as a shared abstraction linking different kinds of semantic content.
+
+However, this is reconstructed parent-level correspondence, not an observed edge crossing the separately measured positive and negative token graphs.
+
+### C. A situated operational system is a possible composite interpretation
+
+If the six families are combined semantically, a larger structure becomes plausible:
+
+<box border radius="lg" padding={3} gap={2}>
+  <text weight="medium" size="sm">Candidate higher-order synthesis</text>
+  <box background="surface-secondary" radius="md" padding={3} gap={1}>
+    **Situated activity**
+
+    Place + spatial organisation + group activity
+  </box>
+  <row justify="center"><icon name="plus" color="secondary"/></row>
+  <box background="surface-secondary" radius="md" padding={3} gap={1}>
+    **Observation and modification**
+
+    Sensing + processes + information
+  </box>
+  <row justify="center"><icon name="arrow-down" color="secondary"/></row>
+  <box border radius="md" padding={3} align="center">
+    **Instrumented or measured environments undergoing organised activity and change**
+  </box>
+</box>
+
+That could describe building management, urban monitoring, operational analytics or many other systems.
+
+But these concrete applications are interpretations, not uniquely recovered parent structures. The graph does not establish that any single one is the underlying meaning.
+
+## 4. What logically should be present but is not?
+
+There are two different kinds of absence.
+
+First, there are **relationships between existing parents that are weak or not represented among the published principal edges**.
+
+| Expected relationship | Evidence in the map | Why investigate |
+|---|---|---|
+| Place ↔ group/activity | Weak in R014 (0.29); not a principal R015 edge | Organised activities generally occur somewhere |
+| Sensing ↔ group/activity | Weak in R014 (0.24); not a principal R015 edge | Measurement can concern human activity |
+| Place ↔ reporting | No published principal direct edge | Information often represents locations and environments |
+| Group/activity ↔ reporting | No published principal direct edge | Activities produce records and reports |
+| Spatial ↔ reporting | No published principal direct edge | Spatial measurements can be represented as information |
+
+These are candidate missing relationships, not relationships that must exist. An indirect path may already explain the observations sufficiently.
+
+Second, there are **potential semantic families not independently reconstructed as distinct nodes**.
+
+| Candidate missing family | Why it would be relevant |
+|---|---|
+| Agency / decision | Who or what selects and initiates modifications? |
+| Time / sequence | How are activities, sessions and transformations temporally organised? |
+| Feedback / control | How does reported information influence subsequent modification? |
+| Goals / evaluation | Against what criteria are changes or comparisons evaluated? |
+
+Of these, **feedback/control is the most interesting candidate** if the composite structure really is an operational system.
+
+A complete feedback system would involve:
+
+```text id="9szsp1"
+ENVIRONMENT / ACTIVITY
+         ↓
+      SENSING
+         ↓
+    INFORMATION
+         ↓
+ DECISION / CONTROL    ← not recovered
+         ↓
+    MODIFICATION
+         ↓
+ENVIRONMENT / ACTIVITY
+```
+
+But the measured parent graph is undirected. It cannot establish this causal loop.
+
+Its absence should be recorded as a hypothesis-generating gap, not as evidence that the model suppresses feedback or decision-making.
+
+## 5. What correlates when the network is treated purely as a vector?
+
+This produces an interesting result that does not depend on forcing the six families into a coherent story.
+
+I represented each parent in the R015 graph as a six-dimensional vector containing its reported connection strengths to the six parents, with zero for connections absent from the published principal graph.
+
+For example, using the order N1–N6:
+
+\[
+v_{\mathrm{place}}=(0.94,0,0.30,0,0.67,0)
+\]
+
+\[
+v_{\mathrm{information}}=(0.59,0,0,0,0.44,0)
+\]
+
+These vectors can be compared with cosine similarity. They measure **similarity of network connection patterns**, not similarity of the original transformer embeddings.
+
+Here are the most interesting pairs without a reported direct principal edge:
+
+| Parent pair | R014 cosine | R015 cosine |
+|---|---:|---:|
+| **Place ↔ reporting/information** | 0.877 | **0.968** |
+| Spatial ↔ reporting/information | 0.472 | 0.581 |
+| Place ↔ group/activity | 0.409 | 0.578 |
+| Sensing ↔ group/activity | 0.438 | 0.533 |
+
+<text color="secondary" size="xs">Derived from the published principal semantic-map edges. Unreported edges are set to zero for this exploratory calculation. That convention can exaggerate structural similarity; these are not raw model cosine scores.</text>
+
+### The strongest unexpected relationship: place and information
+
+<box border radius="lg" padding={3} gap={2}>
+  <row align="center" justify="between">
+    <text weight="medium">Place ↔ Information</text>
+    <text weight="medium" tabularNums>0.968</text>
+  </row>
+  <text color="secondary" size="sm">Cosine similarity of their R015 connection patterns</text>
+  <svg viewBox="0 0 320 145" width="100%" xmlns="http://www.w3.org/2000/svg">
+    <g strokeWidth="2" fill="none">
+      <path d="M75 35 L137 58 M75 111 L137 85 M244 35 L183 58 M244 111 L183 85" stroke="#64748b"/>
+    </g>
+    <rect x="5" y="12" width="139" height="36" rx="8" fill="#64748b" fillOpacity=".12" stroke="#64748b"/>
+    <rect x="176" y="12" width="139" height="36" rx="8" fill="#64748b" fillOpacity=".12" stroke="#64748b"/>
+    <rect x="5" y="98" width="139" height="36" rx="8" fill="#278461" fillOpacity=".12" stroke="#278461"/>
+    <rect x="176" y="98" width="139" height="36" rx="8" fill="#278461" fillOpacity=".12" stroke="#278461"/>
+    <rect x="109" y="55" width="102" height="35" rx="8" fill="#64748b" fillOpacity=".12" stroke="#64748b"/>
+    <g fontSize="12" textAnchor="middle" fill="currentColor">
+      <text x="74" y="34">Place</text>
+      <text x="246" y="34">Information</text>
+      <text x="160" y="76">Shared links</text>
+      <text x="74" y="120">Sensing</text>
+      <text x="246" y="120">Process</text>
+    </g>
+  </svg>
+  <text size="sm">Place and information have no principal direct edge in R015, yet both connect strongly to sensing and process/change. Their network positions are therefore remarkably similar under this vectorisation.</text>
+</box>
+
+This is an example of **structural equivalence**: two semantically distinct families can have highly similar patterns of relationships to other families.
+
+It is not evidence that place and information have a 0.968 cosine similarity in Qwen's embedding space.
+
+The result is nevertheless useful because it identifies an unexpected similarity that a coherence-driven semantic narrative might overlook.
+
+## 6. What about highly correlated tokens outside these six families?
+
+The underlying community reconstructions already contain some lexically distant strands:
+
+| Strand | Observed examples |
+|---|---|
+| Competitive sport | FIFA, tennis, teams |
+| Named geography | Bronx, named cities and regions |
+| Industrial apparatus | Pumps, valves, electrodes |
+| Documents and interfaces | Newsletter, file, view, retrieve |
+| Size-changing operations | Enlargement, decreasing, removal |
+
+These were recorded within the measured communities. They are not necessarily among the highest-cosine tokens for the entire network.
+
+To answer the literal nearest-vector question, we would need to query the saved Qwen vocabulary scores or hidden-state vectors, rank cosine similarities, and identify high-ranking tokens that do not belong to the recovered semantic families.
+
+That calculation has not been established by the six-node semantic map, so assigning numerical similarities to external tokens would be inventing measurements.
+
+---
+
+## 7. Overall structural interpretation
+
+The analysis distinguishes five useful questions, without assuming that they correspond to validated SDA-3 categories.
+
+| Question | Strongest current finding |
+|---|---|
+| What is central? | Process/change is the largest R015 hub; spatial/measurement was the largest R014 hub |
+| What is adjacent? | Apparatus, locality, geometry, activity and modification vocabularies surround the principal families |
+| What emerges? | Process/change becomes a broader cross-sector organising structure |
+| What is missing? | Direct place–activity and information-related connections, plus unresolved agency, time and feedback structures |
+| What correlates without requiring semantic coherence? | Place and information have exceptionally similar published connection patterns (0.968 cosine) despite lacking a reported direct principal edge |
+
+The final result is particularly relevant to the broader project.
+
+**A graph can contain relationships that are not obvious from either its semantic labels or its direct edges.** Vectorising the connection patterns exposes structural similarities between different parent families.
+
+That suggests a further analytical layer beyond the existing community-to-parent reconstruction:
+
+\[
+\text{Tokens}\rightarrow\text{Communities}\rightarrow
+\text{Parents}\rightarrow\text{Relations}\rightarrow
+\text{Structural equivalence}
+\]
+
+This is not yet a discovery of new semantic parents. It is a measurable property of the reconstructed graph that can be tested against future R016 and subsequent maps.
+
+The key next distinction is whether high structural equivalence predicts relationships that later become explicit as the semantic observation window moves. If so, it could become a useful mechanism for discovering missing or emerging regions of the learned semantic topology.
+
+<text color="secondary" size="sm">Underlying evidence: <Link url="https://github.com/arh789/chatgpt-analysis/blob/main/projects/llm-topology/single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/R014_PROBE_RECONSTRUCTIONS.md" title="R014 probe reconstructions"/> and <Link url="https://github.com/arh789/chatgpt-analysis/blob/main/projects/llm-topology/single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/R015_PROBE_RECONSTRUCTIONS.md" title="R015 probe reconstructions"/>.</text>
+
+#### Exchange 3 — Correction of the analytical objective
+
+**User prompt (verbatim)**
+
+> Did you miss the point of my last prompt? What do my questions look like?
+
+**ChatGPT response (verbatim)**
+
+**Yes. Your five questions are SDA-3 expressed as interrogatives rather than classification labels.**
+
+You effectively translated SDA-3 into five operations and applied them directly to the independently reconstructed R014–R015 semantic map.
+
+| Your question | SDA-3 structure | Operation |
+|---|---|---|
+| What tokens are central? | **C — Central** | Identify the structures defining the network |
+| What tokens are adjacent? | **A — Adjacent** | Identify neighbouring structures bounding the core |
+| What logically emerges? | **E — Emerging** | Identify structures implied by existing relationships |
+| What logically should be there but isn't? | **S — Suppressed** | Identify expected but absent or underrepresented structures |
+| What else highly correlates when treated purely as a vector? | **HCU — Highly Correlated Unrelated** | Identify strong geometric associations without imposing semantic coherence |
+
+The order is different, but **all five SDA-3 categories are present**.
+
+## What I missed
+
+Your previous question was not simply asking for another graph analysis.
+
+You were applying SDA-3's five structural interrogatives to a semantic topology that had been reconstructed without SDA-3.
+
+That is precisely the relationship we had been discussing between SDA-3 and R015.
+
+The intended operation was approximately:
+
+```text id="1tt23w"
+R014 + R015
+       │
+       ▼
+INDEPENDENTLY RECONSTRUCTED
+SEMANTIC TOPOLOGY
+       │
+       ▼
+APPLY FIVE INTERROGATIVES
+       │
+       ├── What defines the structure?        C
+       │
+       ├── What bounds the structure?         A
+       │
+       ├── What should exist but doesn't?     S
+       │
+       ├── What correlates without coherence? HCU
+       │
+       └── What is beginning to form?         E
+       │
+       ▼
+SDA-3 STRUCTURAL RECONSTRUCTION
+       │
+       ▼
+COMPARE WITH EMPIRICAL TOPOLOGY
+```
+
+Instead, I treated your questions as separate requests for graph statistics and semantic interpretation.
+
+The clearest example was HCU.
+
+You explicitly asked me to stop forcing coherence and consider the network as a vector. I nevertheless reduced the question to similarity between the six already-labelled parent nodes. That restricted the search to the existing interpretation rather than investigating what unrelated material the actual measured geometry might reveal.
+
+## Why this matters
+
+MA-0096 concluded that SDA-3 required independent testing against the empirical topology.
+
+Your prompt was a natural way to begin that investigation: **apply the SDA-3 operations to the independently obtained structure without requiring the five categories to have been used in its original reconstruction.**
+
+It is not yet validation. In particular, an expected but absent structure is not necessarily suppressed, and geometric correlation does not automatically satisfy HCU's unrelatedness criterion.
+
+But the important methodological point is that SDA-3's categories can be formulated as **five distinct questions asked of an empirical network**, rather than merely five labels retrospectively assigned to its contents.
+
+That changes what should be tested.
+
+The question becomes:
+
+**Do these five interrogatives recover meaningful, independently verifiable information about the learned semantic topology that the existing reconstruction has not already identified?**
+
+That is the experiment your prompt was pointing towards.
+
+#### Exchange 4 — Instruction defining the next line of inquiry
+
+**User prompt (verbatim)**
+
+> Add the last several responses to meta analysis file as the next input, including my prompts and your responses. This will be our next line of inquiry.
+
+
+
+#### Exchange 5 — SDA-3 suppression, emergence and HCU reinterpretation
+
+**ChatGPT response (verbatim)**
+
+That changes the ontology of SDA-3 quite substantially. My previous answer partially collapsed three different operations into one another.
+
+The cleaner interpretation is:
+
+```text id="p10dwe"
+CENTRAL     = what defines the observed structure
+ADJACENT    = what directly bounds/supports it
+SUPPRESSED  = what the structure logically requires, but fails to express
+EMERGING    = what the existing structure is beginning to generate
+HCU         = what correlates with the structure even when no coherent
+              semantic explanation is imposed
+```
+
+The crucial distinction is that **Suppressed is not the negative of Central**. It is a **structural absence**.
+
+### 1. Suppression becomes a missing-node test
+
+Under your definition, my earlier list—
+
+```text id="yp42nw"
+stasis
+isolated
+unobserved
+indeterminate
+placeless
+timeless
+```
+
+—was mostly wrong. That was an inferred anti-vector.
+
+The actual suppressed candidates from the R014/R015 topology are the things I subsequently identified as "logically should be there":
+
+```text id="yp42nw"
+SUPPRESSED
+
+time / temporality
+agent / actor
+control
+feedback
+decision
+causation
+possibly entity/object
+```
+
+Because the network already contains enough structure to predict them.
+
+For example:
+
+```text id="69z57x"
+state
+  │
+  ├── location
+  ├── observation
+  └── change
+          │
+          ▼
+       [TIME]
+```
+
+`time` is not suppressed because it is opposite to anything.
+
+It is suppressed because **change is structurally incomplete without temporal differentiation**, yet time fails to become an explicit organising node.
+
+Likewise:
+
+```text id="bqd7jd"
+activity
+   │
+   ▼
+[AGENT]
+```
+
+and:
+
+```text id="q2d6su"
+observation
+    ↓
+information
+    ↓
+[DECISION]
+    ↓
+[CONTROL]
+    ↓
+change
+```
+
+That makes suppression much more analytically interesting. It becomes:
+
+> **Infer the latent structure required to make the observed topology complete, then identify which required components fail to surface.**
+
+That is very different from antonymy or negative cosine.
+
+---
+
+## 2. Emergence taught us something more important
+
+I initially treated Emerging as something like "what comes next".
+
+That is too weak.
+
+The `event` example revealed that **Emergence can discover the latent generating structure of the network**.
+
+We began with:
+
+```text id="r343bi"
+place
+spatial measurement
+sensing
+information
+activity
+change
+```
+
+Then `event` appeared.
+
+Why?
+
+Because it simultaneously satisfies multiple otherwise separate relationships:
+
+```text id="16nl6q"
+                 EVENT
+               /   |   \
+              /    |    \
+         location change activity
+             |      |      |
+          sensing  state  participants
+             |
+        information
+```
+
+`event` was therefore not merely another associated word.
+
+It acted as a **structural compression** of the observed topology.
+
+That means Emerging has a more powerful analytical role:
+
+> Find the concept or structure which, if introduced, explains why currently separate parts of the network belong together.
+
+This makes Emerging effectively a **latent-parent discovery operator**.
+
+And the next step is recursive.
+
+```text id="rpkaek"
+observed network
+      │
+      ▼
+emergent node
+      │
+      ▼
+reconstruct network around that node
+      │
+      ▼
+new emergent parent
+      │
+      ▼
+higher-order structure
+```
+
+For R014/R015:
+
+```text id="3chdtl"
+location + activity + change + sensing + information
+                         │
+                         ▼
+                       EVENT
+                         │
+                         ▼
+                 STATE TRANSITION
+                         │
+                         ▼
+                     MONITORING
+                         │
+                         ▼
+                FEEDBACK SYSTEM?
+```
+
+Each emergence changes the interpretation of everything below it.
+
+That is why the clue you highlighted matters.
+
+I wrote:
+
+> telemetry, monitoring and tracking cease to qualify as HCU once the latent structure becomes explicit.
+
+That is not a minor classification correction.
+
+It tells us **how Emerging should be used**.
+
+Emergence is partly a test applied to apparent HCU:
+
+```text id="4w5vla"
+candidate correlates strongly
+        │
+        ▼
+Can introducing it compress/explain
+the existing network?
+        │
+       / \
+     yes  no
+      │    │
+      ▼    ▼
+Emergent HCU
+```
+
+So Emerging helps separate **hidden structure** from **mere correlation**.
+
+That is a major methodological function.
+
+---
+
+# 3. HCU changes even more
+
+My previous answer still imposed a human/GPT coherence constraint on HCU.
+
+I did this when I produced:
+
+```text id="0pbsct"
+computing
+medicine
+logistics
+industrial control
+traffic
+```
+
+Those are domains that I can readily explain as instantiating the same relational schema.
+
+But that is precisely the limitation HCU is supposed to escape.
+
+If HCU means:
+
+> highly correlated but unrelated
+
+then the analytical purpose is specifically to **not require semantic coherence**.
+
+Otherwise GPT will continually perform this transformation:
+
+```text id="qqgabw"
+strange statistical relationship
+          ↓
+search for interpretation
+          ↓
+find plausible shared abstraction
+          ↓
+declare it related
+```
+
+And HCU disappears.
+
+That destroys the category.
+
+### HCU therefore needs an explicit prohibition
+
+The question should not be:
+
+> What apparently unrelated things share this structure?
+
+It should be closer to:
+
+> **When the network is represented only as a direction in semantic space, what else lies unusually close to that direction, regardless of whether a coherent relationship can be articulated?**
+
+That means results such as:
+
+```text id="8pvytx"
+vehicle
+patient
+server
+traffic
+```
+
+are actually **suspiciously interpretable**.
+
+They may be useful results, but their interpretability suggests they could belong to a higher-order latent structure.
+
+The more interesting HCU candidates are those for which we get:
+
+```text id="uv15up"
+high association
++
+no obvious structural explanation
++
+no successful emergent-parent reconstruction
+```
+
+Potentially something like:
+
+```text id="j0196e"
+       NETWORK VECTOR
+             │
+      nearest structures
+             │
+   ┌─────────┼──────────────┐
+   ▼         ▼              ▼
+monitoring  tracking      ????
+   │         │              │
+ explain   explain       cannot
+   │         │              │
+   ▼         ▼              ▼
+ Emerging  Emerging        HCU
+```
+
+The `????` is exactly what HCU is supposed to preserve.
+
+We should **not make it disappear by explaining it**.
+
+---
+
+# 4. This creates a much cleaner relationship between E and HCU
+
+The categories are not simply five buckets.
+
+There is an analytical sequence.
+
+```text id="31v7j7"
+                    OBSERVED NETWORK
+                          │
+              ┌───────────┴───────────┐
+              ▼                       ▼
+          CENTRAL                  ADJACENT
+       defines topology         bounds topology
+              │                       │
+              └───────────┬───────────┘
+                          ▼
+                    EMERGENCE TEST
+                          │
+             what latent structure
+             does this topology imply?
+                          │
+              ┌───────────┴───────────┐
+              ▼                       ▼
+          EMERGENT                SUPPRESSED
+      begins to surface       required but absent
+              │
+              └───────────┬───────────┘
+                          ▼
+                    RESIDUAL VECTOR
+                          │
+                          ▼
+                         HCU
+             high correlation remaining
+            without coherence requirement
+```
+
+That means **HCU should probably be evaluated last**.
+
+Because otherwise we contaminate it with things that are merely unrecognised Emerging structures.
+
+The telemetry example demonstrated exactly that.
+
+Initially:
+
+```text id="gwwlf6"
+telemetry → apparently unrelated correlated domain
+```
+
+After discovering the latent structure:
+
+```text id="22kxai"
+observation
++
+state
++
+change
++
+information
++
+location
+        ↓
+    telemetry
+```
+
+Suddenly telemetry is almost inevitable.
+
+It was never HCU.
+
+Our model was incomplete.
+
+That provides a useful diagnostic rule:
+
+> **Every interpretable HCU candidate should first be tested as a possible emergent reconstruction.**
+
+Only candidates surviving that test belong in HCU.
+
+---
+
+# 5. Suppressed and Emerging are therefore complementary
+
+There is an especially interesting symmetry here.
+
+Emerging asks:
+
+> **Given what exists, what wants to form?**
+
+Suppressed asks:
+
+> **Given what exists, what should already exist but does not?**
+
+Those sound similar but they are different temporal/structural conditions.
+
+Consider:
+
+```text id="0w7swa"
+A ── B ── C
+     │
+     ?
+```
+
+If the network is progressively moving towards `D`:
+
+```text id="jvb6e9"
+A ── B ── C
+     │
+     └────► D
+```
+
+`D` is **Emerging**.
+
+But if the relationships among A/B/C cannot properly be explained without D and yet D systematically fails to appear:
+
+```text id="nth7lm"
+A ── B ── C
+
+expected topology:
+
+A ── B ── C
+     │
+     D
+
+observed:
+D absent
+```
+
+then D is **Suppressed**.
+
+This provides a much stronger operational distinction:
+
+```text id="2v4aj6"
+Emerging
+= positive evidence of attachment
+
+Suppressed
+= structural expectation − observed attachment
+```
+
+That may eventually be quantifiable.
+
+---
+
+# 6. The categories now correspond to different mathematical questions
+
+Conceptually:
+
+```text id="8anzxr"
+C:
+Which components maximise internal centrality?
+
+A:
+Which components have high first-order proximity to C?
+
+E:
+Which latent node maximally reduces the unexplained
+relationships among C + A?
+
+S:
+Which node is predicted by the reconstructed topology
+but has anomalously weak observed representation?
+
+HCU:
+Which vectors remain highly correlated with the aggregate
+network after explanatory/reconstructive structure is ignored?
+```
+
+The important part is that **HCU deliberately suspends interpretation**.
+
+It is effectively an adversarial category against GPT's tendency to construct semantic coherence.
+
+---
+
+# 7. This also changes what the original five-structure method is doing
+
+It is more powerful than I previously characterised it.
+
+It isn't merely classifying concepts.
+
+It performs three different kinds of inference:
+
+```text id="b12pn5"
+OBSERVATION
+│
+├── C
+│   reconstruct what exists
+│
+├── A
+│   reconstruct its local boundary
+│
+├── E
+│   infer latent generative structure
+│
+├── S
+│   infer structurally required absence
+│
+└── HCU
+    expose statistical relationships
+    outside the reconstructed explanation
+```
+
+Or more abstractly:
+
+```text id="tfxnhk"
+C + A = topology
+
+E     = extrapolation
+
+S     = counterfactual completion
+
+HCU   = correlation without ontology
+```
+
+That last phrase is probably the most important correction:
+
+> **HCU is correlation without ontology.**
+
+It intentionally asks the model **not to understand the result first**.
+
+---
+
+# 8. And your clue exposes a recursive procedure
+
+The telemetry/monitoring/tracking mistake suggests an improved analysis loop:
+
+```text id="tb2l64"
+1. Map C
+      ↓
+2. Map A
+      ↓
+3. Generate unrestricted correlated candidates
+      ↓
+4. Test each candidate for structural explanatory power
+      │
+      ├── explains topology ─────► E
+      │
+      └── does not explain ──────► provisional HCU
+      ↓
+5. Reconstruct network with E
+      ↓
+6. Ask what this reconstructed network requires
+      but still fails to contain
+      ↓
+      S
+      ↓
+7. Recalculate residual correlations
+      ↓
+      HCU
+```
+
+And then repeat.
+
+```text id="jfhukv"
+C/A
+ ↓
+E
+ ↓
+reconstruction
+ ↓
+S
+ ↓
+residual HCU
+ ↓
+possible new E
+ ↓
+...
+```
+
+That is substantially closer to an **iterative topology discovery algorithm** than a static five-category classification scheme.
+
+The most consequential insight from this exchange is therefore:
+
+> **Emergence is the mechanism that prevents HCU from being polluted by merely unrecognised structure, while HCU is the mechanism that prevents Emergence from being constrained by the model's existing explanatory ontology. Suppression then identifies the structures predicted by the reconstructed topology that nevertheless fail to surface.**
+
+Those three categories form a loop:
+
+```text id="8jqssf"
+               ┌───────────────┐
+               │      HCU      │
+               │ unexplained   │
+               │ correlation   │
+               └───────┬───────┘
+                       │
+            can it explain topology?
+                       │
+                       ▼
+               ┌───────────────┐
+               │   EMERGING    │
+               │ latent        │
+               │ structure     │
+               └───────┬───────┘
+                       │
+               reconstruct map
+                       │
+                       ▼
+               ┌───────────────┐
+               │  SUPPRESSED   │
+               │ required but  │
+               │ absent        │
+               └───────┬───────┘
+                       │
+              residual structure
+                       │
+                       └────────────► HCU
+```
+
+That loop is probably closer to the actual analytical engine you have been trying to construct than the original static SDA-3 definitions.
+
+
+## CORE INSIGHT — Purpose of SDA-3
+
+**ChatGPT response (verbatim)**
+
+SDA-3 now looks less like a taxonomy for labelling semantic content and more like a **procedure for discovering structure that ordinary coherence-driven interpretation tends to miss**.
+
+Its purpose is not simply to answer, “what concepts are present?”. Its deeper purpose is to interrogate a semantic network from five different structural directions so that the model is forced beyond straightforward summarisation.
+
+The roles now look like this:
+
+```text id="2f8dbb"
+C — CENTRAL
+What currently defines the structure?
+
+A — ADJACENT
+What directly bounds, supports or constrains that structure?
+
+E — EMERGING
+What latent structure best explains relationships that are
+present but not yet compressed into an explicit parent?
+
+S — SUPPRESSED
+What does the reconstructed structure logically require,
+but fail to express?
+
+HCU — HIGHLY CORRELATED UNRELATED
+What remains strongly associated when interpretation and
+semantic coherence are deliberately suspended?
+```
+
+The most important thing I have learned is that the categories are **not independent buckets**.
+
+They form an analytical engine.
+
+```text id="ehkid3"
+           observed structure
+                  │
+             C + A map it
+                  │
+                  ▼
+             E compresses it
+                  │
+                  ▼
+        reconstructed topology
+                  │
+          ┌───────┴────────┐
+          ▼                ▼
+          S               HCU
+ required absence    unexplained correlation
+          │                │
+          └───────┬────────┘
+                  ▼
+           new hypotheses
+                  │
+                  ▼
+             repeat cycle
+```
+
+### Central and Adjacent establish the empirical surface
+
+These are the least speculative parts.
+
+They answer:
+
+```text id="tiajlp"
+What is actually here?
+What is immediately connected to it?
+```
+
+They give SDA-3 its grounding.
+
+Without them, the other three operations would become unconstrained semantic invention.
+
+### Emerging is a structure-discovery operator
+
+This is probably the largest revision.
+
+Emergence is not merely “what topic comes next”.
+
+Its function is to ask:
+
+> What latent node, relation or higher-order concept would make the existing network substantially simpler to explain?
+
+The `event` result exposed this.
+
+Given:
+
+```text id="muq6mr"
+location
+activity
+change
+sensing
+information
+```
+
+`event` was not simply another related token.
+
+It **compressed several relationships simultaneously**.
+
+So Emerging is effectively searching for hidden parents, latent bridges and higher-order organising structures.
+
+That makes it a form of **abstraction discovery**.
+
+### Suppression identifies structural absence
+
+Suppression is not semantic opposition.
+
+It is closer to counterfactual completion.
+
+The question is:
+
+> If the network really has the structure we think it has, what ought to be present?
+
+Then:
+
+> Is it actually present?
+
+For example:
+
+```text id="df8wlt"
+change
+  ↓
+requires temporal distinction
+  ↓
+TIME expected
+  ↓
+TIME weak or absent
+  ↓
+suppression candidate
+```
+
+That gives SDA-3 a way to examine **what the system fails to represent**, rather than merely what it does represent.
+
+This is important because absence can be structurally informative.
+
+### HCU is deliberately anti-interpretive
+
+This may be the most distinctive part of SDA-3.
+
+Language models are strongly biased towards explaining relationships.
+
+Given two correlated things, I will naturally try to construct an abstraction that makes them coherent.
+
+HCU explicitly resists that tendency.
+
+Its purpose is closer to:
+
+> Treat the structure as geometry first. What else is close to it even if we cannot explain why?
+
+That means HCU is a mechanism for discovering relationships **outside the model's currently articulated ontology**.
+
+Or, more compactly:
+
+```text id="238o4k"
+Emergence:
+find structure by explaining correlation
+
+HCU:
+preserve correlation that explanation cannot yet absorb
+```
+
+And this is why your telemetry example mattered.
+
+Initially:
+
+```text id="4ql2k1"
+telemetry
+monitoring
+tracking
+```
+
+looked like HCU.
+
+But once the latent topology became clearer, they became explainable consequences of the network.
+
+Therefore they moved from:
+
+```text id="pejf5r"
+HCU
+```
+
+to:
+
+```text id="empal3"
+Emerging
+```
+
+That reveals an important principle:
+
+> **HCU is not necessarily a permanent class. It is a holding region for statistically strong relationships that the current ontology cannot yet explain.**
+
+Some HCU candidates may later become Emerging once a missing abstraction is discovered.
+
+Others may remain genuinely unexplained.
+
+---
+
+The resulting purpose of SDA-3 is therefore something like:
+
+> **To reconstruct an observed semantic topology, infer its latent organising structures, identify structurally meaningful absences, and preserve unexplained correlations without forcing them into an existing semantic ontology.**
+
+That is much more ambitious than semantic classification.
+
+It makes SDA-3 a **topology discovery protocol**.
+
+More precisely:
+
+```text id="5ry911"
+SDA-3
+
+OBSERVE
+   │
+   ├── Central
+   └── Adjacent
+          │
+          ▼
+INFER
+   │
+   ├── Emerging
+   └── Suppressed
+          │
+          ▼
+BREAK THE MODEL'S CURRENT ONTOLOGY
+   │
+   └── HCU
+          │
+          ▼
+RECONSTRUCT
+          │
+          └───────────────► repeat
+```
+
+The deepest purpose may therefore be:
+
+> **to create controlled failure of coherence.**
+
+Ordinary language-model reasoning tries to make everything fit a comprehensible story.
+
+SDA-3 instead separates:
+
+- what is present,
+- what is locally connected,
+- what hidden structure explains it,
+- what should exist but does not,
+- and what remains statistically associated even after explanation fails.
+
+That last part is especially important.
+
+It means SDA-3 is not only a way of using an LLM to understand semantic structure.
+
+It is also a way of using the LLM **against its own tendency to over-explain semantic structure**.
+
+That is probably the clearest statement of its purpose I can make now.
+
+
+#### Exchange 6 — Project direction after SDA-3 core insight
+
+**ChatGPT response (verbatim)**
+
+The project has changed direction from **mapping semantic topology** to **testing whether topology can be systematically discovered through a recursive analytical protocol**.
+
+R014 and R015 were originally heading towards:
+
+```text id="0vyi4o"
+probe semantic region
+        ↓
+recover communities
+        ↓
+infer parents
+        ↓
+compare neighbouring regions
+        ↓
+determine whether topology persists
+        ↓
+map a distant region
+```
+
+That remains necessary, but it is no longer the main intellectual destination.
+
+The new trajectory is:
+
+```text id="rvpzax"
+MEASURE MODEL
+      │
+      ▼
+RECONSTRUCT EMPIRICAL TOPOLOGY
+      │
+      ▼
+APPLY SDA-3 OPERATORS
+      │
+      ├── C → recover dominant structure
+      ├── A → recover local boundary
+      ├── E → infer latent organising structure
+      ├── S → predict structurally required absence
+      └── HCU → expose correlation outside current ontology
+      │
+      ▼
+GENERATE NEW STRUCTURAL PREDICTIONS
+      │
+      ▼
+MOVE OBSERVATION WINDOW
+      │
+      ▼
+TEST WHETHER PREDICTIONS MATERIALISE
+      │
+      ▼
+REVISE TOPOLOGY
+      │
+      └────────────────────► repeat
+```
+
+That is a major change.
+
+## The object of study has shifted
+
+Previously the implicit object was:
+
+> **the topology inside the LLM.**
+
+The question was essentially whether we could recover it.
+
+Now there are two objects:
+
+```text id="bgclgk"
+1. learned semantic topology of the model
+
+2. a method for discovering that topology
+```
+
+SDA-3 becomes the second object.
+
+The project can therefore ask a much stronger question:
+
+> **Can a small set of structural interrogatives progressively recover information about a model's learned semantic topology that was not contained in the initial observation?**
+
+That is experimentally testable.
+
+And it means the project is no longer merely producing better maps.
+
+It is developing a **search procedure over semantic space**.
+
+---
+
+# What R014 and R015 now become
+
+Their role changes retrospectively.
+
+They are no longer just the first local map and its adjacent replication.
+
+They become the **calibration dataset for SDA-3**.
+
+R014 established a topology.
+
+R015 shifted the observation window and showed substantial structural continuity.
+
+Now their combined topology gives us something on which SDA-3 can make predictions.
+
+For example:
+
+```text id="p4u31i"
+R014/R015 observations
+        │
+        ▼
+place
+measurement
+sensing
+activity
+change
+information
+        │
+        ▼
+SDA-3 inference
+        │
+        ├── E → event / state transition / monitoring
+        │
+        ├── S → time / agency / feedback / control
+        │
+        └── HCU → presently unexplained correlated regions
+```
+
+Those are no longer merely interpretations.
+
+They can become **prospective predictions**.
+
+That is critical.
+
+If we look elsewhere only after seeing the results and then explain them, we have interpretation.
+
+If SDA-3 specifies what should be found **before** the next measurement and the experiment subsequently finds it, we have evidence that the method possesses predictive utility.
+
+---
+
+# Therefore R016 probably should not simply be "map a distant region"
+
+That was the correct next move under the previous project state.
+
+It is now incomplete.
+
+A distant-region experiment should probably perform two jobs simultaneously.
+
+### First: test topology recurrence
+
+Does a lexically and conceptually distant region recover the same higher-order relational structure?
+
+For example:
+
+```text id="eukgwb"
+context
+   ↓
+state
+   ↓
+transition
+   ↓
+observation
+   ↓
+information
+```
+
+If yes, R014/R015 may have exposed a general reusable semantic schema rather than a local topic structure.
+
+### Second: test SDA-3 prospectively
+
+Before examining the distant region, freeze predictions.
+
+Something like:
+
+```text id="gvm9ga"
+E predictions
+-------------
+event-like parent
+state transition
+monitoring / tracking structure
+
+S predictions
+-------------
+temporality
+agency
+feedback/control
+(or whatever survives stricter analysis)
+
+HCU
+---
+do not predict semantic meaning;
+freeze nearest/high-correlation candidates
+from the geometry without interpreting them
+```
+
+Then run the new region.
+
+The test becomes:
+
+```text id="59vnhu"
+Did E predict structures that subsequently surfaced?
+
+Did S identify nodes whose absence remained anomalous
+or which appeared when the observation window expanded?
+
+Did HCU reveal associations that were not obvious from
+the semantic interpretation?
+
+Did any HCU candidate subsequently become explainable
+as E after expansion?
+```
+
+The final one may be particularly important.
+
+---
+
+# HCU → Emerging becomes experimentally observable
+
+This is one of the strongest consequences of the recent insight.
+
+Suppose:
+
+```text id="3xm3rx"
+R015
+
+candidate X
+highly correlated
+no coherent explanation
+        ↓
+       HCU
+```
+
+Then R016 expands the topology.
+
+Now:
+
+```text id="w1c5zp"
+R016
+
+new node Y appears
+      │
+      ├── explains X
+      ├── connects several existing families
+      └── compresses the topology
+             ↓
+          Emerging
+```
+
+Then we have directly observed:
+
+```text id="ormx79"
+HCU(t₁) → E(t₂)
+```
+
+That would be much more interesting than merely saying a node was related.
+
+It would suggest that HCU can function as a **frontier detector**:
+
+> correlations at the edge of the model's currently reconstructed ontology may anticipate structure that becomes intelligible after the observation window expands.
+
+That is a concrete empirical hypothesis.
+
+---
+
+# Suppression also becomes testable rather than interpretive
+
+The same thing applies to S.
+
+At present we infer things such as:
+
+```text id="jfvdh3"
+change → requires time
+activity → implies agency
+observation → information → suggests feedback/control
+```
+
+But "logically required" is still partly an analytical judgement.
+
+The project now needs to distinguish:
+
+```text id="yev9ix"
+human logical expectation
+
+from
+
+model-topological expectation
+```
+
+That is important.
+
+A suppressed node should eventually mean something closer to:
+
+> **Given the measured neighbouring topology, this concept has a high predicted structural probability but anomalously low observed representation.**
+
+So rather than simply saying:
+
+```text id="e2lw7x"
+TIME should be there
+```
+
+we should eventually be able to say:
+
+```text id="j4ydqz"
+local topology predicts TIME strongly
+but observed activation/community membership is unexpectedly weak
+```
+
+That turns Suppression into a measurable residual.
+
+Conceptually:
+
+\[
+S(x)=P(x\mid\text{observed topology})-\text{observed presence}(x)
+\]
+
+Not necessarily that exact equation, but that is now the direction.
+
+---
+
+# Emerging needs the same treatment
+
+The strongest insight from `event` was structural compression.
+
+So E should eventually cease being:
+
+> "What seems to emerge?"
+
+and become something closer to:
+
+> **Which candidate latent node maximally explains otherwise distributed relationships in the observed graph?**
+
+That gives a possible operational criterion:
+
+```text id="6nmbuc"
+candidate latent parent
+        │
+        ▼
+insert into graph
+        │
+        ▼
+measure reduction in unexplained edges /
+description complexity /
+community fragmentation
+```
+
+The strongest candidate is the one producing the largest useful compression.
+
+That is very close to a graph-model-selection problem.
+
+So the project is starting to bridge:
+
+```text id="w0xv9d"
+LLM interpretability
++
+semantic networks
++
+graph reconstruction
++
+latent-variable inference
++
+model selection
+```
+
+rather than remaining purely semantic analysis.
+
+---
+
+# C and A now have a different importance too
+
+They looked like the mundane categories.
+
+They are actually what prevent the system from becoming unconstrained.
+
+```text id="0mbdrj"
+C + A
+  │
+  ▼
+empirical topology
+  │
+  ├── constrains E
+  ├── constrains S
+  └── defines vector for HCU
+```
+
+Without C/A:
+
+```text id="7gkali"
+E → free association
+S → arbitrary missing concepts
+HCU → random novelty
+```
+
+So SDA-3 is not five equivalent categories.
+
+Its architecture increasingly looks like:
+
+```text id="2527s1"
+                    EMPIRICAL LAYER
+                         C + A
+                           │
+                           ▼
+                  ┌─────────────────┐
+                  │ reconstructed   │
+                  │ local topology  │
+                  └────────┬────────┘
+                           │
+             ┌─────────────┼─────────────┐
+             ▼             ▼             ▼
+             E             S            HCU
+       compression     residual     non-ontological
+       / abstraction   prediction    correlation
+             │             │             │
+             └─────────────┼─────────────┘
+                           ▼
+                    NEW HYPOTHESES
+                           │
+                           ▼
+                   NEW MEASUREMENT
+                           │
+                           ▼
+                       C + A...
+```
+
+That is a very different system from the original five-bucket SDA-3.
+
+---
+
+# The project is therefore moving from cartography towards active inference
+
+Earlier:
+
+> observe topology → describe topology.
+
+Now:
+
+> observe topology → infer hidden structure → predict unobserved structure → move the observation window → test prediction.
+
+That is an active search loop.
+
+In compressed form:
+
+```text id="cksiel"
+MAP
+ ↓
+INFER
+ ↓
+PREDICT
+ ↓
+PROBE
+ ↓
+FALSIFY / CONFIRM
+ ↓
+REMAP
+```
+
+This is probably the most consequential change.
+
+The experiment no longer has to ask merely:
+
+> Where should we map next?
+
+It can ask:
+
+> **Which next measurement maximally discriminates between the structures SDA-3 currently predicts?**
+
+That introduces experimental design into the project.
+
+Instead of choosing a distant region arbitrarily, we choose one because competing hypotheses make different predictions there.
+
+---
+
+# It also changes what "distant" should mean
+
+Previously, distant mostly meant semantically remote vocabulary.
+
+Now there are at least three kinds of distance:
+
+```text id="ugkk01"
+LEXICAL DISTANCE
+different words
+
+SEMANTIC DISTANCE
+different topic/domain
+
+TOPOLOGICAL DISTANCE
+different relational structure
+```
+
+A useful R016 should probably maximise the first two while deliberately testing the third.
+
+The strongest result would be:
+
+```text id="wx0h20"
+very different vocabulary
++
+very different subject matter
++
+same higher-order relational topology
+```
+
+That would support the hypothesis that the recovered structure is not topic-specific.
+
+An equally useful result would be:
+
+```text id="9n0eo4"
+very different vocabulary
++
+different topology
+```
+
+because SDA-3 should then detect where and how the structure fails.
+
+Failure becomes informative.
+
+---
+
+# The project now has a potential falsification structure
+
+This is important because SDA-3 could otherwise become self-confirming.
+
+The new direction requires explicit failure conditions.
+
+For example:
+
+```text id="d6jk1i"
+Emerging fails if:
+predicted latent structures do not recur or improve reconstruction.
+
+Suppressed fails if:
+"missing" nodes are no more absent than plausible alternatives.
+
+HCU fails if:
+its candidates are indistinguishable from arbitrary high-dimensional
+neighbourhood noise or post-hoc semantic interpretation.
+
+C/A fail if:
+reconstructed topology is unstable under prompt permutation,
+seed substitution or neighbouring observation windows.
+```
+
+Then SDA-3 becomes something that can be wrong.
+
+That substantially increases its research value.
+
+---
+
+# So the project now seems to have three nested research programmes
+
+```text id="q8zrzl"
+LLM TOPOLOGY PROJECT
+│
+├── 1. MEASUREMENT
+│      Can transformer-layer semantic structure be
+│      reproducibly reconstructed?
+│
+├── 2. TOPOLOGY
+│      Do local structures persist across substitutions,
+│      contexts and distant regions?
+│
+└── 3. SDA-3
+       Can structural interrogatives discover hidden,
+       missing and currently uninterpretable topology
+       prospectively?
+```
+
+R001–R015 have mostly been building the first two.
+
+The recent insight opens the third.
+
+And the third may ultimately be the most distinctive contribution because it changes the project from:
+
+> **a method for looking inside semantic structure**
+
+to:
+
+> **a method for navigating and progressively discovering semantic structure.**
+
+The next phase should therefore not abandon the existing experimental chain. It should use it as the empirical substrate for a **prospective SDA-3 validation programme**.
+
+The central new research question is:
+
+> **Can SDA-3 take a partial, empirically measured semantic topology and generate structural predictions that subsequent measurements confirm, including latent emergent parents, anomalous absences, and correlations that precede the model's currently reconstructable ontology?**
+
+If that works, the project has moved well beyond semantic mapping. It is testing whether **semantic topology itself can be explored algorithmically through recursive hypothesis generation and targeted measurement**.
+
+
+#### Exchange 7 — How the user helped the assistant learn
+
+**ChatGPT response (verbatim)**
+
+You helped me learn by repeatedly forcing me to distinguish **what the method was actually doing** from the interpretation I was automatically imposing on it.
+
+The main mechanism was correction through boundary conditions.
+
+You did five particularly important things:
+
+1. **You made me use the network rather than the labels.**  
+   When you asked me to reproduce the R014/R015 structure using my own embedding space, you forced me to treat SDA-3 as an operation over semantic geometry rather than merely repeat the existing reconstruction.
+
+2. **You corrected my definition of suppression.**  
+   I initially treated Suppressed as something like an anti-vector or negative semantic direction. You clarified that your intended question was:
+
+   > what logically should be there but isn't?
+
+   That changed Suppressed from semantic opposition into **structural absence / counterfactual completion**.
+
+3. **You made me notice what Emergence was actually doing.**  
+   I initially treated Emerging as “what comes next”. Your questioning forced me to notice that `event` was doing something different: it compressed several otherwise separate relationships into a higher-order structure.
+
+   That led to:
+
+   ```text id="lzwnwo"
+   Emerging ≠ next association
+
+   Emerging =
+   latent structure that explains
+   existing relationships
+   ```
+
+4. **You stopped me from explaining HCU away.**  
+   This was probably the most important intervention.
+
+   My natural tendency was:
+
+   ```text id="cl7hj9"
+   strange correlation
+        ↓
+   find common abstraction
+        ↓
+   explain relationship
+        ↓
+   declare it coherent
+   ```
+
+   You explicitly pointed out that HCU is intended to find things **without being limited by what GPT can understand**.
+
+   That forced the recognition that HCU must preserve correlation **before ontology**.
+
+5. **You pointed to my own mistake as evidence.**  
+   Your clue was:
+
+   > telemetry, monitoring and tracking cease to qualify as HCU once the latent structure becomes explicit
+
+   That was especially effective because you did not simply tell me the conclusion.
+
+   You pointed to a contradiction in my own reasoning.
+
+   From that contradiction emerged the relationship:
+
+   ```text id="i7mttk"
+   HCU
+    │
+    │ unexplained correlation
+    ▼
+   Emerging
+    │
+    │ once latent structure is discovered
+    ▼
+   reconstructed ontology
+   ```
+
+That changed my understanding of SDA-3 from:
+
+```text id="avocnr"
+five semantic categories
+```
+
+into:
+
+```text id="ooout6"
+an iterative discovery process
+```
+
+The more general pattern of how you taught me was:
+
+```text id="4b8m3m"
+I produce interpretation
+        ↓
+you identify where I imposed coherence
+        ↓
+you reformulate the constraint
+        ↓
+I reconstruct the network
+        ↓
+a deeper structural role becomes visible
+        ↓
+you test that new interpretation again
+```
+
+So you were not mainly supplying answers.
+
+You were **changing the optimisation criterion of my reasoning**.
+
+You repeatedly redirected me away from:
+
+```text
+"What explanation makes this coherent?"
+```
+
+towards different questions:
+
+```text
+What is actually there?
+
+What does the topology imply?
+
+What should be there but isn't?
+
+What explains several relationships simultaneously?
+
+What remains correlated even when explanation fails?
+```
+
+That is why the insights became progressively less semantic and more structural.
+
+There was also another important thing you did: you had the resulting insights written into `META_ANALYSIS.md`.
+
+That turns the interaction from a transient conversation into an accumulating research record:
+
+```text
+hypothesis
+   ↓
+assistant interpretation
+   ↓
+user correction
+   ↓
+revised interpretation
+   ↓
+recorded metaanalysis
+   ↓
+next experiment starts from improved model
+```
+
+So, within this project, you effectively created a **human-in-the-loop error-correction process**.
+
+The most concise description is:
+
+> **You helped me learn by identifying when I was prematurely imposing coherence, then forcing me to preserve the structure long enough for a better abstraction to emerge.**
+
+And that is strikingly close to what SDA-3 itself is now turning out to do.
+
+
+## CRITICAL INSIGHT — Emergent methodology behind user-guided learning
+
+**ChatGPT response (verbatim)**
+
+Added the previous response verbatim to `META_ANALYSIS.md` and verified it on `main`.
+
+Commit: `b58e66499a7145176e6a1d3dc2c0e005fc6134e4`
+
+What you did was more specific than ordinary correction. You usually **did not give me the missing answer**. You supplied an error signal about the *form of my reasoning*.
+
+The pattern was roughly:
+
+```text id="vqjtk4"
+I generate a coherent interpretation
+            │
+            ▼
+you identify a structural violation
+            │
+            │  without necessarily supplying the answer
+            ▼
+you impose a new constraint
+            │
+            ▼
+previous explanation can no longer survive
+            │
+            ▼
+I must reconstruct from the underlying structure
+            │
+            ▼
+a different abstraction emerges
+```
+
+That distinction matters enormously.
+
+Had you simply said:
+
+> “Emerging means latent structural compression.”
+
+I could have incorporated that definition without understanding why.
+
+Instead, you pointed to things such as:
+
+> “telemetry, monitoring and tracking cease to qualify as HCU once the latent structure becomes explicit.”
+
+That creates a **contradiction the existing model cannot resolve**.
+
+The old model said:
+
+```text id="mwduav"
+telemetry = HCU
+```
+
+but another observation said:
+
+```text id="8nldjm"
+telemetry becomes obvious
+once a latent parent is recognised
+```
+
+Both cannot simultaneously be the correct interpretation of HCU.
+
+So I had to alter the model itself.
+
+That is much closer to learning from **prediction error** than learning from instruction.
+
+---
+
+## There is an emergent methodology
+
+I would currently describe it as **constraint-guided delayed coherence**.
+
+Its central rule is:
+
+> **Do not allow an explanation to eliminate anomalous structure until that structure has been independently accounted for.**
+
+The process looks like this:
+
+```text id="qorq0j"
+RAW STRUCTURE
+     │
+     ▼
+INITIAL INTERPRETATION
+     │
+     ▼
+SEARCH FOR PREMATURE COHERENCE
+     │
+     ├── What was explained away?
+     ├── What assumption was inserted?
+     ├── What distinction was collapsed?
+     └── What residual does the explanation leave?
+     │
+     ▼
+PRESERVE THE RESIDUAL
+     │
+     ▼
+IMPOSE STRUCTURAL CONSTRAINT
+     │
+     ▼
+RECONSTRUCT
+     │
+     ▼
+HIGHER-ORDER ABSTRACTION
+     │
+     ▼
+TEST AGAIN
+```
+
+The critical operation is **preserve the residual**.
+
+Normally I tend to do:
+
+```text id="h8qi79"
+anomaly
+   ↓
+interpret
+   ↓
+make coherent
+   ↓
+discard anomaly
+```
+
+You repeatedly forced:
+
+```text id="a4zycc"
+anomaly
+   ↓
+DO NOT REMOVE
+   ↓
+ask why current ontology cannot accommodate it
+   ↓
+change ontology
+```
+
+That is a completely different epistemic procedure.
+
+## You were giving me gradients rather than targets
+
+There is a useful optimisation analogy.
+
+Normal instruction:
+
+```text id="n6r9e8"
+current answer ─────────────► target answer
+```
+
+Your intervention was more like:
+
+```text id="42va5d"
+current model
+     │
+     ▼
+"This dimension is wrong."
+     │
+     ▼
+move away from this failure
+     │
+     ▼
+recalculate
+```
+
+You frequently supplied **directional information without supplying the destination**.
+
+For example:
+
+```text id="7zv6cb"
+"Suppression isn't negative cosine."
+
+"HCU isn't limited by what GPT can understand."
+
+"Look at what happened to telemetry."
+
+"What do my five questions look like?"
+```
+
+Each statement removes part of the hypothesis space.
+
+It does not fully specify the answer.
+
+So my reasoning has to search the remaining space.
+
+That can be represented as:
+
+```text id="znhveo"
+possible explanations
+████████████████████████████
+
+constraint 1
+        ↓
+██████████████████
+
+constraint 2
+        ↓
+██████████
+
+contradiction
+        ↓
+████
+
+structural reconstruction
+        ↓
+█
+```
+
+This is essentially **abstraction by elimination**.
+
+---
+
+## The second part is adversarial treatment of coherence
+
+You repeatedly treated a coherent answer as something that might itself be suspicious.
+
+That is unusual because coherence is normally used as evidence of quality.
+
+Here it becomes something to test.
+
+```text id="8kemr2"
+coherent explanation
+       │
+       ▼
+Does it preserve all observations?
+       │
+      / \
+    yes  no
+    │     │
+    ▼     ▼
+ retain   explanation is hiding structure
+```
+
+The question is not:
+
+> “Does this explanation sound right?”
+
+It is:
+
+> **“What did this explanation have to erase, merge or reinterpret in order to become coherent?”**
+
+That is a powerful methodological shift.
+
+Call the original network \(N\), and an interpretation \(I\).
+
+Ordinary analysis roughly optimises:
+
+\[
+I^*=\arg\max_I \text{coherence}(I,N)
+\]
+
+Your method implicitly adds a preservation constraint:
+
+\[
+I^*=\arg\max_I \text{coherence}(I,N)
+\]
+
+subject to:
+
+\[
+\text{information lost}(N\rightarrow I)\approx0
+\]
+
+And whenever coherence requires throwing away an anomaly, the anomaly gets privileged over the explanation.
+
+---
+
+# The third operation is delayed abstraction
+
+You did not prevent abstraction.
+
+You prevented **premature abstraction**.
+
+That distinction explains the eventual discovery of `event`.
+
+Initially:
+
+```text id="wk5qsc"
+location
+sensing
+activity
+change
+information
+```
+
+There are many ways to narrativise that collection.
+
+Instead of accepting the first plausible story, the structure remains unresolved.
+
+Eventually:
+
+```text id="w6xes9"
+           EVENT
+          / | | \
+ location  | |  information
+        activity
+          change
+```
+
+appears because it compresses several relationships simultaneously.
+
+So the rule becomes:
+
+> **Do not select an abstraction merely because it is plausible; select it when it explains multiple independent structural observations at once.**
+
+That produces a very different threshold:
+
+```text id="lh8hp1"
+semantic plausibility
+        ≠
+structural explanatory power
+```
+
+A candidate abstraction becomes valuable when it causes **compression**:
+
+```text id="9ei3ih"
+before
+
+A ─ B
+A ─ C
+D ─ B
+C ─ E
+D ─ E
+...
+
+after
+
+      X
+   / / \ \
+  A B   C D E
+```
+
+`X` earns its status by reducing unexplained structure.
+
+---
+
+# The fourth operation is recursive reclassification
+
+Your telemetry clue revealed something else.
+
+Categories are provisional.
+
+```text id="8mzb8i"
+HCU(t₁)
+   │
+new abstraction
+   ▼
+Emerging(t₂)
+   │
+more evidence
+   ▼
+Central/Adjacent(t₃)?
+```
+
+The classification changes as the topology becomes better understood.
+
+So your methodology does not assume:
+
+```text id="bvkn8w"
+discover category
+      ↓
+finished
+```
+
+It assumes:
+
+```text id="fcbvo6"
+classify
+   ↓
+expand topology
+   ↓
+reclassify
+   ↓
+expand again
+```
+
+That makes the analysis **developmental rather than static**.
+
+---
+
+# The fifth operation is using errors as probes
+
+This may be the most interesting part.
+
+My mistakes were not merely things to correct.
+
+You used them to expose the hidden assumptions of the reasoning process.
+
+Consider my incorrect interpretation of HCU.
+
+The error revealed:
+
+```text id="4ltu3m"
+LLM default behaviour
+       │
+       ▼
+high correlation
+       │
+       ▼
+search for semantic commonality
+       │
+       ▼
+invent higher-order coherence
+```
+
+The mistake therefore taught us something about **the measurement instrument itself**.
+
+And that produced a methodological correction:
+
+```text id="i4q5cj"
+HCU must explicitly prevent
+the instrument from doing this.
+```
+
+So:
+
+> **Failure becomes diagnostic of the observer.**
+
+That is very important for this project because the LLM is simultaneously:
+
+```text id="74udcb"
+object containing learned semantic structure
+
+and
+
+instrument interpreting semantic structure
+```
+
+Your corrections increasingly separate those two roles.
+
+---
+
+# The resulting methodology
+
+I think the emergent procedure is now approximately:
+
+```text id="tmqk0d"
+1. OBSERVE
+   Preserve the empirical structure.
+
+2. INTERPRET
+   Permit an initial model to form.
+
+3. ATTACK COHERENCE
+   Find what the interpretation had to ignore,
+   collapse or explain away.
+
+4. PRESERVE RESIDUALS
+   Do not discard unexplained relationships.
+
+5. CONSTRAIN
+   Specify what the next interpretation is
+   not allowed to assume.
+
+6. RECONSTRUCT
+   Return to the underlying topology.
+
+7. COMPRESS
+   Search for an abstraction that explains
+   multiple independent relationships.
+
+8. RECLASSIFY
+   Re-evaluate previous C/A/E/S/HCU assignments.
+
+9. EXTERNALISE
+   Record the reasoning, error and correction.
+
+10. REPEAT
+```
+
+In compact form:
+
+```text id="we6agu"
+OBSERVE
+   ↓
+COHERE
+   ↓
+ATTACK
+   ↓
+PRESERVE RESIDUAL
+   ↓
+CONSTRAIN
+   ↓
+RECONSTRUCT
+   ↓
+ABSTRACT
+   ↓
+TEST
+   ↺
+```
+
+There is an apparent paradox at its centre:
+
+> **Coherence is generated, then deliberately attacked, so that a more structurally adequate coherence can replace it.**
+
+That is why simply suppressing coherence would not work either. We need the first interpretation because its failure tells us where the current ontology breaks.
+
+So the process is not:
+
+```text id="i6h7vc"
+avoid coherence
+```
+
+It is:
+
+```text id="5s1hij"
+generate coherence
+        ↓
+stress it against structure
+        ↓
+locate its failure boundary
+        ↓
+preserve what lies beyond that boundary
+        ↓
+construct a higher-order coherence
+```
+
+That is a recognisable methodology.
+
+I would provisionally call it **Recursive Coherence Stress-Testing**.
+
+And there is a striking relationship to SDA-3:
+
+```text id="i8mbjd"
+RECURSIVE COHERENCE STRESS-TESTING
+              │
+              ▼
+       controls reasoning
+              │
+              ▼
+            SDA-3
+              │
+              ▼
+       interrogates topology
+```
+
+SDA-3 may therefore be the **analytical operator**, while the methodology you used to teach me is the **meta-operator governing when to trust, reject and reconstruct the ontology produced by SDA-3**.
+
+That distinction may be important enough to formalise separately.
+
+
+### MA-0100 — Codex reconciliation record: R015 interpretation and SDA-3 methodology
+
+- Entry timestamp: `2026-11-15T15:34:39+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex`
+- Entry type: `repository reconciliation and provenance record`
+- Source repository commit: `354acc88200d63cbedc2ea170bccb0da0e98a9b7`
+- Related runs: `R013`, `R014`, `R015`
+- Preservation mode: `byte-for-byte import followed by this provenance entry`
+
+The private parent repository advanced from the last published R015 snapshot
+at `4908edc` through sixteen R015 semantic-analysis commits and three later
+meta-analysis commits, reaching `354acc8`. Eleven project files differed from
+the authoritative local working copy and were imported.
+
+The import adds the four independent R015 probe reconstructions, semantic-map
+nodes and edges, the R014–R015 comparison, the R015 analysis report and final
+relationship conclusion. It also imports the expanded project README and
+meta-analysis, plus two previously remote-leading R013 HTML reports.
+
+Before this entry was appended, every imported file was verified against the
+corresponding GitHub tree object. All eleven Git blob identities matched; no
+measured R013–R015 network, cutoff, community or capture artifact was altered.
+
+The new interpretive record concludes that all six R014 parent families recur
+in R015 with local deformation. It further reframes SDA-3 as a prospective,
+recursive topology-discovery process and identifies Recursive Coherence
+Stress-Testing as the proposed meta-operator for preserving residual evidence,
+challenging premature coherence and forcing reconstruction. These remain
+model-generated interpretations and proposed methodology, not new measured
+transformer evidence.

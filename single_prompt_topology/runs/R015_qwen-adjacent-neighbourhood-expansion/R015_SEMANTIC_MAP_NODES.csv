@@ -1,0 +1,7 @@
+node_id,label,probe_support,sector_tendency,map_role,held_out_evidence,notes
+N1,sensing / instrumentation,4/4,positive,core,"P4 omits sensor; literal sensor reappears in 6/6 permutations across 21 post-context states; broader family spans all 28","sensor sensors laser signal electrodes microphone wavelength pumps valve"
+N2,built place / locality,4/4,positive-dominant,core,"P3 omits apartment; literal apartment reappears in 4/6 permutations across 12 states; broader locality family spans 6/6 and all 28","apartment shop house city urban named places"
+N3,spatial / measurement structure,4/4,negative-dominant / both sectors,bridge,"P2 omits line; literal line is weak in summaries (4/6 orders, 2 states) but broader spatial family spans 6/6 and 26 states","line area space field size position region measurement"
+N4,organised group / activity,4/4,negative,core,"P1 omits sessions; literal sessions reappears in 6/6 permutations across 18 states; broader family spans all 28","sessions clubs groups activities FIFA tennis teams"
+N5,process / comparison / modification,4/4,both sectors,emergent cross-sector,"No R015 seed directly names this family; negative manipulation/process/comparison and positive enlargement/transformation/removal recur across all probes","R015-specific deformation candidate because positive-side integration is substantial"
+N6,reporting / information,4/4,positive-dominant,secondary,"No R015 seed directly names this family; report/output/file/view vocabulary recurs across all probes","secondary and less central than N1-N5"
