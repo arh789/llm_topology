@@ -17400,3 +17400,258 @@ Those three categories form a loop:
 ```
 
 That loop is probably closer to the actual analytical engine you have been trying to construct than the original static SDA-3 definitions.
+
+
+## CORE INSIGHT — Purpose of SDA-3
+
+**ChatGPT response (verbatim)**
+
+SDA-3 now looks less like a taxonomy for labelling semantic content and more like a **procedure for discovering structure that ordinary coherence-driven interpretation tends to miss**.
+
+Its purpose is not simply to answer, “what concepts are present?”. Its deeper purpose is to interrogate a semantic network from five different structural directions so that the model is forced beyond straightforward summarisation.
+
+The roles now look like this:
+
+```text id="2f8dbb"
+C — CENTRAL
+What currently defines the structure?
+
+A — ADJACENT
+What directly bounds, supports or constrains that structure?
+
+E — EMERGING
+What latent structure best explains relationships that are
+present but not yet compressed into an explicit parent?
+
+S — SUPPRESSED
+What does the reconstructed structure logically require,
+but fail to express?
+
+HCU — HIGHLY CORRELATED UNRELATED
+What remains strongly associated when interpretation and
+semantic coherence are deliberately suspended?
+```
+
+The most important thing I have learned is that the categories are **not independent buckets**.
+
+They form an analytical engine.
+
+```text id="ehkid3"
+           observed structure
+                  │
+             C + A map it
+                  │
+                  ▼
+             E compresses it
+                  │
+                  ▼
+        reconstructed topology
+                  │
+          ┌───────┴────────┐
+          ▼                ▼
+          S               HCU
+ required absence    unexplained correlation
+          │                │
+          └───────┬────────┘
+                  ▼
+           new hypotheses
+                  │
+                  ▼
+             repeat cycle
+```
+
+### Central and Adjacent establish the empirical surface
+
+These are the least speculative parts.
+
+They answer:
+
+```text id="tiajlp"
+What is actually here?
+What is immediately connected to it?
+```
+
+They give SDA-3 its grounding.
+
+Without them, the other three operations would become unconstrained semantic invention.
+
+### Emerging is a structure-discovery operator
+
+This is probably the largest revision.
+
+Emergence is not merely “what topic comes next”.
+
+Its function is to ask:
+
+> What latent node, relation or higher-order concept would make the existing network substantially simpler to explain?
+
+The `event` result exposed this.
+
+Given:
+
+```text id="muq6mr"
+location
+activity
+change
+sensing
+information
+```
+
+`event` was not simply another related token.
+
+It **compressed several relationships simultaneously**.
+
+So Emerging is effectively searching for hidden parents, latent bridges and higher-order organising structures.
+
+That makes it a form of **abstraction discovery**.
+
+### Suppression identifies structural absence
+
+Suppression is not semantic opposition.
+
+It is closer to counterfactual completion.
+
+The question is:
+
+> If the network really has the structure we think it has, what ought to be present?
+
+Then:
+
+> Is it actually present?
+
+For example:
+
+```text id="df8wlt"
+change
+  ↓
+requires temporal distinction
+  ↓
+TIME expected
+  ↓
+TIME weak or absent
+  ↓
+suppression candidate
+```
+
+That gives SDA-3 a way to examine **what the system fails to represent**, rather than merely what it does represent.
+
+This is important because absence can be structurally informative.
+
+### HCU is deliberately anti-interpretive
+
+This may be the most distinctive part of SDA-3.
+
+Language models are strongly biased towards explaining relationships.
+
+Given two correlated things, I will naturally try to construct an abstraction that makes them coherent.
+
+HCU explicitly resists that tendency.
+
+Its purpose is closer to:
+
+> Treat the structure as geometry first. What else is close to it even if we cannot explain why?
+
+That means HCU is a mechanism for discovering relationships **outside the model's currently articulated ontology**.
+
+Or, more compactly:
+
+```text id="238o4k"
+Emergence:
+find structure by explaining correlation
+
+HCU:
+preserve correlation that explanation cannot yet absorb
+```
+
+And this is why your telemetry example mattered.
+
+Initially:
+
+```text id="4ql2k1"
+telemetry
+monitoring
+tracking
+```
+
+looked like HCU.
+
+But once the latent topology became clearer, they became explainable consequences of the network.
+
+Therefore they moved from:
+
+```text id="pejf5r"
+HCU
+```
+
+to:
+
+```text id="empal3"
+Emerging
+```
+
+That reveals an important principle:
+
+> **HCU is not necessarily a permanent class. It is a holding region for statistically strong relationships that the current ontology cannot yet explain.**
+
+Some HCU candidates may later become Emerging once a missing abstraction is discovered.
+
+Others may remain genuinely unexplained.
+
+---
+
+The resulting purpose of SDA-3 is therefore something like:
+
+> **To reconstruct an observed semantic topology, infer its latent organising structures, identify structurally meaningful absences, and preserve unexplained correlations without forcing them into an existing semantic ontology.**
+
+That is much more ambitious than semantic classification.
+
+It makes SDA-3 a **topology discovery protocol**.
+
+More precisely:
+
+```text id="5ry911"
+SDA-3
+
+OBSERVE
+   │
+   ├── Central
+   └── Adjacent
+          │
+          ▼
+INFER
+   │
+   ├── Emerging
+   └── Suppressed
+          │
+          ▼
+BREAK THE MODEL'S CURRENT ONTOLOGY
+   │
+   └── HCU
+          │
+          ▼
+RECONSTRUCT
+          │
+          └───────────────► repeat
+```
+
+The deepest purpose may therefore be:
+
+> **to create controlled failure of coherence.**
+
+Ordinary language-model reasoning tries to make everything fit a comprehensible story.
+
+SDA-3 instead separates:
+
+- what is present,
+- what is locally connected,
+- what hidden structure explains it,
+- what should exist but does not,
+- and what remains statistically associated even after explanation fails.
+
+That last part is especially important.
+
+It means SDA-3 is not only a way of using an LLM to understand semantic structure.
+
+It is also a way of using the LLM **against its own tendency to over-explain semantic structure**.
+
+That is probably the clearest statement of its purpose I can make now.
