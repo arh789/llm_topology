@@ -1,0 +1,34 @@
+{
+  "raw_prompt": "choke point\ncollapsible barrier\nspear\n",
+  "input_ids": [
+    971,
+    441,
+    1486,
+    198,
+    17666,
+    69661,
+    22881,
+    198,
+    82,
+    8174,
+    198
+  ],
+  "tokens": [
+    "cho",
+    "ke",
+    "Ġpoint",
+    "Ċ",
+    "coll",
+    "apsible",
+    "Ġbarrier",
+    "Ċ",
+    "s",
+    "pear",
+    "Ċ"
+  ],
+  "capture_index": 10,
+  "capture_token_id": 198,
+  "chat_template_used": false,
+  "special_tokens_added": false,
+  "response_generation_executed": false
+}

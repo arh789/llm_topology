@@ -21,13 +21,22 @@ width 5,120 and the complete first-token logits were finite. This establishes
 local single-prompt feasibility; it does not establish multi-prompt throughput
 or semantic-topology output from OLMo 3 32B.
 
+R017 completes that missing topology step for the bare-concept prompt `choke
+point / collapsible barrier / spear`. The same exact OLMo revision produced 65
+captured anchor states, 130 positive/negative networks, 490,114 selected token
+memberships, 4,901,140 exact directed 10-NN edges, 2,007 state-local
+communities and 128 adjacent-state comparisons. The evidence-linked report
+reconstructs a candidate semantic map of constrained passage, deployable
+obstruction, movement control and reach/piercing force. This is a successful
+single-trajectory map; order and context invariance were not tested.
+
 The package contains a research design, one behavioural case mapping, an
 executed model playground, one successful single-prompt hidden-state capture
 from Pythia 6.9B, one successful paired whole-prompt Qwen topology run, one
 successful six-permutation bare-concept Qwen topology run, one successful
 four-probe overlapping-context Qwen topology run, one successful native-BF16
-OLMo 3 32B feasibility run, five earlier measured derived analyses and two
-completed interpretive runs. R002 created the
+OLMo 3 32B feasibility run, one successful OLMo 3 32B semantic-map run, five
+earlier measured derived analyses and two completed interpretive runs. R002 created the
 full-vocabulary static-basis
 score matrix; R003 tested an unnecessarily gated boundary policy; R004 retains
 the full-curve upper and lower elbow cutoffs at all states without that
@@ -71,7 +80,9 @@ R015 moves the same 24-prompt design into adjacent semantic space, then adds
 independent probe reconstruction and an explicit R014–R015 parent/relation
 comparison. R016 changes only the model-feasibility question: it proves that
 OLMo 3 32B Base can expose every required hidden state locally for one short
-prompt without quantisation or response generation.
+prompt without quantisation or response generation. R017 uses that exact
+backend for a complete single-prompt projection, cutoff, graph, community and
+semantic-map run.
 
 R005 found greater nearest-neighbour density and positive/negative segregation
 than a size-matched random null at all 33 states, but its communities also
@@ -231,6 +242,14 @@ and are not versioned here.
 63. [`single_prompt_topology/runs/R016_olmo3-32b-local-bf16-feasibility/manifest.json`](single_prompt_topology/runs/R016_olmo3-32b-local-bf16-feasibility/manifest.json)
     — the successful component record, artifact hashes, transport reassessment
     and cache-cleanup evidence.
+64. [`single_prompt_topology/R017_PLAN.md`](single_prompt_topology/R017_PLAN.md)
+    — the locked OLMo 3 32B single-prompt topology and reporting contract.
+65. [`single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_MEASURED_REPORT.md`](single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_MEASURED_REPORT.md)
+    — the completed 65-state measurement summary.
+66. [`single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_SEMANTIC_MAP_REPORT.html`](single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_SEMANTIC_MAP_REPORT.html)
+    — the evidence-linked semantic map and report-standardisation candidates.
+67. [`single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/manifest.json`](single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/manifest.json)
+    — the successful component record and hashes for curated R017 evidence.
 
 ## Provenance
 

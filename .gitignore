@@ -64,6 +64,14 @@ single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/**/*.gz
 !single_prompt_topology/runs/R016_olmo3-32b-local-bf16-feasibility/**/*.md
 !single_prompt_topology/runs/R016_olmo3-32b-local-bf16-feasibility/**/*.json
 
+!single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/
+!single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/**/*.md
+!single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/**/*.json
+!single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/**/*.csv
+!single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/**/*.html
+single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/*.gz
+single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/**/*.gz
+
 # Model weights and checkpoints
 *.bin
 *.ckpt
