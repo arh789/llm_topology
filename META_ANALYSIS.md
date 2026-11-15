@@ -20033,3 +20033,33 @@ TRAINING-HYPOTHESIS TEST       SCALE-INVARIANCE TEST
 And I would strongly favour the **base** model for the training-distribution experiment, because it removes as much post-training contamination as practical. OLMo also gives us SFT/DPO/instruction-stage variants later, which creates a further opportunity to separate what came from pretraining from what post-training subsequently changed. Ai2 publishes those stage variants as part of the OLMo 2 family. ([allenai.org](https://allenai.org/olmo2?utm_source=chatgpt.com))
 
 So yes: **the 4090 should no longer define the maximum model size of the research**. It did its job extremely well during method discovery. The project has now reached the point where remote compute is justified because model scale and training-data transparency have themselves become experimental variables.
+
+
+### MA-0101 — Codex reconciliation record: training-topology hypothesis and model-scale direction
+
+- Entry timestamp: `2026-11-15T15:51:23+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex`
+- Entry type: `repository reconciliation and provenance record`
+- Source repository commit: `7e36624c1d71ce3573613fef5a45f63e6a51a863`
+- Related runs: `R010`, `R013`, `R014`, `R015`
+- Preservation mode: `byte-for-byte import followed by this provenance entry`
+
+The private parent repository advanced by two commits after MA-0100. The new
+material was imported byte-for-byte into the authoritative local
+`META_ANALYSIS.md`; its Git blob identity matched the GitHub source before this
+entry was appended.
+
+The first imported response revises the original training-data hypothesis. It
+rejects direct recovery of literal corpus structure from individual layer
+states and identifies perturbation-invariant higher-order topology as the
+candidate signal of semantic regularities learned from the training
+distribution. It explicitly records that direct comparison with a known
+training corpus remains absent.
+
+The second response proposes two separate large-model questions: OLMo 2 32B
+for training-data transparency and Qwen2.5-72B for same-family scale testing.
+It recommends direct hidden-state access to remotely hosted open weights and
+base-model use for the training-distribution experiment. These are proposed
+experimental directions and model-generated interpretations; they are not new
+measurements, frozen run plans or authorisation to incur remote-compute cost.
