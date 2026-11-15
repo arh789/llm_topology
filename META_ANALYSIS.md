@@ -16105,3 +16105,160 @@ R015 has created two viable research directions:
 The former establishes external validity. The latter tests whether the proposed mapping system can actually be built.
 
 **The most consequential unresolved question for the project's stated objective may therefore be not whether another distant region possesses semantic structure, but whether the R014→R015 procedure can be repeated to construct a progressively larger, coherent map without imposing the expected topology.**
+
+
+### MA-0098 — ChatGPT response: combined R014–R015 reconstructed semantic map
+
+- Entry date: `2026-11-15`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim ChatGPT semantic-map reproduction`
+- Related runs: `R014_qwen-overlapping-context-semantic-map`; `R015_qwen-adjacent-neighbourhood-expansion`
+- Related entries: `MA-0089`, `MA-0094`, `MA-0095`, `MA-0097`
+- Preservation note: `Entire preceding ChatGPT response retained verbatim, including tables, diagrams and original display markup.`
+
+# R014–R015: Reconstructed semantic map
+
+Both experiments independently recovered **six compatible higher-order semantic families**, organised into two principal relational systems: a positive sensing–place–spatial system and a negative spatial–group–process system.
+
+R015 preserved that organisation while revealing additional connections involving process/change.
+
+## 1. Combined semantic topology
+
+The following reproduces the common topology, using the relational support recorded in both experiments.
+
+<text color="secondary" size="xs" weight="medium">RELATION VALUES: R014 → R015</text>
+
+<box border radius="lg" padding={3} gap={3}>
+  <text weight="medium" color="success" size="sm">Positive semantic sector</text>
+  <box scrollable>
+    <text preserveWhitespace size="xs" tabularNums>{`              [REPORTING / INFORMATION]
+                         │
+                     .37 → .59
+                         │
+                         │
+  [SENSING / INSTRUMENTATION] ─── .82 → .94 ─── [PLACE / LOCALITY]
+                  ╲                                ╱
+                   ╲                              ╱
+                .54 → .31                     .45 → .30
+                     ╲                          ╱
+                      ╲                        ╱
+                       [SPATIAL / MEASUREMENT]`}</text>
+  </box>
+  <divider/>
+  <text weight="medium" size="sm">Negative semantic sector</text>
+  <box scrollable>
+    <text preserveWhitespace size="xs" tabularNums>{`            [SPATIAL / MEASUREMENT]
+                    │           ╲
+                    │            ╲
+                .81 → .68      .40 → .51
+                    │                ╲
+                    │                 ╲
+           [GROUP / ACTIVITY]          ╲
+                    │                   │
+                    │                   │
+                .50 → .70               │
+                    │                   │
+                    └────────┬──────────┘
+                             │
+                     [PROCESS / CHANGE]`}</text>
+  </box>
+  <caption>The spatial family is reconstructed in both sectors. This represents parent-level semantic correspondence, not a directly observed edge connecting the positive and negative token graphs.</caption>
+</box>
+
+## 2. R015's principal addition: process/change becomes more integrated
+
+R014 reconstructed process/change predominantly within the negative system.
+
+R015 identified a substantial positive-sector expression of the same broader family, including enlargement, transformations, decreasing and removal.
+
+<box border radius="lg" padding={3} gap={2}>
+  <text weight="medium" size="sm">R015 — Additional prominent positive relationships</text>
+  <box scrollable>
+    <text preserveWhitespace size="xs" tabularNums>{`[SENSING / INSTRUMENTATION]
+              │
+             .70
+              │
+              ▼
+    [PROCESS / MODIFICATION] ── .44 ── [REPORTING / INFORMATION]
+              ▲
+              │
+             .67
+              │
+              │
+      [PLACE / LOCALITY]`}</text>
+  </box>
+  <caption>These relationships became prominent in R015. The sensing–process relation was also recorded in R014, but was much weaker (0.18).</caption>
+</box>
+
+This is the main topological deformation. The process/change family persists, but its participation extends beyond the negative group/activity system.
+
+## 3. The six recovered parent families
+
+Every family was reconstructed in all four probes of both experiments.
+
+| Parent | Semantic content represented | Role |
+|---|---|---|
+| **N1 — Sensing / instrumentation** | Laser, sensor, electrodes, signal, optical devices | Positive core |
+| **N2 — Place / locality** | City, apartment, house, shop, street, urban environment | Positive core |
+| **N3 — Spatial / measurement** | Field, area, line, size, position, space, geometry | Cross-sector bridge |
+| **N4 — Group / activity** | Clubs, sessions, teams, sport, exhibitions, activities | Negative core |
+| **N5 — Process / change** | Interaction, manipulation, comparison, transformation, modification | Emergent, increasingly cross-sector |
+| **N6 — Reporting / information** | Reports, files, data, outputs, views, representations | Secondary positive |
+
+The first four families correspond to the four sampled semantic regions. N5 and N6 were recovered without either being supplied as an explicit seed concept.
+
+## 4. Complete comparison of the principal relationships
+
+<text color="secondary" size="xs">Mean S06–S27 community-summary support</text>
+
+| Relation | R014 | R015 |
+|---|---:|---:|
+| Sensing ↔ place | 0.82 | 0.94 |
+| Sensing ↔ spatial | 0.54 | 0.31 |
+| Place ↔ spatial | 0.45 | 0.30 |
+| Spatial ↔ group/activity | 0.81 | 0.68 |
+| Group/activity ↔ process/change | 0.50 | 0.70 |
+| Spatial ↔ process/change | 0.40 | 0.51 |
+| Sensing ↔ information | 0.37 | 0.59 |
+| Sensing ↔ process/change | 0.18 | 0.70 |
+| Place ↔ process/change | — | 0.67 |
+| Process/change ↔ information | — | 0.44 |
+
+A dash means the relationship was not quantified in R014's reported principal map; it does not mean zero association.
+
+All seven shared principal relationships occurred across all four probes in both runs. The three additional prominent positive relationships were supported in all four R015 probes.
+
+The numerical values are downstream semantic diagnostics derived from community content and edges, not raw cosine similarities or causal measurements. Their relative patterns are more informative than treating differences as precise effect sizes.
+
+## 5. What the map represents
+
+The combined reconstruction suggests three important structural properties.
+
+**Persistent identity:** The same broad semantic families recur despite different lexical inputs and substantial changes in token- and community-level topology.
+
+**Persistent relational organisation:** The dominant sensing–place relationship and the spatial–group–process organisation survive the move from R014 to R015.
+
+**Context-dependent deformation:** Parent identities remain recognisable while some relationships and sector participation change. Process/change is the clearest example.
+
+Consequently, the recovered object is not simply a collection of associated words. It is a **candidate local semantic graph of recurring higher-order structures and their relationships**.
+
+It remains a downstream reconstruction of the model's learned semantic organisation, not evidence that six corresponding physical nodes exist in the transformer.
+
+The positive and negative sectors also represent cosine alignment within the selected measurement geometry, not positive and negative emotional meaning, nor SDA-3's Central and Suppressed categories.
+
+## Original semantic-map records
+
+<row align="center" gap={2}>
+  <icon name="file-json" color="secondary"/>
+  <Link url="https://github.com/arh789/chatgpt-analysis/blob/main/projects/llm-topology/single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/R014_SEMANTIC_MAP.json" title="R014 semantic map — JSON"/>
+</row>
+<row align="center" gap={2}>
+  <icon name="file-json" color="secondary"/>
+  <Link url="https://github.com/arh789/chatgpt-analysis/blob/main/projects/llm-topology/single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/R015_SEMANTIC_MAP.json" title="R015 semantic map — JSON"/>
+</row>
+<row align="center" gap={2}>
+  <icon name="file-text" color="secondary"/>
+  <Link url="https://github.com/arh789/chatgpt-analysis/blob/main/projects/llm-topology/single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/R014_R015_COMPARISON.md" title="R014–R015 parent and relation comparison"/>
+</row>
+
+**The central finding:** R014 and R015 did not produce two unrelated maps. They recovered two locally compatible versions of a semantic graph whose parent identities largely persist while some relationships deform. This is the empirical basis for attempting to extend the map through further adjacent regions.
