@@ -60,6 +60,10 @@ single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/**/*.gz
 single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/*.gz
 single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/**/*.gz
 
+!single_prompt_topology/runs/R016_olmo3-32b-local-bf16-feasibility/
+!single_prompt_topology/runs/R016_olmo3-32b-local-bf16-feasibility/**/*.md
+!single_prompt_topology/runs/R016_olmo3-32b-local-bf16-feasibility/**/*.json
+
 # Model weights and checkpoints
 *.bin
 *.ckpt

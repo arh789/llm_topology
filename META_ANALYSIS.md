@@ -20063,3 +20063,134 @@ It recommends direct hidden-state access to remotely hosted open weights and
 base-model use for the training-distribution experiment. These are proposed
 experimental directions and model-generated interpretations; they are not new
 measurements, frozen run plans or authorisation to incur remote-compute cost.
+
+
+### MA-0102 — Codex response: models as abstractions of training data
+
+- Entry timestamp: `2026-11-15T15:56:12+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex`
+- Entry type: `project-objective clarification`
+- Related runs: `R010`, `R013`, `R014`, `R015`
+- Preservation mode: `verbatim`
+
+#### Verbatim response
+
+Then model comparison is mostly a distraction. The model is the measurement instrument: a compressed, transformed representation of its training distribution.
+
+The project’s central object should be:
+
+```text
+training distribution
+        ↓
+model’s learned compression
+        ↓
+controlled semantic probes
+        ↓
+perturbation-stable parents and relations
+        ↓
+inferred semantic topology
+```
+
+The map should be described precisely as **the semantic topology this model learned from its training distribution**. Architecture, tokenisation and optimisation shape that abstraction, but they do not make it invalid. They define the lens through which the training data is being observed.
+
+This changes how I would treat the proposed model choices:
+
+- Qwen 72B is useful only if its greater capacity produces a higher-resolution abstraction worth the remote-compute cost.
+- OLMo is useful if we want a bounded validation that inferred topology corresponds to corpus structure.
+- Neither cross-model comparison nor scale invariance needs to become the project’s objective.
+- Multiple models may eventually provide triangulation, but that is optional supporting evidence.
+
+I would therefore keep one primary model and progressively map its learned semantic space. The next probes should be chosen from the current map’s frontier: predicted latent parents, anomalous absences and unexplained correlations. Each new observation window either extends, deforms or falsifies the existing map.
+
+A larger model can later replace the current instrument if Qwen 7B’s abstraction proves too coarse. We would only need a small overlap calibration to confirm that the new instrument behaves sensibly before continuing the map; we would not need a full “which model is better?” programme.
+
+Similarly, OLMo corpus validation would be a validation of the method, not the ultimate destination. It would answer:
+
+> Does a topology inferred through the model correspond to independently observable regularities in the data from which it learned?
+
+Once that bridge is demonstrated, the main work remains using models to discover structure that would be prohibitively difficult to extract directly from enormous corpora.
+
+So the project direction should remain:
+
+> **Use a language model as a compressed semantic index of its training distribution, and develop a disciplined method for recovering the stable higher-order structure encoded within it.**
+
+That is cleaner and much closer to the purpose you have been steering toward.
+
+---
+
+### MA-0103 — Codex response: single-token capture and revised local model ceiling
+
+- Entry timestamp: `2026-11-15T16:03:32+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex`
+- Entry type: `project-resource assessment`
+- Related runs: `R012`, `R013`, `R014`, `R015`
+- Preservation mode: `verbatim`
+
+#### Verbatim response
+
+It changes the local model ceiling substantially. My earlier 7–8B limit was too conservative for this workload.
+
+You are performing one short **prefill forward pass** and observing the final prompt position that produces the first-token logits. Therefore:
+
+- no autoregressive generation loop;
+- no growing KV cache;
+- no long response sequence;
+- no gradients or optimiser state;
+- very small activation tensors because prompts contain only a few tokens;
+- all 24 prompts can potentially be processed as one batch or a few equal-length batches.
+
+Memory is dominated by model weights, not inference state.
+
+For example, retaining only one position across 40 layers, 24 prompts and a 5,120-dimensional hidden state requires only about 10 MB in BF16. Even retaining the complete short prompt trajectory remains small.
+
+The revised local candidates are:
+
+| Model | Approximate BF16 weights | Local status |
+|---|---:|---|
+| OLMo 3 7B Base | 14 GB | Fully GPU-resident |
+| Qwen3 8B Base | 16–17 GB | Fully GPU-resident, moderately tight |
+| Pythia 12B | 24 GB | Viable with several layers offloaded |
+| OLMo 2 13B Base | 26 GB | Practical with modest CPU offload |
+| Qwen2.5-14B Base | 28–30 GB | Practical with CPU offload |
+| OLMo 3 32B Base | roughly 64 GB | Possible only with GPU, CPU and disk offload |
+| Qwen 72B | roughly 145 GB | Still impractical locally in BF16 |
+
+The best practical local choice becomes **OLMo 2 13B Base**. It has 40 layers, a 5,120-dimensional hidden state, documented training data and intermediate checkpoints. Approximately 6–10 GB of weights would need to remain in system RAM while the rest occupies the GPU. Your 64 GB system RAM can support that comfortably when nonessential applications are closed. [OLMo 2 model card](https://huggingface.co/allenai/OLMo-2-1124-13B)
+
+**Pythia 12B** also becomes a serious immediate option. It is already cached, and its unusually complete training history makes it valuable for studying the formation of the learned abstraction. Only a small part of the model needs CPU offload. [Pythia documentation](https://huggingface.co/EleutherAI/pythia-12b)
+
+**OLMo 3 32B Base** becomes technically conceivable, though not yet convenient. Its 64 GB of BF16 weights could be divided between approximately 20–23 GB of GPU memory, available system RAM and disk offload. If all 24 prompts are batched, each offloaded layer only needs to be transferred once per forward pass rather than once per prompt. OLMo 3 has 64 layers at 32B and fully documented Dolma 3 training data. [OLMo 3 model card](https://huggingface.co/allenai/Olmo-3-1025-7B/blob/main/README.md)
+
+The capture pipeline should consequently be adjusted to:
+
+```python
+with torch.inference_mode():
+    outputs = model(
+        input_ids=batch,
+        attention_mask=mask,
+        output_hidden_states=True,
+        use_cache=False,
+    )
+```
+
+Then:
+
+1. Extract only each prompt’s final newline-anchor position.
+2. Save the layer-by-layer anchor states.
+3. Optionally retain the final next-token logits for validation.
+4. Delete the model and release GPU memory.
+5. Perform vocabulary projection and graph construction separately.
+
+For larger models, the 24 prompts should be batched so offloaded weights are traversed only once. Right-padding is safe if the attention mask and each anchor position are handled explicitly.
+
+I would now rank the options:
+
+1. **OLMo 2 13B Base** — best practical local balance of abstraction capacity, transparency and reliability.
+2. **Pythia 12B** — best immediately available model for studying how the abstraction formed.
+3. **Qwen2.5-14B Base** — strong abstraction, but less training-data transparency.
+4. **OLMo 3 32B Base** — ambitious local upper bound requiring a dedicated offload prototype.
+5. **OLMo 3 7B Base** — safest fully GPU-resident option.
+
+The key change is that **12–14B unquantised base models are now comfortably within scope**, and a 32B BF16 model may be workable through batched layer offloading. The project does not need to remain limited to 7B merely because the entire model cannot reside simultaneously in VRAM.
