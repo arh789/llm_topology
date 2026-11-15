@@ -456,13 +456,27 @@ negative-tail exact 10-NN graphs. The successful measurement contains 130
 networks, 490,114 selected memberships, 4,901,140 directed edges, 2,007
 state-local communities and 128 adjacent-state comparisons.
 
-The human-readable result is
-[`R017_SEMANTIC_MAP_REPORT.html`](runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_SEMANTIC_MAP_REPORT.html).
-It reconstructs a candidate functional architecture in which a constrained
-passage channels movement, a deployable obstruction shapes the passage and a
-reach/piercing weapon supplies force at the resulting interception point. The
-report keeps measured communities separate from interpreted parent labels and
-records that order/context invariance was not tested.
+The downstream reporting package follows the evidence separation established by
+R014 and R015. The frozen measurement and completeness records remain
+measurement-only; semantic reconstruction is recorded separately in
+[`R017_SEMANTIC_RECONSTRUCTION.md`](runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_SEMANTIC_RECONSTRUCTION.md).
+Structured parents and relations are exported in
+[`R017_SEMANTIC_MAP_NODES.csv`](runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_SEMANTIC_MAP_NODES.csv),
+[`R017_SEMANTIC_MAP_EDGES.csv`](runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_SEMANTIC_MAP_EDGES.csv)
+and
+[`R017_SEMANTIC_MAP.json`](runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_SEMANTIC_MAP.json).
+The canonical human analysis is
+[`R017_RUN_ANALYSIS_AND_RECOMMENDATIONS.html`](runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_RUN_ANALYSIS_AND_RECOMMENDATIONS.html),
+with the original evidence-linked
+[`R017_SEMANTIC_MAP_REPORT.html`](runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_SEMANTIC_MAP_REPORT.html)
+retained.
+
+The reconstructed architecture is a constrained passage that organises
+movement, a deployable obstruction that shapes the approach, reach/piercing
+force, and an emergent attack/interception function. R017 remains a
+single-trajectory result: order, context, neighbouring-concept and cross-model
+invariance were not tested. The reporting rules are frozen in
+[`R017_REPORTING_RULES.md`](runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_REPORTING_RULES.md).
 
 ## Run outputs
 
