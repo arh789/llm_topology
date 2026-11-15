@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "run_id": "R017_olmo3-choke-point-barrier-spear-semantic-map",
+  "status": "successful",
+  "started_at": "2026-11-15T06:25:52.370242+00:00",
+  "completed_at": "2026-11-15T06:37:09.680242+00:00",
+  "failure_details": null,
+  "objective": "Measure the layerwise semantic topology formed by choke point, collapsible barrier and spear, then report its semantic map.",
+  "model": {
+    "id": "allenai/Olmo-3-1125-32B",
+    "revision": "c2b61dae89a1ad10e4ad5653d0e46b590902607b",
+    "precision": "bfloat16",
+    "quantized": false
+  },
+  "prompt": {
+    "text": "choke point\ncollapsible barrier\nspear\n",
+    "capture_position": "final newline anchor",
+    "chat_template_used": false,
+    "generation_executed": false
+  },
+  "expected": {
+    "states": 65,
+    "networks": 130,
+    "adjacent_transitions": 128
+  },
+  "required_components": [
+    "plan_lock",
+    "environment_preflight",
+    "model_capture",
+    "projection_and_cutoffs",
+    "networks_and_communities",
+    "adjacent_transitions",
+    "measured_exports",
+    "completeness_validation",
+    "semantic_interpretation"
+  ],
+  "components": {
+    "plan_lock": {
+      "status": "successful",
+      "completed_at": "2026-11-15T06:25:52.370242+00:00",
+      "sha256": "dae380e44268d379ee435427bc53a8e4b1d8d29dde1797dcab3def35a0b8cd9a"
+    },
+    "environment_preflight": {
+      "status": "successful",
+      "completed_at": "2026-11-15T06:25:52.370242+00:00",
+      "python": "3.11.15 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:12:15) [MSC v.1942 64 bit (AMD64)]",
+      "torch": "2.6.0+cu124",
+      "cuda": "12.4",
+      "memory_before": {
+        "physical_ram_available_bytes": 46571614208,
+        "process_rss_bytes": 662634496,
+        "cache_drive_free_bytes": 1106724929536,
+        "gpu_name": "NVIDIA GeForce RTX 4090",
+        "gpu_total_bytes": 25756696576,
+        "gpu_free_bytes": 24159191040,
+        "gpu_allocated_bytes": 0,
+        "gpu_reserved_bytes": 0
+      }
+    },
+    "model_capture": {
+      "status": "successful",
+      "completed_at": "2026-11-15T06:27:10.502829+00:00",
+      "seconds": 78.04980780000187,
+      "input_tokens": 11,
+      "anchor_token_id": 198,
+      "capture_shape": [
+        65,
+        5120
+      ],
+      "peak_gpu_allocated_bytes": 18651802112,
+      "memory_after_forward": {
+        "physical_ram_available_bytes": 14968942592,
+        "process_rss_bytes": 32640659456,
+        "cache_drive_free_bytes": 1106724257792,
+        "gpu_name": "NVIDIA GeForce RTX 4090",
+        "gpu_total_bytes": 25756696576,
+        "gpu_free_bytes": 4108099584,
+        "gpu_allocated_bytes": 17624197632,
+        "gpu_reserved_bytes": 18664652800
+      },
+      "device_map_sha256": "706df4523336e6a453b0628f20280d4619db304fddf041160746e898a45b92b8",
+      "capture_sha256": "8cfeb6aedb964d82e79373f86efec3bed4f74845081bc4e66db90629f1af4115"
+    },
+    "projection_and_cutoffs": {
+      "status": "successful",
+      "completed_at": "2026-11-15T06:27:18.535455+00:00",
+      "seconds": 8.013982900003612,
+      "score_shape": [
+        65,
+        100278
+      ],
+      "vocabulary_size": 100278,
+      "cutoff_rows": 65,
+      "membership_rows": 490114,
+      "embedding_shard": "model-00001-of-00014.safetensors",
+      "capture_token_id": 198
+    },
+    "networks_and_communities": {
+      "status": "successful",
+      "completed_at": "2026-11-15T06:29:49.956826+00:00",
+      "seconds": 151.3925170999937,
+      "network_count": 130,
+      "selected_node_rows": 490114,
+      "directed_edge_rows": 4901140,
+      "community_rows": 2007,
+      "intercommunity_edge_rows": 13751
+    },
+    "adjacent_transitions": {
+      "status": "successful",
+      "completed_at": "2026-11-15T06:29:49.957826+00:00",
+      "seconds": 0.00024760000087553635,
+      "transition_rows": 128,
+      "minimum_membership_jaccard": 0.013757523645743766,
+      "minimum_edge_jaccard": 0.0005063291139240507
+    },
+    "measured_exports": {
+      "status": "successful",
+      "completed_at": "2026-11-15T06:29:50.220436+00:00",
+      "seconds": 0.2615485999995144,
+      "json_networks": 130,
+      "markdown_state_sections": 65,
+      "semantic_labels_added": false
+    },
+    "completeness_validation": {
+      "status": "successful",
+      "completed_at": "2026-11-15T06:29:50.530571+00:00",
+      "seconds": 0.10279769999760902,
+      "networks_verified": 130,
+      "transitions_verified": 128,
+      "communities_verified": 2007
+    },
+    "semantic_interpretation": {
+      "status": "successful",
+      "completed_at": "2026-11-15T06:37:09.671024+00:00",
+      "seconds": 0.0005396999986260198,
+      "report": "R017_SEMANTIC_MAP_REPORT.html",
+      "report_sha256": "c4da73e9ef41628b77984b3d7021348a8ba425ffbed65f6417708dff56e3bff9",
+      "measurement_interpretation_boundary_stated": true
+    }
+  },
+  "artifacts": {
+    "prompt_record.json": {
+      "bytes": 529,
+      "sha256": "b922e13b2c0c864b269aff3cc22ff9f740cb1a7ea1eb4bd5130ca91d565dc643",
+      "tracked_by_git": true
+    },
+    "device_map.json": {
+      "bytes": 2273,
+      "sha256": "706df4523336e6a453b0628f20280d4619db304fddf041160746e898a45b92b8",
+      "tracked_by_git": true
+    },
+    "anchor_hidden_states.safetensors": {
+      "bytes": 665880,
+      "sha256": "8cfeb6aedb964d82e79373f86efec3bed4f74845081bc4e66db90629f1af4115",
+      "tracked_by_git": false
+    },
+    "vocabulary_scores.safetensors": {
+      "bytes": 26072472,
+      "sha256": "25ec9eff9d4aa3afed55eb90ed6b082e4765c4df910713db0f858669fa8c7a45",
+      "tracked_by_git": false
+    },
+    "cutoffs.csv": {
+      "bytes": 10775,
+      "sha256": "9fa999ac9516d687877fc17b7fb9e8959f33f562d8f9b0734c1ece78ed385bb8",
+      "tracked_by_git": true
+    },
+    "network_index.csv": {
+      "bytes": 34934,
+      "sha256": "77a65e952ac2ec5b3e24ed51ccb6c3711ee85533b754421c876081ab43aca413",
+      "tracked_by_git": true
+    },
+    "community_nodes.csv": {
+      "bytes": 1152858,
+      "sha256": "d9e85a82028e77c865028f3ec2ad47336a994b3ed8f185bc6da51d3fb9f046af",
+      "tracked_by_git": true
+    },
+    "community_edges.csv": {
+      "bytes": 1222460,
+      "sha256": "631261618a2754d358ebc66b98c8b96344331adf65dcf8b21baf2675022fcb92",
+      "tracked_by_git": true
+    },
+    "state_transitions.csv": {
+      "bytes": 18641,
+      "sha256": "1bb231a8498b88cbf8e5232a4cbb2e9123ed80a6d982ebcb4dcec4ecfd351f9e",
+      "tracked_by_git": true
+    },
+    "community_transition_evidence.csv": {
+      "bytes": 230564,
+      "sha256": "32d67482c27c3a3780d06cc0415b504816e48f38562fda395c208429f37a9a2c",
+      "tracked_by_git": true
+    },
+    "chatgpt_community_networks.json": {
+      "bytes": 5504848,
+      "sha256": "1f744934e71589bb31fa37dd5c9262bd530b8431b3ed3d3ebf7754c8597ec20e",
+      "tracked_by_git": true
+    },
+    "chatgpt_layer_packets.md": {
+      "bytes": 423966,
+      "sha256": "a358ec340472e46c82281c0d67b5ca74bf207c17a73390feda545f6cdabff4ab",
+      "tracked_by_git": true
+    },
+    "R017_MEASURED_REPORT.md": {
+      "bytes": 576,
+      "sha256": "3ae74f4271fc492652cb0156ecb3362366b4f2676007185a6bc445c33f50d8dc",
+      "tracked_by_git": true
+    },
+    "R017_COMPLETENESS_VERIFICATION.md": {
+      "bytes": 535,
+      "sha256": "ca498d3b57c98943bd79a97be53b8dd52cfdc02c431a6ee9f94361714a2a618e",
+      "tracked_by_git": true
+    },
+    "R017_SEMANTIC_MAP_REPORT.html": {
+      "bytes": 17909,
+      "sha256": "c4da73e9ef41628b77984b3d7021348a8ba425ffbed65f6417708dff56e3bff9",
+      "tracked_by_git": true
+    }
+  },
+  "interpretation_boundary": "Measurements end at state-local graph communities and transitions. Semantic parents and relations are post-measurement interpretations.",
+  "measurement_completed_at": "2026-11-15T06:29:50.537576+00:00",
+  "next_required_component": null
+}

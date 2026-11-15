@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>R017 OLMo semantic map — choke point, collapsible barrier, spear</title>
+<style>
+:root{color-scheme:dark}body{margin:0;background:#101216;color:#e9ebef;font-family:Georgia,"Times New Roman",serif;font-size:18px;line-height:1.65}main{max-width:1060px;margin:auto;padding:48px 28px 80px}h1,h2,h3{font-family:Arial,Helvetica,sans-serif;line-height:1.2;color:#fff}h1{font-size:2.35rem;margin-bottom:.5rem}h2{font-size:1.55rem;margin-top:3rem;padding-top:1.2rem;border-top:1px solid #343945}h3{font-size:1.15rem;margin-top:2rem}p{margin:.85rem 0}pre{background:#171a20;border:1px solid #343945;border-radius:9px;padding:18px 20px;overflow:auto;white-space:pre;line-height:1.45;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.87rem}blockquote{margin:1.4rem 0;padding:.35rem 0 .35rem 1.2rem;border-left:4px solid #7cc4ff;color:#f4f5f6;font-size:1.06em}table{border-collapse:collapse;width:100%;margin:1.4rem 0;font-family:Arial,Helvetica,sans-serif;font-size:.9rem}th,td{padding:.65rem .72rem;border-bottom:1px solid #343945;text-align:left;vertical-align:top}th{color:#fff;background:#171a20}strong{color:#fff}.note{color:#b8bfca}.lead{font-size:1.08em;color:#f3f4f6}.status{display:inline-block;background:#173d2c;color:#9ff0c6;border:1px solid #2b7652;border-radius:999px;padding:.2rem .7rem;font-family:Arial,sans-serif;font-size:.82rem}.measured{color:#9fd0ff}.interpreted{color:#ffd99f}@media(max-width:760px){body{font-size:16px}main{padding:28px 15px 60px}h1{font-size:1.9rem}pre{font-size:.72rem;padding:12px}table{font-size:.78rem;display:block;overflow-x:auto}}
+</style>
+</head>
+<body><main>
+<span class="status">R017 successful measurement</span>
+<h1>Choke point + collapsible barrier + spear</h1>
+<p class="lead">A layer-wise semantic map generated from one native-BF16 forward pass through <code>allenai/Olmo-3-1125-32B</code>.</p>
+
+<h2>Strongest supported result</h2>
+
+<blockquote><strong>The three inputs form a tactical interception architecture: a constrained passage channels movement; a deployable obstruction shapes or blocks that flow; and a reach/piercing weapon supplies force at the resulting point of contact.</strong></blockquote>
+
+<p>The model does not preserve the input merely as three neighbouring nouns. It first resolves <em>spear</em> concretely as a weapon, blade and piercing object. Through later depth, that object-level neighbourhood loses independence while the relational structure becomes more prominent: <em>point, intersection, narrow, flow, movement, folding, blocking, deploy, collapse, attack, guard, wall, restriction, channel</em> and <em>route</em>.</p>
+
+<p>The resulting structure is therefore less “a spear beside a barrier at a choke point” and more:</p>
+
+<pre>force movement through a constrained place
+                  ↓
+deploy an obstruction that controls the passage
+                  ↓
+exploit the narrowed approach with reach / piercing force</pre>
+
+<h2>Measurement status</h2>
+
+<table>
+<thead><tr><th>Item</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>Model</td><td><code>allenai/Olmo-3-1125-32B</code>, revision <code>c2b61dae89a1ad10e4ad5653d0e46b590902607b</code>, native BF16</td></tr>
+<tr><td>Prompt</td><td><code>choke point\ncollapsible barrier\nspear\n</code></td></tr>
+<tr><td>Capture</td><td>Final newline position; no chat template, special-token wrapper or generated response</td></tr>
+<tr><td>States</td><td>65: input embedding, 63 intermediate block outputs and final-normalised output after Block 63</td></tr>
+<tr><td>Measured networks</td><td>130 / 130: one positive-head and one negative-tail network per state</td></tr>
+<tr><td>Selected memberships</td><td>490,114</td></tr>
+<tr><td>Exact directed 10-NN edges</td><td>4,901,140</td></tr>
+<tr><td>State-local Louvain communities</td><td>2,007</td></tr>
+<tr><td>Adjacent-state comparisons</td><td>128 / 128</td></tr>
+</tbody>
+</table>
+
+<p><span class="measured"><strong>Measured:</strong></span> hidden states, vocabulary cosine scores, elbow-selected sectors, exact embedding-neighbour graphs, communities and adjacent-state comparisons. <span class="interpreted"><strong>Interpreted:</strong></span> the parent labels and the functional relations shown below.</p>
+
+<h2>Prompt decomposition</h2>
+
+<table>
+<thead><tr><th>Input</th><th>Recovered semantic components</th><th>Key evidence</th></tr></thead>
+<tbody>
+<tr><td><strong>Choke point</strong></td><td>point; intersection; bottleneck; entry/exit; narrow passage; channel; route; spatial position</td><td>State 3 already selects <em>bottleneck, exit, entry</em> and <em>location</em>. State 63 selects <em>point</em> at positive rank 608, <em>intersection</em> at 678 and <em>narrow</em> at 2,163; State 64 retains <em>intersection</em> at 478 and <em>narrow</em> at 693 while <em>route</em> and <em>spatial</em> are negative-tail members.</td></tr>
+<tr><td><strong>Collapsible barrier</strong></td><td>collapse; folding; blocking; deploy/deployment; wall; restriction; boundary</td><td><em>Collapse</em> appears from State 1. <em>Blocking</em> persists positively across 39 states from State 22; <em>walls</em> persists negatively across 29 states from State 31. Late states introduce <em>restriction</em>, <em>deploy</em> and <em>deployment</em>.</td></tr>
+<tr><td><strong>Spear</strong></td><td>weapon; blade; lance; knife; piercing; extended reach; attack/ambush</td><td>At State 5, <em>spear</em> is positive rank 6 inside a 502-token weapons community. At State 12, <em>knife</em> is rank 2, <em>weapons</em> rank 5, <em>spear</em> rank 6 and <em>ambush</em> rank 61. Direct <em>spear</em> membership spans States 4–25; the later representation retains <em>attack</em>, <em>pierce</em> and <em>guards</em> rather than the object name.</td></tr>
+</tbody>
+</table>
+
+<h2>Measured development through depth</h2>
+
+<table>
+<thead><tr><th>Depth</th><th>Positive-aligned development</th><th>Negative-aligned development</th><th>Interpretation</th></tr></thead>
+<tbody>
+<tr><td>State 00</td><td colspan="2">Uncontextualised newline embedding. The severe State 00→01 negative reset (membership Jaccard 0.0138; edge Jaccard 0.0005) confirms that it is a boundary condition, not a prompt-semantic result.</td><td>Exclude from semantic conclusions.</td></tr>
+<tr><td>States 01–04</td><td><em>collapse, location, exit, bottleneck, entry, weapons, defence, position, movement</em></td><td>Mostly lexical and tokenizer structure; isolated attack/deploy directions</td><td>Rapid context selection: physical constraint and location are established before the spear neighbourhood becomes dominant.</td></tr>
+<tr><td>States 05–20</td><td>Strong weapon/blade/piercing structure: <em>spear, lance, knife, sword, weapons, stab, ambush</em>. <em>Intersection</em> begins to join it.</td><td><em>path, flow, exit, position</em> recur as anti-aligned spatial/movement structure.</td><td>The object is concretised first, while the passage and movement conditions develop as its geometric counterpart.</td></tr>
+<tr><td>States 21–30</td><td>Weapon structure remains but becomes broader and less pure. <em>Blocking</em> appears and rises.</td><td><em>Controls</em> and <em>Access</em> enter the negative sector.</td><td>The representation moves from “what the spear is” toward “what the combined arrangement does.”</td></tr>
+<tr><td>States 31–57</td><td><em>point, folding, blocking, movement, attack</em> persist; weapon terms are absorbed into mixed material/action communities.</td><td><em>walls, access, location, guard, exit</em> become persistent.</td><td>The map differentiates an active mechanism from its passage/boundary conditions.</td></tr>
+<tr><td>States 58–63</td><td><em>point, flow, collapse, attack, intersection, deploy/deployment, narrow</em></td><td><em>exit, location, restriction, channel, pierce, guard, defence, wall, position</em></td><td>The three concepts are compressed into a functional system: channel → obstruct/deploy → intercept/attack.</td></tr>
+<tr><td>State 64</td><td><em>deployment</em> rank 420; <em>intersection</em> 478; <em>narrow</em> 693; <em>deploy</em> 841; <em>attack</em> 1,183; <em>guards</em> 1,350</td><td><em>route</em> rank 2,395; <em>wall</em> 2,868; <em>spatial</em> 3,289</td><td>Final-normalised recoding preserves the operational core and its opposing spatial boundary, but is not itself another reasoning block.</td></tr>
+</tbody>
+</table>
+
+<h2>Parent structures</h2>
+
+<table>
+<thead><tr><th>Parent</th><th>Semantic contents</th><th>Depth/sector tendency</th><th>Confidence</th></tr></thead>
+<tbody>
+<tr><td><strong>Constrained passage</strong></td><td>point, intersection, bottleneck, narrow, channel, route, entry/exit, spatial position</td><td>Appears early; becomes a positive operational location with a negative route/channel/wall counterpart late</td><td>High</td></tr>
+<tr><td><strong>Deployable obstruction</strong></td><td>collapse, folding, blocking, deploy, deployment</td><td>Collapse appears early; blocking dominates middle/late positive structure; deployment is strongest at the final state</td><td>High</td></tr>
+<tr><td><strong>Reach and piercing force</strong></td><td>spear, lance, knife, sword, blade, stab, pierce, weapon</td><td>Very strong positive object structure in early/middle layers; recoded into action and boundary roles late</td><td>High</td></tr>
+<tr><td><strong>Movement / flow</strong></td><td>flow, movement, path, exit, channel</td><td>Negative-aligned during weapon concretisation; positive functional component during late integration</td><td>High</td></tr>
+<tr><td><strong>Boundary / defence</strong></td><td>wall, restriction, access, guard, defence</td><td>Predominantly negative late; guards re-enter the final positive operational representation</td><td>Moderate–high</td></tr>
+<tr><td><strong>Residual lexical/material structure</strong></td><td>formatting, code identifiers, names, food/material associations and morphology</td><td>Large communities at most depths, often unrelated to the inferred functional core</td><td>High</td></tr>
+</tbody>
+</table>
+
+<h2>Relations between parents</h2>
+
+<p>The late networks do not place all map terms in one community. They partition the functions and connect them. At State 64 positive, the relevant communities contain: attack + intersection (C0), guards + point (C1), narrow (C4), and deployment + deploy (C11). Every pair is connected by measured token edges. The strongest relevant links are C0–C1 (610 token edges), C0–C11 (198), C1–C11 (190), C0–C4 (157), C1–C4 (128) and C4–C11 (43).</p>
+
+<table>
+<thead><tr><th>Relation</th><th>Supported interpretation</th><th>Evidence type</th></tr></thead>
+<tbody>
+<tr><td>Constrained passage → movement/flow</td><td>A choke point is represented as a location where routes, exits and channels organise movement.</td><td>Cross-depth token trajectory and late parent recurrence</td></tr>
+<tr><td>Deployable obstruction → constrained passage</td><td>Folding/collapse/deployment supplies an active blocking mechanism at the point/intersection/narrow structure.</td><td>State 63/64 positive intercommunity edges</td></tr>
+<tr><td>Obstruction → boundary/defence</td><td>The active mechanism has a negative-aligned counterpart in wall, restriction, access, guard and defence structure.</td><td>Stable sector asymmetry; no cross-sector graph edge is claimed</td></tr>
+<tr><td>Reach/piercing force → attack at intersection</td><td>The early spear/weapon object is retained late mainly as attack/pierce/guard function located at the constrained point.</td><td>Object-to-function trajectory and State 64 C0/C1 relation</td></tr>
+<tr><td>Whole system → tactical interception</td><td>Movement is made predictable by spatial restriction, then acted upon with reach force.</td><td>Higher-order synthesis of the four independently measured parent relations</td></tr>
+</tbody>
+</table>
+
+<h2>Semantic map</h2>
+
+<pre>                         CONSTRAINED PASSAGE
+             point / intersection / narrow / channel / route
+                                  │
+                                  │ organises
+                                  ▼
+                         MOVEMENT / FLOW
+                    path / entry / exit / approach
+                                  │
+                    shaped and slowed by
+                                  ▼
+                      DEPLOYABLE OBSTRUCTION
+                 collapse / folding / blocking / deploy
+                         │                 │
+                         │                 └──── defines ────┐
+                         │                                   ▼
+                         │                         BOUNDARY / DEFENCE
+                         │                    wall / restriction / guard
+                         │
+                 creates a controlled
+                   point of contact
+                         │
+                         ▼
+                    REACH / PIERCING FORCE
+             spear / lance / blade / stab / pierce / weapon
+                         │
+                         ▼
+                ATTACK / AMBUSH / INTERCEPTION
+
+Compressed functional reading:
+
+CHANNEL MOVEMENT → DEPLOY BARRIER → NARROW APPROACH → INTERCEPT WITH REACH</pre>
+
+<h2>Sector asymmetry</h2>
+
+<p>The positive side progressively carries the <strong>active procedure</strong>: weapon use, blocking, folding, movement, deployment, intersection, attack and guards. The negative side progressively carries the <strong>spatial and limiting counterpart</strong>: path/exit, access, walls, restriction, channel, defence and route.</p>
+
+<p>This does <strong>not</strong> establish that the model suppresses walls, defence or routes. It establishes geometric anti-alignment in the fixed input-embedding basis. Functionally, however, the paired sectors distinguish what acts from what bounds the action.</p>
+
+<h2>Evidence and limitations</h2>
+
+<ul>
+<li>This is a single prompt in a single order. Unlike R014/R015, it does not establish order, context or neighbouring-concept invariance.</li>
+<li>The parent map is reconstructed after measurement. Parent names are not direct model outputs.</li>
+<li>Intercommunity edges exist only within one state and cosine sector. Repeated parent identity across sectors is interpretive; no positive-to-negative graph edge was measured.</li>
+<li>Many large OLMo communities are lexical, multilingual, formatting, code or named-entity structures. Prompt-specific meaning is often clearest in target-extreme tokens and persistent trajectories rather than the largest community by size.</li>
+<li>State 00 is the uncontextualised newline embedding. State 64 combines Block 63 output with final normalisation. Neither should be treated as an ordinary middle layer.</li>
+<li>The method measures a model-mediated semantic topology learned from training data, not a direct inventory of raw training documents.</li>
+</ul>
+
+<h2>Report standardisation candidates</h2>
+
+<p>R014/R015 and this run now point to a stable minimum report schema. Standardisation should preserve these fields without forcing every experiment into the same comparison design:</p>
+
+<ol>
+<li><strong>Run identity:</strong> model, exact revision, prompt set, capture position, state definition and generation status.</li>
+<li><strong>Completeness:</strong> expected versus observed states, networks, transitions, memberships, edges and communities.</li>
+<li><strong>Strongest supported result:</strong> one plain-language statement, separated from caveats.</li>
+<li><strong>Prompt decomposition:</strong> each input concept → recovered components → exact evidence.</li>
+<li><strong>Depth development:</strong> a small number of evidence-led phases, with state boundaries stated rather than presumed.</li>
+<li><strong>Parent table:</strong> identity, contents, sector/depth tendency, evidence and confidence.</li>
+<li><strong>Relation table:</strong> endpoints, relation, measured support, interpretive status and confidence.</li>
+<li><strong>Semantic map:</strong> one compact diagram showing only supported parents and relations.</li>
+<li><strong>Sector boundary:</strong> explicit reminder that negative cosine is anti-alignment, not automatic suppression.</li>
+<li><strong>Invariance status:</strong> clearly state whether order, context, neighbouring concepts or models were perturbed—or not tested.</li>
+<li><strong>Limitations and artefacts:</strong> tokenizer/formatting structure, capture boundary, and any model-specific effects.</li>
+<li><strong>Primary records:</strong> direct links or paths to manifest, measured packets, community exports and completeness verification.</li>
+</ol>
+
+<p>The schema should distinguish a <strong>single-trajectory semantic-map report</strong> such as R017 from a <strong>cross-perturbation invariance report</strong> such as R014/R015. The common core can be standardised; comparison-only sections should remain conditional.</p>
+
+<h2>Conclusion</h2>
+
+<blockquote><strong>For OLMo 3 32B Base, “choke point + collapsible barrier + spear” generates a semantic map of controlled passage and tactical interception: spatial restriction makes movement predictable, a deployable obstruction shapes the approach, and reach/piercing force acts at the resulting point of contact.</strong></blockquote>
+
+<p class="note">Primary measured records: <code>manifest.json</code>, <code>cutoffs.csv</code>, <code>network_index.csv</code>, <code>community_nodes.csv</code>, <code>community_edges.csv</code>, <code>state_transitions.csv</code>, <code>chatgpt_community_networks.json</code>, <code>chatgpt_layer_packets.md</code> and <code>R017_COMPLETENESS_VERIFICATION.md</code>.</p>
+</main></body>
+</html>

@@ -20718,3 +20718,92 @@ NEW FRONTIER
 The important change is therefore not merely **“a 32B model now works”**.
 
 It is that the project now has both a more defensible scientific object — **perturbation-stable learned semantic topology** — and a substantially more capable, corpus-transparent measurement instrument with which to investigate it. memcite
+### MA-0105 — R017 OLMo 3 32B semantic map: choke point, collapsible barrier, spear
+
+- Entry timestamp: `2026-11-15T17:34:23+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex measured-run and evidence-linked interpretation record`
+- Entry type: `measured single-prompt topology and semantic-map report`
+- Related run: `R017`
+- Model: `allenai/Olmo-3-1125-32B`
+- Model revision: `c2b61dae89a1ad10e4ad5653d0e46b590902607b`
+
+#### Objective and measurement
+
+R017 tested what semantic map the exact OLMo 3 32B Base model forms from the
+bare-concept prompt:
+
+```text
+choke point
+collapsible barrier
+spear
+```
+
+The final newline token was captured after one no-generation forward pass.
+The run returned all 65 expected hidden states at width 5,120, projected every
+state against the fixed 100,278-row input-embedding vocabulary basis and
+constructed separate positive-head and negative-tail exact 10-NN graphs.
+
+Validated coverage was:
+
+- 130 / 130 state/sector networks;
+- 490,114 selected token memberships;
+- 4,901,140 exact directed 10-NN edges;
+- 2,007 state-local Louvain communities; and
+- 128 / 128 adjacent-state comparisons.
+
+The run manifest remained `running` after measurement and was marked
+`successful` only after the semantic report had been written and checked for
+the required evidence and interpretation-boundary sections.
+
+#### Semantic result
+
+The strongest supported reconstruction is a tactical interception
+architecture:
+
+```text
+CONSTRAINED PASSAGE
+point / intersection / narrow / channel / route
+        ↓
+MOVEMENT / FLOW
+        ↓
+DEPLOYABLE OBSTRUCTION
+collapse / folding / blocking / deployment
+        ↓
+REACH / PIERCING FORCE
+spear / lance / blade / stab / pierce
+        ↓
+ATTACK / AMBUSH / INTERCEPTION
+```
+
+The early and lower-middle positive states concretise the spear as a weapon.
+At State 5, `spear` is positive rank 6 inside a 502-token weapons community.
+At State 12, `knife` is rank 2, `weapons` rank 5, `spear` rank 6 and `ambush`
+rank 61. Direct `spear` membership persists across States 4–25.
+
+The later trajectory becomes functional rather than object-centred. Positive
+states carry point, folding, blocking, movement, collapse, flow, attack,
+intersection, deployment and narrow. Negative states carry access, walls,
+location, exit, restriction, channel, pierce, guard and defence. At final
+State 64 the positive sector retains deployment, intersection, narrow, attack
+and guards, while the negative sector retains route, wall and spatial
+structure.
+
+This sector distinction does not establish suppression. Positive and negative
+remain cosine alignment and anti-alignment in the fixed input-embedding basis.
+The defensible functional inference is that one sector represents the active
+procedure while the other supplies its spatial and limiting counterpart.
+
+#### Interpretation boundary and reporting consequence
+
+R017 is a single prompt in one order. It does not establish order, context or
+neighbouring-concept invariance. Its parent labels and parent relations are
+post-measurement interpretations, not direct model outputs or cross-sector
+graph edges.
+
+The R017 report uses R014/R015 as guides and identifies a common report core:
+run identity, completeness, strongest result, prompt decomposition, depth
+development, parent and relation tables, one semantic map, sector caveat,
+invariance status, limitations and primary records. Comparison-only sections
+should remain conditional rather than being forced into single-trajectory
+runs.

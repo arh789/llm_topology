@@ -438,6 +438,32 @@ available. R016 therefore establishes single-prompt local feasibility for the
 32B model. It does not establish batched throughput or produce vocabulary
 projection, cutoff, network, community or semantic-map outputs.
 
+## R017 OLMo 3 32B semantic map
+
+R017 uses the exact validated R016 backend to run the complete topology
+pipeline for the bare-concept prompt:
+
+```text
+choke point
+collapsible barrier
+spear
+```
+
+The locked contract is [`R017_PLAN.md`](R017_PLAN.md). The run captures the
+final newline anchor at all 65 states, projects each state against the 100,278
+usable input-embedding rows and constructs separate positive-head and
+negative-tail exact 10-NN graphs. The successful measurement contains 130
+networks, 490,114 selected memberships, 4,901,140 directed edges, 2,007
+state-local communities and 128 adjacent-state comparisons.
+
+The human-readable result is
+[`R017_SEMANTIC_MAP_REPORT.html`](runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_SEMANTIC_MAP_REPORT.html).
+It reconstructs a candidate functional architecture in which a constrained
+passage channels movement, a deployable obstruction shapes the passage and a
+reach/piercing weapon supplies force at the resulting interception point. The
+report keeps measured communities separate from interpreted parent labels and
+records that order/context invariance was not tested.
+
 ## Run outputs
 
 Each execution writes a timestamped directory under `runs/` containing:
