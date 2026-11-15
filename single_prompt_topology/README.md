@@ -418,6 +418,26 @@ reconstructed independently without imposing R013 parent labels. Cross-probe
 parent and relation matching, and the decision whether the evidence supports a
 local semantic map, remain downstream analytical work.
 
+## R016 OLMo 3 32B local BF16 feasibility
+
+R016 tests whether a substantially larger fully open base model can execute the
+pipeline's required first-token-prediction capture locally. Its locked contract
+is [`R016_PLAN.md`](R016_PLAN.md), and the result is
+[`R016_FEASIBILITY_REPORT.md`](runs/R016_olmo3-32b-local-bf16-feasibility/R016_FEASIBILITY_REPORT.md).
+
+The exact `allenai/Olmo-3-1125-32B` revision
+`c2b61dae89a1ad10e4ad5653d0e46b590902607b` was loaded in native BF16 with an
+18 GiB GPU cap, 28 GiB CPU-RAM cap and disk-backed remainder. One nine-token
+bare-concept prompt completed without response generation and returned all 65
+expected hidden states at width 5,120 plus finite first-token logits over the
+100,278-token vocabulary.
+
+The measured forward pass took 60.89 seconds. Peak GPU allocation was 18.65 GB,
+process RSS after the forward was 33.28 GB and 13.02 GB of physical RAM remained
+available. R016 therefore establishes single-prompt local feasibility for the
+32B model. It does not establish batched throughput or produce vocabulary
+projection, cutoff, network, community or semantic-map outputs.
+
 ## Run outputs
 
 Each execution writes a timestamped directory under `runs/` containing:

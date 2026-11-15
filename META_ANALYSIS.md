@@ -20194,3 +20194,73 @@ I would now rank the options:
 5. **OLMo 3 7B Base** — safest fully GPU-resident option.
 
 The key change is that **12–14B unquantised base models are now comfortably within scope**, and a 32B BF16 model may be workable through batched layer offloading. The project does not need to remain limited to 7B merely because the entire model cannot reside simultaneously in VRAM.
+
+---
+
+### MA-0104 — R016 measured result: local native-BF16 OLMo 3 32B feasibility
+
+- Entry timestamp: `2026-11-15T16:44:21+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex measured-run and housekeeping record`
+- Entry type: `measured feasibility result, validation and cache reconciliation`
+- Related run: `R016`
+- Model: `allenai/Olmo-3-1125-32B`
+- Model revision: `c2b61dae89a1ad10e4ad5653d0e46b590902607b`
+- Local measured-run commit: `b87fe9ac4a03f2c86265f902162efe12e339d7bf`
+- External publication commit: `6dca74a112cb4f0ce16b0a92f7b8e683c131d28d`
+
+#### Objective and result
+
+R016 tested one bounded question: can the exact native-BF16 OLMo 3 32B Base
+model complete the project's required instrumented first-token-prediction
+workload on the local RTX 4090 system?
+
+The answer is **yes** for one short prompt. The 64-layer model loaded under an
+18 GiB CUDA cap and a 28 GiB CPU-RAM cap, with the remaining modules
+disk-backed. It completed one nine-token forward pass with
+`output_hidden_states=True` and `use_cache=False`. No response token was
+generated.
+
+The returned evidence comprised:
+
+- 65 hidden states of width 5,120;
+- finite values at every captured final-anchor state;
+- finite first-token logits over 100,278 vocabulary entries;
+- a persisted `65 × 5,120` BF16 anchor-state tensor; and
+- a complete successful ten-component manifest.
+
+Measured resource and timing evidence was:
+
+- 28.70 seconds to load the cached model;
+- 60.89 seconds for the instrumented forward pass;
+- 18,650,070,016 peak GPU-allocated bytes;
+- 33,279,561,728 process-RSS bytes after the forward; and
+- 13,023,551,488 physical-RAM bytes still available after the forward.
+
+The persisted tensor was independently reopened, its shape, dtype and finite
+values were revalidated, and all recorded artifact hashes matched.
+
+#### Transport correction and cache reconciliation
+
+Two early download attempts were interrupted because temporary shard files
+appeared not to grow. Later file-size evidence showed that progress had been
+buffered and became visible late. The initial stall classification was
+therefore premature. The successful acquisition used Xet with one worker.
+
+Housekeeping verified the complete pinned snapshot, all 14 weight shards and
+the snapshot index before deleting exactly three redundant `.incomplete`
+fragments. The deletion recovered 8,860,118,492 bytes. No validated model
+weight, capture artifact or project file was deleted; the fragments were
+recoverable transport residue.
+
+#### Interpretation boundary and run identity
+
+R016 establishes local model feasibility only. It does not establish
+multi-prompt throughput, semantic-network quality, layer usefulness or a
+semantic topology for OLMo 3 32B.
+
+Earlier metaanalysis passages used `R016` prospectively when discussing
+possible future topology experiments. Those passages are preserved as
+historical planning, not executed run identities. The actual, frozen R016 is
+`R016_olmo3-32b-local-bf16-feasibility`; its plan, manifest and report define
+what R016 means operationally.

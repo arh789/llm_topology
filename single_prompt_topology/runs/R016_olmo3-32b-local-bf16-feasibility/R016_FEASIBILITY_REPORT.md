@@ -64,7 +64,9 @@ appeared not to grow. Post-attempt file sizes showed that transfer progress had
 been buffered and became visible late; the initial stall classification was
 therefore premature. The successful attempt used Xet with one worker. The
 interrupted attempts left approximately 8.9 GB of redundant incomplete cache
-fragments. They are not model evidence and were deliberately not deleted.
+fragments. They are not model evidence. R016 housekeeping subsequently removed
+the three exact fragments, recovering 8,860,118,492 bytes while preserving all
+14 validated weight shards and the pinned snapshot index.
 
 ## Validation
 

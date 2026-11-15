@@ -280,8 +280,8 @@
       "tracked_by_git": false
     },
     "R016_FEASIBILITY_REPORT.md": {
-      "bytes": 3184,
-      "sha256": "c68f1d0190335d5681fb7e49a2fbd30a0fda40ea79765f52f7a4f00c9358b997"
+      "bytes": 3328,
+      "sha256": "5ea89d389db133980ecec603d575e291bfddbda88518907c39aec7a26da3dd96"
     }
   },
   "attempt_history": [
@@ -311,7 +311,17 @@
     "finding": "Temporary shard file lengths lagged actual transfer progress; the first two attempts were interrupted prematurely rather than proven stalled.",
     "successful_transport": "Xet with one worker",
     "redundant_incomplete_cache_bytes_approximate": 8860118492,
-    "redundant_cache_deleted": false
+    "redundant_cache_deleted": true
+  },
+  "cache_cleanup": {
+    "status": "successful",
+    "completed_at": "2026-11-15T16:44:21+11:00",
+    "deleted_incomplete_files": 3,
+    "deleted_bytes": 8860118492,
+    "remaining_incomplete_files": 0,
+    "validated_snapshot_revision": "c2b61dae89a1ad10e4ad5653d0e46b590902607b",
+    "validated_snapshot_shards_preserved": 14,
+    "snapshot_index_preserved": true
   },
   "interpretation_boundary": "R016 tests local native-BF16 model loading and one instrumented forward pass only; topology construction and semantic interpretation are excluded.",
   "total_seconds": 890.7717384999996
