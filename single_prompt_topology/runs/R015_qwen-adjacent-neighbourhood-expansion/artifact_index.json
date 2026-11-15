@@ -1,0 +1,204 @@
+{
+  "generated_at": "2026-11-15T01:13:11.535016+00:00",
+  "run_id": "R015_qwen-adjacent-neighbourhood-expansion",
+  "manifest_status": "successful",
+  "artifacts": {
+    "chatgpt_community_networks.json": {
+      "bytes": 38134283,
+      "sha256": "e8ddf2d982e263f7df4efb82092cea0c649746c2a8462378894f7aa043925a5a"
+    },
+    "chatgpt_layer_packets.md": {
+      "bytes": 5572803,
+      "sha256": "106566a4a6fa33a822550ae086befd56e12512225de43b13c2be29e377fe0a1e"
+    },
+    "community_edges.csv": {
+      "bytes": 6800561,
+      "sha256": "2f26c2a8a4201843696ec64b613c2408b16522b99a5cb9e47d92de153ceb8580"
+    },
+    "community_nodes.csv": {
+      "bytes": 9123440,
+      "sha256": "04ad3ae52bfdd7bfca0fa5a45980a70b29d19c80bb43c428b4ae52e986423e0f"
+    },
+    "community_transition_evidence.csv": {
+      "bytes": 6770520,
+      "sha256": "86958a2b483c4a13bbf5001ccfd4e65ac5e25283016c6c396da7ce037c2bc7f5"
+    },
+    "cutoffs.csv": {
+      "bytes": 191291,
+      "sha256": "0a31ca4d88f653721328a33302bbbe4d036c113090199ea36ed2b6bd5ebe78db"
+    },
+    "edge_permutation_support.csv.gz": {
+      "bytes": 225257864,
+      "sha256": "d750061a2df067d82d747734166bb181ebb294d4bf5824a8fb46ba1694edbd7f"
+    },
+    "edges.csv.gz": {
+      "bytes": 1159540627,
+      "sha256": "560c8b37e49c9c5845610b2eef0f29427735443554bcf200355cbbf2090d5884"
+    },
+    "manifest.json": {
+      "bytes": 13747,
+      "sha256": "073af6924d6cd79f32d84905d9b33195a47d33630bb82f9a4114bc478a567940"
+    },
+    "network_index.csv": {
+      "bytes": 378199,
+      "sha256": "ce0efe44a46691ac07fa8deb67d6c088ff624249d07edffc2715026e4919e5f2"
+    },
+    "nodes.csv.gz": {
+      "bytes": 273038885,
+      "sha256": "1850670dcbafed5e74aca3f5b9ec438fe04c5cf9dfe3501bcd333de1e69f12b0"
+    },
+    "pairwise_permutation_comparisons.csv": {
+      "bytes": 521263,
+      "sha256": "85650a39a6445eb03ed5b00760bb0158530f277133fbcc56ff4e668e8a885ffc"
+    },
+    "permutation_invariance.csv": {
+      "bytes": 208925,
+      "sha256": "ed16d80b057f97876c8d75e1a5d6b72e07d6622edccb4d2a742eb5992731920a"
+    },
+    "primary_7b_bf16/artifact_hashes.json": {
+      "bytes": 4196,
+      "sha256": "f93ecc4b58303405cd6c3dc711c9f2dc22845ce9558a1e05f88e538f1d93958f"
+    },
+    "primary_7b_bf16/P1_ABC_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "03ab05c769cb3479981cd92799f0ba58b939b451596d6f7ca4b0a09e79ce3f87"
+    },
+    "primary_7b_bf16/P1_ACB_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "202352b364744911f5ce74e720588b14143c446d17f25cdaa9b39ae2e94fac6c"
+    },
+    "primary_7b_bf16/P1_BAC_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "c0bccc117ef640b9ccc914b8bdfbb9155f1a039f69cb9bef4b8fc34f59eb9a62"
+    },
+    "primary_7b_bf16/P1_BCA_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "3363fb0be48884262ff5f29d2e856d874548a692c6dee93ef4ff589557930b71"
+    },
+    "primary_7b_bf16/P1_CAB_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "36cea7c27933b97dd96e4b69bf9276025152f22518e2c2f9754319ad3aaf5a97"
+    },
+    "primary_7b_bf16/P1_CBA_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "04b06c27ac258013b652839c8ed21ac5f7fef4ed0562a1be1ce3978e1225691e"
+    },
+    "primary_7b_bf16/P2_ABC_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "6eb972c946cf815e3defda93edcd207c4c6ae550998c5cec2a1578d76eca3ec6"
+    },
+    "primary_7b_bf16/P2_ACB_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "e5eebf82196fe539ac887d56255aa942592fe6b4052872fbd15431aa0a1e272c"
+    },
+    "primary_7b_bf16/P2_BAC_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "c57ad75b96bd2ef7f054ea47bc6f0a6eb505eaa2edbe2d8565fa0d6ad1af3ab2"
+    },
+    "primary_7b_bf16/P2_BCA_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "21ad313242fb8dba48af8d8b0cd2fa78df472cc1fba0c8c81ad695bae72146f5"
+    },
+    "primary_7b_bf16/P2_CAB_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "43a606a1e692b41007e990428297a46ccd451df7aa5021dd5f461e2777ea4fd8"
+    },
+    "primary_7b_bf16/P2_CBA_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "d5192d0625b8d5382b7b42bc0ef98f2f38d2825d6689a1d74690c345660966ef"
+    },
+    "primary_7b_bf16/P3_ABC_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "9e3a110b5d4d5d5eafd91d5599fd6293a862635594fffddd849c365a2bab92ee"
+    },
+    "primary_7b_bf16/P3_ACB_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "0abb69ec3685cedfdc5aebc452f967c15fc3ca1ce8f64d33ed4c480312937b53"
+    },
+    "primary_7b_bf16/P3_BAC_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "92353a2bd3fb28d448ca7d7ef557001222c23270c648582d78f98454742c6d2a"
+    },
+    "primary_7b_bf16/P3_BCA_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "0c5777212212a37959429033d0211d4831a13ba9ef8a41036654f3d904e60da8"
+    },
+    "primary_7b_bf16/P3_CAB_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "619bb1be48fe3f87be761112e4551c4e6421dd7cf605365f18333c3cfc424091"
+    },
+    "primary_7b_bf16/P3_CBA_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "40b8f534bcb771c16ea0575d910666638d81146efb6c7f8a921ee200176ee0bb"
+    },
+    "primary_7b_bf16/P4_ABC_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "4ceef2771cae2bb424fb9357dabe4b5aff30adc784f5e26214ca90819e7afd6c"
+    },
+    "primary_7b_bf16/P4_ACB_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "0683155f9841d1917e7a0ab6034de9aaccfe151caa9fd49a5eb2358f35ce0d85"
+    },
+    "primary_7b_bf16/P4_BAC_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "b7e0b809d3ad81e81ae6e73e15c65cfbdf2face26530ae05da78fb54cfffafe6"
+    },
+    "primary_7b_bf16/P4_BCA_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "7ddd460f39ae6a97e98d76fff529b6027c5fdebe308091eee470fcf6fb2056df"
+    },
+    "primary_7b_bf16/P4_CAB_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "6f3c6e54ecdf9b620589fd1a786c6683622feb62ed4f93defd25c6e2e2efc71e"
+    },
+    "primary_7b_bf16/P4_CBA_hidden_states.safetensors": {
+      "bytes": 207960,
+      "sha256": "f79097c9a1922594de97f1dd581e702375ab994e606dc63d45aca72928f3c2e3"
+    },
+    "primary_7b_bf16/pairwise_hidden_state_metrics.csv": {
+      "bytes": 152145,
+      "sha256": "7e2f87d56c1e98d66b6f61ab8fbadf684eb750d9a92ab7a9bd908b451367bb9b"
+    },
+    "primary_7b_bf16/permutation_validation.json": {
+      "bytes": 2206,
+      "sha256": "e69e48f770a93e891341cc8bad41ab921e783d7ce318b3f54ab8a96cb90b0c6e"
+    },
+    "primary_7b_bf16/prompt_records.json": {
+      "bytes": 26471,
+      "sha256": "61a50cff2d5e3fcbd7d6cc97ced60b5ac6dfd7c8de53e2e6c3a1062d67734593"
+    },
+    "primary_7b_bf16/run_metadata.json": {
+      "bytes": 2967,
+      "sha256": "b379d40db5fe61bc7397f5db04c0a97d568b6961401cf918b447efcdfc425497"
+    },
+    "primary_7b_bf16/status.json": {
+      "bytes": 289,
+      "sha256": "b86a52db8e34f5e10da08dee97710c340400f10ab4054f4c941e431c175bedb5"
+    },
+    "R015_COMPLETENESS_VERIFICATION.md": {
+      "bytes": 837,
+      "sha256": "6ce89ce21f34f39f3c4e38801933215c825d0bdd774ad11534d165c0a0e870de"
+    },
+    "R015_MEASUREMENT_REPORT.md": {
+      "bytes": 2496,
+      "sha256": "0fbb7f7f3ac17ff56864e258f39d8fb30d9ffb395c3a80d599d73941977a0236"
+    },
+    "state_transitions.csv": {
+      "bytes": 213666,
+      "sha256": "e04dc7b33a7b567c742f4c0f0603fa01a81142ef2e97463a98c2424b920d1dbc"
+    },
+    "tail_tokens.csv.gz": {
+      "bytes": 259327364,
+      "sha256": "d5e976c0aaf4ed6e5c86d515c26a16faa68a429984688ac3e70287b104282bae"
+    },
+    "token_permutation_support.csv.gz": {
+      "bytes": 36499699,
+      "sha256": "bd51c9af23ad3b759402dd9cbe9984cd8a87718636987a82df43f9d08b1f5997"
+    },
+    "vocabulary_scores.safetensors": {
+      "bytes": 422235760,
+      "sha256": "5918408507fc97cde64affc59c552670757aa159b72d534d26c92b3eb7fce38b"
+    }
+  },
+  "excluded_mutable_log": "R015_EXECUTION_LOG.md"
+}

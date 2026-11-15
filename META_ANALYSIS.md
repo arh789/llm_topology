@@ -15297,3 +15297,46 @@ The next bounded operation is to implement those scripts, verify configuration
 and computational equivalence without loading the model, and report readiness
 before starting the 24-prompt run.
 
+### MA-0093 — Codex execution record: R015 measured evidence completed
+
+- Entry timestamp: `2026-11-15T12:13:35+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex`
+- Entry type: `implementation, execution and validation`
+- Related run: `R015_qwen-adjacent-neighbourhood-expansion`
+- Preservation mode: `new execution record`
+
+On the project owner's instruction to proceed, Codex mechanically derived the
+four R015 scripts from R014. Exact source comparison and AST parsing verified
+that only approved run identities and concept strings changed. R014 was preserved.
+The production command was executed with the existing `myenv` Python and cached
+Qwen model, using sensor/apartment/line/sessions and the locked newline anchor.
+
+The manifest records execution from 10:30:29 to 12:13:11 Australia/Sydney on
+2026-11-15 (approximately 102 minutes 42 seconds). All fourteen required
+measurement components passed. All 24 captures are finite and exactly replayable;
+State 00 is identical across prompts.
+
+Observed coverage: 1,392 networks; 1,344 adjacent-state comparisons; 3,480
+within-probe permutation comparisons; 14,796 state-local communities; 10,648,837
+selected token memberships; and 106,488,370 directed exact 10-NN edges.
+An independent post-run check verified all 49 indexed artifact hashes and the
+three frozen coverage totals using CSV records.
+
+Measured order sensitivity persists: minimum membership Jaccard is 0.170059
+(P3_ACB/P3_BAC, State 12, negative); minimum edge Jaccard is 0.044076
+(P3_ACB/P3_BCA, State 09, positive). Terminal six-permutation token cores range
+from 3,073 to 4,638 tokens across probes and sectors. These are structural
+measurements; they do not establish whether the same semantic parents persist.
+
+`chatgpt_community_networks.json`, `chatgpt_layer_packets.md`, community tables,
+transition evidence and permutation-support records are ready for independent
+semantic reconstruction. The next analytical stage is to reconstruct all four
+probes independently, then match their parents and relations, and only then
+compare the completed R015 map with R014. Those semantic stages remain pending.
+
+The source commit is `0dd850d`, with new scripts explicitly recorded as
+uncommitted in the manifest's source status. The execution used those verified
+working files. Implementation, curated output and housekeeping changes remain
+uncommitted at this record; no new commit or push is claimed.
+

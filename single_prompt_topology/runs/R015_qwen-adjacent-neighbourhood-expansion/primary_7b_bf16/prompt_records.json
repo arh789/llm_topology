@@ -1,0 +1,1310 @@
+{
+  "P1_ABC": {
+    "prompt_id": "P1_ABC",
+    "probe_id": "P1",
+    "local_permutation": "ABC",
+    "probe_concept_keys": [
+      "A",
+      "B",
+      "C"
+    ],
+    "probe_concepts": [
+      "sensor",
+      "apartment",
+      "line"
+    ],
+    "concept_key_order": [
+      "A",
+      "B",
+      "C"
+    ],
+    "position_1": "sensor",
+    "position_2": "apartment",
+    "position_3": "line",
+    "raw_prompt": "sensor\napartment\nline\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      29511,
+      198,
+      391,
+      3195,
+      198,
+      1056,
+      198
+    ],
+    "decoded_tokens": [
+      "sensor",
+      "Ċ",
+      "ap",
+      "artment",
+      "Ċ",
+      "line",
+      "Ċ"
+    ],
+    "input_token_count": 7,
+    "capture_index": 6,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P1_ABC_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P1_ACB": {
+    "prompt_id": "P1_ACB",
+    "probe_id": "P1",
+    "local_permutation": "ACB",
+    "probe_concept_keys": [
+      "A",
+      "B",
+      "C"
+    ],
+    "probe_concepts": [
+      "sensor",
+      "apartment",
+      "line"
+    ],
+    "concept_key_order": [
+      "A",
+      "C",
+      "B"
+    ],
+    "position_1": "sensor",
+    "position_2": "line",
+    "position_3": "apartment",
+    "raw_prompt": "sensor\nline\napartment\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      29511,
+      198,
+      1056,
+      198,
+      391,
+      3195,
+      198
+    ],
+    "decoded_tokens": [
+      "sensor",
+      "Ċ",
+      "line",
+      "Ċ",
+      "ap",
+      "artment",
+      "Ċ"
+    ],
+    "input_token_count": 7,
+    "capture_index": 6,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P1_ACB_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P1_BAC": {
+    "prompt_id": "P1_BAC",
+    "probe_id": "P1",
+    "local_permutation": "BAC",
+    "probe_concept_keys": [
+      "A",
+      "B",
+      "C"
+    ],
+    "probe_concepts": [
+      "sensor",
+      "apartment",
+      "line"
+    ],
+    "concept_key_order": [
+      "B",
+      "A",
+      "C"
+    ],
+    "position_1": "apartment",
+    "position_2": "sensor",
+    "position_3": "line",
+    "raw_prompt": "apartment\nsensor\nline\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      391,
+      3195,
+      198,
+      29511,
+      198,
+      1056,
+      198
+    ],
+    "decoded_tokens": [
+      "ap",
+      "artment",
+      "Ċ",
+      "sensor",
+      "Ċ",
+      "line",
+      "Ċ"
+    ],
+    "input_token_count": 7,
+    "capture_index": 6,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P1_BAC_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P1_BCA": {
+    "prompt_id": "P1_BCA",
+    "probe_id": "P1",
+    "local_permutation": "BCA",
+    "probe_concept_keys": [
+      "A",
+      "B",
+      "C"
+    ],
+    "probe_concepts": [
+      "sensor",
+      "apartment",
+      "line"
+    ],
+    "concept_key_order": [
+      "B",
+      "C",
+      "A"
+    ],
+    "position_1": "apartment",
+    "position_2": "line",
+    "position_3": "sensor",
+    "raw_prompt": "apartment\nline\nsensor\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      391,
+      3195,
+      198,
+      1056,
+      198,
+      29511,
+      198
+    ],
+    "decoded_tokens": [
+      "ap",
+      "artment",
+      "Ċ",
+      "line",
+      "Ċ",
+      "sensor",
+      "Ċ"
+    ],
+    "input_token_count": 7,
+    "capture_index": 6,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P1_BCA_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P1_CAB": {
+    "prompt_id": "P1_CAB",
+    "probe_id": "P1",
+    "local_permutation": "CAB",
+    "probe_concept_keys": [
+      "A",
+      "B",
+      "C"
+    ],
+    "probe_concepts": [
+      "sensor",
+      "apartment",
+      "line"
+    ],
+    "concept_key_order": [
+      "C",
+      "A",
+      "B"
+    ],
+    "position_1": "line",
+    "position_2": "sensor",
+    "position_3": "apartment",
+    "raw_prompt": "line\nsensor\napartment\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      1056,
+      198,
+      29511,
+      198,
+      391,
+      3195,
+      198
+    ],
+    "decoded_tokens": [
+      "line",
+      "Ċ",
+      "sensor",
+      "Ċ",
+      "ap",
+      "artment",
+      "Ċ"
+    ],
+    "input_token_count": 7,
+    "capture_index": 6,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P1_CAB_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P1_CBA": {
+    "prompt_id": "P1_CBA",
+    "probe_id": "P1",
+    "local_permutation": "CBA",
+    "probe_concept_keys": [
+      "A",
+      "B",
+      "C"
+    ],
+    "probe_concepts": [
+      "sensor",
+      "apartment",
+      "line"
+    ],
+    "concept_key_order": [
+      "C",
+      "B",
+      "A"
+    ],
+    "position_1": "line",
+    "position_2": "apartment",
+    "position_3": "sensor",
+    "raw_prompt": "line\napartment\nsensor\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      1056,
+      198,
+      391,
+      3195,
+      198,
+      29511,
+      198
+    ],
+    "decoded_tokens": [
+      "line",
+      "Ċ",
+      "ap",
+      "artment",
+      "Ċ",
+      "sensor",
+      "Ċ"
+    ],
+    "input_token_count": 7,
+    "capture_index": 6,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P1_CBA_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P2_ABC": {
+    "prompt_id": "P2_ABC",
+    "probe_id": "P2",
+    "local_permutation": "ABC",
+    "probe_concept_keys": [
+      "A",
+      "B",
+      "D"
+    ],
+    "probe_concepts": [
+      "sensor",
+      "apartment",
+      "sessions"
+    ],
+    "concept_key_order": [
+      "A",
+      "B",
+      "D"
+    ],
+    "position_1": "sensor",
+    "position_2": "apartment",
+    "position_3": "sessions",
+    "raw_prompt": "sensor\napartment\nsessions\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      29511,
+      198,
+      391,
+      3195,
+      198,
+      50964,
+      198
+    ],
+    "decoded_tokens": [
+      "sensor",
+      "Ċ",
+      "ap",
+      "artment",
+      "Ċ",
+      "sessions",
+      "Ċ"
+    ],
+    "input_token_count": 7,
+    "capture_index": 6,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P2_ABC_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P2_ACB": {
+    "prompt_id": "P2_ACB",
+    "probe_id": "P2",
+    "local_permutation": "ACB",
+    "probe_concept_keys": [
+      "A",
+      "B",
+      "D"
+    ],
+    "probe_concepts": [
+      "sensor",
+      "apartment",
+      "sessions"
+    ],
+    "concept_key_order": [
+      "A",
+      "D",
+      "B"
+    ],
+    "position_1": "sensor",
+    "position_2": "sessions",
+    "position_3": "apartment",
+    "raw_prompt": "sensor\nsessions\napartment\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      29511,
+      198,
+      50964,
+      198,
+      391,
+      3195,
+      198
+    ],
+    "decoded_tokens": [
+      "sensor",
+      "Ċ",
+      "sessions",
+      "Ċ",
+      "ap",
+      "artment",
+      "Ċ"
+    ],
+    "input_token_count": 7,
+    "capture_index": 6,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P2_ACB_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P2_BAC": {
+    "prompt_id": "P2_BAC",
+    "probe_id": "P2",
+    "local_permutation": "BAC",
+    "probe_concept_keys": [
+      "A",
+      "B",
+      "D"
+    ],
+    "probe_concepts": [
+      "sensor",
+      "apartment",
+      "sessions"
+    ],
+    "concept_key_order": [
+      "B",
+      "A",
+      "D"
+    ],
+    "position_1": "apartment",
+    "position_2": "sensor",
+    "position_3": "sessions",
+    "raw_prompt": "apartment\nsensor\nsessions\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      391,
+      3195,
+      198,
+      29511,
+      198,
+      50964,
+      198
+    ],
+    "decoded_tokens": [
+      "ap",
+      "artment",
+      "Ċ",
+      "sensor",
+      "Ċ",
+      "sessions",
+      "Ċ"
+    ],
+    "input_token_count": 7,
+    "capture_index": 6,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P2_BAC_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P2_BCA": {
+    "prompt_id": "P2_BCA",
+    "probe_id": "P2",
+    "local_permutation": "BCA",
+    "probe_concept_keys": [
+      "A",
+      "B",
+      "D"
+    ],
+    "probe_concepts": [
+      "sensor",
+      "apartment",
+      "sessions"
+    ],
+    "concept_key_order": [
+      "B",
+      "D",
+      "A"
+    ],
+    "position_1": "apartment",
+    "position_2": "sessions",
+    "position_3": "sensor",
+    "raw_prompt": "apartment\nsessions\nsensor\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      391,
+      3195,
+      198,
+      50964,
+      198,
+      29511,
+      198
+    ],
+    "decoded_tokens": [
+      "ap",
+      "artment",
+      "Ċ",
+      "sessions",
+      "Ċ",
+      "sensor",
+      "Ċ"
+    ],
+    "input_token_count": 7,
+    "capture_index": 6,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P2_BCA_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P2_CAB": {
+    "prompt_id": "P2_CAB",
+    "probe_id": "P2",
+    "local_permutation": "CAB",
+    "probe_concept_keys": [
+      "A",
+      "B",
+      "D"
+    ],
+    "probe_concepts": [
+      "sensor",
+      "apartment",
+      "sessions"
+    ],
+    "concept_key_order": [
+      "D",
+      "A",
+      "B"
+    ],
+    "position_1": "sessions",
+    "position_2": "sensor",
+    "position_3": "apartment",
+    "raw_prompt": "sessions\nsensor\napartment\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      50964,
+      198,
+      29511,
+      198,
+      391,
+      3195,
+      198
+    ],
+    "decoded_tokens": [
+      "sessions",
+      "Ċ",
+      "sensor",
+      "Ċ",
+      "ap",
+      "artment",
+      "Ċ"
+    ],
+    "input_token_count": 7,
+    "capture_index": 6,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P2_CAB_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P2_CBA": {
+    "prompt_id": "P2_CBA",
+    "probe_id": "P2",
+    "local_permutation": "CBA",
+    "probe_concept_keys": [
+      "A",
+      "B",
+      "D"
+    ],
+    "probe_concepts": [
+      "sensor",
+      "apartment",
+      "sessions"
+    ],
+    "concept_key_order": [
+      "D",
+      "B",
+      "A"
+    ],
+    "position_1": "sessions",
+    "position_2": "apartment",
+    "position_3": "sensor",
+    "raw_prompt": "sessions\napartment\nsensor\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      50964,
+      198,
+      391,
+      3195,
+      198,
+      29511,
+      198
+    ],
+    "decoded_tokens": [
+      "sessions",
+      "Ċ",
+      "ap",
+      "artment",
+      "Ċ",
+      "sensor",
+      "Ċ"
+    ],
+    "input_token_count": 7,
+    "capture_index": 6,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P2_CBA_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P3_ABC": {
+    "prompt_id": "P3_ABC",
+    "probe_id": "P3",
+    "local_permutation": "ABC",
+    "probe_concept_keys": [
+      "A",
+      "C",
+      "D"
+    ],
+    "probe_concepts": [
+      "sensor",
+      "line",
+      "sessions"
+    ],
+    "concept_key_order": [
+      "A",
+      "C",
+      "D"
+    ],
+    "position_1": "sensor",
+    "position_2": "line",
+    "position_3": "sessions",
+    "raw_prompt": "sensor\nline\nsessions\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      29511,
+      198,
+      1056,
+      198,
+      50964,
+      198
+    ],
+    "decoded_tokens": [
+      "sensor",
+      "Ċ",
+      "line",
+      "Ċ",
+      "sessions",
+      "Ċ"
+    ],
+    "input_token_count": 6,
+    "capture_index": 5,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P3_ABC_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P3_ACB": {
+    "prompt_id": "P3_ACB",
+    "probe_id": "P3",
+    "local_permutation": "ACB",
+    "probe_concept_keys": [
+      "A",
+      "C",
+      "D"
+    ],
+    "probe_concepts": [
+      "sensor",
+      "line",
+      "sessions"
+    ],
+    "concept_key_order": [
+      "A",
+      "D",
+      "C"
+    ],
+    "position_1": "sensor",
+    "position_2": "sessions",
+    "position_3": "line",
+    "raw_prompt": "sensor\nsessions\nline\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      29511,
+      198,
+      50964,
+      198,
+      1056,
+      198
+    ],
+    "decoded_tokens": [
+      "sensor",
+      "Ċ",
+      "sessions",
+      "Ċ",
+      "line",
+      "Ċ"
+    ],
+    "input_token_count": 6,
+    "capture_index": 5,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P3_ACB_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P3_BAC": {
+    "prompt_id": "P3_BAC",
+    "probe_id": "P3",
+    "local_permutation": "BAC",
+    "probe_concept_keys": [
+      "A",
+      "C",
+      "D"
+    ],
+    "probe_concepts": [
+      "sensor",
+      "line",
+      "sessions"
+    ],
+    "concept_key_order": [
+      "C",
+      "A",
+      "D"
+    ],
+    "position_1": "line",
+    "position_2": "sensor",
+    "position_3": "sessions",
+    "raw_prompt": "line\nsensor\nsessions\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      1056,
+      198,
+      29511,
+      198,
+      50964,
+      198
+    ],
+    "decoded_tokens": [
+      "line",
+      "Ċ",
+      "sensor",
+      "Ċ",
+      "sessions",
+      "Ċ"
+    ],
+    "input_token_count": 6,
+    "capture_index": 5,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P3_BAC_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P3_BCA": {
+    "prompt_id": "P3_BCA",
+    "probe_id": "P3",
+    "local_permutation": "BCA",
+    "probe_concept_keys": [
+      "A",
+      "C",
+      "D"
+    ],
+    "probe_concepts": [
+      "sensor",
+      "line",
+      "sessions"
+    ],
+    "concept_key_order": [
+      "C",
+      "D",
+      "A"
+    ],
+    "position_1": "line",
+    "position_2": "sessions",
+    "position_3": "sensor",
+    "raw_prompt": "line\nsessions\nsensor\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      1056,
+      198,
+      50964,
+      198,
+      29511,
+      198
+    ],
+    "decoded_tokens": [
+      "line",
+      "Ċ",
+      "sessions",
+      "Ċ",
+      "sensor",
+      "Ċ"
+    ],
+    "input_token_count": 6,
+    "capture_index": 5,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P3_BCA_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P3_CAB": {
+    "prompt_id": "P3_CAB",
+    "probe_id": "P3",
+    "local_permutation": "CAB",
+    "probe_concept_keys": [
+      "A",
+      "C",
+      "D"
+    ],
+    "probe_concepts": [
+      "sensor",
+      "line",
+      "sessions"
+    ],
+    "concept_key_order": [
+      "D",
+      "A",
+      "C"
+    ],
+    "position_1": "sessions",
+    "position_2": "sensor",
+    "position_3": "line",
+    "raw_prompt": "sessions\nsensor\nline\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      50964,
+      198,
+      29511,
+      198,
+      1056,
+      198
+    ],
+    "decoded_tokens": [
+      "sessions",
+      "Ċ",
+      "sensor",
+      "Ċ",
+      "line",
+      "Ċ"
+    ],
+    "input_token_count": 6,
+    "capture_index": 5,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P3_CAB_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P3_CBA": {
+    "prompt_id": "P3_CBA",
+    "probe_id": "P3",
+    "local_permutation": "CBA",
+    "probe_concept_keys": [
+      "A",
+      "C",
+      "D"
+    ],
+    "probe_concepts": [
+      "sensor",
+      "line",
+      "sessions"
+    ],
+    "concept_key_order": [
+      "D",
+      "C",
+      "A"
+    ],
+    "position_1": "sessions",
+    "position_2": "line",
+    "position_3": "sensor",
+    "raw_prompt": "sessions\nline\nsensor\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      50964,
+      198,
+      1056,
+      198,
+      29511,
+      198
+    ],
+    "decoded_tokens": [
+      "sessions",
+      "Ċ",
+      "line",
+      "Ċ",
+      "sensor",
+      "Ċ"
+    ],
+    "input_token_count": 6,
+    "capture_index": 5,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P3_CBA_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P4_ABC": {
+    "prompt_id": "P4_ABC",
+    "probe_id": "P4",
+    "local_permutation": "ABC",
+    "probe_concept_keys": [
+      "B",
+      "C",
+      "D"
+    ],
+    "probe_concepts": [
+      "apartment",
+      "line",
+      "sessions"
+    ],
+    "concept_key_order": [
+      "B",
+      "C",
+      "D"
+    ],
+    "position_1": "apartment",
+    "position_2": "line",
+    "position_3": "sessions",
+    "raw_prompt": "apartment\nline\nsessions\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      391,
+      3195,
+      198,
+      1056,
+      198,
+      50964,
+      198
+    ],
+    "decoded_tokens": [
+      "ap",
+      "artment",
+      "Ċ",
+      "line",
+      "Ċ",
+      "sessions",
+      "Ċ"
+    ],
+    "input_token_count": 7,
+    "capture_index": 6,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P4_ABC_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P4_ACB": {
+    "prompt_id": "P4_ACB",
+    "probe_id": "P4",
+    "local_permutation": "ACB",
+    "probe_concept_keys": [
+      "B",
+      "C",
+      "D"
+    ],
+    "probe_concepts": [
+      "apartment",
+      "line",
+      "sessions"
+    ],
+    "concept_key_order": [
+      "B",
+      "D",
+      "C"
+    ],
+    "position_1": "apartment",
+    "position_2": "sessions",
+    "position_3": "line",
+    "raw_prompt": "apartment\nsessions\nline\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      391,
+      3195,
+      198,
+      50964,
+      198,
+      1056,
+      198
+    ],
+    "decoded_tokens": [
+      "ap",
+      "artment",
+      "Ċ",
+      "sessions",
+      "Ċ",
+      "line",
+      "Ċ"
+    ],
+    "input_token_count": 7,
+    "capture_index": 6,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P4_ACB_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P4_BAC": {
+    "prompt_id": "P4_BAC",
+    "probe_id": "P4",
+    "local_permutation": "BAC",
+    "probe_concept_keys": [
+      "B",
+      "C",
+      "D"
+    ],
+    "probe_concepts": [
+      "apartment",
+      "line",
+      "sessions"
+    ],
+    "concept_key_order": [
+      "C",
+      "B",
+      "D"
+    ],
+    "position_1": "line",
+    "position_2": "apartment",
+    "position_3": "sessions",
+    "raw_prompt": "line\napartment\nsessions\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      1056,
+      198,
+      391,
+      3195,
+      198,
+      50964,
+      198
+    ],
+    "decoded_tokens": [
+      "line",
+      "Ċ",
+      "ap",
+      "artment",
+      "Ċ",
+      "sessions",
+      "Ċ"
+    ],
+    "input_token_count": 7,
+    "capture_index": 6,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P4_BAC_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P4_BCA": {
+    "prompt_id": "P4_BCA",
+    "probe_id": "P4",
+    "local_permutation": "BCA",
+    "probe_concept_keys": [
+      "B",
+      "C",
+      "D"
+    ],
+    "probe_concepts": [
+      "apartment",
+      "line",
+      "sessions"
+    ],
+    "concept_key_order": [
+      "C",
+      "D",
+      "B"
+    ],
+    "position_1": "line",
+    "position_2": "sessions",
+    "position_3": "apartment",
+    "raw_prompt": "line\nsessions\napartment\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      1056,
+      198,
+      50964,
+      198,
+      391,
+      3195,
+      198
+    ],
+    "decoded_tokens": [
+      "line",
+      "Ċ",
+      "sessions",
+      "Ċ",
+      "ap",
+      "artment",
+      "Ċ"
+    ],
+    "input_token_count": 7,
+    "capture_index": 6,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P4_BCA_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P4_CAB": {
+    "prompt_id": "P4_CAB",
+    "probe_id": "P4",
+    "local_permutation": "CAB",
+    "probe_concept_keys": [
+      "B",
+      "C",
+      "D"
+    ],
+    "probe_concepts": [
+      "apartment",
+      "line",
+      "sessions"
+    ],
+    "concept_key_order": [
+      "D",
+      "B",
+      "C"
+    ],
+    "position_1": "sessions",
+    "position_2": "apartment",
+    "position_3": "line",
+    "raw_prompt": "sessions\napartment\nline\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      50964,
+      198,
+      391,
+      3195,
+      198,
+      1056,
+      198
+    ],
+    "decoded_tokens": [
+      "sessions",
+      "Ċ",
+      "ap",
+      "artment",
+      "Ċ",
+      "line",
+      "Ċ"
+    ],
+    "input_token_count": 7,
+    "capture_index": 6,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P4_CAB_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  },
+  "P4_CBA": {
+    "prompt_id": "P4_CBA",
+    "probe_id": "P4",
+    "local_permutation": "CBA",
+    "probe_concept_keys": [
+      "B",
+      "C",
+      "D"
+    ],
+    "probe_concepts": [
+      "apartment",
+      "line",
+      "sessions"
+    ],
+    "concept_key_order": [
+      "D",
+      "C",
+      "B"
+    ],
+    "position_1": "sessions",
+    "position_2": "line",
+    "position_3": "apartment",
+    "raw_prompt": "sessions\nline\napartment\n",
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "input_ids": [
+      50964,
+      198,
+      1056,
+      198,
+      391,
+      3195,
+      198
+    ],
+    "decoded_tokens": [
+      "sessions",
+      "Ċ",
+      "line",
+      "Ċ",
+      "ap",
+      "artment",
+      "Ċ"
+    ],
+    "input_token_count": 7,
+    "capture_index": 6,
+    "capture_token_id": 198,
+    "capture_token": "Ċ",
+    "trajectory_file": "P4_CBA_hidden_states.safetensors",
+    "trajectory_shape": [
+      29,
+      3584
+    ],
+    "trajectory_dtype": "torch.bfloat16",
+    "deterministic_replay_exact": true
+  }
+}

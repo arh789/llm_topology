@@ -1,0 +1,114 @@
+{
+  "P1_ABC_hidden_states.safetensors": {
+    "bytes": 207960,
+    "sha256": "03ab05c769cb3479981cd92799f0ba58b939b451596d6f7ca4b0a09e79ce3f87"
+  },
+  "P1_ACB_hidden_states.safetensors": {
+    "bytes": 207960,
+    "sha256": "202352b364744911f5ce74e720588b14143c446d17f25cdaa9b39ae2e94fac6c"
+  },
+  "P1_BAC_hidden_states.safetensors": {
+    "bytes": 207960,
+    "sha256": "c0bccc117ef640b9ccc914b8bdfbb9155f1a039f69cb9bef4b8fc34f59eb9a62"
+  },
+  "P1_BCA_hidden_states.safetensors": {
+    "bytes": 207960,
+    "sha256": "3363fb0be48884262ff5f29d2e856d874548a692c6dee93ef4ff589557930b71"
+  },
+  "P1_CAB_hidden_states.safetensors": {
+    "bytes": 207960,
+    "sha256": "36cea7c27933b97dd96e4b69bf9276025152f22518e2c2f9754319ad3aaf5a97"
+  },
+  "P1_CBA_hidden_states.safetensors": {
+    "bytes": 207960,
+    "sha256": "04b06c27ac258013b652839c8ed21ac5f7fef4ed0562a1be1ce3978e1225691e"
+  },
+  "P2_ABC_hidden_states.safetensors": {
+    "bytes": 207960,
+    "sha256": "6eb972c946cf815e3defda93edcd207c4c6ae550998c5cec2a1578d76eca3ec6"
+  },
+  "P2_ACB_hidden_states.safetensors": {
+    "bytes": 207960,
+    "sha256": "e5eebf82196fe539ac887d56255aa942592fe6b4052872fbd15431aa0a1e272c"
+  },
+  "P2_BAC_hidden_states.safetensors": {
+    "bytes": 207960,
+    "sha256": "c57ad75b96bd2ef7f054ea47bc6f0a6eb505eaa2edbe2d8565fa0d6ad1af3ab2"
+  },
+  "P2_BCA_hidden_states.safetensors": {
+    "bytes": 207960,
+    "sha256": "21ad313242fb8dba48af8d8b0cd2fa78df472cc1fba0c8c81ad695bae72146f5"
+  },
+  "P2_CAB_hidden_states.safetensors": {
+    "bytes": 207960,
+    "sha256": "43a606a1e692b41007e990428297a46ccd451df7aa5021dd5f461e2777ea4fd8"
+  },
+  "P2_CBA_hidden_states.safetensors": {
+    "bytes": 207960,
+    "sha256": "d5192d0625b8d5382b7b42bc0ef98f2f38d2825d6689a1d74690c345660966ef"
+  },
+  "P3_ABC_hidden_states.safetensors": {
+    "bytes": 207960,
+    "sha256": "9e3a110b5d4d5d5eafd91d5599fd6293a862635594fffddd849c365a2bab92ee"
+  },
+  "P3_ACB_hidden_states.safetensors": {
+    "bytes": 207960,
+    "sha256": "0abb69ec3685cedfdc5aebc452f967c15fc3ca1ce8f64d33ed4c480312937b53"
+  },
+  "P3_BAC_hidden_states.safetensors": {
+    "bytes": 207960,
+    "sha256": "92353a2bd3fb28d448ca7d7ef557001222c23270c648582d78f98454742c6d2a"
+  },
+  "P3_BCA_hidden_states.safetensors": {
+    "bytes": 207960,
+    "sha256": "0c5777212212a37959429033d0211d4831a13ba9ef8a41036654f3d904e60da8"
+  },
+  "P3_CAB_hidden_states.safetensors": {
+    "bytes": 207960,
+    "sha256": "619bb1be48fe3f87be761112e4551c4e6421dd7cf605365f18333c3cfc424091"
+  },
+  "P3_CBA_hidden_states.safetensors": {
+    "bytes": 207960,
+    "sha256": "40b8f534bcb771c16ea0575d910666638d81146efb6c7f8a921ee200176ee0bb"
+  },
+  "P4_ABC_hidden_states.safetensors": {
+    "bytes": 207960,
+    "sha256": "4ceef2771cae2bb424fb9357dabe4b5aff30adc784f5e26214ca90819e7afd6c"
+  },
+  "P4_ACB_hidden_states.safetensors": {
+    "bytes": 207960,
+    "sha256": "0683155f9841d1917e7a0ab6034de9aaccfe151caa9fd49a5eb2358f35ce0d85"
+  },
+  "P4_BAC_hidden_states.safetensors": {
+    "bytes": 207960,
+    "sha256": "b7e0b809d3ad81e81ae6e73e15c65cfbdf2face26530ae05da78fb54cfffafe6"
+  },
+  "P4_BCA_hidden_states.safetensors": {
+    "bytes": 207960,
+    "sha256": "7ddd460f39ae6a97e98d76fff529b6027c5fdebe308091eee470fcf6fb2056df"
+  },
+  "P4_CAB_hidden_states.safetensors": {
+    "bytes": 207960,
+    "sha256": "6f3c6e54ecdf9b620589fd1a786c6683622feb62ed4f93defd25c6e2e2efc71e"
+  },
+  "P4_CBA_hidden_states.safetensors": {
+    "bytes": 207960,
+    "sha256": "f79097c9a1922594de97f1dd581e702375ab994e606dc63d45aca72928f3c2e3"
+  },
+  "pairwise_hidden_state_metrics.csv": {
+    "bytes": 152145,
+    "sha256": "7e2f87d56c1e98d66b6f61ab8fbadf684eb750d9a92ab7a9bd908b451367bb9b"
+  },
+  "permutation_validation.json": {
+    "bytes": 2206,
+    "sha256": "e69e48f770a93e891341cc8bad41ab921e783d7ce318b3f54ab8a96cb90b0c6e"
+  },
+  "prompt_records.json": {
+    "bytes": 26471,
+    "sha256": "61a50cff2d5e3fcbd7d6cc97ced60b5ac6dfd7c8de53e2e6c3a1062d67734593"
+  },
+  "run_metadata.json": {
+    "bytes": 2967,
+    "sha256": "b379d40db5fe61bc7397f5db04c0a97d568b6961401cf918b447efcdfc425497"
+  }
+}
