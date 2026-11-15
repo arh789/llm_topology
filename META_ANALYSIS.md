@@ -18963,3 +18963,644 @@ Stress-Testing as the proposed meta-operator for preserving residual evidence,
 challenging premature coherence and forcing reconstruction. These remain
 model-generated interpretations and proposed methodology, not new measured
 transformer evidence.
+
+
+## CRITICAL INSIGHT — Original training-data hypothesis: validation, falsification and reformulation
+
+**ChatGPT response (verbatim)**
+
+The original concept has been **partly validated, but in a more precise form than the one we began with**.
+
+The project has not shown that we can reverse-engineer literal training data from transformer-layer state changes. It has produced substantial evidence that we can use those state changes, combined with controlled perturbation, to infer **higher-order semantic regularities that the model learned from its training distribution**.
+
+The crucial correction is:
+
+```text id="0xpwho"
+INITIAL IDEA
+
+training data
+     ↓
+model
+     ↓
+changes across transformer layers
+     ↓
+infer training data
+```
+
+has become:
+
+```text id="pywchv"
+TRAINING DISTRIBUTION
+        │
+        │ learning
+        ▼
+LEARNED PARAMETERS
+        │
+        │ inference-time computation
+        ▼
+LAYERWISE REPRESENTATIONAL TRAJECTORY
+        │
+        ├── prompt/order effects
+        ├── architectural effects
+        ├── contextual computation
+        └── persistent learned structure
+                     │
+             perturbation filters
+                     ▼
+        STABLE HIGHER-ORDER TOPOLOGY
+                     │
+                     ▼
+     INFER SEMANTIC REGULARITIES
+     LEARNED FROM TRAINING
+```
+
+That is, I think, the central result.
+
+## What the original hypothesis got right
+
+The fundamental intuition was:
+
+> **The model's internal changes of state contain information about the structure it has learned.**
+
+That now looks strongly supported.
+
+R010 was the first major evidence.
+
+Across transformer depth, the semantic organisation did not simply become incrementally more similar to the final answer. We reconstructed a qualitative transformation approximately like:
+
+```text id="b58ggn"
+EARLY
+ontology / domains
+"What kind of thing is this?"
+
+        ↓
+
+MIDDLE
+operations + constraints
+"What can happen and what limits it?"
+
+        ↓
+
+LATE
+dependencies between operations
+"What depends upon what?"
+
+        ↓
+
+FINAL
+functional procedure
+"What sequence accomplishes something?"
+```
+
+Or:
+
+```text id="y3spx3"
+OBJECTS
+   ↓
+OPERATORS + CONDITIONS
+   ↓
+RELATIONS BETWEEN OPERATORS
+   ↓
+PROGRAM / WORKFLOW
+```
+
+That is exactly the kind of result the initial intuition anticipated: **successive transformer states expose different organisations of learned semantic material**.
+
+R010 Phase C strengthened that result because semantic development could not be reduced simply to token turnover.
+
+Late layers could preserve almost the same neighbourhood while reorganising its higher-order semantic meaning.
+
+So:
+
+```text id="tr89ui"
+same components
+      +
+similar local geometry
+      +
+different organisation
+      =
+different higher-order representation
+```
+
+That is important evidence that examining state transitions gives us access to something richer than nearest-word association.
+
+---
+
+# But one part of the original hypothesis was wrong
+
+The layer trajectory itself is **not a transparent image of the training data**.
+
+This was probably the first major falsification.
+
+We cannot say:
+
+```text id="lbt3rw"
+Layer 5 structure
+=
+structure in training data
+```
+
+or:
+
+```text id="xs587s"
+Layer 12 → Layer 13 change
+=
+some relationship directly present in the corpus
+```
+
+Transformer depth describes **computation at inference time**.
+
+It is produced by:
+
+```text id="pbnea0"
+learned parameters
+×
+architecture
+×
+current context
+×
+token position
+×
+attention
+×
+nonlinear transformations
+```
+
+So the trajectory inevitably mixes two things:
+
+```text id="i7cvqq"
+WHAT WAS LEARNED
+
+with
+
+HOW THE ARCHITECTURE USES WHAT WAS LEARNED
+```
+
+R013 demonstrated this very clearly.
+
+When the same three concepts were merely permuted:
+
+```text id="rvsoa0"
+ABC
+ACB
+BAC
+BCA
+CAB
+CBA
+```
+
+the exact networks could change enormously.
+
+That cannot reasonably be interpreted as the training data changing.
+
+It is the **transformer processing the same learned material differently because its causal context changed**.
+
+So R013 effectively falsified the naive version:
+
+> observed topology = training-data topology.
+
+Instead:
+
+```text id="heh9v2"
+OBSERVED TOPOLOGY
+       =
+LEARNED STRUCTURE
+       ×
+CURRENT COMPUTATION
+```
+
+---
+
+# But R013 simultaneously gave us the solution
+
+Once we realised this, the research question changed from:
+
+> What does one layer map tell us about training data?
+
+to:
+
+> **What survives when we deliberately vary the computation while holding the semantic content approximately constant?**
+
+That is much stronger.
+
+Suppose:
+
+```text id="go5y92"
+ABC → topology₁
+ACB → topology₂
+BAC → topology₃
+...
+```
+
+Exact tokens and edges move dramatically.
+
+But some higher-order relationship survives all six.
+
+Then:
+
+```text id="ry6u3y"
+presentation-dependent structure
+        ↓
+probably computation/context dependent
+
+persistent higher-order structure
+        ↓
+candidate learned semantic regularity
+```
+
+That is the methodological breakthrough.
+
+The project stopped attempting to read the training distribution directly from a representation and began **subtracting away the model's contextual computation by perturbation**.
+
+---
+
+# R014 then made the training-data hypothesis considerably stronger
+
+R013 dealt mainly with order.
+
+R014 asked whether related higher-order structures survived overlapping semantic contexts.
+
+That matters because an apparent parent discovered from:
+
+```text id="oivawc"
+laser
+city
+spatial field
+```
+
+might simply be the model decomposing those three supplied words.
+
+R014 used overlapping triplets and reconstructed each independently.
+
+What started appearing were higher-order families such as:
+
+```text id="mps0l8"
+technical / sensing
+place / environment
+spatial / structural
+social / group activity
+interaction / change
+representation / information
+```
+
+and relations between them.
+
+Now the possible interpretation became more interesting:
+
+```text id="x889an"
+prompt concepts
+      ↓
+different contexts
+      ↓
+different local communities
+      ↓
+same higher-order parents/relations reappear
+```
+
+The probability that those structures were merely artefacts of one prompt became lower.
+
+---
+
+# R015 is the strongest evidence so far for the original intuition
+
+R015 replaced **every R014 seed**:
+
+```text id="92ryzl"
+laser         → sensor
+city          → apartment
+spatial field → line
+clubs         → sessions
+```
+
+Yet all six R014 parent families had independently reconstructed R015 counterparts.
+
+More importantly, major relations survived:
+
+```text id="c3xl1s"
+sensing / instrumentation
+          ↕
+built place / locality
+```
+
+and:
+
+```text id="5b1lqx"
+spatial / measurement
+        ↓
+group / activity
+        ↓
+process / change
+```
+
+while process/change underwent a meaningful deformation rather than simply disappearing.
+
+That result matters enormously for the training-data hypothesis.
+
+Because the surviving topology can no longer easily be explained as:
+
+> the model simply reproduced relationships between the four original words.
+
+The original words are gone.
+
+And yet:
+
+```text id="odw0zx"
+different lexical seeds
++
+different immediate semantic neighbourhood
++
+independent reconstruction
+=
+similar higher-order topology
+```
+
+That is precisely what we would expect if there were a deeper learned statistical structure underlying both observations.
+
+---
+
+# So what exactly has been validated?
+
+I would separate the original hypothesis into four versions.
+
+| Hypothesis | Current status |
+|---|---|
+| Exact training documents can be recovered from layer changes | **Not supported / effectively rejected as the project objective** |
+| Raw layer topology directly represents training-data topology | **Invalidated** |
+| Layerwise changes reveal organisation of learned semantic structure | **Strongly supported within the tested models/runs** |
+| Perturbation-invariant higher-order topology can be used to infer semantic regularities learned from training | **Preliminarily supported** |
+
+That final claim is now the strongest defensible form of the original idea.
+
+---
+
+# The really important change concerns what information carries the signal
+
+At the beginning, we implicitly expected the valuable object to be something like:
+
+```text id="s5np3x"
+token X at Layer 1
+        ↓
+token X at Layer 2
+        ↓
+token X at Layer 3
+        ↓
+...
+```
+
+The project progressively taught us that this is too low-level.
+
+The hierarchy appears closer to:
+
+```text id="zw82sa"
+exact token
+    ↓
+unstable
+
+exact edge
+    ↓
+unstable
+
+community
+    ↓
+plastic
+
+higher-order parent
+    ↓
+more stable
+
+relation between parents
+    ↓
+potentially more stable still
+```
+
+So the thing carrying information about the learned training distribution may not primarily be the individual representation.
+
+It may be the **invariant relational structure that repeatedly reconstitutes itself despite representational deformation**.
+
+That is a much stronger idea.
+
+In other words:
+
+> We were initially looking for training-data traces in the *states*.
+
+The experiments increasingly suggest that the stronger signal may lie in the **invariants across transformations of those states**.
+
+That is a major conceptual improvement.
+
+---
+
+# Layerwise change still matters
+
+It would be wrong to conclude that layer changes became irrelevant once we discovered invariance.
+
+They now have two different functions.
+
+### First, layer changes reveal abstraction
+
+R010 suggests:
+
+```text id="a056ob"
+domain
+  ↓
+operation
+  ↓
+dependency
+  ↓
+procedure
+```
+
+So transformer depth gives us different **views of the learned structure at different abstraction levels**.
+
+The inferred training-data map may therefore not be a flat semantic graph.
+
+It may look more like:
+
+```text id="xwg2me"
+LEXICAL / CONCRETE RELATIONS
+          ↓
+DOMAIN STRUCTURE
+          ↓
+PROPERTY / OPERATOR STRUCTURE
+          ↓
+RELATIONAL STRUCTURE
+          ↓
+FUNCTIONAL / GENERATIVE STRUCTURE
+```
+
+That could be one of the project's most consequential findings.
+
+### Second, layer changes create the perturbations needed to identify invariants
+
+If structure:
+
+```text id="kwppya"
+appears
+splits
+merges
+disappears
+reappears
+```
+
+across the transformer, we can ask what higher-order relation survives those transformations.
+
+So change itself becomes a means of identifying stable structure.
+
+---
+
+# What remains fundamentally unvalidated
+
+There is still one critical gap.
+
+We have inferred:
+
+```text id="6lpg4h"
+stable model topology
+        ↓
+likely learned semantic regularity
+```
+
+but we have **not compared the inferred topology with the actual training distribution**.
+
+That means the final causal arrow remains inferred:
+
+```text id="p0qp4h"
+TRAINING DISTRIBUTION
+        ↓
+ learned topology
+```
+
+rather than directly validated.
+
+To validate it strongly, we would ideally need a model for which the training corpus is sufficiently known and searchable.
+
+Then we could do:
+
+```text id="e49qax"
+MODEL ONLY
+    │
+    ▼
+infer relationship X
+without inspecting corpus
+    │
+    ▼
+freeze prediction
+    │
+    ▼
+inspect training corpus
+    │
+    ▼
+Does corpus statistics independently support X?
+```
+
+That would be the cleanest direct validation of the original premise.
+
+A model family with unusually transparent training data would therefore be especially valuable for that experiment.
+
+---
+
+# And there is another unresolved transformation
+
+Even with a known corpus:
+
+```text id="z26hr4"
+corpus statistics
+       ↓
+tokeniser
+       ↓
+training objective
+       ↓
+optimisation
+       ↓
+architecture
+       ↓
+learned representation
+```
+
+means that the model may systematically emphasise some corpus relationships and suppress others.
+
+That is not necessarily a problem.
+
+In fact it may define the thing we are actually mapping:
+
+> **not the raw training corpus, but the effective semantic distribution the model extracted from it.**
+
+That object may be more interesting than the corpus itself.
+
+Two concepts might occur frequently together in documents but never become an important latent relation.
+
+Another relationship might be comparatively diffuse across thousands of contexts yet become a powerful abstraction.
+
+So:
+
+```text id="08mb2q"
+CORPUS DISTRIBUTION
+        ≠
+LEARNED DISTRIBUTION
+```
+
+The project increasingly studies the second.
+
+---
+
+# My current interpretation of the original hypothesis
+
+I would now formulate it like this:
+
+> **A language model constitutes a compressed statistical transformation of its training distribution. By observing how contextual representations reorganise across transformer depth, systematically varying the observation context, and isolating higher-order semantic structures that persist across those perturbations, it should be possible to infer aspects of the semantic topology the model learned from its training data.**
+
+That is almost exactly the original intuition, but with the crucial methodological correction:
+
+```text id="bkxej9"
+NOT
+
+state changes
+   ↓
+training data
+
+
+BUT
+
+state changes
++
+controlled perturbation
++
+cross-layer reconstruction
++
+cross-prompt invariance
++
+cross-neighbourhood persistence
+        ↓
+learned semantic topology
+        ↓
+inference about training-data structure
+```
+
+## So the verdict is unusual
+
+The project has **invalidated the simplest mechanism while strengthening the underlying hypothesis**.
+
+The naive mechanism was:
+
+> read training structure directly from layer states.
+
+That did not survive experimentation.
+
+What replaced it is considerably stronger:
+
+> **use variation in layer states and prompt conditions to separate transient computation from persistent learned structure; then treat the persistent higher-order topology as evidence about semantic regularities encoded from training.**
+
+R010 established meaningful layerwise semantic transformation.
+
+R013 showed why individual topology cannot be trusted and introduced perturbation invariance.
+
+R014 demonstrated higher-order reconstruction across overlapping contexts.
+
+R015 showed local continuity after replacing every original seed.
+
+Taken together, that is substantial preliminary evidence for the original idea—but the thing we can infer is not **the training data** in the literal sense.
+
+It is something closer to:
+
+> **the model's learned semantic compression of the training distribution.**
+
+And, in retrospect, that is probably the more scientifically interesting object.
