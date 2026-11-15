@@ -6,19 +6,28 @@ representation geometry.
 
 ## Current evidence state
 
-R015 measurement is complete for the adjacent sensor/apartment/line/sessions
-region: 24 prompts, 1,392 networks, 14,796 communities, 1,344 transitions and
-3,480 permutation comparisons. All fourteen manifest components and 49 indexed
-artifact hashes passed verification. See
-`single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/R015_MEASUREMENT_REPORT.md`.
-Independent probe reconstruction and the R014 comparison remain pending.
+R015 measurement and downstream semantic reconstruction are complete for the
+adjacent sensor/apartment/line/sessions region: 24 prompts, 1,392 networks,
+14,796 communities, 1,344 transitions and 3,480 permutation comparisons. All
+fourteen manifest components and 49 indexed artifact hashes passed
+verification. Independent P1–P4 reconstruction, the R015 semantic map and the
+R014–R015 comparison are now curated project evidence.
+
+R016 then tested whether the exact native-BF16 `allenai/Olmo-3-1125-32B` base
+model could serve as a larger local measurement instrument. The pinned
+64-layer model completed one nine-token, no-generation instrumented forward
+pass using mixed GPU, CPU and disk-backed placement. All 65 hidden states of
+width 5,120 and the complete first-token logits were finite. This establishes
+local single-prompt feasibility; it does not establish multi-prompt throughput
+or semantic-topology output from OLMo 3 32B.
 
 The package contains a research design, one behavioural case mapping, an
 executed model playground, one successful single-prompt hidden-state capture
 from Pythia 6.9B, one successful paired whole-prompt Qwen topology run, one
 successful six-permutation bare-concept Qwen topology run, one successful
-four-probe overlapping-context Qwen topology run, five earlier measured
-derived analyses and two completed interpretive runs. R002 created the
+four-probe overlapping-context Qwen topology run, one successful native-BF16
+OLMo 3 32B feasibility run, five earlier measured derived analyses and two
+completed interpretive runs. R002 created the
 full-vocabulary static-basis
 score matrix; R003 tested an unnecessarily gated boundary policy; R004 retains
 the full-curve upper and lower elbow cutoffs at all states without that
@@ -58,6 +67,11 @@ communities, 1,344 adjacent-state comparisons and 3,480 within-probe
 permutation comparisons. The complete measured exports support independent
 semantic reconstruction of each probe before any cross-probe parent or
 relation matching. R014 itself does not infer the local semantic map.
+R015 moves the same 24-prompt design into adjacent semantic space, then adds
+independent probe reconstruction and an explicit R014–R015 parent/relation
+comparison. R016 changes only the model-feasibility question: it proves that
+OLMo 3 32B Base can expose every required hidden state locally for one short
+prompt without quantisation or response generation.
 
 R005 found greater nearest-neighbour density and positive/negative segregation
 than a size-matched random null at all 33 states, but its communities also
@@ -210,6 +224,13 @@ and are not versioned here.
     — parent, relation, held-out and deformation comparison between R014 and R015.
 60. [`single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/R015_RUN_ANALYSIS_AND_RECOMMENDATIONS.html`](single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/R015_RUN_ANALYSIS_AND_RECOMMENDATIONS.html)
     — human-readable R015 findings and next-experiment recommendation.
+61. [`single_prompt_topology/R016_PLAN.md`](single_prompt_topology/R016_PLAN.md)
+    — the locked native-BF16 OLMo 3 32B local feasibility contract.
+62. [`single_prompt_topology/runs/R016_olmo3-32b-local-bf16-feasibility/R016_FEASIBILITY_REPORT.md`](single_prompt_topology/runs/R016_olmo3-32b-local-bf16-feasibility/R016_FEASIBILITY_REPORT.md)
+    — the measured device placement, memory, timing, capture and cleanup result.
+63. [`single_prompt_topology/runs/R016_olmo3-32b-local-bf16-feasibility/manifest.json`](single_prompt_topology/runs/R016_olmo3-32b-local-bf16-feasibility/manifest.json)
+    — the successful component record, artifact hashes, transport reassessment
+    and cache-cleanup evidence.
 
 ## Provenance
 
