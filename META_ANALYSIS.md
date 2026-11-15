@@ -15908,3 +15908,200 @@ The deeper implication is that SDA-3 can now be moved towards an independently t
 The next major milestone is not to find five categories in the R015 map. It is to determine whether those categories emerge as useful, distinguishable and predictive organisational roles across multiple independently reconstructed semantic regions.
 
 That is where SDA-3 would move from a proposed semantic-analysis framework towards an empirically validated one.
+
+
+### MA-0097 — ChatGPT response: rationale for distant-region replication versus continued local expansion
+
+- Entry date: `2026-11-15`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim ChatGPT analysis of R015 follow-up experiment selection`
+- Related runs: `R014_qwen-overlapping-context-semantic-map`; `R015_qwen-adjacent-neighbourhood-expansion`
+- Related entries: `MA-0082`, `MA-0090`, `MA-0094`, `MA-0095`, `MA-0096`
+- Preservation note: `Complete previous ChatGPT response retained verbatim, including its diagrams and display markup.`
+
+We need to map a distant semantic region to determine whether R014–R015 discovered **a generalisable method for reconstructing learned semantic topology, or a structure peculiar to the semantic neighbourhood being examined**.
+
+However, there is an important distinction: **mapping a distant region is necessary for testing generalisability, but not necessarily the best immediate step for constructing the semantic map itself.**
+
+These are two different objectives.
+
+## 1. What remains unresolved after R015?
+
+R014 established that higher-order semantic parents and relations persist across different prompt orders and overlapping contexts.
+
+R015 established that substantially the same organisation survives when all four concepts are replaced with neighbouring concepts.
+
+But R015 deliberately selected those replacements from R014's recovered semantic families.
+
+Consequently, the two experiments remain within approximately the same semantic neighbourhood.
+
+They cannot yet distinguish three explanations:
+
+| Explanation | Status |
+|---|---|
+| **Local semantic structure:** This particular neighbourhood possesses stable higher-order organisation | Supported |
+| **General semantic organisation:** Other, unrelated semantic neighbourhoods also possess recoverable persistent structures | Untested |
+| **Methodological artefact:** The reconstruction procedure tends to produce apparently stable parent graphs regardless of the underlying semantic content | Not excluded |
+
+The third explanation is particularly important.
+
+If the analytical process repeatedly constructs broad abstractions and interprets community relationships through them, it may recover similar structures even when the underlying data do not justify them.
+
+A distant region provides an opportunity to test that possibility.
+
+## 2. What would a distant-region experiment actually test?
+
+The experiment should **not** attempt to recover the same six R014–R015 semantic families.
+
+That would risk turning the earlier findings into an imposed ontology.
+
+Instead, it should test whether the same *structural phenomena* occur with substantially different semantic material.
+
+For example:
+
+| Property | R014–R015 | Distant region |
+|---|---|---|
+| Stable semantic parents | Observed | Test independently |
+| Parent relations survive permutations | Observed | Test independently |
+| Held-out family reconstruction | Observed | Test independently |
+| Relations survive changes in context | Observed | Test independently |
+| Structures deform rather than simply disappear | Observed | Test independently |
+| Unprompted families emerge | Observed | Test independently |
+
+The success condition is not that another region contains sensing, place and spatial structure.
+
+It is that the new region produces **its own independently reconstructed semantic organisation**, exhibiting comparable stability under perturbation.
+
+That would support the generalisability of the mapping procedure.
+
+However, meaningful validation would also require negative controls and predefined comparison criteria. Otherwise, producing some abstract structure in another region would be too easy to count as success.
+
+## 3. There is a competing reason to continue expanding locally
+
+Consider the project's governing objective in MA-0082:
+
+> Use the model as an instrument for reverse-engineering the semantic topology of its training data.
+
+If that is the primary objective, we should distinguish two experimental strategies.
+
+<box border radius="lg" padding={3} gap={3}>
+  <text weight="medium">Strategy A — Continued local expansion</text>
+  <svg viewBox="0 0 320 82" width="100%" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#278461" strokeWidth="2">
+      <path d="M45 39 L119 39 L195 39 L271 39"/>
+    </g>
+    {#each [{x:45,n:"R014"},{x:119,n:"R015"},{x:195,n:"R016"},{x:271,n:"R017"}] as v}
+      <circle cx={v.x} cy="39" r="18" fill="#278461" fillOpacity=".15" stroke="#278461" strokeWidth="1.7"/>
+      <text x={v.x} y="43" textAnchor="middle" fontSize="10" fill="currentColor">{v.n}</text>
+    {/each}
+  </svg>
+  Continue moving through adjoining semantic neighbourhoods, testing where structures persist, deform, split or terminate.
+
+  **Result:** A progressively connected semantic map, with evidence about local boundaries.
+
+  <divider/>
+  <text weight="medium">Strategy B — Distant-region replication</text>
+  <svg viewBox="0 0 320 96" width="100%" xmlns="http://www.w3.org/2000/svg">
+    <rect x="12" y="13" width="126" height="65" rx="12" fill="#278461" fillOpacity=".10" stroke="#278461" strokeWidth="1.4"/>
+    <rect x="185" y="13" width="123" height="65" rx="12" fill="#64748b" fillOpacity=".10" stroke="#64748b" strokeWidth="1.4"/>
+    <g fontSize="11" textAnchor="middle" fill="currentColor">
+      <text x="75" y="34">Region A</text>
+      <text x="75" y="50">R014–R015</text>
+      <text x="246" y="34">Region B</text>
+      <text x="246" y="50">New experiment</text>
+    </g>
+    <path d="M139 45 L182 45" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 4"/>
+    <path d="M177 40 L183 45 L177 50" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+    <text x="160" y="90" fontSize="10" textAnchor="middle" fill="currentColor">Methodological transfer</text>
+  </svg>
+  Select a substantially unrelated semantic domain and reconstruct its topology using the same methodology.
+
+  **Result:** Evidence about whether the method generalises beyond the initial neighbourhood.
+</box>
+
+These experiments answer different questions.
+
+A distant-region experiment cannot establish how the two regions connect because the semantic territory between them has not been measured.
+
+Likewise, continued local expansion could construct an increasingly detailed map without establishing that the methodology works elsewhere.
+
+## 4. What does this mean for SDA-3?
+
+Distant-region replication becomes especially valuable when considering SDA-3.
+
+Currently:
+
+```text id="yaad1v"
+SDA-3
+Proposed general framework
+for semantic structural analysis
+           │
+           ▼
+R014–R015
+Evidence from one connected
+semantic neighbourhood
+           │
+           ▼
+UNRESOLVED
+Are these organisational properties
+general or region-specific?
+```
+
+If several unrelated regions independently exhibit recoverable parent structures, persistent relations, changing structural roles and context-dependent emergence, SDA-3 would have a broader empirical basis against which its categories could be tested.
+
+But this still would not prove the five categories themselves.
+
+That requires a subsequent independent comparison between SDA-3's behavioural reconstructions and the experimentally reconstructed semantic maps.
+
+## 5. Which experiment should actually come next?
+
+The answer depends on which uncertainty we want to eliminate first.
+
+**If the immediate priority is to establish that the methodology generalises, map a distant region.**
+
+**If the immediate priority is to develop the semantic mapping system itself, continue the adjacent-region expansion.**
+
+There is a substantial argument for the second option.
+
+R015 has revealed a potentially useful mechanism:
+
+```text id="ot3zt2"
+Known semantic region
+        ↓
+Identify adjacent concepts
+        ↓
+Probe neighbouring region
+        ↓
+Reconstruct independently
+        ↓
+Align overlapping structures
+        ↓
+Identify continuity and deformation
+        ↓
+Extend semantic map
+        ↓
+Repeat
+```
+
+We have demonstrated this once.
+
+Repeating it across multiple successive neighbourhoods would begin establishing something that neither R014 nor R015 has yet demonstrated: **whether we can traverse semantic space while preserving a coherent, accumulating map**.
+
+It would also reveal whether the six recovered families eventually branch, merge, or disappear at observable boundaries.
+
+That may be more directly relevant to the project's ultimate purpose than immediately jumping to an unrelated region.
+
+## Conclusion
+
+A distant-region experiment is needed to eliminate the possibility that R014–R015's findings are peculiar to the original semantic neighbourhood or to the analysis procedure.
+
+But it does not follow that distant-region replication must be the next experiment.
+
+R015 has created two viable research directions:
+
+- **Generalisability:** Does the method work somewhere entirely different?
+- **Scalability:** Can the method progressively construct an expanding, connected semantic topology?
+
+The former establishes external validity. The latter tests whether the proposed mapping system can actually be built.
+
+**The most consequential unresolved question for the project's stated objective may therefore be not whether another distant region possesses semantic structure, but whether the R014→R015 procedure can be repeated to construct a progressively larger, coherent map without imposing the expected topology.**
