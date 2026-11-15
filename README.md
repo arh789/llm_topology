@@ -196,6 +196,20 @@ and are not versioned here.
     — the complete compact measured network package for downstream independent semantic reconstruction.
 53. [`single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/R014_COMPLETENESS_VERIFICATION.md`](single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/R014_COMPLETENESS_VERIFICATION.md)
     — exact network, transition, comparison, invariance and export verification.
+54. [`single_prompt_topology/R015_PLAN.md`](single_prompt_topology/R015_PLAN.md)
+    — the frozen adjacent-neighbourhood replication contract.
+55. [`single_prompt_topology/R015_CONCEPT_SELECTION_EVIDENCE.md`](single_prompt_topology/R015_CONCEPT_SELECTION_EVIDENCE.md)
+    — measured R014 evidence supporting sensor, apartment, line and sessions as neighbouring replacements.
+56. [`single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/R015_MEASUREMENT_REPORT.md`](single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/R015_MEASUREMENT_REPORT.md)
+    — the completed and validated 24-prompt R015 measurement.
+57. [`single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/R015_PROBE_RECONSTRUCTIONS.md`](single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/R015_PROBE_RECONSTRUCTIONS.md)
+    — independent P1-P4 semantic reconstruction before R014 alignment.
+58. [`single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/R015_SEMANTIC_MAP.json`](single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/R015_SEMANTIC_MAP.json)
+    — the completed R015 local semantic-neighbourhood map.
+59. [`single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/R014_R015_COMPARISON.md`](single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/R014_R015_COMPARISON.md)
+    — parent, relation, held-out and deformation comparison between R014 and R015.
+60. [`single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/R015_RUN_ANALYSIS_AND_RECOMMENDATIONS.html`](single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/R015_RUN_ANALYSIS_AND_RECOMMENDATIONS.html)
+    — human-readable R015 findings and next-experiment recommendation.
 
 ## Provenance
 
