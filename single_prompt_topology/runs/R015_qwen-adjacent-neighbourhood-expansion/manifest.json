@@ -1,0 +1,385 @@
+{
+  "schema_version": 1,
+  "run_id": "R015_qwen-adjacent-neighbourhood-expansion",
+  "status": "successful",
+  "started_at": "2026-11-14T23:30:29.642727+00:00",
+  "completed_at": "2026-11-15T01:13:11.533018+00:00",
+  "failure_details": null,
+  "source_git_commit": "0dd850d82c36d83c75e60f72c3ed9d2495e056e6",
+  "source_git_status": "?? single_prompt_topology/r015_capture_hidden_states.py\n?? single_prompt_topology/r015_config.py\n?? single_prompt_topology/r015_run.py\n?? single_prompt_topology/r015_semantic_topology.py",
+  "objective": "Measure order and context invariance across four overlapping concept probes and 24 controlled final-anchor prompts.",
+  "model": {
+    "id": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "precision": "bfloat16",
+    "cache_only": true
+  },
+  "expected": {
+    "probes": 4,
+    "prompts": 24,
+    "permutations_per_probe": 6,
+    "states": 29,
+    "hidden_width": 3584,
+    "sides": 2,
+    "networks": 1392,
+    "adjacent_state_comparisons": 1344,
+    "within_probe_matched_state_pair_comparisons": 3480
+  },
+  "required_components": [
+    "plan_lock",
+    "concept_selection_lock",
+    "environment_probe",
+    "anchor_probe",
+    "primary_capture",
+    "capture_validation",
+    "projection_and_cutoffs",
+    "split_networks_and_communities",
+    "within_prompt_transitions",
+    "within_probe_permutation_comparisons",
+    "within_probe_invariance",
+    "chatgpt_exports",
+    "completeness_validation",
+    "run_report"
+  ],
+  "components": {
+    "plan_lock": {
+      "status": "successful",
+      "completed_at": "2026-11-14T23:30:29.642727+00:00",
+      "path": "single_prompt_topology/R015_PLAN.md",
+      "sha256": "acac2bab735d9912ee9322f06e648eae6ab7b015e97474f87ef5d9a1d93799de"
+    },
+    "concept_selection_lock": {
+      "status": "successful",
+      "completed_at": "2026-11-14T23:30:29.642727+00:00",
+      "path": "single_prompt_topology/R015_CONCEPT_SELECTION_EVIDENCE.md",
+      "sha256": "52f22e1d56302b7a3c65b1d7f081c68c210acc2a49b39922a1d74b9c51c7f4ea"
+    },
+    "environment_probe": {
+      "status": "successful",
+      "completed_at": "2026-11-14T23:30:29.642727+00:00",
+      "python": "3.11.15 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:12:15) [MSC v.1942 64 bit (AMD64)]",
+      "executable": "C:\\Users\\arhal\\anaconda3\\envs\\myenv\\python.exe",
+      "torch": "2.6.0+cu124",
+      "transformers": "5.12.1",
+      "numpy": "2.4.4",
+      "pandas": "3.0.3",
+      "networkx": "3.6.1",
+      "sklearn": "1.8.0",
+      "safetensors": "0.8.0",
+      "gpu_name": "NVIDIA GeForce RTX 4090",
+      "gpu_total_bytes": 25756696576,
+      "gpu_free_bytes": 24159191040
+    },
+    "anchor_probe": {
+      "status": "successful",
+      "completed_at": "2026-11-14T23:30:42.472774+00:00",
+      "anchor_text": "\\n",
+      "anchor_token_id": 198,
+      "anchor_token": "Ċ",
+      "single_token": true,
+      "final_anchor_matches_all_prompts": true,
+      "input_token_counts": {
+        "P1_ABC": 7,
+        "P1_ACB": 7,
+        "P1_BAC": 7,
+        "P1_BCA": 7,
+        "P1_CAB": 7,
+        "P1_CBA": 7,
+        "P2_ABC": 7,
+        "P2_ACB": 7,
+        "P2_BAC": 7,
+        "P2_BCA": 7,
+        "P2_CAB": 7,
+        "P2_CBA": 7,
+        "P3_ABC": 6,
+        "P3_ACB": 6,
+        "P3_BAC": 6,
+        "P3_BCA": 6,
+        "P3_CAB": 6,
+        "P3_CBA": 6,
+        "P4_ABC": 7,
+        "P4_ACB": 7,
+        "P4_BAC": 7,
+        "P4_BCA": 7,
+        "P4_CAB": 7,
+        "P4_CBA": 7
+      }
+    },
+    "primary_capture": {
+      "status": "successful",
+      "completed_at": "2026-11-14T23:31:07.193325+00:00",
+      "probe_count": 4,
+      "prompt_count": 24,
+      "permutations_per_probe": 6,
+      "state_count": 29,
+      "hidden_width": 3584,
+      "response_generation_executed": false
+    },
+    "capture_validation": {
+      "status": "successful",
+      "completed_at": "2026-11-14T23:31:07.290617+00:00",
+      "state_00_exact_equal_all_prompts": true,
+      "deterministic_replay_exact": true,
+      "all_finite": true,
+      "pair_state_metric_rows": 1740
+    },
+    "projection_and_cutoffs": {
+      "status": "successful",
+      "completed_at": "2026-11-14T23:33:44.084112+00:00",
+      "seconds": 141.86203970000133,
+      "score_shape": [
+        24,
+        29,
+        151665
+      ],
+      "vocabulary_size": 151665,
+      "excluded_capture_token_id": 198,
+      "cutoff_rows": 696,
+      "membership_rows": 10648837,
+      "embedding_shard": "model-00001-of-00004.safetensors",
+      "full_embedding_rows": 152064,
+      "usable_tokenizer_rows": 151665,
+      "padded_embedding_rows_excluded": 399,
+      "model_forward_executed": false
+    },
+    "split_networks_and_communities": {
+      "status": "successful",
+      "completed_at": "2026-11-15T01:13:07.398780+00:00",
+      "seconds": 5963.313196599996,
+      "network_count": 1392,
+      "node_rows": 10648837,
+      "directed_edge_rows": 106488370,
+      "community_rows": 14796,
+      "intercommunity_edge_rows": 71795
+    },
+    "within_prompt_transitions": {
+      "status": "successful",
+      "completed_at": "2026-11-15T01:13:07.399778+00:00",
+      "seconds": 0.0002491999985068105,
+      "transition_rows": 1344,
+      "minimum_membership_jaccard": 0.012776003332870435,
+      "minimum_edge_jaccard": 0.0005968080395818493
+    },
+    "within_probe_permutation_comparisons": {
+      "status": "successful",
+      "completed_at": "2026-11-15T01:13:07.402726+00:00",
+      "seconds": 0.0004031999997096136,
+      "pairwise_comparison_rows": 3480,
+      "minimum_membership_jaccard": 0.17005918868196912,
+      "minimum_edge_jaccard": 0.044076095459858446
+    },
+    "within_probe_invariance": {
+      "status": "successful",
+      "completed_at": "2026-11-15T01:13:07.403724+00:00",
+      "seconds": 1.6099998902063817e-05,
+      "summary_rows": 2784,
+      "token_support_rows": 3500996,
+      "edge_support_rows": 37561354,
+      "support_levels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "token_and_edge_support_separate": true
+    },
+    "chatgpt_exports": {
+      "status": "successful",
+      "completed_at": "2026-11-15T01:13:09.237088+00:00",
+      "seconds": 1.8319607000012184,
+      "json_networks": 1392,
+      "markdown_state_sections": 29,
+      "semantic_labels_added": false
+    },
+    "completeness_validation": {
+      "status": "successful",
+      "completed_at": "2026-11-15T01:13:09.272336+00:00",
+      "seconds": 0.033581399999093264,
+      "networks_verified": 1392,
+      "nodes_verified": 10648837,
+      "directed_edges_verified": 106488370,
+      "communities_verified": 14796,
+      "state_zero_all_pairs_identity_verified": true,
+      "token_support_rows_verified": 3500996,
+      "edge_support_rows_verified": 37561354
+    },
+    "run_report": {
+      "status": "successful",
+      "completed_at": "2026-11-15T01:13:09.276334+00:00",
+      "seconds": 0.002960899997560773,
+      "path": "single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/R015_MEASUREMENT_REPORT.md"
+    }
+  },
+  "artifacts": {
+    "vocabulary_scores.safetensors": {
+      "bytes": 422235760,
+      "sha256": "5918408507fc97cde64affc59c552670757aa159b72d534d26c92b3eb7fce38b"
+    },
+    "cutoffs.csv": {
+      "bytes": 191291,
+      "sha256": "0a31ca4d88f653721328a33302bbbe4d036c113090199ea36ed2b6bd5ebe78db"
+    },
+    "tail_tokens.csv.gz": {
+      "bytes": 259327364,
+      "sha256": "d5e976c0aaf4ed6e5c86d515c26a16faa68a429984688ac3e70287b104282bae"
+    },
+    "network_index.csv": {
+      "bytes": 378199,
+      "sha256": "ce0efe44a46691ac07fa8deb67d6c088ff624249d07edffc2715026e4919e5f2"
+    },
+    "nodes.csv.gz": {
+      "bytes": 273038885,
+      "sha256": "1850670dcbafed5e74aca3f5b9ec438fe04c5cf9dfe3501bcd333de1e69f12b0"
+    },
+    "edges.csv.gz": {
+      "bytes": 1159540627,
+      "sha256": "560c8b37e49c9c5845610b2eef0f29427735443554bcf200355cbbf2090d5884"
+    },
+    "community_nodes.csv": {
+      "bytes": 9123440,
+      "sha256": "04ad3ae52bfdd7bfca0fa5a45980a70b29d19c80bb43c428b4ae52e986423e0f"
+    },
+    "community_edges.csv": {
+      "bytes": 6800561,
+      "sha256": "2f26c2a8a4201843696ec64b613c2408b16522b99a5cb9e47d92de153ceb8580"
+    },
+    "state_transitions.csv": {
+      "bytes": 213666,
+      "sha256": "e04dc7b33a7b567c742f4c0f0603fa01a81142ef2e97463a98c2424b920d1dbc"
+    },
+    "pairwise_permutation_comparisons.csv": {
+      "bytes": 521263,
+      "sha256": "85650a39a6445eb03ed5b00760bb0158530f277133fbcc56ff4e668e8a885ffc"
+    },
+    "permutation_invariance.csv": {
+      "bytes": 208925,
+      "sha256": "ed16d80b057f97876c8d75e1a5d6b72e07d6622edccb4d2a742eb5992731920a"
+    },
+    "token_permutation_support.csv.gz": {
+      "bytes": 36499699,
+      "sha256": "bd51c9af23ad3b759402dd9cbe9984cd8a87718636987a82df43f9d08b1f5997"
+    },
+    "edge_permutation_support.csv.gz": {
+      "bytes": 225257864,
+      "sha256": "d750061a2df067d82d747734166bb181ebb294d4bf5824a8fb46ba1694edbd7f"
+    },
+    "community_transition_evidence.csv": {
+      "bytes": 6770520,
+      "sha256": "86958a2b483c4a13bbf5001ccfd4e65ac5e25283016c6c396da7ce037c2bc7f5"
+    },
+    "chatgpt_community_networks.json": {
+      "bytes": 38134283,
+      "sha256": "e8ddf2d982e263f7df4efb82092cea0c649746c2a8462378894f7aa043925a5a"
+    },
+    "chatgpt_layer_packets.md": {
+      "bytes": 5572803,
+      "sha256": "106566a4a6fa33a822550ae086befd56e12512225de43b13c2be29e377fe0a1e"
+    },
+    "R015_COMPLETENESS_VERIFICATION.md": {
+      "bytes": 837,
+      "sha256": "6ce89ce21f34f39f3c4e38801933215c825d0bdd774ad11534d165c0a0e870de"
+    },
+    "R015_MEASUREMENT_REPORT.md": {
+      "bytes": 2496,
+      "sha256": "0fbb7f7f3ac17ff56864e258f39d8fb30d9ffb395c3a80d599d73941977a0236"
+    }
+  },
+  "status_history": [],
+  "execution_attempts": [
+    {
+      "started_at": "2026-11-14T23:30:29.642727+00:00",
+      "status": "successful",
+      "completed_at": "2026-11-15T01:13:11.533018+00:00",
+      "seconds": 6109.3106504000025
+    }
+  ],
+  "interpretation_boundary": "R015 produces measured within-probe topology and invariance evidence only; semantic parents, cross-probe map nodes/edges, SDA/GRD roles, coherence and semantic curvature are excluded.",
+  "pipeline": {
+    "orchestrator": "single_prompt_topology/r015_run.py",
+    "capture_script": "single_prompt_topology/r015_capture_hidden_states.py",
+    "topology_script": "single_prompt_topology/r015_semantic_topology.py",
+    "topology_script_sha256": "7acc98a5b06f3b1427134cdce515ee63b7391e1b9e6d2627f26a2e2dca6e3888",
+    "plan": "single_prompt_topology/R015_PLAN.md",
+    "plan_sha256": "acac2bab735d9912ee9322f06e648eae6ab7b015e97474f87ef5d9a1d93799de",
+    "concept_selection_evidence": "single_prompt_topology/R015_CONCEPT_SELECTION_EVIDENCE.md",
+    "concept_selection_evidence_sha256": "52f22e1d56302b7a3c65b1d7f081c68c210acc2a49b39922a1d74b9c51c7f4ea",
+    "prompt_config": "single_prompt_topology/r015_config.py",
+    "prompt_config_sha256": "976172245d25464a0c01acf71f11074ff087eca1580fb40e739ec8020b751bb7",
+    "measurement_functions_reused_from": "single_prompt_topology/r012_semantic_topology.py",
+    "model_backend": "direct Qwen Transformers capture artifacts",
+    "downstream_analysis": "independent semantic reconstruction per probe, followed by cross-probe parent and relation matching"
+  },
+  "results": {
+    "network_count": 1392,
+    "selected_membership_rows": 10648837,
+    "directed_edge_rows": 106488370,
+    "community_count": 14796,
+    "adjacent_transition_rows": 1344,
+    "pairwise_comparison_rows": 3480,
+    "invariance_summary_rows": 2784,
+    "token_support_rows": 3500996,
+    "edge_support_rows": 37561354,
+    "minimum_within_probe_membership_jaccard": 0.17005918868196912,
+    "minimum_within_probe_edge_jaccard": 0.044076095459858446,
+    "final_six_of_six_cores": {
+      "P1": {
+        "positive_head": {
+          "unique_tokens": 14618,
+          "six_of_six_tokens": 3776,
+          "unique_edges": 153835,
+          "six_of_six_edges": 10240
+        },
+        "negative_tail": {
+          "unique_tokens": 14900,
+          "six_of_six_tokens": 3898,
+          "unique_edges": 157353,
+          "six_of_six_edges": 10681
+        }
+      },
+      "P2": {
+        "positive_head": {
+          "unique_tokens": 13293,
+          "six_of_six_tokens": 4638,
+          "unique_edges": 135988,
+          "six_of_six_edges": 15190
+        },
+        "negative_tail": {
+          "unique_tokens": 13049,
+          "six_of_six_tokens": 4637,
+          "unique_edges": 133712,
+          "six_of_six_edges": 16002
+        }
+      },
+      "P3": {
+        "positive_head": {
+          "unique_tokens": 16822,
+          "six_of_six_tokens": 3188,
+          "unique_edges": 181182,
+          "six_of_six_edges": 6776
+        },
+        "negative_tail": {
+          "unique_tokens": 16315,
+          "six_of_six_tokens": 3073,
+          "unique_edges": 174831,
+          "six_of_six_edges": 6747
+        }
+      },
+      "P4": {
+        "positive_head": {
+          "unique_tokens": 13849,
+          "six_of_six_tokens": 4419,
+          "unique_edges": 142634,
+          "six_of_six_edges": 13610
+        },
+        "negative_tail": {
+          "unique_tokens": 13737,
+          "six_of_six_tokens": 4442,
+          "unique_edges": 140878,
+          "six_of_six_edges": 14008
+        }
+      }
+    }
+  }
+}

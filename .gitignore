@@ -52,6 +52,14 @@ single_prompt_topology/runs/R013_qwen-bare-concept-permutation-topology/**/*.gz
 single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/*.gz
 single_prompt_topology/runs/R014_qwen-overlapping-context-semantic-map/**/*.gz
 
+!single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/
+!single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/**/
+!single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/**/*.md
+!single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/**/*.json
+!single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/**/*.csv
+single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/*.gz
+single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/**/*.gz
+
 # Model weights and checkpoints
 *.bin
 *.ckpt

@@ -6,6 +6,13 @@ representation geometry.
 
 ## Current evidence state
 
+R015 measurement is complete for the adjacent sensor/apartment/line/sessions
+region: 24 prompts, 1,392 networks, 14,796 communities, 1,344 transitions and
+3,480 permutation comparisons. All fourteen manifest components and 49 indexed
+artifact hashes passed verification. See
+`single_prompt_topology/runs/R015_qwen-adjacent-neighbourhood-expansion/R015_MEASUREMENT_REPORT.md`.
+Independent probe reconstruction and the R014 comparison remain pending.
+
 The package contains a research design, one behavioural case mapping, an
 executed model playground, one successful single-prompt hidden-state capture
 from Pythia 6.9B, one successful paired whole-prompt Qwen topology run, one
