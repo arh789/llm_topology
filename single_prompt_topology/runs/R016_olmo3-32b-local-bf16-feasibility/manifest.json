@@ -1,0 +1,318 @@
+{
+  "schema_version": 1,
+  "run_id": "R016_olmo3-32b-local-bf16-feasibility",
+  "status": "successful",
+  "started_at": "2026-11-15T05:15:07.937183+00:00",
+  "completed_at": "2026-11-15T05:29:58.680754+00:00",
+  "failure_details": null,
+  "objective": "Determine whether the exact native-BF16 OLMo 3 32B Base model can complete one local instrumented final-anchor forward pass.",
+  "model": {
+    "id": "allenai/Olmo-3-1125-32B",
+    "revision": "c2b61dae89a1ad10e4ad5653d0e46b590902607b",
+    "precision": "bfloat16",
+    "quantized": false,
+    "expected_repository_bytes": 64476978123
+  },
+  "prompt": {
+    "text": "laser\ncity\nspatial field\n",
+    "capture_position": "final newline anchor",
+    "chat_template_used": false,
+    "generation_executed": false
+  },
+  "expected": {
+    "transformer_layers": 64,
+    "hidden_width": 5120,
+    "hidden_states": 65
+  },
+  "required_components": [
+    "plan_lock",
+    "environment_preflight",
+    "model_metadata_lock",
+    "snapshot_download",
+    "device_map_preflight",
+    "model_load",
+    "instrumented_forward",
+    "capture_validation",
+    "resource_cleanup",
+    "feasibility_decision"
+  ],
+  "components": {
+    "plan_lock": {
+      "status": "successful",
+      "completed_at": "2026-11-15T05:15:07.937183+00:00",
+      "path": "single_prompt_topology/R016_PLAN.md",
+      "sha256": "1c8c56cdf65236a1ac601b0e8bd49ac580b3e77f7f66265a13c0946e887ec8ca"
+    },
+    "environment_preflight": {
+      "status": "successful",
+      "completed_at": "2026-11-15T05:15:07.937183+00:00",
+      "python": "3.11.15 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:12:15) [MSC v.1942 64 bit (AMD64)]",
+      "executable": "C:\\Users\\arhal\\anaconda3\\envs\\myenv\\python.exe",
+      "torch": "2.6.0+cu124",
+      "transformers": "5.12.1",
+      "accelerate": "1.14.0",
+      "safetensors": "0.8.0",
+      "memory_before": {
+        "physical_ram_total_bytes": 68523761664,
+        "physical_ram_available_bytes": 36090273792,
+        "physical_ram_used_bytes": 32433487872,
+        "process_rss_bytes": 1282613248,
+        "cache_drive_total_bytes": 2000381014016,
+        "cache_drive_free_bytes": 1162346868736,
+        "gpu_name": "NVIDIA GeForce RTX 4090",
+        "gpu_total_bytes": 25756696576,
+        "gpu_free_bytes": 24159191040,
+        "gpu_allocated_bytes": 0,
+        "gpu_reserved_bytes": 0
+      },
+      "gpu_limit": "18GiB",
+      "cpu_limit": "28GiB",
+      "cache_dir": "D:\\AI\\cache\\huggingface\\hub",
+      "offload_dir": "D:\\AI\\cache\\offload\\R016_olmo3-32b"
+    },
+    "model_metadata_lock": {
+      "status": "successful",
+      "completed_at": "2026-11-15T05:15:08.857150+00:00",
+      "resolved_revision": "c2b61dae89a1ad10e4ad5653d0e46b590902607b",
+      "repository_bytes": 64476978123,
+      "sibling_files": 25,
+      "seconds": 0.7769456999958493
+    },
+    "snapshot_download": {
+      "status": "successful",
+      "completed_at": "2026-11-15T05:28:21.647017+00:00",
+      "snapshot_path": "D:\\AI\\cache\\huggingface\\hub\\models--allenai--Olmo-3-1125-32B\\snapshots\\c2b61dae89a1ad10e4ad5653d0e46b590902607b",
+      "weight_shards": 14,
+      "seconds": 792.7822969999979,
+      "memory_after": {
+        "physical_ram_total_bytes": 68523761664,
+        "physical_ram_available_bytes": 37943590912,
+        "physical_ram_used_bytes": 30580170752,
+        "process_rss_bytes": 1444626432,
+        "cache_drive_total_bytes": 2000381014016,
+        "cache_drive_free_bytes": 1097870864384,
+        "gpu_name": "NVIDIA GeForce RTX 4090",
+        "gpu_total_bytes": 25756696576,
+        "gpu_free_bytes": 24159191040,
+        "gpu_allocated_bytes": 0,
+        "gpu_reserved_bytes": 0
+      }
+    },
+    "device_map_preflight": {
+      "status": "successful",
+      "completed_at": "2026-11-15T05:28:23.849114+00:00",
+      "placements": {
+        "0": 18,
+        "cpu": 29,
+        "disk": 21
+      },
+      "device_map_path": "single_prompt_topology/runs/R016_olmo3-32b-local-bf16-feasibility/device_map.json",
+      "device_map_sha256": "6445b5980a1a8c40e1c010ff3a94b7fba847fa5e2867b012d6f7076f1b2e1d85",
+      "seconds": 2.193719900002179
+    },
+    "model_load": {
+      "status": "successful",
+      "completed_at": "2026-11-15T05:28:52.554425+00:00",
+      "seconds": 28.701414200004365,
+      "resolved_device_map": {
+        "model.embed_tokens": 0,
+        "model.layers.0": 0,
+        "model.layers.1": 0,
+        "model.layers.2": 0,
+        "model.layers.3": 0,
+        "model.layers.4": 0,
+        "model.layers.5": 0,
+        "model.layers.6": 0,
+        "model.layers.7": 0,
+        "model.layers.8": 0,
+        "model.layers.9": 0,
+        "model.layers.10": 0,
+        "model.layers.11": 0,
+        "model.layers.12": 0,
+        "model.layers.13": 0,
+        "model.layers.14": 0,
+        "model.layers.15": 0,
+        "model.layers.16": 0,
+        "model.layers.17": "cpu",
+        "model.layers.18": "cpu",
+        "model.layers.19": "cpu",
+        "model.layers.20": "cpu",
+        "model.layers.21": "cpu",
+        "model.layers.22": "cpu",
+        "model.layers.23": "cpu",
+        "model.layers.24": "cpu",
+        "model.layers.25": "cpu",
+        "model.layers.26": "cpu",
+        "model.layers.27": "cpu",
+        "model.layers.28": "cpu",
+        "model.layers.29": "cpu",
+        "model.layers.30": "cpu",
+        "model.layers.31": "cpu",
+        "model.layers.32": "cpu",
+        "model.layers.33": "cpu",
+        "model.layers.34": "cpu",
+        "model.layers.35": "cpu",
+        "model.layers.36": "cpu",
+        "model.layers.37": "cpu",
+        "model.layers.38": "cpu",
+        "model.layers.39": "cpu",
+        "model.layers.40": "cpu",
+        "model.layers.41": "cpu",
+        "model.layers.42": "cpu",
+        "model.layers.43": "cpu",
+        "model.layers.44": "cpu",
+        "model.layers.45": "cpu",
+        "model.layers.46": "disk",
+        "model.layers.47": "disk",
+        "model.layers.48": "disk",
+        "model.layers.49": "disk",
+        "model.layers.50": "disk",
+        "model.layers.51": "disk",
+        "model.layers.52": "disk",
+        "model.layers.53": "disk",
+        "model.layers.54": "disk",
+        "model.layers.55": "disk",
+        "model.layers.56": "disk",
+        "model.layers.57": "disk",
+        "model.layers.58": "disk",
+        "model.layers.59": "disk",
+        "model.layers.60": "disk",
+        "model.layers.61": "disk",
+        "model.layers.62": "disk",
+        "model.layers.63": "disk",
+        "model.norm": "disk",
+        "model.rotary_emb": "disk",
+        "lm_head": "disk"
+      },
+      "memory_after": {
+        "physical_ram_total_bytes": 68523761664,
+        "physical_ram_available_bytes": 35585765376,
+        "physical_ram_used_bytes": 32937996288,
+        "process_rss_bytes": 4274028544,
+        "cache_drive_total_bytes": 2000381014016,
+        "cache_drive_free_bytes": 1097870852096,
+        "gpu_name": "NVIDIA GeForce RTX 4090",
+        "gpu_total_bytes": 25756696576,
+        "gpu_free_bytes": 4564537344,
+        "gpu_allocated_bytes": 17606149120,
+        "gpu_reserved_bytes": 17607688192
+      },
+      "peak_gpu_allocated_bytes": 17606149120,
+      "peak_gpu_reserved_bytes": 17607688192
+    },
+    "instrumented_forward": {
+      "status": "successful",
+      "completed_at": "2026-11-15T05:29:54.025217+00:00",
+      "seconds": 60.89498390000517,
+      "input_tokens": 9,
+      "anchor_token_id": 198,
+      "hidden_states_returned": 65,
+      "logits_shape": [
+        1,
+        9,
+        100278
+      ],
+      "response_generation_executed": false,
+      "memory_after": {
+        "physical_ram_total_bytes": 68523761664,
+        "physical_ram_available_bytes": 13023551488,
+        "physical_ram_used_bytes": 55500210176,
+        "process_rss_bytes": 33279561728,
+        "cache_drive_total_bytes": 2000381014016,
+        "cache_drive_free_bytes": 1097870856192,
+        "gpu_name": "NVIDIA GeForce RTX 4090",
+        "gpu_total_bytes": 25756696576,
+        "gpu_free_bytes": 3575934976,
+        "gpu_allocated_bytes": 17622465536,
+        "gpu_reserved_bytes": 18662555648
+      },
+      "peak_gpu_allocated_bytes": 18650070016,
+      "peak_gpu_reserved_bytes": 18662555648
+    },
+    "capture_validation": {
+      "status": "successful",
+      "completed_at": "2026-11-15T05:29:54.074572+00:00",
+      "seconds": 0.025187600003846455,
+      "validation_path": "single_prompt_topology/runs/R016_olmo3-32b-local-bf16-feasibility/capture_validation.json",
+      "validation_sha256": "b70afbee04dd2eebe798939f571d222684731f6b6f10c5fca8e28c6a6f64a036",
+      "capture_path": "single_prompt_topology/runs/R016_olmo3-32b-local-bf16-feasibility/anchor_hidden_states.safetensors",
+      "capture_bytes": 665904,
+      "capture_sha256": "72147686186d4796d68e4fb29f5b6afc1f96965425c6efa64a29f0b203b576be"
+    },
+    "resource_cleanup": {
+      "status": "successful",
+      "completed_at": "2026-11-15T05:29:58.663855+00:00",
+      "seconds": 4.585608900000807,
+      "memory_after": {
+        "physical_ram_total_bytes": 68523761664,
+        "physical_ram_available_bytes": 44138307584,
+        "physical_ram_used_bytes": 24385454080,
+        "process_rss_bytes": 2207117312,
+        "cache_drive_total_bytes": 2000381014016,
+        "cache_drive_free_bytes": 1097870163968,
+        "gpu_name": "NVIDIA GeForce RTX 4090",
+        "gpu_total_bytes": 25756696576,
+        "gpu_free_bytes": 24050139136,
+        "gpu_allocated_bytes": 8611840,
+        "gpu_reserved_bytes": 23068672
+      },
+      "offload_cache_preserved": true
+    },
+    "feasibility_decision": {
+      "status": "successful",
+      "completed_at": "2026-11-15T05:29:58.673564+00:00",
+      "decision": "locally_feasible",
+      "basis": "The exact native-BF16 model completed one instrumented forward pass with all expected hidden states and finite logits."
+    }
+  },
+  "artifacts": {
+    "device_map.json": {
+      "bytes": 2401,
+      "sha256": "6445b5980a1a8c40e1c010ff3a94b7fba847fa5e2867b012d6f7076f1b2e1d85"
+    },
+    "capture_validation.json": {
+      "bytes": 4546,
+      "sha256": "b70afbee04dd2eebe798939f571d222684731f6b6f10c5fca8e28c6a6f64a036"
+    },
+    "anchor_hidden_states.safetensors": {
+      "bytes": 665904,
+      "sha256": "72147686186d4796d68e4fb29f5b6afc1f96965425c6efa64a29f0b203b576be",
+      "tracked_by_git": false
+    },
+    "R016_FEASIBILITY_REPORT.md": {
+      "bytes": 3184,
+      "sha256": "c68f1d0190335d5681fb7e49a2fbd30a0fda40ea79765f52f7a4f00c9358b997"
+    }
+  },
+  "attempt_history": [
+    {
+      "status": "failed",
+      "started_at": "2026-11-15T05:09:58.766365+00:00",
+      "completed_at": "2026-11-15T05:12:01+00:00",
+      "failure_details": {
+        "component": "snapshot_download",
+        "error_type": "stalled_xet_transport",
+        "message": "The first two Xet shard transfers remained at zero bytes with no transport-log growth; the attempt was terminated for an HTTP fallback retry."
+      }
+    },
+    {
+      "status": "failed",
+      "started_at": "2026-11-15T05:12:47.338389+00:00",
+      "completed_at": "2026-11-15T05:14:33+00:00",
+      "failure_details": {
+        "component": "snapshot_download",
+        "error_type": "stalled_http_transport",
+        "message": "The non-Xet HTTP fallback left its first shard at zero bytes for more than 90 seconds; the attempt was terminated and will fall back to Xet with one worker."
+      }
+    }
+  ],
+  "transport_reassessment": {
+    "initial_stall_classification_revised": true,
+    "finding": "Temporary shard file lengths lagged actual transfer progress; the first two attempts were interrupted prematurely rather than proven stalled.",
+    "successful_transport": "Xet with one worker",
+    "redundant_incomplete_cache_bytes_approximate": 8860118492,
+    "redundant_cache_deleted": false
+  },
+  "interpretation_boundary": "R016 tests local native-BF16 model loading and one instrumented forward pass only; topology construction and semantic interpretation are excluded.",
+  "total_seconds": 890.7717384999996
+}
