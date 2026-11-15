@@ -1,0 +1,147 @@
+{
+  "title": "R017 OLMo 3 single-trajectory semantic map",
+  "status": "downstream independent semantic reconstruction",
+  "measurement_source": "R017_olmo3-choke-point-barrier-spear-semantic-map",
+  "prompt": "choke point\ncollapsible barrier\nspear\n",
+  "model": {
+    "id": "allenai/Olmo-3-1125-32B",
+    "revision": "c2b61dae89a1ad10e4ad5653d0e46b590902607b",
+    "precision": "bfloat16"
+  },
+  "reporting_basis": "R014/R015 reporting discipline adapted to a single trajectory. Measurement, completeness, semantic reconstruction, structured map and human analysis remain separate stages.",
+  "invariance_status": {
+    "order": "not tested",
+    "context": "not tested",
+    "neighbouring_concepts": "not tested",
+    "cross_model": "not tested"
+  },
+  "nodes": [
+    {
+      "id": "N1",
+      "label": "constrained passage",
+      "trajectory_support": "early from State 3; recurrent through States 63-64",
+      "sector": "both / late positive-operational",
+      "role": "core",
+      "confidence": "high"
+    },
+    {
+      "id": "N2",
+      "label": "deployable obstruction",
+      "trajectory_support": "collapse from State 1; blocking positive across 39 states from State 22; deployment late",
+      "sector": "positive-dominant with negative boundary counterpart",
+      "role": "core",
+      "confidence": "high"
+    },
+    {
+      "id": "N3",
+      "label": "reach / piercing force",
+      "trajectory_support": "direct spear membership States 4-25; functional residue late",
+      "sector": "positive early-middle / mixed late",
+      "role": "core",
+      "confidence": "high"
+    },
+    {
+      "id": "N4",
+      "label": "movement / flow",
+      "trajectory_support": "recurrent from early states through late integration",
+      "sector": "both",
+      "role": "bridge",
+      "confidence": "high"
+    },
+    {
+      "id": "N5",
+      "label": "boundary / defence",
+      "trajectory_support": "especially persistent from middle-late depth; wall negative across 29 states from State 31",
+      "sector": "negative-dominant with guards positive at State 64",
+      "role": "limiting counterpart",
+      "confidence": "moderate-high"
+    },
+    {
+      "id": "N6",
+      "label": "attack / interception",
+      "trajectory_support": "ambush/piercing evident by State 12; attack survives into State 64",
+      "sector": "positive-dominant",
+      "role": "emergent functional outcome",
+      "confidence": "high"
+    }
+  ],
+  "edges": [
+    {
+      "id": "E1",
+      "source": "N1",
+      "target": "N4",
+      "sector": "both",
+      "evidence_scope": "cross-depth trajectory",
+      "interpretation": "constrained passage organises movement and flow",
+      "confidence": "high"
+    },
+    {
+      "id": "E2",
+      "source": "N2",
+      "target": "N1",
+      "sector": "positive",
+      "evidence_scope": "State 64 community network",
+      "measured_support": "C11-C0 198 edges; C11-C1 190; C11-C4 43",
+      "interpretation": "deployment/blocking shapes the constrained passage",
+      "confidence": "high"
+    },
+    {
+      "id": "E3",
+      "source": "N2",
+      "target": "N5",
+      "sector": "mixed",
+      "evidence_scope": "cross-depth sector asymmetry",
+      "interpretation": "obstruction defines a boundary/defence counterpart",
+      "confidence": "moderate-high",
+      "caveat": "no positive-to-negative graph edge is claimed"
+    },
+    {
+      "id": "E4",
+      "source": "N3",
+      "target": "N6",
+      "sector": "positive",
+      "evidence_scope": "object-to-function trajectory",
+      "interpretation": "reach/piercing force is retained as attack/interception function",
+      "confidence": "high"
+    },
+    {
+      "id": "E5",
+      "source": "N1",
+      "target": "N6",
+      "sector": "positive",
+      "evidence_scope": "State 64 community network",
+      "measured_support": "attack + intersection in C0; C0-C1 610; C0-C4 157; C1-C4 128",
+      "interpretation": "attack/interception is situated at the constrained point",
+      "confidence": "high"
+    },
+    {
+      "id": "E6",
+      "source": "N4",
+      "target": "N6",
+      "sector": "mixed",
+      "evidence_scope": "higher-order cross-depth synthesis",
+      "interpretation": "controlled movement creates the approach on which interception acts",
+      "confidence": "moderate"
+    },
+    {
+      "id": "E7",
+      "source": "N5",
+      "target": "N6",
+      "sector": "mixed",
+      "evidence_scope": "late sector pairing",
+      "interpretation": "boundary/defence supplies the limiting counterpart of interception",
+      "confidence": "moderate"
+    }
+  ],
+  "topology": "The prompt is reconstructed as a constrained passage that organises movement, a deployable obstruction that shapes the passage and its boundary, and reach/piercing force that is increasingly represented as attack/interception at the resulting point of contact.",
+  "compressed_reading": "CHANNEL MOVEMENT -> DEPLOY BARRIER -> NARROW APPROACH -> INTERCEPT WITH REACH",
+  "caveats": [
+    "Map nodes and edges are downstream semantic reconstructions, not raw model variables.",
+    "Positive-head and negative-tail are cosine alignment and anti-alignment, not approval and suppression.",
+    "Cross-sector family matching does not imply measured cross-sector graph edges.",
+    "State 00 is the uncontextualised newline embedding.",
+    "State 64 is a final-normalised representation, not an additional transformer reasoning block.",
+    "Large lexical, code, multilingual, formatting and named-entity communities remain outside the minimum prompt-specific map.",
+    "One prompt in one order cannot establish perturbation invariance."
+  ]
+}
