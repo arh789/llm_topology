@@ -15340,3 +15340,108 @@ uncommitted in the manifest's source status. The execution used those verified
 working files. Implementation, curated output and housekeeping changes remain
 uncommitted at this record; no new commit or push is claimed.
 
+
+
+### MA-0094 — R015 independent semantic reconstruction and R014 comparison
+
+- Entry timestamp: `2026-11-15`
+- Author/source: `ChatGPT semantic analysis`
+- Entry type: `downstream semantic reconstruction and cross-run comparison`
+- Related run: `R015_qwen-adjacent-neighbourhood-expansion`
+
+The completed R015 measurement was reconstructed independently from its
+published community summaries and community-edge evidence before alignment with
+R014. First-pass probe-local labels were assigned from recurrent R015 content,
+then matched across P1-P4.
+
+Six cross-probe families were recovered in 4/4 probes:
+
+```text
+sensing / instrumentation
+built place / locality
+spatial / measurement structure
+organised group / activity
+process / comparison / modification
+reporting / information
+```
+
+The first four correspond to the four semantic regions sampled by the R015
+seeds. The latter two recur without being supplied as prompt concepts.
+
+Held-out reconstruction persists at the family level in every probe:
+
+```text
+P1 holds out sessions:
+  literal 6/6 orders, 18 post-context states
+  group/activity family 6/6 orders, all 28 states
+
+P2 holds out line:
+  literal 4/6 orders, 2 states in community summaries
+  spatial/measurement family 6/6 orders, 26 states
+
+P3 holds out apartment:
+  literal 4/6 orders, 12 states
+  built-place/locality family 6/6 orders, all 28 states
+
+P4 holds out sensor:
+  literal 6/6 orders, 21 states
+  sensing/instrumentation family 6/6 orders, all 28 states
+```
+
+The distinction between literal and family-level reconstruction is important:
+R015 strongly supports parent-region graph completion even where the exact held-
+out lexeme is weak.
+
+A conservative S06-S27 community-summary relation audit recovers the same
+higher-order backbone seen in R014:
+
+```text
+positive:
+  sensing/instrumentation <-> built place/locality        ~.94
+  sensing/instrumentation <-> spatial/measurement         ~.31
+  built place/locality     <-> spatial/measurement         ~.30
+  sensing/instrumentation <-> reporting/information       ~.59
+
+negative:
+  spatial/measurement     <-> organised group/activity    ~.68
+  organised group/activity <-> process/comparison/change  ~.70
+  spatial/measurement     <-> process/comparison/change   ~.51
+```
+
+The major R015 deformation is the unsupplied process/change family. In addition
+to the negative manipulation/process/comparison expression, a positive
+enlargement/transformation/removal expression recurs across all probes. The
+positive audit therefore finds substantial sensing ↔ process (~.70), place ↔
+process (~.67) and process ↔ reporting (~.44) relations. The family persists
+but is more cross-sector and more integrated than R014's negative-dominant
+interaction/change parent.
+
+The spatial family also deforms: it remains a cross-sector semantic bridge but
+is more negative-dominant in R015's published community summaries. Its positive
+couplings to sensing and place persist at lower diagnostic support than in
+R014.
+
+After independent reconstruction, R014 and R015 were aligned. All six R014
+parent families have clear R015 counterparts. The dominant positive
+sensing/place pair survives, as does the negative spatial/group/process chain.
+The strongest supported conclusion is therefore:
+
+> R015 supports the claim that R014 discovered a locally persistent semantic
+> topology rather than merely decomposing the four literal R014 prompt
+> concepts. The topology is continuous under neighbouring-token movement but
+> deforms rather than remaining rigid.
+
+This does not establish a global transformer ontology or causal internal
+variables. The next clean experiment is a distant-region replication using the
+same measurement and independent-reconstruction method. SDA-3 comparison
+should remain downstream until that additional independent topology exists.
+
+Primary records:
+
+- `R015_PROBE_RECONSTRUCTIONS.md`
+- `R015_SEMANTIC_MAP_NODES.csv`
+- `R015_SEMANTIC_MAP_EDGES.csv`
+- `R015_SEMANTIC_MAP.json`
+- `R014_R015_COMPARISON.md`
+- `R015_RUN_ANALYSIS_AND_RECOMMENDATIONS.html`
+
