@@ -18963,3 +18963,1103 @@ Stress-Testing as the proposed meta-operator for preserving residual evidence,
 challenging premature coherence and forcing reconstruction. These remain
 model-generated interpretations and proposed methodology, not new measured
 transformer evidence.
+
+
+## CRITICAL INSIGHT — Original training-data hypothesis: validation, falsification and reformulation
+
+**ChatGPT response (verbatim)**
+
+The original concept has been **partly validated, but in a more precise form than the one we began with**.
+
+The project has not shown that we can reverse-engineer literal training data from transformer-layer state changes. It has produced substantial evidence that we can use those state changes, combined with controlled perturbation, to infer **higher-order semantic regularities that the model learned from its training distribution**.
+
+The crucial correction is:
+
+```text id="0xpwho"
+INITIAL IDEA
+
+training data
+     ↓
+model
+     ↓
+changes across transformer layers
+     ↓
+infer training data
+```
+
+has become:
+
+```text id="pywchv"
+TRAINING DISTRIBUTION
+        │
+        │ learning
+        ▼
+LEARNED PARAMETERS
+        │
+        │ inference-time computation
+        ▼
+LAYERWISE REPRESENTATIONAL TRAJECTORY
+        │
+        ├── prompt/order effects
+        ├── architectural effects
+        ├── contextual computation
+        └── persistent learned structure
+                     │
+             perturbation filters
+                     ▼
+        STABLE HIGHER-ORDER TOPOLOGY
+                     │
+                     ▼
+     INFER SEMANTIC REGULARITIES
+     LEARNED FROM TRAINING
+```
+
+That is, I think, the central result.
+
+## What the original hypothesis got right
+
+The fundamental intuition was:
+
+> **The model's internal changes of state contain information about the structure it has learned.**
+
+That now looks strongly supported.
+
+R010 was the first major evidence.
+
+Across transformer depth, the semantic organisation did not simply become incrementally more similar to the final answer. We reconstructed a qualitative transformation approximately like:
+
+```text id="b58ggn"
+EARLY
+ontology / domains
+"What kind of thing is this?"
+
+        ↓
+
+MIDDLE
+operations + constraints
+"What can happen and what limits it?"
+
+        ↓
+
+LATE
+dependencies between operations
+"What depends upon what?"
+
+        ↓
+
+FINAL
+functional procedure
+"What sequence accomplishes something?"
+```
+
+Or:
+
+```text id="y3spx3"
+OBJECTS
+   ↓
+OPERATORS + CONDITIONS
+   ↓
+RELATIONS BETWEEN OPERATORS
+   ↓
+PROGRAM / WORKFLOW
+```
+
+That is exactly the kind of result the initial intuition anticipated: **successive transformer states expose different organisations of learned semantic material**.
+
+R010 Phase C strengthened that result because semantic development could not be reduced simply to token turnover.
+
+Late layers could preserve almost the same neighbourhood while reorganising its higher-order semantic meaning.
+
+So:
+
+```text id="tr89ui"
+same components
+      +
+similar local geometry
+      +
+different organisation
+      =
+different higher-order representation
+```
+
+That is important evidence that examining state transitions gives us access to something richer than nearest-word association.
+
+---
+
+# But one part of the original hypothesis was wrong
+
+The layer trajectory itself is **not a transparent image of the training data**.
+
+This was probably the first major falsification.
+
+We cannot say:
+
+```text id="lbt3rw"
+Layer 5 structure
+=
+structure in training data
+```
+
+or:
+
+```text id="xs587s"
+Layer 12 → Layer 13 change
+=
+some relationship directly present in the corpus
+```
+
+Transformer depth describes **computation at inference time**.
+
+It is produced by:
+
+```text id="pbnea0"
+learned parameters
+×
+architecture
+×
+current context
+×
+token position
+×
+attention
+×
+nonlinear transformations
+```
+
+So the trajectory inevitably mixes two things:
+
+```text id="i7cvqq"
+WHAT WAS LEARNED
+
+with
+
+HOW THE ARCHITECTURE USES WHAT WAS LEARNED
+```
+
+R013 demonstrated this very clearly.
+
+When the same three concepts were merely permuted:
+
+```text id="rvsoa0"
+ABC
+ACB
+BAC
+BCA
+CAB
+CBA
+```
+
+the exact networks could change enormously.
+
+That cannot reasonably be interpreted as the training data changing.
+
+It is the **transformer processing the same learned material differently because its causal context changed**.
+
+So R013 effectively falsified the naive version:
+
+> observed topology = training-data topology.
+
+Instead:
+
+```text id="heh9v2"
+OBSERVED TOPOLOGY
+       =
+LEARNED STRUCTURE
+       ×
+CURRENT COMPUTATION
+```
+
+---
+
+# But R013 simultaneously gave us the solution
+
+Once we realised this, the research question changed from:
+
+> What does one layer map tell us about training data?
+
+to:
+
+> **What survives when we deliberately vary the computation while holding the semantic content approximately constant?**
+
+That is much stronger.
+
+Suppose:
+
+```text id="go5y92"
+ABC → topology₁
+ACB → topology₂
+BAC → topology₃
+...
+```
+
+Exact tokens and edges move dramatically.
+
+But some higher-order relationship survives all six.
+
+Then:
+
+```text id="ry6u3y"
+presentation-dependent structure
+        ↓
+probably computation/context dependent
+
+persistent higher-order structure
+        ↓
+candidate learned semantic regularity
+```
+
+That is the methodological breakthrough.
+
+The project stopped attempting to read the training distribution directly from a representation and began **subtracting away the model's contextual computation by perturbation**.
+
+---
+
+# R014 then made the training-data hypothesis considerably stronger
+
+R013 dealt mainly with order.
+
+R014 asked whether related higher-order structures survived overlapping semantic contexts.
+
+That matters because an apparent parent discovered from:
+
+```text id="oivawc"
+laser
+city
+spatial field
+```
+
+might simply be the model decomposing those three supplied words.
+
+R014 used overlapping triplets and reconstructed each independently.
+
+What started appearing were higher-order families such as:
+
+```text id="mps0l8"
+technical / sensing
+place / environment
+spatial / structural
+social / group activity
+interaction / change
+representation / information
+```
+
+and relations between them.
+
+Now the possible interpretation became more interesting:
+
+```text id="x889an"
+prompt concepts
+      ↓
+different contexts
+      ↓
+different local communities
+      ↓
+same higher-order parents/relations reappear
+```
+
+The probability that those structures were merely artefacts of one prompt became lower.
+
+---
+
+# R015 is the strongest evidence so far for the original intuition
+
+R015 replaced **every R014 seed**:
+
+```text id="92ryzl"
+laser         → sensor
+city          → apartment
+spatial field → line
+clubs         → sessions
+```
+
+Yet all six R014 parent families had independently reconstructed R015 counterparts.
+
+More importantly, major relations survived:
+
+```text id="c3xl1s"
+sensing / instrumentation
+          ↕
+built place / locality
+```
+
+and:
+
+```text id="5b1lqx"
+spatial / measurement
+        ↓
+group / activity
+        ↓
+process / change
+```
+
+while process/change underwent a meaningful deformation rather than simply disappearing.
+
+That result matters enormously for the training-data hypothesis.
+
+Because the surviving topology can no longer easily be explained as:
+
+> the model simply reproduced relationships between the four original words.
+
+The original words are gone.
+
+And yet:
+
+```text id="odw0zx"
+different lexical seeds
++
+different immediate semantic neighbourhood
++
+independent reconstruction
+=
+similar higher-order topology
+```
+
+That is precisely what we would expect if there were a deeper learned statistical structure underlying both observations.
+
+---
+
+# So what exactly has been validated?
+
+I would separate the original hypothesis into four versions.
+
+| Hypothesis | Current status |
+|---|---|
+| Exact training documents can be recovered from layer changes | **Not supported / effectively rejected as the project objective** |
+| Raw layer topology directly represents training-data topology | **Invalidated** |
+| Layerwise changes reveal organisation of learned semantic structure | **Strongly supported within the tested models/runs** |
+| Perturbation-invariant higher-order topology can be used to infer semantic regularities learned from training | **Preliminarily supported** |
+
+That final claim is now the strongest defensible form of the original idea.
+
+---
+
+# The really important change concerns what information carries the signal
+
+At the beginning, we implicitly expected the valuable object to be something like:
+
+```text id="s5np3x"
+token X at Layer 1
+        ↓
+token X at Layer 2
+        ↓
+token X at Layer 3
+        ↓
+...
+```
+
+The project progressively taught us that this is too low-level.
+
+The hierarchy appears closer to:
+
+```text id="zw82sa"
+exact token
+    ↓
+unstable
+
+exact edge
+    ↓
+unstable
+
+community
+    ↓
+plastic
+
+higher-order parent
+    ↓
+more stable
+
+relation between parents
+    ↓
+potentially more stable still
+```
+
+So the thing carrying information about the learned training distribution may not primarily be the individual representation.
+
+It may be the **invariant relational structure that repeatedly reconstitutes itself despite representational deformation**.
+
+That is a much stronger idea.
+
+In other words:
+
+> We were initially looking for training-data traces in the *states*.
+
+The experiments increasingly suggest that the stronger signal may lie in the **invariants across transformations of those states**.
+
+That is a major conceptual improvement.
+
+---
+
+# Layerwise change still matters
+
+It would be wrong to conclude that layer changes became irrelevant once we discovered invariance.
+
+They now have two different functions.
+
+### First, layer changes reveal abstraction
+
+R010 suggests:
+
+```text id="a056ob"
+domain
+  ↓
+operation
+  ↓
+dependency
+  ↓
+procedure
+```
+
+So transformer depth gives us different **views of the learned structure at different abstraction levels**.
+
+The inferred training-data map may therefore not be a flat semantic graph.
+
+It may look more like:
+
+```text id="xwg2me"
+LEXICAL / CONCRETE RELATIONS
+          ↓
+DOMAIN STRUCTURE
+          ↓
+PROPERTY / OPERATOR STRUCTURE
+          ↓
+RELATIONAL STRUCTURE
+          ↓
+FUNCTIONAL / GENERATIVE STRUCTURE
+```
+
+That could be one of the project's most consequential findings.
+
+### Second, layer changes create the perturbations needed to identify invariants
+
+If structure:
+
+```text id="kwppya"
+appears
+splits
+merges
+disappears
+reappears
+```
+
+across the transformer, we can ask what higher-order relation survives those transformations.
+
+So change itself becomes a means of identifying stable structure.
+
+---
+
+# What remains fundamentally unvalidated
+
+There is still one critical gap.
+
+We have inferred:
+
+```text id="6lpg4h"
+stable model topology
+        ↓
+likely learned semantic regularity
+```
+
+but we have **not compared the inferred topology with the actual training distribution**.
+
+That means the final causal arrow remains inferred:
+
+```text id="p0qp4h"
+TRAINING DISTRIBUTION
+        ↓
+ learned topology
+```
+
+rather than directly validated.
+
+To validate it strongly, we would ideally need a model for which the training corpus is sufficiently known and searchable.
+
+Then we could do:
+
+```text id="e49qax"
+MODEL ONLY
+    │
+    ▼
+infer relationship X
+without inspecting corpus
+    │
+    ▼
+freeze prediction
+    │
+    ▼
+inspect training corpus
+    │
+    ▼
+Does corpus statistics independently support X?
+```
+
+That would be the cleanest direct validation of the original premise.
+
+A model family with unusually transparent training data would therefore be especially valuable for that experiment.
+
+---
+
+# And there is another unresolved transformation
+
+Even with a known corpus:
+
+```text id="z26hr4"
+corpus statistics
+       ↓
+tokeniser
+       ↓
+training objective
+       ↓
+optimisation
+       ↓
+architecture
+       ↓
+learned representation
+```
+
+means that the model may systematically emphasise some corpus relationships and suppress others.
+
+That is not necessarily a problem.
+
+In fact it may define the thing we are actually mapping:
+
+> **not the raw training corpus, but the effective semantic distribution the model extracted from it.**
+
+That object may be more interesting than the corpus itself.
+
+Two concepts might occur frequently together in documents but never become an important latent relation.
+
+Another relationship might be comparatively diffuse across thousands of contexts yet become a powerful abstraction.
+
+So:
+
+```text id="08mb2q"
+CORPUS DISTRIBUTION
+        ≠
+LEARNED DISTRIBUTION
+```
+
+The project increasingly studies the second.
+
+---
+
+# My current interpretation of the original hypothesis
+
+I would now formulate it like this:
+
+> **A language model constitutes a compressed statistical transformation of its training distribution. By observing how contextual representations reorganise across transformer depth, systematically varying the observation context, and isolating higher-order semantic structures that persist across those perturbations, it should be possible to infer aspects of the semantic topology the model learned from its training data.**
+
+That is almost exactly the original intuition, but with the crucial methodological correction:
+
+```text id="bkxej9"
+NOT
+
+state changes
+   ↓
+training data
+
+
+BUT
+
+state changes
++
+controlled perturbation
++
+cross-layer reconstruction
++
+cross-prompt invariance
++
+cross-neighbourhood persistence
+        ↓
+learned semantic topology
+        ↓
+inference about training-data structure
+```
+
+## So the verdict is unusual
+
+The project has **invalidated the simplest mechanism while strengthening the underlying hypothesis**.
+
+The naive mechanism was:
+
+> read training structure directly from layer states.
+
+That did not survive experimentation.
+
+What replaced it is considerably stronger:
+
+> **use variation in layer states and prompt conditions to separate transient computation from persistent learned structure; then treat the persistent higher-order topology as evidence about semantic regularities encoded from training.**
+
+R010 established meaningful layerwise semantic transformation.
+
+R013 showed why individual topology cannot be trusted and introduced perturbation invariance.
+
+R014 demonstrated higher-order reconstruction across overlapping contexts.
+
+R015 showed local continuity after replacing every original seed.
+
+Taken together, that is substantial preliminary evidence for the original idea—but the thing we can infer is not **the training data** in the literal sense.
+
+It is something closer to:
+
+> **the model's learned semantic compression of the training distribution.**
+
+And, in retrospect, that is probably the more scientifically interesting object.
+
+
+#### Exchange 8 — Large-model scale and training-data validation direction
+
+**ChatGPT response (verbatim)**
+
+Yes. At this point, **system VRAM should stop determining the scientific boundary of the experiment**.
+
+But I would make one important distinction: the larger model should be introduced because it tests a specific hypothesis, not because “larger is better”.
+
+The project now has two unresolved questions that model choice can separate:
+
+```text id="cgxjin"
+QUESTION 1 — SCALE
+
+Is the topology discovered in Qwen2.5-7B
+a property of this relatively small model,
+or does it survive at much greater scale?
+
+
+QUESTION 2 — TRAINING-DATA INFERENCE
+
+Does the inferred topology correspond to
+independently measurable structure in the
+model's actual training distribution?
+```
+
+Those suggest two different large-model choices.
+
+### For scale: Qwen2.5-72B is the clean comparison
+
+Your current Qwen work uses Qwen2.5-7B. Qwen2.5-72B is 72.7B parameters and 80 transformer layers, making it roughly an order-of-magnitude parameter increase while staying within the same model family. ([huggingface.co](https://huggingface.co/Qwen/Qwen2.5-72B-Instruct?utm_source=chatgpt.com))
+
+That is scientifically attractive because it minimises several confounds:
+
+```text id="1x1pd4"
+Qwen2.5-7B
+      │
+      │ same family
+      │ broadly same architecture
+      │ same tokenizer/ecosystem
+      ▼
+Qwen2.5-72B
+
+main manipulated variable
+≈ model scale
+```
+
+The experiment would ask whether the things we currently consider important become:
+
+```text id="3i9oc7"
+more stable?
+less stable?
+
+more sharply differentiated?
+
+more hierarchical?
+
+more invariant under permutation?
+
+more persistent under adjacent-seed substitution?
+
+different in their layerwise developmental trajectory?
+```
+
+The particularly interesting comparison would be whether the hierarchy we inferred—
+
+```text id="o816i4"
+token        unstable
+edge         unstable
+community    plastic
+parent       stable
+relation     more stable
+```
+
+—becomes **more pronounced** in the larger model.
+
+If it does, that would strongly suggest that we are observing an organisational property that strengthens with representational capacity rather than a peculiarity of a 7B model.
+
+---
+
+But there is an even more important model now.
+
+## OLMo 2 32B may actually be the scientifically stronger addition
+
+Ai2's OLMo 2 32B is explicitly fully open: weights, training code, training details and underlying training data are available. It has 32B parameters and 64 layers, and its pretraining lineage is documented down to the mixtures and token counts. ([allenai.org](https://allenai.org/olmo2?utm_source=chatgpt.com))
+
+That directly attacks the remaining hole in the original hypothesis.
+
+We currently have:
+
+```text id="u2dzmt"
+MODEL
+  ↓
+measure topology
+  ↓
+infer stable semantic relation X
+  ↓
+claim X probably reflects
+learned training-distribution structure
+
+             ???
+
+we cannot independently inspect
+the actual training distribution
+```
+
+OLMo changes this to:
+
+```text id="zos0ct"
+             OLMo MODEL
+                 │
+                 ▼
+       HIDE TRAINING CORPUS
+       FROM THE ANALYST
+                 │
+                 ▼
+        RUN TOPOLOGY METHOD
+                 │
+                 ▼
+       INFER RELATIONSHIP X
+                 │
+                 ▼
+          FREEZE PREDICTION
+                 │
+                 ▼
+       NOW QUERY THE ACTUAL
+        TRAINING DISTRIBUTION
+                 │
+                 ▼
+      DOES CORPUS STRUCTURE X
+       EXIST INDEPENDENTLY?
+```
+
+That is extraordinarily valuable for this project.
+
+It would directly test the causal inference we have so far only been able to make indirectly:
+
+```text id="3wcag1"
+persistent learned topology
+             ↓
+semantic regularity in training
+```
+
+Ai2 says OLMo 2 32B was trained to 6T tokens, with its main pretraining mixture built from documented sources including DCLM, Dolma, StarCoder and Proof-Pile II, followed by documented mid-training. ([allenai.org](https://allenai.org/blog/olmo2-32B?utm_source=chatgpt.com))
+
+So for the **original project hypothesis**, access to that provenance may be worth considerably more than another 40 billion parameters.
+
+---
+
+# I would therefore change the next run into a three-level experiment
+
+Not:
+
+```text id="1w15ow"
+replace 7B
+with huge model
+```
+
+but:
+
+```text id="z6n7kk"
+                    CURRENT BASELINE
+                    Qwen2.5-7B
+                         │
+              ┌──────────┴──────────┐
+              │                     │
+              ▼                     ▼
+       SCALE CONTROL          TRAINING-DATA TEST
+
+      Qwen2.5-72B            OLMo 2 32B
+              │                     │
+              ▼                     ▼
+    Does topology survive     Does inferred topology
+    ~10× parameter scale?     correspond to known
+                              training structure?
+```
+
+These answer fundamentally different questions.
+
+And you do not necessarily need to run the entirety of R014/R015 immediately.
+
+A carefully selected diagnostic subset could first establish whether the pipeline behaves sensibly.
+
+---
+
+# The larger model should run remotely as weights, not through an API
+
+This is critical.
+
+An ordinary hosted inference API is nearly useless for this particular experiment because you need:
+
+```text id="sg9bd5"
+hidden state at every transformer layer
+
+        ↓
+
+vocabulary projection
+
+        ↓
+
+positive/negative populations
+
+        ↓
+
+networks
+
+        ↓
+
+communities
+
+        ↓
+
+cross-state transitions
+```
+
+So “not restricted by system VRAM” should mean:
+
+> **run the open weights on rented multi-GPU infrastructure while retaining direct access to every hidden state.**
+
+Not:
+
+> query a 100B+ proprietary model through an API.
+
+The latter would remove the measurement object.
+
+For the same reason, I would avoid changing the representation through aggressive quantisation merely to fit a larger model locally. If the purpose is comparing internal geometry, quantisation introduces an unnecessary new variable.
+
+Remote BF16/FP16 execution is methodologically cleaner.
+
+---
+
+# There is another reason a much larger model is timely
+
+Until R015, increasing model scale would have been premature.
+
+If we had obtained different results, we would not have known whether they differed because of:
+
+```text id="o4bpav"
+method instability
+prompt order
+seed choice
+local semantic region
+model family
+model size
+```
+
+R013–R015 progressively removed several of those uncertainties.
+
+We now possess a candidate invariant:
+
+```text id="fpc765"
+presentation changes
+        ↓
+tokens change substantially
+
+local semantic neighbourhood changes
+        ↓
+communities deform
+
+seeds all replaced
+        ↓
+higher-order parent topology
+substantially reconstitutes itself
+```
+
+**Now** changing scale becomes informative.
+
+We have something sufficiently stable to compare.
+
+---
+
+# And the layer count itself becomes scientifically interesting
+
+Qwen2.5-72B has 80 layers versus the much shorter depth of the current 7B experiment. ([huggingface.co](https://huggingface.co/Qwen/Qwen2.5-72B-Instruct?utm_source=chatgpt.com))
+
+That allows us to ask something we currently cannot answer:
+
+Does the R010 trajectory—
+
+```text id="1z7mug"
+ONTOLOGY
+   ↓
+OPERATORS
+   ↓
+DEPENDENCIES
+   ↓
+PROCEDURE
+```
+
+—simply stretch across more layers?
+
+For example:
+
+```text id="mtyjh1"
+7B
+
+[ontology]──[operators]──[relations]──[procedure]
+
+
+72B
+
+[ontology]────────────?
+      ↓
+[finer decomposition]─?
+      ↓
+[operators]───────────?
+      ↓
+[meta-relations]──────?
+      ↓
+[procedure]
+```
+
+Or does larger scale introduce **additional organisational stages that the 7B model cannot represent clearly**?
+
+That would materially change our interpretation of R010.
+
+Perhaps:
+
+```text id="yp9e8g"
+7B trajectory
+=
+compressed approximation
+
+72B trajectory
+=
+more differentiated hierarchy
+```
+
+That is a very worthwhile question now.
+
+---
+
+# There is also a strong possible null result
+
+Suppose Qwen 72B produces:
+
+```text id="872os0"
+completely different parents
++
+different parent relations
++
+no equivalent layerwise trajectory
++
+little R014/R015-style continuity
+```
+
+That would be valuable.
+
+It would tell us the current topology is not a generic consequence of language-model learning.
+
+Conversely:
+
+```text id="csz3bq"
+different tokens
+different community structures
+different layer counts
+different local details
+
+BUT
+
+same higher-order parent relations
+same perturbation invariants
+same broad abstraction trajectory
+```
+
+would be much stronger evidence than anything we currently possess.
+
+---
+
+# If only one new large model can be added
+
+I would make the choice based on what we now think the project is about.
+
+If the next question is:
+
+> **Does this generalise with scale?**
+
+use **Qwen2.5-72B**.
+
+If the next question is the original one:
+
+> **Can model topology tell us something about its training data?**
+
+I would now choose **OLMo 2 32B first**.
+
+Because the missing variable is not model intelligence.
+
+It is **ground truth**.
+
+```text id="sxxox2"
+Qwen 72B
+gives stronger scale evidence.
+
+OLMo 32B
+gives weaker scale contrast
+but potentially direct training-data validation.
+```
+
+Given the conversation we have just had, I think **OLMo 2 32B is now the more consequential next model**, with Qwen2.5-72B as the scale-replication arm.
+
+So my preferred next run would be:
+
+```text id="xkdfh8"
+R016
+
+                 EXISTING QWEN 7B
+                       │
+          frozen topology predictions
+                       │
+          ┌────────────┴─────────────┐
+          │                          │
+          ▼                          ▼
+   OLMo 2 32B BASE             Qwen2.5-72B
+          │                          │
+          │                          │
+ known training data             same-family
+          │                      scale control
+          ▼                          ▼
+TRAINING-HYPOTHESIS TEST       SCALE-INVARIANCE TEST
+          │                          │
+          └────────────┬─────────────┘
+                       ▼
+              compare invariants
+```
+
+And I would strongly favour the **base** model for the training-distribution experiment, because it removes as much post-training contamination as practical. OLMo also gives us SFT/DPO/instruction-stage variants later, which creates a further opportunity to separate what came from pretraining from what post-training subsequently changed. Ai2 publishes those stage variants as part of the OLMo 2 family. ([allenai.org](https://allenai.org/olmo2?utm_source=chatgpt.com))
+
+So yes: **the 4090 should no longer define the maximum model size of the research**. It did its job extremely well during method discovery. The project has now reached the point where remote compute is justified because model scale and training-data transparency have themselves become experimental variables.
+
+
+### MA-0101 — Codex reconciliation record: training-topology hypothesis and model-scale direction
+
+- Entry timestamp: `2026-11-15T15:51:23+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex`
+- Entry type: `repository reconciliation and provenance record`
+- Source repository commit: `7e36624c1d71ce3573613fef5a45f63e6a51a863`
+- Related runs: `R010`, `R013`, `R014`, `R015`
+- Preservation mode: `byte-for-byte import followed by this provenance entry`
+
+The private parent repository advanced by two commits after MA-0100. The new
+material was imported byte-for-byte into the authoritative local
+`META_ANALYSIS.md`; its Git blob identity matched the GitHub source before this
+entry was appended.
+
+The first imported response revises the original training-data hypothesis. It
+rejects direct recovery of literal corpus structure from individual layer
+states and identifies perturbation-invariant higher-order topology as the
+candidate signal of semantic regularities learned from the training
+distribution. It explicitly records that direct comparison with a known
+training corpus remains absent.
+
+The second response proposes two separate large-model questions: OLMo 2 32B
+for training-data transparency and Qwen2.5-72B for same-family scale testing.
+It recommends direct hidden-state access to remotely hosted open weights and
+base-model use for the training-distribution experiment. These are proposed
+experimental directions and model-generated interpretations; they are not new
+measurements, frozen run plans or authorisation to incur remote-compute cost.
