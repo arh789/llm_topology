@@ -1,0 +1,11 @@
+edge_id,source,target,sector,probe_support,mean_network_support,min_probe_support,max_probe_support,interpretation
+E1,N1,N2,positive,4/4,0.94,0.91,0.95,"sensing/instrumentation is repeatedly situated with built-place/locality structure"
+E2,N3,N4,negative,4/4,0.68,0.58,0.83,"spatial/measurement structure repeatedly couples to organised group/activity"
+E3,N4,N5,negative,4/4,0.70,0.64,0.74,"organised group/activity repeatedly couples to process/comparison/change"
+E4,N3,N5,negative,4/4,0.51,0.46,0.54,"spatial/measurement structure repeatedly couples to process/comparison/change"
+E5,N1,N6,positive,4/4,0.59,0.53,0.64,"sensing/instrumentation repeatedly couples to reporting/information"
+E6,N1,N3,positive,4/4,0.31,0.27,0.33,"sensing/instrumentation retains a weaker positive relation to spatial structure"
+E7,N2,N3,positive,4/4,0.30,0.26,0.33,"built-place/locality retains a weaker positive relation to spatial structure"
+E8,N1,N5,positive,4/4,0.70,0.68,0.73,"R015 deformation candidate: process/modification vocabulary is strongly integrated with sensing on the positive side"
+E9,N2,N5,positive,4/4,0.67,0.63,0.72,"R015 deformation candidate: process/modification vocabulary is strongly integrated with place/locality on the positive side"
+E10,N5,N6,positive,4/4,0.44,0.39,0.47,"process/modification has a moderate positive relation to reporting/information"
