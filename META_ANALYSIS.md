@@ -18930,3 +18930,36 @@ RECURSIVE COHERENCE STRESS-TESTING
 SDA-3 may therefore be the **analytical operator**, while the methodology you used to teach me is the **meta-operator governing when to trust, reject and reconstruct the ontology produced by SDA-3**.
 
 That distinction may be important enough to formalise separately.
+
+
+### MA-0100 — Codex reconciliation record: R015 interpretation and SDA-3 methodology
+
+- Entry timestamp: `2026-11-15T15:34:39+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex`
+- Entry type: `repository reconciliation and provenance record`
+- Source repository commit: `354acc88200d63cbedc2ea170bccb0da0e98a9b7`
+- Related runs: `R013`, `R014`, `R015`
+- Preservation mode: `byte-for-byte import followed by this provenance entry`
+
+The private parent repository advanced from the last published R015 snapshot
+at `4908edc` through sixteen R015 semantic-analysis commits and three later
+meta-analysis commits, reaching `354acc8`. Eleven project files differed from
+the authoritative local working copy and were imported.
+
+The import adds the four independent R015 probe reconstructions, semantic-map
+nodes and edges, the R014–R015 comparison, the R015 analysis report and final
+relationship conclusion. It also imports the expanded project README and
+meta-analysis, plus two previously remote-leading R013 HTML reports.
+
+Before this entry was appended, every imported file was verified against the
+corresponding GitHub tree object. All eleven Git blob identities matched; no
+measured R013–R015 network, cutoff, community or capture artifact was altered.
+
+The new interpretive record concludes that all six R014 parent families recur
+in R015 with local deformation. It further reframes SDA-3 as a prospective,
+recursive topology-discovery process and identifies Recursive Coherence
+Stress-Testing as the proposed meta-operator for preserving residual evidence,
+challenging premature coherence and forcing reconstruction. These remain
+model-generated interpretations and proposed methodology, not new measured
+transformer evidence.
