@@ -15727,3 +15727,184 @@ If that can be demonstrated across multiple regions, including distant ones and 
 That is the significance of R015 within the longer trajectory of the metaanalysis.
 
 <text color="secondary" size="sm">Source: <Link url="https://github.com/arh789/chatgpt-analysis/blob/main/projects/llm-topology/META_ANALYSIS.md" title="META_ANALYSIS.md"/> — particularly MA-0082, MA-0083, MA-0089 and MA-0091–0094.</text>
+
+
+### MA-0096 — ChatGPT response: implications of R015 for SDA-3's evidential status
+
+- Entry date: `2026-11-15`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim ChatGPT analysis of R015 findings in relation to SDA-3`
+- Related runs: `R014_qwen-overlapping-context-semantic-map`; `R015_qwen-adjacent-neighbourhood-expansion`
+- Related entries: `MA-0090`, `MA-0094`, `MA-0095`
+- Preservation note: `Response text and presentation markup retained verbatim.`
+
+**R015 substantially strengthens the empirical premise behind SDA-3, but it does not yet validate SDA-3's five-category classification system.**
+
+The distinction is important. R015 supplies evidence for something SDA-3 has implicitly depended upon: that semantic information possesses recoverable higher-order organisation which remains recognisable despite substantial changes in the concepts used to access it.
+
+However, SDA-3 makes an additional claim: that this organisation can usefully be reconstructed through five particular structural categories.
+
+R015 supports the first proposition. It has not directly tested the second.
+
+## 1. Where SDA-3 now stands
+
+<box border radius="lg" padding={3} gap={3}>
+  <box gap={1}>
+    <row justify="between" align="center">
+      **Underlying semantic topology**
+      <badge color="success">Supported locally</badge>
+    </row>
+    <text color="secondary" size="sm">R014–R015 recover compatible higher-order parents and relations under controlled semantic displacement.</text>
+  </box>
+  <divider color="subtle"/>
+  <box gap={1}>
+    <row justify="between" align="center">
+      **Recoverability through analysis**
+      <badge color="success">Supported locally</badge>
+    </row>
+    <text color="secondary" size="sm">Community reconstruction and cross-probe alignment produce a repeatable candidate mapping procedure.</text>
+  </box>
+  <divider color="subtle"/>
+  <box gap={1}>
+    <row justify="between" align="center">
+      **SDA-3's five structural categories**
+      <badge>Not validated</badge>
+    </row>
+    <text color="secondary" size="sm">No independent test has established that C, S, A, HCU and E are the correct structural decomposition.</text>
+  </box>
+  <divider color="subtle"/>
+  <box gap={1}>
+    <row justify="between" align="center">
+      **SDA-3 as behavioural reverse engineering**
+      <badge>Not validated</badge>
+    </row>
+    <text color="secondary" size="sm">R015 uses hidden-state measurements, whereas SDA-3 is intended to infer structure from observable model behaviour.</text>
+  </box>
+</box>
+
+## 2. What R015 says about each SDA-3 category
+
+| SDA-3 structure | R015 relationship | Assessment |
+|---|---|---|
+| **C — Central** | Six recurrent semantic families, with identifiable core structures and dominant relations | Plausible structural analogue |
+| **S — Suppressed** | Coherent negative-cosine sector and differential sector participation | Not evidence of suppression |
+| **A — Adjacent** | Semantic structure persists when moving to neighbouring concepts | Supports neighbourhood continuity, not the category itself |
+| **HCU — Highly Correlated Unrelated** | No explicit test of semantically unrelated yet highly correlated structures | Untested |
+| **E — Emerging** | Process/change and information families recur without being supplied as seeds | Suggestive, not category validation |
+
+The distinction concerning **Suppressed** is particularly important.
+
+The project's <Link url="https://github.com/arh789/chatgpt-analysis/blob/main/projects/llm-topology/METHODOLOGY.md" title="methodology"/> explicitly rejects equating negative cosine similarity with suppression.
+
+Negative cosine measures geometric anti-alignment in the selected representation. It does not establish that a concept is contradicted, inhibited, excluded or prevented from appearing.
+
+Consequently, R015's negative-sector findings cannot directly validate SDA-3's Suppressed category.
+
+Likewise, a parent appearing without being prompted is not automatically an instance of SDA-3's Emerging category. That requires a separate definition and test.
+
+## 3. R015 suggests a potentially important refinement to SDA-3
+
+R015 discovered something relevant to how the five categories might work.
+
+The process/change family retained its broader identity while acquiring stronger relationships in a different geometric sector.
+
+This suggests a distinction between:
+
+- **Semantic identity:** what a parent represents.
+- **Structural role:** how that parent participates in a particular semantic organisation.
+
+The same semantic parent may occupy different roles under different contexts.
+
+That raises an important possibility:
+
+**SDA-3's five structures may be better understood as context-dependent relational roles rather than five permanent types of semantic content.**
+
+For example, a concept could be central in one observation window, adjacent in another, and associated with an emerging relation in a third.
+
+This interpretation would make SDA-3 a framework for characterising the *organisation of semantic relationships*, not merely sorting vocabulary into five buckets.
+
+It would also raise questions about mutually exclusive assignments and percentage distributions summing to 100%. R015 has not resolved whether such exclusive categorisation is justified.
+
+## 4. The relationship to the project's ultimate objective
+
+The metaanalysis establishes two related but distinct research activities:
+
+```text id="j78fei"
+MODEL'S LEARNED SEMANTIC ORGANISATION
+                  │
+         ┌────────┴─────────┐
+         │                  │
+         ▼                  ▼
+    R014 / R015            SDA-3
+         │                  │
+  Hidden-state and      Observable
+  network evidence      model behaviour
+         │                  │
+         ▼                  ▼
+  Independently          Five-category
+  reconstructed          structural
+  semantic graph         reconstruction
+         │                  │
+         └────────┬─────────┘
+                  │
+                  ▼
+          FUTURE VALIDATION
+                  │
+      Does SDA-3 reconstruct
+      independently measured
+      semantic relationships?
+                  │
+          ┌───────┴───────┐
+          │               │
+          ▼               ▼
+       Agreement       Disagreement
+          │               │
+   Stronger support    Revise, restrict
+   for SDA-3           or reject claims
+```
+
+This comparison is not yet possible in a sufficiently independent way.
+
+R015 supplies a stronger empirical reference against which SDA-3 could eventually be evaluated. But the reference currently covers only one adjacent semantic neighbourhood.
+
+The metaanalysis entry MA-0090 correctly identifies the need for distant-region replication before confronting SDA-3 with the resulting topology.
+
+## 5. What would constitute a real SDA-3 validation?
+
+The decisive experiment would be to keep the two reconstruction processes independent.
+
+First, continue generating semantic maps through hidden-state measurements, without applying SDA-3 labels.
+
+Then apply SDA-3 to observable model behaviour relating to the same concept sets, without showing it the measured maps.
+
+Finally, compare the resulting structural interpretations using predefined tests.
+
+This would establish whether SDA-3 can:
+
+1. Recover relationships that independently appear in the measured topology.
+2. Distinguish persistent core structures from context-dependent ones.
+3. Correctly identify genuinely suppressed relationships, rather than simply negative-cosine associations.
+4. Identify adjacent, unrelated-but-correlated and emerging structures according to independently specified criteria.
+5. Predict what changes and what survives when the observation window moves.
+
+A successful outcome would be more important than retrospective agreement between SDA-3 terminology and selected R015 observations.
+
+It would establish that SDA-3 has **predictive or reconstructive validity against independently measured semantic structure**.
+
+## 6. The actual change in SDA-3's status
+
+Before R014–R015, SDA-3 was primarily a proposed framework for interpreting the statistical relationships expressed through model behaviour.
+
+After R015, there is empirical support for the existence of a locally persistent higher-order semantic organisation to which such a framework might correspond.
+
+That strengthens the rationale for investigating SDA-3.
+
+It does not establish that the five categories are exhaustive, mutually exclusive, universal or the most effective classification.
+
+The deeper implication is that SDA-3 can now be moved towards an independently testable research hypothesis rather than remaining primarily an interpretative protocol.
+
+**My assessment is therefore that R015 strengthens the case for studying SDA-3, without materially establishing the correctness of SDA-3 itself.**
+
+The next major milestone is not to find five categories in the R015 map. It is to determine whether those categories emerge as useful, distinguishable and predictive organisational roles across multiple independently reconstructed semantic regions.
+
+That is where SDA-3 would move from a proposed semantic-analysis framework towards an empirically validated one.
