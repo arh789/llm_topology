@@ -20264,3 +20264,457 @@ possible future topology experiments. Those passages are preserved as
 historical planning, not executed run identities. The actual, frozen R016 is
 `R016_olmo3-32b-local-bf16-feasibility`; its plan, manifest and report define
 what R016 means operationally.
+
+---
+
+The repository has advanced substantially since the last checkpoint at `354acc8`. Current head is **`28e8e2d`**, six commits ahead.
+
+The most important change is that the project has moved from **conceptual consolidation after R015** into **testing a new measurement instrument**.
+
+### What changed
+
+| Change | Status | Significance |
+|---|---|---|
+| R015 reconciliation | Complete | R015 interpretation and methodology formally reconciled into the repository |
+| Original training-data hypothesis | Reformulated | Literal corpus recovery is rejected; persistent topology is now the target |
+| Project objective | Clarified | The model is treated as a compressed semantic abstraction/index of its training distribution |
+| Larger-model strategy | Reframed | Cross-model comparison is supporting validation, not the central objective |
+| Local model ceiling | Reassessed | The previous ~7B practical ceiling was shown to be far too conservative |
+| **R016** | **Executed successfully** | **OLMo 3 32B BF16 can be instrumented locally on the RTX 4090 system** |
+| Documentation | Updated | Main README and topology README now reflect R015 completion and R016 |
+| Cache/run housekeeping | Complete | Failed download residue removed without touching validated evidence |
+
+The six new commits are:
+
+```text id="s5ge66"
+354acc8   previous checkpoint
+   │
+   ├─ 56545c3  Record R015 analysis reconciliation — MA-0100
+   ├─ dcfb39d  Add critical insight on original training-data hypothesis
+   ├─ 7e36624  Add large-model / training-data validation analysis
+   ├─ f22729b  Record training-topology reconciliation — MA-0101
+   ├─ 6dca74a  Validate OLMo 3 32B local feasibility
+   └─ 28e8e2d  Complete R016 feasibility housekeeping
+                ← CURRENT HEAD
+```
+
+## 1. The theoretical object of the project has become much more precise
+
+The major addition to `META_ANALYSIS.md` is the reformulation of the original hypothesis.
+
+The original idea was roughly:
+
+```text id="sojhq1"
+training data
+     ↓
+transformer layer changes
+     ↓
+infer training data
+```
+
+The repository now explicitly rejects that literal interpretation.
+
+The new model is:
+
+```text id="72qzxe"
+TRAINING DISTRIBUTION
+        ↓
+learned parameters
+        ↓
+contextual transformer computation
+        ↓
+changing representations
+        ↓
+controlled perturbation
+        ↓
+PERSISTENT HIGHER-ORDER STRUCTURE
+        ↓
+learned semantic topology
+```
+
+The critical distinction is now:
+
+```text id="zdiysh"
+observed topology
+      ≠
+training-data topology directly
+```
+
+because layer behaviour contains:
+
+```text id="b59koi"
+learned structure
+      ×
+architecture
+      ×
+context
+      ×
+position
+      ×
+inference-time computation
+```
+
+R013–R015 have therefore changed the measurement target from **states themselves** to **invariants across transformations of states**.
+
+The hierarchy recorded in the meta-analysis is essentially:
+
+```text id="9hy2ak"
+token
+  ↓ unstable
+
+edge
+  ↓ unstable
+
+community
+  ↓ plastic
+
+higher-order parent
+  ↓ more stable
+
+relation between parents
+  ↓ potentially more stable still
+```
+
+That is arguably the largest conceptual change in the repository.
+
+---
+
+## 2. The project objective has been narrowed again
+
+MA-0102 makes another important correction.
+
+The project is **not becoming a model-comparison project**.
+
+The primary object is now:
+
+```text id="zf6gum"
+training distribution
+        ↓
+model's learned compression
+        ↓
+controlled semantic probes
+        ↓
+perturbation-stable parents + relations
+        ↓
+inferred semantic topology
+```
+
+Or, in the repository's new formulation:
+
+> **Use a language model as a compressed semantic index of its training distribution, and develop a disciplined method for recovering the stable higher-order structure encoded within it.**
+
+That changes the purpose of other models.
+
+```text id="02rwby"
+OLMo
+   → methodological/corpus validation
+
+larger Qwen
+   → possibly higher-resolution instrument
+
+multiple models
+   → optional triangulation
+
+PRIMARY GOAL
+   → progressively map one learned semantic space
+```
+
+So the conceptual direction has actually become **more focused**, despite adding a larger model.
+
+---
+
+# 3. R016 now exists — and it succeeded
+
+This is the biggest empirical change.
+
+A new frozen run was added:
+
+```text id="o5s6z0"
+R016_olmo3-32b-local-bf16-feasibility
+```
+
+Model:
+
+```text id="z4agsx"
+allenai/Olmo-3-1125-32B
+revision:
+c2b61dae89a1ad10e4ad5653d0e46b590902607b
+```
+
+It is:
+
+- 32B parameters;
+- native BF16;
+- 64 transformer layers;
+- hidden width 5,120;
+- no quantisation;
+- no generated response.
+
+The test prompt was:
+
+```text id="yq1as1"
+laser
+city
+spatial field
+```
+
+with the final newline used as the capture anchor.
+
+It executed exactly one instrumented forward pass with:
+
+```python id="nbicbd"
+output_hidden_states=True
+use_cache=False
+```
+
+and succeeded.
+
+### Captured evidence
+
+```text id="h5kekx"
+Expected transformer layers:       64
+Hidden states returned:             65
+Hidden-state width:              5,120
+Captured tensor:             65 × 5,120
+Vocabulary logits:              100,278
+
+all hidden states finite:          yes
+all logits finite:                 yes
+response generation:                no
+quantisation:                        no
+```
+
+That means the project has demonstrated direct layer-by-layer access to a **32B native-BF16 base model locally**.
+
+---
+
+# 4. The previous hardware assumption has effectively been falsified
+
+MA-0103 initially predicted that 32B might just be feasible with offloading.
+
+R016 then tested it.
+
+The successful placement was:
+
+```text id="5qkmo9"
+RTX 4090
+│
+├── embeddings
+└── Layers 0–16
+
+CPU RAM
+│
+└── Layers 17–45
+
+disk-backed
+│
+├── Layers 46–63
+├── final norm
+├── rotary embedding
+└── LM head
+```
+
+Resource measurements:
+
+```text id="2oxstp"
+GPU cap:                    18 GiB
+CPU-RAM cap:                28 GiB
+
+peak GPU allocation:        18.65 GB
+process RSS after forward:  33.28 GB
+RAM still available:        13.02 GB
+```
+
+Timing:
+
+```text id="f2j4bw"
+cached model load       28.70 s
+forward pass            60.89 s
+capture validation       0.03 s
+cleanup                  4.59 s
+```
+
+The initial model download took another 792.78 seconds, but that is now cached.
+
+So this earlier assumption:
+
+```text id="d5hdnd"
+24 GB VRAM
+     ↓
+~7B model ceiling
+```
+
+has been replaced by:
+
+```text id="fjdzje"
+short prompt
++ no generation
++ no KV growth
++ no gradients
++ tiny captured activation set
++ layer offloading
+        ↓
+32B BF16 locally feasible
+```
+
+That is a meaningful methodological development rather than merely a hardware optimisation.
+
+---
+
+# 5. But R016 has NOT yet mapped OLMo
+
+This boundary is explicitly preserved throughout the new files.
+
+R016 proves:
+
+```text id="aemlct"
+CAN THE 32B MODEL BE USED
+AS THE MEASUREMENT INSTRUMENT?
+
+YES.
+```
+
+It does **not** yet establish:
+
+```text id="pupa07"
+OLMo semantic topology
+batch throughput
+24-prompt runtime
+network quality
+community structure
+parent reconstruction
+R014/R015 reproduction
+corpus/topology correspondence
+```
+
+So:
+
+```text id="rcee3p"
+R016
+  =
+instrument feasibility
+
+not
+
+R016
+  =
+semantic experiment
+```
+
+This is important because the project has avoided conflating an engineering success with scientific evidence.
+
+---
+
+# 6. The next bottleneck has changed
+
+Before R016:
+
+```text id="kepdwn"
+Can a substantially larger transparent model
+even be instrumented locally?
+```
+
+That question is now answered.
+
+The immediate technical unknown is:
+
+```text id="ll665f"
+one prompt
+   ↓
+SUCCESS
+   ↓
+can 24 prompts be efficiently batched?
+   ↓
+can one traversal of disk-backed layers
+service the complete probe set?
+   ↓
+full topology construction
+```
+
+The R016 report specifically identifies batching as the next performance question because sequentially traversing disk-backed layers 24 times may be much more expensive than processing the prompts together.
+
+So the next engineering gate is **throughput**, not memory feasibility.
+
+---
+
+# 7. Repository structure changed accordingly
+
+Since `354acc8`, the comparison reports:
+
+```text id="7ycmtk"
+META_ANALYSIS.md                       +1,334 lines
+
+R016_PLAN.md                            new
+r016_olmo3_32b_feasibility.py          new, 664 lines
+
+R016 feasibility run:
+    R016_FEASIBILITY_REPORT.md          new
+    capture_validation.json             new
+    device_map.json                     new
+    manifest.json                       new
+
+README.md                               updated
+single_prompt_topology/README.md        updated
+.gitignore                              updated
+```
+
+The actual `65 × 5,120` BF16 capture is deliberately **not tracked by Git**, although its SHA-256 and validation information are recorded.
+
+The housekeeping commit also removed three redundant `.incomplete` download fragments totalling **8,860,118,492 bytes**, after verifying that all 14 valid weight shards and the pinned model snapshot remained intact.
+
+---
+
+## Overall state change
+
+The repository has moved from:
+
+```text id="ycufu4"
+R015
+│
+├─ local semantic continuity demonstrated
+├─ methodology becoming coherent
+└─ question:
+     "What exactly have we discovered?"
+```
+
+to:
+
+```text id="7tcedt"
+R015
+│
+├─ persistent higher-order topology
+│
+▼
+HYPOTHESIS REFORMULATION
+│
+├─ states are not training data
+├─ invariants are the signal
+├─ model = learned compression
+│
+▼
+PROJECT OBJECTIVE CLARIFIED
+│
+├─ progressively map learned semantic topology
+└─ corpus validation is supporting evidence
+│
+▼
+R016
+│
+├─ OLMo 3 32B Base
+├─ native BF16
+├─ local RTX 4090 + RAM + disk
+├─ all 65 states successfully captured
+└─ SUCCESS
+│
+▼
+NEW FRONTIER
+│
+├─ batched 32B measurement
+├─ actual OLMo topology
+├─ map-frontier expansion
+└─ eventual corpus-ground-truth validation
+```
+
+The important change is therefore not merely **“a 32B model now works”**.
+
+It is that the project now has both a more defensible scientific object — **perturbation-stable learned semantic topology** — and a substantially more capable, corpus-transparent measurement instrument with which to investigate it. memcite
