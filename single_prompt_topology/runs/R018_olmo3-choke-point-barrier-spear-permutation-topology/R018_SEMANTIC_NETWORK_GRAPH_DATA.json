@@ -1,0 +1,1263 @@
+{
+  "schema_version": 1,
+  "run_id": "R018_olmo3-choke-point-barrier-spear-permutation-topology",
+  "purpose": "Intermediate semantic-network dataset for graph visualisation; preserves one level below the four-parent canonical map.",
+  "provenance": {
+    "source_nodes": "community_nodes.csv",
+    "source_edges": "community_edges.csv",
+    "canonical_parent_map": "R018_SEMANTIC_MAP.json",
+    "side": "positive_head",
+    "state_window": [
+      63,
+      64
+    ],
+    "method": "Exact semantic term families were matched only against measured community representative_tokens and most_extreme_tokens. Inter-subfamily weights sum measured token_edge_count between matched communities. same_community_fusions counts matched subfamilies appearing in the same measured community.",
+    "limitation": "Subfamily support is support within States 63–64 and must not be substituted for canonical parent support across each parent's full dominant depth."
+  },
+  "parents": [
+    {
+      "id": "N1",
+      "label": "Constraint / Requirement",
+      "support": "6/6",
+      "dominant_depth": "States 62–64",
+      "confidence": "high"
+    },
+    {
+      "id": "N2",
+      "label": "Structural Configuration",
+      "support": "6/6",
+      "dominant_depth": "States 60–64",
+      "confidence": "high"
+    },
+    {
+      "id": "N3",
+      "label": "Dynamic Path Geometry",
+      "support": "6/6",
+      "dominant_depth": "States 56–63",
+      "confidence": "high"
+    },
+    {
+      "id": "N4",
+      "label": "Collapse / Adjustment",
+      "support": "6/6",
+      "dominant_depth": "States 56–64",
+      "confidence": "high"
+    }
+  ],
+  "subfamilies": [
+    {
+      "id": "RQ",
+      "parent": "N1",
+      "label": "Requirement",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "matched_community_count": 16,
+      "matched_tokens": [
+        "require",
+        "required",
+        "requirement",
+        "requirements",
+        "requires",
+        "requiring"
+      ],
+      "status": "six_of_six_in_window"
+    },
+    {
+      "id": "CL",
+      "parent": "N1",
+      "label": "Constraint / limitation",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "matched_community_count": 9,
+      "matched_tokens": [
+        "constraints",
+        "limitations",
+        "shortcomings"
+      ],
+      "status": "six_of_six_in_window"
+    },
+    {
+      "id": "DC",
+      "parent": "N1",
+      "label": "Dependency / condition",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        64
+      ],
+      "matched_community_count": 5,
+      "matched_tokens": [
+        "conditions",
+        "dependencies"
+      ],
+      "status": "partial_window_support"
+    },
+    {
+      "id": "CI",
+      "parent": "N2",
+      "label": "Configuration / infrastructure",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "matched_community_count": 9,
+      "matched_tokens": [
+        "configuration",
+        "configurations",
+        "infrastructure"
+      ],
+      "status": "six_of_six_in_window"
+    },
+    {
+      "id": "MI",
+      "parent": "N2",
+      "label": "Modules / interfaces",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "matched_community_count": 14,
+      "matched_tokens": [
+        "interfaces",
+        "module",
+        "modules"
+      ],
+      "status": "six_of_six_in_window"
+    },
+    {
+      "id": "IP",
+      "parent": "N2",
+      "label": "Installations / projects",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "matched_community_count": 15,
+      "matched_tokens": [
+        "installations",
+        "project",
+        "projects"
+      ],
+      "status": "six_of_six_in_window"
+    },
+    {
+      "id": "AS",
+      "parent": "N2",
+      "label": "Architecture / structure",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63
+      ],
+      "matched_community_count": 5,
+      "matched_tokens": [
+        "architectures",
+        "structures"
+      ],
+      "status": "partial_window_support"
+    },
+    {
+      "id": "DP",
+      "parent": "N2",
+      "label": "Deployment",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "matched_community_count": 8,
+      "matched_tokens": [
+        "deployment",
+        "deployments"
+      ],
+      "status": "adjacent_not_strict_core"
+    },
+    {
+      "id": "PF",
+      "parent": "N3",
+      "label": "Point / approach / flow",
+      "prompt_support_in_window": 4,
+      "state_support_in_window": [
+        63
+      ],
+      "matched_community_count": 4,
+      "matched_tokens": [
+        "approaching"
+      ],
+      "status": "partial_window_support"
+    },
+    {
+      "id": "TC",
+      "parent": "N3",
+      "label": "Trajectory / curve",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "matched_community_count": 7,
+      "matched_tokens": [
+        "curve",
+        "curves",
+        "trajectories"
+      ],
+      "status": "six_of_six_in_window"
+    },
+    {
+      "id": "VS",
+      "parent": "N3",
+      "label": "Velocity / speed",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "matched_community_count": 7,
+      "matched_tokens": [
+        "speed",
+        "speeds",
+        "velocities"
+      ],
+      "status": "six_of_six_in_window"
+    },
+    {
+      "id": "RT",
+      "parent": "N3",
+      "label": "Rectangle",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63
+      ],
+      "matched_community_count": 5,
+      "matched_tokens": [
+        "rectangle",
+        "rectangles",
+        "rectangular"
+      ],
+      "status": "partial_window_support"
+    },
+    {
+      "id": "CO",
+      "parent": "N4",
+      "label": "Collapse",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63
+      ],
+      "matched_community_count": 6,
+      "matched_tokens": [
+        "collaps"
+      ],
+      "status": "six_of_six_in_window"
+    },
+    {
+      "id": "NA",
+      "parent": "N4",
+      "label": "Normalise / adjust / tweak",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "matched_community_count": 13,
+      "matched_tokens": [
+        "adjustment",
+        "adjustments",
+        "normalization",
+        "normalize",
+        "normalized",
+        "tweak",
+        "tweaking",
+        "tweaks"
+      ],
+      "status": "six_of_six_in_window"
+    },
+    {
+      "id": "MT",
+      "parent": "N4",
+      "label": "Merge / restructure / transform",
+      "prompt_support_in_window": 4,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "matched_community_count": 7,
+      "matched_tokens": [
+        "merges",
+        "merging",
+        "transformations"
+      ],
+      "status": "partial_window_support"
+    }
+  ],
+  "edges": [
+    {
+      "id": "MI~RQ",
+      "a": "MI",
+      "b": "RQ",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 5728,
+      "same_community_fusions": 0,
+      "observations": 20
+    },
+    {
+      "id": "IP~RQ",
+      "a": "IP",
+      "b": "RQ",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 5434,
+      "same_community_fusions": 3,
+      "observations": 22
+    },
+    {
+      "id": "CI~RQ",
+      "a": "CI",
+      "b": "RQ",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 4349,
+      "same_community_fusions": 1,
+      "observations": 15
+    },
+    {
+      "id": "CL~IP",
+      "a": "CL",
+      "b": "IP",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 4223,
+      "same_community_fusions": 0,
+      "observations": 12
+    },
+    {
+      "id": "NA~RQ",
+      "a": "NA",
+      "b": "RQ",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 4048,
+      "same_community_fusions": 2,
+      "observations": 16
+    },
+    {
+      "id": "CL~MI",
+      "a": "CL",
+      "b": "MI",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 3855,
+      "same_community_fusions": 0,
+      "observations": 11
+    },
+    {
+      "id": "IP~NA",
+      "a": "IP",
+      "b": "NA",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 2918,
+      "same_community_fusions": 2,
+      "observations": 15
+    },
+    {
+      "id": "IP~MI",
+      "a": "IP",
+      "b": "MI",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 2764,
+      "same_community_fusions": 6,
+      "observations": 18
+    },
+    {
+      "id": "CI~CL",
+      "a": "CI",
+      "b": "CL",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 2625,
+      "same_community_fusions": 2,
+      "observations": 9
+    },
+    {
+      "id": "CI~IP",
+      "a": "CI",
+      "b": "IP",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 2364,
+      "same_community_fusions": 6,
+      "observations": 14
+    },
+    {
+      "id": "CL~RQ",
+      "a": "CL",
+      "b": "RQ",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 2296,
+      "same_community_fusions": 6,
+      "observations": 13
+    },
+    {
+      "id": "MI~NA",
+      "a": "MI",
+      "b": "NA",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 1764,
+      "same_community_fusions": 4,
+      "observations": 14
+    },
+    {
+      "id": "RQ~TC",
+      "a": "RQ",
+      "b": "TC",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 1729,
+      "same_community_fusions": 1,
+      "observations": 8
+    },
+    {
+      "id": "RQ~VS",
+      "a": "RQ",
+      "b": "VS",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 1691,
+      "same_community_fusions": 0,
+      "observations": 8
+    },
+    {
+      "id": "CO~RQ",
+      "a": "CO",
+      "b": "RQ",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 1596,
+      "same_community_fusions": 1,
+      "observations": 6
+    },
+    {
+      "id": "CI~MI",
+      "a": "CI",
+      "b": "MI",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 1408,
+      "same_community_fusions": 6,
+      "observations": 13
+    },
+    {
+      "id": "MI~VS",
+      "a": "MI",
+      "b": "VS",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 1246,
+      "same_community_fusions": 1,
+      "observations": 8
+    },
+    {
+      "id": "CO~VS",
+      "a": "CO",
+      "b": "VS",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 1179,
+      "same_community_fusions": 0,
+      "observations": 6
+    },
+    {
+      "id": "CO~TC",
+      "a": "CO",
+      "b": "TC",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 1082,
+      "same_community_fusions": 1,
+      "observations": 6
+    },
+    {
+      "id": "CO~MI",
+      "a": "CO",
+      "b": "MI",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 1033,
+      "same_community_fusions": 1,
+      "observations": 6
+    },
+    {
+      "id": "MI~TC",
+      "a": "MI",
+      "b": "TC",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 712,
+      "same_community_fusions": 3,
+      "observations": 7
+    },
+    {
+      "id": "TC~VS",
+      "a": "TC",
+      "b": "VS",
+      "prompt_support_in_window": 6,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 472,
+      "same_community_fusions": 2,
+      "observations": 6
+    },
+    {
+      "id": "DP~RQ",
+      "a": "DP",
+      "b": "RQ",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 3201,
+      "same_community_fusions": 2,
+      "observations": 12
+    },
+    {
+      "id": "CL~NA",
+      "a": "CL",
+      "b": "NA",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 2300,
+      "same_community_fusions": 1,
+      "observations": 8
+    },
+    {
+      "id": "CL~DP",
+      "a": "CL",
+      "b": "DP",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 2286,
+      "same_community_fusions": 0,
+      "observations": 6
+    },
+    {
+      "id": "DC~IP",
+      "a": "DC",
+      "b": "IP",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        64
+      ],
+      "token_edge_count": 1987,
+      "same_community_fusions": 2,
+      "observations": 8
+    },
+    {
+      "id": "DC~MI",
+      "a": "DC",
+      "b": "MI",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        64
+      ],
+      "token_edge_count": 1742,
+      "same_community_fusions": 1,
+      "observations": 7
+    },
+    {
+      "id": "DP~IP",
+      "a": "DP",
+      "b": "IP",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 1740,
+      "same_community_fusions": 6,
+      "observations": 11
+    },
+    {
+      "id": "AS~RQ",
+      "a": "AS",
+      "b": "RQ",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 1737,
+      "same_community_fusions": 0,
+      "observations": 5
+    },
+    {
+      "id": "CI~DC",
+      "a": "CI",
+      "b": "DC",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        64
+      ],
+      "token_edge_count": 1674,
+      "same_community_fusions": 2,
+      "observations": 7
+    },
+    {
+      "id": "IP~TC",
+      "a": "IP",
+      "b": "TC",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 1532,
+      "same_community_fusions": 0,
+      "observations": 7
+    },
+    {
+      "id": "CI~NA",
+      "a": "CI",
+      "b": "NA",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 1521,
+      "same_community_fusions": 2,
+      "observations": 7
+    },
+    {
+      "id": "DC~RQ",
+      "a": "DC",
+      "b": "RQ",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        64
+      ],
+      "token_edge_count": 1432,
+      "same_community_fusions": 4,
+      "observations": 9
+    },
+    {
+      "id": "DP~NA",
+      "a": "DP",
+      "b": "NA",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 1375,
+      "same_community_fusions": 2,
+      "observations": 8
+    },
+    {
+      "id": "DP~MI",
+      "a": "DP",
+      "b": "MI",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 1225,
+      "same_community_fusions": 4,
+      "observations": 10
+    },
+    {
+      "id": "NA~TC",
+      "a": "NA",
+      "b": "TC",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 1217,
+      "same_community_fusions": 2,
+      "observations": 9
+    },
+    {
+      "id": "IP~VS",
+      "a": "IP",
+      "b": "VS",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 1208,
+      "same_community_fusions": 0,
+      "observations": 6
+    },
+    {
+      "id": "AS~TC",
+      "a": "AS",
+      "b": "TC",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 1196,
+      "same_community_fusions": 0,
+      "observations": 5
+    },
+    {
+      "id": "RQ~RT",
+      "a": "RQ",
+      "b": "RT",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 1170,
+      "same_community_fusions": 0,
+      "observations": 5
+    },
+    {
+      "id": "CI~DP",
+      "a": "CI",
+      "b": "DP",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 1134,
+      "same_community_fusions": 4,
+      "observations": 8
+    },
+    {
+      "id": "DC~DP",
+      "a": "DC",
+      "b": "DP",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        64
+      ],
+      "token_edge_count": 1039,
+      "same_community_fusions": 2,
+      "observations": 5
+    },
+    {
+      "id": "CO~IP",
+      "a": "CO",
+      "b": "IP",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 1033,
+      "same_community_fusions": 0,
+      "observations": 5
+    },
+    {
+      "id": "CO~RT",
+      "a": "CO",
+      "b": "RT",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 1029,
+      "same_community_fusions": 0,
+      "observations": 5
+    },
+    {
+      "id": "AS~MI",
+      "a": "AS",
+      "b": "MI",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 991,
+      "same_community_fusions": 1,
+      "observations": 5
+    },
+    {
+      "id": "AS~VS",
+      "a": "AS",
+      "b": "VS",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 961,
+      "same_community_fusions": 0,
+      "observations": 5
+    },
+    {
+      "id": "NA~VS",
+      "a": "NA",
+      "b": "VS",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 955,
+      "same_community_fusions": 0,
+      "observations": 8
+    },
+    {
+      "id": "IP~RT",
+      "a": "IP",
+      "b": "RT",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 918,
+      "same_community_fusions": 0,
+      "observations": 5
+    },
+    {
+      "id": "CL~DC",
+      "a": "CL",
+      "b": "DC",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        64
+      ],
+      "token_edge_count": 910,
+      "same_community_fusions": 3,
+      "observations": 5
+    },
+    {
+      "id": "CO~NA",
+      "a": "CO",
+      "b": "NA",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 725,
+      "same_community_fusions": 5,
+      "observations": 8
+    },
+    {
+      "id": "AS~CO",
+      "a": "AS",
+      "b": "CO",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 612,
+      "same_community_fusions": 2,
+      "observations": 5
+    },
+    {
+      "id": "MI~RT",
+      "a": "MI",
+      "b": "RT",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 571,
+      "same_community_fusions": 1,
+      "observations": 5
+    },
+    {
+      "id": "RT~TC",
+      "a": "RT",
+      "b": "TC",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 417,
+      "same_community_fusions": 2,
+      "observations": 5
+    },
+    {
+      "id": "RT~VS",
+      "a": "RT",
+      "b": "VS",
+      "prompt_support_in_window": 5,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 0,
+      "same_community_fusions": 5,
+      "observations": 5
+    },
+    {
+      "id": "MT~RQ",
+      "a": "MT",
+      "b": "RQ",
+      "prompt_support_in_window": 4,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 3172,
+      "same_community_fusions": 0,
+      "observations": 9
+    },
+    {
+      "id": "IP~MT",
+      "a": "IP",
+      "b": "MT",
+      "prompt_support_in_window": 4,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 1788,
+      "same_community_fusions": 3,
+      "observations": 10
+    },
+    {
+      "id": "PF~TC",
+      "a": "PF",
+      "b": "TC",
+      "prompt_support_in_window": 4,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 1374,
+      "same_community_fusions": 0,
+      "observations": 4
+    },
+    {
+      "id": "DC~NA",
+      "a": "DC",
+      "b": "NA",
+      "prompt_support_in_window": 4,
+      "state_support_in_window": [
+        64
+      ],
+      "token_edge_count": 1326,
+      "same_community_fusions": 0,
+      "observations": 4
+    },
+    {
+      "id": "AS~NA",
+      "a": "AS",
+      "b": "NA",
+      "prompt_support_in_window": 4,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 1281,
+      "same_community_fusions": 2,
+      "observations": 7
+    },
+    {
+      "id": "MI~PF",
+      "a": "MI",
+      "b": "PF",
+      "prompt_support_in_window": 4,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 1272,
+      "same_community_fusions": 0,
+      "observations": 4
+    },
+    {
+      "id": "CO~PF",
+      "a": "CO",
+      "b": "PF",
+      "prompt_support_in_window": 4,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 1231,
+      "same_community_fusions": 1,
+      "observations": 4
+    },
+    {
+      "id": "PF~VS",
+      "a": "PF",
+      "b": "VS",
+      "prompt_support_in_window": 4,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 1166,
+      "same_community_fusions": 0,
+      "observations": 4
+    },
+    {
+      "id": "CL~VS",
+      "a": "CL",
+      "b": "VS",
+      "prompt_support_in_window": 4,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 1130,
+      "same_community_fusions": 0,
+      "observations": 4
+    },
+    {
+      "id": "MT~NA",
+      "a": "MT",
+      "b": "NA",
+      "prompt_support_in_window": 4,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 828,
+      "same_community_fusions": 4,
+      "observations": 8
+    },
+    {
+      "id": "AS~MT",
+      "a": "AS",
+      "b": "MT",
+      "prompt_support_in_window": 4,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 815,
+      "same_community_fusions": 1,
+      "observations": 4
+    },
+    {
+      "id": "AS~RT",
+      "a": "AS",
+      "b": "RT",
+      "prompt_support_in_window": 4,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 811,
+      "same_community_fusions": 0,
+      "observations": 4
+    },
+    {
+      "id": "NA~RT",
+      "a": "NA",
+      "b": "RT",
+      "prompt_support_in_window": 4,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 685,
+      "same_community_fusions": 0,
+      "observations": 6
+    },
+    {
+      "id": "MT~TC",
+      "a": "MT",
+      "b": "TC",
+      "prompt_support_in_window": 4,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 545,
+      "same_community_fusions": 2,
+      "observations": 5
+    },
+    {
+      "id": "CO~MT",
+      "a": "CO",
+      "b": "MT",
+      "prompt_support_in_window": 4,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 509,
+      "same_community_fusions": 3,
+      "observations": 4
+    },
+    {
+      "id": "AS~IP",
+      "a": "AS",
+      "b": "IP",
+      "prompt_support_in_window": 4,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 421,
+      "same_community_fusions": 2,
+      "observations": 4
+    },
+    {
+      "id": "MT~VS",
+      "a": "MT",
+      "b": "VS",
+      "prompt_support_in_window": 4,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 305,
+      "same_community_fusions": 1,
+      "observations": 4
+    },
+    {
+      "id": "MT~RT",
+      "a": "MT",
+      "b": "RT",
+      "prompt_support_in_window": 4,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 305,
+      "same_community_fusions": 1,
+      "observations": 4
+    },
+    {
+      "id": "MI~MT",
+      "a": "MI",
+      "b": "MT",
+      "prompt_support_in_window": 4,
+      "state_support_in_window": [
+        63,
+        64
+      ],
+      "token_edge_count": 258,
+      "same_community_fusions": 5,
+      "observations": 7
+    },
+    {
+      "id": "PF~RQ",
+      "a": "PF",
+      "b": "RQ",
+      "prompt_support_in_window": 4,
+      "state_support_in_window": [
+        63
+      ],
+      "token_edge_count": 191,
+      "same_community_fusions": 3,
+      "observations": 4
+    }
+  ],
+  "order_conditioned_branches": [
+    {
+      "final_concept": "spear",
+      "prompts": [
+        "ABC",
+        "BAC"
+      ],
+      "branch": "weapon / blade / piercing vocabulary",
+      "status": "order_conditioned_not_invariant_core"
+    },
+    {
+      "final_concept": "collapsible barrier",
+      "prompts": [
+        "ACB",
+        "CAB"
+      ],
+      "branch": "wall / boundary / restriction / passage vocabulary",
+      "status": "order_conditioned_not_invariant_core"
+    },
+    {
+      "final_concept": "choke point",
+      "prompts": [
+        "BCA",
+        "CBA"
+      ],
+      "branch": "point / location / bottleneck / limit vocabulary",
+      "status": "order_conditioned_not_invariant_core"
+    }
+  ],
+  "excluded_from_strict_late_core": [
+    {
+      "structure": "exact spear",
+      "late_support": "0/6"
+    },
+    {
+      "structure": "attack / interception",
+      "late_support": "2/6"
+    },
+    {
+      "structure": "intersection",
+      "late_support": "1/6"
+    },
+    {
+      "structure": "route / pathway / road",
+      "late_support": "0/6"
+    },
+    {
+      "structure": "deployment",
+      "late_support": "5/6"
+    }
+  ]
+}
