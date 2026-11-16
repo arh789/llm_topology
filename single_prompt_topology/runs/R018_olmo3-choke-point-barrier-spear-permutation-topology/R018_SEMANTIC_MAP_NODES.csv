@@ -1,0 +1,5 @@
+node_id,label,status,permutation_support,dominant_depth,evidence,confidence,abstraction_boundary
+N1,Constraint / Requirement,invariant_core,6/6,States 62-64,"require; requirements; limitations; dependencies; constraints; conditions; shortcomings",high,"No causal or suppressive meaning inferred"
+N2,Structural Configuration,invariant_core,6/6,States 60-64,"configuration; infrastructure; modules; interfaces; installations; structures; architectures; projects",high,"Generic structural vocabulary retained only where recurrently organised with other prompt-derived families"
+N3,Dynamic Path Geometry,invariant_core,6/6,States 56-63,"point; approach; flow; trajectory; curve; velocity; speed; rectangle",high,"Describes recurrent geometric/dynamic family; does not imply a specific physical route"
+N4,Collapse / Adjustment,invariant_core,6/6,States 56-64,"collaps- in every permutation at States 56-63; normalization; adjustment; tweak; merging; restructuring; transformation",high,"Change/deformation family; no causal direction inferred"
