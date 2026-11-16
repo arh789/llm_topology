@@ -36,7 +36,10 @@ deterministically replayed OLMo 3 32B capture. It produces 780 networks,
 state-local communities, 768 adjacent-state comparisons and 1,950 same-state
 permutation comparisons. State 00 is exactly identical across permutations.
 The measured evidence is complete and independently verified; semantic parent
-reconstruction remains deliberately unstarted. The initial completeness check
+reconstruction remains deliberately unstarted.
+
+The downstream R018 reconstruction is now complete. Despite strong order and final-position effects, the six trajectories reconverge onto a strict 6/6 late semantic core comprising **constraint / requirement**, **structural configuration**, **dynamic path geometry** and **collapse / adjustment**. The result is recorded in the R018 semantic reconstruction, structured map and final HTML analysis; literal spear/attack semantics do not survive as strict late invariants.
+ The initial completeness check
 exposed and preserved a validator defect—physical text lines were counted
 instead of logical CSV records—then passed after a validation-only correction
 that did not rerun or alter the measurements.
@@ -292,6 +295,17 @@ and are not versioned here.
 80. [`single_prompt_topology/R018_LIFECYCLE_UPDATE_VERIFICATION.md`](single_prompt_topology/R018_LIFECYCLE_UPDATE_VERIFICATION.md)
     — the implemented lifecycle correction and passing unit/regression test
     record.
+81. [`single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_RECONSTRUCTION.md`](single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_RECONSTRUCTION.md)
+    — the independent six-permutation reconstruction and invariant-parent
+    derivation.
+82. [`single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_MAP_NODES.csv`](single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_MAP_NODES.csv)
+    — the structured invariant and contextual semantic parents.
+83. [`single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_MAP_EDGES.csv`](single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_MAP_EDGES.csv)
+    — the evidence-linked higher-order parent relations.
+84. [`single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_MAP.json`](single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_MAP.json)
+    — the machine-readable completed R018 semantic topology.
+85. [`single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_RUN_ANALYSIS_AND_RECOMMENDATIONS.html`](single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_RUN_ANALYSIS_AND_RECOMMENDATIONS.html)
+    — the final R018 human-readable analysis and recommendations.
 
 ## Provenance
 

@@ -159,3 +159,29 @@ Until then, the correct statement is:
 
 > Measurement complete; R018 remains incomplete pending independent semantic
 > reconstruction and final analysis.
+
+## Completed-analysis reconciliation
+
+ChatGPT completed and committed the R018 semantic reconstruction on GitHub
+while this lifecycle protocol was being added locally. The imported
+`R018_SEMANTIC_RECONSTRUCTION.md` contains a distinct reconstruction row for
+each of the six permutations before cross-permutation alignment. It therefore
+satisfies the substantive independence requirement in consolidated form,
+rather than as six separate Markdown files.
+
+The reconciled completed outputs are:
+
+- `R018_SEMANTIC_RECONSTRUCTION.md`;
+- `R018_SEMANTIC_MAP_NODES.csv`;
+- `R018_SEMANTIC_MAP_EDGES.csv`;
+- `R018_SEMANTIC_MAP.json`; and
+- `R018_RUN_ANALYSIS_AND_RECOMMENDATIONS.html`.
+
+The analysis manifest records this packaging equivalence and the external
+source commits. Following reconciliation, the lifecycle state is:
+
+```text
+measurement_status = measurement_successful
+analysis_status    = complete
+run_status         = complete
+```

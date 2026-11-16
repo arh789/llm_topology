@@ -1,0 +1,5 @@
+edge_id,node_a,node_b,relation,status,permutation_support,evidence,confidence,directionality
+E1,N1,N2,recurrent semantic coupling,invariant_core,6/6,"State 64 direct/fused support: ABC C0-C6/C0-C7; ACB C5-C7; BAC C2-C4; BCA C3-C5; CAB C2-C9/C4-C9; CBA C0-C6",high,undirected
+E2,N3,N4,recurrent semantic coupling,invariant_core,6/6,"State 63 direct/fused support: ABC C6-C12/C2-C12; ACB C9-C13/C10-C13; BAC C6-C7; BCA C0 fusion plus C0-C4; CAB C10-C13/C9-C10; CBA C7 fusion plus C7-C10",high,undirected
+E3,N1,N4,recurrent same-community or adjacent-community association,invariant_core,6/6,"Late communities repeatedly combine requirement/change operators such as requires creates removes increases normalization adjustments merging and collaps-",moderate-high,undirected
+E4,N2,N4,recurrent configuration/change association,invariant_core,6/6,"Late communities repeatedly fuse configuration or structural terms with transformation normalization deployment merging or collapse-related terms",moderate-high,undirected

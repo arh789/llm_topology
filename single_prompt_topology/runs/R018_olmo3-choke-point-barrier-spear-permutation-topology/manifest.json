@@ -3,7 +3,7 @@
   "run_id": "R018_olmo3-choke-point-barrier-spear-permutation-topology",
   "run_number": 18,
   "measurement_status": "measurement_successful",
-  "analysis_status": "not_started",
+  "analysis_status": "complete",
   "started_at": "2026-11-16T01:01:21.400852+00:00",
   "measurement_completed_at": "2026-11-16T01:27:05.968729+00:00",
   "failure_details": null,
@@ -130,7 +130,7 @@
       "status": "successful",
       "started_at": "2026-11-16T01:01:21.400852+00:00",
       "completed_at": "2026-11-16T01:01:21.400852+00:00",
-      "elapsed_seconds": 0.0,
+      "elapsed_seconds": 0,
       "config_sha256": "55938fd34f16303979cba58d91054c0a682db8777eb5c250c2b9180843d5e3c0",
       "plan_sha256": "02d22429f1db81f8b9f5324647fd82545ccd9d8b0a578c744d9d935dea777356"
     },
@@ -138,7 +138,7 @@
       "status": "successful",
       "started_at": "2026-11-16T01:01:21.400852+00:00",
       "completed_at": "2026-11-16T01:01:21.400852+00:00",
-      "elapsed_seconds": 0.0,
+      "elapsed_seconds": 0,
       "python": "3.11.15 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:12:15) [MSC v.1942 64 bit (AMD64)]",
       "torch": "2.6.0+cu124",
       "cuda": "12.4",
@@ -378,5 +378,32 @@
         }
       }
     }
-  ]
+  ],
+  "analysis_completed_date": "2026-11-16",
+  "analysis": {
+    "method": "Independent six-permutation semantic reconstruction from R018 measured community, intercommunity-edge, hidden-state and pairwise-permutation evidence.",
+    "strongest_supported_result": "The six orders diverge into final-position-conditioned literal branches and then reconverge onto a shared late topology coupling constraints/requirements, structural configuration, dynamic path geometry, and collapse/adjustment.",
+    "invariant_node_count": 4,
+    "invariant_edge_count": 4,
+    "order_conditioned_branches": {
+      "spear_final": "weapon / blade / piercing vocabulary",
+      "barrier_final": "wall / boundary / restriction / passage vocabulary",
+      "choke_point_final": "point / location / bottleneck / limit vocabulary"
+    },
+    "excluded_from_strict_invariant_core": {
+      "exact_spear": "0/6 late support",
+      "attack_interception": "2/6 late support",
+      "intersection": "1/6 late support",
+      "route_pathway_road": "0/6 late support",
+      "deployment": "5/6 late support"
+    },
+    "outputs": [
+      "R018_SEMANTIC_RECONSTRUCTION.md",
+      "R018_SEMANTIC_MAP_NODES.csv",
+      "R018_SEMANTIC_MAP_EDGES.csv",
+      "R018_SEMANTIC_MAP.json",
+      "R018_RUN_ANALYSIS_AND_RECOMMENDATIONS.html"
+    ],
+    "interpretation_boundary": "The semantic reconstruction is post-measurement. Parent labels and associative edges are interpretations over measured evidence; no causal direction is claimed."
+  }
 }

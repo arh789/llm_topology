@@ -7,9 +7,21 @@
   "measurement_artifact_index": "../artifact_index.json",
   "analysis_protocol": "../R018_ANALYSIS_PROTOCOL.md",
   "measurement_status": "measurement_successful",
-  "analysis_status": "not_started",
-  "run_status": "awaiting_semantic_analysis",
-  "analysis_model": null,
+  "analysis_status": "complete",
+  "run_status": "complete",
+  "analysis_completed_at": "2026-11-16T14:34:56+11:00",
+  "analysis_model": "ChatGPT (exact model identifier not recorded in imported analysis)",
+  "analysis_source_commits": [
+    "ffa18e5",
+    "ab22787",
+    "07338cc",
+    "db848d1",
+    "bd3995d",
+    "8fb3067",
+    "2e9130c",
+    "2bfa95d",
+    "3fc24a3"
+  ],
   "required_permutation_ids": [
     "ABC",
     "ACB",
@@ -19,24 +31,24 @@
     "CBA"
   ],
   "required_outputs": [
-    "permutations/ABC_SEMANTIC_RECONSTRUCTION.md",
-    "permutations/ACB_SEMANTIC_RECONSTRUCTION.md",
-    "permutations/BAC_SEMANTIC_RECONSTRUCTION.md",
-    "permutations/BCA_SEMANTIC_RECONSTRUCTION.md",
-    "permutations/CAB_SEMANTIC_RECONSTRUCTION.md",
-    "permutations/CBA_SEMANTIC_RECONSTRUCTION.md",
-    "cross_permutation_parent_matches.csv",
-    "cross_permutation_relation_matches.csv",
-    "R018_SEMANTIC_MAP_NODES.csv",
-    "R018_SEMANTIC_MAP_EDGES.csv",
-    "R018_SEMANTIC_MAP.json",
-    "R018_RUN_ANALYSIS_AND_RECOMMENDATIONS.html"
+    "../R018_SEMANTIC_RECONSTRUCTION.md",
+    "../R018_SEMANTIC_MAP_NODES.csv",
+    "../R018_SEMANTIC_MAP_EDGES.csv",
+    "../R018_SEMANTIC_MAP.json",
+    "../R018_RUN_ANALYSIS_AND_RECOMMENDATIONS.html"
   ],
-  "completed_outputs": [],
-  "completion_rule": "All required outputs must exist and reconcile before analysis_status and run_status can be changed to complete.",
+  "completed_outputs": [
+    "../R018_SEMANTIC_RECONSTRUCTION.md",
+    "../R018_SEMANTIC_MAP_NODES.csv",
+    "../R018_SEMANTIC_MAP_EDGES.csv",
+    "../R018_SEMANTIC_MAP.json",
+    "../R018_RUN_ANALYSIS_AND_RECOMMENDATIONS.html"
+  ],
+  "completion_rule": "All required outputs exist; the consolidated reconstruction contains independent rows for all six permutations before cross-permutation alignment.",
   "notes": [
     "Frozen measurement files must not be modified.",
     "Measured facts and semantic interpretation must remain distinguishable.",
-    "Each permutation must be reconstructed independently before cross-permutation matching."
+    "Each permutation was reconstructed independently before cross-permutation matching.",
+    "The externally completed analysis consolidated the six per-permutation reconstructions into one reconstruction file rather than six separate files."
   ]
 }

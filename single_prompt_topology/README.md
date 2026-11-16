@@ -500,21 +500,21 @@ and
 The R018 measurement phase adds no semantic parent identities, parent
 relations, SDA-3 roles or GRD roles.
 
-The measurement phase is complete, but the overall research run is not:
+The measurement phase completed first. Independent downstream reconstruction
+has now completed the overall research run:
 
 ```text
 measurement_status = measurement_successful
-analysis_status    = not_started
-run_status         = awaiting_semantic_analysis
+analysis_status    = complete
+run_status         = complete
 ```
 
-Independent reconstruction of all six permutations, cross-permutation parent
-and relation matching, semantic-map construction and the final analysis are
-defined in
+The lifecycle and completion gate are defined in
 [`R018_ANALYSIS_PROTOCOL.md`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_ANALYSIS_PROTOCOL.md).
-The append-only interpretive lifecycle begins with
+The reconciled analysis status, consolidated output packaging and external
+source commits are recorded in
 [`analysis/analysis_manifest.json`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/analysis/analysis_manifest.json);
-it must not modify the frozen measurement evidence.
+the frozen measurement evidence was not modified by semantic reconstruction.
 The implementation and test record is
 [`R018_LIFECYCLE_UPDATE_VERIFICATION.md`](R018_LIFECYCLE_UPDATE_VERIFICATION.md).
 
@@ -524,6 +524,13 @@ failed manifest is retained. A validation-only recovery counted logical CSV
 records, hashed the unchanged measured artifacts and passed the independent
 verifier. Details are in
 [`R018_VALIDATION_RECOVERY.md`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_VALIDATION_RECOVERY.md).
+
+### R018 downstream semantic reconstruction
+
+The downstream R018 reconstruction is now complete. The six orders separate into final-position-conditioned literal branches, diverge most strongly through the middle layers, and reconverge late onto a shared four-parent topology: **constraint / requirement**, **structural configuration**, **dynamic path geometry**, and **collapse / adjustment**. Literal `spear`, attack/interception, intersection and route vocabulary fail the strict late 6/6 invariance test and are not included in the core map.
+
+The canonical reconstruction is [`R018_SEMANTIC_RECONSTRUCTION.md`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_RECONSTRUCTION.md). Structured nodes and relations are in [`R018_SEMANTIC_MAP_NODES.csv`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_MAP_NODES.csv), [`R018_SEMANTIC_MAP_EDGES.csv`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_MAP_EDGES.csv) and [`R018_SEMANTIC_MAP.json`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_MAP.json). The final human-readable analysis is [`R018_RUN_ANALYSIS_AND_RECOMMENDATIONS.html`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_RUN_ANALYSIS_AND_RECOMMENDATIONS.html).
+
 
 ## Run outputs
 
