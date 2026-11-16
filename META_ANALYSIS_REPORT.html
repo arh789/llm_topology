@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LLM Topology — Meta-analysis Report</title>
+<style>
+:root{color-scheme:dark;--bg:#0b0e12;--panel:#121821;--panel2:#0e141c;--text:#edf2f7;--muted:#a7b1bf;--line:#2a3544;--accent:#9cc2ff}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+main{max-width:1540px;margin:0 auto;padding:32px 24px 64px} h1{font-size:2.15rem;margin:0 0 .3rem}
+h2{margin-top:2rem;border-bottom:1px solid var(--line);padding-bottom:.4rem} p{max-width:1050px}.muted{color:var(--muted)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+.callout{border-left:4px solid var(--accent);background:#111a28;padding:13px 16px;margin:18px 0;max-width:1120px}
+pre{margin:0;overflow:auto;white-space:pre;tab-size:4;font:13px/1.42 Consolas,"Courier New",monospace;color:#e9eef5;background:var(--panel2);padding:20px;border:1px solid var(--line);border-radius:10px}
+.small pre{font-size:14px;line-height:1.5} code{font-family:Consolas,"Courier New",monospace}
+.badge{display:inline-block;padding:4px 8px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:.82rem;margin-right:7px}
+footer{margin-top:28px;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<main>
+<h1>Meta-analysis Report</h1>
+<p class="muted">Semantic tree of <code>META_ANALYSIS.md</code> · LLM Topology project</p>
+<p><span class="badge">Project root</span><span class="badge">Semantic reconstruction</span><span class="badge">ASCII topology</span></p>
+<div class="callout"><strong>Controlling interpretation.</strong> The metaanalysis is not primarily a chronology of runs. The runs form an evidence chain beneath the central research question: whether controlled changes in transformer-state representations can reveal higher-order semantic topology learned from the training distribution.</div>
+<h2>1. Full semantic map</h2>
+<div class="card"><pre>META_ANALYSIS.md
+│
+└── FUNDAMENTAL PROJECT OBJECTIVE
+    │
+    ├── Can changes in internal state across transformer layers
+    │   reveal the semantic structure learned through training?
+    │
+    ├── Target of inference
+    │   ├── NOT specific training documents
+    │   ├── NOT literal token associations
+    │   └── higher-order learned relationships / semantic topology
+    │
+    └── Core inferential mechanism
+        │
+        ├── observe transformer-state change
+        ├── perturb the input in controlled ways
+        ├── identify what changes
+        ├── identify what survives
+        └── infer the invariant structure beneath the transformations
+            │
+            └── learned semantic regularities
+                │
+                └── approximate map of the structure compressed from training
+                    │
+                    ├─────────────────────────────────────────────────────┐
+                    │                                                     │
+                    ▼                                                     ▼
+          EMPIRICAL INSTRUMENT                                  ANALYTICAL INSTRUMENT
+                    │                                                     │
+        ┌───────────┴────────────┐                            ┌───────────┴─────────────┐
+        │                        │                            │                         │
+        ▼                        ▼                            ▼                         ▼
+ TRANSFORMER DEPTH        CONTROLLED PERTURBATION        PARENT INFERENCE           SDA-3 / GRD
+        │                        │                            │                         │
+        ├── state-by-state       ├── token/order swaps       ├── communities            ├── C: empirical centre
+        ├── hidden states        ├── permutations            │      ↓                    ├── A: empirical boundary
+        ├── vocabulary           ├── context replacement     ├── semantic families      ├── E: structure-discovery
+        │   projection           ├── overlapping probes      │      ↓                    │      operator
+        ├── positive/negative    └── neighbouring probes     ├── parent structures       ├── S: missing-node /
+        │   populations                                       │      ↓                    │      structural-absence test
+        ├── semantic networks                                 └── relations between      └── HCU: anti-interpretive
+        └── layer transitions                                     parents                   correlation probe
+                    │                                                     │
+                    └──────────────────────┬──────────────────────────────┘
+                                           │
+                                           ▼
+                                 UNIT OF ANALYSIS EVOLVES
+                                           │
+                         token
+                           ↓
+                      neighbour
+                           ↓
+                       community
+                           ↓
+                    semantic family
+                           ↓
+                    generative parent
+                           ↓
+                    parent relationship
+                           ↓
+                 perturbation invariant
+                           ↓
+                  SEMANTIC TOPOLOGY
+                                           │
+                    ┌──────────────────────┴───────────────────────┐
+                    │                                              │
+                    ▼                                              ▼
+             EXPERIMENTAL TRAJECTORY                    THEORY OF SEMANTIC ORGANISATION
+                    │                                              │
+        R001–R004                                           concepts are decomposable
+        │                                                   │
+        ├── establish measurement                           ├── surface tokens can share
+        ├── vocabulary projection                           │   higher-order abstractions
+        ├── cut-off discovery                               ├── relations matter more than
+        └── curvature/coherence hypothesis                  │   category labels
+                    │                                       ├── structural concepts can
+                    ▼                                       │   function as operators
+        R005–R008                                           ├── heterogeneous material can
+        │                                                   │   be compressed into common parents
+        ├── network topology                                └── stable structure is revealed
+        ├── positive / negative sectors                         through perturbation
+        └── community structure
+                    │
+                    ▼
+        R009–R010
+        │
+        ├── semantic community classification
+        ├── parent-node reconstruction
+        ├── longitudinal semantic evolution
+        └── emergence of GRD
+                    │
+                    ▼
+        R012
+        │
+        ├── multi-concept semantic synthesis
+        ├── order-sensitive trajectory
+        ├── abstraction / conflict regions
+        └── distinction:
+            semantic development ≠ simple token turnover
+                    │
+                    ▼
+        R013
+        │
+        ├── remove instruction shell
+        ├── six bare-concept permutations
+        ├── separate sequence effects from semantic invariants
+        └── KEY SHIFT
+            │
+            └── stable object is not a state
+                but structure surviving transformations of states
+                    │
+                    ▼
+        R014
+        │
+        ├── overlapping probes
+        ├── triplet stops being the semantic object
+        ├── aggregate independently reconstructed parents
+        └── first local semantic graph
+                    │
+                    ▼
+        R015
+        │
+        ├── move probes into neighbouring semantic territory
+        ├── recover compatible parent regions
+        ├── infer continuity between neighbouring probes
+        └── potential mechanism for traversing semantic space
+                    │
+                    ▼
+        R016
+        │
+        ├── test substantially larger local model
+        ├── OLMo 3 32B native BF16 succeeds
+        └── hardware assumption falsified;
+            semantic-analysis bottleneck becomes dominant
+                    │
+                    ▼
+        R017
+        │
+        └── OLMo semantic-region reconstruction
+                    │
+                    ▼
+        R018
+        │
+        ├── six permutations of
+        │   choke point / collapsible barrier / spear
+        │
+        ├── early state
+        │   └── strong final-position conditioning
+        │
+        ├── middle layers
+        │   └── strong semantic/topological divergence
+        │
+        └── late layers
+            └── higher-order reconvergence
+                │
+                ├── CONSTRAINT / REQUIREMENT
+                ├── STRUCTURAL CONFIGURATION
+                ├── DYNAMIC PATH GEOMETRY
+                └── COLLAPSE / ADJUSTMENT
+                    │
+                    └── empirical demonstration:
+                        unstable surface topology
+                               ↓
+                        controlled divergence
+                               ↓
+                        invariant higher-order topology
+                                           │
+                    ┌──────────────────────┴───────────────────────┐
+                    │                                              │
+                    ▼                                              ▼
+          EPISTEMOLOGICAL RESULT                         HUMAN–LLM METAMETHODOLOGY
+                    │                                              │
+        ├── SUPPORTED                                    HUMAN
+        │   │                                             │
+        │   ├── internal state change                     ├── detects objective drift
+        │   │   contains structural information           ├── detects abstraction inflation
+        │   ├── layer depth exposes                       ├── supplies utility judgement
+        │   │   changing semantic organisation            ├── identifies premature coherence
+        │   ├── controlled perturbation                   └── recognises higher-order problems
+        │   │   exposes invariants                            before the model does
+        │   └── persistent parents can be mapped                    │
+        │       across probes                                       ▼
+        │                                                     selection pressure
+        ├── REFORMULATED                                         / gradients
+        │   │                                                       │
+        │   └── "infer training data"                               ▼
+        │            ↓                                             LLM
+        │       infer semantic regularities                         │
+        │       learned from the training distribution              ├── generates candidate relations
+        │                                                           ├── performs large-scale comparison
+        ├── REJECTED / NOT ESTABLISHED                              ├── reconstructs latent structures
+        │   │                                                       └── compresses evidence
+        │   ├── reconstruct exact source documents                         │
+        │   ├── assume one literal graph survives                          ▼
+        │   │   every prompt order                                JOINT LOOP
+        │   └── treat coherent interpretation                             │
+        │       as equivalent to measured evidence                       ├── generate possibilities
+        │                                                                ├── expose structure
+        └── OPEN                                                         ├── human rejects bad abstraction
+            │                                                            ├── preserve unresolved structure
+            ├── cross-model invariance                                   ├── reclassify
+            ├── global semantic map                                      └── repeat
+            ├── relationship to actual
+            │   training-distribution frequencies                              │
+            ├── model-scale effects                                             ▼
+            └── degree to which topology                             EMERGENT METHODOLOGY
+                generalises across regions                                  │
+                                                                            ├── gradients rather than targets
+                                                                            ├── adversarial treatment of coherence
+                                                                            ├── delayed abstraction
+                                                                            ├── recursive reclassification
+                                                                            └── errors used as probes
+                                                                                     │
+                                                                                     ▼
+                                                                         STABILITY THROUGH SURVIVORSHIP
+                                                                         OF EXPLANATORY STRUCTURE
+                                           │
+                    ┌──────────────────────┴───────────────────────┐
+                    │                                              │
+                    ▼                                              ▼
+             EXPERIMENTAL GOVERNANCE                        CURRENT PROJECT STATE
+                    │                                              │
+        Objective → State → Execution                      measurement
+                    │                                              ↓
+        ├── define inferred objective                        semantic reconstruction
+        ├── define success                                         ↓
+        ├── define failure                                    invariant map
+        ├── define scope drift                                     ↓
+        ├── verify actual state                               final analysis
+        ├── execute bounded operation                               ↓
+        └── update state before continuing                  RUN COMPLETE
+                    │
+                    ├── measurement and interpretation
+                    │   remain epistemically separate
+                    │
+                    ├── Codex
+                    │   └── measure → validate → export → stop
+                    │
+                    └── ChatGPT
+                        └── reconstruct → compare → infer
+                            → map → interpret → report</pre></div>
+<h2>2. Deepest compression</h2>
+<div class="card small"><pre>TRANSFORMER STATE CHANGE
+        +
+CONTROLLED PERTURBATION
+        ↓
+REPRESENTATIONAL VARIATION
+        ↓
+REMOVE WHAT IS CONTINGENT
+        ↓
+PRESERVE WHAT RE-EMERGES
+        ↓
+SEMANTIC INVARIANTS
+        ↓
+RELATIONS BETWEEN INVARIANTS
+        ↓
+LEARNED SEMANTIC TOPOLOGY
+        ↓
+INFERENCE ABOUT THE STRUCTURE
+COMPRESSED FROM THE TRAINING DISTRIBUTION</pre></div>
+<h2>3. Emergent human–LLM methodology</h2>
+<div class="card small"><pre>LLM generates structure
+        ↓
+human detects premature coherence / drift
+        ↓
+structure is forced to remain unresolved
+        ↓
+better abstraction emerges
+        ↓
+human supplies another constraint
+        ↓
+LLM reconstructs
+        ↓
+METHOD ITSELF EVOLVES</pre></div>
+<h2>4. Interpretation</h2>
+<div class="card">
+<p>The metaanalysis records two coupled discoveries. The first is the experimental method for extracting increasingly stable semantic invariants from transformer-state change under controlled perturbation. The second is the procedure by which the research method itself evolved: candidate structure is generated, premature coherence and abstraction drift are challenged, unresolved evidence is preserved, and only structures that survive repeated adversarial reconstruction are retained.</p>
+<p>The resulting project-level object is therefore not any single state, token set, community, prompt, or run. It is the <strong>topology that survives transformations of those observations</strong>.</p>
+</div>
+<footer>Derived from the current project <code>META_ANALYSIS.md</code> and stored alongside it as <code>META_ANALYSIS_REPORT.html</code>.</footer>
+</main>
+</body>
+</html>
