@@ -1,0 +1,39 @@
+{
+  "status": "successful",
+  "identity": {
+    "layers": 64,
+    "hidden_width": 5120,
+    "config_sha256": "72efc1f0ed1161e4205a54d94110f61d21c4c4315fde9ef17163bbc33c9a6149",
+    "weight_index_sha256": "3205da1ac0415defc36d21c9d3bbaea984a6697f34a229659ed069b3eea8958b",
+    "tokenizer_metadata": {
+      "tokenizer.json": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca",
+      "tokenizer_config.json": "ffa5b2cfee6e73d5dc0a7d3b7e02eb6ed60a491dd782f2bd8ad2b4659b2aafc6",
+      "special_tokens_map.json": "4cb2b52960bababa8ec27153831e405ef7811e3fad1226106e09c28e715cfb21",
+      "generation_config.json": "49b7b376c9a77281e37b1544e00f6b83ffe1d46bd47ff1c5ee04a7d642ecbe2b"
+    }
+  },
+  "repeat_count": 3,
+  "prompt_count": 3,
+  "observation_count": 9,
+  "hidden_shape": [
+    3,
+    3,
+    65,
+    5120
+  ],
+  "logit_shape": [
+    3,
+    3,
+    100278
+  ],
+  "all_finite": true,
+  "anchor_token_id": 198,
+  "within_repeat_hidden_exact_all_states": true,
+  "within_repeat_logits_exact": true,
+  "repeat_seconds": [
+    51.8849166,
+    24.11483120000048,
+    23.878806699998677
+  ],
+  "peak_gpu_allocated_bytes": 18670857728
+}

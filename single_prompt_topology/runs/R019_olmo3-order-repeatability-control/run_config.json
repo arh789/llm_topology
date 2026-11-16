@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "run_id": "R019_olmo3-order-repeatability-control",
+  "run_number": 19,
+  "objective": "Separate deterministic concept-order effects from repeated-forward-pass variation for three balanced permutations of choke point, collapsible barrier and spear.",
+  "plan_path": "R019_PLAN.md",
+  "output_directory": "runs/R019_olmo3-order-repeatability-control",
+  "analysis": {
+    "required": false
+  },
+  "model": {
+    "id": "allenai/Olmo-3-1125-32B",
+    "revision": "c2b61dae89a1ad10e4ad5653d0e46b590902607b",
+    "snapshot_directory": "D:/AI/cache/huggingface/hub/models--allenai--Olmo-3-1125-32B/snapshots/c2b61dae89a1ad10e4ad5653d0e46b590902607b",
+    "offload_directory": "D:/AI/cache/offload/R019_olmo3-repeatability",
+    "precision": "bfloat16",
+    "quantized": false,
+    "expected_layers": 64,
+    "expected_states": 65,
+    "hidden_width": 5120,
+    "usable_vocabulary_size": 100278,
+    "embedding_key": "model.embed_tokens.weight",
+    "gpu_memory_limit": "18GiB",
+    "cpu_memory_limit": "28GiB"
+  },
+  "capture": {
+    "anchor_text": "\n",
+    "anchor_position": "final_non_padding_token",
+    "add_special_tokens": false,
+    "chat_template_used": false,
+    "response_generation": false,
+    "batch_size": 3,
+    "repeat_count": 3,
+    "deterministic_replay": true
+  },
+  "concepts": {
+    "A": "choke point",
+    "B": "collapsible barrier",
+    "C": "spear"
+  },
+  "prompts": [
+    {
+      "prompt_id": "ABC",
+      "permutation": "ABC",
+      "comparison_group": "cyclic_permutations",
+      "concept_order": ["A", "B", "C"],
+      "raw_text": "choke point\ncollapsible barrier\nspear\n"
+    },
+    {
+      "prompt_id": "BCA",
+      "permutation": "BCA",
+      "comparison_group": "cyclic_permutations",
+      "concept_order": ["B", "C", "A"],
+      "raw_text": "collapsible barrier\nspear\nchoke point\n"
+    },
+    {
+      "prompt_id": "CAB",
+      "permutation": "CAB",
+      "comparison_group": "cyclic_permutations",
+      "concept_order": ["C", "A", "B"],
+      "raw_text": "spear\nchoke point\ncollapsible barrier\n"
+    }
+  ],
+  "measurement": {
+    "sectors": ["positive_head", "negative_tail"],
+    "k_neighbors": 10,
+    "knn_batch_size": 512,
+    "random_seed": 20261115,
+    "louvain_resolution": 1.0
+  },
+  "expected": {
+    "prompt_count": 3,
+    "state_count": 65,
+    "network_count": 390,
+    "within_prompt_transition_rows": 384,
+    "pairwise_permutation_rows": 390,
+    "invariance_summary_rows": 780,
+    "hidden_state_pair_rows": 195,
+    "repeat_observation_count": 9,
+    "repeat_network_count": 1170,
+    "repeat_pair_state_rows": 2340,
+    "within_repeat_pair_state_rows": 585,
+    "between_order_pair_state_rows": 1755,
+    "repeat_topology_pair_rows": 4680,
+    "within_repeat_topology_rows": 1170,
+    "between_order_topology_rows": 3510
+  }
+}

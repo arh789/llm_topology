@@ -1,0 +1,54 @@
+{
+  "conclusion": "deterministic_order_effect_confirmed",
+  "repeat_noise_floor": {
+    "hidden_exact_all_states": true,
+    "vocabulary_scores_exact_all_states": true,
+    "next_token_logits_exact": true,
+    "topology_exact_all_states_and_sides": true,
+    "maximum_hidden_cosine_distance": 0.0,
+    "maximum_score_rmse": 0.0,
+    "maximum_next_token_js_divergence": 0.0,
+    "minimum_membership_jaccard": 1.0,
+    "minimum_edge_jaccard": 1.0,
+    "minimum_community_ari": 1.0
+  },
+  "order_effect": {
+    "detected": true,
+    "minimum_hidden_cosine_similarity": 0.6091194748878479,
+    "maximum_score_rmse": 0.0124558676034212,
+    "maximum_next_token_js_divergence": 0.0526283010840415,
+    "minimum_membership_jaccard": 0.1583920288610204,
+    "minimum_edge_jaccard": 0.0416586265303059,
+    "worst_hidden_case": {
+      "source": "ABC_R1",
+      "target": "BCA_R1",
+      "state_index": 15,
+      "state_label": "block_14_output"
+    },
+    "worst_score_case": {
+      "source": "ABC_R1",
+      "target": "BCA_R1",
+      "state_index": 16,
+      "state_label": "block_15_output"
+    },
+    "worst_membership_case": {
+      "source": "ABC_R1",
+      "target": "BCA_R1",
+      "state_index": 16,
+      "state_label": "block_15_output",
+      "side": "positive_head"
+    },
+    "worst_edge_case": {
+      "source": "ABC_R1",
+      "target": "BCA_R1",
+      "state_index": 16,
+      "state_label": "block_15_output",
+      "side": "positive_head"
+    },
+    "worst_next_token_case": {
+      "source": "ABC_R1",
+      "target": "BCA_R1"
+    }
+  },
+  "interpretation": "The measured order effect is compared against repeated deterministic forward passes. No generated token or sampled trajectory contributed to any comparison."
+}

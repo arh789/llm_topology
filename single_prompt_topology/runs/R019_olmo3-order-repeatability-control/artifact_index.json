@@ -1,0 +1,94 @@
+{
+  "artifacts": [
+    {
+      "path": "R019_COMPLETENESS_VERIFICATION.md",
+      "bytes": 426,
+      "sha256": "1b76b4f2fd423404eeb4edf4a6820426ded7f7ef9bc1c990cfb3cf73a1527026"
+    },
+    {
+      "path": "R019_MEASUREMENT_REPORT.md",
+      "bytes": 1835,
+      "sha256": "894bf9011c16e1f6c9e9eea3b5c27b5f29222a8530e67331898af15834f704df"
+    },
+    {
+      "path": "R019_PLAN.md",
+      "bytes": 4872,
+      "sha256": "a74c978dbf6eef905aa8c5566773ace6a54fe53aaae611ac52906dfe9bb58a7d"
+    },
+    {
+      "path": "R019_RESULT.json",
+      "bytes": 1785,
+      "sha256": "5d754179fcb4f3960bd8adbd36793ce0a12a5a4b99e491a80e0c7e71164da41d"
+    },
+    {
+      "path": "capture_validation.json",
+      "bytes": 1182,
+      "sha256": "a75f08d4f95525b76b9c49078d50901e4ea99710197544a1d0a87b25acc38439"
+    },
+    {
+      "path": "cutoffs.csv",
+      "bytes": 88566,
+      "sha256": "485f64d25babb6246dc49a4afa4bc126aebbeee71bf2a13a636f0cb810b3b96e"
+    },
+    {
+      "path": "device_map.json",
+      "bytes": 2273,
+      "sha256": "706df4523336e6a453b0628f20280d4619db304fddf041160746e898a45b92b8"
+    },
+    {
+      "path": "divergence_by_state.csv",
+      "bytes": 21650,
+      "sha256": "7cfd2aa4d261b61d329c4a90d06ab986bafa069b66098ace5114eff9dbb41bb9"
+    },
+    {
+      "path": "network_index.csv",
+      "bytes": 317306,
+      "sha256": "448a65614a1f310413e5005c60da58da0bac3946a901fcd688453fc72d2e6793"
+    },
+    {
+      "path": "observation_records.json",
+      "bytes": 2804,
+      "sha256": "467a86d1aa4b48ff1e87b971ef4c35238443c90531884c37e486909f4d783dfd"
+    },
+    {
+      "path": "pairwise_hidden_state_metrics.csv",
+      "bytes": 280473,
+      "sha256": "b6529b9995d052fd2c0dba8e83399ff51ef452500828788bc01d76a055cd8c9b"
+    },
+    {
+      "path": "pairwise_next_token_distribution_metrics.csv",
+      "bytes": 4658,
+      "sha256": "197d89b629b8309f53c8677b51df9cb49f1a6730c8470b98e030d5568f586131"
+    },
+    {
+      "path": "pairwise_topology_metrics.csv",
+      "bytes": 748912,
+      "sha256": "f2a797e0b9edff3871e3bd956b08cf61b110497e1506d1e284a61ad64dfe3bac"
+    },
+    {
+      "path": "pairwise_vocabulary_score_metrics.csv",
+      "bytes": 311417,
+      "sha256": "9e3ddaaf57ab91fece2c42cc1f5847ef928b18c4c839c43adf6a1727e2701e43"
+    },
+    {
+      "path": "prompt_records.json",
+      "bytes": 2684,
+      "sha256": "7b00982ad08722fa25780ce416b37ec727199c02768226ac4465004567bbf6b6"
+    },
+    {
+      "path": "repeat_capture.safetensors",
+      "bytes": 7795788,
+      "sha256": "ae941cb685942465b8250e8bb9ffbd07ca68f9e4760373e62b73061dd02ffb1a"
+    },
+    {
+      "path": "run_config.json",
+      "bytes": 2814,
+      "sha256": "9b736f873ca812362d50095d4c8f8c8e7c3e90a13245b7a07aff381afce3620e"
+    },
+    {
+      "path": "vocabulary_score_repeats.safetensors",
+      "bytes": 234650800,
+      "sha256": "a9dcfb28e775399b2db260f5aa54ae960e2f3f8328cc2ebd52915db0a84c5c34"
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "run_id": "R019_olmo3-order-repeatability-control",
+  "run_number": 19,
+  "run_status": "measurement_complete",
+  "started_at": "2026-11-16T19:40:16.442478+00:00",
+  "completed_at": "2026-11-16T20:01:18.738331+00:00",
+  "objective": "Separate deterministic concept-order effects from repeated-forward-pass variation for three balanced permutations of choke point, collapsible barrier and spear.",
+  "model": {
+    "id": "allenai/Olmo-3-1125-32B",
+    "revision": "c2b61dae89a1ad10e4ad5653d0e46b590902607b",
+    "snapshot_directory": "D:/AI/cache/huggingface/hub/models--allenai--Olmo-3-1125-32B/snapshots/c2b61dae89a1ad10e4ad5653d0e46b590902607b",
+    "offload_directory": "D:/AI/cache/offload/R019_olmo3-repeatability",
+    "precision": "bfloat16",
+    "quantized": false,
+    "expected_layers": 64,
+    "expected_states": 65,
+    "hidden_width": 5120,
+    "usable_vocabulary_size": 100278,
+    "embedding_key": "model.embed_tokens.weight",
+    "gpu_memory_limit": "18GiB",
+    "cpu_memory_limit": "28GiB"
+  },
+  "capture": {
+    "anchor_text": "\n",
+    "anchor_position": "final_non_padding_token",
+    "add_special_tokens": false,
+    "chat_template_used": false,
+    "response_generation": false,
+    "batch_size": 3,
+    "repeat_count": 3,
+    "deterministic_replay": true
+  },
+  "measurement": {
+    "sectors": [
+      "positive_head",
+      "negative_tail"
+    ],
+    "k_neighbors": 10,
+    "knn_batch_size": 512,
+    "random_seed": 20261115,
+    "louvain_resolution": 1.0
+  },
+  "expected": {
+    "prompt_count": 3,
+    "state_count": 65,
+    "network_count": 390,
+    "within_prompt_transition_rows": 384,
+    "pairwise_permutation_rows": 390,
+    "invariance_summary_rows": 780,
+    "hidden_state_pair_rows": 195,
+    "repeat_observation_count": 9,
+    "repeat_network_count": 1170,
+    "repeat_pair_state_rows": 2340,
+    "within_repeat_pair_state_rows": 585,
+    "between_order_pair_state_rows": 1755,
+    "repeat_topology_pair_rows": 4680,
+    "within_repeat_topology_rows": 1170,
+    "between_order_topology_rows": 3510
+  },
+  "components": {
+    "sequential_capture": {
+      "status": "successful",
+      "started_at": "2026-11-16T19:40:16.443675+00:00",
+      "completed_at": "2026-11-16T19:42:20.209635+00:00",
+      "elapsed_seconds": 123.76567100000102,
+      "identity": {
+        "layers": 64,
+        "hidden_width": 5120,
+        "config_sha256": "72efc1f0ed1161e4205a54d94110f61d21c4c4315fde9ef17163bbc33c9a6149",
+        "weight_index_sha256": "3205da1ac0415defc36d21c9d3bbaea984a6697f34a229659ed069b3eea8958b",
+        "tokenizer_metadata": {
+          "tokenizer.json": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca",
+          "tokenizer_config.json": "ffa5b2cfee6e73d5dc0a7d3b7e02eb6ed60a491dd782f2bd8ad2b4659b2aafc6",
+          "special_tokens_map.json": "4cb2b52960bababa8ec27153831e405ef7811e3fad1226106e09c28e715cfb21",
+          "generation_config.json": "49b7b376c9a77281e37b1544e00f6b83ffe1d46bd47ff1c5ee04a7d642ecbe2b"
+        }
+      },
+      "repeat_count": 3,
+      "prompt_count": 3,
+      "observation_count": 9,
+      "hidden_shape": [
+        3,
+        3,
+        65,
+        5120
+      ],
+      "logit_shape": [
+        3,
+        3,
+        100278
+      ],
+      "all_finite": true,
+      "anchor_token_id": 198,
+      "within_repeat_hidden_exact_all_states": true,
+      "within_repeat_logits_exact": true,
+      "repeat_seconds": [
+        51.8849166,
+        24.11483120000048,
+        23.878806699998677
+      ],
+      "peak_gpu_allocated_bytes": 18670857728,
+      "memory_after_capture": {
+        "physical_ram_available_bytes": 10173632512,
+        "process_rss_bytes": 32720310272,
+        "model_drive_free_bytes": 1105394040832,
+        "gpu_name": "NVIDIA GeForce RTX 4090",
+        "gpu_total_bytes": 25756696576,
+        "gpu_free_bytes": 4638257152,
+        "gpu_allocated_bytes": 17614668800,
+        "gpu_reserved_bytes": 18679332864
+      }
+    },
+    "projection_and_cutoffs": {
+      "status": "successful",
+      "started_at": "2026-11-16T19:42:23.329244+00:00",
+      "completed_at": "2026-11-16T19:42:37.156350+00:00",
+      "elapsed_seconds": 13.827125700001488,
+      "score_shape": [
+        9,
+        65,
+        100278
+      ],
+      "cutoff_rows": 585,
+      "membership_population_count": 1170,
+      "within_repeat_scores_exact_all_states": true,
+      "embedding_shard": "model-00001-of-00014.safetensors"
+    },
+    "repeat_networks_and_comparisons": {
+      "status": "successful",
+      "started_at": "2026-11-16T19:42:37.351475+00:00",
+      "completed_at": "2026-11-16T20:01:17.921621+00:00",
+      "elapsed_seconds": 1120.5696868000014,
+      "network_count": 1170,
+      "topology_pair_rows": 4680
+    },
+    "summarization_and_validation": {
+      "status": "successful",
+      "started_at": "2026-11-16T20:01:17.988775+00:00",
+      "completed_at": "2026-11-16T20:01:18.383044+00:00",
+      "elapsed_seconds": 0.3938214000008884,
+      "conclusion": "deterministic_order_effect_confirmed",
+      "completeness_checks": {
+        "hidden_pair_rows": true,
+        "score_pair_rows": true,
+        "logit_pair_rows": true,
+        "network_rows": true,
+        "topology_pair_rows": true,
+        "within_hidden_rows": true,
+        "between_hidden_rows": true,
+        "within_topology_rows": true,
+        "between_topology_rows": true
+      }
+    },
+    "artifact_index": {
+      "status": "successful",
+      "started_at": "2026-11-16T20:01:18.383044+00:00",
+      "completed_at": "2026-11-16T20:01:18.732327+00:00",
+      "elapsed_seconds": 0.348701599999913,
+      "artifact_count": 18
+    },
+    "derived_metric_normalization": {
+      "status": "successful",
+      "started_at": "2026-11-16T20:03:03.237315+00:00",
+      "completed_at": "2026-11-16T20:03:03.954867+00:00",
+      "elapsed_seconds": 0.7170738000022538,
+      "reason": "Exact-equal tensor pairs are assigned mathematically exact zero distance/divergence instead of retaining cosine or softmax roundoff.",
+      "artifact_count": 18
+    }
+  },
+  "failure": null,
+  "result": {
+    "conclusion": "deterministic_order_effect_confirmed",
+    "repeat_noise_floor": {
+      "hidden_exact_all_states": true,
+      "vocabulary_scores_exact_all_states": true,
+      "next_token_logits_exact": true,
+      "topology_exact_all_states_and_sides": true,
+      "maximum_hidden_cosine_distance": 0.0,
+      "maximum_score_rmse": 0.0,
+      "maximum_next_token_js_divergence": 0.0,
+      "minimum_membership_jaccard": 1.0,
+      "minimum_edge_jaccard": 1.0,
+      "minimum_community_ari": 1.0
+    },
+    "order_effect": {
+      "detected": true,
+      "minimum_hidden_cosine_similarity": 0.6091194748878479,
+      "maximum_score_rmse": 0.0124558676034212,
+      "maximum_next_token_js_divergence": 0.0526283010840415,
+      "minimum_membership_jaccard": 0.1583920288610204,
+      "minimum_edge_jaccard": 0.0416586265303059,
+      "worst_hidden_case": {
+        "source": "ABC_R1",
+        "target": "BCA_R1",
+        "state_index": 15,
+        "state_label": "block_14_output"
+      },
+      "worst_score_case": {
+        "source": "ABC_R1",
+        "target": "BCA_R1",
+        "state_index": 16,
+        "state_label": "block_15_output"
+      },
+      "worst_membership_case": {
+        "source": "ABC_R1",
+        "target": "BCA_R1",
+        "state_index": 16,
+        "state_label": "block_15_output",
+        "side": "positive_head"
+      },
+      "worst_edge_case": {
+        "source": "ABC_R1",
+        "target": "BCA_R1",
+        "state_index": 16,
+        "state_label": "block_15_output",
+        "side": "positive_head"
+      },
+      "worst_next_token_case": {
+        "source": "ABC_R1",
+        "target": "BCA_R1"
+      }
+    },
+    "interpretation": "The measured order effect is compared against repeated deterministic forward passes. No generated token or sampled trajectory contributed to any comparison."
+  },
+  "artifact_index": "artifact_index.json",
+  "interpretation_boundary": "R019 measures repeat and order divergence. It does not reconstruct semantic parents or interpret their meaning."
+}

@@ -1,0 +1,128 @@
+{
+  "ABC_R1": {
+    "observation_index": 0,
+    "observation_id": "ABC_R1",
+    "prompt_index": 0,
+    "prompt_id": "ABC",
+    "permutation": "ABC",
+    "repeat_index": 1,
+    "concept_order": [
+      "A",
+      "B",
+      "C"
+    ],
+    "raw_text": "choke point\ncollapsible barrier\nspear\n"
+  },
+  "BCA_R1": {
+    "observation_index": 1,
+    "observation_id": "BCA_R1",
+    "prompt_index": 1,
+    "prompt_id": "BCA",
+    "permutation": "BCA",
+    "repeat_index": 1,
+    "concept_order": [
+      "B",
+      "C",
+      "A"
+    ],
+    "raw_text": "collapsible barrier\nspear\nchoke point\n"
+  },
+  "CAB_R1": {
+    "observation_index": 2,
+    "observation_id": "CAB_R1",
+    "prompt_index": 2,
+    "prompt_id": "CAB",
+    "permutation": "CAB",
+    "repeat_index": 1,
+    "concept_order": [
+      "C",
+      "A",
+      "B"
+    ],
+    "raw_text": "spear\nchoke point\ncollapsible barrier\n"
+  },
+  "ABC_R2": {
+    "observation_index": 3,
+    "observation_id": "ABC_R2",
+    "prompt_index": 0,
+    "prompt_id": "ABC",
+    "permutation": "ABC",
+    "repeat_index": 2,
+    "concept_order": [
+      "A",
+      "B",
+      "C"
+    ],
+    "raw_text": "choke point\ncollapsible barrier\nspear\n"
+  },
+  "BCA_R2": {
+    "observation_index": 4,
+    "observation_id": "BCA_R2",
+    "prompt_index": 1,
+    "prompt_id": "BCA",
+    "permutation": "BCA",
+    "repeat_index": 2,
+    "concept_order": [
+      "B",
+      "C",
+      "A"
+    ],
+    "raw_text": "collapsible barrier\nspear\nchoke point\n"
+  },
+  "CAB_R2": {
+    "observation_index": 5,
+    "observation_id": "CAB_R2",
+    "prompt_index": 2,
+    "prompt_id": "CAB",
+    "permutation": "CAB",
+    "repeat_index": 2,
+    "concept_order": [
+      "C",
+      "A",
+      "B"
+    ],
+    "raw_text": "spear\nchoke point\ncollapsible barrier\n"
+  },
+  "ABC_R3": {
+    "observation_index": 6,
+    "observation_id": "ABC_R3",
+    "prompt_index": 0,
+    "prompt_id": "ABC",
+    "permutation": "ABC",
+    "repeat_index": 3,
+    "concept_order": [
+      "A",
+      "B",
+      "C"
+    ],
+    "raw_text": "choke point\ncollapsible barrier\nspear\n"
+  },
+  "BCA_R3": {
+    "observation_index": 7,
+    "observation_id": "BCA_R3",
+    "prompt_index": 1,
+    "prompt_id": "BCA",
+    "permutation": "BCA",
+    "repeat_index": 3,
+    "concept_order": [
+      "B",
+      "C",
+      "A"
+    ],
+    "raw_text": "collapsible barrier\nspear\nchoke point\n"
+  },
+  "CAB_R3": {
+    "observation_index": 8,
+    "observation_id": "CAB_R3",
+    "prompt_index": 2,
+    "prompt_id": "CAB",
+    "permutation": "CAB",
+    "repeat_index": 3,
+    "concept_order": [
+      "C",
+      "A",
+      "B"
+    ],
+    "raw_text": "spear\nchoke point\ncollapsible barrier\n"
+  }
+}
