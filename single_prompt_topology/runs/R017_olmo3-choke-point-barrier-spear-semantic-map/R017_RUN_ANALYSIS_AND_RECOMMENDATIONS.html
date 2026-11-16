@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>R017 Analysis and Recommendations</title>
+<style>
+:root{color-scheme:dark}body{margin:0;background:#101216;color:#e9ebef;font-family:Georgia,"Times New Roman",serif;font-size:18px;line-height:1.65}main{max-width:1060px;margin:auto;padding:48px 28px 80px}h1,h2,h3{font-family:Arial,Helvetica,sans-serif;line-height:1.2;color:#fff}h1{font-size:2.35rem;margin-bottom:.5rem}h2{font-size:1.55rem;margin-top:3rem;padding-top:1.2rem;border-top:1px solid #343945}h3{font-size:1.15rem;margin-top:2rem}p{margin:.85rem 0}pre{background:#171a20;border:1px solid #343945;border-radius:9px;padding:18px 20px;overflow:auto;white-space:pre;line-height:1.45;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.87rem}blockquote{margin:1.4rem 0;padding:.35rem 0 .35rem 1.2rem;border-left:4px solid #7cc4ff;color:#f4f5f6;font-size:1.06em}table{border-collapse:collapse;width:100%;margin:1.4rem 0;font-family:Arial,Helvetica,sans-serif;font-size:.9rem}th,td{padding:.65rem .72rem;border-bottom:1px solid #343945;text-align:left;vertical-align:top}th{color:#fff;background:#171a20}.note{color:#b8bfca}.status{display:inline-block;background:#173d2c;color:#9ff0c6;border:1px solid #2b7652;border-radius:999px;padding:.2rem .7rem;font-family:Arial,sans-serif;font-size:.82rem}@media(max-width:760px){body{font-size:16px}main{padding:28px 15px 60px}h1{font-size:1.9rem}pre{font-size:.72rem;padding:12px}table{font-size:.78rem;display:block;overflow-x:auto}}
+</style>
+</head>
+<body><main>
+<span class="status">R017 measurement and downstream reconstruction complete</span>
+<h1>R017 analysis and recommendations</h1>
+
+<p><strong>Measurement status:</strong> complete and validated. <strong>Semantic status:</strong> independently reconstructed. <strong>Invariance status:</strong> not tested.</p>
+
+<h2>1. Strongest supported result</h2>
+
+<blockquote><strong>For OLMo 3 32B Base, “choke point + collapsible barrier + spear” forms a coherent single-trajectory topology of controlled passage and tactical interception: geometry constrains movement, a deployable obstruction shapes the approach, and reach/piercing force acts at the resulting point of contact.</strong></blockquote>
+
+<p>The model does not retain the prompt merely as three neighbouring nouns. Early and middle layers concretise the spear as a weapon and piercing object. Later layers increasingly preserve the functions joining the three inputs: point, intersection, narrow, flow, movement, folding, blocking, deployment, wall, restriction, attack and guard.</p>
+
+<h2>2. Reporting rules inherited from R014/R015</h2>
+
+<p>R014 and R015 separate measured outputs from semantic reconstruction. R017 follows the same rule:</p>
+
+<pre>MEASUREMENT
+hidden states → vocabulary projection → cutoffs → graphs → communities
+        ↓
+COMPLETENESS VALIDATION
+        ↓
+SEMANTIC RECONSTRUCTION
+        ↓
+STRUCTURED MAP
+nodes + edges + JSON
+        ↓
+ANALYSIS / RECOMMENDATION</pre>
+
+<p>R017 cannot reuse R014/R015 fields such as probe support or held-out recovery because there is only one prompt trajectory. It instead reports trajectory support, sector tendency, evidence scope, confidence and an explicit invariance status.</p>
+
+<h2>3. Experimental input and measured coverage</h2>
+
+<pre>choke point
+collapsible barrier
+spear</pre>
+
+<table>
+<thead><tr><th>Item</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>Model</td><td><code>allenai/Olmo-3-1125-32B</code>, revision <code>c2b61dae89a1ad10e4ad5653d0e46b590902607b</code>, native BF16</td></tr>
+<tr><td>Capture</td><td>Final newline anchor; no chat template or response generation</td></tr>
+<tr><td>States</td><td>65</td></tr>
+<tr><td>Networks</td><td>130 / 130</td></tr>
+<tr><td>Selected memberships</td><td>490,114</td></tr>
+<tr><td>Exact directed 10-NN edges</td><td>4,901,140</td></tr>
+<tr><td>State-local Louvain communities</td><td>2,007</td></tr>
+<tr><td>Adjacent-state comparisons</td><td>128 / 128</td></tr>
+</tbody>
+</table>
+
+<h2>4. Independent parent reconstruction</h2>
+
+<table>
+<thead><tr><th>Parent</th><th>Core material</th><th>Tendency</th><th>Confidence</th></tr></thead>
+<tbody>
+<tr><td><strong>Constrained passage</strong></td><td>point, intersection, bottleneck, narrow, channel, route, entry, exit, spatial position</td><td>both sectors; late positive-operational</td><td>High</td></tr>
+<tr><td><strong>Deployable obstruction</strong></td><td>collapse, folding, blocking, deploy, deployment</td><td>positive-dominant with negative boundary counterpart</td><td>High</td></tr>
+<tr><td><strong>Reach / piercing force</strong></td><td>spear, lance, knife, sword, blade, stab, pierce, weapon</td><td>positive early-middle; functional recoding late</td><td>High</td></tr>
+<tr><td><strong>Movement / flow</strong></td><td>movement, flow, path, route, exit, approach, channel</td><td>both sectors</td><td>High</td></tr>
+<tr><td><strong>Boundary / defence</strong></td><td>wall, restriction, access, guard, defence</td><td>negative-dominant late</td><td>Moderate–high</td></tr>
+<tr><td><strong>Attack / interception</strong></td><td>attack, attacking, ambush, guard, functional piercing residue</td><td>positive-dominant emergent outcome</td><td>High</td></tr>
+</tbody>
+</table>
+
+<h2>5. Minimum semantic map</h2>
+
+<pre>                         CONSTRAINED PASSAGE
+             point / intersection / narrow / channel / route
+                                  │
+                                  │ organises
+                                  ▼
+                         MOVEMENT / FLOW
+                    path / entry / exit / approach
+                                  │
+                         shaped / blocked by
+                                  ▼
+                      DEPLOYABLE OBSTRUCTION
+                 collapse / folding / blocking / deploy
+                         │                 │
+                         │                 └──── defines ────┐
+                         │                                   ▼
+                         │                         BOUNDARY / DEFENCE
+                         │                    wall / restriction / guard
+                         │
+                 creates a controlled
+                   point of contact
+                         │
+                         ▼
+                    REACH / PIERCING FORCE
+             spear / lance / blade / stab / pierce / weapon
+                         │
+                         ▼
+                 ATTACK / INTERCEPTION</pre>
+
+<blockquote><strong>CHANNEL MOVEMENT → DEPLOY BARRIER → NARROW APPROACH → INTERCEPT WITH REACH</strong></blockquote>
+
+<h2>6. Depth development</h2>
+
+<table>
+<thead><tr><th>Depth</th><th>Observed development</th><th>Interpretation</th></tr></thead>
+<tbody>
+<tr><td>State 00</td><td>Uncontextualised newline embedding</td><td>Boundary condition; excluded from prompt-semantic conclusions</td></tr>
+<tr><td>States 01–04</td><td>collapse, location, exit, bottleneck, entry, movement, weapons</td><td>Physical constraint and location are selected first</td></tr>
+<tr><td>States 05–20</td><td>spear, lance, knife, sword, blade, stab, ambush; intersection</td><td>The weapon is concretised while passage geometry develops</td></tr>
+<tr><td>States 21–30</td><td>blocking rises; controls/access appear; weapon structure broadens</td><td>Shift from object identity towards system function</td></tr>
+<tr><td>States 31–57</td><td>point, folding, blocking, movement, attack; walls/access/location/guard/exit</td><td>Active mechanism separates from boundary conditions</td></tr>
+<tr><td>States 58–63</td><td>point, flow, collapse, attack, intersection, deploy, narrow; restriction/channel/pierce/defence/wall</td><td>Strongest integrated functional architecture</td></tr>
+<tr><td>State 64</td><td>deployment, intersection, narrow, deploy, attack, guards; route/wall/spatial remain negative-tail</td><td>Final-normalised recoding preserves the operational core and its spatial counterpart</td></tr>
+</tbody>
+</table>
+
+<h2>7. Strongest relation evidence</h2>
+
+<p>At State 64, the relevant positive communities contain attack + intersection (C0), point + guards (C1), narrow (C4), and deployment + deploy (C11). Measured intercommunity token-edge counts are:</p>
+
+<table>
+<thead><tr><th>Community relation</th><th>Edges</th><th>Parent-level interpretation</th></tr></thead>
+<tbody>
+<tr><td>C0 ↔ C1</td><td>610</td><td>attack/intersection ↔ point/guards</td></tr>
+<tr><td>C0 ↔ C11</td><td>198</td><td>attack/intersection ↔ deployment</td></tr>
+<tr><td>C1 ↔ C11</td><td>190</td><td>point/guards ↔ deployment</td></tr>
+<tr><td>C0 ↔ C4</td><td>157</td><td>attack/intersection ↔ narrow</td></tr>
+<tr><td>C1 ↔ C4</td><td>128</td><td>point/guards ↔ narrow</td></tr>
+<tr><td>C4 ↔ C11</td><td>43</td><td>narrow ↔ deployment</td></tr>
+</tbody>
+</table>
+
+<p>These are genuine within-sector graph relations. Parent names are the downstream interpretation placed over them.</p>
+
+<h2>8. Sector asymmetry</h2>
+
+<p>The positive side increasingly carries the active procedure: weapon use, blocking, folding, movement, deployment, intersection, attack and guards. The negative side increasingly carries the spatial and limiting counterpart: route, exit, access, walls, restriction, channel and defence.</p>
+
+<p><strong>This is not evidence of suppression.</strong> Negative-tail means anti-alignment with the evolving anchor representation in the fixed embedding basis.</p>
+
+<h2>9. What R017 adds beyond R016</h2>
+
+<pre>R016
+Can OLMo 3 32B expose every required state locally?
+        ↓
+YES
+
+R017
+Can those states be converted into the complete
+projection → cutoff → graph → community → semantic-map pipeline?
+        ↓
+YES</pre>
+
+<p>R017 therefore closes the engineering-to-analysis gap left by R016. The 32B model is not merely capturable; it is usable as the complete topology measurement instrument for a short prompt.</p>
+
+<h2>10. What R017 does not establish</h2>
+
+<ul>
+<li>No order invariance: only one permutation was measured.</li>
+<li>No context invariance: the third-concept context was not varied.</li>
+<li>No neighbouring-concept continuity: there is no R015-style adjacent-region substitution.</li>
+<li>No cross-model invariance.</li>
+<li>No causal internal variables: parent labels remain descriptive reconstructions.</li>
+<li>No direct training-document recovery.</li>
+</ul>
+
+<h2>11. Recommendation</h2>
+
+<p>The next bounded experiment should test <strong>order invariance on the same R017 region</strong> before expanding its context.</p>
+
+<pre>choke point | collapsible barrier | spear
+                    ↓
+all six permutations
+                    ↓
+same OLMo 3 32B revision
+same newline anchor
+same projection / cutoff / graph method
+                    ↓
+does the parent map survive order?
+                    ↓
+if yes:
+overlapping-context / adjacent-neighbour expansion</pre>
+
+<p>The six prompts should be batched if practical. That simultaneously tests the unresolved 32B throughput question identified after R016 without changing the scientific measurement object.</p>
+
+<h2>12. Primary records</h2>
+
+<ul>
+<li><code>R017_MEASURED_REPORT.md</code></li>
+<li><code>R017_COMPLETENESS_VERIFICATION.md</code></li>
+<li><code>R017_SEMANTIC_RECONSTRUCTION.md</code></li>
+<li><code>R017_SEMANTIC_MAP_NODES.csv</code></li>
+<li><code>R017_SEMANTIC_MAP_EDGES.csv</code></li>
+<li><code>R017_SEMANTIC_MAP.json</code></li>
+<li><code>R017_SEMANTIC_MAP_REPORT.html</code></li>
+<li><code>manifest.json</code></li>
+<li><code>chatgpt_layer_packets.md</code></li>
+<li><code>chatgpt_community_networks.json</code></li>
+</ul>
+
+</main></body></html>

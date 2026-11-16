@@ -262,13 +262,25 @@ and are not versioned here.
     — the evidence-linked semantic map and report-standardisation candidates.
 67. [`single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/manifest.json`](single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/manifest.json)
     — the successful component record and hashes for curated R017 evidence.
-68. [`single_prompt_topology/R018_PLAN.md`](single_prompt_topology/R018_PLAN.md)
+68. [`single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_REPORTING_RULES.md`](single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_REPORTING_RULES.md)
+    — the R014/R015-derived reporting rules adapted to single-trajectory evidence.
+69. [`single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_SEMANTIC_RECONSTRUCTION.md`](single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_SEMANTIC_RECONSTRUCTION.md)
+    — the independent downstream parent and relation reconstruction.
+70. [`single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_SEMANTIC_MAP_NODES.csv`](single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_SEMANTIC_MAP_NODES.csv)
+    — structured R017 parent nodes with trajectory support and confidence.
+71. [`single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_SEMANTIC_MAP_EDGES.csv`](single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_SEMANTIC_MAP_EDGES.csv)
+    — structured parent relations with evidence scope and caveats.
+72. [`single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_SEMANTIC_MAP.json`](single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_SEMANTIC_MAP.json)
+    — machine-readable single-trajectory semantic map and invariance status.
+73. [`single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_RUN_ANALYSIS_AND_RECOMMENDATIONS.html`](single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_RUN_ANALYSIS_AND_RECOMMENDATIONS.html)
+    — canonical R017 analysis, limitations and next-experiment recommendation.
+74. [`single_prompt_topology/R018_PLAN.md`](single_prompt_topology/R018_PLAN.md)
     — the locked OLMo 3 32B six-permutation measurement contract.
-69. [`single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_MEASUREMENT_REPORT.md`](single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_MEASUREMENT_REPORT.md)
+75. [`single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_MEASUREMENT_REPORT.md`](single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_MEASUREMENT_REPORT.md)
     — the semantic-free measured coverage and comparison summary.
-70. [`single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_COMPLETENESS_VERIFICATION.md`](single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_COMPLETENESS_VERIFICATION.md)
+76. [`single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_COMPLETENESS_VERIFICATION.md`](single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_COMPLETENESS_VERIFICATION.md)
     — the reconciled structural completeness record.
-71. [`single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/validation_recovery.json`](single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/validation_recovery.json)
+77. [`single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/validation_recovery.json`](single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/validation_recovery.json)
     — the original validation failure, corrected logical-record check and
     hashes proving that measured evidence was not re-executed or changed.
 

@@ -1,0 +1,8 @@
+edge_id,source,target,sector,evidence_scope,measured_support,interpretation,confidence,caveat
+E1,N1,N4,both,cross-depth trajectory,"point/intersection/narrow recur with path/flow/exit/channel","constrained passage organises movement and flow",high,"cross-sector family matching is interpretive"
+E2,N2,N1,positive,State 64 community network,"C11-C0 198 edges; C11-C1 190; C11-C4 43","deployment/blocking shapes the constrained passage",high,"community labels are post-measurement interpretations"
+E3,N2,N5,mixed,cross-depth sector asymmetry,"blocking/deployment positive; wall/restriction/access/defence predominantly negative late","obstruction defines a boundary/defence counterpart",moderate-high,"no positive-to-negative graph edge is claimed"
+E4,N3,N6,positive,object-to-function trajectory,"direct spear States 4-25; State 12 ambush/piercing; late attack/pierce","reach/piercing force is retained as attack/interception function",high,"trajectory association is not a causal edge"
+E5,N1,N6,positive,State 64 community network,"attack + intersection in C0; C0-C1 610; C0-C4 157; C1-C4 128","attack/interception is situated at the constrained point",high,"co-location and graph adjacency establish association, not causation"
+E6,N4,N6,mixed,higher-order cross-depth synthesis,"movement/flow, constrained passage and attack recur across the integrated late trajectory","controlled movement creates the approach on which interception acts",moderate,"system-level interpretation rather than one direct measured edge"
+E7,N5,N6,mixed,late sector pairing,"guard/defence/wall/restriction recur alongside attack and final guards","boundary/defence supplies the limiting counterpart of interception",moderate,"cross-sector relation is interpretive"

@@ -20808,7 +20808,80 @@ invariance status, limitations and primary records. Comparison-only sections
 should remain conditional rather than being forced into single-trajectory
 runs.
 
-### MA-0106 — R018 OLMo 3 32B six-permutation measurement completed
+### MA-0106 — R017 reporting package and inherited output discipline
+
+- Entry timestamp: `2026-11-15T18:06:00+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT repository analysis and reporting pass`
+- Entry type: `downstream reporting standardisation and semantic reconstruction`
+- Related runs: `R014`, `R015`, `R017`
+
+R014 and R015 establish a stable reporting sequence:
+
+```text
+measurement
+    ↓
+completeness validation
+    ↓
+independent semantic reconstruction
+    ↓
+structured node / edge map
+    ↓
+human analysis and recommendation
+```
+
+R017 has now been completed under the same evidence discipline. The original
+measured exports remain unchanged. New downstream artefacts record the
+single-trajectory reconstruction, structured parent nodes, structured parent
+relations, machine-readable map and canonical analysis/recommendation report.
+
+The inherited rules are adapted rather than copied mechanically. R017 cannot
+claim probe support, held-out reconstruction or cross-context invariance
+because it measured one prompt in one order. Those fields are replaced with
+trajectory support, sector tendency, evidence scope, confidence and an
+explicit invariance status of `not tested`.
+
+The final R017 parent inventory is:
+
+```text
+CONSTRAINED PASSAGE
+MOVEMENT / FLOW
+DEPLOYABLE OBSTRUCTION
+BOUNDARY / DEFENCE
+REACH / PIERCING FORCE
+ATTACK / INTERCEPTION
+```
+
+The minimum reconstructed topology is:
+
+```text
+CONSTRAINED PASSAGE
+        ↓
+MOVEMENT / FLOW
+        ↓
+DEPLOYABLE OBSTRUCTION ──→ BOUNDARY / DEFENCE
+        ↓
+REACH / PIERCING FORCE
+        ↓
+ATTACK / INTERCEPTION
+```
+
+The strongest late-state measured relation evidence occurs at State 64. The
+positive communities containing attack/intersection, point/guards, narrow and
+deployment/deploy are connected by 610, 198, 190, 157, 128 and 43 measured
+token edges across the relevant community pairs. Parent names remain
+post-measurement interpretations placed over those measured relations.
+
+The strongest defensible R017 claim is therefore a coherent
+**single-trajectory tactical-interception map**. It is not yet a
+perturbation-stable map.
+
+The recommended next bounded experiment is an OLMo 3 32B six-permutation run
+over the same three concepts, preserving the R017 measurement method. If
+practical, batching the six prompts would simultaneously test the unresolved
+32B throughput question without changing the scientific object.
+
+### MA-0107 — R018 OLMo 3 32B six-permutation measurement completed
 
 - Entry timestamp: `2026-11-16T12:28:23+11:00`
 - Timezone: `Australia/Sydney`
