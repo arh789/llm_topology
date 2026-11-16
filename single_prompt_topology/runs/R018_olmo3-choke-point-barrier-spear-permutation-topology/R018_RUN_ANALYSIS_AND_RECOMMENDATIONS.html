@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>R018 semantic reconstruction and final analysis</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;max-width:1120px;margin:40px auto;padding:0 24px;line-height:1.5;color:#171717}
+h1,h2,h3{line-height:1.2} h1{font-size:2rem} h2{margin-top:2.2rem;border-bottom:1px solid #ddd;padding-bottom:.35rem}
+code,pre{font-family:Consolas,Menlo,monospace} pre{background:#f5f5f5;padding:18px;overflow:auto;border:1px solid #ddd}
+table{border-collapse:collapse;width:100%;margin:1rem 0} th,td{border:1px solid #d7d7d7;padding:8px;vertical-align:top;text-align:left} th{background:#f3f3f3}
+.callout{border-left:5px solid #333;padding:12px 16px;background:#f7f7f7;margin:1.2rem 0}
+.metric{font-variant-numeric:tabular-nums}.muted{color:#555}.bad{background:#fff6f6}.good{background:#f5faf5}
+</style>
+</head>
+<body>
+<h1>R018 — Semantic reconstruction and final analysis</h1>
+<p class="muted">OLMo 3 32B · six permutations · post-measurement reconstruction</p>
+
+<div class="callout"><strong>Strongest supported result.</strong> The six input orders do not preserve one literal semantic map. They diverge into final-position-conditioned branches, reach maximum cross-order differentiation in the middle layers, then reconverge onto a shared late topology coupling <strong>constraint/requirement</strong>, <strong>structural configuration</strong>, <strong>dynamic path geometry</strong>, and <strong>collapse/adjustment</strong>.</div>
+
+<h2>1. Experimental basis</h2>
+<p>R018 measures all six permutations of <code>choke point</code>, <code>collapsible barrier</code> and <code>spear</code>. The six-prompt batch and its deterministic replay are exactly equal. Measurement contains 780 networks, 3,081,305 selected memberships, 30,813,050 directed 10-NN edges, 11,872 state-local communities and 1,950 same-state permutation comparisons.</p>
+<p>This report begins after the semantic-free measurement boundary. Semantic labels below are interpretations of measured communities and relations.</p>
+
+<h2>2. Divergence then reconvergence</h2>
+<table>
+<tr><th>Point</th><th>Membership Jaccard</th><th>Edge Jaccard</th><th>Hidden-state cosine</th><th>Meaning</th></tr>
+<tr><td>State 00</td><td>1.000</td><td>1.000</td><td>1.000</td><td>identical newline baseline</td></tr>
+<tr><td>State 03</td><td>same-final 0.729; different-final 0.354</td><td>—</td><td>—</td><td>largest final-position membership gap: 0.376</td></tr>
+<tr class="bad"><td>State 18</td><td>0.241 mean</td><td>0.085 mean</td><td>0.715 mean</td><td>strongest topology divergence</td></tr>
+<tr class="good"><td>State 64</td><td>0.663 mean</td><td>0.426 mean</td><td>0.969 mean</td><td>strong late reconvergence</td></tr>
+</table>
+<p>At State 64, same-final and different-final membership similarity has narrowed to 0.705 versus 0.653. The positional effect remains measurable but no longer dominates the topology.</p>
+
+<h2>3. Independent permutation reconstructions</h2>
+<table>
+<tr><th>Prompt</th><th>Early literal branch</th><th>Late recurrent structure</th></tr>
+<tr><td>ABC</td><td>weapon / blade / spear / stabbing</td><td>requirements/limitations; variables/trajectories; implementations/modules; collapse/adjustment</td></tr>
+<tr><td>ACB</td><td>walls / boundary / barrier / entrance / restriction</td><td>structures/variables; conditions/requirements; movement/separation/curves; collapse/adjustment</td></tr>
+<tr><td>BAC</td><td>sword / knife / blade / spear / weapon</td><td>infrastructure/deployment; requirements; trajectories/velocity/curves; adjustment/collapse</td></tr>
+<tr><td>BCA</td><td>limits / constraints / bottleneck / location / position</td><td>configuration/transformation; requirements; variables/velocity/rectangles; collapse</td></tr>
+<tr><td>CAB</td><td>roads / pathways / entrance / barrier</td><td>infrastructure/configuration; requirements/parameters; trajectories/curves/velocities; merging/collapse</td></tr>
+<tr><td>CBA</td><td>point / location / direction / position</td><td>configuration/parameters/modules; requirements/limitations; trajectories/velocities/curves; merging/collapse</td></tr>
+</table>
+
+<h2>4. Final-position-conditioned branches</h2>
+<pre>spear final       → weapon / blade / piercing vocabulary
+barrier final     → wall / boundary / restriction / passage vocabulary
+choke-point final → point / location / bottleneck / limit vocabulary</pre>
+<p>This is a robust early/middle positional effect. It is not the invariant semantic map.</p>
+
+<h2>5. Cross-permutation invariant parents</h2>
+<table>
+<tr><th>Node</th><th>Support</th><th>Dominant depth</th><th>Measured vocabulary</th></tr>
+<tr><td><strong>Constraint / Requirement</strong></td><td>6/6</td><td>62–64</td><td>require, requirements, limitations, dependencies, constraints, conditions, shortcomings</td></tr>
+<tr><td><strong>Structural Configuration</strong></td><td>6/6</td><td>60–64</td><td>configuration, infrastructure, modules, interfaces, installations, structures, architectures, projects</td></tr>
+<tr><td><strong>Dynamic Path Geometry</strong></td><td>6/6</td><td>56–63</td><td>point, approach, flow, trajectory, curve, velocity, speed, rectangle</td></tr>
+<tr><td><strong>Collapse / Adjustment</strong></td><td>6/6</td><td>56–64</td><td>collaps-, normalization, adjustment, tweak, merging, restructuring, transformation</td></tr>
+</table>
+<p>The particularly strong low-level invariant is <code>collaps-</code>: it appears in late positive communities for every permutation at every State 56–63.</p>
+
+<h2>6. Minimum semantic map</h2>
+<pre>             STRUCTURAL CONFIGURATION
+                      │
+                      │ recurrent association
+                      │
+             CONSTRAINT / REQUIREMENT
+                      │
+                      │ recurrent association
+                      │
+              COLLAPSE / ADJUSTMENT
+                      │
+                      │ recurrent association
+                      │
+             DYNAMIC PATH GEOMETRY
+       point / approach / flow / trajectory
+              curve / velocity</pre>
+<p>The links are associative. No causal direction is claimed.</p>
+
+<h2>7. Relation evidence</h2>
+<h3>Constraint / Requirement ↔ Structural Configuration</h3>
+<p>At State 64 the relevant families are directly connected or fused in all six permutations. Representative positive-sector edge counts include ABC 408, ACB 326, BAC 501, BCA 502, CAB 338 and CBA 520.</p>
+
+<h3>Collapse / Adjustment ↔ Dynamic Path Geometry</h3>
+<p>At State 63 the families repeatedly connect or fuse. Representative connections include ABC C6–C12 (139 edges), ACB C9–C13 (63), BAC C6–C7 (215), BCA C0/C4 (509), CAB C9–C10 (156) and CBA C7–C10 (215).</p>
+
+<h3>Constraint / Requirement ↔ Collapse / Adjustment</h3>
+<p>Late communities repeatedly combine requirement/change operators: requires, creates, removes, increases, normalisation, adjustments, merging and collapse. This is retained as an association rather than a directional relation.</p>
+
+<h2>8. What fails the invariance test</h2>
+<table>
+<tr><th>Candidate</th><th>Late support</th><th>Decision</th></tr>
+<tr><td>exact spear</td><td>0/6</td><td>exclude from invariant core</td></tr>
+<tr><td>attack / interception</td><td>2/6</td><td>exclude</td></tr>
+<tr><td>intersection</td><td>1/6</td><td>exclude</td></tr>
+<tr><td>route / pathway / road</td><td>0/6</td><td>exclude</td></tr>
+<tr><td>deployment</td><td>5/6</td><td>adjacent, not strict invariant</td></tr>
+</table>
+<p>This exclusion is important. A broader tactical interpretation would increase coherence by abstraction, but it is not the lowest 6/6 structure supported by R018.</p>
+
+<h2>9. State 00 control</h2>
+<p>State 00 is identical across all permutations and contains generic vocabulary-basis structure such as system/information, common verbs, punctuation and code/formatting communities. The same four-family organisation is not present there. The late result is therefore not merely the shared newline baseline.</p>
+
+<h2>10. Final analysis</h2>
+<pre>FINAL-POSITION CONDITIONING
+          ↓
+MIDDLE-LAYER DIVERGENCE
+          ↓
+LATE HIGHER-ORDER RECONVERGENCE</pre>
+<p>The invariant is not the literal supplied nouns. The stable object is a structural/dynamic schema relating constraints, configurable structure, paths/trajectories and deformation/adjustment.</p>
+
+<div class="callout"><strong>Project-level implication.</strong> R018 supports the hypothesis that lower-level representational topology can be strongly order-dependent while a higher-order semantic topology reconstitutes across the perturbation. This is evidence for recoverable learned semantic structure, not evidence for exact training documents or causal mechanisms.</div>
+
+<h2>11. Limitations</h2>
+<p>R018 tests one three-concept semantic region, one model and one perturbation type: order. Parent labels remain post-measurement interpretations. Cross-context, neighbouring-concept and cross-model stability are not established. Vocabulary projection also carries lexical, formatting, multilingual and code structure that must not be mistaken for prompt-specific semantics.</p>
+
+<h2>12. Completion criterion</h2>
+<p>R018 measurement and downstream semantic reconstruction are now complete. The canonical machine-readable map is recorded in <code>R018_SEMANTIC_MAP.json</code>, with node and edge tables in the corresponding CSV files.</p>
+</body>
+</html>
