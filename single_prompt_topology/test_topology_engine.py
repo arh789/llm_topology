@@ -22,9 +22,14 @@ from topology_core import (
     state_label,
 )
 from topology_engine import (
+    RunContext,
+    _analysis_required,
     _count_gzip_rows,
+    _measurement_report_names,
+    _post_measurement_run_status,
     final_non_padding_indices,
     load_and_validate_config,
+    write_measured_reports,
 )
 
 
@@ -48,6 +53,25 @@ class ConfigurationTests(unittest.TestCase):
         self.assertEqual(context.prompt_ids, ("ABC", "ACB", "BAC", "BCA", "CAB", "CBA"))
         self.assertEqual(context.config["expected"]["network_count"], 780)
         self.assertEqual(context.run_dir.exists(), existed_before)
+
+    def test_semantic_analysis_is_required_by_default(self) -> None:
+        config = {"run_number": 19}
+        self.assertTrue(_analysis_required(config))
+        self.assertEqual(
+            _post_measurement_run_status(config), "awaiting_semantic_analysis"
+        )
+        self.assertEqual(
+            _measurement_report_names(config),
+            (
+                "R019_MEASUREMENT_COMPLETENESS_VERIFICATION.md",
+                "R019_MEASUREMENT_REPORT.md",
+            ),
+        )
+
+    def test_measurement_only_run_can_explicitly_opt_out(self) -> None:
+        config = {"run_number": 19, "analysis": {"required": False}}
+        self.assertFalse(_analysis_required(config))
+        self.assertEqual(_post_measurement_run_status(config), "measurement_complete")
 
     def test_state_labels_cover_input_blocks_and_final_norm(self) -> None:
         settings = TopologySettings(state_count=65, layer_count=64)
@@ -77,6 +101,58 @@ class PersistenceTests(unittest.TestCase):
                 writer.writerow([1, "ordinary"])
                 writer.writerow([2, "embedded\nnewline"])
             self.assertEqual(_count_gzip_rows(path), 2)
+
+
+class ReportLifecycleTests(unittest.TestCase):
+    def test_measurement_report_leaves_research_run_awaiting_analysis(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            run_dir = Path(directory)
+            config = {
+                "run_id": "R019_synthetic",
+                "run_number": 19,
+                "model": {"id": "synthetic/model", "revision": "test-revision"},
+                "expected": {
+                    "network_count": 2,
+                    "within_prompt_transition_rows": 0,
+                    "pairwise_permutation_rows": 0,
+                    "invariance_summary_rows": 4,
+                },
+            }
+            context = RunContext(
+                config_path=run_dir / "config.json",
+                config=config,
+                plan_path=run_dir / "plan.md",
+                run_dir=run_dir,
+                manifest_path=run_dir / "manifest.json",
+                snapshot_dir=run_dir,
+                offload_dir=run_dir,
+                prompt_ids=("ABC",),
+                settings=TopologySettings(state_count=1, layer_count=0),
+            )
+            results = {
+                "network_count": 2,
+                "adjacent_transition_rows": 0,
+                "pairwise_comparison_rows": 0,
+                "invariance_summary_rows": 4,
+                "selected_membership_rows": 20,
+                "directed_edge_rows": 200,
+                "community_count": 4,
+                "minimum_pairwise_membership_jaccard": 1.0,
+                "minimum_pairwise_edge_jaccard": 1.0,
+                "mean_same_final_membership_jaccard": 1.0,
+                "mean_different_final_membership_jaccard": 1.0,
+            }
+            write_measured_reports(context, results)
+            verification = (
+                run_dir / "R019_MEASUREMENT_COMPLETENESS_VERIFICATION.md"
+            ).read_text(encoding="utf-8")
+            report = (run_dir / "R019_MEASUREMENT_REPORT.md").read_text(
+                encoding="utf-8"
+            )
+            self.assertIn("measurement completeness verification", verification)
+            self.assertIn("awaiting_semantic_analysis", verification)
+            self.assertIn("Overall run status: awaiting semantic analysis", report)
+            self.assertNotIn("R018", report)
 
 
 class MethodCompatibilityTests(unittest.TestCase):

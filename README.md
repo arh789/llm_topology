@@ -283,6 +283,15 @@ and are not versioned here.
 77. [`single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/validation_recovery.json`](single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/validation_recovery.json)
     — the original validation failure, corrected logical-record check and
     hashes proving that measured evidence was not re-executed or changed.
+78. [`single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_ANALYSIS_PROTOCOL.md`](single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_ANALYSIS_PROTOCOL.md)
+    — the independent semantic-reconstruction contract and overall R018
+    completion gate.
+79. [`single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/analysis/analysis_manifest.json`](single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/analysis/analysis_manifest.json)
+    — the append-only analysis status, required outputs and frozen measurement
+    provenance.
+80. [`single_prompt_topology/R018_LIFECYCLE_UPDATE_VERIFICATION.md`](single_prompt_topology/R018_LIFECYCLE_UPDATE_VERIFICATION.md)
+    — the implemented lifecycle correction and passing unit/regression test
+    record.
 
 ## Provenance
 
