@@ -20956,3 +20956,57 @@ R018 is now measurement-successful and analysis remains `not_started`. Its
 outputs are suitable for external semantic reconstruction using the R013–R015
 reporting approach, but the present entry makes no claims about parent
 structures, semantic maps, order-invariant meaning or the R017 interpretation.
+
+### MA-0108 — R018 semantic reconstruction: divergence, reconvergence and the invariant core
+
+- Entry date: `2026-11-16`
+- Author/source: `ChatGPT independent reconstruction from R018 measured exports`
+- Entry type: `post-measurement semantic reconstruction and final analysis`
+- Related run: `R018`
+
+R018 is now complete at both the measurement and semantic-analysis stages.
+
+The six permutations do not preserve one literal semantic map. The final concept controls the strongest early literal branch:
+
+```text
+spear final       -> weapon / blade / piercing
+barrier final     -> wall / boundary / restriction / passage
+choke-point final -> point / location / bottleneck / limit
+```
+
+The trajectories then diverge strongly. The largest same-final versus different-final membership gap occurs at State 03 (0.729285 versus 0.353508). Mean cross-order topology reaches its minimum at State 18, where membership Jaccard is 0.240937 and edge Jaccard is 0.084986. Mean hidden-state cosine reaches its minimum at State 15 at 0.712484.
+
+The key result is that this divergence reverses. By State 64, mean cross-order membership Jaccard has recovered to 0.663480, edge Jaccard to 0.426391 and hidden-state cosine to 0.969007. Same-final versus different-final membership similarity has narrowed to 0.704703 versus 0.653175.
+
+Independent reconstruction of the six trajectories identifies the lowest strict 6/6 late semantic core as:
+
+```text
+CONSTRAINT / REQUIREMENT
+STRUCTURAL CONFIGURATION
+DYNAMIC PATH GEOMETRY
+COLLAPSE / ADJUSTMENT
+```
+
+The particularly strong low-level invariant is `collaps-`: it appears in late positive communities for every permutation at every State 56–63. Point/approach/flow/trajectory/curve/velocity families also recur in all six trajectories, as do requirement/limitation/dependency and configuration/infrastructure/module families.
+
+The minimum associative map is:
+
+```text
+             STRUCTURAL CONFIGURATION
+                      |
+             CONSTRAINT / REQUIREMENT
+                      |
+              COLLAPSE / ADJUSTMENT
+                      |
+             DYNAMIC PATH GEOMETRY
+```
+
+The links denote recurrent semantic/community coupling, not causal direction.
+
+Abstraction was deliberately constrained. Exact `spear` has 0/6 late support, attack/interception 2/6, intersection 1/6, route/pathway/road 0/6 and deployment 5/6. These are therefore excluded from the strict invariant core rather than absorbed into a broader coherent narrative.
+
+The strongest defensible R018 claim is:
+
+> Lower-level semantic topology is strongly order- and position-dependent, but after middle-layer divergence a higher-order structural topology reconstitutes across all six permutations. The recovered invariant couples constraints, structural configuration, dynamic path geometry and collapse/adjustment.
+
+This directly supports the project's central hypothesis at the level tested by R018: controlled perturbation can separate unstable representational detail from a more stable higher-order semantic topology.
