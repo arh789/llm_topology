@@ -1,0 +1,382 @@
+{
+  "schema_version": 2,
+  "run_id": "R018_olmo3-choke-point-barrier-spear-permutation-topology",
+  "run_number": 18,
+  "measurement_status": "measurement_successful",
+  "analysis_status": "not_started",
+  "started_at": "2026-11-16T01:01:21.400852+00:00",
+  "measurement_completed_at": "2026-11-16T01:27:05.968729+00:00",
+  "failure_details": null,
+  "objective": "Measure order-conditioned semantic topology for all six permutations of choke point, collapsible barrier and spear using OLMo 3 32B Base.",
+  "model": {
+    "id": "allenai/Olmo-3-1125-32B",
+    "revision": "c2b61dae89a1ad10e4ad5653d0e46b590902607b",
+    "snapshot_directory": "D:/AI/cache/huggingface/hub/models--allenai--Olmo-3-1125-32B/snapshots/c2b61dae89a1ad10e4ad5653d0e46b590902607b",
+    "offload_directory": "D:/AI/cache/offload/R018_olmo3-32b",
+    "precision": "bfloat16",
+    "quantized": false,
+    "expected_layers": 64,
+    "expected_states": 65,
+    "hidden_width": 5120,
+    "usable_vocabulary_size": 100278,
+    "embedding_key": "model.embed_tokens.weight",
+    "gpu_memory_limit": "18GiB",
+    "cpu_memory_limit": "28GiB"
+  },
+  "capture": {
+    "anchor_text": "\n",
+    "anchor_position": "final_non_padding_token",
+    "add_special_tokens": false,
+    "chat_template_used": false,
+    "response_generation": false,
+    "batch_size": 6,
+    "deterministic_replay": true
+  },
+  "prompt_definitions": [
+    {
+      "prompt_id": "ABC",
+      "permutation": "ABC",
+      "comparison_group": "all_permutations",
+      "concept_order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "raw_text": "choke point\ncollapsible barrier\nspear\n"
+    },
+    {
+      "prompt_id": "ACB",
+      "permutation": "ACB",
+      "comparison_group": "all_permutations",
+      "concept_order": [
+        "A",
+        "C",
+        "B"
+      ],
+      "raw_text": "choke point\nspear\ncollapsible barrier\n"
+    },
+    {
+      "prompt_id": "BAC",
+      "permutation": "BAC",
+      "comparison_group": "all_permutations",
+      "concept_order": [
+        "B",
+        "A",
+        "C"
+      ],
+      "raw_text": "collapsible barrier\nchoke point\nspear\n"
+    },
+    {
+      "prompt_id": "BCA",
+      "permutation": "BCA",
+      "comparison_group": "all_permutations",
+      "concept_order": [
+        "B",
+        "C",
+        "A"
+      ],
+      "raw_text": "collapsible barrier\nspear\nchoke point\n"
+    },
+    {
+      "prompt_id": "CAB",
+      "permutation": "CAB",
+      "comparison_group": "all_permutations",
+      "concept_order": [
+        "C",
+        "A",
+        "B"
+      ],
+      "raw_text": "spear\nchoke point\ncollapsible barrier\n"
+    },
+    {
+      "prompt_id": "CBA",
+      "permutation": "CBA",
+      "comparison_group": "all_permutations",
+      "concept_order": [
+        "C",
+        "B",
+        "A"
+      ],
+      "raw_text": "spear\ncollapsible barrier\nchoke point\n"
+    }
+  ],
+  "expected": {
+    "prompt_count": 6,
+    "state_count": 65,
+    "network_count": 780,
+    "within_prompt_transition_rows": 768,
+    "pairwise_permutation_rows": 1950,
+    "invariance_summary_rows": 1560,
+    "hidden_state_pair_rows": 975
+  },
+  "required_components": [
+    "configuration_lock",
+    "environment_preflight",
+    "model_identity",
+    "prompt_preflight",
+    "batched_capture",
+    "deterministic_replay",
+    "projection_and_cutoffs",
+    "networks_and_communities",
+    "within_prompt_transitions",
+    "pairwise_permutation_comparisons",
+    "permutation_invariance",
+    "measured_exports",
+    "completeness_validation",
+    "resource_cleanup"
+  ],
+  "components": {
+    "configuration_lock": {
+      "status": "successful",
+      "started_at": "2026-11-16T01:01:21.400852+00:00",
+      "completed_at": "2026-11-16T01:01:21.400852+00:00",
+      "elapsed_seconds": 0.0,
+      "config_sha256": "55938fd34f16303979cba58d91054c0a682db8777eb5c250c2b9180843d5e3c0",
+      "plan_sha256": "02d22429f1db81f8b9f5324647fd82545ccd9d8b0a578c744d9d935dea777356"
+    },
+    "environment_preflight": {
+      "status": "successful",
+      "started_at": "2026-11-16T01:01:21.400852+00:00",
+      "completed_at": "2026-11-16T01:01:21.400852+00:00",
+      "elapsed_seconds": 0.0,
+      "python": "3.11.15 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:12:15) [MSC v.1942 64 bit (AMD64)]",
+      "torch": "2.6.0+cu124",
+      "cuda": "12.4",
+      "memory_before": {
+        "physical_ram_available_bytes": 36294307840,
+        "process_rss_bytes": 660955136,
+        "model_drive_free_bytes": 1106557427712,
+        "gpu_name": "NVIDIA GeForce RTX 4090",
+        "gpu_total_bytes": 25756696576,
+        "gpu_free_bytes": 24159191040,
+        "gpu_allocated_bytes": 0,
+        "gpu_reserved_bytes": 0
+      }
+    },
+    "model_identity": {
+      "status": "successful",
+      "started_at": "2026-11-16T01:01:21.473047+00:00",
+      "completed_at": "2026-11-16T01:01:21.504322+00:00",
+      "elapsed_seconds": 0.03208000000086031,
+      "layers": 64,
+      "hidden_width": 5120,
+      "config_sha256": "72efc1f0ed1161e4205a54d94110f61d21c4c4315fde9ef17163bbc33c9a6149",
+      "weight_index_sha256": "3205da1ac0415defc36d21c9d3bbaea984a6697f34a229659ed069b3eea8958b",
+      "tokenizer_metadata": {
+        "tokenizer.json": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca",
+        "tokenizer_config.json": "ffa5b2cfee6e73d5dc0a7d3b7e02eb6ed60a491dd782f2bd8ad2b4659b2aafc6",
+        "special_tokens_map.json": "4cb2b52960bababa8ec27153831e405ef7811e3fad1226106e09c28e715cfb21",
+        "generation_config.json": "49b7b376c9a77281e37b1544e00f6b83ffe1d46bd47ff1c5ee04a7d642ecbe2b"
+      }
+    },
+    "prompt_preflight": {
+      "status": "successful",
+      "started_at": "2026-11-16T01:01:21.506323+00:00",
+      "completed_at": "2026-11-16T01:01:21.894196+00:00",
+      "elapsed_seconds": 0.38868730000103824,
+      "prompt_count": 6,
+      "anchor_token_id": 198,
+      "input_token_counts": {
+        "ABC": 11,
+        "ACB": 11,
+        "BAC": 11,
+        "BCA": 11,
+        "CAB": 11,
+        "CBA": 11
+      },
+      "validated_before_model_load": true
+    },
+    "batched_capture": {
+      "status": "successful",
+      "started_at": "2026-11-16T01:01:21.896195+00:00",
+      "completed_at": "2026-11-16T01:02:57.379248+00:00",
+      "elapsed_seconds": 95.48365439999907,
+      "prompt_count": 6,
+      "capture_shape": [
+        6,
+        65,
+        5120
+      ],
+      "capture_seconds": 49.03944010000123,
+      "replay_seconds": 23.414993800000957,
+      "peak_gpu_allocated_bytes": 18699441664,
+      "memory_after_capture": {
+        "physical_ram_available_bytes": 5585711104,
+        "process_rss_bytes": 32691970048,
+        "model_drive_free_bytes": 1106553311232,
+        "gpu_name": "NVIDIA GeForce RTX 4090",
+        "gpu_total_bytes": 25756696576,
+        "gpu_free_bytes": 3419983872,
+        "gpu_allocated_bytes": 17614668800,
+        "gpu_reserved_bytes": 18714984448
+      }
+    },
+    "deterministic_replay": {
+      "status": "successful",
+      "started_at": "2026-11-16T01:02:57.380246+00:00",
+      "completed_at": "2026-11-16T01:02:57.389292+00:00",
+      "elapsed_seconds": 0.008965700000771903,
+      "exact_equal": true,
+      "pair_state_metric_rows": 975,
+      "state_00_exact_equal_all_prompts": true
+    },
+    "projection_and_cutoffs": {
+      "status": "successful",
+      "started_at": "2026-11-16T01:03:00.443480+00:00",
+      "completed_at": "2026-11-16T01:03:36.165933+00:00",
+      "elapsed_seconds": 35.721977800001696,
+      "score_shape": [
+        6,
+        65,
+        100278
+      ],
+      "vocabulary_size": 100278,
+      "full_embedding_rows": 100278,
+      "padded_embedding_rows_excluded": 0,
+      "excluded_capture_token_id": 198,
+      "cutoff_rows": 390,
+      "membership_rows": 3081305,
+      "embedding_shard": "model-00001-of-00014.safetensors"
+    },
+    "networks_and_communities": {
+      "status": "successful",
+      "started_at": "2026-11-16T01:03:36.283604+00:00",
+      "completed_at": "2026-11-16T01:21:34.169600+00:00",
+      "elapsed_seconds": 1077.8860644999986,
+      "network_count": 780,
+      "selected_node_rows": 3081305,
+      "directed_edge_rows": 30813050,
+      "community_rows": 11872,
+      "intercommunity_edge_rows": 79840
+    },
+    "within_prompt_transitions": {
+      "status": "successful",
+      "started_at": "2026-11-16T01:21:34.171603+00:00",
+      "completed_at": "2026-11-16T01:21:34.179621+00:00",
+      "elapsed_seconds": 0.008412900000621448,
+      "transition_rows": 768,
+      "minimum_membership_jaccard": 0.012836438923395446,
+      "minimum_edge_jaccard": 0.00043376890961340344
+    },
+    "pairwise_permutation_comparisons": {
+      "status": "successful",
+      "started_at": "2026-11-16T01:21:34.181124+00:00",
+      "completed_at": "2026-11-16T01:21:34.189653+00:00",
+      "elapsed_seconds": 0.008373099999516853,
+      "pairwise_comparison_rows": 1950,
+      "minimum_membership_jaccard": 0.15457196774746954,
+      "minimum_edge_jaccard": 0.04074130138615574
+    },
+    "permutation_invariance": {
+      "status": "successful",
+      "started_at": "2026-11-16T01:21:34.190654+00:00",
+      "completed_at": "2026-11-16T01:21:34.198657+00:00",
+      "elapsed_seconds": 0.008620399999927031,
+      "summary_rows": 1560,
+      "token_support_rows": 1163429,
+      "edge_support_rows": 12780944,
+      "token_and_edge_support_separate": true
+    },
+    "measured_exports": {
+      "status": "successful",
+      "started_at": "2026-11-16T01:21:34.199652+00:00",
+      "completed_at": "2026-11-16T01:21:35.626935+00:00",
+      "elapsed_seconds": 1.426644999999553,
+      "json_networks": 780,
+      "markdown_state_sections": 65,
+      "semantic_labels_added": false
+    },
+    "completeness_validation": {
+      "status": "successful",
+      "started_at": "2026-11-16T01:26:27.046919+00:00",
+      "completed_at": "2026-11-16T01:27:05.261360+00:00",
+      "elapsed_seconds": 38.215229700001146,
+      "recovery": true,
+      "measurement_reexecuted": false,
+      "original_failure_manifest": "manifest.failed_validation.json",
+      "network_count": 780,
+      "selected_membership_rows": 3081305,
+      "directed_edge_rows": 30813050,
+      "community_count": 11872,
+      "intercommunity_edge_rows": 79840,
+      "adjacent_transition_rows": 768,
+      "pairwise_comparison_rows": 1950,
+      "invariance_summary_rows": 1560,
+      "minimum_pairwise_membership_jaccard": 0.1545719677474695,
+      "minimum_pairwise_edge_jaccard": 0.0407413013861557,
+      "mean_same_final_membership_jaccard": 0.5232488910445313,
+      "mean_different_final_membership_jaccard": 0.3641111808489216,
+      "state_zero_pair_identity_verified": true,
+      "deterministic_replay_exact": true,
+      "node_rows_counted": 3081305,
+      "edge_rows_counted": 30813050
+    },
+    "resource_cleanup": {
+      "status": "successful",
+      "started_at": "2026-11-16T01:21:35.900036+00:00",
+      "completed_at": "2026-11-16T01:21:35.907035+00:00",
+      "elapsed_seconds": 0.007568899998659617,
+      "phase": "final",
+      "offload_directory": "D:\\AI\\cache\\offload\\R018_olmo3-32b",
+      "memory_after_cleanup": {
+        "physical_ram_available_bytes": 35555024896,
+        "process_rss_bytes": 2521403392,
+        "model_drive_free_bytes": 1105776640000,
+        "gpu_name": "NVIDIA GeForce RTX 4090",
+        "gpu_total_bytes": 25756696576,
+        "gpu_free_bytes": 24052236288,
+        "gpu_allocated_bytes": 8519680,
+        "gpu_reserved_bytes": 20971520
+      }
+    }
+  },
+  "artifact_index": {
+    "relative_path": "artifact_index.json",
+    "bytes": 9029,
+    "sha256": "a382d02930298938578c45df98a89e1f2d9865d8802a2e241e190bfeb83631bf",
+    "indexed_artifact_count": 28
+  },
+  "results": {
+    "network_count": 780,
+    "selected_membership_rows": 3081305,
+    "directed_edge_rows": 30813050,
+    "community_count": 11872,
+    "intercommunity_edge_rows": 79840,
+    "adjacent_transition_rows": 768,
+    "pairwise_comparison_rows": 1950,
+    "invariance_summary_rows": 1560,
+    "minimum_pairwise_membership_jaccard": 0.1545719677474695,
+    "minimum_pairwise_edge_jaccard": 0.0407413013861557,
+    "mean_same_final_membership_jaccard": 0.5232488910445313,
+    "mean_different_final_membership_jaccard": 0.3641111808489216,
+    "state_zero_pair_identity_verified": true,
+    "deterministic_replay_exact": true,
+    "node_rows_counted": 3081305,
+    "edge_rows_counted": 30813050
+  },
+  "interpretation_boundary": "Measurement ends at hidden states, scores, cutoffs, graph communities, transitions, permutation comparisons and support counts. Semantic parent identities and relations are not measurement outputs.",
+  "validation_history": [
+    {
+      "status": "failed_then_recovered",
+      "original_failure_manifest": "manifest.failed_validation.json",
+      "recovery_record": "validation_recovery.json",
+      "original_failure": {
+        "component": "completeness_validation",
+        "error_type": "RuntimeError",
+        "message": "Node or membership row counts do not reconcile.",
+        "traceback": "Traceback (most recent call last):\n  File \"D:\\Sync\\Python Projects\\llm_topology\\single_prompt_topology\\topology_engine.py\", line 1718, in measure\n    results = validate_measurement_files(context)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Sync\\Python Projects\\llm_topology\\single_prompt_topology\\topology_engine.py\", line 1530, in validate_measurement_files\n    raise RuntimeError(\"Node or membership row counts do not reconcile.\")\nRuntimeError: Node or membership row counts do not reconcile.\n",
+        "failed_at": "2026-11-16T01:21:51.456777+00:00",
+        "memory_at_failure": {
+          "physical_ram_available_bytes": 35555131392,
+          "process_rss_bytes": 2535157760,
+          "model_drive_free_bytes": 1105776492544,
+          "gpu_name": "NVIDIA GeForce RTX 4090",
+          "gpu_total_bytes": 25756696576,
+          "gpu_free_bytes": 24052236288,
+          "gpu_allocated_bytes": 8519680,
+          "gpu_reserved_bytes": 20971520
+        }
+      }
+    }
+  ]
+}

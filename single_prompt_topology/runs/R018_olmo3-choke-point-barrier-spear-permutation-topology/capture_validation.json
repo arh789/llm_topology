@@ -1,0 +1,20 @@
+{
+  "status": "successful",
+  "prompt_count": 6,
+  "prompt_ids": [
+    "ABC",
+    "ACB",
+    "BAC",
+    "BCA",
+    "CAB",
+    "CBA"
+  ],
+  "state_count": 65,
+  "hidden_width": 5120,
+  "all_finite": true,
+  "deterministic_replay_exact": true,
+  "anchor_token_id": 198,
+  "anchor_matches_all_prompts": true,
+  "state_00_exact_equal_all_prompts": true,
+  "pair_state_metric_rows": 975
+}

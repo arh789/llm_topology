@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-16T01:27:05.961731+00:00",
+  "run_id": "R018_olmo3-choke-point-barrier-spear-permutation-topology",
+  "measurement_status": "measurement_successful",
+  "self_exclusions": [
+    "manifest.json changes after index creation",
+    "artifact_index.json cannot hash itself"
+  ],
+  "artifacts": {
+    "anchor_hidden_states.safetensors": {
+      "relative_path": "anchor_hidden_states.safetensors",
+      "bytes": 3993872,
+      "sha256": "f5c89ff78269609e505a3ba1df1a1dddf1ef2e94c456214c601490d435ab44bb",
+      "artifact_type": "tensor",
+      "evidence_class": "measurement",
+      "tracked_by_git": false
+    },
+    "capture_validation.json": {
+      "relative_path": "capture_validation.json",
+      "bytes": 404,
+      "sha256": "be2b28c183ea6d79bf0d16155b0a25f5b21fdbd1382b62cedaead5a75b0ab22d",
+      "artifact_type": "structured_record",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "chatgpt_community_networks.json": {
+      "relative_path": "chatgpt_community_networks.json",
+      "bytes": 34405887,
+      "sha256": "0edf8ec2aae6edb8e9b7e3251f8b3f0157a83a529b40d226f0ff2e37e887673b",
+      "artifact_type": "structured_record",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "chatgpt_layer_packets.md": {
+      "relative_path": "chatgpt_layer_packets.md",
+      "bytes": 3279171,
+      "sha256": "81ae23c62ecbef1f59e7e74a24ead8bc004860b5f8551c9078a190a7f41e6c29",
+      "artifact_type": "report",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "community_edges.csv": {
+      "relative_path": "community_edges.csv",
+      "bytes": 6772105,
+      "sha256": "445cf72b25bd6f3fdda8286c47d8223fb41805eed5eda108a139e9706aafc05d",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "community_nodes.csv": {
+      "relative_path": "community_nodes.csv",
+      "bytes": 6831071,
+      "sha256": "522991791a0c20f5c42f6f3bc08c62e757636c0d8cda6af31789b7bed55c0e0d",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "community_transition_evidence.csv": {
+      "relative_path": "community_transition_evidence.csv",
+      "bytes": 4665571,
+      "sha256": "e6327c0570c8f6a704677b2649f31d4c080d6463dae6458864f0b17293af34ed",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "cutoffs.csv": {
+      "relative_path": "cutoffs.csv",
+      "bytes": 103534,
+      "sha256": "37172c03dec55a0e01c51853368c22f42be4e8022c7c020cf729e8a9337bde26",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "device_map.json": {
+      "relative_path": "device_map.json",
+      "bytes": 2273,
+      "sha256": "706df4523336e6a453b0628f20280d4619db304fddf041160746e898a45b92b8",
+      "artifact_type": "structured_record",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "edge_permutation_support.csv.gz": {
+      "relative_path": "edge_permutation_support.csv.gz",
+      "bytes": 69828158,
+      "sha256": "3924e61daf7b5b02f60f12a1429ddd7527a1c69ffc2f06337ab1870fb5b32ce4",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": false
+    },
+    "edges.csv.gz": {
+      "relative_path": "edges.csv.gz",
+      "bytes": 337972914,
+      "sha256": "0a12f8e4d7c507f359916d1ca2f472e3c120d1420a37473f920bfc30f531d7dc",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": false
+    },
+    "manifest.failed_validation.json": {
+      "relative_path": "manifest.failed_validation.json",
+      "bytes": 12310,
+      "sha256": "5397ee23b00e7cfcce996d0ccdcb750debd4227c49c23441a121296e1d96899e",
+      "artifact_type": "structured_record",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "network_index.csv": {
+      "relative_path": "network_index.csv",
+      "bytes": 204807,
+      "sha256": "4706851ffcee442f46c67977529932411c6389f7b1151e6a285dd0dd37270f38",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "nodes.csv.gz": {
+      "relative_path": "nodes.csv.gz",
+      "bytes": 75756052,
+      "sha256": "b523f1a215985aa1178da2f87ff9a54a42c62b675876c95971a7731a01bc056a",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": false
+    },
+    "pairwise_hidden_state_metrics.csv": {
+      "relative_path": "pairwise_hidden_state_metrics.csv",
+      "bytes": 85913,
+      "sha256": "f7cb696ce8f7484f898839b8ccf930680511b7b789dfddf4b5d51f0cab8e9d21",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "pairwise_permutation_comparisons.csv": {
+      "relative_path": "pairwise_permutation_comparisons.csv",
+      "bytes": 343395,
+      "sha256": "773ed654a51599457ddf2f1b7427748765e0408353e222874228c8b04bbb2a06",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "permutation_invariance.csv": {
+      "relative_path": "permutation_invariance.csv",
+      "bytes": 138540,
+      "sha256": "438262289ac689721713584a350c04786d8c3b7f8648e098cda304875f86398f",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "prompt_records.json": {
+      "relative_path": "prompt_records.json",
+      "bytes": 5345,
+      "sha256": "7eb2f40ce37ddfe9b1af75588ad79560ef51c73db28a5fcb7bba63da8f29065d",
+      "artifact_type": "structured_record",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "R018_COMPLETENESS_VERIFICATION.md": {
+      "relative_path": "R018_COMPLETENESS_VERIFICATION.md",
+      "bytes": 873,
+      "sha256": "20dda0ed477d0228adac379a5b3e7781d278e3d7fd22d9d31563ba3e3e8323f7",
+      "artifact_type": "report",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "R018_MEASUREMENT_REPORT.md": {
+      "relative_path": "R018_MEASUREMENT_REPORT.md",
+      "bytes": 1438,
+      "sha256": "b984d7a831723dd4de76b9b3354b06b20c5e7cb7eadf5e2c3efe6a4c0eab13ab",
+      "artifact_type": "report",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "R018_PLAN.md": {
+      "relative_path": "R018_PLAN.md",
+      "bytes": 4196,
+      "sha256": "0ee5973360db9ab121e2e0e06b94e850eb16ce44d2a97fd3c98ba7be89848172",
+      "artifact_type": "report",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "R018_VALIDATION_RECOVERY.md": {
+      "relative_path": "R018_VALIDATION_RECOVERY.md",
+      "bytes": 686,
+      "sha256": "2486c30a7297b5cc93e734fe031628ac07d7607c7a9627ef76fb17be85fdef8f",
+      "artifact_type": "report",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "run_config.json": {
+      "relative_path": "run_config.json",
+      "bytes": 3414,
+      "sha256": "1fb6e173ba1f7fc88af07871b14a4b9aeab7b4b6617db4c0528b5a1b83674572",
+      "artifact_type": "structured_record",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "state_transitions.csv": {
+      "relative_path": "state_transitions.csv",
+      "bytes": 113826,
+      "sha256": "25b633af39f3685def33c2efede672207ec0c5a23ac8bb511dae80ce21f12614",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "tail_tokens.csv.gz": {
+      "relative_path": "tail_tokens.csv.gz",
+      "bytes": 67568233,
+      "sha256": "8eb118477ca87e057bc44e74f4ca4be730aca6ea8b0bd682283b6d60c9250a90",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": false
+    },
+    "token_permutation_support.csv.gz": {
+      "relative_path": "token_permutation_support.csv.gz",
+      "bytes": 11698502,
+      "sha256": "2c0711833a8fb3f4b54c11b46d9f3463aa52eb38e57120b79009bf783f10d3db",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": false
+    },
+    "validation_recovery.json": {
+      "relative_path": "validation_recovery.json",
+      "bytes": 6043,
+      "sha256": "a6f687f2550223b2046ecaf9f5e8ac3c506bb8503f286a27309707ab9059d6f9",
+      "artifact_type": "structured_record",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "vocabulary_scores.safetensors": {
+      "relative_path": "vocabulary_scores.safetensors",
+      "bytes": 156433912,
+      "sha256": "e999fd9e10c512b5c0ceb0ecc1d73b404a321aa00e3a9ac3dc08b6d5ff6fb0b1",
+      "artifact_type": "tensor",
+      "evidence_class": "measurement",
+      "tracked_by_git": false
+    }
+  }
+}

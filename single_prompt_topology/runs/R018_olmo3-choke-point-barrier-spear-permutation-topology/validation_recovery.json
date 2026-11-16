@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "run_id": "R018_olmo3-choke-point-barrier-spear-permutation-topology",
+  "recovered_at": "2026-11-16T01:27:05.260353+00:00",
+  "scope": "completeness_validation_only",
+  "measurement_reexecuted": false,
+  "measurement_artifacts_modified": false,
+  "original_failure_manifest": "manifest.failed_validation.json",
+  "original_failure": {
+    "component": "completeness_validation",
+    "error_type": "RuntimeError",
+    "message": "Node or membership row counts do not reconcile.",
+    "traceback": "Traceback (most recent call last):\n  File \"D:\\Sync\\Python Projects\\llm_topology\\single_prompt_topology\\topology_engine.py\", line 1718, in measure\n    results = validate_measurement_files(context)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Sync\\Python Projects\\llm_topology\\single_prompt_topology\\topology_engine.py\", line 1530, in validate_measurement_files\n    raise RuntimeError(\"Node or membership row counts do not reconcile.\")\nRuntimeError: Node or membership row counts do not reconcile.\n",
+    "failed_at": "2026-11-16T01:21:51.456777+00:00",
+    "memory_at_failure": {
+      "physical_ram_available_bytes": 35555131392,
+      "process_rss_bytes": 2535157760,
+      "model_drive_free_bytes": 1105776492544,
+      "gpu_name": "NVIDIA GeForce RTX 4090",
+      "gpu_total_bytes": 25756696576,
+      "gpu_free_bytes": 24052236288,
+      "gpu_allocated_bytes": 8519680,
+      "gpu_reserved_bytes": 20971520
+    }
+  },
+  "defect": "The original validator counted physical gzip text lines. Quoted CSV token fields can contain embedded newline characters, so physical lines are not logical CSV records.",
+  "correction": "Count logical records with csv.reader while preserving every measured artifact byte-for-byte.",
+  "protected_measurement_artifacts": {
+    "anchor_hidden_states.safetensors": {
+      "bytes": 3993872,
+      "sha256": "f5c89ff78269609e505a3ba1df1a1dddf1ef2e94c456214c601490d435ab44bb"
+    },
+    "capture_validation.json": {
+      "bytes": 404,
+      "sha256": "be2b28c183ea6d79bf0d16155b0a25f5b21fdbd1382b62cedaead5a75b0ab22d"
+    },
+    "chatgpt_community_networks.json": {
+      "bytes": 34405887,
+      "sha256": "0edf8ec2aae6edb8e9b7e3251f8b3f0157a83a529b40d226f0ff2e37e887673b"
+    },
+    "chatgpt_layer_packets.md": {
+      "bytes": 3279171,
+      "sha256": "81ae23c62ecbef1f59e7e74a24ead8bc004860b5f8551c9078a190a7f41e6c29"
+    },
+    "community_edges.csv": {
+      "bytes": 6772105,
+      "sha256": "445cf72b25bd6f3fdda8286c47d8223fb41805eed5eda108a139e9706aafc05d"
+    },
+    "community_nodes.csv": {
+      "bytes": 6831071,
+      "sha256": "522991791a0c20f5c42f6f3bc08c62e757636c0d8cda6af31789b7bed55c0e0d"
+    },
+    "community_transition_evidence.csv": {
+      "bytes": 4665571,
+      "sha256": "e6327c0570c8f6a704677b2649f31d4c080d6463dae6458864f0b17293af34ed"
+    },
+    "cutoffs.csv": {
+      "bytes": 103534,
+      "sha256": "37172c03dec55a0e01c51853368c22f42be4e8022c7c020cf729e8a9337bde26"
+    },
+    "device_map.json": {
+      "bytes": 2273,
+      "sha256": "706df4523336e6a453b0628f20280d4619db304fddf041160746e898a45b92b8"
+    },
+    "edge_permutation_support.csv.gz": {
+      "bytes": 69828158,
+      "sha256": "3924e61daf7b5b02f60f12a1429ddd7527a1c69ffc2f06337ab1870fb5b32ce4"
+    },
+    "edges.csv.gz": {
+      "bytes": 337972914,
+      "sha256": "0a12f8e4d7c507f359916d1ca2f472e3c120d1420a37473f920bfc30f531d7dc"
+    },
+    "network_index.csv": {
+      "bytes": 204807,
+      "sha256": "4706851ffcee442f46c67977529932411c6389f7b1151e6a285dd0dd37270f38"
+    },
+    "nodes.csv.gz": {
+      "bytes": 75756052,
+      "sha256": "b523f1a215985aa1178da2f87ff9a54a42c62b675876c95971a7731a01bc056a"
+    },
+    "pairwise_hidden_state_metrics.csv": {
+      "bytes": 85913,
+      "sha256": "f7cb696ce8f7484f898839b8ccf930680511b7b789dfddf4b5d51f0cab8e9d21"
+    },
+    "pairwise_permutation_comparisons.csv": {
+      "bytes": 343395,
+      "sha256": "773ed654a51599457ddf2f1b7427748765e0408353e222874228c8b04bbb2a06"
+    },
+    "permutation_invariance.csv": {
+      "bytes": 138540,
+      "sha256": "438262289ac689721713584a350c04786d8c3b7f8648e098cda304875f86398f"
+    },
+    "prompt_records.json": {
+      "bytes": 5345,
+      "sha256": "7eb2f40ce37ddfe9b1af75588ad79560ef51c73db28a5fcb7bba63da8f29065d"
+    },
+    "R018_PLAN.md": {
+      "bytes": 4196,
+      "sha256": "0ee5973360db9ab121e2e0e06b94e850eb16ce44d2a97fd3c98ba7be89848172"
+    },
+    "run_config.json": {
+      "bytes": 3414,
+      "sha256": "1fb6e173ba1f7fc88af07871b14a4b9aeab7b4b6617db4c0528b5a1b83674572"
+    },
+    "state_transitions.csv": {
+      "bytes": 113826,
+      "sha256": "25b633af39f3685def33c2efede672207ec0c5a23ac8bb511dae80ce21f12614"
+    },
+    "tail_tokens.csv.gz": {
+      "bytes": 67568233,
+      "sha256": "8eb118477ca87e057bc44e74f4ca4be730aca6ea8b0bd682283b6d60c9250a90"
+    },
+    "token_permutation_support.csv.gz": {
+      "bytes": 11698502,
+      "sha256": "2c0711833a8fb3f4b54c11b46d9f3463aa52eb38e57120b79009bf783f10d3db"
+    },
+    "vocabulary_scores.safetensors": {
+      "bytes": 156433912,
+      "sha256": "e999fd9e10c512b5c0ceb0ecc1d73b404a321aa00e3a9ac3dc08b6d5ff6fb0b1"
+    }
+  },
+  "validated_results": {
+    "network_count": 780,
+    "selected_membership_rows": 3081305,
+    "directed_edge_rows": 30813050,
+    "community_count": 11872,
+    "intercommunity_edge_rows": 79840,
+    "adjacent_transition_rows": 768,
+    "pairwise_comparison_rows": 1950,
+    "invariance_summary_rows": 1560,
+    "minimum_pairwise_membership_jaccard": 0.1545719677474695,
+    "minimum_pairwise_edge_jaccard": 0.0407413013861557,
+    "mean_same_final_membership_jaccard": 0.5232488910445313,
+    "mean_different_final_membership_jaccard": 0.3641111808489216,
+    "state_zero_pair_identity_verified": true,
+    "deterministic_replay_exact": true,
+    "node_rows_counted": 3081305,
+    "edge_rows_counted": 30813050
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "run_id": "R018_olmo3-choke-point-barrier-spear-permutation-topology",
+  "run_number": 18,
+  "objective": "Measure order-conditioned semantic topology for all six permutations of choke point, collapsible barrier and spear using OLMo 3 32B Base.",
+  "plan_path": "R018_PLAN.md",
+  "output_directory": "runs/R018_olmo3-choke-point-barrier-spear-permutation-topology",
+  "model": {
+    "id": "allenai/Olmo-3-1125-32B",
+    "revision": "c2b61dae89a1ad10e4ad5653d0e46b590902607b",
+    "snapshot_directory": "D:/AI/cache/huggingface/hub/models--allenai--Olmo-3-1125-32B/snapshots/c2b61dae89a1ad10e4ad5653d0e46b590902607b",
+    "offload_directory": "D:/AI/cache/offload/R018_olmo3-32b",
+    "precision": "bfloat16",
+    "quantized": false,
+    "expected_layers": 64,
+    "expected_states": 65,
+    "hidden_width": 5120,
+    "usable_vocabulary_size": 100278,
+    "embedding_key": "model.embed_tokens.weight",
+    "gpu_memory_limit": "18GiB",
+    "cpu_memory_limit": "28GiB"
+  },
+  "capture": {
+    "anchor_text": "\n",
+    "anchor_position": "final_non_padding_token",
+    "add_special_tokens": false,
+    "chat_template_used": false,
+    "response_generation": false,
+    "batch_size": 6,
+    "deterministic_replay": true
+  },
+  "concepts": {
+    "A": "choke point",
+    "B": "collapsible barrier",
+    "C": "spear"
+  },
+  "prompts": [
+    {"prompt_id": "ABC", "permutation": "ABC", "comparison_group": "all_permutations", "concept_order": ["A", "B", "C"], "raw_text": "choke point\ncollapsible barrier\nspear\n"},
+    {"prompt_id": "ACB", "permutation": "ACB", "comparison_group": "all_permutations", "concept_order": ["A", "C", "B"], "raw_text": "choke point\nspear\ncollapsible barrier\n"},
+    {"prompt_id": "BAC", "permutation": "BAC", "comparison_group": "all_permutations", "concept_order": ["B", "A", "C"], "raw_text": "collapsible barrier\nchoke point\nspear\n"},
+    {"prompt_id": "BCA", "permutation": "BCA", "comparison_group": "all_permutations", "concept_order": ["B", "C", "A"], "raw_text": "collapsible barrier\nspear\nchoke point\n"},
+    {"prompt_id": "CAB", "permutation": "CAB", "comparison_group": "all_permutations", "concept_order": ["C", "A", "B"], "raw_text": "spear\nchoke point\ncollapsible barrier\n"},
+    {"prompt_id": "CBA", "permutation": "CBA", "comparison_group": "all_permutations", "concept_order": ["C", "B", "A"], "raw_text": "spear\ncollapsible barrier\nchoke point\n"}
+  ],
+  "measurement": {
+    "sectors": ["positive_head", "negative_tail"],
+    "k_neighbors": 10,
+    "knn_batch_size": 512,
+    "random_seed": 20261115,
+    "louvain_resolution": 1.0
+  },
+  "expected": {
+    "prompt_count": 6,
+    "state_count": 65,
+    "network_count": 780,
+    "within_prompt_transition_rows": 768,
+    "pairwise_permutation_rows": 1950,
+    "invariance_summary_rows": 1560,
+    "hidden_state_pair_rows": 975
+  }
+}

@@ -464,6 +464,35 @@ reach/piercing weapon supplies force at the resulting interception point. The
 report keeps measured communities separate from interpreted parent labels and
 records that order/context invariance was not tested.
 
+## R018 OLMo 3 32B permutation topology
+
+R018 applies the R013 six-order design to the exact R017 concept set and OLMo
+backend. Its locked contract is [`R018_PLAN.md`](R018_PLAN.md). All six
+permutations were captured together at the common final newline position and
+the identical batch was replayed with exact equality.
+
+The verified measurement contains 780 positive/negative networks, 3,081,305
+selected token memberships, 30,813,050 exact directed 10-NN edges, 11,872
+state-local communities, 768 adjacent-state comparisons, 1,950 same-state
+permutation comparisons and 1,560 invariance rows. State 00 hidden states and
+topology are exactly identical across all six orders.
+
+The primary measured summaries are
+[`R018_MEASUREMENT_REPORT.md`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_MEASUREMENT_REPORT.md),
+[`R018_COMPLETENESS_VERIFICATION.md`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_COMPLETENESS_VERIFICATION.md),
+[`chatgpt_community_networks.json`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/chatgpt_community_networks.json)
+and
+[`chatgpt_layer_packets.md`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/chatgpt_layer_packets.md).
+R018 adds no semantic parent identities, parent relations, SDA-3 roles or GRD
+roles.
+
+The first final validation attempt failed because its gzip row counter treated
+embedded newlines inside quoted token fields as extra records. The original
+failed manifest is retained. A validation-only recovery counted logical CSV
+records, hashed the unchanged measured artifacts and passed the independent
+verifier. Details are in
+[`R018_VALIDATION_RECOVERY.md`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_VALIDATION_RECOVERY.md).
+
 ## Run outputs
 
 Each execution writes a timestamped directory under `runs/` containing:
