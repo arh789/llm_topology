@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>R018 Semantic Network Graph Report</title>
+<style>
+:root{
+  --bg:#0e1116;--panel:#151a22;--panel2:#10151c;--text:#e8edf3;--muted:#9da8b6;
+  --line:#2b3442;--n1:#ffb86b;--n2:#79c0ff;--n3:#9fe6a0;--n4:#d2a8ff;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+main{max-width:1440px;margin:0 auto;padding:28px 24px 56px}
+h1,h2,h3{line-height:1.15} h1{font-size:2.2rem;margin:.2rem 0 .35rem} h2{margin-top:2rem}
+p{max-width:1040px}.muted{color:var(--muted)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.metric{background:var(--panel2);border:1px solid var(--line);padding:14px;border-radius:10px}
+.metric b{font-size:1.4rem;display:block}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin:10px 0 4px}
+.legend span{display:inline-flex;align-items:center;gap:7px;color:var(--muted)}
+.dot{width:11px;height:11px;border-radius:50%;display:inline-block}
+.controls{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:10px 0 16px}
+.controls label{font-size:.92rem;color:var(--muted)}
+select,button,input{background:#0d1219;color:var(--text);border:1px solid #3a4555;border-radius:7px;padding:7px 9px}
+button{cursor:pointer}
+svg{width:100%;height:auto;background:#0b0f14;border:1px solid var(--line);border-radius:12px}
+.parent-zone{fill-opacity:.055;stroke-width:2;stroke-dasharray:8 7}
+.parent-title{font-weight:700;font-size:16px;letter-spacing:.2px}
+.edge{stroke:#9aa6b4;stroke-opacity:.28;stroke-linecap:round}
+.edge.core{stroke-opacity:.62}
+.node{stroke:#0b0f14;stroke-width:2;cursor:default}
+.node-label{fill:#eef3f8;font-size:13px;font-weight:700;paint-order:stroke;stroke:#0b0f14;stroke-width:4;stroke-linejoin:round}
+.node-sub{fill:#aab4c2;font-size:11px;paint-order:stroke;stroke:#0b0f14;stroke-width:3}
+.tooltip{position:fixed;pointer-events:none;opacity:0;background:#080b0f;border:1px solid #3a4555;color:#edf2f7;
+  padding:10px 12px;border-radius:8px;font-size:12px;max-width:340px;z-index:10;box-shadow:0 8px 30px rgba(0,0,0,.35)}
+table{border-collapse:collapse;width:100%;font-size:.92rem}th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}th{background:#10151c}
+code{font-family:Consolas,Menlo,monospace;color:#d7e3f2}
+.callout{border-left:4px solid #7aa2f7;padding:12px 15px;background:#101722;margin:16px 0}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<main>
+<h1>R018 — Semantic Network Graph Report</h1>
+<p class="muted">OLMo 3 32B · choke point / collapsible barrier / spear · graph reconstructed from measured late-state semantic families</p>
+
+<div class="callout"><strong>Scope.</strong> This report visualises the persisted R018 semantic-network dataset. It does not invent additional nodes or edges. The subfamily graph is restricted to the positive head in States 63–64; canonical parent support still comes from each parent's full dominant depth in the final reconstruction.</div>
+
+<div class="grid" id="metrics"></div>
+
+<h2>1. Canonical invariant structure</h2>
+<div class="card">
+<svg id="parentGraph" viewBox="0 0 1200 430" role="img" aria-label="Canonical four-parent R018 semantic map"></svg>
+<p class="muted">Solid links indicate the strongest recurrent coupling retained in the canonical map. Dashed links indicate recurrent association or fusion. No causal direction is inferred.</p>
+</div>
+
+<h2>2. Measured late-state subfamily network</h2>
+<div class="card">
+<div class="legend">
+<span><i class="dot" style="background:var(--n1)"></i>Constraint / Requirement</span>
+<span><i class="dot" style="background:var(--n2)"></i>Structural Configuration</span>
+<span><i class="dot" style="background:var(--n3)"></i>Dynamic Path Geometry</span>
+<span><i class="dot" style="background:var(--n4)"></i>Collapse / Adjustment</span>
+</div>
+<div class="controls">
+<label>Minimum prompt support
+<select id="supportFilter"><option value="6">6/6 — invariant edge core</option><option value="5">5/6+</option><option value="4">4/6+</option></select>
+</label>
+<label>Minimum token-edge count <input id="weightFilter" type="range" min="0" max="6000" step="100" value="0"> <span id="weightValue">0</span></label>
+<label><input id="labelsToggle" type="checkbox" checked> labels</label>
+<button id="resetBtn" type="button">Reset filters</button>
+<button id="exportBtn" type="button">Export SVG</button>
+</div>
+<svg id="subGraph" viewBox="0 0 1200 820" role="img" aria-label="R018 measured semantic subfamily network"></svg>
+<p class="muted">Node size reflects matched community count. Edge width reflects measured token-edge count. Edge opacity is stronger for 6/6 prompt support. Hover nodes or edges for provenance details.</p>
+</div>
+
+<h2>3. Parent families and measured subfamilies</h2>
+<div class="card"><table id="familyTable"><thead><tr><th>Parent</th><th>Subfamily</th><th>Prompt support</th><th>States</th><th>Matched communities</th><th>Matched tokens</th></tr></thead><tbody></tbody></table></div>
+
+<h2>4. Interpretation boundary</h2>
+<div class="card">
+<ul>
+<li>The graph visualises measured semantic association, not causality.</li>
+<li>Prompt order strongly conditions earlier and middle-layer topology; this report focuses on the late reconverged structure.</li>
+<li>Literal spear, attack/interception, intersection, route/pathway/road, and deployment do not all qualify for the strict 6/6 invariant core.</li>
+<li>Subfamily evidence is taken from States 63–64 only and must not replace the broader state-depth evidence used to establish the four canonical parents.</li>
+</ul>
+</div>
+
+<h2>5. Provenance</h2>
+<div class="card">
+<table>
+<tr><th>Graph data</th><td><code>R018_SEMANTIC_NETWORK_GRAPH_DATA.json</code></td></tr>
+<tr><th>Source nodes</th><td><code>community_nodes.csv</code></td></tr>
+<tr><th>Source edges</th><td><code>community_edges.csv</code></td></tr>
+<tr><th>Canonical parent map</th><td><code>R018_SEMANTIC_MAP.json</code></td></tr>
+<tr><th>Measured side</th><td>positive_head</td></tr>
+<tr><th>State window</th><td>63–64</td></tr>
+<tr><th>Method</th><td>Exact semantic term families were matched only against measured community representative_tokens and most_extreme_tokens. Inter-subfamily weights sum measured token_edge_count between matched communities. same_community_fusions counts matched subfamilies appearing in the same measured community.</td></tr>
+<tr><th>Limitation</th><td>Subfamily support is support within States 63–64 and must not be substituted for canonical parent support across each parent's full dominant depth.</td></tr>
+</table>
+</div>
+</main>
+
+<div class="tooltip" id="tooltip"></div>
+<script>
+const DATA={"schema_version":1,"run_id":"R018_olmo3-choke-point-barrier-spear-permutation-topology","purpose":"Intermediate semantic-network dataset for graph visualisation; preserves one level below the four-parent canonical map.","provenance":{"source_nodes":"community_nodes.csv","source_edges":"community_edges.csv","canonical_parent_map":"R018_SEMANTIC_MAP.json","side":"positive_head","state_window":[63,64],"method":"Exact semantic term families were matched only against measured community representative_tokens and most_extreme_tokens. Inter-subfamily weights sum measured token_edge_count between matched communities. same_community_fusions counts matched subfamilies appearing in the same measured community.","limitation":"Subfamily support is support within States 63–64 and must not be substituted for canonical parent support across each parent's full dominant depth."},"parents":[{"id":"N1","label":"Constraint / Requirement","support":"6/6","dominant_depth":"States 62–64","confidence":"high"},{"id":"N2","label":"Structural Configuration","support":"6/6","dominant_depth":"States 60–64","confidence":"high"},{"id":"N3","label":"Dynamic Path Geometry","support":"6/6","dominant_depth":"States 56–63","confidence":"high"},{"id":"N4","label":"Collapse / Adjustment","support":"6/6","dominant_depth":"States 56–64","confidence":"high"}],"subfamilies":[{"id":"RQ","parent":"N1","label":"Requirement","prompt_support_in_window":6,"state_support_in_window":[63,64],"matched_community_count":16,"matched_tokens":["require","required","requirement","requirements","requires","requiring"],"status":"six_of_six_in_window"},{"id":"CL","parent":"N1","label":"Constraint / limitation","prompt_support_in_window":6,"state_support_in_window":[63,64],"matched_community_count":9,"matched_tokens":["constraints","limitations","shortcomings"],"status":"six_of_six_in_window"},{"id":"DC","parent":"N1","label":"Dependency / condition","prompt_support_in_window":5,"state_support_in_window":[64],"matched_community_count":5,"matched_tokens":["conditions","dependencies"],"status":"partial_window_support"},{"id":"CI","parent":"N2","label":"Configuration / infrastructure","prompt_support_in_window":6,"state_support_in_window":[63,64],"matched_community_count":9,"matched_tokens":["configuration","configurations","infrastructure"],"status":"six_of_six_in_window"},{"id":"MI","parent":"N2","label":"Modules / interfaces","prompt_support_in_window":6,"state_support_in_window":[63,64],"matched_community_count":14,"matched_tokens":["interfaces","module","modules"],"status":"six_of_six_in_window"},{"id":"IP","parent":"N2","label":"Installations / projects","prompt_support_in_window":6,"state_support_in_window":[63,64],"matched_community_count":15,"matched_tokens":["installations","project","projects"],"status":"six_of_six_in_window"},{"id":"AS","parent":"N2","label":"Architecture / structure","prompt_support_in_window":5,"state_support_in_window":[63],"matched_community_count":5,"matched_tokens":["architectures","structures"],"status":"partial_window_support"},{"id":"DP","parent":"N2","label":"Deployment","prompt_support_in_window":5,"state_support_in_window":[63,64],"matched_community_count":8,"matched_tokens":["deployment","deployments"],"status":"adjacent_not_strict_core"},{"id":"PF","parent":"N3","label":"Point / approach / flow","prompt_support_in_window":4,"state_support_in_window":[63],"matched_community_count":4,"matched_tokens":["approaching"],"status":"partial_window_support"},{"id":"TC","parent":"N3","label":"Trajectory / curve","prompt_support_in_window":6,"state_support_in_window":[63,64],"matched_community_count":7,"matched_tokens":["curve","curves","trajectories"],"status":"six_of_six_in_window"},{"id":"VS","parent":"N3","label":"Velocity / speed","prompt_support_in_window":6,"state_support_in_window":[63,64],"matched_community_count":7,"matched_tokens":["speed","speeds","velocities"],"status":"six_of_six_in_window"},{"id":"RT","parent":"N3","label":"Rectangle","prompt_support_in_window":5,"state_support_in_window":[63],"matched_community_count":5,"matched_tokens":["rectangle","rectangles","rectangular"],"status":"partial_window_support"},{"id":"CO","parent":"N4","label":"Collapse","prompt_support_in_window":6,"state_support_in_window":[63],"matched_community_count":6,"matched_tokens":["collaps"],"status":"six_of_six_in_window"},{"id":"NA","parent":"N4","label":"Normalise / adjust / tweak","prompt_support_in_window":6,"state_support_in_window":[63,64],"matched_community_count":13,"matched_tokens":["adjustment","adjustments","normalization","normalize","normalized","tweak","tweaking","tweaks"],"status":"six_of_six_in_window"},{"id":"MT","parent":"N4","label":"Merge / restructure / transform","prompt_support_in_window":4,"state_support_in_window":[63,64],"matched_community_count":7,"matched_tokens":["merges","merging","transformations"],"status":"partial_window_support"}],"edges":[{"id":"MI~RQ","a":"MI","b":"RQ","prompt_support_in_window":6,"state_support_in_window":[63,64],"token_edge_count":5728,"same_community_fusions":0,"observations":20},{"id":"IP~RQ","a":"IP","b":"RQ","prompt_support_in_window":6,"state_support_in_window":[63,64],"token_edge_count":5434,"same_community_fusions":3,"observations":22},{"id":"CI~RQ","a":"CI","b":"RQ","prompt_support_in_window":6,"state_support_in_window":[63,64],"token_edge_count":4349,"same_community_fusions":1,"observations":15},{"id":"CL~IP","a":"CL","b":"IP","prompt_support_in_window":6,"state_support_in_window":[63,64],"token_edge_count":4223,"same_community_fusions":0,"observations":12},{"id":"NA~RQ","a":"NA","b":"RQ","prompt_support_in_window":6,"state_support_in_window":[63,64],"token_edge_count":4048,"same_community_fusions":2,"observations":16},{"id":"CL~MI","a":"CL","b":"MI","prompt_support_in_window":6,"state_support_in_window":[63,64],"token_edge_count":3855,"same_community_fusions":0,"observations":11},{"id":"IP~NA","a":"IP","b":"NA","prompt_support_in_window":6,"state_support_in_window":[63,64],"token_edge_count":2918,"same_community_fusions":2,"observations":15},{"id":"IP~MI","a":"IP","b":"MI","prompt_support_in_window":6,"state_support_in_window":[63,64],"token_edge_count":2764,"same_community_fusions":6,"observations":18},{"id":"CI~CL","a":"CI","b":"CL","prompt_support_in_window":6,"state_support_in_window":[63,64],"token_edge_count":2625,"same_community_fusions":2,"observations":9},{"id":"CI~IP","a":"CI","b":"IP","prompt_support_in_window":6,"state_support_in_window":[63,64],"token_edge_count":2364,"same_community_fusions":6,"observations":14},{"id":"CL~RQ","a":"CL","b":"RQ","prompt_support_in_window":6,"state_support_in_window":[63,64],"token_edge_count":2296,"same_community_fusions":6,"observations":13},{"id":"MI~NA","a":"MI","b":"NA","prompt_support_in_window":6,"state_support_in_window":[63,64],"token_edge_count":1764,"same_community_fusions":4,"observations":14},{"id":"RQ~TC","a":"RQ","b":"TC","prompt_support_in_window":6,"state_support_in_window":[63,64],"token_edge_count":1729,"same_community_fusions":1,"observations":8},{"id":"RQ~VS","a":"RQ","b":"VS","prompt_support_in_window":6,"state_support_in_window":[63,64],"token_edge_count":1691,"same_community_fusions":0,"observations":8},{"id":"CO~RQ","a":"CO","b":"RQ","prompt_support_in_window":6,"state_support_in_window":[63],"token_edge_count":1596,"same_community_fusions":1,"observations":6},{"id":"CI~MI","a":"CI","b":"MI","prompt_support_in_window":6,"state_support_in_window":[63,64],"token_edge_count":1408,"same_community_fusions":6,"observations":13},{"id":"MI~VS","a":"MI","b":"VS","prompt_support_in_window":6,"state_support_in_window":[63,64],"token_edge_count":1246,"same_community_fusions":1,"observations":8},{"id":"CO~VS","a":"CO","b":"VS","prompt_support_in_window":6,"state_support_in_window":[63],"token_edge_count":1179,"same_community_fusions":0,"observations":6},{"id":"CO~TC","a":"CO","b":"TC","prompt_support_in_window":6,"state_support_in_window":[63],"token_edge_count":1082,"same_community_fusions":1,"observations":6},{"id":"CO~MI","a":"CO","b":"MI","prompt_support_in_window":6,"state_support_in_window":[63],"token_edge_count":1033,"same_community_fusions":1,"observations":6},{"id":"MI~TC","a":"MI","b":"TC","prompt_support_in_window":6,"state_support_in_window":[63,64],"token_edge_count":712,"same_community_fusions":3,"observations":7},{"id":"TC~VS","a":"TC","b":"VS","prompt_support_in_window":6,"state_support_in_window":[63],"token_edge_count":472,"same_community_fusions":2,"observations":6},{"id":"DP~RQ","a":"DP","b":"RQ","prompt_support_in_window":5,"state_support_in_window":[63,64],"token_edge_count":3201,"same_community_fusions":2,"observations":12},{"id":"CL~NA","a":"CL","b":"NA","prompt_support_in_window":5,"state_support_in_window":[63,64],"token_edge_count":2300,"same_community_fusions":1,"observations":8},{"id":"CL~DP","a":"CL","b":"DP","prompt_support_in_window":5,"state_support_in_window":[63,64],"token_edge_count":2286,"same_community_fusions":0,"observations":6},{"id":"DC~IP","a":"DC","b":"IP","prompt_support_in_window":5,"state_support_in_window":[64],"token_edge_count":1987,"same_community_fusions":2,"observations":8},{"id":"DC~MI","a":"DC","b":"MI","prompt_support_in_window":5,"state_support_in_window":[64],"token_edge_count":1742,"same_community_fusions":1,"observations":7},{"id":"DP~IP","a":"DP","b":"IP","prompt_support_in_window":5,"state_support_in_window":[63,64],"token_edge_count":1740,"same_community_fusions":6,"observations":11},{"id":"AS~RQ","a":"AS","b":"RQ","prompt_support_in_window":5,"state_support_in_window":[63],"token_edge_count":1737,"same_community_fusions":0,"observations":5},{"id":"CI~DC","a":"CI","b":"DC","prompt_support_in_window":5,"state_support_in_window":[64],"token_edge_count":1674,"same_community_fusions":2,"observations":7},{"id":"IP~TC","a":"IP","b":"TC","prompt_support_in_window":5,"state_support_in_window":[63,64],"token_edge_count":1532,"same_community_fusions":0,"observations":7},{"id":"CI~NA","a":"CI","b":"NA","prompt_support_in_window":5,"state_support_in_window":[63,64],"token_edge_count":1521,"same_community_fusions":2,"observations":7},{"id":"DC~RQ","a":"DC","b":"RQ","prompt_support_in_window":5,"state_support_in_window":[64],"token_edge_count":1432,"same_community_fusions":4,"observations":9},{"id":"DP~NA","a":"DP","b":"NA","prompt_support_in_window":5,"state_support_in_window":[63,64],"token_edge_count":1375,"same_community_fusions":2,"observations":8},{"id":"DP~MI","a":"DP","b":"MI","prompt_support_in_window":5,"state_support_in_window":[63,64],"token_edge_count":1225,"same_community_fusions":4,"observations":10},{"id":"NA~TC","a":"NA","b":"TC","prompt_support_in_window":5,"state_support_in_window":[63,64],"token_edge_count":1217,"same_community_fusions":2,"observations":9},{"id":"IP~VS","a":"IP","b":"VS","prompt_support_in_window":5,"state_support_in_window":[63,64],"token_edge_count":1208,"same_community_fusions":0,"observations":6},{"id":"AS~TC","a":"AS","b":"TC","prompt_support_in_window":5,"state_support_in_window":[63],"token_edge_count":1196,"same_community_fusions":0,"observations":5},{"id":"RQ~RT","a":"RQ","b":"RT","prompt_support_in_window":5,"state_support_in_window":[63],"token_edge_count":1170,"same_community_fusions":0,"observations":5},{"id":"CI~DP","a":"CI","b":"DP","prompt_support_in_window":5,"state_support_in_window":[63,64],"token_edge_count":1134,"same_community_fusions":4,"observations":8},{"id":"DC~DP","a":"DC","b":"DP","prompt_support_in_window":5,"state_support_in_window":[64],"token_edge_count":1039,"same_community_fusions":2,"observations":5},{"id":"CO~IP","a":"CO","b":"IP","prompt_support_in_window":5,"state_support_in_window":[63],"token_edge_count":1033,"same_community_fusions":0,"observations":5},{"id":"CO~RT","a":"CO","b":"RT","prompt_support_in_window":5,"state_support_in_window":[63],"token_edge_count":1029,"same_community_fusions":0,"observations":5},{"id":"AS~MI","a":"AS","b":"MI","prompt_support_in_window":5,"state_support_in_window":[63],"token_edge_count":991,"same_community_fusions":1,"observations":5},{"id":"AS~VS","a":"AS","b":"VS","prompt_support_in_window":5,"state_support_in_window":[63],"token_edge_count":961,"same_community_fusions":0,"observations":5},{"id":"NA~VS","a":"NA","b":"VS","prompt_support_in_window":5,"state_support_in_window":[63],"token_edge_count":955,"same_community_fusions":0,"observations":8},{"id":"IP~RT","a":"IP","b":"RT","prompt_support_in_window":5,"state_support_in_window":[63],"token_edge_count":918,"same_community_fusions":0,"observations":5},{"id":"CL~DC","a":"CL","b":"DC","prompt_support_in_window":5,"state_support_in_window":[64],"token_edge_count":910,"same_community_fusions":3,"observations":5},{"id":"CO~NA","a":"CO","b":"NA","prompt_support_in_window":5,"state_support_in_window":[63],"token_edge_count":725,"same_community_fusions":5,"observations":8},{"id":"AS~CO","a":"AS","b":"CO","prompt_support_in_window":5,"state_support_in_window":[63],"token_edge_count":612,"same_community_fusions":2,"observations":5},{"id":"MI~RT","a":"MI","b":"RT","prompt_support_in_window":5,"state_support_in_window":[63],"token_edge_count":571,"same_community_fusions":1,"observations":5},{"id":"RT~TC","a":"RT","b":"TC","prompt_support_in_window":5,"state_support_in_window":[63],"token_edge_count":417,"same_community_fusions":2,"observations":5},{"id":"RT~VS","a":"RT","b":"VS","prompt_support_in_window":5,"state_support_in_window":[63],"token_edge_count":0,"same_community_fusions":5,"observations":5},{"id":"MT~RQ","a":"MT","b":"RQ","prompt_support_in_window":4,"state_support_in_window":[63,64],"token_edge_count":3172,"same_community_fusions":0,"observations":9},{"id":"IP~MT","a":"IP","b":"MT","prompt_support_in_window":4,"state_support_in_window":[63,64],"token_edge_count":1788,"same_community_fusions":3,"observations":10},{"id":"PF~TC","a":"PF","b":"TC","prompt_support_in_window":4,"state_support_in_window":[63],"token_edge_count":1374,"same_community_fusions":0,"observations":4},{"id":"DC~NA","a":"DC","b":"NA","prompt_support_in_window":4,"state_support_in_window":[64],"token_edge_count":1326,"same_community_fusions":0,"observations":4},{"id":"AS~NA","a":"AS","b":"NA","prompt_support_in_window":4,"state_support_in_window":[63],"token_edge_count":1281,"same_community_fusions":2,"observations":7},{"id":"MI~PF","a":"MI","b":"PF","prompt_support_in_window":4,"state_support_in_window":[63],"token_edge_count":1272,"same_community_fusions":0,"observations":4},{"id":"CO~PF","a":"CO","b":"PF","prompt_support_in_window":4,"state_support_in_window":[63],"token_edge_count":1231,"same_community_fusions":1,"observations":4},{"id":"PF~VS","a":"PF","b":"VS","prompt_support_in_window":4,"state_support_in_window":[63],"token_edge_count":1166,"same_community_fusions":0,"observations":4},{"id":"CL~VS","a":"CL","b":"VS","prompt_support_in_window":4,"state_support_in_window":[63,64],"token_edge_count":1130,"same_community_fusions":0,"observations":4},{"id":"MT~NA","a":"MT","b":"NA","prompt_support_in_window":4,"state_support_in_window":[63,64],"token_edge_count":828,"same_community_fusions":4,"observations":8},{"id":"AS~MT","a":"AS","b":"MT","prompt_support_in_window":4,"state_support_in_window":[63],"token_edge_count":815,"same_community_fusions":1,"observations":4},{"id":"AS~RT","a":"AS","b":"RT","prompt_support_in_window":4,"state_support_in_window":[63],"token_edge_count":811,"same_community_fusions":0,"observations":4},{"id":"NA~RT","a":"NA","b":"RT","prompt_support_in_window":4,"state_support_in_window":[63],"token_edge_count":685,"same_community_fusions":0,"observations":6},{"id":"MT~TC","a":"MT","b":"TC","prompt_support_in_window":4,"state_support_in_window":[63,64],"token_edge_count":545,"same_community_fusions":2,"observations":5},{"id":"CO~MT","a":"CO","b":"MT","prompt_support_in_window":4,"state_support_in_window":[63],"token_edge_count":509,"same_community_fusions":3,"observations":4},{"id":"AS~IP","a":"AS","b":"IP","prompt_support_in_window":4,"state_support_in_window":[63],"token_edge_count":421,"same_community_fusions":2,"observations":4},{"id":"MT~VS","a":"MT","b":"VS","prompt_support_in_window":4,"state_support_in_window":[63],"token_edge_count":305,"same_community_fusions":1,"observations":4},{"id":"MT~RT","a":"MT","b":"RT","prompt_support_in_window":4,"state_support_in_window":[63],"token_edge_count":305,"same_community_fusions":1,"observations":4},{"id":"MI~MT","a":"MI","b":"MT","prompt_support_in_window":4,"state_support_in_window":[63,64],"token_edge_count":258,"same_community_fusions":5,"observations":7},{"id":"PF~RQ","a":"PF","b":"RQ","prompt_support_in_window":4,"state_support_in_window":[63],"token_edge_count":191,"same_community_fusions":3,"observations":4}],"order_conditioned_branches":[{"final_concept":"spear","prompts":["ABC","BAC"],"branch":"weapon / blade / piercing vocabulary","status":"order_conditioned_not_invariant_core"},{"final_concept":"collapsible barrier","prompts":["ACB","CAB"],"branch":"wall / boundary / restriction / passage vocabulary","status":"order_conditioned_not_invariant_core"},{"final_concept":"choke point","prompts":["BCA","CBA"],"branch":"point / location / bottleneck / limit vocabulary","status":"order_conditioned_not_invariant_core"}],"excluded_from_strict_late_core":[{"structure":"exact spear","late_support":"0/6"},{"structure":"attack / interception","late_support":"2/6"},{"structure":"intersection","late_support":"1/6"},{"structure":"route / pathway / road","late_support":"0/6"},{"structure":"deployment","late_support":"5/6"}]};
+const NS="http://www.w3.org/2000/svg";
+const colours={N1:"#ffb86b",N2:"#79c0ff",N3:"#9fe6a0",N4:"#d2a8ff"};
+const parentById=Object.fromEntries(DATA.parents.map(d=>[d.id,d]));
+const subById=Object.fromEntries(DATA.subfamilies.map(d=>[d.id,d]));
+const fmt=n=>new Intl.NumberFormat("en-GB").format(n);
+const tooltip=document.getElementById("tooltip");
+function el(name,attrs={},text=""){const x=document.createElementNS(NS,name);Object.entries(attrs).forEach(([k,v])=>x.setAttribute(k,v));if(text)x.textContent=text;return x}
+function tip(html,ev){tooltip.innerHTML=html;tooltip.style.opacity=1;tooltip.style.left=(ev.clientX+14)+"px";tooltip.style.top=(ev.clientY+14)+"px"}
+function untip(){tooltip.style.opacity=0}
+
+const invariantEdges=DATA.edges.filter(e=>e.prompt_support_in_window===6);
+document.getElementById("metrics").innerHTML=[
+["Canonical parents",DATA.parents.length],
+["Measured subfamilies",DATA.subfamilies.length],
+["Measured edges",DATA.edges.length],
+["6/6 edge core",invariantEdges.length]
+].map(([k,v])=>'<div class="metric"><b>'+fmt(v)+'</b><span>'+k+'</span></div>').join("");
+
+function drawParents(){
+ const svg=document.getElementById("parentGraph");
+ const pos={N2:[220,110],N1:[600,110],N4:[600,320],N3:[980,320]};
+ const links=[
+  ["N2","N1","solid","recurrent semantic coupling"],
+  ["N1","N4","dash","recurrent association / fusion"],
+  ["N4","N3","solid","recurrent semantic coupling"],
+  ["N2","N4","dash","recurrent association / fusion"]
+ ];
+ links.forEach(([a,b,kind,label])=>{
+   const [x1,y1]=pos[a],[x2,y2]=pos[b];
+   const line=el("line",{x1,y1,x2,y2,stroke:"#9aa6b4","stroke-width":kind==="solid"?4:3,"stroke-opacity":kind==="solid"?.8:.55});
+   if(kind==="dash") line.setAttribute("stroke-dasharray","9 8");
+   line.addEventListener("mousemove",ev=>tip("<b>"+parentById[a].label+" ↔ "+parentById[b].label+"</b><br>"+label,ev));
+   line.addEventListener("mouseleave",untip); svg.appendChild(line);
+ });
+ DATA.parents.forEach(p=>{
+   const [x,y]=pos[p.id];
+   const g=el("g");
+   g.appendChild(el("rect",{x:x-135,y:y-48,width:270,height:96,rx:16,fill:colours[p.id],"fill-opacity":.15,stroke:colours[p.id],"stroke-width":2}));
+   g.appendChild(el("text",{x,y:y-5,"text-anchor":"middle",fill:colours[p.id],"font-size":18,"font-weight":700},p.label));
+   g.appendChild(el("text",{x,y:y+23,"text-anchor":"middle",fill:"#aab4c2","font-size":12},p.support+" · "+p.dominant_depth));
+   g.addEventListener("mousemove",ev=>tip("<b>"+p.id+" — "+p.label+"</b><br>Support: "+p.support+"<br>Dominant depth: "+p.dominant_depth+"<br>Confidence: "+p.confidence,ev));
+   g.addEventListener("mouseleave",untip); svg.appendChild(g);
+ });
+}
+
+const centres={N1:[285,225],N2:[915,225],N4:[285,600],N3:[915,600]};
+const zoneR={N1:180,N2:205,N3:190,N4:185};
+const positions={};
+for(const p of DATA.parents){
+ const subs=DATA.subfamilies.filter(s=>s.parent===p.id);
+ const [cx,cy]=centres[p.id], rr=zoneR[p.id]*.58;
+ subs.forEach((s,i)=>{
+   const ang=(-Math.PI/2)+(i*Math.PI*2/subs.length);
+   positions[s.id]=[cx+Math.cos(ang)*rr,cy+Math.sin(ang)*rr];
+ });
+}
+
+function drawSubgraph(){
+ const svg=document.getElementById("subGraph"); svg.innerHTML="";
+ const minSupport=+document.getElementById("supportFilter").value;
+ const minWeight=+document.getElementById("weightFilter").value;
+ const showLabels=document.getElementById("labelsToggle").checked;
+ DATA.parents.forEach(p=>{
+   const [cx,cy]=centres[p.id],r=zoneR[p.id];
+   svg.appendChild(el("circle",{cx,cy,r,fill:colours[p.id],stroke:colours[p.id],class:"parent-zone"}));
+   svg.appendChild(el("text",{x:cx,y:cy-r-16,"text-anchor":"middle",fill:colours[p.id],class:"parent-title"},p.label));
+ });
+ const edges=DATA.edges.filter(e=>e.prompt_support_in_window>=minSupport&&e.token_edge_count>=minWeight);
+ const maxW=Math.max(...DATA.edges.map(e=>e.token_edge_count));
+ edges.forEach(e=>{
+   const [x1,y1]=positions[e.a],[x2,y2]=positions[e.b];
+   const w=1+7*Math.sqrt(e.token_edge_count/maxW);
+   const line=el("line",{x1,y1,x2,y2,"stroke-width":w,class:"edge"+(e.prompt_support_in_window===6?" core":"")});
+   line.addEventListener("mousemove",ev=>tip("<b>"+subById[e.a].label+" ↔ "+subById[e.b].label+"</b><br>Prompt support: "+e.prompt_support_in_window+"/6<br>States: "+e.state_support_in_window.join(", ")+"<br>Token-edge count: "+fmt(e.token_edge_count)+"<br>Same-community fusions: "+e.same_community_fusions+"<br>Observations: "+e.observations,ev));
+   line.addEventListener("mouseleave",untip); svg.appendChild(line);
+ });
+ DATA.subfamilies.forEach(s=>{
+   const [x,y]=positions[s.id];
+   const r=8+Math.sqrt(s.matched_community_count)*3.2;
+   const g=el("g");
+   const c=el("circle",{cx:x,cy:y,r,fill:colours[s.parent],class:"node"});
+   c.addEventListener("mousemove",ev=>tip("<b>"+s.id+" — "+s.label+"</b><br>Parent: "+parentById[s.parent].label+"<br>Prompt support: "+s.prompt_support_in_window+"/6<br>States: "+s.state_support_in_window.join(", ")+"<br>Matched communities: "+s.matched_community_count+"<br>Status: "+s.status+"<br>Tokens: "+s.matched_tokens.join(", "),ev));
+   c.addEventListener("mouseleave",untip); g.appendChild(c);
+   if(showLabels){
+     g.appendChild(el("text",{x,y:y-r-7,"text-anchor":"middle",class:"node-label"},s.id+" · "+s.label));
+     g.appendChild(el("text",{x,y:y+r+16,"text-anchor":"middle",class:"node-sub"},s.prompt_support_in_window+"/6 · "+s.matched_community_count+" communities"));
+   }
+   svg.appendChild(g);
+ });
+}
+
+function fillTable(){
+ const tbody=document.querySelector("#familyTable tbody");
+ tbody.innerHTML=DATA.subfamilies.map(s=>'<tr><td>'+s.parent+' — '+parentById[s.parent].label+'</td><td><b>'+s.id+' — '+s.label+'</b></td><td>'+s.prompt_support_in_window+'/6</td><td>'+s.state_support_in_window.join(", ")+'</td><td>'+s.matched_community_count+'</td><td>'+s.matched_tokens.map(t=>'<code>'+t+'</code>').join(", ")+'</td></tr>').join("");
+}
+
+document.getElementById("supportFilter").addEventListener("change",drawSubgraph);
+document.getElementById("weightFilter").addEventListener("input",e=>{document.getElementById("weightValue").textContent=fmt(+e.target.value);drawSubgraph()});
+document.getElementById("labelsToggle").addEventListener("change",drawSubgraph);
+document.getElementById("resetBtn").addEventListener("click",()=>{document.getElementById("supportFilter").value="6";document.getElementById("weightFilter").value="0";document.getElementById("weightValue").textContent="0";document.getElementById("labelsToggle").checked=true;drawSubgraph()});
+document.getElementById("exportBtn").addEventListener("click",()=>{
+ const svg=document.getElementById("subGraph").cloneNode(true);
+ svg.setAttribute("xmlns",NS);
+ const blob=new Blob([new XMLSerializer().serializeToString(svg)],{type:"image/svg+xml"});
+ const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="R018_semantic_network_graph.svg"; a.click(); URL.revokeObjectURL(a.href);
+});
+drawParents();drawSubgraph();fillTable();
+</script>
+</body>
+</html>
