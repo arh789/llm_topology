@@ -43,7 +43,7 @@ from topology_core import (
 PIPELINE_DIR = Path(__file__).resolve().parent
 PROJECT_DIR = PIPELINE_DIR.parent
 CONFIG_SCHEMA_VERSION = 1
-MANIFEST_SCHEMA_VERSION = 2
+MANIFEST_SCHEMA_VERSION = 3
 SIDES = ("positive_head", "negative_tail")
 
 MEASUREMENT_COMPONENTS = (
@@ -109,6 +109,34 @@ def _require(mapping: dict[str, Any], key: str, where: str) -> Any:
     return mapping[key]
 
 
+def _analysis_required(config: dict[str, Any]) -> bool:
+    return bool(config.get("analysis", {}).get("required", True))
+
+
+def _post_measurement_run_status(config: dict[str, Any]) -> str:
+    if _analysis_required(config):
+        return "awaiting_semantic_analysis"
+    return "measurement_complete"
+
+
+def _measurement_report_names(config: dict[str, Any]) -> tuple[str, str]:
+    prefix = f"R{int(config['run_number']):03d}"
+    reports = config.get("reports", {})
+    verification = str(
+        reports.get(
+            "measurement_completeness",
+            f"{prefix}_MEASUREMENT_COMPLETENESS_VERIFICATION.md",
+        )
+    )
+    measurement = str(
+        reports.get("measurement_report", f"{prefix}_MEASUREMENT_REPORT.md")
+    )
+    for name in (verification, measurement):
+        if Path(name).name != name or not name.endswith(".md"):
+            raise ValueError("Report names must be Markdown filenames without directories.")
+    return verification, measurement
+
+
 def load_and_validate_config(config_path: Path) -> RunContext:
     config_path = config_path.resolve()
     config = load_json(config_path)
@@ -121,6 +149,15 @@ def load_and_validate_config(config_path: Path) -> RunContext:
     run_number = int(_require(config, "run_number", "root"))
     if not run_id.startswith(f"R{run_number:03d}_"):
         raise ValueError("run_id and run_number do not agree.")
+    analysis = config.get("analysis", {})
+    if not isinstance(analysis, dict):
+        raise ValueError("analysis must be an object when supplied.")
+    if "required" in analysis and not isinstance(analysis["required"], bool):
+        raise ValueError("analysis.required must be a boolean.")
+    reports = config.get("reports", {})
+    if not isinstance(reports, dict):
+        raise ValueError("reports must be an object when supplied.")
+    _measurement_report_names(config)
     plan_path = (PIPELINE_DIR / str(_require(config, "plan_path", "root"))).resolve()
     run_dir = (PIPELINE_DIR / str(_require(config, "output_directory", "root"))).resolve()
     if not plan_path.is_file():
@@ -287,8 +324,12 @@ def initialize_manifest(context: RunContext) -> dict[str, Any]:
         "schema_version": MANIFEST_SCHEMA_VERSION,
         "run_id": context.config["run_id"],
         "run_number": context.config["run_number"],
+        "run_status": "measurement_running",
         "measurement_status": "measurement_running",
-        "analysis_status": "not_started",
+        "analysis_required": _analysis_required(context.config),
+        "analysis_status": (
+            "not_started" if _analysis_required(context.config) else "not_required"
+        ),
         "started_at": started,
         "measurement_completed_at": None,
         "failure_details": None,
@@ -334,6 +375,7 @@ def fail_measurement(context: RunContext, component: str, error: BaseException) 
         return
     manifest = load_json(context.manifest_path)
     failed_at = utc_now()
+    manifest["run_status"] = "measurement_failed"
     manifest["measurement_status"] = "measurement_failed"
     manifest["failure_details"] = {
         "component": component,
@@ -1564,10 +1606,17 @@ def validate_measurement_files(context: RunContext) -> dict[str, Any]:
 
 
 def write_measured_reports(context: RunContext, results: dict[str, Any]) -> None:
+    run_status = _post_measurement_run_status(context.config)
+    analysis_required = _analysis_required(context.config)
+    verification_name, measurement_report_name = _measurement_report_names(
+        context.config
+    )
+    run_number = int(context.config["run_number"])
     verification_lines = [
-        f"# {context.config['run_id']} completeness verification",
+        f"# {context.config['run_id']} measurement completeness verification",
         "",
         "- Measurement status: **PASS**",
+        f"- Overall run status after measurement: **{run_status}**",
         f"- Networks: {results['network_count']} / {context.config['expected']['network_count']}",
         f"- Within-prompt transitions: {results['adjacent_transition_rows']} / {context.config['expected']['within_prompt_transition_rows']}",
         f"- Same-state permutation comparisons: {results['pairwise_comparison_rows']} / {context.config['expected']['pairwise_permutation_rows']}",
@@ -1583,15 +1632,23 @@ def write_measured_reports(context: RunContext, results: dict[str, Any]) -> None
         "- Deterministic batch replay is exactly equal.",
         "- Measured exports contain no semantic parent labels.",
     ]
-    (context.run_dir / "R018_COMPLETENESS_VERIFICATION.md").write_text(
+    (context.run_dir / verification_name).write_text(
         "\n".join(verification_lines) + "\n", encoding="utf-8"
     )
     report_lines = [
-        "# R018 permutation-topology measurement report",
+        f"# R{run_number:03d} semantic-topology measurement report",
         "",
         "## Outcome",
         "",
-        "R018 completed the six-permutation OLMo 3 32B measurement pipeline. The report contains measured structural evidence only; semantic parent reconstruction remains outside the run.",
+        f"Measurement complete for `{context.config['run_id']}`. The report contains measured structural evidence only.",
+        "",
+        (
+            "**Overall run status: awaiting semantic analysis.** Independent semantic "
+            "reconstruction and final analysis remain required before the research run "
+            "is complete."
+            if analysis_required
+            else "**Overall run status: measurement complete.** No semantic-analysis phase is required by this run configuration."
+        ),
         "",
         "## Run identity",
         "",
@@ -1625,7 +1682,7 @@ def write_measured_reports(context: RunContext, results: dict[str, Any]) -> None
         "",
         "The measured outputs end at tokens, scores, networks, state-local communities, transitions and permutation comparisons. Any parent structures, relations or semantic maps must be reconstructed independently downstream.",
     ]
-    (context.run_dir / "R018_MEASUREMENT_REPORT.md").write_text(
+    (context.run_dir / measurement_report_name).write_text(
         "\n".join(report_lines) + "\n", encoding="utf-8"
     )
 
@@ -1663,6 +1720,7 @@ def build_artifact_index(context: RunContext) -> dict[str, Any]:
         "schema_version": 1,
         "generated_at": utc_now(),
         "run_id": context.config["run_id"],
+        "run_status": _post_measurement_run_status(context.config),
         "measurement_status": "measurement_successful",
         "self_exclusions": [
             "manifest.json changes after index creation",
@@ -1733,7 +1791,11 @@ def measure(context: RunContext) -> None:
             if manifest["components"].get(name, {}).get("status") != "successful":
                 raise RuntimeError(f"Required component is not successful: {name}")
         manifest["measurement_status"] = "measurement_successful"
-        manifest["analysis_status"] = "not_started"
+        manifest["analysis_required"] = _analysis_required(context.config)
+        manifest["analysis_status"] = (
+            "not_started" if _analysis_required(context.config) else "not_required"
+        )
+        manifest["run_status"] = _post_measurement_run_status(context.config)
         manifest["measurement_completed_at"] = utc_now()
         manifest["failure_details"] = None
         manifest["results"] = results
@@ -1747,7 +1809,9 @@ def measure(context: RunContext) -> None:
         print(
             json.dumps(
                 {
+                    "run_status": manifest["run_status"],
                     "measurement_status": "measurement_successful",
+                    "analysis_status": manifest["analysis_status"],
                     "run_id": context.config["run_id"],
                     "results": results,
                 },
@@ -1872,7 +1936,11 @@ def recover_validation(context: RunContext) -> dict[str, Any]:
         }
     )
     manifest["measurement_status"] = "measurement_successful"
-    manifest["analysis_status"] = "not_started"
+    manifest["analysis_required"] = _analysis_required(context.config)
+    manifest["analysis_status"] = (
+        "not_started" if _analysis_required(context.config) else "not_required"
+    )
+    manifest["run_status"] = _post_measurement_run_status(context.config)
     manifest["measurement_completed_at"] = utc_now()
     manifest["failure_details"] = None
     manifest["results"] = results
@@ -1884,7 +1952,9 @@ def recover_validation(context: RunContext) -> dict[str, Any]:
     }
     write_json(context.manifest_path, manifest)
     return {
+        "run_status": manifest["run_status"],
         "measurement_status": "measurement_successful",
+        "analysis_status": manifest["analysis_status"],
         "validation_recovery": True,
         "run_id": context.config["run_id"],
         "results": results,
@@ -1922,6 +1992,14 @@ def verify(context: RunContext) -> dict[str, Any]:
     return {
         "status": "PASS",
         "run_id": context.config["run_id"],
+        "run_status": manifest.get(
+            "run_status", _post_measurement_run_status(context.config)
+        ),
+        "measurement_status": manifest["measurement_status"],
+        "analysis_status": manifest.get(
+            "analysis_status",
+            "not_started" if _analysis_required(context.config) else "not_required",
+        ),
         "artifact_count": len(index["artifacts"]),
         **results,
     }

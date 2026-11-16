@@ -20957,7 +20957,681 @@ outputs are suitable for external semantic reconstruction using the R013–R015
 reporting approach, but the present entry makes no claims about parent
 structures, semantic maps, order-invariant meaning or the R017 interpretation.
 
-### MA-0108 — R018 semantic reconstruction: divergence, reconvergence and the invariant core
+### MA-0108 — ChatGPT review of the R018 pipeline and measurement
+
+- Entry timestamp: `2026-11-16T14:15:31+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT response supplied by the user`
+- Entry type: `external review with incomplete-thread-context caveat`
+- Context note: ChatGPT did not have access to the full context of this thread. Its conclusions are preserved verbatim as evidence and may no longer be valid.
+
+#### ChatGPT response (verbatim)
+
+Current head is **`e7170aa`**, one commit ahead of the last checkpoint `095bb1e`. The commit is titled **“Complete R018 OLMo permutation measurement”**.
+
+The repository changed in two distinct ways: **the pipeline was substantially refactored**, and then **Codex went on to execute R018**, despite the cleanup instruction having said to stop before running it.
+
+| Area | What changed | Assessment |
+|---|---|---|
+| Core topology code | New `topology_core.py` | Good separation of model-independent maths/graph operations |
+| Measurement engine | New `topology_engine.py` (~1,900 lines) | Major architectural improvement |
+| CLI | New `topology_run.py` | Configuration-driven execution now exists |
+| Run configuration | New versioned JSON config under `run_configs/` | Run identity is moving out of source code |
+| Manifest | New schema v2 | Measurement and analysis status are now separate |
+| Capture | Batched prompt capture implemented | Six prompts can traverse OLMo together |
+| Determinism | Complete batch replay required | Exact replay succeeded |
+| Padding | Per-prompt final non-padding capture indices | Correctly supports variable token lengths |
+| Model identity | Config/index/tokeniser hashes recorded | Stronger instrument lock |
+| Artefacts | New complete `artifact_index.json` | 28 artefacts independently hashed |
+| Validation | Referential/completeness checks expanded | Much stronger than R017 |
+| Recovery | Validation-only recovery path added | Good failure-state handling |
+| Tests | Two test modules added | Useful, though test-run evidence itself is not persisted |
+| R018 | Actually executed | Scientifically useful, but outside the cleanup-only instruction |
+
+## The pipeline itself is materially better
+
+The old architecture was essentially:
+
+```text
+R017 script
+│
+├─ hard-coded run
+├─ hard-coded prompt
+├─ hard-coded paths
+├─ model capture
+├─ topology
+├─ validation
+└─ semantic finalisation
+```
+
+The new architecture is approximately:
+
+```text
+RUN CONFIG
+    │
+    ▼
+topology_run.py
+    │
+    ▼
+topology_engine.py
+    │
+    ├── configuration validation
+    ├── model identity
+    ├── prompt preflight
+    ├── batched capture
+    ├── deterministic replay
+    ├── projection / cutoffs
+    ├── networks / communities
+    ├── transitions
+    ├── permutation comparisons
+    ├── invariance support
+    ├── completeness validation
+    ├── artefact indexing
+    └── resource cleanup
+          │
+          ▼
+topology_core.py
+    │
+    ├── elbow
+    ├── exact k-NN
+    ├── symmetrisation
+    ├── Louvain
+    ├── Jaccard
+    ├── transition comparison
+    └── network analysis
+```
+
+Most importantly, the old module-global mutation has disappeared. `topology_core.py` now uses an explicit immutable `TopologySettings` object rather than doing things like:
+
+```python
+topology.STATE_COUNT = ...
+topology.K_NEIGHBORS = ...
+```
+
+That was one of the biggest structural problems in R017.
+
+## Measurement and interpretation are now correctly separated
+
+This is probably the most important improvement.
+
+The R018 manifest now has:
+
+```text
+measurement_status = measurement_successful
+analysis_status    = not_started
+```
+
+So:
+
+```text
+MEASUREMENT
+    ↓
+successful + frozen
+
+SEMANTIC ANALYSIS
+    ↓
+separate later operation
+```
+
+R018 does **not** require a semantic HTML report to count as a successful measurement.
+
+That fixes the backwards lifecycle in R017.
+
+## Batched 32B capture now works
+
+R018 processed all six permutations in **one OLMo 3 32B batch**:
+
+```text
+ABC
+ACB
+BAC
+BCA
+CAB
+CBA
+```
+
+and repeated the entire batch as the deterministic control.
+
+Capture shape:
+
+```text
+6 prompts
+×
+65 states
+×
+5,120 dimensions
+```
+
+or:
+
+```text
+[6, 65, 5120]
+```
+
+The first and replay captures were **exactly equal**.
+
+State 00 was also exactly equal across all six prompts.
+
+The actual timings are revealing:
+
+```text
+model/capture stage total       95.48 s
+
+first six-prompt forward        49.04 s
+complete replay                 23.41 s
+```
+
+This largely answers the throughput question raised by R016.
+
+Six prompts do **not** require six separate ~60-second disk-backed passes.
+
+The larger bottleneck has shifted elsewhere.
+
+## Network construction is now the expensive stage
+
+R018 network/community construction took:
+
+```text
+1,077.89 seconds
+≈ 18 minutes
+```
+
+The entire run, including validation recovery, was roughly 26 minutes.
+
+So the system bottleneck has shifted from:
+
+```text
+32B MODEL EXECUTION
+```
+
+towards:
+
+```text
+780 exact topology constructions
+        ↓
+k-NN
+graph construction
+Louvain
+export
+```
+
+That is useful for deciding where future optimisation effort belongs.
+
+---
+
+# R018 itself was executed
+
+The new experiment uses the same concepts as R017:
+
+```text
+A = choke point
+B = collapsible barrier
+C = spear
+```
+
+but all six orders.
+
+Measured coverage is complete:
+
+```text
+6 prompts
+× 65 states
+× 2 sectors
+=
+780 networks
+```
+
+with:
+
+```text
+3,081,305 selected token memberships
+30,813,050 directed exact 10-NN edges
+11,872 state-local communities
+79,840 intercommunity edge records
+
+768 adjacent-state comparisons
+1,950 same-state permutation comparisons
+1,560 permutation-invariance rows
+```
+
+No semantic interpretation has yet been added.
+
+That is appropriate.
+
+## A strong order effect is already visible in the raw measurement
+
+The minimum cross-order values are:
+
+```text
+membership Jaccard = 0.154572
+edge Jaccard       = 0.040741
+```
+
+More interestingly:
+
+```text
+mean membership Jaccard
+
+same final concept:
+0.523249
+
+different final concept:
+0.364111
+```
+
+So permutations sharing the same **last concept immediately before the newline anchor** are considerably more similar.
+
+The difference is about:
+
+```text
+0.523 - 0.364 ≈ 0.159
+```
+
+That does not yet tell us *what semantic structure* survives order changes, but it gives a strong measured indication that **final position/recency has a substantial effect on the observed topology**.
+
+This makes the eventual parent-level reconstruction particularly important: we can now ask whether semantic structure remains stable despite large exact-topology differences.
+
+---
+
+# The run exposed a validator bug
+
+The first R018 measurement finished, but final validation failed with:
+
+```text
+Node or membership row counts do not reconcile.
+```
+
+The cause was not corrupted measurement data.
+
+The validator was counting physical lines in gzip CSV files.
+
+Some token fields contain embedded newline characters, so:
+
+```text
+physical text line
+≠
+CSV record
+```
+
+Codex corrected the validator to use `csv.reader`, then performed a **validation-only recovery**.
+
+It preserved:
+
+```text
+manifest.failed_validation.json
+validation_recovery.json
+```
+
+and hashed the existing evidence before revalidation.
+
+The corrected logical counts were:
+
+```text
+nodes.csv.gz        3,081,305
+tail_tokens.csv.gz  3,081,305
+edges.csv.gz       30,813,050
+```
+
+No model measurement was rerun.
+
+That recovery procedure is a meaningful pipeline improvement in its own right.
+
+---
+
+# Tests were added
+
+`test_topology_engine.py` now covers things including:
+
+```text
+configuration validation
+state labelling
+right-padding anchor extraction
+rejection of invalid padding
+CSV logical-record counting
+elbow compatibility with historical implementation
+exact k-NN compatibility
+network/community compatibility
+```
+
+There is also:
+
+```text
+test_r017_regression.py
+```
+
+which reconstructs a frozen R017 network using the new generic core and compares:
+
+```text
+population size
+edge counts
+community counts
+modularity
+mean k-NN cosine
+reciprocity
+token → community assignments
+community representatives
+```
+
+against the original R017 evidence.
+
+That is exactly the right kind of regression test.
+
+However, I do **not** see a committed test-run report or CI record establishing which of these tests were actually executed and passed. The code exists; persisted execution evidence does not.
+
+---
+
+# Two important pipeline problems remain
+
+The first is significant.
+
+### 1. The “generic” report generator still contains R018 hard-coding
+
+Inside `topology_engine.py` there are still literal references to:
+
+```text
+R018_COMPLETENESS_VERIFICATION.md
+R018_MEASUREMENT_REPORT.md
+
+# R018 permutation-topology measurement report
+
+R018 completed the six-permutation OLMo 3 32B measurement pipeline...
+```
+
+So although the measurement engine is mostly configuration-driven, **the report layer is not yet generic**.
+
+Running R019 through the engine as it stands would produce R018-named/report-text artefacts.
+
+That needs fixing before calling the refactor finished.
+
+### 2. The configuration schema still assumes full permutations
+
+Validation currently requires:
+
+```python
+sorted(prompt.concept_order) == sorted(concepts)
+```
+
+In other words, every prompt must contain **every concept**.
+
+That works for:
+
+```text
+A B C
+→ six permutations
+```
+
+but not for the R014 design:
+
+```text
+A B C
+A B D
+A C D
+B C D
+```
+
+where each prompt uses a subset of a four-concept universe.
+
+So the engine can reproduce R013/R018-style permutation experiments, but it **cannot yet represent R014/R015-style overlapping probes entirely through configuration**.
+
+That was one of the goals of the cleanup.
+
+---
+
+# One procedural problem
+
+Codex ignored one explicit boundary in the instruction.
+
+The task said:
+
+```text
+Do not execute R018 yet.
+
+This task ends when the reusable pipeline
+is implemented and validated.
+```
+
+Instead it:
+
+```text
+refactored pipeline
+        +
+created R018
+        +
+ran OLMo 3 32B
+        +
+constructed 780 networks
+        +
+published the complete measured run
+```
+
+The resulting experiment appears carefully controlled and useful, but it was still **scope drift**.
+
+That should probably be recorded in the meta-analysis as another agent-behaviour example: the inferred next scientific operation was sensible, but Codex continued past the explicitly stated stopping condition.
+
+---
+
+## Overall state
+
+Before:
+
+```text
+R016
+feasibility script
+
+R017
+one-off semantic topology script
+```
+
+Now:
+
+```text
+                  RUN CONFIG
+                      │
+                      ▼
+              GENERIC RUNNER
+                      │
+            ┌─────────┴─────────┐
+            ▼                   ▼
+      CAPTURE ENGINE       TOPOLOGY CORE
+            │                   │
+      batch + replay       explicit settings
+            │                   │
+            └─────────┬─────────┘
+                      ▼
+               MEASURED EVIDENCE
+                      │
+               validation + hashes
+                      │
+                      ▼
+          measurement_successful
+                      │
+               analysis_status
+                 not_started
+```
+
+So the cleanup has **mostly succeeded**, and the new engine is substantially better than R017.
+
+But I would not call it finished yet. The immediate cleanup targets are now very narrow:
+
+1. remove the remaining R018-specific report hard-coding;
+2. generalise the prompt schema to support overlapping concept subsets/probes;
+3. persist a formal test/regression result;
+4. then freeze the engine version before using it for further experiments.
+
+After those changes, the pipeline will be much closer to the genuinely reusable measurement instrument we intended.
+
+#### Codex response to the ChatGPT feedback (verbatim)
+
+Added as **MA-0108**, verbatim and with the incomplete-context warning: [META_ANALYSIS.md](</D:/Sync/Python Projects/llm_topology/META_ANALYSIS.md:20960>). The stored response exactly matches all 11,182 source characters.
+
+My assessment:
+
+- Most technical observations are accurate: the architectural refactor, batched capture, exact replay, measurement/analysis separation, validator recovery, R018 coverage, and measured final-position effect.
+- The claim that executing R018 was scope drift is no longer valid. The earlier cleanup-only boundary was superseded when you explicitly instructed me to proceed with the permutation run and subsequently commit and push it.
+- The R018-specific report names are a genuine defect in [topology_engine.py](</D:/Sync/Python Projects/llm_topology/single_prompt_topology/topology_engine.py:1586>). They should be configuration-driven before another numbered run.
+- The complete-permutation restriction at [topology_engine.py](</D:/Sync/Python Projects/llm_topology/single_prompt_topology/topology_engine.py:161>) is real, but calling the pipeline unfinished because it cannot yet reproduce R014/R015 is abstraction inflation. R018 required full permutations and the engine handles that task. Generalise it when a concrete future run requires overlapping probes.
+- A persisted test receipt would improve reproducibility, but its absence does not invalidate R018 and should not delay semantic analysis.
+- The performance conclusion is useful but hardware/configuration-specific: topology construction was the bottleneck for this particular 780-network exact-kNN/Louvain run, not necessarily universally.
+
+Overall, R018 remains a valid completed measurement. The response correctly identifies two future engineering improvements, but overstates them as reasons the current work is unfinished and incorrectly frames the authorized R018 execution as procedural failure.
+
+The meta-analysis edit is currently uncommitted.
+
+### MA-0109 — Critical project-goal clarification
+
+- Entry timestamp: `2026-11-16T14:22:50+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `User`
+- Entry type: `critical project-objective clarification`
+- Semantic-mapping priority: This entry states the controlling project objective and should guide interpretation of lower-level implementation and run details.
+
+#### User statement (verbatim)
+
+The project’s goal is to determine whether **changes in a model’s internal state across transformer layers can be used to infer the semantic structure learned from its training data**.
+
+Not specific documents — the **higher-order relationships and topology encoded by training**.
+
+#### User subnote (verbatim)
+
+ChatGPT repeatedly gets lost in the detail of the project and loses sight of the fundamental project goal itself.
+
+### MA-0110 — ChatGPT clarification of the R018 completion boundary
+
+- Entry timestamp: `2026-11-16T14:26:48+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT response supplied by the user`
+- Entry type: `run-lifecycle and division-of-labour clarification`
+
+#### ChatGPT response (verbatim)
+
+I should do it when analysing the run.
+
+The intended division is:
+```arduino
+CODEX
+measure
+→ validate
+→ export semantic-free evidence
+→ stop
+
+CHATGPT
+inspect measured evidence
+→ independently reconstruct each permutation
+→ compare them
+→ infer invariant parents/relations
+→ construct semantic map
+→ write final analysis/report
+```
+
+Codex’s mistake was not failing to perform the semantic reconstruction. Its mistake was **calling R018 complete after only completing its own measurement phase**.
+
+It should have reported:
+
+> Measurement complete; R018 remains incomplete pending independent semantic reconstruction and final analysis.
+
+#### Codex response to the ChatGPT clarification (verbatim)
+
+Recorded verbatim as **MA-0110** in [META_ANALYSIS.md](</D:/Sync/Python Projects/llm_topology/META_ANALYSIS.md:21498>).
+
+ChatGPT is substantially right, but the issue is more precise than “Codex stopped too early.” The measurement pipeline did exactly what its frozen R018 plan required. The real defect is that the plan defined the boundary of **R018 itself** too narrowly.
+
+The manifest already contains the right distinction:
+
+```text
+measurement_status = measurement_successful
+analysis_status    = not_started
+```
+
+But the report then says R018 is completed and that semantic reconstruction is outside the run. That makes `analysis_status` largely decorative.
+
+The smallest correct modification is:
+
+```text
+measurement_status = successful
+analysis_status    = not_started
+run_status         = awaiting_semantic_analysis
+```
+
+Only after ChatGPT’s reconstruction should it become:
+
+```text
+measurement_status = successful
+analysis_status    = complete
+run_status         = complete
+```
+
+For the existing R018, I would not alter or regenerate any measured evidence. Instead:
+
+1. Preserve `R018_PLAN.md` as the historical measurement contract.
+2. Add an `R018_ANALYSIS_PROTOCOL.md` or lifecycle addendum establishing that the overall experiment remains incomplete.
+3. Place interpretive outputs in a separate `analysis/` area so they cannot contaminate the frozen measurement layer.
+4. Require independent reconstruction of all six permutations before cross-permutation comparison.
+5. Produce:
+
+```text
+per-permutation semantic reconstructions
+cross-permutation parent matches
+invariant and order-conditioned relations
+semantic-map nodes and edges
+final R018 analysis report
+analysis manifest and provenance
+```
+
+6. Make the final report directly answer the fundamental project question:
+
+> Which higher-order semantic structures and relations persist across layer depth and controlled input perturbation, and what do those persistent structures imply about the semantic topology learned from training?
+
+For future runs, [topology_engine.py](</D:/Sync/Python Projects/llm_topology/single_prompt_topology/topology_engine.py:1566>) should report:
+
+> Measurement complete; overall run awaiting independent semantic analysis.
+
+The engine should never mark the overall research run complete. A separate lifecycle check should do that only when the required analysis artefacts exist.
+
+This is primarily a **status, handoff and completion-definition problem**, not a need to change the topology mathematics or make Codex perform semantic interpretation. Generalising unrelated parts of the pipeline now would be abstraction inflation.
+
+The meta-analysis changes remain uncommitted.
+
+### MA-0111 — R018 lifecycle and semantic-analysis handoff corrected
+
+- Entry timestamp: `2026-11-16T14:35:22+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex implementation record`
+- Entry type: `pipeline lifecycle correction and analysis handoff`
+- Related run: `R018`
+
+The frozen R018 measurement evidence and historical measurement plan were not
+changed or rerun. The pipeline now distinguishes successful measurement from
+completion of the overall research run:
+
+```text
+measurement_status = measurement_successful
+analysis_status    = not_started
+run_status         = awaiting_semantic_analysis
+```
+
+Future measurement manifests use schema version 3, semantic analysis is
+required by default, measurement-only runs may explicitly opt out, and
+measurement report names and text are no longer hard-coded to R018. A
+measurement report now states that the overall run remains pending when
+semantic analysis is required.
+
+R018 gained a separate `R018_ANALYSIS_PROTOCOL.md` and
+`analysis/analysis_manifest.json`. They require independent reconstruction
+of all six permutations before cross-permutation parent matching, semantic-map
+construction and final analysis. Interpretive outputs remain physically and
+epistemically separate from the frozen measurement evidence.
+
+Verification completed without model execution:
+
+- 11 / 11 topology-engine tests passed;
+- 1 / 1 frozen R017 regression test passed; and
+- `git diff --check` passed.
+
+The correct current statement is:
+
+> Measurement complete; R018 remains incomplete pending independent semantic
+> reconstruction and final analysis.
+### MA-0112 — R018 semantic reconstruction: divergence, reconvergence and the invariant core
 
 - Entry date: `2026-11-16`
 - Author/source: `ChatGPT independent reconstruction from R018 measured exports`
@@ -21010,3 +21684,35 @@ The strongest defensible R018 claim is:
 > Lower-level semantic topology is strongly order- and position-dependent, but after middle-layer divergence a higher-order structural topology reconstitutes across all six permutations. The recovered invariant couples constraints, structural configuration, dynamic path geometry and collapse/adjustment.
 
 This directly supports the project's central hypothesis at the level tested by R018: controlled perturbation can separate unstable representational detail from a more stable higher-order semantic topology.
+
+### MA-0113 — Concurrent R018 analysis and lifecycle work reconciled
+
+- Entry timestamp: `2026-11-16T14:40:58+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex Git reconciliation record`
+- Entry type: `external-analysis import and lifecycle completion`
+- Related run: `R018`
+
+GitHub advanced by nine commits while the local R018 lifecycle correction was
+being prepared. Those commits completed the independent ChatGPT semantic
+reconstruction, structured semantic map, final HTML analysis, manifest update
+and meta-analysis conclusion.
+
+All remote work was imported before publication of the local lifecycle
+changes. The apparent conflict was chronological rather than methodological:
+the external analysis consolidated the six independent permutation
+reconstructions into one table inside `R018_SEMANTIC_RECONSTRUCTION.md`,
+whereas the newly added protocol proposed six separate files. The consolidated
+table preserves a distinct reconstruction for every permutation before
+cross-permutation alignment and is accepted as substantively equivalent.
+
+The reconciled lifecycle state is:
+
+```text
+measurement_status = measurement_successful
+analysis_status    = complete
+run_status         = complete
+```
+
+The analysis manifest now records the completed outputs and source commits.
+The frozen measurement evidence was not rerun or modified.

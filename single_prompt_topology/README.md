@@ -497,8 +497,26 @@ The primary measured summaries are
 [`chatgpt_community_networks.json`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/chatgpt_community_networks.json)
 and
 [`chatgpt_layer_packets.md`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/chatgpt_layer_packets.md).
-R018 adds no semantic parent identities, parent relations, SDA-3 roles or GRD
-roles.
+The R018 measurement phase adds no semantic parent identities, parent
+relations, SDA-3 roles or GRD roles.
+
+The measurement phase completed first. Independent downstream reconstruction
+has now completed the overall research run:
+
+```text
+measurement_status = measurement_successful
+analysis_status    = complete
+run_status         = complete
+```
+
+The lifecycle and completion gate are defined in
+[`R018_ANALYSIS_PROTOCOL.md`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_ANALYSIS_PROTOCOL.md).
+The reconciled analysis status, consolidated output packaging and external
+source commits are recorded in
+[`analysis/analysis_manifest.json`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/analysis/analysis_manifest.json);
+the frozen measurement evidence was not modified by semantic reconstruction.
+The implementation and test record is
+[`R018_LIFECYCLE_UPDATE_VERIFICATION.md`](R018_LIFECYCLE_UPDATE_VERIFICATION.md).
 
 The first final validation attempt failed because its gzip row counter treated
 embedded newlines inside quoted token fields as extra records. The original

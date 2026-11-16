@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "run_id": "R018_olmo3-choke-point-barrier-spear-permutation-topology",
+  "created_at": "2026-11-16T14:31:57+11:00",
+  "measurement_source_commit": "e7170aa459db3141127e49c29bb48c006d1e95db",
+  "measurement_manifest": "../manifest.json",
+  "measurement_artifact_index": "../artifact_index.json",
+  "analysis_protocol": "../R018_ANALYSIS_PROTOCOL.md",
+  "measurement_status": "measurement_successful",
+  "analysis_status": "complete",
+  "run_status": "complete",
+  "analysis_completed_at": "2026-11-16T14:34:56+11:00",
+  "analysis_model": "ChatGPT (exact model identifier not recorded in imported analysis)",
+  "analysis_source_commits": [
+    "ffa18e5",
+    "ab22787",
+    "07338cc",
+    "db848d1",
+    "bd3995d",
+    "8fb3067",
+    "2e9130c",
+    "2bfa95d",
+    "3fc24a3"
+  ],
+  "required_permutation_ids": [
+    "ABC",
+    "ACB",
+    "BAC",
+    "BCA",
+    "CAB",
+    "CBA"
+  ],
+  "required_outputs": [
+    "../R018_SEMANTIC_RECONSTRUCTION.md",
+    "../R018_SEMANTIC_MAP_NODES.csv",
+    "../R018_SEMANTIC_MAP_EDGES.csv",
+    "../R018_SEMANTIC_MAP.json",
+    "../R018_RUN_ANALYSIS_AND_RECOMMENDATIONS.html"
+  ],
+  "completed_outputs": [
+    "../R018_SEMANTIC_RECONSTRUCTION.md",
+    "../R018_SEMANTIC_MAP_NODES.csv",
+    "../R018_SEMANTIC_MAP_EDGES.csv",
+    "../R018_SEMANTIC_MAP.json",
+    "../R018_RUN_ANALYSIS_AND_RECOMMENDATIONS.html"
+  ],
+  "completion_rule": "All required outputs exist; the consolidated reconstruction contains independent rows for all six permutations before cross-permutation alignment.",
+  "notes": [
+    "Frozen measurement files must not be modified.",
+    "Measured facts and semantic interpretation must remain distinguishable.",
+    "Each permutation was reconstructed independently before cross-permutation matching.",
+    "The externally completed analysis consolidated the six per-permutation reconstructions into one reconstruction file rather than six separate files."
+  ]
+}
