@@ -20881,3 +20881,78 @@ over the same three concepts, preserving the R017 measurement method. If
 practical, batching the six prompts would simultaneously test the unresolved
 32B throughput question without changing the scientific object.
 
+### MA-0107 — R018 OLMo 3 32B six-permutation measurement completed
+
+- Entry timestamp: `2026-11-16T12:28:23+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex measured-run and validation record`
+- Entry type: `semantic-free permutation-topology measurement`
+- Related run: `R018`
+- Model: `allenai/Olmo-3-1125-32B`
+- Model revision: `c2b61dae89a1ad10e4ad5653d0e46b590902607b`
+
+#### Objective
+
+R018 tests how input order changes the measured layerwise topology for the
+same three concepts used in R017:
+
+```text
+A = choke point
+B = collapsible barrier
+C = spear
+```
+
+It captures all six permutations (`ABC`, `ACB`, `BAC`, `BCA`, `CAB`, `CBA`)
+at one identical final newline anchor. The six prompts were processed in one
+batch and the complete batch was repeated as a deterministic control. No chat
+template, special-token insertion, response generation, semantic parent
+reconstruction, SDA-3 classification or GRD analysis was used.
+
+#### Validated measurement
+
+The repeated hidden-state capture was exactly equal. All six State 00 hidden
+states and State 00 topologies were also exactly equal, establishing the common
+input-embedding baseline before contextual order effects.
+
+Verified coverage is:
+
+- 780 / 780 prompt-state-sector networks;
+- 3,081,305 selected token memberships;
+- 30,813,050 exact directed 10-NN edges;
+- 11,872 state-local Louvain communities;
+- 79,840 intercommunity edge records;
+- 768 / 768 within-prompt adjacent-state comparisons;
+- 1,950 / 1,950 same-state permutation comparisons; and
+- 1,560 / 1,560 permutation-invariance rows.
+
+The measured comparison tables report a minimum cross-permutation membership
+Jaccard of `0.1545719677474695` and a minimum edge Jaccard of
+`0.0407413013861557`. Across all states and sectors, mean membership Jaccard is
+`0.5232488910445313` for prompt pairs sharing the final concept and
+`0.3641111808489216` for pairs with different final concepts. These are
+measured order/final-position associations only; their semantic meaning has
+not been inferred in R018.
+
+#### Validation failure and recovery
+
+All measurement and export components completed, but the first final
+completeness check marked the run failed. Its row counter counted physical
+text lines in gzip CSV files. Some quoted vocabulary-token fields contain
+embedded newline characters, so physical lines exceeded logical CSV records.
+
+The defect was isolated without rerunning or modifying the measurement. A
+regression test was added, the counter was changed to parse logical records
+with `csv.reader`, and the complete evidence set was revalidated. Both
+`nodes.csv.gz` and `tail_tokens.csv.gz` contain exactly 3,081,305 logical
+records, and `edges.csv.gz` contains exactly 30,813,050. The original failed
+manifest is preserved as `manifest.failed_validation.json`; the correction,
+original failure and hashes of the unchanged evidence are preserved in
+`validation_recovery.json`. A separate hash-and-recompute verification then
+returned `PASS` for all 28 indexed artifacts.
+
+#### Current boundary
+
+R018 is now measurement-successful and analysis remains `not_started`. Its
+outputs are suitable for external semantic reconstruction using the R013–R015
+reporting approach, but the present entry makes no claims about parent
+structures, semantic maps, order-invariant meaning or the R017 interpretation.

@@ -30,6 +30,17 @@ reconstructs a candidate semantic map of constrained passage, deployable
 obstruction, movement control and reach/piercing force. This is a successful
 single-trajectory map; order and context invariance were not tested.
 
+R018 repeats that concept set in all six input orders using one batched,
+deterministically replayed OLMo 3 32B capture. It produces 780 networks,
+3,081,305 selected memberships, 30,813,050 exact directed 10-NN edges, 11,872
+state-local communities, 768 adjacent-state comparisons and 1,950 same-state
+permutation comparisons. State 00 is exactly identical across permutations.
+The measured evidence is complete and independently verified; semantic parent
+reconstruction remains deliberately unstarted. The initial completeness check
+exposed and preserved a validator defect—physical text lines were counted
+instead of logical CSV records—then passed after a validation-only correction
+that did not rerun or alter the measurements.
+
 The package contains a research design, one behavioural case mapping, an
 executed model playground, one successful single-prompt hidden-state capture
 from Pythia 6.9B, one successful paired whole-prompt Qwen topology run, one
@@ -82,7 +93,8 @@ comparison. R016 changes only the model-feasibility question: it proves that
 OLMo 3 32B Base can expose every required hidden state locally for one short
 prompt without quantisation or response generation. R017 uses that exact
 backend for a complete single-prompt projection, cutoff, graph, community and
-semantic-map run.
+semantic-map run. R018 uses the same model and measurement method for the full
+six-permutation order test, ending at semantic-free, ChatGPT-readable evidence.
 
 R005 found greater nearest-neighbour density and positive/negative segregation
 than a size-matched random null at all 33 states, but its communities also
@@ -262,6 +274,15 @@ and are not versioned here.
     — machine-readable single-trajectory semantic map and invariance status.
 73. [`single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_RUN_ANALYSIS_AND_RECOMMENDATIONS.html`](single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/R017_RUN_ANALYSIS_AND_RECOMMENDATIONS.html)
     — canonical R017 analysis, limitations and next-experiment recommendation.
+74. [`single_prompt_topology/R018_PLAN.md`](single_prompt_topology/R018_PLAN.md)
+    — the locked OLMo 3 32B six-permutation measurement contract.
+75. [`single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_MEASUREMENT_REPORT.md`](single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_MEASUREMENT_REPORT.md)
+    — the semantic-free measured coverage and comparison summary.
+76. [`single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_COMPLETENESS_VERIFICATION.md`](single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_COMPLETENESS_VERIFICATION.md)
+    — the reconciled structural completeness record.
+77. [`single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/validation_recovery.json`](single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/validation_recovery.json)
+    — the original validation failure, corrected logical-record check and
+    hashes proving that measured evidence was not re-executed or changed.
 
 ## Provenance
 
