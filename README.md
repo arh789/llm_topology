@@ -4,6 +4,31 @@ This is the independent working repository for an experimental project
 examining semantic conflict, language-model behaviour and internal
 representation geometry.
 
+> **Repository status:** private working evidence. Public release, licensing,
+> citation metadata and archival are deliberately deferred until the project
+> and article reach their final state.
+
+## Article-oriented reading path
+
+The complete research archive remains below. For the shorter route from an
+article claim to its supporting evidence, use:
+
+1. [`ARTICLE_OUTLINE.md`](ARTICLE_OUTLINE.md) — chronological source material
+   for the article; it preserves historical statements verbatim and is not a
+   current-results authority.
+2. [`ARTICLE_EVIDENCE_INDEX.md`](ARTICLE_EVIDENCE_INDEX.md) — the current
+   claim-to-measurement, code, interpretation and limitation map.
+3. [`METHODOLOGY.md`](METHODOLOGY.md) — what is standard, what is distinctive
+   and where interpretation begins.
+4. [`REPORT_STATUS.md`](REPORT_STATUS.md) — which reports are canonical,
+   exploratory or qualified by later analysis.
+5. [`DATA_DICTIONARY.md`](DATA_DICTIONARY.md) — meanings of the central R018
+   and R019 fields and metrics.
+6. [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) — model, environment, commands,
+   validation and local-only artifact boundaries.
+7. [`R019_RESULT.json`](single_prompt_topology/runs/R019_olmo3-order-repeatability-control/R019_RESULT.json)
+   — the compact machine-readable determinism control.
+
 ## Current evidence state
 
 R015 measurement and downstream semantic reconstruction are complete for the
@@ -102,6 +127,11 @@ R019 independently repeats three balanced cyclic permutations three times and
 establishes a zero measured repeat noise floor: hidden states, vocabulary
 scores, next-token logits, cutoffs, edges and seeded communities are exact
 across identical repeats, while concept order produces substantial divergence.
+For article use, the current R018 interpretation boundary is the later,
+conservative MA-0114 conclusion recorded in [`REPORT_STATUS.md`](REPORT_STATUS.md):
+higher-order semantic families survive permutation more clearly than their
+relations, so R018 supports a perturbation-stable semantic basis more strongly
+than one fixed invariant graph.
 
 R005 found greater nearest-neighbour density and positive/negative segregation
 than a size-matched random null at all 33 states, but its communities also
