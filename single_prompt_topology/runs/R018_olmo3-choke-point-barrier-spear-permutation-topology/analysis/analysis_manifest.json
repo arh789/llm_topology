@@ -35,20 +35,27 @@
     "../R018_SEMANTIC_MAP_NODES.csv",
     "../R018_SEMANTIC_MAP_EDGES.csv",
     "../R018_SEMANTIC_MAP.json",
-    "../R018_RUN_ANALYSIS_AND_RECOMMENDATIONS.html"
+    "../R018_RUN_ANALYSIS_AND_RECOMMENDATIONS.html",
+    "../R018_SEMANTIC_NETWORK_GRAPH_DATA.json",
+    "../R018_SEMANTIC_NETWORK_GRAPH_REPORT.html",
+    "../R018_FINAL_REPORT.html"
   ],
   "completed_outputs": [
     "../R018_SEMANTIC_RECONSTRUCTION.md",
     "../R018_SEMANTIC_MAP_NODES.csv",
     "../R018_SEMANTIC_MAP_EDGES.csv",
     "../R018_SEMANTIC_MAP.json",
-    "../R018_RUN_ANALYSIS_AND_RECOMMENDATIONS.html"
+    "../R018_RUN_ANALYSIS_AND_RECOMMENDATIONS.html",
+    "../R018_SEMANTIC_NETWORK_GRAPH_DATA.json",
+    "../R018_SEMANTIC_NETWORK_GRAPH_REPORT.html",
+    "../R018_FINAL_REPORT.html"
   ],
   "completion_rule": "All required outputs exist; the consolidated reconstruction contains independent rows for all six permutations before cross-permutation alignment.",
   "notes": [
     "Frozen measurement files must not be modified.",
     "Measured facts and semantic interpretation must remain distinguishable.",
     "Each permutation was reconstructed independently before cross-permutation matching.",
-    "The externally completed analysis consolidated the six per-permutation reconstructions into one reconstruction file rather than six separate files."
+    "The externally completed analysis consolidated the six per-permutation reconstructions into one reconstruction file rather than six separate files.",
+    "The semantic-network graph dataset restores the intermediate resolution between raw communities and the final parent abstraction."
   ]
 }

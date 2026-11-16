@@ -177,6 +177,15 @@ The reconciled completed outputs are:
 - `R018_SEMANTIC_MAP.json`; and
 - `R018_RUN_ANALYSIS_AND_RECOMMENDATIONS.html`.
 
+The later graph-recovery phase added:
+
+- `R018_SEMANTIC_NETWORK_GRAPH_DATA.json`;
+- `R018_SEMANTIC_NETWORK_GRAPH_REPORT.html`; and
+- `R018_FINAL_REPORT.html`.
+
+These preserve the intermediate semantic layer between the raw state-local
+communities and the final parent abstraction.
+
 The analysis manifest records this packaging equivalence and the external
 source commits. Following reconciliation, the lifecycle state is:
 

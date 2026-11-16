@@ -22005,3 +22005,27 @@ The governing constraint is:
 7. **Only then render the graph here.** The layout should allow the network structure itself to become visible rather than force it into a predetermined tree.
 
 The next operation is therefore **not drawing the graph yet**. It is recovering the semantic-network dataset between the raw R018 communities and the four-parent final abstraction. That is the information I prematurely discarded in the previous visualisation.
+
+### MA-0116 — R018 intermediate semantic-network graph artefacts imported
+
+- Entry timestamp: `2026-11-16T15:53:26+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex Git reconciliation record`
+- Entry type: `external graph-data and report import`
+- Related run: `R018`
+
+GitHub advanced through commits `c125a86` to `8e27b24` after MA-0115.
+The external ChatGPT work added:
+
+- `R018_SEMANTIC_NETWORK_GRAPH_DATA.json`;
+- `R018_SEMANTIC_NETWORK_GRAPH_REPORT.html`; and
+- `R018_FINAL_REPORT.html`.
+
+The graph dataset restores the intermediate semantic resolution requested in
+MA-0115. It contains four parent structures, fifteen semantic subfamilies,
+seventy-three evidence-linked edges, three order-conditioned branches and five
+structures excluded from the strict late invariant core.
+
+The analysis protocol, analysis manifest and project indexes were reconciled
+with these outputs. All required analysis artefacts now exist, and the
+measurement evidence was not rerun or modified.
