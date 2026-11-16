@@ -306,6 +306,12 @@ and are not versioned here.
     — the machine-readable completed R018 semantic topology.
 85. [`single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_RUN_ANALYSIS_AND_RECOMMENDATIONS.html`](single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_RUN_ANALYSIS_AND_RECOMMENDATIONS.html)
     — the final R018 human-readable analysis and recommendations.
+86. [`single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_NETWORK_GRAPH_DATA.json`](single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_NETWORK_GRAPH_DATA.json)
+    — the provenance-linked intermediate semantic-network dataset.
+87. [`single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_NETWORK_GRAPH_REPORT.html`](single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_NETWORK_GRAPH_REPORT.html)
+    — the rendered intermediate-resolution R018 semantic network.
+88. [`single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_FINAL_REPORT.html`](single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_FINAL_REPORT.html)
+    — the canonical integrated R018 final report.
 
 ## Provenance
 

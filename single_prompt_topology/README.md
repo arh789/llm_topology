@@ -531,6 +531,13 @@ The downstream R018 reconstruction is now complete. The six orders separate into
 
 The canonical reconstruction is [`R018_SEMANTIC_RECONSTRUCTION.md`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_RECONSTRUCTION.md). Structured nodes and relations are in [`R018_SEMANTIC_MAP_NODES.csv`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_MAP_NODES.csv), [`R018_SEMANTIC_MAP_EDGES.csv`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_MAP_EDGES.csv) and [`R018_SEMANTIC_MAP.json`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_MAP.json). The final human-readable analysis is [`R018_RUN_ANALYSIS_AND_RECOMMENDATIONS.html`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_RUN_ANALYSIS_AND_RECOMMENDATIONS.html).
 
+The intermediate semantic-network layer is preserved in
+[`R018_SEMANTIC_NETWORK_GRAPH_DATA.json`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_NETWORK_GRAPH_DATA.json)
+and rendered in
+[`R018_SEMANTIC_NETWORK_GRAPH_REPORT.html`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_NETWORK_GRAPH_REPORT.html).
+The canonical integrated report is
+[`R018_FINAL_REPORT.html`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_FINAL_REPORT.html).
+
 
 ## Run outputs
 

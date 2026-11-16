@@ -21716,3 +21716,316 @@ run_status         = complete
 
 The analysis manifest now records the completed outputs and source commits.
 The frozen measurement evidence was not rerun or modified.
+
+### MA-0114 — ChatGPT revised R018 semantic analysis
+
+- Entry timestamp: `2026-11-16T14:49:23+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT analysis supplied by the user`
+- Entry type: `revised R018 semantic reconstruction and invariance boundary`
+- Relationship to earlier evidence: This analysis materially revises the invariant-map interpretation recorded in MA-0112 and is preserved as a separate analytical claim.
+
+#### ChatGPT analysis (verbatim)
+
+Yes. The reconstruction produces a useful result, but it is **not** the result we had been assuming.
+
+## R018 semantic reconstruction
+
+The six permutations independently reduce to:
+
+| Permutation | Dominant reconstruction                                        |
+| ----------- | -------------------------------------------------------------- |
+| **ABC**     | weapon/piercing → spatial points → late movement               |
+| **ACB**     | boundary/restriction → transformation/deployment → movement    |
+| **BAC**     | weapon/piercing → spatial structure → late movement/deployment |
+| **BCA**     | spatial constraint → obstruction → movement                    |
+| **CAB**     | obstruction/boundary → reconfiguration/deployment → approach   |
+| **CBA**     | spatial constraint → obstruction → movement/approach           |
+
+The final concept strongly determines the intermediate representation:
+```arduino
+ends in SPEAR
+ABC / BAC
+    → weapon / blade / stabbing / piercing dominates
+
+ends in BARRIER
+ACB / CAB
+    → barrier / restriction / boundary / deployment dominates
+
+ends in CHOKE POINT
+BCA / CBA
+    → point / location / boundary / movement dominates
+```
+
+### What actually survives all six
+
+At the lowest defensible abstraction:
+```
+SPATIAL LOCATION / BOUNDARY
+
+OBSTRUCTION / RESTRICTION
+
+MOVEMENT / APPROACH
+```
+
+All three semantic families reappear across all six permutations.
+
+But their **relations do not remain invariant enough to justify forcing them into one fixed graph**.
+
+So the R018 invariant semantic map is more accurately:
+```
+          SPATIAL LOCATION / BOUNDARY
+                    ●
+                   / \
+        order-conditioned relations
+                 /     \
+                ●       ●
+     OBSTRUCTION       MOVEMENT
+     / RESTRICTION    / APPROACH
+```
+
+rather than:
+```css
+A → B → C → D → E
+```
+
+### Conditional structure
+
+Two additional structures recur, but are not invariant:
+```kotlin
+RECONFIGURATION / DEPLOYMENT
+    strongly associated with barrier-final prompts
+    and appears late elsewhere
+
+WEAPON / PIERCING
+    overwhelmingly dominant when spear is final
+    weak or absent when it is not
+```
+
+`ATTACK / INTERCEPTION` fails the invariance test. It should **not** be part of the R018 invariant map.
+
+## The most important layerwise result
+
+The final-position effect is enormous in early/middle layers.
+
+At State 3:
+```cpp
+membership similarity
+same final concept       0.729
+different final concept  0.354
+
+edge similarity
+same final concept       0.516
+different final concept  0.163
+```
+
+The hidden states show the same thing:
+```cpp
+State 3 cosine
+same final concept       0.983
+different final concept  0.806
+```
+
+But by State 64:
+```cpp
+membership
+same final               0.705
+different final          0.653
+
+hidden-state cosine
+same final               0.978
+different final          0.967
+```
+
+So the transformer does something highly informative:
+```sql
+IDENTICAL CONCEPT SET
+        ↓
+early/middle layers
+        ↓
+strongly partitioned by final concept
+        ↓
+different local semantic organisations
+        ↓
+later layers
+        ↓
+substantial reconvergence
+```
+
+## Final R018 conclusion
+
+R018 **does not yet demonstrate a perturbation-invariant semantic topology in the strong graph sense**.
+
+It demonstrates something slightly different and arguably more important:
+
+> **A perturbation-stable semantic basis survives permutation, while the relations and emphasis between those semantic components remain strongly order-conditioned.**
+
+In project terms:
+```
+tokens        unstable
+edges         unstable
+communities   unstable
+relations     substantially order-dependent
+
+semantic parent families
+    ↓
+much more stable
+```
+
+That is the information we were missing.
+
+R018 therefore supports the hypothesis that transformer-layer changes can reveal **stable learned semantic structure**, but it also establishes a boundary: **stability currently appears stronger at the parent-node level than at the parent-relation/topology level**.
+
+That should be the central conclusion of the R018 final report.
+
+### MA-0115 — ChatGPT graph-success criteria and intermediate semantic-network recovery
+
+- Entry timestamp: `2026-11-16T14:58:21+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT response supplied by the user`
+- Entry type: `R018 semantic-graph specification and corrective analysis`
+
+#### ChatGPT response (verbatim)
+
+## Successful graph
+
+A successful R018 graph would expose the **semantic topology that the reconstruction discovered**, rather than merely illustrate its conclusion.
+
+It should contain the four invariant parents, but also the **lower-order semantic communities that generate them**, the important adjacent/order-conditioned structures, and the measured relationships between those structures. Edge strength should reflect actual recurrence or intercommunity evidence; node/edge styling should distinguish 6/6 invariants from partial or permutation-specific structures; layer/state information should remain recoverable.
+
+Conceptually:
+
+```text
+                      REQUIREMENT / CONSTRAINT
+                      /        |          \
+             limitations   conditions   dependencies
+                    \          |          /
+                     \         |         /
+                      \        |        /
+                 STRUCTURAL CONFIGURATION
+                /       |       |        \
+       infrastructure modules interfaces architectures
+                \       |       |        /
+                 \      |       |       /
+                  COLLAPSE / ADJUSTMENT
+              /       /    |       \        \
+        merging  normalise transform restructure collapse
+              \          \ | /             /
+                       DYNAMIC
+                    PATH GEOMETRY
+                 /     |     |     \
+              point  flow trajectory velocity
+                       |       |
+                     curve   approach
+
+
+       adjacent / order-conditioned structures
+
+ weapon ─ blade ─ piercing
+              \
+          [partial attachment]
+
+ wall ─ boundary ─ restriction ─ passage
+                  \
+               [partial attachment]
+
+ location ─ bottleneck ─ limit
+                  \
+               [partial attachment]
+```
+
+The important criterion is that **looking at the graph should reveal information that is difficult to see in the final report**: bridges, clusters, peripheral structures, competing interpretations, density differences and where the six permutations converge or remain distinct.
+
+Every displayed semantic node and substantive edge should be traceable back to R018 evidence.
+
+## Unsuccessful graph
+
+The previous graph is an example.
+
+```text
+six permutations
+      ↓
+divergence
+      ↓
+four parents
+```
+
+That tells the story of the experiment, but it does not visualise the discovered semantic network.
+
+Another failure would be the opposite extreme: dumping all 11,872 communities or millions of token relationships into a force-directed graph. That would technically contain the data while destroying its interpretability.
+
+So both of these fail:
+
+```text
+TOO ABSTRACT                         TOO RAW
+
+[Constraint]                      •—•——• •——•—•—•
+     |                           —•——•—•——•—•——•
+[Configuration]                  •—•——•——•—•——•—
+     |                            —•—•——•——•——•—
+[Collapse]                       •——•——•—•——•—•—
+     |                           ...
+[Geometry]
+```
+
+The required level is **semantic reconstruction**, between raw communities and final abstraction.
+
+## Scope drift
+
+I am moving out of scope if I start:
+
+- inventing semantic nodes because they make the network more coherent;
+- converting association into causality;
+- treating 5/6 or 2/6 structures as invariant;
+- collapsing the network back into the four-parent summary;
+- displaying raw topology without semantic reconstruction;
+- introducing R014/R015/R017 findings into the R018 graph;
+- analysing what R019 should test;
+- redesigning the experiment rather than visualising R018;
+- selecting relationships because they make a visually attractive graph rather than because R018 supports them.
+
+The governing constraint is:
+
+> **Visualise what R018 actually reconstructed, at the lowest useful semantic resolution, while preserving provenance.**
+
+## What needs to happen now
+
+1. **Return to the R018 evidence**, especially `R018_SEMANTIC_RECONSTRUCTION.md`, `R018_SEMANTIC_MAP_NODES.csv`, `R018_SEMANTIC_MAP_EDGES.csv`, and the underlying permutation/community evidence where the reconstruction refers to it.
+
+2. **Recover the intermediate semantic layer.** The current four-node map is too compressed. Extract the recurrent community concepts, their parent assignments, important adjacent structures and permutation-conditioned residuals.
+
+3. **Construct a graph dataset**, not a narrative: `semantic node → parent → relationships → support → states → permutations → evidence`.
+
+4. **Preserve distinctions** between 6/6 invariant, recurrent-but-not-invariant, order-conditioned and rejected/non-surviving structures.
+
+5. **Weight the edges from evidence.** Strong repeated intercommunity coupling should look stronger than weak or permutation-specific attachment.
+
+6. **Verify provenance.** Every node and edge must be answerable with: *where in R018 did this come from?*
+
+7. **Only then render the graph here.** The layout should allow the network structure itself to become visible rather than force it into a predetermined tree.
+
+The next operation is therefore **not drawing the graph yet**. It is recovering the semantic-network dataset between the raw R018 communities and the four-parent final abstraction. That is the information I prematurely discarded in the previous visualisation.
+
+### MA-0116 — R018 intermediate semantic-network graph artefacts imported
+
+- Entry timestamp: `2026-11-16T15:53:26+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex Git reconciliation record`
+- Entry type: `external graph-data and report import`
+- Related run: `R018`
+
+GitHub advanced through commits `c125a86` to `8e27b24` after MA-0115.
+The external ChatGPT work added:
+
+- `R018_SEMANTIC_NETWORK_GRAPH_DATA.json`;
+- `R018_SEMANTIC_NETWORK_GRAPH_REPORT.html`; and
+- `R018_FINAL_REPORT.html`.
+
+The graph dataset restores the intermediate semantic resolution requested in
+MA-0115. It contains four parent structures, fifteen semantic subfamilies,
+seventy-three evidence-linked edges, three order-conditioned branches and five
+structures excluded from the strict late invariant core.
+
+The analysis protocol, analysis manifest and project indexes were reconciled
+with these outputs. All required analysis artefacts now exist, and the
+measurement evidence was not rerun or modified.
