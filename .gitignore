@@ -79,6 +79,11 @@ single_prompt_topology/runs/R017_olmo3-choke-point-barrier-spear-semantic-map/**
 single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/*.gz
 single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/**/*.gz
 
+!single_prompt_topology/runs/R019_olmo3-order-repeatability-control/
+!single_prompt_topology/runs/R019_olmo3-order-repeatability-control/**/*.md
+!single_prompt_topology/runs/R019_olmo3-order-repeatability-control/**/*.json
+!single_prompt_topology/runs/R019_olmo3-order-repeatability-control/**/*.csv
+
 # Model weights and checkpoints
 *.bin
 *.ckpt

@@ -98,6 +98,10 @@ prompt without quantisation or response generation. R017 uses that exact
 backend for a complete single-prompt projection, cutoff, graph, community and
 semantic-map run. R018 uses the same model and measurement method for the full
 six-permutation order test, ending at semantic-free, ChatGPT-readable evidence.
+R019 independently repeats three balanced cyclic permutations three times and
+establishes a zero measured repeat noise floor: hidden states, vocabulary
+scores, next-token logits, cutoffs, edges and seeded communities are exact
+across identical repeats, while concept order produces substantial divergence.
 
 R005 found greater nearest-neighbour density and positive/negative segregation
 than a size-matched random null at all 33 states, but its communities also
@@ -312,6 +316,14 @@ and are not versioned here.
     — the rendered intermediate-resolution R018 semantic network.
 88. [`single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_FINAL_REPORT.html`](single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_FINAL_REPORT.html)
     — the canonical integrated R018 final report.
+89. [`single_prompt_topology/R019_PLAN.md`](single_prompt_topology/R019_PLAN.md)
+    — the locked three-permutation, three-repeat reproducibility-control contract.
+90. [`single_prompt_topology/runs/R019_olmo3-order-repeatability-control/R019_MEASUREMENT_REPORT.md`](single_prompt_topology/runs/R019_olmo3-order-repeatability-control/R019_MEASUREMENT_REPORT.md)
+    — the measured repeat noise floor and between-order divergence summary.
+91. [`single_prompt_topology/runs/R019_olmo3-order-repeatability-control/R019_RESULT.json`](single_prompt_topology/runs/R019_olmo3-order-repeatability-control/R019_RESULT.json)
+    — the machine-readable conclusion and strongest divergence cases.
+92. [`single_prompt_topology/runs/R019_olmo3-order-repeatability-control/R019_COMPLETENESS_VERIFICATION.md`](single_prompt_topology/runs/R019_olmo3-order-repeatability-control/R019_COMPLETENESS_VERIFICATION.md)
+    — the expected-coverage reconciliation for all repeat and order comparisons.
 
 ## Provenance
 

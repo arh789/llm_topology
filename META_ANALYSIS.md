@@ -22029,3 +22029,105 @@ structures excluded from the strict late invariant core.
 The analysis protocol, analysis manifest and project indexes were reconciled
 with these outputs. All required analysis artefacts now exist, and the
 measurement evidence was not rerun or modified.
+
+### MA-0117 — R019 deterministic order-versus-repeatability control
+
+- Entry timestamp: `2026-11-17T07:03:33+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex measurement run requested by the user`
+- Entry type: `repeatability control and order-effect validation`
+- Related runs: `R018`, `R019`
+
+#### Question being tested
+
+R018 showed that different permutations of the same three concepts produce
+different hidden-state and semantic-topology trajectories. The unresolved
+alternative was whether these differences reflected concept order or whether
+the same prompt could produce different pre-sampling distributions because the
+model/runtime was inherently unstable without a generation seed.
+
+R019 therefore used the balanced cyclic permutations:
+
+```text
+ABC = choke point | collapsible barrier | spear
+BCA = collapsible barrier | spear | choke point
+CAB = spear | choke point | collapsible barrier
+```
+
+Each exact prompt batch was captured in three sequential forward passes. No
+response was generated and no token was sampled. The fixed seed affected only
+the deterministic Louvain partition bookkeeping.
+
+#### Coverage
+
+```text
+3 permutations × 3 repeats = 9 observations
+9 observations × 65 states × 2 sectors = 1,170 networks
+C(9,2) × 65 states = 2,340 hidden/score comparison rows
+C(9,2) × 65 states × 2 sectors = 4,680 topology comparison rows
+```
+
+The nine within-prompt repeat pairs and twenty-seven between-order pairs were
+kept separate at every state.
+
+#### Result
+
+The repeat noise floor was exactly zero:
+
+- hidden tensors were bit-for-bit equal across all identical repeats and all
+  65 states;
+- full-vocabulary score vectors were exact;
+- final next-token logits were exact;
+- positive/negative cutoff membership Jaccard was `1.0`;
+- exact 10-NN edge Jaccard was `1.0`; and
+- seeded Louvain community ARI was `1.0`.
+
+Different orders diverged substantially after the input-embedding baseline:
+
+- minimum hidden-state cosine similarity: `0.609119475`;
+- maximum vocabulary-score RMSE: `0.012455868`;
+- maximum final next-token Jensen–Shannon divergence: `0.052628301`;
+- minimum cutoff-membership Jaccard: `0.158392029`; and
+- minimum edge Jaccard: `0.041658627`.
+
+The strongest hidden-state difference was `ABC` versus `BCA` at State 15
+(Block 14 output). The strongest vocabulary-score, cutoff-membership and edge
+differences occurred for the same pair at State 16 (Block 15 output).
+
+#### Conclusion
+
+`deterministic_order_effect_confirmed`
+
+R018's permutation differences are caused by the different ordered token
+sequences, not stochastic token sampling or an absent hard seed. A seed would
+control which token is sampled from a distribution; it is not required for
+the deterministic forward-pass distribution measured here.
+
+This does not establish that order-conditioned relations are stable semantic
+properties of the learned training-data topology. It establishes the narrower
+and necessary prerequisite that the observed differences are real contextual
+effects above a zero measured repeat noise floor.
+
+### MA-0118 — GitHub-only meta-analysis report reconciled before R019 publication
+
+- Entry timestamp: `2026-11-17T07:56:20+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `Codex Git reconciliation record`
+- Entry type: `external artefact import and provenance record`
+
+Before committing R019, the private parent repository was inspected at main
+commit `33edfac92a7212f687738821fa95914969473b24`. The latest commit affecting
+`projects/llm-topology` was `905f486df59d10054c77ad486e214ddf41b5f745`.
+
+Five GitHub commits after the prior R018 reconciliation added and refined one
+new project artefact:
+
+```text
+META_ANALYSIS_REPORT.html
+```
+
+The report was imported into the authoritative local project before the R019
+commit. The comparison from remote commit `ad6dd0c16b3bed93ad1df7b40e520fb5b37949bd`
+through `905f486df59d10054c77ad486e214ddf41b5f745` showed no other changed file
+under `projects/llm-topology`, so the import did not overlap or alter R019's
+measurement evidence.

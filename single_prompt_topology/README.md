@@ -538,6 +538,44 @@ and rendered in
 The canonical integrated report is
 [`R018_FINAL_REPORT.html`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_FINAL_REPORT.html).
 
+## R019 OLMo 3 order-versus-repeatability control
+
+R019 tests whether R018's permutation differences exceed the variation of an
+identical local forward pass. It uses the balanced cyclic orders `ABC`, `BCA`
+and `CAB`; every order is captured in three sequential passes with no response
+generation or token sampling.
+
+All repeated observations were exact at every tested level:
+
+```text
+hidden states               exact at all 65 states
+vocabulary score vectors    exact
+final next-token logits     exact
+cutoff memberships          Jaccard 1.0
+10-NN edges                 Jaccard 1.0
+seeded communities          ARI 1.0
+```
+
+Order nevertheless produced substantial divergence. The minimum between-order
+hidden-state cosine was `0.609119475`; the maximum next-token
+Jensen–Shannon divergence was `0.052628301`; the minimum cutoff-membership
+Jaccard was `0.158392029`; and the minimum edge Jaccard was `0.041658627`.
+The strongest hidden and vocabulary/topology divergence occurred around Blocks
+14–15 for `ABC` versus `BCA`.
+
+The result is therefore `deterministic_order_effect_confirmed`. The R018 order
+effect is not attributable to an unenforced generation seed: R019 contains no
+sampling, and identical prompts produced identical distributions and topology.
+
+The locked contract is [`R019_PLAN.md`](R019_PLAN.md). Compact evidence and the
+result are in
+[`R019_MEASUREMENT_REPORT.md`](runs/R019_olmo3-order-repeatability-control/R019_MEASUREMENT_REPORT.md),
+[`R019_RESULT.json`](runs/R019_olmo3-order-repeatability-control/R019_RESULT.json)
+and
+[`R019_COMPLETENESS_VERIFICATION.md`](runs/R019_olmo3-order-repeatability-control/R019_COMPLETENESS_VERIFICATION.md).
+The large repeated hidden-state and vocabulary-score tensors remain local; the
+tracked artifact index preserves their byte sizes and SHA-256 hashes.
+
 
 ## Run outputs
 
