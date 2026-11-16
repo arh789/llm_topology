@@ -507,6 +507,13 @@ records, hashed the unchanged measured artifacts and passed the independent
 verifier. Details are in
 [`R018_VALIDATION_RECOVERY.md`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_VALIDATION_RECOVERY.md).
 
+### R018 downstream semantic reconstruction
+
+The downstream R018 reconstruction is now complete. The six orders separate into final-position-conditioned literal branches, diverge most strongly through the middle layers, and reconverge late onto a shared four-parent topology: **constraint / requirement**, **structural configuration**, **dynamic path geometry**, and **collapse / adjustment**. Literal `spear`, attack/interception, intersection and route vocabulary fail the strict late 6/6 invariance test and are not included in the core map.
+
+The canonical reconstruction is [`R018_SEMANTIC_RECONSTRUCTION.md`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_RECONSTRUCTION.md). Structured nodes and relations are in [`R018_SEMANTIC_MAP_NODES.csv`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_MAP_NODES.csv), [`R018_SEMANTIC_MAP_EDGES.csv`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_MAP_EDGES.csv) and [`R018_SEMANTIC_MAP.json`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_SEMANTIC_MAP.json). The final human-readable analysis is [`R018_RUN_ANALYSIS_AND_RECOMMENDATIONS.html`](runs/R018_olmo3-choke-point-barrier-spear-permutation-topology/R018_RUN_ANALYSIS_AND_RECOMMENDATIONS.html).
+
+
 ## Run outputs
 
 Each execution writes a timestamped directory under `runs/` containing:
