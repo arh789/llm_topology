@@ -8,6 +8,11 @@ representation geometry.
 > citation metadata and archival are deliberately deferred until the project
 > and article reach their final state.
 
+> **Canonical repository:** `arh789/llm_topology` became the authoritative
+> project repository on 2026-11-17. The former
+> `arh789/chatgpt-analysis/projects/llm-topology` subtree is retained only as
+> an archival provenance source and must not receive new project work.
+
 ## Article-oriented reading path
 
 The complete research archive remains below. For the shorter route from an
