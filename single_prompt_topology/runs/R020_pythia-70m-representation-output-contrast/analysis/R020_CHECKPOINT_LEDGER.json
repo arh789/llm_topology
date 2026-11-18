@@ -8,7 +8,7 @@
   "checkpoint_plan_commit": "ed3a34413191d82261b1bb7f74de75bb471b65a0",
   "original_measurement_unchanged": true,
   "progress_state": "existing_provisional_analysis_recorded_for_recovery; human_utility_pending",
-  "checkpoint_integrity_note": "Presence and immutable Git blob IDs verified by GitHub directory listing and R020_ANALYSIS_MANIFEST.json; no complete independent scientific revalidation of individual community labels was performed when registering these checkpoints.",
+  "checkpoint_integrity_note": "All registered analysis file SHA IDs match GitHub metadata after correcting the documented C03 transcription error; content-level validation of semantic labels remains provisional. Treat recorded checkpoints as reusable only when artefact hashes and required coverage pass the independent verifier.",
   "expected_coverage": {
     "generated_decisions": 32,
     "recorded_states": 8,
@@ -68,7 +68,7 @@
       "paths": [
         {
           "path": "R020_COMMUNITIES_17-24.json",
-          "git_blob_sha": "6b25a09e1647921505be288718a152c9c50875d8a"
+          "git_blob_sha": "6b25a09e1647921505be288718a152c9c50875d8"
         }
       ]
     },
@@ -152,5 +152,7 @@
     "on_revision": "new versioned files; preserve prior claims and negative results",
     "source_data": "do not modify frozen measurement outputs",
     "human_decision": "required for usefulness and final research judgement"
-  }
+  },
+  "integrity_audit": "R020_CHECKPOINT_AUDIT.md",
+  "integrity_audit_commit": "22f020201656aac7b4c58aa6391fc12c8e900a0f"
 }
