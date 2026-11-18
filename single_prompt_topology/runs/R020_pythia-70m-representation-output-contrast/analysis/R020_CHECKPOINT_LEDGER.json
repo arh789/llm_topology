@@ -83,7 +83,7 @@
         },
         {
           "path": "R020_CHECKPOINT_AND_RECOVERY_PLAN.md",
-          "git_blob_sha": "aae2125019dd9761a08f68d4c2d088d451a5c57c"
+          "git_blob_sha": "a14ab4493f463cc4658e77cd199f626488cf1644"
         },
         {
           "path": "R020_VERIFY_CHECKPOINTS.js",
@@ -92,6 +92,18 @@
         {
           "path": "R020_CHECKPOINT_AUDIT.md",
           "git_blob_sha": "875de003df29c3c99780726964024bc715086329"
+        },
+        {
+          "path": "../R020_RUN_METHODOLOGY.md",
+          "git_blob_sha": "dfa518e01b7c516a721b6f81c68c4b78881e517f"
+        },
+        {
+          "path": "../R020_SEMANTIC_ANALYSIS_METHODOLOGY.md",
+          "git_blob_sha": "9b37a7e7d058da6a7aa22ede65d9840a3ce65946"
+        },
+        {
+          "path": "../R020_VALIDATION_AMENDMENT.md",
+          "git_blob_sha": "40024c4d15a6b8be97383c17960e09d8deae6fb3"
         }
       ],
       "resume": "Do not rerun measurement; verify identity and declared coverage before any new stage."
@@ -224,7 +236,7 @@
     "format": "git-blob-sha1",
     "requires_exact_match": true,
     "requires_structural_coverage": true,
-    "locked_input_files": 13,
+    "locked_input_files": 16,
     "registered_provisional_analysis_not_scientific_validation": true,
     "ledger_is_derived_state_not_authoritative_without_verifier": true,
     "fail_closed": true
