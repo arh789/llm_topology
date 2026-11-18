@@ -60,3 +60,19 @@ C01–C04 are deliberately independent units. If one eight-decision group fails,
 The existing provisional analysis already contains C01–C07 outputs; this plan registers and preserves them rather than treating them as new work. SHA and presence are recorded in the separate ledger. Their analytic claims remain provisional and have not been independently revalidated in this checkpoint-setting step. C08 (human review) and C09 (final interpretation) remain open.
 
 **Next decision:** Present the existing semantic map to the human reviewer, accept specific usefulness judgements or constraints, and only revisit the stages that the feedback shows to be inadequate.
+
+## 6. Executable resume gate
+
+**Run from a complete checked-out copy of the authoritative repository, with Node.js installed:**
+
+~~~sh
+node single_prompt_topology/runs/R020_pythia-70m-representation-output-contrast/analysis/R020_VERIFY_CHECKPOINTS.js --json
+~~~
+
+This checker is read-only. It validates every pinned Git blob SHA, the run identity, measurement counts, all four eight-decision community shards, the 512 unique state/sector cells, candidate/mixed/unresolved category totals and the 705 depth and 961 generation matches. It exits non-zero on any problem and does not attempt automatic repair.
+
+**Failure handling:** Stop before further semantic reconstruction; record the failing stage, the precise expected/observed mismatch, and whether the source file changed or only the ledger was incorrect. Preserve earlier commits and write corrections as a separately documented change. Never silently overwrite an earlier result or waive an integrity check to achieve a successful status.
+
+**Successful check:** The existing C00–C07 provisional outputs may be reused without rerunning the 32-token capture. This verifies structural preservation and coverage, not the scientific correctness of provisional semantic labels. Proceed to present \`R020_HUMAN_REVIEW_PACKET.md\` for human utility judgement. Keep C08 open until the human provides that judgement; C09 depends on it.
+
+**Verification performed when this plan was extended:** An independent GitHub catalogue comparison found all 27 then-registered Git blob identifiers matched the repository files. The validator's JavaScript syntax was checked, but it has **not** been executed against the complete local checkout in this environment. Any future execution must perform the local command above before relying on its runtime checks.
