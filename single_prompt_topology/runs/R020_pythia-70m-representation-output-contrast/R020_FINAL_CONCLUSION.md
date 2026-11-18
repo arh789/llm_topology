@@ -10,7 +10,7 @@ The latest R020 analysis has reconstructed all 32 generated-token decisions and 
 
 <text color="secondary" size="xs">Numbers indicate how many of the 32 generation decisions contain a qualifying relationship in contextual transformer states S01–S05. They are recurrence counts, not probabilities or causal strengths.</text>
 
-<box border="lg" padding={3} gap={2}>
+<box border radius="lg" padding={3} gap={2}>
   <svg viewBox="0 0 350 300" width="100%" xmlns="http://www.w3.org/2000/svg">
     {#each [
       [104,43,83,132],[246,43,267,132],
@@ -57,7 +57,7 @@ Source: <Link url="https://github.com/arh789/llm_topology/blob/main/single_promp
 
 Beyond the strongest recurrent relationships, the pipeline exposes several additional domains. Some have measured connections to the central field, while others appear only in particular states.
 
-<box border="lg" padding={3} gap={1}>
+<box border radius="lg" padding={3} gap={1}>
   <text weight="medium" size="xs" color="secondary">BROAD SEMANTIC RECONSTRUCTION</text>
   ```text
   INHABITED PHYSICAL ENVIRONMENT
