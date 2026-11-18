@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "run_id": "R020_pythia-70m-representation-output-contrast",
+  "source_measurement_commit": "6d7d6547e04407556b303b1c8b3ce9941daa8138",
+  "source_community_network_git_blob_sha": "c55e630137b29417b0181c2d3506e7feb4b5d4de",
+  "mapping_delivery_state": "complete_source_reconciled",
+  "semantic_parent_interpretation_state": "evidence_bounded_provisional; no claim of uniquely naming every structural module",
+  "human_usefulness_assessment": "not_recorded; human review remains the next decision",
+  "experiment_hypothesis_state": "strong representational advantage not established by current data",
+  "frozen_measurement_manifest_modified": false,
+  "primary_map": "R020_VERIFIED_CONSOLIDATED_SEMANTIC_MAP.md",
+  "interactive_map": "R020_RELATIONAL_SEMANTIC_MAPS.html",
+  "audit": "R020_SOURCE_TO_SEMANTIC_MAP_AUDIT.json",
+  "audit_commit": "896d6d5e1b02e1f5f978dfcf9ee3e6777649e228",
+  "map_commit": "c31f71881fb6338a543e36f3e4630e8a1fb0d54d",
+  "data_coverage": {
+    "decisions": 32,
+    "states_per_decision": 8,
+    "sectors_per_state": 2,
+    "networks": 512,
+    "community_nodes": 6944,
+    "structural_modules": 1231,
+    "raw_cross_community_edges": 42291,
+    "verified_backbone_edges": 15292,
+    "transition_cases": 944,
+    "verified_candidate_module_correspondences": 1985
+  },
+  "verification": {
+    "independent_raw_source_to_derived_data_comparison": "PASS",
+    "community_token_ids_and_representatives": "6944 / 6944 exact",
+    "module_partitions": "512 / 512 valid",
+    "backbone_edges": "15292 / 15292 raw source matches",
+    "candidate_transition_links": "1985 / 1985 recomputed",
+    "repeated_input_token_similarity": "reproduced",
+    "full_local_verifier_ran_in_this_session": false,
+    "semantic_interpretation_validated_as_scientific_ground_truth": false
+  },
+  "pinned_artifacts": [
+    {
+      "path": "R020_VERIFIED_CONSOLIDATED_SEMANTIC_MAP.md",
+      "git_blob_sha": "353391ad8046d63a5fb6b2d8b70ba288c4f54e54",
+      "size_bytes": 13341
+    },
+    {
+      "path": "R020_SOURCE_TO_SEMANTIC_MAP_AUDIT.json",
+      "git_blob_sha": "6a7203284c5074522895dabdefe613a2de25c7f1",
+      "size_bytes": 6497
+    },
+    {
+      "path": "R020_RELATIONAL_SEMANTIC_MAPS.html",
+      "git_blob_sha": "66f39527dd5bab6e9d3099b6ead61f77517ebdd1",
+      "size_bytes": 1873031
+    },
+    {
+      "path": "R020_RELATIONAL_SEMANTIC_RECONSTRUCTION_V2.md",
+      "git_blob_sha": "77438dc56d05d569c3235f0c21202b42cce414b3",
+      "size_bytes": 12998
+    },
+    {
+      "path": "R020_RELATIONAL_TRAJECTORIES.json",
+      "git_blob_sha": "32a962484060114815f7b616a3ec53138ce62fed",
+      "size_bytes": 500458
+    },
+    {
+      "path": "R020_REPRESENTATIVE_REUSE_DIAGNOSTICS.json",
+      "git_blob_sha": "546d5e0852e38267577e936b1cf10fe35493aab6",
+      "size_bytes": 57575
+    },
+    {
+      "path": "R020_VERIFY_RELATIONAL_V2.js",
+      "git_blob_sha": "d23f72c962a46ca6f458daf12e2549608443b815",
+      "size_bytes": 6941
+    },
+    {
+      "path": "R020_V2_CHECKPOINT_MANIFEST.json",
+      "git_blob_sha": "fda1f1e26101a2bb0adc631f5c84e8843e1c87e8",
+      "size_bytes": 7225
+    },
+    {
+      "path": "R020_RELATIONAL_MAP_D01-08.json",
+      "git_blob_sha": "5bad75b02cec2330fd060224bf0a18a13f0d659a",
+      "size_bytes": 1469365
+    },
+    {
+      "path": "R020_LAYER_TOKEN_ATLAS_D01-08.md",
+      "git_blob_sha": "5dfb8dc3ea17927328f66f4008c1d5d2f6094009",
+      "size_bytes": 129366
+    },
+    {
+      "path": "R020_RELATIONAL_MAP_D09-16.json",
+      "git_blob_sha": "7870cd2078059785cce43e2bdcc2313a4d263c8e",
+      "size_bytes": 1479920
+    },
+    {
+      "path": "R020_LAYER_TOKEN_ATLAS_D09-16.md",
+      "git_blob_sha": "f164b2b5ab5785c7ff04d395de0182745c2cdb24",
+      "size_bytes": 129259
+    },
+    {
+      "path": "R020_RELATIONAL_MAP_D17-24.json",
+      "git_blob_sha": "843a7633fe0810e3306c36d34f10432a5d8e6f89",
+      "size_bytes": 1440923
+    },
+    {
+      "path": "R020_LAYER_TOKEN_ATLAS_D17-24.md",
+      "git_blob_sha": "1d31fc3d3c16918fb705eb00762000a6952ac17b",
+      "size_bytes": 128537
+    },
+    {
+      "path": "R020_RELATIONAL_MAP_D25-32.json",
+      "git_blob_sha": "f66e01ccae12c5c8ce00a7df226908b1fddf3c43",
+      "size_bytes": 1469404
+    },
+    {
+      "path": "R020_LAYER_TOKEN_ATLAS_D25-32.md",
+      "git_blob_sha": "bb7ccf12a9c2a54095efc391b6c5c253fbc98ee1",
+      "size_bytes": 129791
+    }
+  ],
+  "resume_policy": "Verify pinned Git blob identities on retrieval; use the existing source-to-map audit and layer/token atlases without repeating capture. If a dependency differs, stop and create a versioned correction rather than modifying original run evidence. Human usefulness review is intentionally not predetermined.",
+  "limitations": [
+    "Measured graph sources expose compact community representative/extreme tokens and cross-community edges, not complete original token memberships and individual nearest-neighbour edge records.",
+    "Geometric modules can contain unrelated terms; not every module is a semantic parent.",
+    "Candidate continuity based on representative token overlap can miss synonymous structure and can join similar words without stable meaning.",
+    "Generation and suggested adjacent topics were known before semantic interpretation; no blind evaluation claim.",
+    "Negative cosine is anti-alignment in this projection and not itself semantic suppression.",
+    "Scientific usefulness is a judgement separate from reconstructing and verifying the graph."
+  ]
+}
