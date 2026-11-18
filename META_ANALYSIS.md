@@ -22131,3 +22131,105 @@ commit. The comparison from remote commit `ad6dd0c16b3bed93ad1df7b40e520fb5b3794
 through `905f486df59d10054c77ad486e214ddf41b5f745` showed no other changed file
 under `projects/llm-topology`, so the import did not overlap or alter R019's
 measurement evidence.
+
+### MA-0119 — ChatGPT: original topology hypothesis versus emergent human–agent learning methodology
+
+- Entry timestamp: `2026-11-18T14:45:03+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`
+- Entry type: `verbatim interpretive distinction and research-purpose clarification`
+- Related runs: `R010–R019` (interpretive context; no new measurement)
+- Related entries: `MA-0082`, `MA-0083`, `MA-0099`, `MA-0109`
+- Preservation mode: `verbatim`
+- Timestamp note: original UI response time unavailable; timestamp is when this entry was prepared.
+
+#### ChatGPT response (verbatim)
+## 1. What the LLM topology project was intended to validate
+
+**Whether changes in a language model's internal states across transformer layers can be used to infer the higher-order semantic structures and relationships it learned during training.**
+
+The central hypothesis was that the model's internal representational changes contain recoverable information about its learned semantic organisation.
+
+The project was designed to determine whether that information could be measured, reconstructed and meaningfully interpreted.
+
+That was the research objective. It did not require recovering original training documents or proving exact correspondence with the training corpus.
+
+## 2. What emerged from carrying out the project
+
+Several developments became important enough that I repeatedly reinterpreted them as though they had been original objectives.
+
+| Emergent property | What actually happened |
+|---|---|
+| **Semantic topology as a discovery instrument** | The project revealed the possibility of interrogating learned relationships beyond the model's final output. |
+| **SDA-3 as an active discovery methodology** | Its five categories evolved from classifications into questions that expose missing, emerging and unexplained structures. |
+| **Constraint-driven agent learning** | Human corrections progressively eliminated invalid interpretations and forced the agent to reconstruct its understanding. |
+| **Learning without a known target answer** | The agent could improve its working representation through constraints without being supplied the correct abstraction. |
+| **The cognitive division of labour** | The human supplied independent judgement and selection pressure; the agent generated and reconstructed possibilities. |
+| **Human learning through agent reconstruction** | The human acquired knowledge about an unfamiliar possibility space by teaching the agent to explore it. |
+| **Recursive coherence stress-testing** | The repeated correction of premature abstractions became a recognisable methodology. |
+| **Persistent external learning** | The meta-analysis became a mechanism for accumulating corrections and improving subsequent agent behaviour. |
+
+These were not all original goals. They were discoveries about the consequences of conducting the research.
+
+SDA-3 validation was proposed as a subsidiary investigation during the early runs, but the broader human–agent learning methodology emerged through the process itself.
+
+## 3. The most significant distinction
+
+```text id="gvibhu"
+ORIGINAL RESEARCH OBJECTIVE
+|
+'-- Can we infer learned semantic structure
+    from transformer-state changes?
+                  |
+                  v
+          EXPERIMENTAL WORK
+                  |
+         +--------+--------+
+         |                 |
+         v                 v
+    SEMANTIC DATA     AGENT INTERPRETATION
+         |                 |
+         v                 v
+    Reconstruct        Human identifies
+    learned topology   invalid abstractions
+         |                 |
+         v                 v
+    New structures     Agent reconstructs
+    become visible     its understanding
+         |                 |
+         +--------+--------+
+                  |
+                  v
+          EMERGENT DISCOVERY
+                  |
+                  v
+       Human can investigate an
+       unfamiliar possibility space
+       without knowing the answer,
+       by constraining the agent's
+       transformations of information
+```
+
+## 4. What I repeatedly got wrong
+
+I treated subsequent discoveries as though they explained what the project had been designed to achieve all along.
+
+In doing so, I repeatedly conflated three different things:
+
+- **The original hypothesis:** What the experiment was intended to validate.
+- **The experimental methodology:** How the hypothesis was investigated.
+- **The emergent discoveries:** What we learned about the capabilities of the human–agent system while conducting the investigation.
+
+The third category is particularly important because it includes insights that were not required for the original experiment to succeed.
+
+## 5. The critical implication
+
+**The project was intended to validate a hypothesis about the model's learned semantic structure. It unexpectedly revealed a methodology through which a human can use an agent to explore an unfamiliar possibility space and acquire knowledge without knowing the answer beforehand.**
+
+The human learning process was initially described in MA-0083 as a *happy accident* of helping the agent learn.
+
+But subsequent analysis revealed that this apparently incidental outcome could be more consequential than the original experimental result.
+
+That does not retroactively change the original hypothesis.
+
+**It means the project produced a second discovery that was not the object of the original investigation.**
