@@ -1,6 +1,6 @@
 # Report Status and Canonicality
 
-Status: private article-facing register, current through R019 on 2026-11-17.
+Status: private article-facing register, current through R020 on 2026-11-19.
 
 This file does not delete or rewrite earlier interpretations. It states which
 artifact should govern a current article claim when later analysis narrowed or
@@ -18,6 +18,78 @@ qualified an earlier report.
 | **Historical** | Preserved research history; later evidence may supersede its factual status. |
 
 ## Current governing artifacts
+
+### R020 — canonical measurement and output contrast
+
+- [R020 measurement report](single_prompt_topology/runs/R020_pythia-70m-representation-output-contrast/R020_MEASUREMENT_REPORT.md)
+- [Measurement manifest](single_prompt_topology/runs/R020_pythia-70m-representation-output-contrast/manifest.json)
+- [Generation trace](single_prompt_topology/runs/R020_pythia-70m-representation-output-contrast/generation_trace.csv)
+- [Completeness verification](single_prompt_topology/runs/R020_pythia-70m-representation-output-contrast/R020_COMPLETENESS_VERIFICATION.md)
+- [Validation amendment](single_prompt_topology/runs/R020_pythia-70m-representation-output-contrast/R020_VALIDATION_AMENDMENT.md)
+
+The Pythia 70M run captured 32 generated-token decisions, each with eight
+recorded states and two cosine sectors (512 networks, 6,944 communities).
+Its deterministic continuation was circular and did not answer why a city
+would build a bridge.
+
+**Historical-status warning:** The frozen R020 measurement report says that
+semantic analysis is awaiting completion. That was correct *when the
+measurement report was written*. Later downstream semantic reconstruction and
+auditing now exist. Do not revise the frozen measurement report to conceal
+this chronology, and do not treat its earlier status as the present overall
+analysis status.
+
+### R020 — current, evidence-bounded semantic interpretation
+
+- [R020 final conclusion](single_prompt_topology/runs/R020_pythia-70m-representation-output-contrast/R020_FINAL_CONCLUSION.md)
+- [Generation-wide semantic hypothesis report](single_prompt_topology/runs/R020_pythia-70m-representation-output-contrast/analysis/R020_GENERATION_WIDE_SEMANTIC_HYPOTHESIS_REPORT.md)
+- [Independent v3 relationship-evidence audit](single_prompt_topology/runs/R020_pythia-70m-representation-output-contrast/analysis/R020_V3_INDEPENDENT_RELATION_EVIDENCE_AUDIT.md)
+- [Cross-generation trajectory data](single_prompt_topology/runs/R020_pythia-70m-representation-output-contrast/analysis/R020_CROSS_GENERATION_HYPOTHESIS_TRAJECTORY.json)
+- [Analysis manifest](single_prompt_topology/runs/R020_pythia-70m-representation-output-contrast/analysis/R020_ANALYSIS_MANIFEST.json)
+
+**Current conclusion:** Candidate relations among settlements, movement/routes,
+crossings, built places and inhabitants recur intermittently across the
+generated response, with different community and state realisations. They do
+not form one continuously maintained, fully role-bound semantic graph under
+the recorded reconstruction.
+
+The selected positive-sector screen finds qualifying question-related
+relationships in 21/32 decisions at S01–S05, and repetition of the same
+relation across contextual states in 6/32. Eleven decisions do not qualify
+at this threshold, which is *unresolved*, not proof of absent structure.
+The strongest candidate relations are movement/routes–settlements (11
+decisions) and crossings–movement/routes (8 decisions).
+
+The independent audit verifies all **359 cited intercommunity edges**,
+**2,353 cited exemplar tokens** and **359 reported affinities** against
+recorded evidence. This establishes the accuracy of the cited evidence
+references, not unique semantic labels or exhaustive coverage: the targeted
+screen selects 818 of the 6,944 communities.
+
+**Interpretation boundary:** The output is demonstrably poor; the recovered
+candidate associations are observable beyond its wording. But the evidence
+does not demonstrate that a fully integrated bridge-building explanation
+persisted internally, that a role-binding failure caused generation to loop,
+or that human usefulness exceeds the generated response in an independently
+validated sense. The analysis was not blinded. No qualifying positive task
+relations at S06–S07 under the input-embedding projection is not evidence
+that the output-relevant representations contain none; Pythia's input and
+output embedding matrices are untied. Human usefulness evaluation is still
+pending.
+
+### R020 — project-level methodological context, not additional measurement
+
+- [MA-0125](META_ANALYSIS.md#ma-0125--r020-final-semantic-reconstruction-project-level-contextual-conclusion)
+  records the R020 final synthesis in the chronological project history.
+- [MA-0126](META_ANALYSIS.md#ma-0126--core-insight-semantic-integration-as-both-research-object-and-research-method-failure-mode)
+  identifies a possible parallel between recoverable-but-poorly-integrated
+  information in the experiment and incomplete integration during agent
+  analysis.
+
+MA-0126 is a **core methodological insight**, not a measured demonstration
+that ChatGPT and Pythia share a causal failure mode. The article may use it
+to explain why human judgement and iterative reconstruction matter, but must
+not present it as a new controlled model result.
 
 ### R019 — canonical determinism control
 
@@ -65,7 +137,7 @@ higher-order map. Their recurrent edges must not be presented as the current
 project-level proof of invariant parent relations because MA-0114 materially
 narrows that claim.
 
-## Earlier run status
+## Run-status overview (R013–R020)
 
 | Run | Article-facing status | Proper use |
 |---|---|---|
@@ -76,8 +148,15 @@ narrows that claim.
 | R017 | Exploratory single-order OLMo semantic map. | Motivate R018; never use as invariance evidence. |
 | R018 | Canonical six-order measurement; interpretation qualified as above. | Order conditioning, divergence/reconvergence and candidate stable parent families. |
 | R019 | Canonical repeatability control. | Exclude runtime/sampling noise as the tested explanation for order divergence. |
+| R020 | Canonical measurement and audited candidate semantic reconstruction; interpretation provisional; human usefulness pending. | Contrast recoverable associations with poor generation while preserving the gap between availability, integration and expression. |
 
 ## Source-collection status
+
+[RUN_OPTIMISATION_TRAJECTORY.md](RUN_OPTIMISATION_TRAJECTORY.md) is the
+project-level account of how the experimental objective evolved from R001
+through R020. It is interpretive context, not a substitute for individual
+run plans, manifests or measured evidence.
+
 
 [`ARTICLE_OUTLINE.md`](ARTICLE_OUTLINE.md) reproduces responses verbatim and
 chronologically. Some statements describe the repository state at the time of
