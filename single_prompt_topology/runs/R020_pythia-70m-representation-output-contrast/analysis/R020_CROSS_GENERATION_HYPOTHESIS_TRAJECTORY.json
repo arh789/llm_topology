@@ -3340,7 +3340,8 @@
       "leading_contextual_relationships": [],
       "negative_sector_relations": [],
       "within_decision_recurrence": false,
-      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold"
+      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold",
+      "current_input_token_id": 27
     },
     {
       "decision": 2,
@@ -3433,7 +3434,8 @@
       ],
       "negative_sector_relations": [],
       "within_decision_recurrence": true,
-      "semantic_status": "contextual_relationship_candidates_found"
+      "semantic_status": "contextual_relationship_candidates_found",
+      "current_input_token_id": 380
     },
     {
       "decision": 3,
@@ -3604,7 +3606,8 @@
       ],
       "negative_sector_relations": [],
       "within_decision_recurrence": false,
-      "semantic_status": "contextual_relationship_candidates_found"
+      "semantic_status": "contextual_relationship_candidates_found",
+      "current_input_token_id": 2846
     },
     {
       "decision": 4,
@@ -3647,7 +3650,8 @@
         "connection_crossing ↔ engineering_governance"
       ],
       "within_decision_recurrence": false,
-      "semantic_status": "contextual_relationship_candidates_found"
+      "semantic_status": "contextual_relationship_candidates_found",
+      "current_input_token_id": 310
     },
     {
       "decision": 5,
@@ -3659,7 +3663,8 @@
       "leading_contextual_relationships": [],
       "negative_sector_relations": [],
       "within_decision_recurrence": false,
-      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold"
+      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold",
+      "current_input_token_id": 247
     },
     {
       "decision": 6,
@@ -3758,7 +3763,8 @@
       ],
       "negative_sector_relations": [],
       "within_decision_recurrence": true,
-      "semantic_status": "contextual_relationship_candidates_found"
+      "semantic_status": "contextual_relationship_candidates_found",
+      "current_input_token_id": 9729
     },
     {
       "decision": 7,
@@ -3770,7 +3776,8 @@
       "leading_contextual_relationships": [],
       "negative_sector_relations": [],
       "within_decision_recurrence": false,
-      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold"
+      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold",
+      "current_input_token_id": 326
     },
     {
       "decision": 8,
@@ -3891,7 +3898,8 @@
       ],
       "negative_sector_relations": [],
       "within_decision_recurrence": true,
-      "semantic_status": "contextual_relationship_candidates_found"
+      "semantic_status": "contextual_relationship_candidates_found",
+      "current_input_token_id": 23417
     },
     {
       "decision": 9,
@@ -3903,7 +3911,8 @@
       "leading_contextual_relationships": [],
       "negative_sector_relations": [],
       "within_decision_recurrence": false,
-      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold"
+      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold",
+      "current_input_token_id": 253
     },
     {
       "decision": 10,
@@ -4032,7 +4041,8 @@
       ],
       "negative_sector_relations": [],
       "within_decision_recurrence": false,
-      "semantic_status": "contextual_relationship_candidates_found"
+      "semantic_status": "contextual_relationship_candidates_found",
+      "current_input_token_id": 8281
     },
     {
       "decision": 11,
@@ -4074,7 +4084,8 @@
       ],
       "negative_sector_relations": [],
       "within_decision_recurrence": false,
-      "semantic_status": "contextual_relationship_candidates_found"
+      "semantic_status": "contextual_relationship_candidates_found",
+      "current_input_token_id": 342
     },
     {
       "decision": 12,
@@ -4145,7 +4156,8 @@
       ],
       "negative_sector_relations": [],
       "within_decision_recurrence": false,
-      "semantic_status": "contextual_relationship_candidates_found"
+      "semantic_status": "contextual_relationship_candidates_found",
+      "current_input_token_id": 253
     },
     {
       "decision": 13,
@@ -4244,7 +4256,8 @@
       ],
       "negative_sector_relations": [],
       "within_decision_recurrence": false,
-      "semantic_status": "contextual_relationship_candidates_found"
+      "semantic_status": "contextual_relationship_candidates_found",
+      "current_input_token_id": 8281
     },
     {
       "decision": 14,
@@ -4444,7 +4457,8 @@
       ],
       "negative_sector_relations": [],
       "within_decision_recurrence": true,
-      "semantic_status": "contextual_relationship_candidates_found"
+      "semantic_status": "contextual_relationship_candidates_found",
+      "current_input_token_id": 15
     },
     {
       "decision": 15,
@@ -4456,7 +4470,8 @@
       "leading_contextual_relationships": [],
       "negative_sector_relations": [],
       "within_decision_recurrence": false,
-      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold"
+      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold",
+      "current_input_token_id": 187
     },
     {
       "decision": 16,
@@ -4578,7 +4593,8 @@
       ],
       "negative_sector_relations": [],
       "within_decision_recurrence": true,
-      "semantic_status": "contextual_relationship_candidates_found"
+      "semantic_status": "contextual_relationship_candidates_found",
+      "current_input_token_id": 187
     },
     {
       "decision": 17,
@@ -4619,7 +4635,8 @@
       ],
       "negative_sector_relations": [],
       "within_decision_recurrence": false,
-      "semantic_status": "contextual_relationship_candidates_found"
+      "semantic_status": "contextual_relationship_candidates_found",
+      "current_input_token_id": 34
     },
     {
       "decision": 18,
@@ -4716,7 +4733,8 @@
       ],
       "negative_sector_relations": [],
       "within_decision_recurrence": false,
-      "semantic_status": "contextual_relationship_candidates_found"
+      "semantic_status": "contextual_relationship_candidates_found",
+      "current_input_token_id": 27
     },
     {
       "decision": 19,
@@ -4728,7 +4746,8 @@
       "leading_contextual_relationships": [],
       "negative_sector_relations": [],
       "within_decision_recurrence": false,
-      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold"
+      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold",
+      "current_input_token_id": 187
     },
     {
       "decision": 20,
@@ -4770,7 +4789,8 @@
       ],
       "negative_sector_relations": [],
       "within_decision_recurrence": false,
-      "semantic_status": "contextual_relationship_candidates_found"
+      "semantic_status": "contextual_relationship_candidates_found",
+      "current_input_token_id": 187
     },
     {
       "decision": 21,
@@ -4816,7 +4836,8 @@
         "connection_crossing ↔ engineering_governance"
       ],
       "within_decision_recurrence": false,
-      "semantic_status": "contextual_relationship_candidates_found"
+      "semantic_status": "contextual_relationship_candidates_found",
+      "current_input_token_id": 510
     },
     {
       "decision": 22,
@@ -4955,7 +4976,8 @@
       ],
       "negative_sector_relations": [],
       "within_decision_recurrence": false,
-      "semantic_status": "contextual_relationship_candidates_found"
+      "semantic_status": "contextual_relationship_candidates_found",
+      "current_input_token_id": 2846
     },
     {
       "decision": 23,
@@ -4967,7 +4989,8 @@
       "leading_contextual_relationships": [],
       "negative_sector_relations": [],
       "within_decision_recurrence": false,
-      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold"
+      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold",
+      "current_input_token_id": 310
     },
     {
       "decision": 24,
@@ -4982,7 +5005,8 @@
         "connection_crossing ↔ engineering_governance"
       ],
       "within_decision_recurrence": false,
-      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold"
+      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold",
+      "current_input_token_id": 247
     },
     {
       "decision": 25,
@@ -5053,7 +5077,8 @@
       ],
       "negative_sector_relations": [],
       "within_decision_recurrence": false,
-      "semantic_status": "contextual_relationship_candidates_found"
+      "semantic_status": "contextual_relationship_candidates_found",
+      "current_input_token_id": 9729
     },
     {
       "decision": 26,
@@ -5067,7 +5092,8 @@
         "engineering_governance ↔ movement_routes"
       ],
       "within_decision_recurrence": false,
-      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold"
+      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold",
+      "current_input_token_id": 326
     },
     {
       "decision": 27,
@@ -5167,7 +5193,8 @@
       ],
       "negative_sector_relations": [],
       "within_decision_recurrence": false,
-      "semantic_status": "contextual_relationship_candidates_found"
+      "semantic_status": "contextual_relationship_candidates_found",
+      "current_input_token_id": 23417
     },
     {
       "decision": 28,
@@ -5210,7 +5237,8 @@
       ],
       "negative_sector_relations": [],
       "within_decision_recurrence": false,
-      "semantic_status": "contextual_relationship_candidates_found"
+      "semantic_status": "contextual_relationship_candidates_found",
+      "current_input_token_id": 253
     },
     {
       "decision": 29,
@@ -5374,7 +5402,8 @@
       ],
       "negative_sector_relations": [],
       "within_decision_recurrence": false,
-      "semantic_status": "contextual_relationship_candidates_found"
+      "semantic_status": "contextual_relationship_candidates_found",
+      "current_input_token_id": 8281
     },
     {
       "decision": 30,
@@ -5386,7 +5415,8 @@
       "leading_contextual_relationships": [],
       "negative_sector_relations": [],
       "within_decision_recurrence": false,
-      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold"
+      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold",
+      "current_input_token_id": 342
     },
     {
       "decision": 31,
@@ -5398,7 +5428,8 @@
       "leading_contextual_relationships": [],
       "negative_sector_relations": [],
       "within_decision_recurrence": false,
-      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold"
+      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold",
+      "current_input_token_id": 253
     },
     {
       "decision": 32,
@@ -5581,7 +5612,8 @@
       ],
       "negative_sector_relations": [],
       "within_decision_recurrence": true,
-      "semantic_status": "contextual_relationship_candidates_found"
+      "semantic_status": "contextual_relationship_candidates_found",
+      "current_input_token_id": 8281
     }
   ],
   "repeated_word_control": [
@@ -5597,7 +5629,13 @@
       "first_only": [
         "inhabitants ↔ settlement"
       ],
-      "second_only": []
+      "second_only": [],
+      "current_input_token_ids": [
+        380,
+        510
+      ],
+      "same_exact_input_token_id": false,
+      "comparison_type": "same_written_word_but_different_token_id"
     },
     {
       "decisions": [
@@ -5617,7 +5655,13 @@
       "second_only": [
         "built_places ↔ commerce",
         "commerce ↔ settlement"
-      ]
+      ],
+      "current_input_token_ids": [
+        2846,
+        2846
+      ],
+      "same_exact_input_token_id": true,
+      "comparison_type": "identical_input_token_id_at_different_positions"
     },
     {
       "decisions": [
@@ -5633,7 +5677,13 @@
       ],
       "second_only": [
         "commerce ↔ movement_routes"
-      ]
+      ],
+      "current_input_token_ids": [
+        9729,
+        9729
+      ],
+      "same_exact_input_token_id": true,
+      "comparison_type": "identical_input_token_id_at_different_positions"
     },
     {
       "decisions": [
@@ -5647,7 +5697,13 @@
         "movement_routes ↔ settlement"
       ],
       "first_only": [],
-      "second_only": []
+      "second_only": [],
+      "current_input_token_ids": [
+        23417,
+        23417
+      ],
+      "same_exact_input_token_id": true,
+      "comparison_type": "identical_input_token_id_at_different_positions"
     },
     {
       "decisions": [
@@ -5666,7 +5722,13 @@
       "second_only": [
         "built_places ↔ inhabitants",
         "inhabitants ↔ settlement"
-      ]
+      ],
+      "current_input_token_ids": [
+        8281,
+        8281
+      ],
+      "same_exact_input_token_id": true,
+      "comparison_type": "identical_input_token_id_at_different_positions"
     },
     {
       "decisions": [
@@ -5685,7 +5747,13 @@
         "built_places ↔ movement_routes",
         "movement_routes ↔ water_terrain",
         "built_places ↔ connection_crossing"
-      ]
+      ],
+      "current_input_token_ids": [
+        8281,
+        8281
+      ],
+      "same_exact_input_token_id": true,
+      "comparison_type": "identical_input_token_id_at_different_positions"
     }
   ],
   "interpretation": "Several functional relation types recur across distinct current-token decisions, including links involving settlement, movement and crossing, but no single relation can be traced through all 32 decisions and all layers under this method.",
@@ -5698,5 +5766,6 @@
     "Pairwise support across states is not automatically continuity of a single parent: specific community identities and alternatives must be inspected.",
     "The repeated response and single prompt offer no independent task-controlled comparator.",
     "Human usefulness evaluation remains pending."
-  ]
+  ],
+  "repeated_word_identity_note": "D02 versus D21 reads as the same written word, but the source tokenizer uses ĠThe versus The; input token IDs differ. Do not call this an exact-token repeat. Other listed pairs have matching current input token IDs."
 }
