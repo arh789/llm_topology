@@ -17,7 +17,8 @@
     "generation_transition_cases": 496,
     "candidate_depth_links": 901,
     "candidate_generation_links": 1084,
-    "display_backbone_edges": 15292
+    "display_backbone_edges": 15292,
+    "readable_atlas_networks": 512
   },
   "integrity": {
     "source_blob_ids_recorded": true,
@@ -25,7 +26,8 @@
     "full_local_verifier_executed": false,
     "HTML_embedded_data_parsed_and_script_syntax_checked": true,
     "science_interpretation_validated": false,
-    "review_human_utility": "pending"
+    "review_human_utility": "pending",
+    "checkpoint_manifest_evolved_to_add_atlases": true
   },
   "stages": [
     {
@@ -81,6 +83,17 @@
       "name": "read-only verifier for all stage artefacts and coverage",
       "status": "saved_syntax_checked; full_local_execution_pending",
       "artifact": "R020_VERIFY_RELATIONAL_V2.js"
+    },
+    {
+      "id": "M09A",
+      "name": "four token-by-token, layer-by-layer human-readable evidence atlases",
+      "status": "saved",
+      "artifacts": [
+        "R020_LAYER_TOKEN_ATLAS_D01-08.md",
+        "R020_LAYER_TOKEN_ATLAS_D09-16.md",
+        "R020_LAYER_TOKEN_ATLAS_D17-24.md",
+        "R020_LAYER_TOKEN_ATLAS_D25-32.md"
+      ]
     },
     {
       "id": "M10",
@@ -159,6 +172,26 @@
       "path": "R020_VERIFY_RELATIONAL_V2.js",
       "git_blob_sha": "d23f72c962a46ca6f458daf12e2549608443b815",
       "bytes": 6941
+    },
+    {
+      "path": "R020_LAYER_TOKEN_ATLAS_D01-08.md",
+      "git_blob_sha": "5dfb8dc3ea17927328f66f4008c1d5d2f6094009",
+      "bytes": 129366
+    },
+    {
+      "path": "R020_LAYER_TOKEN_ATLAS_D09-16.md",
+      "git_blob_sha": "f164b2b5ab5785c7ff04d395de0182745c2cdb24",
+      "bytes": 129259
+    },
+    {
+      "path": "R020_LAYER_TOKEN_ATLAS_D17-24.md",
+      "git_blob_sha": "1d31fc3d3c16918fb705eb00762000a6952ac17b",
+      "bytes": 128537
+    },
+    {
+      "path": "R020_LAYER_TOKEN_ATLAS_D25-32.md",
+      "git_blob_sha": "bb7ccf12a9c2a54095efc391b6c5c253fbc98ee1",
+      "bytes": 129791
     }
   ],
   "interpretation_limits": [
