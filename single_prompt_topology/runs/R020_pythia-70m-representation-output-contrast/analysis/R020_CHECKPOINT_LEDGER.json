@@ -80,6 +80,18 @@
         {
           "path": "../controls/shuffled_top_tokens.csv",
           "git_blob_sha": "42c18d6195da4d955c09c76efb1e191afad1105e"
+        },
+        {
+          "path": "R020_CHECKPOINT_AND_RECOVERY_PLAN.md",
+          "git_blob_sha": "aae2125019dd9761a08f68d4c2d088d451a5c57c"
+        },
+        {
+          "path": "R020_VERIFY_CHECKPOINTS.js",
+          "git_blob_sha": "e273fb04a8fc416a5b3f1338d8d875938d5e2c7c"
+        },
+        {
+          "path": "R020_CHECKPOINT_AUDIT.md",
+          "git_blob_sha": "875de003df29c3c99780726964024bc715086329"
         }
       ],
       "resume": "Do not rerun measurement; verify identity and declared coverage before any new stage."
@@ -180,8 +192,13 @@
     {
       "id": "C08",
       "operation": "human_usefulness_review",
-      "status": "awaiting_human_judgement",
-      "paths": [],
+      "status": "review_packet_saved; awaiting_human_judgement",
+      "paths": [
+        {
+          "path": "R020_HUMAN_REVIEW_PACKET.md",
+          "git_blob_sha": "e54824eaadd0626e8f6abcba863956442d0d2157"
+        }
+      ],
       "resume": "Do not infer user's judgement from the existing data or the model-generated report."
     },
     {
@@ -211,5 +228,12 @@
     "registered_provisional_analysis_not_scientific_validation": true,
     "ledger_is_derived_state_not_authoritative_without_verifier": true,
     "fail_closed": true
-  }
+  },
+  "human_review_packet": {
+    "path": "R020_HUMAN_REVIEW_PACKET.md",
+    "git_blob_sha": "e54824eaadd0626e8f6abcba863956442d0d2157",
+    "commit": "4965d70fcee7fe75aa7728efc077e55615736cc5",
+    "status": "ready_for_review_not_evaluated"
+  },
+  "local_validation_run_status": "not_executed_in_this_session; remote SHA metadata audit passed; no full-file checkout available"
 }
