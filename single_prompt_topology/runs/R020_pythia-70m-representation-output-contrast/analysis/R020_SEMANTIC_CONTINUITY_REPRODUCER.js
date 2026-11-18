@@ -130,7 +130,7 @@ function analyse(raw,prompt){
     }
     const relations=[...map.values()].map(x=>({...x,
       states:[...x.states].sort((a,b)=>a-b),phases:[...x.phase].sort(),sectors:[...x.sectors].sort(),
-      status:x.states.filter(s=>s>=1&&s<=5).length>=2?"recurrent_contextual_candidate":
+      status:[...x.states].filter(s=>s>=1&&s<=5).length>=2?"recurrent_contextual_candidate":
         x.states.some(s=>s>=1&&s<=5)?"single_contextual_state_candidate":
         x.states.includes(0)?"input_neighbourhood_only":"output_proximal_only"}))
       .sort((a,b)=>b.states.filter(s=>s>=1&&s<=5).length-a.states.filter(s=>s>=1&&s<=5).length||b.token_edges-a.token_edges||a.pair.localeCompare(b.pair));
