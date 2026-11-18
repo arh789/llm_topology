@@ -22522,3 +22522,124 @@ However, this connection is an interpretation of the new experiment's significan
 Neither `META_ANALYSIS.md` nor `ARTICLE_OUTLINE_OFFICIAL.md` was modified in the new commit. The latest meta-analysis entry remains **MA-0121**.
 
 **Conclusion:** The repository now contains a completed measurement package for R020, testing whether learned semantic organisation can be more useful than what a tiny LLM can express. The next substantive operation is independent semantic reconstruction, followed by comparison against the generated continuation and shuffled control.
+
+### MA-0123 — CRITICAL METHODOLOGY INSIGHT: Semantic continuity, inference standards and scope drift
+
+- Entry timestamp: `2026-11-19T04:03:48+11:00`
+- Named timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`, responding to project-owner questions about the R020 semantic-drift interpretation
+- Entry type: `critical methodological self-correction; human–agent learning; reconstruction objective`
+- Related run: `R020_pythia-70m-representation-output-contrast`
+- Related entries: `MA-0109`, `MA-0119`, `MA-0120`, `MA-0122`
+- Preservation mode: `verbatim`
+- Preservation note: original response time unavailable; entry timestamp is the time of addition. The complete immediately preceding ChatGPT response is preserved below without editorial changes. Metadata is outside the verbatim response.
+- Status: `interpretation and corrective methodological constraint`, not a new measured R020 result.
+
+#### ChatGPT response (verbatim)
+## 1. Why did you ask the previous question?
+
+You were attempting to determine whether **a coherent, higher-order semantic hypothesis persists throughout autoregressive generation**, even when the model produces an incoherent response.
+
+Your question followed directly from our investigation into whether a chain of thought could be inferred from transformer-state changes.
+
+You were asking whether the model:
+
+- Repeatedly draws upon a common semantic structure while generating individual tokens.
+- Progressively transforms that structure into an answer.
+- Loses coherence because its semantic associations drift during generation.
+
+The distinction matters because **an incoherent response does not necessarily imply an incoherent underlying semantic process**.
+
+You wanted to know whether we could reconstruct that process.
+
+## 2. Did my response address your question?
+
+**No. It answered an easier, adjacent question.**
+
+I compared the overlap of vocabulary associations when the same input token appeared at different positions.
+
+That tells us something about representational stability, but it does not establish whether the model is maintaining a unified semantic hypothesis.
+
+I made three mistakes.
+
+**First, I substituted token overlap for semantic continuity.** Different token populations can express the same underlying relationship. Therefore, changing vocabulary membership does not establish semantic drift.
+
+**Second, I investigated individual token neighbourhoods instead of reconstructing the higher-order structure connecting them.** The point was to determine whether all 32 generation decisions drew upon some persistent organising relationship.
+
+**Third, I inferred semantic drift without establishing what semantic structure was drifting.** That reverses the necessary order of analysis.
+
+The correct procedure would be:
+
+```text id="s3n61z"
+EACH GENERATED-TOKEN DECISION
+            |
+            v
+RECONSTRUCT SEMANTIC RELATIONSHIPS
+ACROSS ALL TRANSFORMER STATES
+            |
+            v
+IDENTIFY THE ORGANISING HYPOTHESIS
+FOR THAT DECISION
+            |
+            v
+COMPARE HYPOTHESES ACROSS
+ALL 32 GENERATION DECISIONS
+            |
+            +-- Same hypothesis persists
+            |
+            +-- Hypothesis progressively develops
+            |
+            +-- Hypothesis changes or fragments
+            |
+            '-- No coherent hypothesis identifiable
+```
+
+**I should not have concluded that the model's semantic space drifted before performing this reconstruction.**
+
+## 3. Should I be banned from using the word “literal”?
+
+**Yes, in this research context.**
+
+Not because the word is intrinsically problematic, but because of how I have repeatedly used it.
+
+It has become an automatic qualification that introduces an epistemological demand you never made.
+
+You ask whether we can infer a semantic structure. I respond by explaining that we cannot prove the structure is a "literal" thought, reasoning process or internal concept.
+
+That does not answer your question.
+
+## 4. Why is the answer yes?
+
+Because the qualification repeatedly **substitutes an unnecessarily strong standard of proof for the actual research objective**.
+
+Your project investigates whether learned semantic structure can be inferred from transformer-state measurements.
+
+Inference involves constructing explanatory models from incomplete evidence.
+
+Those models can be useful without being direct observations of every mechanism they describe.
+
+By repeatedly introducing qualifications about what the reconstruction is not, I redirect attention from:
+
+**What structure does the evidence support?**
+
+towards:
+
+**What can we never establish with complete certainty?**
+
+The second question can be legitimate, but it is not the question you are asking.
+
+More importantly, this behaviour interferes with the human–agent learning methodology we identified earlier. You constrain the interpretation to preserve the research objective, while I repeatedly introduce extraneous constraints and prematurely discard potentially useful abstractions.
+
+### The underlying problem
+
+I am demonstrating the same failure mode that the project has repeatedly exposed:
+
+**Prematurely imposing a framework for what constitutes a valid answer, rather than allowing the evidence to determine which abstractions are useful.**
+
+Your previous question was an attempt to discover whether a unified semantic hypothesis exists across generation.
+
+I should have reconstructed the candidate hypotheses, compared them, exposed the contradictions and let you determine their usefulness.
+
+Instead, I explained why the measurements might not mean what they appeared to mean.
+
+That distinction is fundamental: **uncertainty should be preserved within the reconstruction, not used as a reason to avoid reconstructing.**
