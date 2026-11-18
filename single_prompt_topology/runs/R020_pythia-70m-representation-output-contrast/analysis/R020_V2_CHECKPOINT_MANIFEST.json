@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "run_id": "R020_pythia-70m-representation-output-contrast",
+  "analysis_revision": "relational_v2",
+  "purpose": "Retain all original community nodes and structural links for every token decision and layer, with conservative cross-state correspondence candidates and human evaluation boundary.",
+  "measurement_source_commit": "6d7d6547e04407556b303b1c8b3ce9941daa8138",
+  "raw_network_git_blob_sha": "c55e630137b29417b0181c2d3506e7feb4b5d4de",
+  "analysis_status": "evidence_linked_relational_maps_saved; human_usefulness_pending",
+  "coverage": {
+    "decisions": 32,
+    "states": 8,
+    "sectors": 2,
+    "networks": 512,
+    "community_count": 6944,
+    "structural_modules": 1231,
+    "depth_transition_cases": 448,
+    "generation_transition_cases": 496,
+    "candidate_depth_links": 901,
+    "candidate_generation_links": 1084,
+    "display_backbone_edges": 15292
+  },
+  "integrity": {
+    "source_blob_ids_recorded": true,
+    "remote_artifact_presence_and_git_blob_ids_checked_by_GitHub": true,
+    "full_local_verifier_executed": false,
+    "HTML_embedded_data_parsed_and_script_syntax_checked": true,
+    "science_interpretation_validated": false,
+    "review_human_utility": "pending"
+  },
+  "stages": [
+    {
+      "id": "M01",
+      "name": "relational maps, decisions 01–08",
+      "status": "saved",
+      "artifact": "R020_RELATIONAL_MAP_D01-08.json"
+    },
+    {
+      "id": "M02",
+      "name": "relational maps, decisions 09–16",
+      "status": "saved",
+      "artifact": "R020_RELATIONAL_MAP_D09-16.json"
+    },
+    {
+      "id": "M03",
+      "name": "relational maps, decisions 17–24",
+      "status": "saved",
+      "artifact": "R020_RELATIONAL_MAP_D17-24.json"
+    },
+    {
+      "id": "M04",
+      "name": "relational maps, decisions 25–32",
+      "status": "saved",
+      "artifact": "R020_RELATIONAL_MAP_D25-32.json"
+    },
+    {
+      "id": "M05",
+      "name": "within-layer and cross-generation representative module match candidates",
+      "status": "saved",
+      "artifact": "R020_RELATIONAL_TRAJECTORIES.json"
+    },
+    {
+      "id": "M06",
+      "name": "paired same-token/different-token recurrence analysis",
+      "status": "saved",
+      "artifact": "R020_REPRESENTATIVE_REUSE_DIAGNOSTICS.json"
+    },
+    {
+      "id": "M07",
+      "name": "self-contained interactive 512-network semantic map",
+      "status": "saved",
+      "artifact": "R020_RELATIONAL_SEMANTIC_MAPS.html"
+    },
+    {
+      "id": "M08",
+      "name": "evidence-linked explanatory report and selected network maps",
+      "status": "saved",
+      "artifact": "R020_RELATIONAL_SEMANTIC_RECONSTRUCTION_V2.md"
+    },
+    {
+      "id": "M09",
+      "name": "read-only verifier for all stage artefacts and coverage",
+      "status": "saved_syntax_checked; full_local_execution_pending",
+      "artifact": "R020_VERIFY_RELATIONAL_V2.js"
+    },
+    {
+      "id": "M10",
+      "name": "human semantic usefulness evaluation",
+      "status": "pending_human_judgement",
+      "artifact": null
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "../chatgpt_community_networks.json",
+      "git_blob_sha": "c55e630137b29417b0181c2d3506e7feb4b5d4de",
+      "bytes": 22264637
+    },
+    {
+      "path": "../prompt_records.json",
+      "git_blob_sha": "6b58c8086a2e30930e139e1b43d78db674e26c54",
+      "bytes": 2525
+    },
+    {
+      "path": "../measurement_results.json",
+      "git_blob_sha": "01d83ad27701f951654c3dc687d962e4173ac848",
+      "bytes": 832
+    },
+    {
+      "path": "../manifest.json",
+      "git_blob_sha": "d0a4848aa44f16d2baf9d4a20fe087631cf0e8ab",
+      "bytes": 10002
+    },
+    {
+      "path": "../run_config.json",
+      "git_blob_sha": "fcbf340e11a8f400194e6a03c5cafa439814cc5b",
+      "bytes": 2565
+    },
+    {
+      "path": "R020_RELATIONAL_MAP_D01-08.json",
+      "git_blob_sha": "5bad75b02cec2330fd060224bf0a18a13f0d659a",
+      "bytes": 1469365
+    },
+    {
+      "path": "R020_RELATIONAL_MAP_D09-16.json",
+      "git_blob_sha": "7870cd2078059785cce43e2bdcc2313a4d263c8e",
+      "bytes": 1479920
+    },
+    {
+      "path": "R020_RELATIONAL_MAP_D17-24.json",
+      "git_blob_sha": "843a7633fe0810e3306c36d34f10432a5d8e6f89",
+      "bytes": 1440923
+    },
+    {
+      "path": "R020_RELATIONAL_MAP_D25-32.json",
+      "git_blob_sha": "f66e01ccae12c5c8ce00a7df226908b1fddf3c43",
+      "bytes": 1469404
+    },
+    {
+      "path": "R020_RELATIONAL_TRAJECTORIES.json",
+      "git_blob_sha": "32a962484060114815f7b616a3ec53138ce62fed",
+      "bytes": 500458
+    },
+    {
+      "path": "R020_REPRESENTATIVE_REUSE_DIAGNOSTICS.json",
+      "git_blob_sha": "546d5e0852e38267577e936b1cf10fe35493aab6",
+      "bytes": 57575
+    },
+    {
+      "path": "R020_RELATIONAL_SEMANTIC_MAPS.html",
+      "git_blob_sha": "66f39527dd5bab6e9d3099b6ead61f77517ebdd1",
+      "bytes": 1873031
+    },
+    {
+      "path": "R020_RELATIONAL_SEMANTIC_RECONSTRUCTION_V2.md",
+      "git_blob_sha": "77438dc56d05d569c3235f0c21202b42cce414b3",
+      "bytes": 12998
+    },
+    {
+      "path": "R020_VERIFY_RELATIONAL_V2.js",
+      "git_blob_sha": "d23f72c962a46ca6f458daf12e2549608443b815",
+      "bytes": 6941
+    }
+  ],
+  "interpretation_limits": [
+    "Modules are structural connectivity partitions; semantic parent identity cannot be inferred from modularity alone.",
+    "Representative vocabulary overlap is a candidate temporal correspondence, not a validated semantic-equivalence judgement.",
+    "R020's compact graph export does not include every original selected token membership and individual token edge.",
+    "Most associations at S00 are static input embedding neighbourhoods; not newly contextualised knowledge.",
+    "The generated answer was disclosed before this second pass; no blindness claim.",
+    "The eventual human usefulness judgement is separate from completeness of the mapped network and from scientific hypothesis support."
+  ],
+  "resume_policy": "Verify this manifest's pinned artefact SHA IDs and run R020_VERIFY_RELATIONAL_V2.js against a complete checkout. On mismatch stop, record the problem, and create a separately versioned correction; never overwrite frozen measurements or previous provisional map versions."
+}
