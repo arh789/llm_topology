@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "run_id": "R020_pythia-70m-representation-output-contrast",
+  "purpose": "Checkpoint existing provisional analysis and make any subsequent correction or deeper reconstruction restartable.",
+  "measurement_source_commit": "6d7d6547e04407556b303b1c8b3ce9941daa8138",
+  "existing_analysis_snapshot_commit": "40a8498ab66287d5b0ee6ce0827dc2b0708e12b9",
+  "checkpoint_plan": "R020_CHECKPOINT_AND_RECOVERY_PLAN.md",
+  "checkpoint_plan_commit": "ed3a34413191d82261b1bb7f74de75bb471b65a0",
+  "original_measurement_unchanged": true,
+  "progress_state": "existing_provisional_analysis_recorded_for_recovery; human_utility_pending",
+  "checkpoint_integrity_note": "Presence and immutable Git blob IDs verified by GitHub directory listing and R020_ANALYSIS_MANIFEST.json; no complete independent scientific revalidation of individual community labels was performed when registering these checkpoints.",
+  "expected_coverage": {
+    "generated_decisions": 32,
+    "recorded_states": 8,
+    "sectors": 2,
+    "network_cells": 512,
+    "communities": 6944
+  },
+  "existing_analysis_counts": {
+    "candidate_labelled": 1865,
+    "mixed_competing": 33,
+    "unresolved": 5046,
+    "adjacent_depth_matches": 705,
+    "adjacent_generation_matches": 961
+  },
+  "checkpoints": [
+    {
+      "id": "C00",
+      "operation": "frozen_inputs_and_coverage",
+      "status": "existing_measurement_recorded",
+      "paths": [
+        {
+          "path": "../manifest.json",
+          "git_blob_sha": "d0a4848aa44f16d2baf9d4a20fe087631cf0e8ab"
+        }
+      ],
+      "resume": "Do not rerun measurement; verify identity and declared coverage before any new stage."
+    },
+    {
+      "id": "C01",
+      "operation": "communities_decisions_01_08",
+      "status": "existing_provisional_artifact_registered",
+      "expected_network_cells": 128,
+      "paths": [
+        {
+          "path": "R020_COMMUNITIES_01-08.json",
+          "git_blob_sha": "d7c4548817448e7f1c309fe2bff5e1c721891d8a"
+        }
+      ]
+    },
+    {
+      "id": "C02",
+      "operation": "communities_decisions_09_16",
+      "status": "existing_provisional_artifact_registered",
+      "expected_network_cells": 128,
+      "paths": [
+        {
+          "path": "R020_COMMUNITIES_09-16.json",
+          "git_blob_sha": "a5273c42745fd4c619ad148f11f0a6a74cf9799e"
+        }
+      ]
+    },
+    {
+      "id": "C03",
+      "operation": "communities_decisions_17_24",
+      "status": "existing_provisional_artifact_registered",
+      "expected_network_cells": 128,
+      "paths": [
+        {
+          "path": "R020_COMMUNITIES_17-24.json",
+          "git_blob_sha": "6b25a09e1647921505be288718a152c9c50875d8a"
+        }
+      ]
+    },
+    {
+      "id": "C04",
+      "operation": "communities_decisions_25_32",
+      "status": "existing_provisional_artifact_registered",
+      "expected_network_cells": 128,
+      "paths": [
+        {
+          "path": "R020_COMMUNITIES_25-32.json",
+          "git_blob_sha": "ec58f1887ac025311973179d8da5d403cfe4d3a7"
+        }
+      ]
+    },
+    {
+      "id": "C05",
+      "operation": "state_cells_and_trajectories",
+      "status": "existing_provisional_artifact_registered",
+      "paths": [
+        {
+          "path": "R020_STATE_CELLS.json",
+          "git_blob_sha": "66b687e77e83adc3d2e6de0363df91c1940cc517"
+        }
+      ]
+    },
+    {
+      "id": "C06",
+      "operation": "diagnostics_and_controls",
+      "status": "existing_provisional_artifact_registered",
+      "paths": [
+        {
+          "path": "R020_DERIVED_DIAGNOSTICS.json",
+          "git_blob_sha": "1b81cc9278c151f15e26602b9696ce0b5b4283e0"
+        },
+        {
+          "path": "R020_ANALYSIS_REPRODUCER.js",
+          "git_blob_sha": "3fb53584410052aab9c3f31e5ef261298fed4b66"
+        }
+      ]
+    },
+    {
+      "id": "C07",
+      "operation": "published_provisional_semantic_map",
+      "status": "existing_provisional_artifact_registered",
+      "paths": [
+        {
+          "path": "R020_SEMANTIC_RECONSTRUCTION_REPORT.md",
+          "git_blob_sha": "2bd009f46d685cd74c1702e7a61cac46f40e88b6"
+        },
+        {
+          "path": "R020_SEMANTIC_MAP_REPORT.html",
+          "git_blob_sha": "20bbe9c94aa945b4815011c52e62687d3117ce1b"
+        },
+        {
+          "path": "R020_ANALYSIS_MANIFEST.json",
+          "git_blob_sha": "c50c58dbed20266bf482f0c6a0057dd9a3bafac7"
+        }
+      ]
+    },
+    {
+      "id": "C08",
+      "operation": "human_usefulness_review",
+      "status": "awaiting_human_judgement",
+      "paths": [],
+      "resume": "Do not infer user's judgement from the existing data or the model-generated report."
+    },
+    {
+      "id": "C09",
+      "operation": "final_interpretation_and_lifecycle_reconciliation",
+      "status": "pending_C08",
+      "paths": [],
+      "resume": "Only start after an explicit human usefulness judgement."
+    }
+  ],
+  "resume_policy": {
+    "check": "verify each declared blob SHA before reuse",
+    "on_missing": "resume only missing or failed checkpoint",
+    "write": "commit each new stage artifact before ledger update",
+    "on_failure": "record failure and preserve all earlier commits",
+    "on_revision": "new versioned files; preserve prior claims and negative results",
+    "source_data": "do not modify frozen measurement outputs",
+    "human_decision": "required for usefulness and final research judgement"
+  }
+}
