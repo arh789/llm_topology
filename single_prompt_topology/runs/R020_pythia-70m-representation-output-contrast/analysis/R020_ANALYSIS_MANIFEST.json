@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "run_id": "R020_pythia-70m-representation-output-contrast",
+  "source_measurement_commit": "6d7d6547e04407556b303b1c8b3ce9941daa8138",
+  "measurement_status": "measurement_successful",
+  "analysis_status": "provisional_semantic_reconstruction_prepared",
+  "human_utility_evaluation": "pending",
+  "original_frozen_measurement_manifest_unchanged": true,
+  "analysis_date": "2026-11-18",
+  "analysis_scope": {
+    "decisions": 32,
+    "states_per_decision": 8,
+    "sectors": 2,
+    "networks": 512,
+    "measured_communities_reviewed_as_summaries": 6944,
+    "candidate_labelled": 1865,
+    "mixed_competing": 33,
+    "unresolved": 5046,
+    "matched_adjacent_depth_community_pairs": 705,
+    "matched_adjacent_generation_community_pairs": 961
+  },
+  "method": "Reproducible representative-token lexical-semantic candidate screen, supplemented by inspection of repeated community exemplars and measured intercommunity/transition evidence. Categories are provisional, not proved latent concepts.",
+  "control": {
+    "kind": "globally shuffled vocabulary labels; graph shape preserved",
+    "candidate_labels_original": 1865,
+    "candidate_labels_shuffled": 0,
+    "interpretation": "Sensitivity check only; lexicon was defined post-hoc, so not an independent semantic ground truth."
+  },
+  "key_findings": [
+    "Early/input states include distinct communities of waterways, settlements, built structures, landscape, movement and routes.",
+    "Some route and settlement associations continue through early/middle transformer states.",
+    "S06/S07 networks are highly recurrent across generated-token decisions, but provisional candidate parents are predominantly off-topic.",
+    "No strong inference that these late-state representations preserve question-relevant utility or that they caused the generated continuation.",
+    "The generated continuation is poor; whether the early/intermediate associations are useful beyond that output is reserved for human evaluation."
+  ],
+  "limitations": [
+    "Generated answer and possible adjacent domains were previously disclosed; analysis cannot be claimed blind.",
+    "Only compact representative/extreme token lists, class counts, community edges and transition metrics were available remotely, not 1.42 million raw token memberships.",
+    "Most communities remained unresolved by the conservative candidate lexicon.",
+    "No inference that negative cosine denotes semantic suppression.",
+    "No claim of causal links from hidden states to generated tokens.",
+    "One model and one prompt; no generality claim."
+  ],
+  "artifacts": [
+    {
+      "path": "R020_ANALYSIS_REPRODUCER.js",
+      "git_blob_sha": "3fb53584410052aab9c3f31e5ef261298fed4b66"
+    },
+    {
+      "path": "R020_DERIVED_DIAGNOSTICS.json",
+      "git_blob_sha": "1b81cc9278c151f15e26602b9696ce0b5b4283e0"
+    },
+    {
+      "path": "R020_STATE_CELLS.json",
+      "git_blob_sha": "66b687e77e83adc3d2e6de0363df91c1940cc517"
+    },
+    {
+      "path": "R020_COMMUNITIES_01-08.json",
+      "git_blob_sha": "d7c4548817448e7f1c309fe2bff5e1c721891d8a"
+    },
+    {
+      "path": "R020_COMMUNITIES_09-16.json",
+      "git_blob_sha": "a5273c42745fd4c619ad148f11f0a6a74cf9799e"
+    },
+    {
+      "path": "R020_COMMUNITIES_17-24.json",
+      "git_blob_sha": "6b25a09e1647921505be288718a152c9c50875d8"
+    },
+    {
+      "path": "R020_COMMUNITIES_25-32.json",
+      "git_blob_sha": "ec58f1887ac025311973179d8da5d403cfe4d3a7"
+    },
+    {
+      "path": "R020_SEMANTIC_RECONSTRUCTION_REPORT.md",
+      "git_blob_sha": "2bd009f46d685cd74c1702e7a61cac46f40e88b6"
+    },
+    {
+      "path": "R020_SEMANTIC_MAP_REPORT.html",
+      "git_blob_sha": "20bbe9c94aa945b4815011c52e62687d3117ce1b"
+    }
+  ],
+  "frozen_run_status_note": "Measurement manifest retained as awaiting_semantic_analysis; separate analysis manifest records the semantic-screening output, while human usefulness evaluation and the strongest scientific inference remain open."
+}
