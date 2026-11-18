@@ -7,7 +7,7 @@
   "checkpoint_plan": "R020_CHECKPOINT_AND_RECOVERY_PLAN.md",
   "checkpoint_plan_commit": "ed3a34413191d82261b1bb7f74de75bb471b65a0",
   "original_measurement_unchanged": true,
-  "progress_state": "existing_provisional_analysis_recorded_for_recovery; human_utility_pending",
+  "progress_state": "source_and_analytical_artifacts_pinned; provisional_semantic_map_ready_for_human_review; final_inference_pending",
   "checkpoint_integrity_note": "All registered analysis file SHA IDs match GitHub metadata after correcting the documented C03 transcription error; content-level validation of semantic labels remains provisional. Treat recorded checkpoints as reusable only when artefact hashes and required coverage pass the independent verifier.",
   "expected_coverage": {
     "generated_decisions": 32,
@@ -32,6 +32,54 @@
         {
           "path": "../manifest.json",
           "git_blob_sha": "d0a4848aa44f16d2baf9d4a20fe087631cf0e8ab"
+        },
+        {
+          "path": "../measurement_results.json",
+          "git_blob_sha": "01d83ad27701f951654c3dc687d962e4173ac848"
+        },
+        {
+          "path": "../run_config.json",
+          "git_blob_sha": "fcbf340e11a8f400194e6a03c5cafa439814cc5b"
+        },
+        {
+          "path": "../chatgpt_community_networks.json",
+          "git_blob_sha": "c55e630137b29417b0181c2d3506e7feb4b5d4de"
+        },
+        {
+          "path": "../chatgpt_layer_packets.md",
+          "git_blob_sha": "2a72f25bf505247213dceef15d4329dad43e4c71"
+        },
+        {
+          "path": "../community_nodes.csv",
+          "git_blob_sha": "2444fed49e48ce65fff1b55f9ce64316aca71f34"
+        },
+        {
+          "path": "../community_edges.csv",
+          "git_blob_sha": "69e33a7370e2e9dd09cd6bd5ae398b7dcea0d255"
+        },
+        {
+          "path": "../top_tokens_by_step_and_state.csv",
+          "git_blob_sha": "176766fee962da85b7ab02440650685d57c69ba8"
+        },
+        {
+          "path": "../state_transitions.csv",
+          "git_blob_sha": "6be755f81b3409d6f774a0ad65a6dbfe440ab24f"
+        },
+        {
+          "path": "../generation_transitions.csv",
+          "git_blob_sha": "3d859769e6bcc8c323abe3c7a2b83b77ede51fc5"
+        },
+        {
+          "path": "../controls/shuffled_chatgpt_community_networks.json",
+          "git_blob_sha": "37b743c5ca4d57c2e0999de3281fa48ed6ec7dbc"
+        },
+        {
+          "path": "../controls/shuffled_community_nodes.csv",
+          "git_blob_sha": "5db72a794765e0f74636440d0898f791be91e28c"
+        },
+        {
+          "path": "../controls/shuffled_top_tokens.csv",
+          "git_blob_sha": "42c18d6195da4d955c09c76efb1e191afad1105e"
         }
       ],
       "resume": "Do not rerun measurement; verify identity and declared coverage before any new stage."
@@ -154,5 +202,14 @@
     "human_decision": "required for usefulness and final research judgement"
   },
   "integrity_audit": "R020_CHECKPOINT_AUDIT.md",
-  "integrity_audit_commit": "22f020201656aac7b4c58aa6391fc12c8e900a0f"
+  "integrity_audit_commit": "22f020201656aac7b4c58aa6391fc12c8e900a0f",
+  "verification_policy": {
+    "format": "git-blob-sha1",
+    "requires_exact_match": true,
+    "requires_structural_coverage": true,
+    "locked_input_files": 13,
+    "registered_provisional_analysis_not_scientific_validation": true,
+    "ledger_is_derived_state_not_authoritative_without_verifier": true,
+    "fail_closed": true
+  }
 }
