@@ -134,7 +134,8 @@ function analyse(raw,prompt){
         [...x.states].some(s=>s>=1&&s<=5)?"single_contextual_state_candidate":
         [...x.states].includes(0)?"input_neighbourhood_only":"output_proximal_only"}))
       .sort((a,b)=>b.states.filter(s=>s>=1&&s<=5).length-a.states.filter(s=>s>=1&&s<=5).length||b.token_edges-a.token_edges||a.pair.localeCompare(b.pair));
-    const taskRelations=relations.filter(x=>x.category==="question_related_candidate");
+    const taskRelations=relations.filter(x=>x.category==="question_related_candidate"&&x.sectors.includes("positive_head"));
+    const negativeTaskRelations=relations.filter(x=>x.category==="question_related_candidate"&&x.sectors.includes("negative_tail"));
     const topPerState=networks.map(g=>({state:g.state,sector:g.sector,
       anchor_roles:g.roles.map(x=>x.role),
       strongest_task_links:g.pairs.filter(p=>p.category==="question_related_candidate").slice(0,6).map(p=>({
@@ -144,6 +145,7 @@ function analyse(raw,prompt){
       unresolved_examples:g.unresolved_large_communities.slice(0,2)}));
     decisions.push({decision:d,current_input:curr,next_token:next,
       semantic_relations:taskRelations,
+      negative_sector_relation_candidates:negativeTaskRelations,
       background_relations:relations.filter(x=>x.category!=="question_related_candidate").slice(0,10),
       phase_summary:phases.map(ph=>({phase:ph.name,
         distinct_task_relations:taskRelations.filter(t=>t.states.some(s=>ph.states.includes(s))).length,
