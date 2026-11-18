@@ -22233,3 +22233,18 @@ But subsequent analysis revealed that this apparently incidental outcome could b
 That does not retroactively change the original hypothesis.
 
 **It means the project produced a second discovery that was not the object of the original investigation.**
+
+### MA-0120 — CRITICAL INSIGHT: Human learning through agent exploration
+
+- Entry timestamp: `2026-11-18T14:50:57+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`, identified by the project owner as a critical insight
+- Entry type: `critical insight; emergent human–agent learning mechanism`
+- Related entries: `MA-0083`, `MA-0099`, `MA-0119`
+- Related artefact: `ARTICLE_OUTLINE_OFFICIAL.md`, section 9
+- Preservation mode: `verbatim`
+- Interpretation boundary: This is a conceptual insight about human learning through agent-guided exploration, not a new transformer measurement.
+
+#### Critical insight (verbatim)
+
+> The human acquired knowledge about an unfamiliar possibility space by teaching the agent to explore it.
