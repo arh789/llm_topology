@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "run_id": "R020_pythia-70m-representation-output-contrast",
+  "source_measurement_commit": "6d7d6547e04407556b303b1c8b3ce9941daa8138",
+  "audit_scope": "Independent direct comparison of source community network JSON with all four relational map shards, all trajectory candidates and original token-alignment records.",
+  "audit_status": "PASSED",
+  "checks": {
+    "measured_networks": 512,
+    "relational_networks": 512,
+    "communities": 6944,
+    "structural_modules": 1231,
+    "measured_intercommunity_edges": 42291,
+    "displayed_backbone_edges": 15292,
+    "backbone_edges_matched_to_source": 15292,
+    "community_exemplars_matched_to_source": 6944,
+    "community_partition_checks_passed": 512,
+    "transition_cases": 944,
+    "transition_module_links": 1985,
+    "transition_module_links_recomputed": 1985
+  },
+  "coverage_by_shard": [
+    {
+      "decisions": [
+        1,
+        8
+      ],
+      "network_count": 128,
+      "community_count": 1741
+    },
+    {
+      "decisions": [
+        9,
+        16
+      ],
+      "network_count": 128,
+      "community_count": 1754
+    },
+    {
+      "decisions": [
+        17,
+        24
+      ],
+      "network_count": 128,
+      "community_count": 1708
+    },
+    {
+      "decisions": [
+        25,
+        32
+      ],
+      "network_count": 128,
+      "community_count": 1741
+    }
+  ],
+  "transition_consistency": {
+    "depth_cases": 448,
+    "generation_cases": 496,
+    "depth_links": 901,
+    "generation_links": 1084,
+    "invalid_links": 0
+  },
+  "token_identity_comparison": {
+    "definition": "Representative-token-ID set Jaccard for all 496 within-run pairs of generation decisions, split by identical current input token versus different input token; pairs share same prompt and are not statistically independent.",
+    "max_absolute_disagreement_with_existing_diagnostics": 0,
+    "rows": [
+      {
+        "state_index": 0,
+        "side": "positive_head",
+        "same_token_pairs": 26,
+        "different_token_pairs": 470,
+        "same_token_mean_jaccard": 1,
+        "different_token_mean_jaccard": 0.095672
+      },
+      {
+        "state_index": 0,
+        "side": "negative_tail",
+        "same_token_pairs": 26,
+        "different_token_pairs": 470,
+        "same_token_mean_jaccard": 1,
+        "different_token_mean_jaccard": 0.006525
+      },
+      {
+        "state_index": 1,
+        "side": "positive_head",
+        "same_token_pairs": 26,
+        "different_token_pairs": 470,
+        "same_token_mean_jaccard": 0.35991,
+        "different_token_mean_jaccard": 0.047996
+      },
+      {
+        "state_index": 1,
+        "side": "negative_tail",
+        "same_token_pairs": 26,
+        "different_token_pairs": 470,
+        "same_token_mean_jaccard": 0.37197,
+        "different_token_mean_jaccard": 0.053666
+      },
+      {
+        "state_index": 2,
+        "side": "positive_head",
+        "same_token_pairs": 26,
+        "different_token_pairs": 470,
+        "same_token_mean_jaccard": 0.292106,
+        "different_token_mean_jaccard": 0.052729
+      },
+      {
+        "state_index": 2,
+        "side": "negative_tail",
+        "same_token_pairs": 26,
+        "different_token_pairs": 470,
+        "same_token_mean_jaccard": 0.30225,
+        "different_token_mean_jaccard": 0.054876
+      },
+      {
+        "state_index": 3,
+        "side": "positive_head",
+        "same_token_pairs": 26,
+        "different_token_pairs": 470,
+        "same_token_mean_jaccard": 0.249893,
+        "different_token_mean_jaccard": 0.053363
+      },
+      {
+        "state_index": 3,
+        "side": "negative_tail",
+        "same_token_pairs": 26,
+        "different_token_pairs": 470,
+        "same_token_mean_jaccard": 0.257809,
+        "different_token_mean_jaccard": 0.066122
+      },
+      {
+        "state_index": 4,
+        "side": "positive_head",
+        "same_token_pairs": 26,
+        "different_token_pairs": 470,
+        "same_token_mean_jaccard": 0.155968,
+        "different_token_mean_jaccard": 0.046611
+      },
+      {
+        "state_index": 4,
+        "side": "negative_tail",
+        "same_token_pairs": 26,
+        "different_token_pairs": 470,
+        "same_token_mean_jaccard": 0.19032,
+        "different_token_mean_jaccard": 0.06874
+      },
+      {
+        "state_index": 5,
+        "side": "positive_head",
+        "same_token_pairs": 26,
+        "different_token_pairs": 470,
+        "same_token_mean_jaccard": 0.144779,
+        "different_token_mean_jaccard": 0.04733
+      },
+      {
+        "state_index": 5,
+        "side": "negative_tail",
+        "same_token_pairs": 26,
+        "different_token_pairs": 470,
+        "same_token_mean_jaccard": 0.170188,
+        "different_token_mean_jaccard": 0.062573
+      },
+      {
+        "state_index": 6,
+        "side": "positive_head",
+        "same_token_pairs": 26,
+        "different_token_pairs": 470,
+        "same_token_mean_jaccard": 0.497643,
+        "different_token_mean_jaccard": 0.376902
+      },
+      {
+        "state_index": 6,
+        "side": "negative_tail",
+        "same_token_pairs": 26,
+        "different_token_pairs": 470,
+        "same_token_mean_jaccard": 0.498433,
+        "different_token_mean_jaccard": 0.411409
+      },
+      {
+        "state_index": 7,
+        "side": "positive_head",
+        "same_token_pairs": 26,
+        "different_token_pairs": 470,
+        "same_token_mean_jaccard": 0.514918,
+        "different_token_mean_jaccard": 0.458808
+      },
+      {
+        "state_index": 7,
+        "side": "negative_tail",
+        "same_token_pairs": 26,
+        "different_token_pairs": 470,
+        "same_token_mean_jaccard": 0.527007,
+        "different_token_mean_jaccard": 0.466008
+      }
+    ]
+  },
+  "limitations": [
+    "GitHub's direct source contains compact community representatives and intercommunity edge summaries, not complete selected-token memberships or all individual neighbour edges.",
+    "Structural modules and vocabulary overlap matches are geometric or lexical evidence, not proved invariant semantic parents.",
+    "This audit verifies source fidelity and trajectory computation, not the truth of semantic labels or usefulness to a human.",
+    "Generated text and anticipated adjacent topics were disclosed prior to reconstruction; no blind interpretation claim.",
+    "A complete local checkout was not used to execute the pre-existing Node verifiers; source-to-derived comparisons were independently computed in this execution."
+  ],
+  "errors": []
+}
