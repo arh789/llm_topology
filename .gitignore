@@ -84,6 +84,15 @@ single_prompt_topology/runs/R018_olmo3-choke-point-barrier-spear-permutation-top
 !single_prompt_topology/runs/R019_olmo3-order-repeatability-control/**/*.json
 !single_prompt_topology/runs/R019_olmo3-order-repeatability-control/**/*.csv
 
+!single_prompt_topology/runs/R020_pythia-70m-representation-output-contrast/
+!single_prompt_topology/runs/R020_pythia-70m-representation-output-contrast/**/*.md
+!single_prompt_topology/runs/R020_pythia-70m-representation-output-contrast/**/*.json
+!single_prompt_topology/runs/R020_pythia-70m-representation-output-contrast/**/*.csv
+!single_prompt_topology/runs/R020_pythia-70m-representation-output-contrast/**/*.html
+single_prompt_topology/runs/R020_pythia-70m-representation-output-contrast/**/*.local.json
+single_prompt_topology/runs/R020_pythia-70m-representation-output-contrast/**/*.local.csv
+single_prompt_topology/runs/R020_pythia-70m-representation-output-contrast/**/*.gz
+
 # Model weights and checkpoints
 *.bin
 *.ckpt

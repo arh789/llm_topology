@@ -1,0 +1,334 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-18T05:49:16.869984+00:00",
+  "run_id": "R020_pythia-70m-representation-output-contrast",
+  "run_status": "awaiting_semantic_analysis",
+  "measurement_status": "measurement_successful",
+  "analysis_status": "not_started",
+  "self_exclusions": [
+    "manifest.json changes after index creation",
+    "artifact_index.json cannot hash itself"
+  ],
+  "artifacts": {
+    "capture_validation.json": {
+      "relative_path": "capture_validation.json",
+      "bytes": 1291,
+      "sha256": "e6ea2153bf96d0abd71ed7e86cdb45a9baee211955e7dbd239d7e96a8d31721d",
+      "artifact_type": "structured_record",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "chatgpt_community_networks.json": {
+      "relative_path": "chatgpt_community_networks.json",
+      "bytes": 22264637,
+      "sha256": "e4d3b0dd5bb7888c90ddcdb990568aa0ff523928e889135500e4c7348b13951f",
+      "artifact_type": "structured_record",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "chatgpt_layer_packets.md": {
+      "relative_path": "chatgpt_layer_packets.md",
+      "bytes": 1494129,
+      "sha256": "4dfe7aef77a564948fb08a5419499200bb4daec762a244189023a3a6f9deb585",
+      "artifact_type": "report",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "community_edges.csv": {
+      "relative_path": "community_edges.csv",
+      "bytes": 4166344,
+      "sha256": "71a75409fe503d74594dc331bc8f1fdecd6ca1d5f76b6c62205d1902ff2915dc",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "community_nodes.csv": {
+      "relative_path": "community_nodes.csv",
+      "bytes": 4068953,
+      "sha256": "f499b618f72f197b405f02c88fd1514a94123b8b55466f54b6320605f659869f",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "community_transition_evidence.csv": {
+      "relative_path": "community_transition_evidence.csv",
+      "bytes": 1377370,
+      "sha256": "9e33408fc146df472771711d15ff1b7ff4256511656dd01e8f3d35779079c4dd",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "controls/shuffled_chatgpt_community_networks.json": {
+      "relative_path": "controls/shuffled_chatgpt_community_networks.json",
+      "bytes": 21692903,
+      "sha256": "196ce3cab5908ce10d8f706c25ebcb153319b9b510cc70ddcee511f67ab3fcf0",
+      "artifact_type": "structured_record",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "controls/shuffled_chatgpt_layer_packets.md": {
+      "relative_path": "controls/shuffled_chatgpt_layer_packets.md",
+      "bytes": 1458212,
+      "sha256": "e0d3244f21dccfb0b559f127359b133031926f2f3e6648e03d853e817ab18ef5",
+      "artifact_type": "report",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "controls/shuffled_community_nodes.csv": {
+      "relative_path": "controls/shuffled_community_nodes.csv",
+      "bytes": 3742563,
+      "sha256": "3b122c37587faeb32111751c1c029f70b31a8e421f5c6b8bbbc5566b75ac3b37",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "controls/shuffled_token_mapping.local.csv": {
+      "relative_path": "controls/shuffled_token_mapping.local.csv",
+      "bytes": 1362000,
+      "sha256": "9b0e7236d3cbdcc2c5b8fe681b1fbe2a8ba5e044f1b807b3779fa851275f6b9e",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": false
+    },
+    "controls/shuffled_top_tokens.csv": {
+      "relative_path": "controls/shuffled_top_tokens.csv",
+      "bytes": 2566777,
+      "sha256": "63fdf3a3954c634cfe4e555096fabb8a722721620b5bf2b61636834ed88f7aea",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "cutoffs.csv": {
+      "relative_path": "cutoffs.csv",
+      "bytes": 41439,
+      "sha256": "caaaf1ae106358903ee454526505935f319ce042de96ee0b098cf76faa43e848",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "edges.csv.gz": {
+      "relative_path": "edges.csv.gz",
+      "bytes": 153893573,
+      "sha256": "ca209e01cac0951d58887059cf1af56b424bdd95aca9e397c479ab0f4d8b4107",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": false
+    },
+    "full_sequence_projection_reconciliation.csv": {
+      "relative_path": "full_sequence_projection_reconciliation.csv",
+      "bytes": 28033,
+      "sha256": "4b1529a1435a7a0b739a8382bd08c11c0e735b6522d68b1636e5577f9e95dde3",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "full_sequence_reconciliation.csv": {
+      "relative_path": "full_sequence_reconciliation.csv",
+      "bytes": 24770,
+      "sha256": "817d065ea3d562e08b68219abfa4991b19251401a5e924c40ae701d254c0f040",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "generation_trace.csv": {
+      "relative_path": "generation_trace.csv",
+      "bytes": 5758,
+      "sha256": "e65b289cd6d59c9b4d1ad552dd25ea139778ba46ad40559e1bfa6348f48f2acd",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "generation_transitions.csv": {
+      "relative_path": "generation_transitions.csv",
+      "bytes": 81380,
+      "sha256": "8baf3db605e4d05a5515125af713cffa1ab2b6e35ae0d9a21b591faf6f6de378",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "hypothesis.md": {
+      "relative_path": "hypothesis.md",
+      "bytes": 5303,
+      "sha256": "81e6fe4197cdc7039dbf9234d57b5cc440de569ec8568ceff2124a8d53599295",
+      "artifact_type": "report",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "local_raw_capture/primary_capture.safetensors": {
+      "relative_path": "local_raw_capture/primary_capture.safetensors",
+      "bytes": 17408584,
+      "sha256": "b8ef0ffea206dc10f0bddd6b4643863ce979d30ec0d8f915a07fc099d8f724fb",
+      "artifact_type": "tensor",
+      "evidence_class": "measurement",
+      "tracked_by_git": false
+    },
+    "local_raw_capture/replay_capture.safetensors": {
+      "relative_path": "local_raw_capture/replay_capture.safetensors",
+      "bytes": 17408472,
+      "sha256": "aee6aa8a6ff3d6e9999e7d978cdf4743af4ffbcf9eaf9f7c5b6a39e8923bfad2",
+      "artifact_type": "tensor",
+      "evidence_class": "measurement",
+      "tracked_by_git": false
+    },
+    "local_raw_capture/vocabulary_scores.safetensors": {
+      "relative_path": "local_raw_capture/vocabulary_scores.safetensors",
+      "bytes": 51483808,
+      "sha256": "f4c5db06dca98b1466752539496e3b294649727825b7cf3c1ff78c309cb35d55",
+      "artifact_type": "tensor",
+      "evidence_class": "measurement",
+      "tracked_by_git": false
+    },
+    "measurement_results.json": {
+      "relative_path": "measurement_results.json",
+      "bytes": 832,
+      "sha256": "a3d7190d78c866d9b0f45fab19620f04e77640f35b979a7660e85d51c9e53352",
+      "artifact_type": "structured_record",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "model_metadata.json": {
+      "relative_path": "model_metadata.json",
+      "bytes": 2398,
+      "sha256": "0dfcfb5499daa27718e9330529800a00b35b8da84b1451769a3afa7c1ce47f91",
+      "artifact_type": "structured_record",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "network_index.csv": {
+      "relative_path": "network_index.csv",
+      "bytes": 140395,
+      "sha256": "59598173d987b25f66325b03c51414486523518c0ab25d28919dbdf194052c79",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "next_token_top100.csv": {
+      "relative_path": "next_token_top100.csv",
+      "bytes": 215590,
+      "sha256": "9d4bd984471d028271feb58b6d640408d5167799b9e2f3da263455956350db70",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "nodes.csv.gz": {
+      "relative_path": "nodes.csv.gz",
+      "bytes": 34217371,
+      "sha256": "569387099815d67505e67dbc04831c2ba7c7218feaa8416d29e0a87c7bcaa48f",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": false
+    },
+    "projection_validation.json": {
+      "relative_path": "projection_validation.json",
+      "bytes": 836,
+      "sha256": "c26a9e5c9658eb482e9e8d9a4a709cb4ed3e2f9f69dd1ba49476e20a5482ff08",
+      "artifact_type": "structured_record",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "prompt_records.json": {
+      "relative_path": "prompt_records.json",
+      "bytes": 2525,
+      "sha256": "be73e95bfd72cc0fb443da344001e97cb3bbb40b763473fd346e178993fc3210",
+      "artifact_type": "structured_record",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "R020_COMPLETENESS_VERIFICATION.md": {
+      "relative_path": "R020_COMPLETENESS_VERIFICATION.md",
+      "bytes": 1018,
+      "sha256": "21ad9fa8453edb0e7cba74b5ddfc078d21016860d68fd67769d3e75a47c8b0b4",
+      "artifact_type": "report",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "R020_MEASUREMENT_REPORT.md": {
+      "relative_path": "R020_MEASUREMENT_REPORT.md",
+      "bytes": 1524,
+      "sha256": "dd218488447f55592c708f82075b0a8c7d0781d088e0a1b6dc041bba50678b3d",
+      "artifact_type": "report",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "R020_RUN_METHODOLOGY.md": {
+      "relative_path": "R020_RUN_METHODOLOGY.md",
+      "bytes": 23409,
+      "sha256": "916823e6df216acb43dec881c0674e7edbce17172fa96ccdef08f4a6edad4093",
+      "artifact_type": "report",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "R020_VALIDATION_AMENDMENT.md": {
+      "relative_path": "R020_VALIDATION_AMENDMENT.md",
+      "bytes": 2036,
+      "sha256": "d49731a0e41dfe22e7afd502a66efce66c27f997e3009add38780adc2faf2eea",
+      "artifact_type": "report",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "replay_hidden_state_metrics.csv": {
+      "relative_path": "replay_hidden_state_metrics.csv",
+      "bytes": 15506,
+      "sha256": "61673d8c6ca7ee78fada0295172a8bb41fb639a964bf540aa13ccebaf9566bc4",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "replay_logit_metrics.csv": {
+      "relative_path": "replay_logit_metrics.csv",
+      "bytes": 1500,
+      "sha256": "cfebc32fb38485c6b48cdcb927d75de2a112221eaa260d831f96b62ed93a3d04",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "replay_vocabulary_score_metrics.csv": {
+      "relative_path": "replay_vocabulary_score_metrics.csv",
+      "bytes": 15930,
+      "sha256": "c5a07498147751505643842c9493b8c3df55d3610eb1858f089cb99287f6dfcf",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "run_config.json": {
+      "relative_path": "run_config.json",
+      "bytes": 2565,
+      "sha256": "e097ed69c87ddc85da81ea0090fa51e58599bdad48e19afba910cf884c391436",
+      "artifact_type": "structured_record",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "state_transitions.csv": {
+      "relative_path": "state_transitions.csv",
+      "bytes": 78572,
+      "sha256": "f9a99a4a122dbca8d54f1f5511abe437d2bdbee6dcc86e8c55b72b7e664b6474",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "tail_tokens.csv.gz": {
+      "relative_path": "tail_tokens.csv.gz",
+      "bytes": 30354401,
+      "sha256": "1d34406b631908650379c63340d8cc3b2cba4c20629e36f260e7d7a493a73f07",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": false
+    },
+    "token_alignment.csv": {
+      "relative_path": "token_alignment.csv",
+      "bytes": 2274,
+      "sha256": "839056f50f1b1160781e80f04d4efc4a8c0586f2e20607c021c1c860424d6884",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    },
+    "top_tokens_by_step_and_state.csv": {
+      "relative_path": "top_tokens_by_step_and_state.csv",
+      "bytes": 2602470,
+      "sha256": "0fea069fae2a970ae031080e65346aaf401e21e2fdf79117ef7291c320aaf4aa",
+      "artifact_type": "table",
+      "evidence_class": "measurement",
+      "tracked_by_git": true
+    }
+  }
+}

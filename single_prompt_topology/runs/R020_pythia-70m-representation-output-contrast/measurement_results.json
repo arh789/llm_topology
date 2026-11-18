@@ -1,0 +1,22 @@
+{
+  "generated_token_count": 32,
+  "recorded_state_count": 8,
+  "network_count": 512,
+  "selected_membership_rows": 1419650,
+  "directed_edge_rows": 14196500,
+  "state_local_community_count": 6944,
+  "within_decision_transition_rows": 448,
+  "across_decision_transition_rows": 496,
+  "cutoff_rows": 256,
+  "top_token_rows": 25600,
+  "node_file_logical_rows": 1419650,
+  "edge_file_logical_rows": 14196500,
+  "replay_generated_tokens_exact": true,
+  "replay_hidden_states_exact": true,
+  "replay_logits_exact": true,
+  "full_sequence_elementwise_reconciliation_within_tolerance": false,
+  "full_sequence_directional_reconciliation_within_tolerance": true,
+  "full_sequence_top_token_sets_exact": true,
+  "full_sequence_min_positive_top_token_overlap": 50,
+  "full_sequence_min_negative_top_token_overlap": 50
+}

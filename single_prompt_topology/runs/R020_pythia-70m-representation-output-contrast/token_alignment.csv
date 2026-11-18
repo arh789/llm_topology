@@ -1,0 +1,54 @@
+sequence_position,source,generation_step,token_id,raw_token,decoded_token,predicted_by_sequence_position,decision_index,is_eos
+0,prompt,,23433,Question,Question,,,False
+1,prompt,,27,:,:,,,False
+2,prompt,,6049,ĠWhy, Why,,,False
+3,prompt,,651,Ġwould, would,,,False
+4,prompt,,247,Ġa, a,,,False
+5,prompt,,2846,Ġcity, city,,,False
+6,prompt,,1973,Ġbuild, build,,,False
+7,prompt,,247,Ġa, a,,,False
+8,prompt,,9729,Ġbridge, bridge,,,False
+9,prompt,,2439,Ġacross, across,,,False
+10,prompt,,247,Ġa, a,,,False
+11,prompt,,8281,Ġriver, river,,,False
+12,prompt,,32,?,?,,,False
+13,prompt,,187,Ċ,"
+",,,False
+14,prompt,,32869,Answer,Answer,,,False
+15,prompt,,27,:,:,,,False
+16,generated,1.0,380,ĠThe, The,15.0,0.0,False
+17,generated,2.0,2846,Ġcity, city,16.0,1.0,False
+18,generated,3.0,310,Ġis, is,17.0,2.0,False
+19,generated,4.0,247,Ġa, a,18.0,3.0,False
+20,generated,5.0,9729,Ġbridge, bridge,19.0,4.0,False
+21,generated,6.0,326,Ġthat, that,20.0,5.0,False
+22,generated,7.0,23417,Ġconnects, connects,21.0,6.0,False
+23,generated,8.0,253,Ġthe, the,22.0,7.0,False
+24,generated,9.0,8281,Ġriver, river,23.0,8.0,False
+25,generated,10.0,342,Ġwith, with,24.0,9.0,False
+26,generated,11.0,253,Ġthe, the,25.0,10.0,False
+27,generated,12.0,8281,Ġriver, river,26.0,11.0,False
+28,generated,13.0,15,.,.,27.0,12.0,False
+29,generated,14.0,187,Ċ,"
+",28.0,13.0,False
+30,generated,15.0,187,Ċ,"
+",29.0,14.0,False
+31,generated,16.0,34,A,A,30.0,15.0,False
+32,generated,17.0,27,:,:,31.0,16.0,False
+33,generated,18.0,187,Ċ,"
+",32.0,17.0,False
+34,generated,19.0,187,Ċ,"
+",33.0,18.0,False
+35,generated,20.0,510,The,The,34.0,19.0,False
+36,generated,21.0,2846,Ġcity, city,35.0,20.0,False
+37,generated,22.0,310,Ġis, is,36.0,21.0,False
+38,generated,23.0,247,Ġa, a,37.0,22.0,False
+39,generated,24.0,9729,Ġbridge, bridge,38.0,23.0,False
+40,generated,25.0,326,Ġthat, that,39.0,24.0,False
+41,generated,26.0,23417,Ġconnects, connects,40.0,25.0,False
+42,generated,27.0,253,Ġthe, the,41.0,26.0,False
+43,generated,28.0,8281,Ġriver, river,42.0,27.0,False
+44,generated,29.0,342,Ġwith, with,43.0,28.0,False
+45,generated,30.0,253,Ġthe, the,44.0,29.0,False
+46,generated,31.0,8281,Ġriver, river,45.0,30.0,False
+47,generated,32.0,15,.,.,46.0,31.0,False

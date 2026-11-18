@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-18T05:37:48.761931+00:00",
+  "model_id": "EleutherAI/pythia-70m",
+  "revision": "a39f36b100fe8a5377810d56c3f4789b9c53ac42",
+  "snapshot_path": "D:\\AI\\models\\huggingface\\EleutherAI\\pythia-70m--a39f36b100fe8a5377810d56c3f4789b9c53ac42",
+  "architecture": "GPTNeoXForCausalLM",
+  "transformer_block_class": "GPTNeoXLayer",
+  "layer_count": 6,
+  "recorded_state_count": 8,
+  "state_labels": [
+    "input_embedding",
+    "block_0_output",
+    "block_1_output",
+    "block_2_output",
+    "block_3_output",
+    "block_4_output",
+    "block_5_output",
+    "final_norm_after_block_5"
+  ],
+  "hidden_width": 512,
+  "input_embedding_shape": [
+    50304,
+    512
+  ],
+  "output_embedding_shape": [
+    50304,
+    512
+  ],
+  "input_output_embeddings_tied": false,
+  "tokenizer_class": "GPTNeoXTokenizer",
+  "tokenizer_length": 50277,
+  "tokenizer_special_ids": [
+    0,
+    1
+  ],
+  "files": {
+    "config.json": {
+      "bytes": 567,
+      "sha256": "002050231a9b1ec3ac77aa6b9b3bbdc4d923f4068a7dd33b8da72a9bd6ad9a43"
+    },
+    "model.safetensors": {
+      "bytes": 166029852,
+      "sha256": "ebfa4e2f18696ebd83716a0d39fe2c025f2ff8483f72a83ca59c475692fc9d15"
+    },
+    "special_tokens_map.json": {
+      "bytes": 99,
+      "sha256": "6f50ab5a5a509a1c309d6171f339b196a900dc9c99ad0408ff23bb615fdae7ad"
+    },
+    "tokenizer.json": {
+      "bytes": 2113710,
+      "sha256": "c24618a1b3e6a38167beff1c72cffd126c3a66254347304b50547d12c5f25624"
+    },
+    "tokenizer_config.json": {
+      "bytes": 396,
+      "sha256": "70e38394e494931c6f773ba41e19460dd4436526b852207367f04341b4066d3f"
+    }
+  },
+  "runtime": {
+    "python": "3.11.15 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:12:15) [MSC v.1942 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "torch": "2.6.0+cu124",
+    "transformers": "5.12.1",
+    "safetensors": "0.8.0",
+    "huggingface_hub": "1.19.0",
+    "numpy": "2.4.4",
+    "pandas": "3.0.3",
+    "networkx": "3.6.1",
+    "sklearn": "1.8.0",
+    "cuda": "12.4",
+    "gpu": "NVIDIA GeForce RTX 4090"
+  },
+  "acquisition_fallback": {
+    "used": true,
+    "primary_failure": "Windows symlink privilege prevented ordinary Hugging Face snapshot pointers.",
+    "fallback": "Immutable revision-pinned local_dir snapshot in D:/AI/models."
+  }
+}

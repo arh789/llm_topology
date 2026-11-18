@@ -1,0 +1,22 @@
+# R020 measurement completeness verification
+
+- Measurement status: **PASS**
+- Generated-token decisions: 32
+- Recorded states per decision: 8
+- Networks: 512 / 512
+- Within-decision state transitions: 448 / 448
+- Across-decision generation transitions: 496 / 496
+- Selected token memberships: 1,419,650
+- Directed exact 10-NN edges: 14,196,500
+- State-local communities: 6,944
+- Replay generated tokens exact: True
+- Replay hidden states exact: True
+- Replay logits exact: True
+- Prefix/full-sequence elementwise diagnostic: False
+- Prefix/full-sequence directional gate: True
+- Prefix/full-sequence positive top-token overlap: 50/50 minimum
+- Prefix/full-sequence negative top-token overlap: 50/50 minimum
+- Prefix/full-sequence top-token sets exact: True
+- Every selected node belongs to exactly one state-local community.
+- Compact measured exports contain no semantic parent labels or generated-token identities.
+- Semantic reconstruction and topic-trajectory interpretation remain pending.

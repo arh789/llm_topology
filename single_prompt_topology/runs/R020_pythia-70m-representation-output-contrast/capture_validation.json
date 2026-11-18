@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "status": "successful",
+  "recorded_at": "2026-11-18T05:39:25.557930+00:00",
+  "decision_state_shape": [
+    32,
+    8,
+    512
+  ],
+  "decision_logit_shape": [
+    32,
+    50304
+  ],
+  "full_sequence_state_shape": [
+    8,
+    48,
+    512
+  ],
+  "state_labels": [
+    "input_embedding",
+    "block_0_output",
+    "block_1_output",
+    "block_2_output",
+    "block_3_output",
+    "block_4_output",
+    "block_5_output",
+    "final_norm_after_block_5"
+  ],
+  "prompt_token_count": 16,
+  "generated_token_count": 32,
+  "stop_reason": "max_new_tokens",
+  "replay": {
+    "primary_generated_token_count": 32,
+    "replay_generated_token_count": 32,
+    "generated_token_ids_exact": true,
+    "decision_states_exact": true,
+    "decision_logits_exact": true,
+    "full_sequence_states_exact": true,
+    "all_final_sequence_elementwise_reconciliations_within_tolerance": false,
+    "all_final_sequence_directional_reconciliations_within_tolerance": true,
+    "all_final_sequence_reconciliations_within_tolerance": true,
+    "minimum_required_cosine_similarity": 0.9999999
+  },
+  "reconciliation_absolute_tolerance": 1e-05,
+  "reconciliation_relative_tolerance": 1e-05,
+  "reconciliation_min_cosine_similarity": 0.9999999
+}

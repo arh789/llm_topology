@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "run_number": 20,
+  "run_id": "R020_pythia-70m-representation-output-contrast",
+  "objective": "Test whether an intentionally tiny model exposes useful prompt-conditioned core and adjacent semantic structure across transformer depth and autoregressive generation even when its visible continuation is materially less useful.",
+  "run_directory": "single_prompt_topology/runs/R020_pythia-70m-representation-output-contrast",
+  "analysis_required": true,
+  "model": {
+    "id": "EleutherAI/pythia-70m",
+    "revision": "a39f36b100fe8a5377810d56c3f4789b9c53ac42",
+    "snapshot_path": "D:/AI/models/huggingface/EleutherAI/pythia-70m--a39f36b100fe8a5377810d56c3f4789b9c53ac42",
+    "architecture": "GPTNeoXForCausalLM",
+    "dtype": "float32",
+    "quantized": false,
+    "expected_layer_count": 6,
+    "expected_hidden_width": 512,
+    "expected_embedding_rows": 50304,
+    "embedding_key": "gpt_neox.embed_in.weight",
+    "output_key": "embed_out.weight",
+    "device": "cuda:0"
+  },
+  "prompt": {
+    "text": "Question: Why would a city build a bridge across a river?\nAnswer:",
+    "utf8_sha256": "5790fa42733d1fd7e991983f27eba90b250e5949b99597f9ef0fc7305fef1e1b",
+    "chat_template_used": false,
+    "add_special_tokens": false
+  },
+  "generation": {
+    "method": "greedy_argmax",
+    "do_sample": false,
+    "max_new_tokens": 32,
+    "stop_on_eos": true,
+    "use_cache": false,
+    "replay_count": 1
+  },
+  "capture": {
+    "input_embedding": true,
+    "raw_block_outputs": true,
+    "final_normalized_state": true,
+    "decision_logits": true,
+    "full_sequence_states": true,
+    "expected_state_count": 8,
+    "full_prefix_forward_each_step": true,
+    "reconciliation_absolute_tolerance": 1e-05,
+    "reconciliation_relative_tolerance": 1e-05,
+    "reconciliation_min_cosine_similarity": 0.9999999,
+    "reconciliation_required_top_token_overlap": 50
+  },
+  "topology": {
+    "projection_basis": "input_embedding",
+    "exclude_special_tokens": true,
+    "exclude_current_decision_token": false,
+    "top_tokens_per_sector": 50,
+    "cutoff_method": "full_curve_maximum_deviation",
+    "k_neighbors": 10,
+    "knn_batch_size": 512,
+    "louvain_resolution": 1.0,
+    "random_seed": 20261118,
+    "sectors": [
+      "positive_head",
+      "negative_tail"
+    ]
+  },
+  "controls": {
+    "deterministic_replay": true,
+    "shuffled_label_control": true,
+    "shuffle_seed": 20261118
+  },
+  "lifecycle": {
+    "measurement_success_status": "awaiting_semantic_analysis",
+    "semantic_interpretation_during_measurement": false
+  }
+}

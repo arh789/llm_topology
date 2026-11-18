@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "run_id": "R020_pythia-70m-representation-output-contrast",
+  "run_number": 20,
+  "started_at": "2026-11-18T05:37:46.481613+00:00",
+  "run_status": "awaiting_semantic_analysis",
+  "measurement_status": "measurement_successful",
+  "analysis_required": true,
+  "analysis_status": "not_started",
+  "config": {
+    "relative_path": "run_config.json",
+    "sha256": "e097ed69c87ddc85da81ea0090fa51e58599bdad48e19afba910cf884c391436"
+  },
+  "model": {
+    "id": "EleutherAI/pythia-70m",
+    "revision": "a39f36b100fe8a5377810d56c3f4789b9c53ac42",
+    "snapshot_path": "D:/AI/models/huggingface/EleutherAI/pythia-70m--a39f36b100fe8a5377810d56c3f4789b9c53ac42",
+    "architecture": "GPTNeoXForCausalLM",
+    "dtype": "float32",
+    "quantized": false,
+    "expected_layer_count": 6,
+    "expected_hidden_width": 512,
+    "expected_embedding_rows": 50304,
+    "embedding_key": "gpt_neox.embed_in.weight",
+    "output_key": "embed_out.weight",
+    "device": "cuda:0"
+  },
+  "prompt_sha256": "5790fa42733d1fd7e991983f27eba90b250e5949b99597f9ef0fc7305fef1e1b",
+  "required_components": [
+    "model_identity",
+    "primary_capture",
+    "deterministic_replay",
+    "projection_and_cutoffs",
+    "networks_and_communities",
+    "shuffled_control",
+    "measured_exports",
+    "resource_cleanup",
+    "completeness_validation"
+  ],
+  "components": {
+    "model_identity": {
+      "status": "successful",
+      "started_at": "2026-11-18T05:37:46.484121+00:00",
+      "completed_at": "2026-11-18T05:37:48.793046+00:00",
+      "elapsed_seconds": 2.308900199997879,
+      "revision": "a39f36b100fe8a5377810d56c3f4789b9c53ac42",
+      "model_file_sha256": "ebfa4e2f18696ebd83716a0d39fe2c025f2ff8483f72a83ca59c475692fc9d15",
+      "state_labels": [
+        "input_embedding",
+        "block_0_output",
+        "block_1_output",
+        "block_2_output",
+        "block_3_output",
+        "block_4_output",
+        "block_5_output",
+        "final_norm_after_block_5"
+      ],
+      "memory_after_load": {
+        "timestamp": "2026-11-18T05:37:48.785780+00:00",
+        "cuda_available": true,
+        "cuda_device": "NVIDIA GeForce RTX 4090",
+        "cuda_free_bytes": 23787995136,
+        "cuda_total_bytes": 25756696576,
+        "cuda_allocated_bytes": 282756096,
+        "cuda_reserved_bytes": 301989888,
+        "cuda_peak_allocated_bytes": 282756096
+      }
+    },
+    "primary_capture": {
+      "status": "successful",
+      "started_at": "2026-11-18T05:37:48.794556+00:00",
+      "completed_at": "2026-11-18T05:38:36.616756+00:00",
+      "elapsed_seconds": 47.82190189999528,
+      "generated_token_count": 32,
+      "stop_reason": "max_new_tokens",
+      "decision_state_shape": [
+        32,
+        8,
+        512
+      ],
+      "full_sequence_state_shape": [
+        8,
+        48,
+        512
+      ],
+      "peak_gpu_allocated_bytes": 326879744
+    },
+    "deterministic_replay": {
+      "status": "successful",
+      "started_at": "2026-11-18T05:38:36.617755+00:00",
+      "completed_at": "2026-11-18T05:39:25.560729+00:00",
+      "elapsed_seconds": 48.94241459999466,
+      "primary_generated_token_count": 32,
+      "replay_generated_token_count": 32,
+      "generated_token_ids_exact": true,
+      "decision_states_exact": true,
+      "decision_logits_exact": true,
+      "full_sequence_states_exact": true,
+      "all_final_sequence_elementwise_reconciliations_within_tolerance": false,
+      "all_final_sequence_directional_reconciliations_within_tolerance": true,
+      "all_final_sequence_reconciliations_within_tolerance": true,
+      "minimum_required_cosine_similarity": 0.9999999
+    },
+    "projection_and_cutoffs": {
+      "status": "successful",
+      "started_at": "2026-11-18T05:39:25.562746+00:00",
+      "completed_at": "2026-11-18T05:39:48.774323+00:00",
+      "elapsed_seconds": 23.211280700001225,
+      "schema_version": 1,
+      "score_shape": [
+        32,
+        8,
+        50277
+      ],
+      "vocabulary_size": 50277,
+      "embedding_rows": 50304,
+      "padded_embedding_rows_excluded": 27,
+      "special_token_ids_excluded": [
+        0,
+        1
+      ],
+      "eligible_vocabulary_size": 50275,
+      "decision_token_excluded": false,
+      "top_tokens_per_sector": 50,
+      "replay_score_exact": true,
+      "full_sequence_reconciliation_rows": 256,
+      "full_sequence_required_top_token_overlap": 50,
+      "full_sequence_min_positive_top_token_overlap": 50,
+      "full_sequence_min_negative_top_token_overlap": 50,
+      "full_sequence_top_token_sets_exact": true,
+      "full_sequence_max_absolute_score_difference": 5.077198147773743e-05,
+      "full_sequence_mean_l2_score_distance": 0.00013787146408557072,
+      "full_sequence_min_score_cosine_similarity": 0.9999999620087487,
+      "cutoff_rows": 256,
+      "top_token_rows": 25600
+    },
+    "networks_and_communities": {
+      "status": "successful",
+      "started_at": "2026-11-18T05:39:48.904830+00:00",
+      "completed_at": "2026-11-18T05:48:54.555289+00:00",
+      "elapsed_seconds": 545.650080899999,
+      "decision_count": 32,
+      "network_count": 512,
+      "selected_node_rows": 1419650,
+      "directed_edge_rows": 14196500,
+      "community_rows": 6944,
+      "intercommunity_edge_rows": 42291,
+      "within_decision_transition_rows": 448,
+      "across_decision_transition_rows": 496,
+      "community_match_rows": 12740,
+      "nodes_sha256": "569387099815d67505e67dbc04831c2ba7c7218feaa8416d29e0a87c7bcaa48f",
+      "edges_sha256": "ca209e01cac0951d58887059cf1af56b424bdd95aca9e397c479ab0f4d8b4107"
+    },
+    "shuffled_control": {
+      "status": "successful",
+      "started_at": "2026-11-18T05:39:48.904830+00:00",
+      "completed_at": "2026-11-18T05:48:54.563288+00:00",
+      "elapsed_seconds": 545.6579607999956,
+      "mapping_rows": 50275,
+      "mapping_sha256": "9b0e7236d3cbdcc2c5b8fe681b1fbe2a8ba5e044f1b807b3779fa851275f6b9e",
+      "control_networks": 512,
+      "control_json_sha256": "196ce3cab5908ce10d8f706c25ebcb153319b9b510cc70ddcee511f67ab3fcf0"
+    },
+    "measured_exports": {
+      "status": "successful",
+      "started_at": "2026-11-18T05:39:48.904830+00:00",
+      "completed_at": "2026-11-18T05:48:54.571838+00:00",
+      "elapsed_seconds": 545.6661154999965,
+      "chatgpt_networks": 512,
+      "chatgpt_json_sha256": "e4d3b0dd5bb7888c90ddcdb990568aa0ff523928e889135500e4c7348b13951f",
+      "semantic_labels_added": false,
+      "generated_tokens_disclosed_in_compact_exports": false
+    },
+    "resource_cleanup": {
+      "status": "successful",
+      "started_at": "2026-11-18T05:48:54.572838+00:00",
+      "completed_at": "2026-11-18T05:48:54.790876+00:00",
+      "elapsed_seconds": 0.21734440000000177,
+      "memory_after_cleanup": {
+        "timestamp": "2026-11-18T05:48:54.782136+00:00",
+        "cuda_available": true,
+        "cuda_device": "NVIDIA GeForce RTX 4090",
+        "cuda_free_bytes": 24045944832,
+        "cuda_total_bytes": 25756696576,
+        "cuda_allocated_bytes": 33554432,
+        "cuda_reserved_bytes": 33554432,
+        "cuda_peak_allocated_bytes": 473279488
+      }
+    },
+    "completeness_validation": {
+      "status": "successful",
+      "started_at": "2026-11-18T05:48:54.792875+00:00",
+      "completed_at": "2026-11-18T05:49:16.472563+00:00",
+      "elapsed_seconds": 21.68023259999609,
+      "generated_token_count": 32,
+      "recorded_state_count": 8,
+      "network_count": 512,
+      "selected_membership_rows": 1419650,
+      "directed_edge_rows": 14196500,
+      "state_local_community_count": 6944,
+      "within_decision_transition_rows": 448,
+      "across_decision_transition_rows": 496,
+      "cutoff_rows": 256,
+      "top_token_rows": 25600,
+      "node_file_logical_rows": 1419650,
+      "edge_file_logical_rows": 14196500,
+      "replay_generated_tokens_exact": true,
+      "replay_hidden_states_exact": true,
+      "replay_logits_exact": true,
+      "full_sequence_elementwise_reconciliation_within_tolerance": false,
+      "full_sequence_directional_reconciliation_within_tolerance": true,
+      "full_sequence_top_token_sets_exact": true,
+      "full_sequence_min_positive_top_token_overlap": 50,
+      "full_sequence_min_negative_top_token_overlap": 50
+    }
+  },
+  "failure_details": null,
+  "fallbacks": [
+    {
+      "name": "revision_pinned_local_model",
+      "used": true,
+      "reason": "The ordinary Hugging Face cache path could not create Windows symlinks; the immutable snapshot was downloaded to the canonical pinned-model store.",
+      "snapshot_path": "D:\\AI\\models\\huggingface\\EleutherAI\\pythia-70m--a39f36b100fe8a5377810d56c3f4789b9c53ac42"
+    }
+  ],
+  "measurement_completed_at": "2026-11-18T05:49:16.880488+00:00",
+  "results": {
+    "generated_token_count": 32,
+    "recorded_state_count": 8,
+    "network_count": 512,
+    "selected_membership_rows": 1419650,
+    "directed_edge_rows": 14196500,
+    "state_local_community_count": 6944,
+    "within_decision_transition_rows": 448,
+    "across_decision_transition_rows": 496,
+    "cutoff_rows": 256,
+    "top_token_rows": 25600,
+    "node_file_logical_rows": 1419650,
+    "edge_file_logical_rows": 14196500,
+    "replay_generated_tokens_exact": true,
+    "replay_hidden_states_exact": true,
+    "replay_logits_exact": true,
+    "full_sequence_elementwise_reconciliation_within_tolerance": false,
+    "full_sequence_directional_reconciliation_within_tolerance": true,
+    "full_sequence_top_token_sets_exact": true,
+    "full_sequence_min_positive_top_token_overlap": 50,
+    "full_sequence_min_negative_top_token_overlap": 50
+  },
+  "artifact_index": {
+    "relative_path": "artifact_index.json",
+    "bytes": 13067,
+    "sha256": "63d802e4e9fb014cd78fd17b95916c861edc4cf106214c6beae3e8bbab0943b0",
+    "indexed_artifact_count": 40
+  }
+}

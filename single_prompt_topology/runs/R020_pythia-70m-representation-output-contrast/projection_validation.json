@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "score_shape": [
+    32,
+    8,
+    50277
+  ],
+  "vocabulary_size": 50277,
+  "embedding_rows": 50304,
+  "padded_embedding_rows_excluded": 27,
+  "special_token_ids_excluded": [
+    0,
+    1
+  ],
+  "eligible_vocabulary_size": 50275,
+  "decision_token_excluded": false,
+  "top_tokens_per_sector": 50,
+  "replay_score_exact": true,
+  "full_sequence_reconciliation_rows": 256,
+  "full_sequence_required_top_token_overlap": 50,
+  "full_sequence_min_positive_top_token_overlap": 50,
+  "full_sequence_min_negative_top_token_overlap": 50,
+  "full_sequence_top_token_sets_exact": true,
+  "full_sequence_max_absolute_score_difference": 5.077198147773743e-05,
+  "full_sequence_mean_l2_score_distance": 0.00013787146408557072,
+  "full_sequence_min_score_cosine_similarity": 0.9999999620087487
+}
