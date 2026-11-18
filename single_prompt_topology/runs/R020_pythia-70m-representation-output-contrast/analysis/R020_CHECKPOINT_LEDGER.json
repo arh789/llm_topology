@@ -87,11 +87,11 @@
         },
         {
           "path": "R020_VERIFY_CHECKPOINTS.js",
-          "git_blob_sha": "e273fb04a8fc416a5b3f1338d8d875938d5e2c7c"
+          "git_blob_sha": "da8920b16187c6335a90ef5a4334e2ca0218613b"
         },
         {
           "path": "R020_CHECKPOINT_AUDIT.md",
-          "git_blob_sha": "875de003df29c3c99780726964024bc715086329"
+          "git_blob_sha": "dd4cf2d74d9aa0b17bfe76877e0eb1e82fcd489b"
         },
         {
           "path": "../R020_RUN_METHODOLOGY.md",
@@ -247,5 +247,5 @@
     "commit": "4965d70fcee7fe75aa7728efc077e55615736cc5",
     "status": "ready_for_review_not_evaluated"
   },
-  "local_validation_run_status": "not_executed_in_this_session; remote SHA metadata audit passed; no full-file checkout available"
+  "local_validation_run_status": "executed_2026-11-19; complete local checkpoint verifier and independent relational-v2 verifier passed after documented A003 verifier correction"
 }

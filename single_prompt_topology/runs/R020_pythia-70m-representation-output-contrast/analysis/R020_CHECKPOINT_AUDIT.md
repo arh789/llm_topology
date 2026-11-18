@@ -28,3 +28,14 @@
 - The read-only `R020_VERIFY_CHECKPOINTS.js` verifier was added. Its JavaScript **syntax** was checked, but it has **not yet been executed against a complete local checkout** in this session. The remote catalogue check is not equivalent to local full-file hashing, shard-by-shard completeness verification, or validation of the correctness of semantic labels.
 - A concise human-review packet was saved separately; its publication does not constitute human endorsement of usefulness.
 - On a future run, execute `node single_prompt_topology/runs/R020_pythia-70m-representation-output-contrast/analysis/R020_VERIFY_CHECKPOINTS.js` from a complete checkout. **Do not proceed** with a checkpoint that fails this validation.
+
+## Integrity event A003 — Transition cases were compared with community-link totals
+
+- Date: 2026-11-19 (Australia/Sydney).
+- Context: the documented verifier was executed against a complete local checkout for the first time.
+- The verifier successfully reconciled all **30 registered files** and all **6,944 community rows**, then failed its final transition check.
+- Cause: `R020_STATE_CELLS.json` contains **448 layer-transition cases** and **496 generation-transition cases**. Each case contains a nested `matches` array. The verifier incorrectly compared those outer case counts with the manifest's nested community-link totals of **705 depth links** and **961 generation links**.
+- Evidence: summing the nested arrays produces exactly **705** and **961** links. The independent relational-v2 verifier also passed with **944 transition cases** and **1,985 candidate module links**.
+- Correction: the checkpoint verifier now validates the 448/496 case coverage, requires every case to contain a `matches` array, and independently sums those arrays for comparison with the 705/961 link totals.
+- Post-correction result: the complete checkpoint verifier passed all **30 registered files** and **6,944 community rows** with no failures; the relational-v2 verifier also passed with no failures.
+- Scope boundary: no measurement output, community annotation, semantic reconstruction, consolidated report or human-review judgement was changed. Human usefulness evaluation remains pending.

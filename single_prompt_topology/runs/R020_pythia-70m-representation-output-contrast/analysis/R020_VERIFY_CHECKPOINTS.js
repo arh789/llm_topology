@@ -144,9 +144,25 @@ function verifyCoverage(ledger) {
   }
   check(recordsByCell.size === 512 && seenCells.size === 512,
     "expected 512 distinct decision/state/sector cells");
-  check(cells.matches?.layer?.length === manifest.analysis_scope.matched_adjacent_depth_community_pairs &&
-    cells.matches?.generation?.length === manifest.analysis_scope.matched_adjacent_generation_community_pairs,
-    "recorded layer/generation matches do not reconcile");
+  const layerCases = cells.matches?.layer;
+  const generationCases = cells.matches?.generation;
+  const expectedLayerCases = 32 * (8 - 1) * 2;
+  const expectedGenerationCases = (32 - 1) * 8 * 2;
+  check(Array.isArray(layerCases) && layerCases.length === expectedLayerCases,
+    "recorded layer transition cases do not reconcile");
+  check(Array.isArray(generationCases) && generationCases.length === expectedGenerationCases,
+    "recorded generation transition cases do not reconcile");
+  check((layerCases || []).every(row => Array.isArray(row.matches)),
+    "a layer transition case is missing its matches array");
+  check((generationCases || []).every(row => Array.isArray(row.matches)),
+    "a generation transition case is missing its matches array");
+  const layerLinks = (layerCases || []).reduce((total, row) =>
+    total + (Array.isArray(row.matches) ? row.matches.length : 0), 0);
+  const generationLinks = (generationCases || []).reduce((total, row) =>
+    total + (Array.isArray(row.matches) ? row.matches.length : 0), 0);
+  check(layerLinks === manifest.analysis_scope.matched_adjacent_depth_community_pairs &&
+    generationLinks === manifest.analysis_scope.matched_adjacent_generation_community_pairs,
+    "recorded layer/generation community-link totals do not reconcile");
 
   const diagnostic = readJSON("R020_DERIVED_DIAGNOSTICS.json");
   check(diagnostic.run_id === EXPECTED_RUN &&
