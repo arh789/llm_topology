@@ -22643,3 +22643,108 @@ I should have reconstructed the candidate hypotheses, compared them, exposed the
 Instead, I explained why the measurements might not mean what they appeared to mean.
 
 That distinction is fundamental: **uncertainty should be preserved within the reconstruction, not used as a reason to avoid reconstructing.**
+
+### MA-0124 — R020 governing question: higher-order semantic continuity across generated tokens
+
+- Entry timestamp: `2026-11-19T04:31:28+11:00`
+- Named timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`, responding to project owner
+- Entry type: `task-definition and methodological boundary for R020 cross-generation semantic reconstruction`
+- Related run: `R020_pythia-70m-representation-output-contrast`
+- Related entries: `MA-0122`, `MA-0123`
+- Preservation mode: `verbatim`
+- Preservation note: the immediately preceding ChatGPT response is reproduced in full below. This entry is a plan and interpretation, not a new scientific finding.
+
+#### ChatGPT response (verbatim)
+## 1. Inferred goal
+
+**Determine whether a coherent, higher-order semantic hypothesis persists, develops or changes as an LLM generates its response, by reconstructing the semantic relationships present at each transformer state for each generated token.**
+
+R020 provides an opportunity to investigate whether an incoherent generated answer can emerge from a more coherent underlying semantic process.
+
+The question is not whether individual tokens or communities remain stable. It is whether **the same organising relationship can persist even as its constituent tokens and representations change**.
+
+## 2. What would a successful outcome look like?
+
+A successful reconstruction would identify the broad semantic hypothesis associated with each generation decision and show how it changes through transformer depth and generation time.
+
+For example, a candidate relationship might be *connecting settlements across a geographical obstacle*. This is an illustrative hypothesis, not a conclusion to impose on the data.
+
+```text id="69ps1l"
+                  GENERATION SEQUENCE
+                          |
+              +-----------+-----------+
+              |           |           |
+           TOKEN 01    TOKEN 02    TOKEN 03
+              |           |           |
+           S00–S07     S00–S07     S00–S07
+              |           |           |
+              v           v           v
+          SEMANTIC     SEMANTIC     SEMANTIC
+         HYPOTHESIS   HYPOTHESIS   HYPOTHESIS
+              |           |           |
+              +-----------+-----------+
+                          |
+                          v
+                 HIGHER-ORDER MAP
+                          |
+             +------------+------------+
+             |            |            |
+          PERSISTENCE  DEVELOPMENT    DRIFT
+                          |
+                          v
+              RECONSTRUCTED SEMANTIC
+                  PROCESS
+```
+
+Success means we can present a defensible account of which relationships remain invariant, which develop and which disappear.
+
+If no persistent hypothesis is recoverable, that is also a scientifically useful result, provided the reconstruction genuinely tested for one.
+
+## 3. What would an unsuccessful outcome look like?
+
+An unsuccessful analysis would:
+
+- Substitute vocabulary overlap for semantic continuity.
+- Assign plausible semantic labels without reconstructing relationships.
+- Treat structurally connected communities as necessarily coherent concepts.
+- Declare semantic drift simply because token populations change.
+- Invent an organising hypothesis that the evidence does not support.
+- Produce another report without answering whether a common semantic structure persists across generation.
+
+**The methodological failure would be failing to reconstruct the possibility space, not discovering that a particular hypothesis is unsupported.**
+
+## 4. What would indicate scope drift?
+
+The clearest indicator would be introducing requirements that are not necessary to answer the research question.
+
+Examples include demanding proof of subjective reasoning, shifting into debates about consciousness, adding new experiments before analysing existing evidence, or repeatedly explaining the limitations of reconstruction instead of performing it.
+
+There is also a more subtle danger: **prematurely imposing coherence**.
+
+We must neither assume a shared semantic hypothesis exists nor dismiss its existence because the surface representations differ.
+
+The analysis must preserve unexplained relationships until there is evidence for retaining, separating or rejecting them.
+
+## 5. What steps need to take place next?
+
+The measurements and relational network maps already exist. The missing operation is **higher-order semantic reconstruction across the complete generation sequence**.
+
+<list marker="number" gap={2}>
+  <list-item>**Reconstruct each generation decision.** For each of the 32 decisions, examine its eight states and both cosine sectors. Identify the broad semantic parents and relationships represented across those states.</list-item>
+  <list-item>**Construct one integrated semantic map per decision.** Distinguish relationships recurring across layers from transient, conflicting or unexplained structures. Retain evidence references.</list-item>
+  <list-item>**Compare all 32 maps.** Identify recurring functional relationships even where their vocabulary and community membership change.</list-item>
+  <list-item>**Separate persistence from drift.** Determine whether a common organising hypothesis survives, progressively develops, fragments or is displaced by other structures. Distinguish shared model-wide background from question-specific organisation.</list-item>
+  <list-item>**Reconstruct the generation-wide semantic trajectory.** Produce one consolidated map showing the strongest supported organising hypotheses and where their relationships change.</list-item>
+  <list-item>**Present the reconstruction for human evaluation.** Show the semantic map, supporting evidence, competing interpretations and unresolved structures. You determine whether the result reveals useful information.</list-item>
+</list>
+
+## 6. The controlling question
+
+The entire next operation should be governed by one question:
+
+**Across the 32 generated-token decisions, does Pythia 70M repeatedly draw upon a common higher-order semantic structure, or does its organising hypothesis change as the response develops?**
+
+The existing R020 reconstruction describes communities and their measured connections. The next reconstruction must identify the **semantic relationships between those structures across the whole generation process**.
+
+That is the immediate goal. No additional model execution is required to attempt it with the evidence already available.
