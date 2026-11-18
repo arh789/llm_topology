@@ -1,0 +1,5702 @@
+{
+  "schema_version": 1,
+  "analysis_version": "higher_order_continuity_v3",
+  "run_id": "R020_pythia-70m-representation-output-contrast",
+  "source_community_network_git_blob_sha": "c55e630137b29417b0181c2d3506e7feb4b5d4de",
+  "source_measurement_commit": "6d7d6547e04407556b303b1c8b3ce9941daa8138",
+  "reproducer_git_blob_sha": "261cf3299243ffbd5ab4e0f5e9590938a6f5562a",
+  "checkpoints": [
+    {
+      "path": "R020_FUNCTIONAL_HYPOTHESIS_D01-08.json",
+      "git_blob_sha": "b2888e8afe30a321634293ac4770daa8d1b2c573",
+      "bytes": 224547
+    },
+    {
+      "path": "R020_FUNCTIONAL_HYPOTHESIS_D09-16.json",
+      "git_blob_sha": "e1445942b1ea82076c5d3fe9693c1b6acf8df87f",
+      "bytes": 237047
+    },
+    {
+      "path": "R020_FUNCTIONAL_HYPOTHESIS_D17-24.json",
+      "git_blob_sha": "2f66fa9eef1240fba7b32c8d2813889e44da55cf",
+      "bytes": 193542
+    },
+    {
+      "path": "R020_FUNCTIONAL_HYPOTHESIS_D25-32.json",
+      "git_blob_sha": "0ad41e1920febed40238115aec572159cef8028d",
+      "bytes": 256884
+    }
+  ],
+  "selection_contract": {
+    "min_cross_community_token_edges": 30,
+    "min_normalised_community_affinity": 0.3,
+    "qualifying_semantic_anchors": "two distinct representative tokens, or one representative and two distinct extreme tokens",
+    "sector_for_semantic_relationships": "positive_head",
+    "negative_sector": "reported separately; never interpreted as direct positive association"
+  },
+  "coverage": {
+    "generation_decisions": 32,
+    "states_per_decision": 8,
+    "sectors_per_state": 2,
+    "measured_networks": 512,
+    "all_original_communities": 6944,
+    "all_raw_intercommunity_edges": 42291,
+    "communities_mapped_to_some_candidate_anchor": 818,
+    "decisions_with_any_positive_contextual_relation": 21,
+    "decisions_with_same_candidate_relation_in_at_least_two_contextual_states": 6,
+    "decisions_with_positive_input_relations": 8,
+    "decisions_with_positive_output_proximal_relations": 0,
+    "decisions_without_detected_positive_contextual_relation": [
+      1,
+      5,
+      7,
+      9,
+      15,
+      19,
+      23,
+      24,
+      26,
+      30,
+      31
+    ]
+  },
+  "cross_generation_relations": [
+    {
+      "pair": "movement_routes ↔ settlement",
+      "decisions": [
+        3,
+        6,
+        8,
+        10,
+        13,
+        14,
+        22,
+        27,
+        28,
+        29,
+        32
+      ],
+      "input_decisions": [
+        3,
+        10,
+        13,
+        22,
+        29,
+        32
+      ],
+      "contextual_decisions": [
+        3,
+        6,
+        8,
+        10,
+        13,
+        14,
+        22,
+        27,
+        28,
+        29,
+        32
+      ],
+      "output_decisions": [],
+      "contextual_token_types": [
+        "city",
+        "bridge",
+        "connects",
+        "river",
+        ".",
+        "the"
+      ],
+      "contextual_state_hits": [
+        "10|2",
+        "13|2",
+        "14|2",
+        "22|1",
+        "27|2",
+        "28|1",
+        "29|2",
+        "32|2",
+        "3|1",
+        "6|1",
+        "8|2"
+      ],
+      "examples": [
+        {
+          "decision": 3,
+          "state": 1,
+          "sector": "positive_head",
+          "communities": [
+            4,
+            8
+          ],
+          "role_a": "movement_routes",
+          "role_b": "settlement",
+          "token_edges": 142,
+          "affinity": 0.631,
+          "tokens_a": [
+            "walked",
+            "transport",
+            "transportation"
+          ],
+          "tokens_b": [
+            "towns",
+            "city",
+            "cities",
+            "villages",
+            "town"
+          ]
+        },
+        {
+          "decision": 6,
+          "state": 1,
+          "sector": "positive_head",
+          "communities": [
+            2,
+            11
+          ],
+          "role_a": "movement_routes",
+          "role_b": "settlement",
+          "token_edges": 43,
+          "affinity": 0.442,
+          "tokens_a": [
+            "transportation",
+            "transport",
+            "routes",
+            "transporting",
+            "traveling"
+          ],
+          "tokens_b": [
+            "villages",
+            "city",
+            "village"
+          ]
+        },
+        {
+          "decision": 8,
+          "state": 2,
+          "sector": "positive_head",
+          "communities": [
+            2,
+            14
+          ],
+          "role_a": "movement_routes",
+          "role_b": "settlement",
+          "token_edges": 44,
+          "affinity": 0.312,
+          "tokens_a": [
+            "walking",
+            "walked"
+          ],
+          "tokens_b": [
+            "districts",
+            "villages",
+            "town",
+            "village",
+            "towns"
+          ]
+        },
+        {
+          "decision": 10,
+          "state": 2,
+          "sector": "positive_head",
+          "communities": [
+            0,
+            6
+          ],
+          "role_a": "movement_routes",
+          "role_b": "settlement",
+          "token_edges": 265,
+          "affinity": 0.94,
+          "tokens_a": [
+            "traveling",
+            "travel"
+          ],
+          "tokens_b": [
+            "villages",
+            "towns"
+          ]
+        },
+        {
+          "decision": 13,
+          "state": 2,
+          "sector": "positive_head",
+          "communities": [
+            1,
+            9
+          ],
+          "role_a": "movement_routes",
+          "role_b": "settlement",
+          "token_edges": 151,
+          "affinity": 0.585,
+          "tokens_a": [
+            "transporting",
+            "transported",
+            "traveling"
+          ],
+          "tokens_b": [
+            "villages",
+            "towns"
+          ]
+        }
+      ],
+      "contextual_decision_count": 11
+    },
+    {
+      "pair": "connection_crossing ↔ movement_routes",
+      "decisions": [
+        6,
+        8,
+        13,
+        16,
+        25,
+        27,
+        29,
+        32
+      ],
+      "input_decisions": [
+        6,
+        25
+      ],
+      "contextual_decisions": [
+        6,
+        8,
+        13,
+        16,
+        25,
+        27,
+        29,
+        32
+      ],
+      "output_decisions": [],
+      "contextual_token_types": [
+        "bridge",
+        "connects",
+        "river",
+        ""
+      ],
+      "contextual_state_hits": [
+        "13|2",
+        "16|2",
+        "25|2",
+        "27|3",
+        "29|2",
+        "32|2",
+        "6|1",
+        "6|2",
+        "8|2",
+        "8|3"
+      ],
+      "examples": [
+        {
+          "decision": 6,
+          "state": 1,
+          "sector": "positive_head",
+          "communities": [
+            2,
+            5
+          ],
+          "role_a": "movement_routes",
+          "role_b": "connection_crossing",
+          "token_edges": 217,
+          "affinity": 0.937,
+          "tokens_a": [
+            "transportation",
+            "transport",
+            "routes",
+            "transporting",
+            "traveling"
+          ],
+          "tokens_b": [
+            "tunnel",
+            "bridge"
+          ]
+        },
+        {
+          "decision": 8,
+          "state": 2,
+          "sector": "positive_head",
+          "communities": [
+            2,
+            5
+          ],
+          "role_a": "movement_routes",
+          "role_b": "connection_crossing",
+          "token_edges": 247,
+          "affinity": 0.891,
+          "tokens_a": [
+            "walking",
+            "walked"
+          ],
+          "tokens_b": [
+            "transfers",
+            "transfer"
+          ]
+        },
+        {
+          "decision": 13,
+          "state": 2,
+          "sector": "positive_head",
+          "communities": [
+            1,
+            5
+          ],
+          "role_a": "movement_routes",
+          "role_b": "connection_crossing",
+          "token_edges": 244,
+          "affinity": 0.87,
+          "tokens_a": [
+            "transporting",
+            "transported",
+            "traveling"
+          ],
+          "tokens_b": [
+            "crossings",
+            "transfer"
+          ]
+        },
+        {
+          "decision": 16,
+          "state": 2,
+          "sector": "positive_head",
+          "communities": [
+            5,
+            13
+          ],
+          "role_a": "movement_routes",
+          "role_b": "connection_crossing",
+          "token_edges": 93,
+          "affinity": 0.578,
+          "tokens_a": [
+            "journey",
+            "transporting",
+            "walked"
+          ],
+          "tokens_b": [
+            "connects",
+            "connect"
+          ]
+        },
+        {
+          "decision": 25,
+          "state": 2,
+          "sector": "positive_head",
+          "communities": [
+            6,
+            9
+          ],
+          "role_a": "movement_routes",
+          "role_b": "connection_crossing",
+          "token_edges": 134,
+          "affinity": 0.776,
+          "tokens_a": [
+            "moving",
+            "walked"
+          ],
+          "tokens_b": [
+            "crossings",
+            "transfer",
+            "traverse",
+            "bridge"
+          ]
+        }
+      ],
+      "contextual_decision_count": 8
+    },
+    {
+      "pair": "built_places ↔ movement_routes",
+      "decisions": [
+        3,
+        6,
+        10,
+        13,
+        14,
+        16,
+        22,
+        25,
+        29,
+        32
+      ],
+      "input_decisions": [
+        3,
+        6,
+        10,
+        13,
+        22,
+        25,
+        29,
+        32
+      ],
+      "contextual_decisions": [
+        3,
+        10,
+        14,
+        16,
+        22,
+        29,
+        32
+      ],
+      "output_decisions": [],
+      "contextual_token_types": [
+        "city",
+        "river",
+        ".",
+        ""
+      ],
+      "contextual_state_hits": [
+        "10|1",
+        "14|2",
+        "14|5",
+        "16|4",
+        "16|5",
+        "22|1",
+        "29|1",
+        "32|1",
+        "3|1"
+      ],
+      "examples": [
+        {
+          "decision": 3,
+          "state": 1,
+          "sector": "positive_head",
+          "communities": [
+            1,
+            4
+          ],
+          "role_a": "built_places",
+          "role_b": "movement_routes",
+          "token_edges": 310,
+          "affinity": 1.027,
+          "tokens_a": [
+            "buildings",
+            "shops",
+            "hotels",
+            "courtyard",
+            "corridors"
+          ],
+          "tokens_b": [
+            "walked",
+            "transport",
+            "transportation"
+          ]
+        },
+        {
+          "decision": 6,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            3,
+            8
+          ],
+          "role_a": "movement_routes",
+          "role_b": "built_places",
+          "token_edges": 35,
+          "affinity": 0.309,
+          "tokens_a": [
+            "journeys",
+            "journey",
+            "travel",
+            "trips",
+            "voyage"
+          ],
+          "tokens_b": [
+            "courtyard",
+            "corridor",
+            "corridors"
+          ]
+        },
+        {
+          "decision": 10,
+          "state": 1,
+          "sector": "positive_head",
+          "communities": [
+            0,
+            6
+          ],
+          "role_a": "movement_routes",
+          "role_b": "built_places",
+          "token_edges": 234,
+          "affinity": 0.721,
+          "tokens_a": [
+            "paths",
+            "routes"
+          ],
+          "tokens_b": [
+            "courtyard",
+            "streets",
+            "corridor"
+          ]
+        },
+        {
+          "decision": 13,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            2,
+            6
+          ],
+          "role_a": "built_places",
+          "role_b": "movement_routes",
+          "token_edges": 86,
+          "affinity": 0.607,
+          "tokens_a": [
+            "courtyard",
+            "corridor",
+            "buildings"
+          ],
+          "tokens_b": [
+            "journey",
+            "pedestrians"
+          ]
+        },
+        {
+          "decision": 14,
+          "state": 2,
+          "sector": "positive_head",
+          "communities": [
+            3,
+            8
+          ],
+          "role_a": "movement_routes",
+          "role_b": "built_places",
+          "token_edges": 108,
+          "affinity": 0.484,
+          "tokens_a": [
+            "journey",
+            "transporting",
+            "transported",
+            "traveling"
+          ],
+          "tokens_b": [
+            "buildings",
+            "shops",
+            "streets",
+            "corridors"
+          ]
+        }
+      ],
+      "contextual_decision_count": 7
+    },
+    {
+      "pair": "built_places ↔ inhabitants",
+      "decisions": [
+        2,
+        3,
+        14,
+        16,
+        18,
+        21,
+        22,
+        29,
+        32
+      ],
+      "input_decisions": [
+        3,
+        22
+      ],
+      "contextual_decisions": [
+        2,
+        14,
+        16,
+        18,
+        21,
+        29,
+        32
+      ],
+      "output_decisions": [],
+      "contextual_token_types": [
+        "The",
+        ".",
+        "",
+        ":",
+        "river"
+      ],
+      "contextual_state_hits": [
+        "14|2",
+        "14|4",
+        "16|4",
+        "18|5",
+        "21|1",
+        "29|5",
+        "2|1",
+        "2|4",
+        "32|5"
+      ],
+      "examples": [
+        {
+          "decision": 2,
+          "state": 1,
+          "sector": "positive_head",
+          "communities": [
+            7,
+            9
+          ],
+          "role_a": "built_places",
+          "role_b": "inhabitants",
+          "token_edges": 113,
+          "affinity": 0.688,
+          "tokens_a": [
+            "buildings",
+            "houses",
+            "courtyard",
+            "corridors",
+            "shops"
+          ],
+          "tokens_b": [
+            "people",
+            "residents"
+          ]
+        },
+        {
+          "decision": 3,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            5,
+            9
+          ],
+          "role_a": "built_places",
+          "role_b": "inhabitants",
+          "token_edges": 40,
+          "affinity": 0.391,
+          "tokens_a": [
+            "streets",
+            "street"
+          ],
+          "tokens_b": [
+            "residents",
+            "citizens",
+            "inhabitants",
+            "settlers",
+            "people"
+          ]
+        },
+        {
+          "decision": 14,
+          "state": 2,
+          "sector": "positive_head",
+          "communities": [
+            8,
+            10
+          ],
+          "role_a": "built_places",
+          "role_b": "inhabitants",
+          "token_edges": 57,
+          "affinity": 0.448,
+          "tokens_a": [
+            "buildings",
+            "shops",
+            "streets",
+            "corridors"
+          ],
+          "tokens_b": [
+            "people",
+            "residents"
+          ]
+        },
+        {
+          "decision": 16,
+          "state": 4,
+          "sector": "positive_head",
+          "communities": [
+            6,
+            7
+          ],
+          "role_a": "built_places",
+          "role_b": "inhabitants",
+          "token_edges": 67,
+          "affinity": 0.42,
+          "tokens_a": [
+            "buildings",
+            "houses"
+          ],
+          "tokens_b": [
+            "residents",
+            "people",
+            "inhabitants"
+          ]
+        },
+        {
+          "decision": 18,
+          "state": 5,
+          "sector": "positive_head",
+          "communities": [
+            4,
+            11
+          ],
+          "role_a": "built_places",
+          "role_b": "inhabitants",
+          "token_edges": 75,
+          "affinity": 0.514,
+          "tokens_a": [
+            "shops",
+            "houses"
+          ],
+          "tokens_b": [
+            "people",
+            "persons"
+          ]
+        }
+      ],
+      "contextual_decision_count": 7
+    },
+    {
+      "pair": "inhabitants ↔ settlement",
+      "decisions": [
+        2,
+        3,
+        14,
+        17,
+        18,
+        22,
+        29,
+        32
+      ],
+      "input_decisions": [
+        3,
+        22
+      ],
+      "contextual_decisions": [
+        2,
+        14,
+        17,
+        18,
+        29,
+        32
+      ],
+      "output_decisions": [],
+      "contextual_token_types": [
+        "The",
+        ".",
+        "A",
+        ":",
+        "river"
+      ],
+      "contextual_state_hits": [
+        "14|2",
+        "14|4",
+        "17|2",
+        "18|5",
+        "29|5",
+        "2|4",
+        "32|5"
+      ],
+      "examples": [
+        {
+          "decision": 2,
+          "state": 4,
+          "sector": "positive_head",
+          "communities": [
+            1,
+            6
+          ],
+          "role_a": "settlement",
+          "role_b": "inhabitants",
+          "token_edges": 270,
+          "affinity": 1.038,
+          "tokens_a": [
+            "districts",
+            "counties"
+          ],
+          "tokens_b": [
+            "people",
+            "residents"
+          ]
+        },
+        {
+          "decision": 3,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            3,
+            9
+          ],
+          "role_a": "settlement",
+          "role_b": "inhabitants",
+          "token_edges": 77,
+          "affinity": 0.582,
+          "tokens_a": [
+            "city",
+            "cities",
+            "villages",
+            "town",
+            "towns"
+          ],
+          "tokens_b": [
+            "residents",
+            "citizens",
+            "inhabitants",
+            "settlers",
+            "people"
+          ]
+        },
+        {
+          "decision": 14,
+          "state": 2,
+          "sector": "positive_head",
+          "communities": [
+            8,
+            10
+          ],
+          "role_a": "settlement",
+          "role_b": "inhabitants",
+          "token_edges": 57,
+          "affinity": 0.448,
+          "tokens_a": [
+            "cities",
+            "towns",
+            "districts",
+            "city"
+          ],
+          "tokens_b": [
+            "people",
+            "residents"
+          ]
+        },
+        {
+          "decision": 17,
+          "state": 2,
+          "sector": "positive_head",
+          "communities": [
+            5,
+            11
+          ],
+          "role_a": "settlement",
+          "role_b": "inhabitants",
+          "token_edges": 125,
+          "affinity": 0.729,
+          "tokens_a": [
+            "cities",
+            "towns"
+          ],
+          "tokens_b": [
+            "people",
+            "residents"
+          ]
+        },
+        {
+          "decision": 18,
+          "state": 5,
+          "sector": "positive_head",
+          "communities": [
+            4,
+            11
+          ],
+          "role_a": "settlement",
+          "role_b": "inhabitants",
+          "token_edges": 75,
+          "affinity": 0.514,
+          "tokens_a": [
+            "cities",
+            "towns"
+          ],
+          "tokens_b": [
+            "people",
+            "persons"
+          ]
+        }
+      ],
+      "contextual_decision_count": 6
+    },
+    {
+      "pair": "connection_crossing ↔ settlement",
+      "decisions": [
+        3,
+        8,
+        13,
+        27,
+        32
+      ],
+      "input_decisions": [],
+      "contextual_decisions": [
+        3,
+        8,
+        13,
+        27,
+        32
+      ],
+      "output_decisions": [],
+      "contextual_token_types": [
+        "city",
+        "connects",
+        "river"
+      ],
+      "contextual_state_hits": [
+        "13|2",
+        "27|5",
+        "32|2",
+        "32|5",
+        "3|2",
+        "8|5"
+      ],
+      "examples": [
+        {
+          "decision": 3,
+          "state": 2,
+          "sector": "positive_head",
+          "communities": [
+            0,
+            8
+          ],
+          "role_a": "settlement",
+          "role_b": "connection_crossing",
+          "token_edges": 210,
+          "affinity": 0.785,
+          "tokens_a": [
+            "towns",
+            "villages",
+            "town",
+            "city",
+            "cities"
+          ],
+          "tokens_b": [
+            "traverse",
+            "transfers"
+          ]
+        },
+        {
+          "decision": 8,
+          "state": 5,
+          "sector": "positive_head",
+          "communities": [
+            3,
+            10
+          ],
+          "role_a": "connection_crossing",
+          "role_b": "settlement",
+          "token_edges": 149,
+          "affinity": 0.71,
+          "tokens_a": [
+            "connecting",
+            "links"
+          ],
+          "tokens_b": [
+            "cities",
+            "towns"
+          ]
+        },
+        {
+          "decision": 13,
+          "state": 2,
+          "sector": "positive_head",
+          "communities": [
+            5,
+            9
+          ],
+          "role_a": "connection_crossing",
+          "role_b": "settlement",
+          "token_edges": 152,
+          "affinity": 0.676,
+          "tokens_a": [
+            "crossings",
+            "transfer"
+          ],
+          "tokens_b": [
+            "villages",
+            "towns"
+          ]
+        },
+        {
+          "decision": 27,
+          "state": 5,
+          "sector": "positive_head",
+          "communities": [
+            0,
+            1
+          ],
+          "role_a": "settlement",
+          "role_b": "connection_crossing",
+          "token_edges": 482,
+          "affinity": 1.102,
+          "tokens_a": [
+            "communities",
+            "cities",
+            "towns",
+            "districts"
+          ],
+          "tokens_b": [
+            "connections",
+            "connection"
+          ]
+        },
+        {
+          "decision": 32,
+          "state": 2,
+          "sector": "positive_head",
+          "communities": [
+            9,
+            10
+          ],
+          "role_a": "connection_crossing",
+          "role_b": "settlement",
+          "token_edges": 96,
+          "affinity": 0.519,
+          "tokens_a": [
+            "transfer",
+            "crossings"
+          ],
+          "tokens_b": [
+            "villages",
+            "towns"
+          ]
+        }
+      ],
+      "contextual_decision_count": 5
+    },
+    {
+      "pair": "inhabitants ↔ movement_routes",
+      "decisions": [
+        3,
+        10,
+        11,
+        20,
+        22
+      ],
+      "input_decisions": [
+        3,
+        22
+      ],
+      "contextual_decisions": [
+        10,
+        11,
+        20
+      ],
+      "output_decisions": [],
+      "contextual_token_types": [
+        "river",
+        "with",
+        ""
+      ],
+      "contextual_state_hits": [
+        "10|4",
+        "11|2",
+        "20|2"
+      ],
+      "examples": [
+        {
+          "decision": 3,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            5,
+            9
+          ],
+          "role_a": "movement_routes",
+          "role_b": "inhabitants",
+          "token_edges": 40,
+          "affinity": 0.391,
+          "tokens_a": [
+            "highway",
+            "airports",
+            "railway",
+            "roadway",
+            "airport"
+          ],
+          "tokens_b": [
+            "residents",
+            "citizens",
+            "inhabitants",
+            "settlers",
+            "people"
+          ]
+        },
+        {
+          "decision": 10,
+          "state": 4,
+          "sector": "positive_head",
+          "communities": [
+            6,
+            9
+          ],
+          "role_a": "movement_routes",
+          "role_b": "inhabitants",
+          "token_edges": 86,
+          "affinity": 0.489,
+          "tokens_a": [
+            "walked",
+            "moving",
+            "movements",
+            "traveling"
+          ],
+          "tokens_b": [
+            "persons",
+            "people"
+          ]
+        },
+        {
+          "decision": 11,
+          "state": 2,
+          "sector": "positive_head",
+          "communities": [
+            1,
+            9
+          ],
+          "role_a": "inhabitants",
+          "role_b": "movement_routes",
+          "token_edges": 163,
+          "affinity": 0.732,
+          "tokens_a": [
+            "people",
+            "persons",
+            "residents"
+          ],
+          "tokens_b": [
+            "transporting",
+            "transportation"
+          ]
+        },
+        {
+          "decision": 20,
+          "state": 2,
+          "sector": "positive_head",
+          "communities": [
+            1,
+            12
+          ],
+          "role_a": "movement_routes",
+          "role_b": "inhabitants",
+          "token_edges": 72,
+          "affinity": 0.388,
+          "tokens_a": [
+            "trip",
+            "transporting"
+          ],
+          "tokens_b": [
+            "people",
+            "persons",
+            "inhabitants"
+          ]
+        },
+        {
+          "decision": 22,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            5,
+            9
+          ],
+          "role_a": "movement_routes",
+          "role_b": "inhabitants",
+          "token_edges": 40,
+          "affinity": 0.391,
+          "tokens_a": [
+            "highway",
+            "airports",
+            "railway",
+            "roadway",
+            "airport"
+          ],
+          "tokens_b": [
+            "residents",
+            "citizens",
+            "inhabitants",
+            "settlers",
+            "people"
+          ]
+        }
+      ],
+      "contextual_decision_count": 3
+    },
+    {
+      "pair": "commerce ↔ movement_routes",
+      "decisions": [
+        10,
+        25,
+        29
+      ],
+      "input_decisions": [],
+      "contextual_decisions": [
+        10,
+        25,
+        29
+      ],
+      "output_decisions": [],
+      "contextual_token_types": [
+        "river",
+        "bridge"
+      ],
+      "contextual_state_hits": [
+        "10|3",
+        "25|4",
+        "29|3"
+      ],
+      "examples": [
+        {
+          "decision": 10,
+          "state": 3,
+          "sector": "positive_head",
+          "communities": [
+            10,
+            12
+          ],
+          "role_a": "commerce",
+          "role_b": "movement_routes",
+          "token_edges": 57,
+          "affinity": 0.492,
+          "tokens_a": [
+            "market",
+            "markets"
+          ],
+          "tokens_b": [
+            "transportation",
+            "transporting",
+            "transport"
+          ]
+        },
+        {
+          "decision": 25,
+          "state": 4,
+          "sector": "positive_head",
+          "communities": [
+            5,
+            7
+          ],
+          "role_a": "movement_routes",
+          "role_b": "commerce",
+          "token_edges": 100,
+          "affinity": 0.493,
+          "tokens_a": [
+            "moving",
+            "walked"
+          ],
+          "tokens_b": [
+            "market",
+            "markets"
+          ]
+        },
+        {
+          "decision": 29,
+          "state": 3,
+          "sector": "positive_head",
+          "communities": [
+            4,
+            10
+          ],
+          "role_a": "movement_routes",
+          "role_b": "commerce",
+          "token_edges": 74,
+          "affinity": 0.391,
+          "tokens_a": [
+            "moving",
+            "movements"
+          ],
+          "tokens_b": [
+            "markets",
+            "market"
+          ]
+        }
+      ],
+      "contextual_decision_count": 3
+    },
+    {
+      "pair": "built_places ↔ connection_crossing",
+      "decisions": [
+        3,
+        6,
+        25,
+        32
+      ],
+      "input_decisions": [
+        6,
+        25
+      ],
+      "contextual_decisions": [
+        3,
+        32
+      ],
+      "output_decisions": [],
+      "contextual_token_types": [
+        "city",
+        "river"
+      ],
+      "contextual_state_hits": [
+        "32|5",
+        "3|2"
+      ],
+      "examples": [
+        {
+          "decision": 3,
+          "state": 2,
+          "sector": "positive_head",
+          "communities": [
+            0,
+            8
+          ],
+          "role_a": "built_places",
+          "role_b": "connection_crossing",
+          "token_edges": 210,
+          "affinity": 0.785,
+          "tokens_a": [
+            "buildings",
+            "shops",
+            "corridors"
+          ],
+          "tokens_b": [
+            "traverse",
+            "transfers"
+          ]
+        },
+        {
+          "decision": 6,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            0,
+            8
+          ],
+          "role_a": "connection_crossing",
+          "role_b": "built_places",
+          "token_edges": 38,
+          "affinity": 0.304,
+          "tokens_a": [
+            "bridging",
+            "bridge",
+            "bridges",
+            "traverse",
+            "connections"
+          ],
+          "tokens_b": [
+            "courtyard",
+            "corridor",
+            "corridors"
+          ]
+        },
+        {
+          "decision": 25,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            0,
+            8
+          ],
+          "role_a": "connection_crossing",
+          "role_b": "built_places",
+          "token_edges": 38,
+          "affinity": 0.304,
+          "tokens_a": [
+            "bridging",
+            "bridge",
+            "bridges",
+            "traverse",
+            "connections"
+          ],
+          "tokens_b": [
+            "courtyard",
+            "corridor",
+            "corridors"
+          ]
+        },
+        {
+          "decision": 32,
+          "state": 5,
+          "sector": "positive_head",
+          "communities": [
+            0,
+            7
+          ],
+          "role_a": "built_places",
+          "role_b": "connection_crossing",
+          "token_edges": 299,
+          "affinity": 1.028,
+          "tokens_a": [
+            "buildings",
+            "houses",
+            "streets"
+          ],
+          "tokens_b": [
+            "connections",
+            "connection",
+            "link"
+          ]
+        }
+      ],
+      "contextual_decision_count": 2
+    },
+    {
+      "pair": "built_places ↔ commerce",
+      "decisions": [
+        12,
+        22
+      ],
+      "input_decisions": [],
+      "contextual_decisions": [
+        12,
+        22
+      ],
+      "output_decisions": [],
+      "contextual_token_types": [
+        "the",
+        "city"
+      ],
+      "contextual_state_hits": [
+        "12|5",
+        "22|3"
+      ],
+      "examples": [
+        {
+          "decision": 12,
+          "state": 5,
+          "sector": "positive_head",
+          "communities": [
+            2,
+            4
+          ],
+          "role_a": "built_places",
+          "role_b": "commerce",
+          "token_edges": 275,
+          "affinity": 1.133,
+          "tokens_a": [
+            "shop",
+            "buildings"
+          ],
+          "tokens_b": [
+            "markets",
+            "market",
+            "commerce"
+          ]
+        },
+        {
+          "decision": 22,
+          "state": 3,
+          "sector": "positive_head",
+          "communities": [
+            6,
+            8
+          ],
+          "role_a": "commerce",
+          "role_b": "built_places",
+          "token_edges": 99,
+          "affinity": 0.625,
+          "tokens_a": [
+            "markets",
+            "market",
+            "businesses",
+            "commerce"
+          ],
+          "tokens_b": [
+            "buildings",
+            "hotels",
+            "shop"
+          ]
+        }
+      ],
+      "contextual_decision_count": 2
+    },
+    {
+      "pair": "commerce ↔ settlement",
+      "decisions": [
+        12,
+        22
+      ],
+      "input_decisions": [],
+      "contextual_decisions": [
+        12,
+        22
+      ],
+      "output_decisions": [],
+      "contextual_token_types": [
+        "the",
+        "city"
+      ],
+      "contextual_state_hits": [
+        "12|5",
+        "22|3"
+      ],
+      "examples": [
+        {
+          "decision": 12,
+          "state": 5,
+          "sector": "positive_head",
+          "communities": [
+            2,
+            4
+          ],
+          "role_a": "settlement",
+          "role_b": "commerce",
+          "token_edges": 275,
+          "affinity": 1.133,
+          "tokens_a": [
+            "cities",
+            "towns"
+          ],
+          "tokens_b": [
+            "markets",
+            "market",
+            "commerce"
+          ]
+        },
+        {
+          "decision": 22,
+          "state": 3,
+          "sector": "positive_head",
+          "communities": [
+            6,
+            8
+          ],
+          "role_a": "commerce",
+          "role_b": "settlement",
+          "token_edges": 99,
+          "affinity": 0.625,
+          "tokens_a": [
+            "markets",
+            "market",
+            "businesses",
+            "commerce"
+          ],
+          "tokens_b": [
+            "town",
+            "cities",
+            "towns",
+            "villages",
+            "village"
+          ]
+        }
+      ],
+      "contextual_decision_count": 2
+    },
+    {
+      "pair": "movement_routes ↔ water_terrain",
+      "decisions": [
+        3,
+        6,
+        10,
+        13,
+        22,
+        25,
+        29,
+        32
+      ],
+      "input_decisions": [
+        3,
+        6,
+        10,
+        13,
+        22,
+        25,
+        29,
+        32
+      ],
+      "contextual_decisions": [
+        32
+      ],
+      "output_decisions": [],
+      "contextual_token_types": [
+        "river"
+      ],
+      "contextual_state_hits": [
+        "32|2"
+      ],
+      "examples": [
+        {
+          "decision": 3,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            4,
+            5
+          ],
+          "role_a": "water_terrain",
+          "role_b": "movement_routes",
+          "token_edges": 90,
+          "affinity": 0.64,
+          "tokens_a": [
+            "ocean",
+            "lake",
+            "oceans"
+          ],
+          "tokens_b": [
+            "highway",
+            "airports",
+            "railway",
+            "roadway",
+            "airport"
+          ]
+        },
+        {
+          "decision": 6,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            3,
+            4
+          ],
+          "role_a": "movement_routes",
+          "role_b": "water_terrain",
+          "token_edges": 101,
+          "affinity": 0.721,
+          "tokens_a": [
+            "journeys",
+            "journey",
+            "travel",
+            "trips",
+            "voyage"
+          ],
+          "tokens_b": [
+            "floods",
+            "flood"
+          ]
+        },
+        {
+          "decision": 10,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            0,
+            6
+          ],
+          "role_a": "water_terrain",
+          "role_b": "movement_routes",
+          "token_edges": 83,
+          "affinity": 0.544,
+          "tokens_a": [
+            "water",
+            "groundwater",
+            "drainage"
+          ],
+          "tokens_b": [
+            "journey",
+            "pedestrians"
+          ]
+        },
+        {
+          "decision": 13,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            0,
+            6
+          ],
+          "role_a": "water_terrain",
+          "role_b": "movement_routes",
+          "token_edges": 83,
+          "affinity": 0.544,
+          "tokens_a": [
+            "water",
+            "groundwater",
+            "drainage"
+          ],
+          "tokens_b": [
+            "journey",
+            "pedestrians"
+          ]
+        },
+        {
+          "decision": 22,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            4,
+            5
+          ],
+          "role_a": "water_terrain",
+          "role_b": "movement_routes",
+          "token_edges": 90,
+          "affinity": 0.64,
+          "tokens_a": [
+            "ocean",
+            "lake",
+            "oceans"
+          ],
+          "tokens_b": [
+            "highway",
+            "airports",
+            "railway",
+            "roadway",
+            "airport"
+          ]
+        }
+      ],
+      "contextual_decision_count": 1
+    },
+    {
+      "pair": "hazards ↔ movement_routes",
+      "decisions": [
+        4,
+        6,
+        10,
+        13,
+        25,
+        29,
+        32
+      ],
+      "input_decisions": [
+        6,
+        10,
+        13,
+        25,
+        29,
+        32
+      ],
+      "contextual_decisions": [
+        4
+      ],
+      "output_decisions": [],
+      "contextual_token_types": [
+        "is"
+      ],
+      "contextual_state_hits": [
+        "4|1"
+      ],
+      "examples": [
+        {
+          "decision": 4,
+          "state": 1,
+          "sector": "positive_head",
+          "communities": [
+            10,
+            12
+          ],
+          "role_a": "hazards",
+          "role_b": "movement_routes",
+          "token_edges": 43,
+          "affinity": 0.43,
+          "tokens_a": [
+            "damaged",
+            "destruction"
+          ],
+          "tokens_b": [
+            "vehicle",
+            "transport"
+          ]
+        },
+        {
+          "decision": 6,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            3,
+            4
+          ],
+          "role_a": "movement_routes",
+          "role_b": "hazards",
+          "token_edges": 101,
+          "affinity": 0.721,
+          "tokens_a": [
+            "journeys",
+            "journey",
+            "travel",
+            "trips",
+            "voyage"
+          ],
+          "tokens_b": [
+            "rebellion",
+            "explosions",
+            "floods",
+            "catastrophe",
+            "flood"
+          ]
+        },
+        {
+          "decision": 10,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            6,
+            9
+          ],
+          "role_a": "movement_routes",
+          "role_b": "hazards",
+          "token_edges": 54,
+          "affinity": 0.494,
+          "tokens_a": [
+            "journey",
+            "pedestrians"
+          ],
+          "tokens_b": [
+            "floods",
+            "explosions",
+            "flood",
+            "storms",
+            "catastrophe"
+          ]
+        },
+        {
+          "decision": 13,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            6,
+            9
+          ],
+          "role_a": "movement_routes",
+          "role_b": "hazards",
+          "token_edges": 54,
+          "affinity": 0.494,
+          "tokens_a": [
+            "journey",
+            "pedestrians"
+          ],
+          "tokens_b": [
+            "floods",
+            "explosions",
+            "flood",
+            "storms",
+            "catastrophe"
+          ]
+        },
+        {
+          "decision": 25,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            3,
+            4
+          ],
+          "role_a": "movement_routes",
+          "role_b": "hazards",
+          "token_edges": 101,
+          "affinity": 0.721,
+          "tokens_a": [
+            "journeys",
+            "journey",
+            "travel",
+            "trips",
+            "voyage"
+          ],
+          "tokens_b": [
+            "rebellion",
+            "explosions",
+            "floods",
+            "catastrophe",
+            "flood"
+          ]
+        }
+      ],
+      "contextual_decision_count": 1
+    },
+    {
+      "pair": "built_places ↔ settlement",
+      "decisions": [
+        3,
+        10,
+        13,
+        22,
+        29,
+        32
+      ],
+      "input_decisions": [
+        3,
+        10,
+        13,
+        22,
+        29,
+        32
+      ],
+      "contextual_decisions": [
+        3
+      ],
+      "output_decisions": [],
+      "contextual_token_types": [
+        "city"
+      ],
+      "contextual_state_hits": [
+        "3|1"
+      ],
+      "examples": [
+        {
+          "decision": 3,
+          "state": 1,
+          "sector": "positive_head",
+          "communities": [
+            1,
+            8
+          ],
+          "role_a": "built_places",
+          "role_b": "settlement",
+          "token_edges": 290,
+          "affinity": 1.144,
+          "tokens_a": [
+            "buildings",
+            "shops",
+            "hotels",
+            "courtyard",
+            "corridors"
+          ],
+          "tokens_b": [
+            "towns",
+            "city",
+            "cities",
+            "villages",
+            "town"
+          ]
+        },
+        {
+          "decision": 10,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            2,
+            3
+          ],
+          "role_a": "built_places",
+          "role_b": "settlement",
+          "token_edges": 108,
+          "affinity": 0.717,
+          "tokens_a": [
+            "courtyard",
+            "corridor",
+            "buildings"
+          ],
+          "tokens_b": [
+            "city",
+            "town",
+            "village",
+            "villages",
+            "towns"
+          ]
+        },
+        {
+          "decision": 13,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            2,
+            3
+          ],
+          "role_a": "built_places",
+          "role_b": "settlement",
+          "token_edges": 108,
+          "affinity": 0.717,
+          "tokens_a": [
+            "courtyard",
+            "corridor",
+            "buildings"
+          ],
+          "tokens_b": [
+            "city",
+            "town",
+            "village",
+            "villages",
+            "towns"
+          ]
+        },
+        {
+          "decision": 22,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            1,
+            3
+          ],
+          "role_a": "built_places",
+          "role_b": "settlement",
+          "token_edges": 174,
+          "affinity": 0.773,
+          "tokens_a": [
+            "hotels",
+            "buildings",
+            "shops",
+            "courtyard",
+            "house"
+          ],
+          "tokens_b": [
+            "city",
+            "cities",
+            "villages",
+            "town",
+            "towns"
+          ]
+        },
+        {
+          "decision": 29,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            2,
+            3
+          ],
+          "role_a": "built_places",
+          "role_b": "settlement",
+          "token_edges": 108,
+          "affinity": 0.717,
+          "tokens_a": [
+            "courtyard",
+            "corridor",
+            "buildings"
+          ],
+          "tokens_b": [
+            "city",
+            "town",
+            "village",
+            "villages",
+            "towns"
+          ]
+        }
+      ],
+      "contextual_decision_count": 1
+    },
+    {
+      "pair": "inhabitants ↔ water_terrain",
+      "decisions": [
+        3,
+        22,
+        32
+      ],
+      "input_decisions": [
+        3,
+        22
+      ],
+      "contextual_decisions": [
+        32
+      ],
+      "output_decisions": [],
+      "contextual_token_types": [
+        "river"
+      ],
+      "contextual_state_hits": [
+        "32|4"
+      ],
+      "examples": [
+        {
+          "decision": 3,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            4,
+            9
+          ],
+          "role_a": "water_terrain",
+          "role_b": "inhabitants",
+          "token_edges": 35,
+          "affinity": 0.307,
+          "tokens_a": [
+            "ocean",
+            "lake",
+            "oceans"
+          ],
+          "tokens_b": [
+            "residents",
+            "citizens",
+            "inhabitants",
+            "settlers",
+            "people"
+          ]
+        },
+        {
+          "decision": 22,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            4,
+            9
+          ],
+          "role_a": "water_terrain",
+          "role_b": "inhabitants",
+          "token_edges": 35,
+          "affinity": 0.307,
+          "tokens_a": [
+            "ocean",
+            "lake",
+            "oceans"
+          ],
+          "tokens_b": [
+            "residents",
+            "citizens",
+            "inhabitants",
+            "settlers",
+            "people"
+          ]
+        },
+        {
+          "decision": 32,
+          "state": 4,
+          "sector": "positive_head",
+          "communities": [
+            4,
+            12
+          ],
+          "role_a": "water_terrain",
+          "role_b": "inhabitants",
+          "token_edges": 50,
+          "affinity": 0.404,
+          "tokens_a": [
+            "lake",
+            "creek"
+          ],
+          "tokens_b": [
+            "persons",
+            "people"
+          ]
+        }
+      ],
+      "contextual_decision_count": 1
+    },
+    {
+      "pair": "connection_crossing ↔ water_terrain",
+      "decisions": [
+        6,
+        25,
+        32
+      ],
+      "input_decisions": [
+        6,
+        25
+      ],
+      "contextual_decisions": [
+        32
+      ],
+      "output_decisions": [],
+      "contextual_token_types": [
+        "river"
+      ],
+      "contextual_state_hits": [
+        "32|2"
+      ],
+      "examples": [
+        {
+          "decision": 6,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            0,
+            4
+          ],
+          "role_a": "connection_crossing",
+          "role_b": "water_terrain",
+          "token_edges": 125,
+          "affinity": 0.808,
+          "tokens_a": [
+            "bridging",
+            "bridge",
+            "bridges",
+            "traverse",
+            "connections"
+          ],
+          "tokens_b": [
+            "floods",
+            "flood"
+          ]
+        },
+        {
+          "decision": 25,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            0,
+            4
+          ],
+          "role_a": "connection_crossing",
+          "role_b": "water_terrain",
+          "token_edges": 125,
+          "affinity": 0.808,
+          "tokens_a": [
+            "bridging",
+            "bridge",
+            "bridges",
+            "traverse",
+            "connections"
+          ],
+          "tokens_b": [
+            "floods",
+            "flood"
+          ]
+        },
+        {
+          "decision": 32,
+          "state": 2,
+          "sector": "positive_head",
+          "communities": [
+            9,
+            10
+          ],
+          "role_a": "connection_crossing",
+          "role_b": "water_terrain",
+          "token_edges": 96,
+          "affinity": 0.519,
+          "tokens_a": [
+            "transfer",
+            "crossings"
+          ],
+          "tokens_b": [
+            "valley",
+            "river"
+          ]
+        }
+      ],
+      "contextual_decision_count": 1
+    },
+    {
+      "pair": "commerce ↔ inhabitants",
+      "decisions": [
+        18
+      ],
+      "input_decisions": [],
+      "contextual_decisions": [
+        18
+      ],
+      "output_decisions": [],
+      "contextual_token_types": [
+        ":"
+      ],
+      "contextual_state_hits": [
+        "18|5"
+      ],
+      "examples": [
+        {
+          "decision": 18,
+          "state": 5,
+          "sector": "positive_head",
+          "communities": [
+            4,
+            11
+          ],
+          "role_a": "commerce",
+          "role_b": "inhabitants",
+          "token_edges": 75,
+          "affinity": 0.514,
+          "tokens_a": [
+            "business",
+            "commerce"
+          ],
+          "tokens_b": [
+            "people",
+            "persons"
+          ]
+        }
+      ],
+      "contextual_decision_count": 1
+    },
+    {
+      "pair": "built_places ↔ water_terrain",
+      "decisions": [
+        3,
+        6,
+        10,
+        13,
+        22,
+        25,
+        29,
+        32
+      ],
+      "input_decisions": [
+        3,
+        6,
+        10,
+        13,
+        22,
+        25,
+        29,
+        32
+      ],
+      "contextual_decisions": [],
+      "output_decisions": [],
+      "contextual_token_types": [],
+      "contextual_state_hits": [],
+      "examples": [
+        {
+          "decision": 3,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            1,
+            4
+          ],
+          "role_a": "built_places",
+          "role_b": "water_terrain",
+          "token_edges": 197,
+          "affinity": 1.015,
+          "tokens_a": [
+            "hotels",
+            "buildings",
+            "shops",
+            "courtyard",
+            "house"
+          ],
+          "tokens_b": [
+            "ocean",
+            "lake",
+            "oceans"
+          ]
+        },
+        {
+          "decision": 6,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            5,
+            8
+          ],
+          "role_a": "water_terrain",
+          "role_b": "built_places",
+          "token_edges": 111,
+          "affinity": 1.009,
+          "tokens_a": [
+            "lake",
+            "river",
+            "valley",
+            "valleys"
+          ],
+          "tokens_b": [
+            "courtyard",
+            "corridor",
+            "corridors"
+          ]
+        },
+        {
+          "decision": 10,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            0,
+            2
+          ],
+          "role_a": "water_terrain",
+          "role_b": "built_places",
+          "token_edges": 98,
+          "affinity": 0.526,
+          "tokens_a": [
+            "water",
+            "groundwater",
+            "drainage"
+          ],
+          "tokens_b": [
+            "courtyard",
+            "corridor",
+            "buildings"
+          ]
+        },
+        {
+          "decision": 13,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            0,
+            2
+          ],
+          "role_a": "water_terrain",
+          "role_b": "built_places",
+          "token_edges": 98,
+          "affinity": 0.526,
+          "tokens_a": [
+            "water",
+            "groundwater",
+            "drainage"
+          ],
+          "tokens_b": [
+            "courtyard",
+            "corridor",
+            "buildings"
+          ]
+        },
+        {
+          "decision": 22,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            1,
+            4
+          ],
+          "role_a": "built_places",
+          "role_b": "water_terrain",
+          "token_edges": 197,
+          "affinity": 1.015,
+          "tokens_a": [
+            "hotels",
+            "buildings",
+            "shops",
+            "courtyard",
+            "house"
+          ],
+          "tokens_b": [
+            "ocean",
+            "lake",
+            "oceans"
+          ]
+        }
+      ],
+      "contextual_decision_count": 0
+    },
+    {
+      "pair": "settlement ↔ water_terrain",
+      "decisions": [
+        3,
+        10,
+        13,
+        22,
+        29,
+        32
+      ],
+      "input_decisions": [
+        3,
+        10,
+        13,
+        22,
+        29,
+        32
+      ],
+      "contextual_decisions": [],
+      "output_decisions": [],
+      "contextual_token_types": [],
+      "contextual_state_hits": [],
+      "examples": [
+        {
+          "decision": 3,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            3,
+            4
+          ],
+          "role_a": "settlement",
+          "role_b": "water_terrain",
+          "token_edges": 163,
+          "affinity": 0.896,
+          "tokens_a": [
+            "city",
+            "cities",
+            "villages",
+            "town",
+            "towns"
+          ],
+          "tokens_b": [
+            "ocean",
+            "lake",
+            "oceans"
+          ]
+        },
+        {
+          "decision": 10,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            0,
+            3
+          ],
+          "role_a": "water_terrain",
+          "role_b": "settlement",
+          "token_edges": 56,
+          "affinity": 0.345,
+          "tokens_a": [
+            "water",
+            "groundwater",
+            "drainage"
+          ],
+          "tokens_b": [
+            "city",
+            "town",
+            "village",
+            "villages",
+            "towns"
+          ]
+        },
+        {
+          "decision": 13,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            0,
+            3
+          ],
+          "role_a": "water_terrain",
+          "role_b": "settlement",
+          "token_edges": 56,
+          "affinity": 0.345,
+          "tokens_a": [
+            "water",
+            "groundwater",
+            "drainage"
+          ],
+          "tokens_b": [
+            "city",
+            "town",
+            "village",
+            "villages",
+            "towns"
+          ]
+        },
+        {
+          "decision": 22,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            3,
+            4
+          ],
+          "role_a": "settlement",
+          "role_b": "water_terrain",
+          "token_edges": 163,
+          "affinity": 0.896,
+          "tokens_a": [
+            "city",
+            "cities",
+            "villages",
+            "town",
+            "towns"
+          ],
+          "tokens_b": [
+            "ocean",
+            "lake",
+            "oceans"
+          ]
+        },
+        {
+          "decision": 29,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            0,
+            3
+          ],
+          "role_a": "water_terrain",
+          "role_b": "settlement",
+          "token_edges": 56,
+          "affinity": 0.345,
+          "tokens_a": [
+            "water",
+            "groundwater",
+            "drainage"
+          ],
+          "tokens_b": [
+            "city",
+            "town",
+            "village",
+            "villages",
+            "towns"
+          ]
+        }
+      ],
+      "contextual_decision_count": 0
+    },
+    {
+      "pair": "hazards ↔ water_terrain",
+      "decisions": [
+        6,
+        10,
+        13,
+        25,
+        29,
+        32
+      ],
+      "input_decisions": [
+        6,
+        10,
+        13,
+        25,
+        29,
+        32
+      ],
+      "contextual_decisions": [],
+      "output_decisions": [],
+      "contextual_token_types": [],
+      "contextual_state_hits": [],
+      "examples": [
+        {
+          "decision": 6,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            4,
+            5
+          ],
+          "role_a": "hazards",
+          "role_b": "water_terrain",
+          "token_edges": 74,
+          "affinity": 0.544,
+          "tokens_a": [
+            "rebellion",
+            "explosions",
+            "floods",
+            "catastrophe",
+            "flood"
+          ],
+          "tokens_b": [
+            "lake",
+            "river",
+            "valley",
+            "valleys"
+          ]
+        },
+        {
+          "decision": 10,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            0,
+            9
+          ],
+          "role_a": "water_terrain",
+          "role_b": "hazards",
+          "token_edges": 140,
+          "affinity": 0.973,
+          "tokens_a": [
+            "water",
+            "groundwater",
+            "drainage"
+          ],
+          "tokens_b": [
+            "floods",
+            "explosions",
+            "flood",
+            "storms",
+            "catastrophe"
+          ]
+        },
+        {
+          "decision": 13,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            0,
+            9
+          ],
+          "role_a": "water_terrain",
+          "role_b": "hazards",
+          "token_edges": 140,
+          "affinity": 0.973,
+          "tokens_a": [
+            "water",
+            "groundwater",
+            "drainage"
+          ],
+          "tokens_b": [
+            "floods",
+            "explosions",
+            "flood",
+            "storms",
+            "catastrophe"
+          ]
+        },
+        {
+          "decision": 25,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            4,
+            5
+          ],
+          "role_a": "hazards",
+          "role_b": "water_terrain",
+          "token_edges": 74,
+          "affinity": 0.544,
+          "tokens_a": [
+            "rebellion",
+            "explosions",
+            "floods",
+            "catastrophe",
+            "flood"
+          ],
+          "tokens_b": [
+            "lake",
+            "river",
+            "valley",
+            "valleys"
+          ]
+        },
+        {
+          "decision": 29,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            0,
+            9
+          ],
+          "role_a": "water_terrain",
+          "role_b": "hazards",
+          "token_edges": 140,
+          "affinity": 0.973,
+          "tokens_a": [
+            "water",
+            "groundwater",
+            "drainage"
+          ],
+          "tokens_b": [
+            "floods",
+            "explosions",
+            "flood",
+            "storms",
+            "catastrophe"
+          ]
+        }
+      ],
+      "contextual_decision_count": 0
+    },
+    {
+      "pair": "hazards ↔ settlement",
+      "decisions": [
+        10,
+        13,
+        29,
+        32
+      ],
+      "input_decisions": [
+        10,
+        13,
+        29,
+        32
+      ],
+      "contextual_decisions": [],
+      "output_decisions": [],
+      "contextual_token_types": [],
+      "contextual_state_hits": [],
+      "examples": [
+        {
+          "decision": 10,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            3,
+            9
+          ],
+          "role_a": "settlement",
+          "role_b": "hazards",
+          "token_edges": 42,
+          "affinity": 0.362,
+          "tokens_a": [
+            "city",
+            "town",
+            "village",
+            "villages",
+            "towns"
+          ],
+          "tokens_b": [
+            "floods",
+            "explosions",
+            "flood",
+            "storms",
+            "catastrophe"
+          ]
+        },
+        {
+          "decision": 13,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            3,
+            9
+          ],
+          "role_a": "settlement",
+          "role_b": "hazards",
+          "token_edges": 42,
+          "affinity": 0.362,
+          "tokens_a": [
+            "city",
+            "town",
+            "village",
+            "villages",
+            "towns"
+          ],
+          "tokens_b": [
+            "floods",
+            "explosions",
+            "flood",
+            "storms",
+            "catastrophe"
+          ]
+        },
+        {
+          "decision": 29,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            3,
+            9
+          ],
+          "role_a": "settlement",
+          "role_b": "hazards",
+          "token_edges": 42,
+          "affinity": 0.362,
+          "tokens_a": [
+            "city",
+            "town",
+            "village",
+            "villages",
+            "towns"
+          ],
+          "tokens_b": [
+            "floods",
+            "explosions",
+            "flood",
+            "storms",
+            "catastrophe"
+          ]
+        },
+        {
+          "decision": 32,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            3,
+            9
+          ],
+          "role_a": "settlement",
+          "role_b": "hazards",
+          "token_edges": 42,
+          "affinity": 0.362,
+          "tokens_a": [
+            "city",
+            "town",
+            "village",
+            "villages",
+            "towns"
+          ],
+          "tokens_b": [
+            "floods",
+            "explosions",
+            "flood",
+            "storms",
+            "catastrophe"
+          ]
+        }
+      ],
+      "contextual_decision_count": 0
+    },
+    {
+      "pair": "built_places ↔ engineering_governance",
+      "decisions": [
+        3,
+        22
+      ],
+      "input_decisions": [
+        3,
+        22
+      ],
+      "contextual_decisions": [],
+      "output_decisions": [],
+      "contextual_token_types": [],
+      "contextual_state_hits": [],
+      "examples": [
+        {
+          "decision": 3,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            1,
+            7
+          ],
+          "role_a": "built_places",
+          "role_b": "engineering_governance",
+          "token_edges": 77,
+          "affinity": 0.49,
+          "tokens_a": [
+            "hotels",
+            "buildings",
+            "shops",
+            "courtyard",
+            "house"
+          ],
+          "tokens_b": [
+            "architect",
+            "design",
+            "constructed"
+          ]
+        },
+        {
+          "decision": 22,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            1,
+            7
+          ],
+          "role_a": "built_places",
+          "role_b": "engineering_governance",
+          "token_edges": 77,
+          "affinity": 0.49,
+          "tokens_a": [
+            "hotels",
+            "buildings",
+            "shops",
+            "courtyard",
+            "house"
+          ],
+          "tokens_b": [
+            "architect",
+            "design",
+            "constructed"
+          ]
+        }
+      ],
+      "contextual_decision_count": 0
+    },
+    {
+      "pair": "engineering_governance ↔ settlement",
+      "decisions": [
+        3,
+        22
+      ],
+      "input_decisions": [
+        3,
+        22
+      ],
+      "contextual_decisions": [],
+      "output_decisions": [],
+      "contextual_token_types": [],
+      "contextual_state_hits": [],
+      "examples": [
+        {
+          "decision": 3,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            3,
+            7
+          ],
+          "role_a": "settlement",
+          "role_b": "engineering_governance",
+          "token_edges": 45,
+          "affinity": 0.305,
+          "tokens_a": [
+            "city",
+            "cities",
+            "villages",
+            "town",
+            "towns"
+          ],
+          "tokens_b": [
+            "architect",
+            "design",
+            "constructed"
+          ]
+        },
+        {
+          "decision": 22,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            3,
+            7
+          ],
+          "role_a": "settlement",
+          "role_b": "engineering_governance",
+          "token_edges": 45,
+          "affinity": 0.305,
+          "tokens_a": [
+            "city",
+            "cities",
+            "villages",
+            "town",
+            "towns"
+          ],
+          "tokens_b": [
+            "architect",
+            "design",
+            "constructed"
+          ]
+        }
+      ],
+      "contextual_decision_count": 0
+    },
+    {
+      "pair": "connection_crossing ↔ hazards",
+      "decisions": [
+        6,
+        25
+      ],
+      "input_decisions": [
+        6,
+        25
+      ],
+      "contextual_decisions": [],
+      "output_decisions": [],
+      "contextual_token_types": [],
+      "contextual_state_hits": [],
+      "examples": [
+        {
+          "decision": 6,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            0,
+            4
+          ],
+          "role_a": "connection_crossing",
+          "role_b": "hazards",
+          "token_edges": 125,
+          "affinity": 0.808,
+          "tokens_a": [
+            "bridging",
+            "bridge",
+            "bridges",
+            "traverse",
+            "connections"
+          ],
+          "tokens_b": [
+            "rebellion",
+            "explosions",
+            "floods",
+            "catastrophe",
+            "flood"
+          ]
+        },
+        {
+          "decision": 25,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            0,
+            4
+          ],
+          "role_a": "connection_crossing",
+          "role_b": "hazards",
+          "token_edges": 125,
+          "affinity": 0.808,
+          "tokens_a": [
+            "bridging",
+            "bridge",
+            "bridges",
+            "traverse",
+            "connections"
+          ],
+          "tokens_b": [
+            "rebellion",
+            "explosions",
+            "floods",
+            "catastrophe",
+            "flood"
+          ]
+        }
+      ],
+      "contextual_decision_count": 0
+    },
+    {
+      "pair": "hazards ↔ repair_reconstruction",
+      "decisions": [
+        6,
+        25
+      ],
+      "input_decisions": [
+        6,
+        25
+      ],
+      "contextual_decisions": [],
+      "output_decisions": [],
+      "contextual_token_types": [],
+      "contextual_state_hits": [],
+      "examples": [
+        {
+          "decision": 6,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            4,
+            11
+          ],
+          "role_a": "hazards",
+          "role_b": "repair_reconstruction",
+          "token_edges": 67,
+          "affinity": 0.684,
+          "tokens_a": [
+            "rebellion",
+            "explosions",
+            "floods",
+            "catastrophe",
+            "flood"
+          ],
+          "tokens_b": [
+            "rebuilding",
+            "reconstruction",
+            "restoration",
+            "renovation",
+            "stabilization"
+          ]
+        },
+        {
+          "decision": 25,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            4,
+            11
+          ],
+          "role_a": "hazards",
+          "role_b": "repair_reconstruction",
+          "token_edges": 67,
+          "affinity": 0.684,
+          "tokens_a": [
+            "rebellion",
+            "explosions",
+            "floods",
+            "catastrophe",
+            "flood"
+          ],
+          "tokens_b": [
+            "rebuilding",
+            "reconstruction",
+            "restoration",
+            "renovation",
+            "stabilization"
+          ]
+        }
+      ],
+      "contextual_decision_count": 0
+    },
+    {
+      "pair": "repair_reconstruction ↔ water_terrain",
+      "decisions": [
+        6,
+        25
+      ],
+      "input_decisions": [
+        6,
+        25
+      ],
+      "contextual_decisions": [],
+      "output_decisions": [],
+      "contextual_token_types": [],
+      "contextual_state_hits": [],
+      "examples": [
+        {
+          "decision": 6,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            4,
+            11
+          ],
+          "role_a": "water_terrain",
+          "role_b": "repair_reconstruction",
+          "token_edges": 67,
+          "affinity": 0.684,
+          "tokens_a": [
+            "floods",
+            "flood"
+          ],
+          "tokens_b": [
+            "rebuilding",
+            "reconstruction",
+            "restoration",
+            "renovation",
+            "stabilization"
+          ]
+        },
+        {
+          "decision": 25,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            4,
+            11
+          ],
+          "role_a": "water_terrain",
+          "role_b": "repair_reconstruction",
+          "token_edges": 67,
+          "affinity": 0.684,
+          "tokens_a": [
+            "floods",
+            "flood"
+          ],
+          "tokens_b": [
+            "rebuilding",
+            "reconstruction",
+            "restoration",
+            "renovation",
+            "stabilization"
+          ]
+        }
+      ],
+      "contextual_decision_count": 0
+    },
+    {
+      "pair": "movement_routes ↔ repair_reconstruction",
+      "decisions": [
+        6,
+        25
+      ],
+      "input_decisions": [
+        6,
+        25
+      ],
+      "contextual_decisions": [],
+      "output_decisions": [],
+      "contextual_token_types": [],
+      "contextual_state_hits": [],
+      "examples": [
+        {
+          "decision": 6,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            3,
+            11
+          ],
+          "role_a": "movement_routes",
+          "role_b": "repair_reconstruction",
+          "token_edges": 55,
+          "affinity": 0.558,
+          "tokens_a": [
+            "journeys",
+            "journey",
+            "travel",
+            "trips",
+            "voyage"
+          ],
+          "tokens_b": [
+            "rebuilding",
+            "reconstruction",
+            "restoration",
+            "renovation",
+            "stabilization"
+          ]
+        },
+        {
+          "decision": 25,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            3,
+            11
+          ],
+          "role_a": "movement_routes",
+          "role_b": "repair_reconstruction",
+          "token_edges": 55,
+          "affinity": 0.558,
+          "tokens_a": [
+            "journeys",
+            "journey",
+            "travel",
+            "trips",
+            "voyage"
+          ],
+          "tokens_b": [
+            "rebuilding",
+            "reconstruction",
+            "restoration",
+            "renovation",
+            "stabilization"
+          ]
+        }
+      ],
+      "contextual_decision_count": 0
+    },
+    {
+      "pair": "connection_crossing ↔ repair_reconstruction",
+      "decisions": [
+        6,
+        25
+      ],
+      "input_decisions": [
+        6,
+        25
+      ],
+      "contextual_decisions": [],
+      "output_decisions": [],
+      "contextual_token_types": [],
+      "contextual_state_hits": [],
+      "examples": [
+        {
+          "decision": 6,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            0,
+            11
+          ],
+          "role_a": "connection_crossing",
+          "role_b": "repair_reconstruction",
+          "token_edges": 49,
+          "affinity": 0.45,
+          "tokens_a": [
+            "bridging",
+            "bridge",
+            "bridges",
+            "traverse",
+            "connections"
+          ],
+          "tokens_b": [
+            "rebuilding",
+            "reconstruction",
+            "restoration",
+            "renovation",
+            "stabilization"
+          ]
+        },
+        {
+          "decision": 25,
+          "state": 0,
+          "sector": "positive_head",
+          "communities": [
+            0,
+            11
+          ],
+          "role_a": "connection_crossing",
+          "role_b": "repair_reconstruction",
+          "token_edges": 49,
+          "affinity": 0.45,
+          "tokens_a": [
+            "bridging",
+            "bridge",
+            "bridges",
+            "traverse",
+            "connections"
+          ],
+          "tokens_b": [
+            "rebuilding",
+            "reconstruction",
+            "restoration",
+            "renovation",
+            "stabilization"
+          ]
+        }
+      ],
+      "contextual_decision_count": 0
+    }
+  ],
+  "per_decision_hypotheses": [
+    {
+      "decision": 1,
+      "current_input": ":",
+      "next_token": " The",
+      "input_relation_count": 0,
+      "contextual_relation_count": 0,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": false,
+      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold"
+    },
+    {
+      "decision": 2,
+      "current_input": " The",
+      "next_token": " city",
+      "input_relation_count": 0,
+      "contextual_relation_count": 2,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [
+        {
+          "pair": "built_places ↔ inhabitants",
+          "states": [
+            1,
+            4
+          ],
+          "evidence": [
+            {
+              "state": 1,
+              "sector": "positive_head",
+              "communities": [
+                7,
+                9
+              ],
+              "role_a": "built_places",
+              "role_b": "inhabitants",
+              "token_edges": 113,
+              "affinity": 0.688,
+              "tokens_a": [
+                "buildings",
+                "houses",
+                "courtyard",
+                "corridors",
+                "shops"
+              ],
+              "tokens_b": [
+                "people",
+                "residents"
+              ]
+            },
+            {
+              "state": 4,
+              "sector": "positive_head",
+              "communities": [
+                1,
+                6
+              ],
+              "role_a": "built_places",
+              "role_b": "inhabitants",
+              "token_edges": 270,
+              "affinity": 1.038,
+              "tokens_a": [
+                "houses",
+                "buildings"
+              ],
+              "tokens_b": [
+                "people",
+                "residents"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "inhabitants ↔ settlement",
+          "states": [
+            4
+          ],
+          "evidence": [
+            {
+              "state": 4,
+              "sector": "positive_head",
+              "communities": [
+                1,
+                6
+              ],
+              "role_a": "settlement",
+              "role_b": "inhabitants",
+              "token_edges": 270,
+              "affinity": 1.038,
+              "tokens_a": [
+                "districts",
+                "counties"
+              ],
+              "tokens_b": [
+                "people",
+                "residents"
+              ]
+            }
+          ]
+        }
+      ],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": true,
+      "semantic_status": "contextual_relationship_candidates_found"
+    },
+    {
+      "decision": 3,
+      "current_input": " city",
+      "next_token": " is",
+      "input_relation_count": 12,
+      "contextual_relation_count": 5,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [
+        {
+          "pair": "built_places ↔ settlement",
+          "states": [
+            1
+          ],
+          "evidence": [
+            {
+              "state": 1,
+              "sector": "positive_head",
+              "communities": [
+                1,
+                8
+              ],
+              "role_a": "built_places",
+              "role_b": "settlement",
+              "token_edges": 290,
+              "affinity": 1.144,
+              "tokens_a": [
+                "buildings",
+                "shops",
+                "hotels",
+                "courtyard",
+                "corridors"
+              ],
+              "tokens_b": [
+                "towns",
+                "city",
+                "cities",
+                "villages",
+                "town"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "built_places ↔ movement_routes",
+          "states": [
+            1
+          ],
+          "evidence": [
+            {
+              "state": 1,
+              "sector": "positive_head",
+              "communities": [
+                1,
+                4
+              ],
+              "role_a": "built_places",
+              "role_b": "movement_routes",
+              "token_edges": 310,
+              "affinity": 1.027,
+              "tokens_a": [
+                "buildings",
+                "shops",
+                "hotels",
+                "courtyard",
+                "corridors"
+              ],
+              "tokens_b": [
+                "walked",
+                "transport",
+                "transportation"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "movement_routes ↔ settlement",
+          "states": [
+            1
+          ],
+          "evidence": [
+            {
+              "state": 1,
+              "sector": "positive_head",
+              "communities": [
+                4,
+                8
+              ],
+              "role_a": "movement_routes",
+              "role_b": "settlement",
+              "token_edges": 142,
+              "affinity": 0.631,
+              "tokens_a": [
+                "walked",
+                "transport",
+                "transportation"
+              ],
+              "tokens_b": [
+                "towns",
+                "city",
+                "cities",
+                "villages",
+                "town"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "built_places ↔ connection_crossing",
+          "states": [
+            2
+          ],
+          "evidence": [
+            {
+              "state": 2,
+              "sector": "positive_head",
+              "communities": [
+                0,
+                8
+              ],
+              "role_a": "built_places",
+              "role_b": "connection_crossing",
+              "token_edges": 210,
+              "affinity": 0.785,
+              "tokens_a": [
+                "buildings",
+                "shops",
+                "corridors"
+              ],
+              "tokens_b": [
+                "traverse",
+                "transfers"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "connection_crossing ↔ settlement",
+          "states": [
+            2
+          ],
+          "evidence": [
+            {
+              "state": 2,
+              "sector": "positive_head",
+              "communities": [
+                0,
+                8
+              ],
+              "role_a": "settlement",
+              "role_b": "connection_crossing",
+              "token_edges": 210,
+              "affinity": 0.785,
+              "tokens_a": [
+                "towns",
+                "villages",
+                "town",
+                "city",
+                "cities"
+              ],
+              "tokens_b": [
+                "traverse",
+                "transfers"
+              ]
+            }
+          ]
+        }
+      ],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": false,
+      "semantic_status": "contextual_relationship_candidates_found"
+    },
+    {
+      "decision": 4,
+      "current_input": " is",
+      "next_token": " a",
+      "input_relation_count": 0,
+      "contextual_relation_count": 1,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [
+        {
+          "pair": "hazards ↔ movement_routes",
+          "states": [
+            1
+          ],
+          "evidence": [
+            {
+              "state": 1,
+              "sector": "positive_head",
+              "communities": [
+                10,
+                12
+              ],
+              "role_a": "hazards",
+              "role_b": "movement_routes",
+              "token_edges": 43,
+              "affinity": 0.43,
+              "tokens_a": [
+                "damaged",
+                "destruction"
+              ],
+              "tokens_b": [
+                "vehicle",
+                "transport"
+              ]
+            }
+          ]
+        }
+      ],
+      "negative_sector_relations": [
+        "connection_crossing ↔ engineering_governance"
+      ],
+      "within_decision_recurrence": false,
+      "semantic_status": "contextual_relationship_candidates_found"
+    },
+    {
+      "decision": 5,
+      "current_input": " a",
+      "next_token": " bridge",
+      "input_relation_count": 0,
+      "contextual_relation_count": 0,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": false,
+      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold"
+    },
+    {
+      "decision": 6,
+      "current_input": " bridge",
+      "next_token": " that",
+      "input_relation_count": 13,
+      "contextual_relation_count": 2,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [
+        {
+          "pair": "connection_crossing ↔ movement_routes",
+          "states": [
+            1,
+            2
+          ],
+          "evidence": [
+            {
+              "state": 1,
+              "sector": "positive_head",
+              "communities": [
+                2,
+                5
+              ],
+              "role_a": "movement_routes",
+              "role_b": "connection_crossing",
+              "token_edges": 217,
+              "affinity": 0.937,
+              "tokens_a": [
+                "transportation",
+                "transport",
+                "routes",
+                "transporting",
+                "traveling"
+              ],
+              "tokens_b": [
+                "tunnel",
+                "bridge"
+              ]
+            },
+            {
+              "state": 2,
+              "sector": "positive_head",
+              "communities": [
+                5,
+                8
+              ],
+              "role_a": "movement_routes",
+              "role_b": "connection_crossing",
+              "token_edges": 156,
+              "affinity": 0.874,
+              "tokens_a": [
+                "moving",
+                "walked"
+              ],
+              "tokens_b": [
+                "crossings",
+                "transfer",
+                "traverse",
+                "bridge"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "movement_routes ↔ settlement",
+          "states": [
+            1
+          ],
+          "evidence": [
+            {
+              "state": 1,
+              "sector": "positive_head",
+              "communities": [
+                2,
+                11
+              ],
+              "role_a": "movement_routes",
+              "role_b": "settlement",
+              "token_edges": 43,
+              "affinity": 0.442,
+              "tokens_a": [
+                "transportation",
+                "transport",
+                "routes",
+                "transporting",
+                "traveling"
+              ],
+              "tokens_b": [
+                "villages",
+                "city",
+                "village"
+              ]
+            }
+          ]
+        }
+      ],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": true,
+      "semantic_status": "contextual_relationship_candidates_found"
+    },
+    {
+      "decision": 7,
+      "current_input": " that",
+      "next_token": " connects",
+      "input_relation_count": 0,
+      "contextual_relation_count": 0,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": false,
+      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold"
+    },
+    {
+      "decision": 8,
+      "current_input": " connects",
+      "next_token": " the",
+      "input_relation_count": 0,
+      "contextual_relation_count": 3,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [
+        {
+          "pair": "connection_crossing ↔ movement_routes",
+          "states": [
+            2,
+            3
+          ],
+          "evidence": [
+            {
+              "state": 2,
+              "sector": "positive_head",
+              "communities": [
+                2,
+                5
+              ],
+              "role_a": "movement_routes",
+              "role_b": "connection_crossing",
+              "token_edges": 247,
+              "affinity": 0.891,
+              "tokens_a": [
+                "walking",
+                "walked"
+              ],
+              "tokens_b": [
+                "transfers",
+                "transfer"
+              ]
+            },
+            {
+              "state": 3,
+              "sector": "positive_head",
+              "communities": [
+                4,
+                5
+              ],
+              "role_a": "connection_crossing",
+              "role_b": "movement_routes",
+              "token_edges": 171,
+              "affinity": 0.755,
+              "tokens_a": [
+                "transfers",
+                "transfer"
+              ],
+              "tokens_b": [
+                "walking",
+                "walked"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "connection_crossing ↔ settlement",
+          "states": [
+            5
+          ],
+          "evidence": [
+            {
+              "state": 5,
+              "sector": "positive_head",
+              "communities": [
+                3,
+                10
+              ],
+              "role_a": "connection_crossing",
+              "role_b": "settlement",
+              "token_edges": 149,
+              "affinity": 0.71,
+              "tokens_a": [
+                "connecting",
+                "links"
+              ],
+              "tokens_b": [
+                "cities",
+                "towns"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "movement_routes ↔ settlement",
+          "states": [
+            2
+          ],
+          "evidence": [
+            {
+              "state": 2,
+              "sector": "positive_head",
+              "communities": [
+                2,
+                14
+              ],
+              "role_a": "movement_routes",
+              "role_b": "settlement",
+              "token_edges": 44,
+              "affinity": 0.312,
+              "tokens_a": [
+                "walking",
+                "walked"
+              ],
+              "tokens_b": [
+                "districts",
+                "villages",
+                "town",
+                "village",
+                "towns"
+              ]
+            }
+          ]
+        }
+      ],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": true,
+      "semantic_status": "contextual_relationship_candidates_found"
+    },
+    {
+      "decision": 9,
+      "current_input": " the",
+      "next_token": " river",
+      "input_relation_count": 0,
+      "contextual_relation_count": 0,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": false,
+      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold"
+    },
+    {
+      "decision": 10,
+      "current_input": " river",
+      "next_token": " with",
+      "input_relation_count": 9,
+      "contextual_relation_count": 4,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [
+        {
+          "pair": "built_places ↔ movement_routes",
+          "states": [
+            1
+          ],
+          "evidence": [
+            {
+              "state": 1,
+              "sector": "positive_head",
+              "communities": [
+                0,
+                6
+              ],
+              "role_a": "movement_routes",
+              "role_b": "built_places",
+              "token_edges": 234,
+              "affinity": 0.721,
+              "tokens_a": [
+                "paths",
+                "routes"
+              ],
+              "tokens_b": [
+                "courtyard",
+                "streets",
+                "corridor"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "movement_routes ↔ settlement",
+          "states": [
+            2
+          ],
+          "evidence": [
+            {
+              "state": 2,
+              "sector": "positive_head",
+              "communities": [
+                0,
+                6
+              ],
+              "role_a": "movement_routes",
+              "role_b": "settlement",
+              "token_edges": 265,
+              "affinity": 0.94,
+              "tokens_a": [
+                "traveling",
+                "travel"
+              ],
+              "tokens_b": [
+                "villages",
+                "towns"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "inhabitants ↔ movement_routes",
+          "states": [
+            4
+          ],
+          "evidence": [
+            {
+              "state": 4,
+              "sector": "positive_head",
+              "communities": [
+                6,
+                9
+              ],
+              "role_a": "movement_routes",
+              "role_b": "inhabitants",
+              "token_edges": 86,
+              "affinity": 0.489,
+              "tokens_a": [
+                "walked",
+                "moving",
+                "movements",
+                "traveling"
+              ],
+              "tokens_b": [
+                "persons",
+                "people"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "commerce ↔ movement_routes",
+          "states": [
+            3
+          ],
+          "evidence": [
+            {
+              "state": 3,
+              "sector": "positive_head",
+              "communities": [
+                10,
+                12
+              ],
+              "role_a": "commerce",
+              "role_b": "movement_routes",
+              "token_edges": 57,
+              "affinity": 0.492,
+              "tokens_a": [
+                "market",
+                "markets"
+              ],
+              "tokens_b": [
+                "transportation",
+                "transporting",
+                "transport"
+              ]
+            }
+          ]
+        }
+      ],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": false,
+      "semantic_status": "contextual_relationship_candidates_found"
+    },
+    {
+      "decision": 11,
+      "current_input": " with",
+      "next_token": " the",
+      "input_relation_count": 0,
+      "contextual_relation_count": 1,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [
+        {
+          "pair": "inhabitants ↔ movement_routes",
+          "states": [
+            2
+          ],
+          "evidence": [
+            {
+              "state": 2,
+              "sector": "positive_head",
+              "communities": [
+                1,
+                9
+              ],
+              "role_a": "inhabitants",
+              "role_b": "movement_routes",
+              "token_edges": 163,
+              "affinity": 0.732,
+              "tokens_a": [
+                "people",
+                "persons",
+                "residents"
+              ],
+              "tokens_b": [
+                "transporting",
+                "transportation"
+              ]
+            }
+          ]
+        }
+      ],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": false,
+      "semantic_status": "contextual_relationship_candidates_found"
+    },
+    {
+      "decision": 12,
+      "current_input": " the",
+      "next_token": " river",
+      "input_relation_count": 0,
+      "contextual_relation_count": 2,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [
+        {
+          "pair": "built_places ↔ commerce",
+          "states": [
+            5
+          ],
+          "evidence": [
+            {
+              "state": 5,
+              "sector": "positive_head",
+              "communities": [
+                2,
+                4
+              ],
+              "role_a": "built_places",
+              "role_b": "commerce",
+              "token_edges": 275,
+              "affinity": 1.133,
+              "tokens_a": [
+                "shop",
+                "buildings"
+              ],
+              "tokens_b": [
+                "markets",
+                "market",
+                "commerce"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "commerce ↔ settlement",
+          "states": [
+            5
+          ],
+          "evidence": [
+            {
+              "state": 5,
+              "sector": "positive_head",
+              "communities": [
+                2,
+                4
+              ],
+              "role_a": "settlement",
+              "role_b": "commerce",
+              "token_edges": 275,
+              "affinity": 1.133,
+              "tokens_a": [
+                "cities",
+                "towns"
+              ],
+              "tokens_b": [
+                "markets",
+                "market",
+                "commerce"
+              ]
+            }
+          ]
+        }
+      ],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": false,
+      "semantic_status": "contextual_relationship_candidates_found"
+    },
+    {
+      "decision": 13,
+      "current_input": " river",
+      "next_token": ".",
+      "input_relation_count": 9,
+      "contextual_relation_count": 3,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [
+        {
+          "pair": "connection_crossing ↔ movement_routes",
+          "states": [
+            2
+          ],
+          "evidence": [
+            {
+              "state": 2,
+              "sector": "positive_head",
+              "communities": [
+                1,
+                5
+              ],
+              "role_a": "movement_routes",
+              "role_b": "connection_crossing",
+              "token_edges": 244,
+              "affinity": 0.87,
+              "tokens_a": [
+                "transporting",
+                "transported",
+                "traveling"
+              ],
+              "tokens_b": [
+                "crossings",
+                "transfer"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "movement_routes ↔ settlement",
+          "states": [
+            2
+          ],
+          "evidence": [
+            {
+              "state": 2,
+              "sector": "positive_head",
+              "communities": [
+                1,
+                9
+              ],
+              "role_a": "movement_routes",
+              "role_b": "settlement",
+              "token_edges": 151,
+              "affinity": 0.585,
+              "tokens_a": [
+                "transporting",
+                "transported",
+                "traveling"
+              ],
+              "tokens_b": [
+                "villages",
+                "towns"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "connection_crossing ↔ settlement",
+          "states": [
+            2
+          ],
+          "evidence": [
+            {
+              "state": 2,
+              "sector": "positive_head",
+              "communities": [
+                5,
+                9
+              ],
+              "role_a": "connection_crossing",
+              "role_b": "settlement",
+              "token_edges": 152,
+              "affinity": 0.676,
+              "tokens_a": [
+                "crossings",
+                "transfer"
+              ],
+              "tokens_b": [
+                "villages",
+                "towns"
+              ]
+            }
+          ]
+        }
+      ],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": false,
+      "semantic_status": "contextual_relationship_candidates_found"
+    },
+    {
+      "decision": 14,
+      "current_input": ".",
+      "next_token": "\n",
+      "input_relation_count": 0,
+      "contextual_relation_count": 4,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [
+        {
+          "pair": "built_places ↔ movement_routes",
+          "states": [
+            2,
+            5
+          ],
+          "evidence": [
+            {
+              "state": 2,
+              "sector": "positive_head",
+              "communities": [
+                3,
+                8
+              ],
+              "role_a": "movement_routes",
+              "role_b": "built_places",
+              "token_edges": 108,
+              "affinity": 0.484,
+              "tokens_a": [
+                "journey",
+                "transporting",
+                "transported",
+                "traveling"
+              ],
+              "tokens_b": [
+                "buildings",
+                "shops",
+                "streets",
+                "corridors"
+              ]
+            },
+            {
+              "state": 5,
+              "sector": "positive_head",
+              "communities": [
+                0,
+                9
+              ],
+              "role_a": "movement_routes",
+              "role_b": "built_places",
+              "token_edges": 173,
+              "affinity": 0.637,
+              "tokens_a": [
+                "path",
+                "paths"
+              ],
+              "tokens_b": [
+                "hotels",
+                "hotel"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "built_places ↔ inhabitants",
+          "states": [
+            2,
+            4
+          ],
+          "evidence": [
+            {
+              "state": 2,
+              "sector": "positive_head",
+              "communities": [
+                8,
+                10
+              ],
+              "role_a": "built_places",
+              "role_b": "inhabitants",
+              "token_edges": 57,
+              "affinity": 0.448,
+              "tokens_a": [
+                "buildings",
+                "shops",
+                "streets",
+                "corridors"
+              ],
+              "tokens_b": [
+                "people",
+                "residents"
+              ]
+            },
+            {
+              "state": 4,
+              "sector": "positive_head",
+              "communities": [
+                6,
+                8
+              ],
+              "role_a": "inhabitants",
+              "role_b": "built_places",
+              "token_edges": 173,
+              "affinity": 0.856,
+              "tokens_a": [
+                "people",
+                "residents"
+              ],
+              "tokens_b": [
+                "buildings",
+                "houses"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "inhabitants ↔ settlement",
+          "states": [
+            2,
+            4
+          ],
+          "evidence": [
+            {
+              "state": 2,
+              "sector": "positive_head",
+              "communities": [
+                8,
+                10
+              ],
+              "role_a": "settlement",
+              "role_b": "inhabitants",
+              "token_edges": 57,
+              "affinity": 0.448,
+              "tokens_a": [
+                "cities",
+                "towns",
+                "districts",
+                "city"
+              ],
+              "tokens_b": [
+                "people",
+                "residents"
+              ]
+            },
+            {
+              "state": 4,
+              "sector": "positive_head",
+              "communities": [
+                6,
+                8
+              ],
+              "role_a": "inhabitants",
+              "role_b": "settlement",
+              "token_edges": 173,
+              "affinity": 0.856,
+              "tokens_a": [
+                "people",
+                "residents"
+              ],
+              "tokens_b": [
+                "cities",
+                "town"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "movement_routes ↔ settlement",
+          "states": [
+            2
+          ],
+          "evidence": [
+            {
+              "state": 2,
+              "sector": "positive_head",
+              "communities": [
+                3,
+                8
+              ],
+              "role_a": "movement_routes",
+              "role_b": "settlement",
+              "token_edges": 108,
+              "affinity": 0.484,
+              "tokens_a": [
+                "journey",
+                "transporting",
+                "transported",
+                "traveling"
+              ],
+              "tokens_b": [
+                "cities",
+                "towns",
+                "districts",
+                "city"
+              ]
+            }
+          ]
+        }
+      ],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": true,
+      "semantic_status": "contextual_relationship_candidates_found"
+    },
+    {
+      "decision": 15,
+      "current_input": "\n",
+      "next_token": "\n",
+      "input_relation_count": 0,
+      "contextual_relation_count": 0,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": false,
+      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold"
+    },
+    {
+      "decision": 16,
+      "current_input": "\n",
+      "next_token": "A",
+      "input_relation_count": 0,
+      "contextual_relation_count": 3,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [
+        {
+          "pair": "built_places ↔ movement_routes",
+          "states": [
+            4,
+            5
+          ],
+          "evidence": [
+            {
+              "state": 4,
+              "sector": "positive_head",
+              "communities": [
+                6,
+                9
+              ],
+              "role_a": "built_places",
+              "role_b": "movement_routes",
+              "token_edges": 71,
+              "affinity": 0.508,
+              "tokens_a": [
+                "buildings",
+                "houses"
+              ],
+              "tokens_b": [
+                "travel",
+                "walked"
+              ]
+            },
+            {
+              "state": 5,
+              "sector": "positive_head",
+              "communities": [
+                0,
+                7
+              ],
+              "role_a": "movement_routes",
+              "role_b": "built_places",
+              "token_edges": 209,
+              "affinity": 0.534,
+              "tokens_a": [
+                "paths",
+                "path",
+                "route"
+              ],
+              "tokens_b": [
+                "hotels",
+                "hotel",
+                "buildings"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "connection_crossing ↔ movement_routes",
+          "states": [
+            2
+          ],
+          "evidence": [
+            {
+              "state": 2,
+              "sector": "positive_head",
+              "communities": [
+                5,
+                13
+              ],
+              "role_a": "movement_routes",
+              "role_b": "connection_crossing",
+              "token_edges": 93,
+              "affinity": 0.578,
+              "tokens_a": [
+                "journey",
+                "transporting",
+                "walked"
+              ],
+              "tokens_b": [
+                "connects",
+                "connect"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "built_places ↔ inhabitants",
+          "states": [
+            4
+          ],
+          "evidence": [
+            {
+              "state": 4,
+              "sector": "positive_head",
+              "communities": [
+                6,
+                7
+              ],
+              "role_a": "built_places",
+              "role_b": "inhabitants",
+              "token_edges": 67,
+              "affinity": 0.42,
+              "tokens_a": [
+                "buildings",
+                "houses"
+              ],
+              "tokens_b": [
+                "residents",
+                "people",
+                "inhabitants"
+              ]
+            }
+          ]
+        }
+      ],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": true,
+      "semantic_status": "contextual_relationship_candidates_found"
+    },
+    {
+      "decision": 17,
+      "current_input": "A",
+      "next_token": ":",
+      "input_relation_count": 0,
+      "contextual_relation_count": 1,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [
+        {
+          "pair": "inhabitants ↔ settlement",
+          "states": [
+            2
+          ],
+          "evidence": [
+            {
+              "state": 2,
+              "sector": "positive_head",
+              "communities": [
+                5,
+                11
+              ],
+              "role_a": "settlement",
+              "role_b": "inhabitants",
+              "token_edges": 125,
+              "affinity": 0.729,
+              "tokens_a": [
+                "cities",
+                "towns"
+              ],
+              "tokens_b": [
+                "people",
+                "residents"
+              ]
+            }
+          ]
+        }
+      ],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": false,
+      "semantic_status": "contextual_relationship_candidates_found"
+    },
+    {
+      "decision": 18,
+      "current_input": ":",
+      "next_token": "\n",
+      "input_relation_count": 0,
+      "contextual_relation_count": 3,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [
+        {
+          "pair": "built_places ↔ inhabitants",
+          "states": [
+            5
+          ],
+          "evidence": [
+            {
+              "state": 5,
+              "sector": "positive_head",
+              "communities": [
+                4,
+                11
+              ],
+              "role_a": "built_places",
+              "role_b": "inhabitants",
+              "token_edges": 75,
+              "affinity": 0.514,
+              "tokens_a": [
+                "shops",
+                "houses"
+              ],
+              "tokens_b": [
+                "people",
+                "persons"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "commerce ↔ inhabitants",
+          "states": [
+            5
+          ],
+          "evidence": [
+            {
+              "state": 5,
+              "sector": "positive_head",
+              "communities": [
+                4,
+                11
+              ],
+              "role_a": "commerce",
+              "role_b": "inhabitants",
+              "token_edges": 75,
+              "affinity": 0.514,
+              "tokens_a": [
+                "business",
+                "commerce"
+              ],
+              "tokens_b": [
+                "people",
+                "persons"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "inhabitants ↔ settlement",
+          "states": [
+            5
+          ],
+          "evidence": [
+            {
+              "state": 5,
+              "sector": "positive_head",
+              "communities": [
+                4,
+                11
+              ],
+              "role_a": "settlement",
+              "role_b": "inhabitants",
+              "token_edges": 75,
+              "affinity": 0.514,
+              "tokens_a": [
+                "cities",
+                "towns"
+              ],
+              "tokens_b": [
+                "people",
+                "persons"
+              ]
+            }
+          ]
+        }
+      ],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": false,
+      "semantic_status": "contextual_relationship_candidates_found"
+    },
+    {
+      "decision": 19,
+      "current_input": "\n",
+      "next_token": "\n",
+      "input_relation_count": 0,
+      "contextual_relation_count": 0,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": false,
+      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold"
+    },
+    {
+      "decision": 20,
+      "current_input": "\n",
+      "next_token": "The",
+      "input_relation_count": 0,
+      "contextual_relation_count": 1,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [
+        {
+          "pair": "inhabitants ↔ movement_routes",
+          "states": [
+            2
+          ],
+          "evidence": [
+            {
+              "state": 2,
+              "sector": "positive_head",
+              "communities": [
+                1,
+                12
+              ],
+              "role_a": "movement_routes",
+              "role_b": "inhabitants",
+              "token_edges": 72,
+              "affinity": 0.388,
+              "tokens_a": [
+                "trip",
+                "transporting"
+              ],
+              "tokens_b": [
+                "people",
+                "persons",
+                "inhabitants"
+              ]
+            }
+          ]
+        }
+      ],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": false,
+      "semantic_status": "contextual_relationship_candidates_found"
+    },
+    {
+      "decision": 21,
+      "current_input": "The",
+      "next_token": " city",
+      "input_relation_count": 0,
+      "contextual_relation_count": 1,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [
+        {
+          "pair": "built_places ↔ inhabitants",
+          "states": [
+            1
+          ],
+          "evidence": [
+            {
+              "state": 1,
+              "sector": "positive_head",
+              "communities": [
+                2,
+                12
+              ],
+              "role_a": "built_places",
+              "role_b": "inhabitants",
+              "token_edges": 130,
+              "affinity": 0.712,
+              "tokens_a": [
+                "buildings",
+                "houses",
+                "streets",
+                "corridors",
+                "shops"
+              ],
+              "tokens_b": [
+                "people",
+                "residents"
+              ]
+            }
+          ]
+        }
+      ],
+      "negative_sector_relations": [
+        "connection_crossing ↔ engineering_governance"
+      ],
+      "within_decision_recurrence": false,
+      "semantic_status": "contextual_relationship_candidates_found"
+    },
+    {
+      "decision": 22,
+      "current_input": " city",
+      "next_token": " is",
+      "input_relation_count": 12,
+      "contextual_relation_count": 4,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [
+        {
+          "pair": "built_places ↔ movement_routes",
+          "states": [
+            1
+          ],
+          "evidence": [
+            {
+              "state": 1,
+              "sector": "positive_head",
+              "communities": [
+                0,
+                6
+              ],
+              "role_a": "built_places",
+              "role_b": "movement_routes",
+              "token_edges": 439,
+              "affinity": 1.184,
+              "tokens_a": [
+                "buildings",
+                "courtyard",
+                "corridors"
+              ],
+              "tokens_b": [
+                "transporting",
+                "transportation",
+                "traveling",
+                "travel"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "movement_routes ↔ settlement",
+          "states": [
+            1
+          ],
+          "evidence": [
+            {
+              "state": 1,
+              "sector": "positive_head",
+              "communities": [
+                0,
+                6
+              ],
+              "role_a": "settlement",
+              "role_b": "movement_routes",
+              "token_edges": 439,
+              "affinity": 1.184,
+              "tokens_a": [
+                "towns",
+                "city",
+                "cities"
+              ],
+              "tokens_b": [
+                "transporting",
+                "transportation",
+                "traveling",
+                "travel"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "built_places ↔ commerce",
+          "states": [
+            3
+          ],
+          "evidence": [
+            {
+              "state": 3,
+              "sector": "positive_head",
+              "communities": [
+                6,
+                8
+              ],
+              "role_a": "commerce",
+              "role_b": "built_places",
+              "token_edges": 99,
+              "affinity": 0.625,
+              "tokens_a": [
+                "markets",
+                "market",
+                "businesses",
+                "commerce"
+              ],
+              "tokens_b": [
+                "buildings",
+                "hotels",
+                "shop"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "commerce ↔ settlement",
+          "states": [
+            3
+          ],
+          "evidence": [
+            {
+              "state": 3,
+              "sector": "positive_head",
+              "communities": [
+                6,
+                8
+              ],
+              "role_a": "commerce",
+              "role_b": "settlement",
+              "token_edges": 99,
+              "affinity": 0.625,
+              "tokens_a": [
+                "markets",
+                "market",
+                "businesses",
+                "commerce"
+              ],
+              "tokens_b": [
+                "town",
+                "cities",
+                "towns",
+                "villages",
+                "village"
+              ]
+            }
+          ]
+        }
+      ],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": false,
+      "semantic_status": "contextual_relationship_candidates_found"
+    },
+    {
+      "decision": 23,
+      "current_input": " is",
+      "next_token": " a",
+      "input_relation_count": 0,
+      "contextual_relation_count": 0,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": false,
+      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold"
+    },
+    {
+      "decision": 24,
+      "current_input": " a",
+      "next_token": " bridge",
+      "input_relation_count": 0,
+      "contextual_relation_count": 0,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [],
+      "negative_sector_relations": [
+        "built_places ↔ engineering_governance",
+        "connection_crossing ↔ engineering_governance"
+      ],
+      "within_decision_recurrence": false,
+      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold"
+    },
+    {
+      "decision": 25,
+      "current_input": " bridge",
+      "next_token": " that",
+      "input_relation_count": 13,
+      "contextual_relation_count": 2,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [
+        {
+          "pair": "connection_crossing ↔ movement_routes",
+          "states": [
+            2
+          ],
+          "evidence": [
+            {
+              "state": 2,
+              "sector": "positive_head",
+              "communities": [
+                6,
+                9
+              ],
+              "role_a": "movement_routes",
+              "role_b": "connection_crossing",
+              "token_edges": 134,
+              "affinity": 0.776,
+              "tokens_a": [
+                "moving",
+                "walked"
+              ],
+              "tokens_b": [
+                "crossings",
+                "transfer",
+                "traverse",
+                "bridge"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "commerce ↔ movement_routes",
+          "states": [
+            4
+          ],
+          "evidence": [
+            {
+              "state": 4,
+              "sector": "positive_head",
+              "communities": [
+                5,
+                7
+              ],
+              "role_a": "movement_routes",
+              "role_b": "commerce",
+              "token_edges": 100,
+              "affinity": 0.493,
+              "tokens_a": [
+                "moving",
+                "walked"
+              ],
+              "tokens_b": [
+                "market",
+                "markets"
+              ]
+            }
+          ]
+        }
+      ],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": false,
+      "semantic_status": "contextual_relationship_candidates_found"
+    },
+    {
+      "decision": 26,
+      "current_input": " that",
+      "next_token": " connects",
+      "input_relation_count": 0,
+      "contextual_relation_count": 0,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [],
+      "negative_sector_relations": [
+        "engineering_governance ↔ movement_routes"
+      ],
+      "within_decision_recurrence": false,
+      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold"
+    },
+    {
+      "decision": 27,
+      "current_input": " connects",
+      "next_token": " the",
+      "input_relation_count": 0,
+      "contextual_relation_count": 3,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [
+        {
+          "pair": "connection_crossing ↔ settlement",
+          "states": [
+            5
+          ],
+          "evidence": [
+            {
+              "state": 5,
+              "sector": "positive_head",
+              "communities": [
+                0,
+                1
+              ],
+              "role_a": "settlement",
+              "role_b": "connection_crossing",
+              "token_edges": 482,
+              "affinity": 1.102,
+              "tokens_a": [
+                "communities",
+                "cities",
+                "towns",
+                "districts"
+              ],
+              "tokens_b": [
+                "connections",
+                "connection"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "connection_crossing ↔ movement_routes",
+          "states": [
+            3
+          ],
+          "evidence": [
+            {
+              "state": 3,
+              "sector": "positive_head",
+              "communities": [
+                4,
+                5
+              ],
+              "role_a": "movement_routes",
+              "role_b": "connection_crossing",
+              "token_edges": 178,
+              "affinity": 0.757,
+              "tokens_a": [
+                "walking",
+                "walked"
+              ],
+              "tokens_b": [
+                "transfer",
+                "transfers"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "movement_routes ↔ settlement",
+          "states": [
+            2
+          ],
+          "evidence": [
+            {
+              "state": 2,
+              "sector": "positive_head",
+              "communities": [
+                3,
+                6
+              ],
+              "role_a": "movement_routes",
+              "role_b": "settlement",
+              "token_edges": 159,
+              "affinity": 0.547,
+              "tokens_a": [
+                "walking",
+                "walked"
+              ],
+              "tokens_b": [
+                "districts",
+                "town",
+                "villages"
+              ]
+            }
+          ]
+        }
+      ],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": false,
+      "semantic_status": "contextual_relationship_candidates_found"
+    },
+    {
+      "decision": 28,
+      "current_input": " the",
+      "next_token": " river",
+      "input_relation_count": 0,
+      "contextual_relation_count": 1,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [
+        {
+          "pair": "movement_routes ↔ settlement",
+          "states": [
+            1
+          ],
+          "evidence": [
+            {
+              "state": 1,
+              "sector": "positive_head",
+              "communities": [
+                6,
+                7
+              ],
+              "role_a": "movement_routes",
+              "role_b": "settlement",
+              "token_edges": 160,
+              "affinity": 0.694,
+              "tokens_a": [
+                "traveling",
+                "transporting"
+              ],
+              "tokens_b": [
+                "cities",
+                "towns",
+                "villages",
+                "districts"
+              ]
+            }
+          ]
+        }
+      ],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": false,
+      "semantic_status": "contextual_relationship_candidates_found"
+    },
+    {
+      "decision": 29,
+      "current_input": " river",
+      "next_token": " with",
+      "input_relation_count": 9,
+      "contextual_relation_count": 6,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [
+        {
+          "pair": "built_places ↔ movement_routes",
+          "states": [
+            1
+          ],
+          "evidence": [
+            {
+              "state": 1,
+              "sector": "positive_head",
+              "communities": [
+                1,
+                5
+              ],
+              "role_a": "movement_routes",
+              "role_b": "built_places",
+              "token_edges": 317,
+              "affinity": 0.834,
+              "tokens_a": [
+                "transporting",
+                "transport",
+                "transported",
+                "transportation",
+                "traveling"
+              ],
+              "tokens_b": [
+                "courtyard",
+                "corridors",
+                "buildings",
+                "corridor",
+                "streets"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "commerce ↔ movement_routes",
+          "states": [
+            3
+          ],
+          "evidence": [
+            {
+              "state": 3,
+              "sector": "positive_head",
+              "communities": [
+                4,
+                10
+              ],
+              "role_a": "movement_routes",
+              "role_b": "commerce",
+              "token_edges": 74,
+              "affinity": 0.391,
+              "tokens_a": [
+                "moving",
+                "movements"
+              ],
+              "tokens_b": [
+                "markets",
+                "market"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "movement_routes ↔ settlement",
+          "states": [
+            2
+          ],
+          "evidence": [
+            {
+              "state": 2,
+              "sector": "positive_head",
+              "communities": [
+                8,
+                9
+              ],
+              "role_a": "settlement",
+              "role_b": "movement_routes",
+              "token_edges": 83,
+              "affinity": 0.468,
+              "tokens_a": [
+                "villages",
+                "towns"
+              ],
+              "tokens_b": [
+                "transporting",
+                "transport",
+                "transportation",
+                "transported",
+                "travel"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "built_places ↔ inhabitants",
+          "states": [
+            5
+          ],
+          "evidence": [
+            {
+              "state": 5,
+              "sector": "positive_head",
+              "communities": [
+                1,
+                11
+              ],
+              "role_a": "built_places",
+              "role_b": "inhabitants",
+              "token_edges": 142,
+              "affinity": 0.853,
+              "tokens_a": [
+                "buildings",
+                "shops",
+                "houses"
+              ],
+              "tokens_b": [
+                "persons",
+                "people"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "inhabitants ↔ settlement",
+          "states": [
+            5
+          ],
+          "evidence": [
+            {
+              "state": 5,
+              "sector": "positive_head",
+              "communities": [
+                1,
+                11
+              ],
+              "role_a": "settlement",
+              "role_b": "inhabitants",
+              "token_edges": 142,
+              "affinity": 0.853,
+              "tokens_a": [
+                "towns",
+                "cities",
+                "communities"
+              ],
+              "tokens_b": [
+                "persons",
+                "people"
+              ]
+            }
+          ]
+        }
+      ],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": false,
+      "semantic_status": "contextual_relationship_candidates_found"
+    },
+    {
+      "decision": 30,
+      "current_input": " with",
+      "next_token": " the",
+      "input_relation_count": 0,
+      "contextual_relation_count": 0,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": false,
+      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold"
+    },
+    {
+      "decision": 31,
+      "current_input": " the",
+      "next_token": " river",
+      "input_relation_count": 0,
+      "contextual_relation_count": 0,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": false,
+      "semantic_status": "no_direct_contextual_anchor_links_at_declared_threshold"
+    },
+    {
+      "decision": 32,
+      "current_input": " river",
+      "next_token": ".",
+      "input_relation_count": 9,
+      "contextual_relation_count": 10,
+      "output_relation_count": 0,
+      "leading_contextual_relationships": [
+        {
+          "pair": "connection_crossing ↔ settlement",
+          "states": [
+            2,
+            5
+          ],
+          "evidence": [
+            {
+              "state": 2,
+              "sector": "positive_head",
+              "communities": [
+                9,
+                10
+              ],
+              "role_a": "connection_crossing",
+              "role_b": "settlement",
+              "token_edges": 96,
+              "affinity": 0.519,
+              "tokens_a": [
+                "transfer",
+                "crossings"
+              ],
+              "tokens_b": [
+                "villages",
+                "towns"
+              ]
+            },
+            {
+              "state": 5,
+              "sector": "positive_head",
+              "communities": [
+                0,
+                7
+              ],
+              "role_a": "settlement",
+              "role_b": "connection_crossing",
+              "token_edges": 299,
+              "affinity": 1.028,
+              "tokens_a": [
+                "cities",
+                "towns",
+                "communities",
+                "city"
+              ],
+              "tokens_b": [
+                "connections",
+                "connection",
+                "link"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "built_places ↔ movement_routes",
+          "states": [
+            1
+          ],
+          "evidence": [
+            {
+              "state": 1,
+              "sector": "positive_head",
+              "communities": [
+                3,
+                6
+              ],
+              "role_a": "movement_routes",
+              "role_b": "built_places",
+              "token_edges": 249,
+              "affinity": 0.99,
+              "tokens_a": [
+                "transportation",
+                "transport"
+              ],
+              "tokens_b": [
+                "buildings",
+                "corridors"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "movement_routes ↔ water_terrain",
+          "states": [
+            2
+          ],
+          "evidence": [
+            {
+              "state": 2,
+              "sector": "positive_head",
+              "communities": [
+                0,
+                10
+              ],
+              "role_a": "movement_routes",
+              "role_b": "water_terrain",
+              "token_edges": 194,
+              "affinity": 0.745,
+              "tokens_a": [
+                "transporting",
+                "transported",
+                "transport",
+                "traveling"
+              ],
+              "tokens_b": [
+                "valley",
+                "river"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "connection_crossing ↔ movement_routes",
+          "states": [
+            2
+          ],
+          "evidence": [
+            {
+              "state": 2,
+              "sector": "positive_head",
+              "communities": [
+                0,
+                9
+              ],
+              "role_a": "movement_routes",
+              "role_b": "connection_crossing",
+              "token_edges": 264,
+              "affinity": 0.85,
+              "tokens_a": [
+                "transporting",
+                "transported",
+                "transport",
+                "traveling"
+              ],
+              "tokens_b": [
+                "transfer",
+                "crossings"
+              ]
+            }
+          ]
+        },
+        {
+          "pair": "built_places ↔ connection_crossing",
+          "states": [
+            5
+          ],
+          "evidence": [
+            {
+              "state": 5,
+              "sector": "positive_head",
+              "communities": [
+                0,
+                7
+              ],
+              "role_a": "built_places",
+              "role_b": "connection_crossing",
+              "token_edges": 299,
+              "affinity": 1.028,
+              "tokens_a": [
+                "buildings",
+                "houses",
+                "streets"
+              ],
+              "tokens_b": [
+                "connections",
+                "connection",
+                "link"
+              ]
+            }
+          ]
+        }
+      ],
+      "negative_sector_relations": [],
+      "within_decision_recurrence": true,
+      "semantic_status": "contextual_relationship_candidates_found"
+    }
+  ],
+  "repeated_word_control": [
+    {
+      "decisions": [
+        2,
+        21
+      ],
+      "input_token": " The",
+      "shared_candidate_relations": [
+        "built_places ↔ inhabitants"
+      ],
+      "first_only": [
+        "inhabitants ↔ settlement"
+      ],
+      "second_only": []
+    },
+    {
+      "decisions": [
+        3,
+        22
+      ],
+      "input_token": " city",
+      "shared_candidate_relations": [
+        "built_places ↔ movement_routes",
+        "movement_routes ↔ settlement"
+      ],
+      "first_only": [
+        "built_places ↔ settlement",
+        "built_places ↔ connection_crossing",
+        "connection_crossing ↔ settlement"
+      ],
+      "second_only": [
+        "built_places ↔ commerce",
+        "commerce ↔ settlement"
+      ]
+    },
+    {
+      "decisions": [
+        6,
+        25
+      ],
+      "input_token": " bridge",
+      "shared_candidate_relations": [
+        "connection_crossing ↔ movement_routes"
+      ],
+      "first_only": [
+        "movement_routes ↔ settlement"
+      ],
+      "second_only": [
+        "commerce ↔ movement_routes"
+      ]
+    },
+    {
+      "decisions": [
+        8,
+        27
+      ],
+      "input_token": " connects",
+      "shared_candidate_relations": [
+        "connection_crossing ↔ movement_routes",
+        "connection_crossing ↔ settlement",
+        "movement_routes ↔ settlement"
+      ],
+      "first_only": [],
+      "second_only": []
+    },
+    {
+      "decisions": [
+        10,
+        29
+      ],
+      "input_token": " river",
+      "shared_candidate_relations": [
+        "built_places ↔ movement_routes",
+        "movement_routes ↔ settlement",
+        "commerce ↔ movement_routes"
+      ],
+      "first_only": [
+        "inhabitants ↔ movement_routes"
+      ],
+      "second_only": [
+        "built_places ↔ inhabitants",
+        "inhabitants ↔ settlement"
+      ]
+    },
+    {
+      "decisions": [
+        13,
+        32
+      ],
+      "input_token": " river",
+      "shared_candidate_relations": [
+        "connection_crossing ↔ movement_routes",
+        "connection_crossing ↔ settlement"
+      ],
+      "first_only": [
+        "movement_routes ↔ settlement"
+      ],
+      "second_only": [
+        "built_places ↔ movement_routes",
+        "movement_routes ↔ water_terrain",
+        "built_places ↔ connection_crossing"
+      ]
+    }
+  ],
+  "interpretation": "Several functional relation types recur across distinct current-token decisions, including links involving settlement, movement and crossing, but no single relation can be traced through all 32 decisions and all layers under this method.",
+  "uncertainty": [
+    "Semantic anchor families are manually selected from inspected evidence and remain candidate abstractions.",
+    "Direct intercommunity edges are measured vocabulary-neighbour structure, not logical or causal relations.",
+    "Only 818 of 6,944 communities match these deliberately limited anchor rules; others remain available in original network maps.",
+    "A missing relation under this screen is not proof of semantic absence.",
+    "Output-proximal S06/S07 uses the input-embedding projection, not the untied output head.",
+    "Pairwise support across states is not automatically continuity of a single parent: specific community identities and alternatives must be inspected.",
+    "The repeated response and single prompt offer no independent task-controlled comparator.",
+    "Human usefulness evaluation remains pending."
+  ]
+}
