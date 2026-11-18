@@ -169,14 +169,14 @@ The edge totals are accumulated counts of *cross-community token connections in 
 
 ## 8. Analysis artefacts
 
-- [Interactive semantic matrix and network report](analysis/R020_SEMANTIC_MAP_REPORT.html)
-- [Derived diagnostics and edge supports](analysis/R020_DERIVED_DIAGNOSTICS.json)
-- [All 512 state/sector summaries, 705 depth matches and 961 generation matches](analysis/R020_STATE_CELLS.json)
-- [All 6,944 community annotations: decisions 01–08](analysis/R020_COMMUNITIES_01-08.json)
-- [Decisions 09–16](analysis/R020_COMMUNITIES_09-16.json)
-- [Decisions 17–24](analysis/R020_COMMUNITIES_17-24.json)
-- [Decisions 25–32](analysis/R020_COMMUNITIES_25-32.json)
-- [Deterministic screening code and lexicon](analysis/R020_ANALYSIS_REPRODUCER.js)
-- [Original R020 measurement evidence](chatgpt_community_networks.json)
+- [Interactive semantic matrix and network report](R020_SEMANTIC_MAP_REPORT.html)
+- [Derived diagnostics and edge supports](R020_DERIVED_DIAGNOSTICS.json)
+- [All 512 state/sector summaries, 705 depth matches and 961 generation matches](R020_STATE_CELLS.json)
+- [All 6,944 community annotations: decisions 01–08](R020_COMMUNITIES_01-08.json)
+- [Decisions 09–16](R020_COMMUNITIES_09-16.json)
+- [Decisions 17–24](R020_COMMUNITIES_17-24.json)
+- [Decisions 25–32](R020_COMMUNITIES_25-32.json)
+- [Deterministic screening code and lexicon](R020_ANALYSIS_REPRODUCER.js)
+- [Original R020 measurement evidence](../chatgpt_community_networks.json)
 
 **Lifecycle boundary:** This analytical package is an inspectable reconstruction offered for human usefulness evaluation. It does not replace the original R020 measurement methodology, modify its frozen outputs or assert that the model's internal representation contains a uniquely correct hidden answer.
