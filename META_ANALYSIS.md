@@ -23045,3 +23045,39 @@ The research process itself has therefore been a continuing experiment in findin
 **The new insight is that semantic integration is potentially both an object of investigation and a problem the investigation's own methodology must solve.**
 
 That does not replace the original project objective. It explains why the human–agent division of cognitive labour, the repeated corrections to the analysis, and the R020 conclusion may be parts of the same research finding rather than separate discoveries. <MemoryCite />
+
+### MA-0127 — METHODOLOGICAL CORRECTION: R020 conclusion and needless integration hedging
+
+- Entry timestamp: `2026-11-19T08:57:35+11:00`
+- Timezone: `Australia/Sydney`
+- Author/source: `ChatGPT`, responding to the project owner's question about unnecessary hedging in the article evidence framing
+- Entry type: `interpretive correction; research-claim boundary`
+- Related run: `R020_pythia-70m-representation-output-contrast`
+- Related entries: `MA-0123`, `MA-0124`, `MA-0125`, `MA-0126`
+- Related artefact: `ARTICLE_EVIDENCE_INDEX.md`
+- Preservation mode: `verbatim`; the preceding assistant response appears unchanged below.
+- Interpretation boundary: The response corrects an unnecessarily strong qualification; it does not newly establish continuous integration, causal mechanisms or an independently measured usefulness advantage.
+
+#### ChatGPT response (verbatim)
+
+**Yes. It introduces an unnecessarily strong evidential requirement that was not part of the original hypothesis.**
+
+R020 was investigating whether useful semantic relationships could be reconstructed from a model's internal representations even when its generated response was incoherent.
+
+The experiment recovered recurring, evidence-backed associations that the generated answer failed to communicate.
+
+The qualification introduces a different question: whether those associations were *continuously integrated into a coherent hypothesis*.
+
+That is a legitimate subsequent research question, but it should not diminish the finding already made.
+
+More importantly, the absence of qualifying relationships at some generation decisions does not demonstrate that the underlying semantic organisation ceased to exist. Different representations can express the same higher-order structure, and the reconstruction method has incomplete coverage.
+
+### Better formulation
+
+> **R020 demonstrates that recoverable semantic relationships can contain information absent from a model's generated response. Related higher-order structures recur across generation, despite changes in their constituent tokens, communities and relationships.**
+
+This establishes what the experiment discovered without requiring an additional result.
+
+The distinction between **semantic availability, semantic integration and generative expression** remains important, but those are separate objects of investigation, not three conditions that must all be satisfied before recognising a useful result.
+
+The error was treating an unresolved extension of the research as a qualification of the existing finding.
