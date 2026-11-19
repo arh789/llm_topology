@@ -23177,3 +23177,131 @@ The human does not merely prevent the agent from being wrong. **The human helps 
 That is something `ARTICLE_OUTLINE_OFFICIAL.md` does not yet adequately express. Its central asymmetry between generating possibilities and recognising violations remains useful, but is incomplete.
 
 **The new insight is that recognising potential significance can precede understanding it.** That recognition is itself an essential part of the human–agent learning mechanism.
+
+### MA-0129 — CORE METHODOLOGY REVISION: Dual recognition and directional selection
+
+- Entry date: 2026-11-19
+- Author/source: ChatGPT response to the project owner's question about whether recognising resonance requires a fundamental methodological change
+- Related entries: MA-0083, MA-0128
+- Related artefact: ARTICLE_OUTLINE_OFFICIAL.md
+- Preservation mode: verbatim; complete preceding ChatGPT response follows without alteration
+- Interpretation boundary: Proposed methodological update; not an amendment to experimental results
+
+#### ChatGPT response (verbatim)
+
+**It requires a change to the centre of the methodology, not a fundamental rebuild of the project. And it is more than another cosmetic edit.**
+
+I re-examined `ARTICLE_OUTLINE_OFFICIAL.md`. The new insight exposes an incomplete assumption in its account of how human–agent learning works.
+
+## 1. What fundamentally changes?
+
+The official outline currently defines the central relationship as:
+
+> The asymmetry between generating possibilities and recognising violations.
+
+That describes only half of the human's contribution.
+
+The revised relationship is:
+
+**The asymmetry between generating possibilities and recognising their potential significance or invalidity.**
+
+This changes how the human directs exploration.
+
+| Previous mechanism | Revised mechanism |
+|---|---|
+| Agent generates possibilities | Agent generates possibilities |
+| Human recognises violations | Human recognises resonance **and** violations |
+| Human rejects inadequate abstractions | Human selects promising directions and challenges inadequate ones |
+| Agent reconstructs within tighter constraints | Agent expands promising directions and reconstructs inadequate ones |
+| Knowledge emerges through elimination | Knowledge emerges through exploration, selection, correction and reconstruction |
+
+The important addition is **directional selection**.
+
+The human does not merely narrow the possibility space. The human can identify a promising region and direct the agent to explore it further, without already understanding what might be found.
+
+## 2. What needs changing in the official outline?
+
+Several central sections require revision.
+
+| Official outline section | Required change |
+|---|---|
+| **4. Human's critical capability** | Include recognition of resonance, promising relationships and potential significance alongside detection of invalidity |
+| **5. Learning mechanism** | Add the positive investigation pathway alongside the existing correction pathway |
+| **6–8. Meta-analysis and discovery** | Incorporate examples of promising structures being selected for further exploration, where supported by the record |
+| **9. Cognitive division of labour** | Make the human's role in directing attention and selecting opportunities explicit |
+| **10. Highest-order principle** | Recognise that human direction operates through both attraction and rejection |
+| **The deepest compression** | Replace the exclusively negative recognition loop with a dual-path learning mechanism |
+
+Most importantly, the final section, *What becomes central?*, needs to reflect the expanded account.
+
+This is a substantive revision of the governing explanation, not simply adding the word *resonance* in several places.
+
+## 3. What does not need changing?
+
+The original project objective remains intact.
+
+The R001–R020 experiments, semantic reconstruction pipeline, measured findings, evidence index and research history do not need to be rebuilt.
+
+Nor does the article require a completely different page architecture.
+
+The existing design already contains the necessary sections. However, its learning-loop diagram and the section titled *The human does not need to know the answer to recognise a mistake* currently overemphasise negative correction.
+
+Those areas should reflect the broader mechanism.
+
+## 4. The revised central mechanism
+
+```text id="vmvuo4"
+             UNKNOWN POSSIBILITY SPACE
+                       |
+                       v
+              AGENT GENERATES
+               REPRESENTATIONS
+                       |
+                       v
+               HUMAN RECOGNISES
+                       |
+             +---------+---------+
+             |                   |
+             v                   v
+         RESONANCE            INVALIDITY
+             |                   |
+             v                   v
+        SELECT AND            CHALLENGE
+          EXPLORE             AND REVISE
+             |                   |
+             +---------+---------+
+                       |
+                       v
+              AGENT RECONSTRUCTS
+                       |
+                       v
+              HUMAN EXAMINES
+              NEW POSSIBILITIES
+                       |
+                       v
+               HUMAN LEARNS
+                       |
+                       '--------> REPEAT
+```
+
+Resonance supplies a reason to investigate, not proof that the relationship is correct. That distinction remains important.
+
+## 5. What this means for the project
+
+There is an important difference between **correcting an answer** and **discovering a direction worth pursuing**.
+
+The original methodology was already good at explaining the former.
+
+Your edit makes the latter explicit.
+
+It also connects the LLM Topology research more directly to creative practice, where discovering a promising relationship may begin with recognition before it becomes a fully articulated idea.
+
+### Conclusion
+
+**The project's foundation remains valid, but its central learning mechanism needs to be expanded.**
+
+I would revise `ARTICLE_OUTLINE_OFFICIAL.md` first, then update the article's learning-loop diagram and explanatory sections to match.
+
+The priority is not making the project larger. It is correcting the model of human judgement that organises everything else.
+
+The change can be implemented through a small number of targeted edits, but those edits must reach the governing principle rather than merely altering the wording around it.
