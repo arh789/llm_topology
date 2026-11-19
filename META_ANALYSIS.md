@@ -23756,3 +23756,220 @@ Most importantly, it doesn't announce what every interesting relationship means 
 **This is the first point in the article where R020 becomes relevant.** The reader now knows what a language model is being asked to do, why its failure matters, and why examining its internal representations might reveal something unexpected.
 
 No further page edit has been made yet.
+
+### MA-0135 — Greenfield article architecture: R020 discovery before explanation
+
+- Entry date: `2026-11-20`
+- Source: `ChatGPT response to the user's greenfield page-structure question`
+- Preservation: `verbatim response including UI markup`
+
+I would rebuild the page as **a discovery-led research article, not a technical report, laboratory dashboard or retrospective history of twenty experiments**.
+
+The organising principle would be simple:
+
+**Give the reader a familiar problem, show them something surprising, let them examine the discovery, then explain how it was achieved and why the evidence is credible.**
+
+The R020 experiment would provide the central demonstration. The preceding experiments would explain how the project developed the ability to produce it.
+
+## Proposed page structure
+
+<box border radius="lg" padding={3} gap={2} align="center">
+  <box width="100%" background="surface-secondary" radius="md" padding={3} align="center" gap={1}>
+    **01 — The problem**
+
+    <text color="secondary" size="xs">A familiar experience with language models</text>
+  </box>
+  <icon name="arrow-down" color="tertiary"/>
+  <box width="100%" background="surface-secondary" radius="md" padding={3} align="center" gap={1}>
+    **02 — The experiment**
+
+    <text color="secondary" size="xs">A tiny model, a simple question, a failed answer</text>
+  </box>
+  <icon name="arrow-down" color="tertiary"/>
+  <box width="100%" background="surface-secondary" radius="md" padding={3} align="center" gap={1}>
+    **03 — The discovery**
+
+    <text color="secondary" size="xs">A large, inspectable semantic network with adjacent possibilities</text>
+  </box>
+  <icon name="arrow-down" color="tertiary"/>
+  <box width="100%" background="surface-secondary" radius="md" padding={3} align="center" gap={1}>
+    **04 — What the map reveals**
+
+    <text color="secondary" size="xs">Unexpected associations and possible directions for investigation</text>
+  </box>
+  <icon name="arrow-down" color="tertiary"/>
+  <box width="100%" background="surface-secondary" radius="md" padding={3} align="center" gap={1}>
+    **05 — How we did it**
+
+    <text color="secondary" size="xs">The measurement and reconstruction pipeline</text>
+  </box>
+  <icon name="arrow-down" color="tertiary"/>
+  <box width="100%" background="surface-secondary" radius="md" padding={3} align="center" gap={1}>
+    **06 — Does it actually work?**
+
+    <text color="secondary" size="xs">Controlled experiments, reproducibility and evidence</text>
+  </box>
+  <icon name="arrow-down" color="tertiary"/>
+  <box width="100%" background="surface-secondary" radius="md" padding={3} align="center" gap={1}>
+    **07 — The human–agent discovery process**
+
+    <text color="secondary" size="xs">How a human uses the exposed possibilities to find new questions</text>
+  </box>
+</box>
+
+## 01. How can you search for what you do not know exists?
+
+I would dispense with the existing hero entirely.
+
+The page should open directly with the article title and a brief introduction, close to the version already established:
+
+> Ask a language model a simple question, and sometimes it gives you a stupid answer. But that answer is only the visible result of a much richer process. As the model generates its response, its intermediate states contain associations between ideas that may never appear in the words it produces.
+>
+> What if we could reconstruct those associations as a network, and use that network to discover things we didn't know to look for?
+>
+> To explore this, we asked Pythia 70M, a very small open-weights language model, why a city would build a bridge across a river. It failed to give a meaningful answer. Yet when we examined its intermediate states, we uncovered a much broader network of concepts and relationships, including possibilities the model never managed to express in its response.
+
+This establishes the context, the problem, the proposed solution and the experiment without requiring prior knowledge.
+
+There should be no sidebar competing for attention, and no companion panel giving away the findings.
+
+## 02. A simple question, a stupid answer
+
+Present the actual experiment immediately.
+
+<box border radius="lg" gap={0} clip>
+  <box padding={3} gap={2}>
+    <row justify="between" align="center">
+      <text weight="medium" size="xs" color="secondary">PYTHIA 70M — EXPERIMENTAL INPUT</text>
+      <icon name="terminal" color="secondary"/>
+    </row>
+    <text weight="medium">Why would a city build a bridge across a river?</text>
+  </box>
+  <divider color="subtle"/>
+  <box padding={3} gap={2}>
+    <row justify="between" align="center">
+      <text weight="medium" size="xs" color="secondary">GENERATED RESPONSE</text>
+      <icon name="message-square" color="secondary"/>
+    </row>
+    <text size="sm" preserveWhitespace>{'The city is a bridge that connects the river with the river.\n\nA:\n\nThe city is a bridge that connects the river with the river.'}</text>
+  </box>
+</box>
+
+The reader can immediately recognise the failure.
+
+One brief transition follows: the experiment recorded the model's intermediate representations as it generated this response and used them to reconstruct networks of associated concepts.
+
+Then show the map.
+
+No code. No run chronology. No extensive analysis yet.
+
+## 03. What was happening inside the model?
+
+This should be the visual centrepiece of the entire article.
+
+**A large, genuine semantic network, not a catalogue of labelled concepts.**
+
+Its purpose is to make the wider possibility space visible.
+
+The first view could use the measured bridge neighbourhood from R020 decision 06, state 00, including its connections to journeys, disruption and structural components, with further relationships involving reconstruction, road and rail transport, boats and river environments.
+
+The network should display its actual community connections. Stronger edges should be visually distinguishable, and less obvious branches should remain visible rather than being filtered out to produce a familiar bridge-building explanation.
+
+The presentation could permit readers to switch between the recorded city, bridge and river neighbourhoods, then inspect later contextual states, including the unexplained mathematical associations.
+
+**Importantly, these are distinct observations.** The interface must not fabricate a single connected graph by combining edges that were measured in different states.
+
+I would also retain a link to the complete 512-network R020 visualisation for readers who want to investigate the source data.
+
+This section should occupy significantly more visual space than the introductory text.
+
+## 04. What else does the network reveal?
+
+Only after the reader has seen the graph would I introduce its most interesting adjacent relationships.
+
+Three examples immediately stand out:
+
+- **Disruption and reconstruction:** The bridge neighbourhood connects with flooding, catastrophe, rebuilding and restoration. That suggests an avenue of investigation beyond ordinary transport.
+- **Commerce and human activity:** Settlements, businesses, markets and movement suggest further questions about the economic and social functions of infrastructure.
+- **Unexplained mathematical associations:** At a later intermediate state, connections and mathematical terminology appear together. This relationship deserves inspection precisely because its significance is not immediately apparent.
+
+The writing should not immediately explain every association.
+
+Some observations should be left open as questions.
+
+That is essential to the purpose of the experiment: **the reader should be able to recognise potential discoveries independently, rather than simply accept the author's interpretation**.
+
+## 05. How did we reconstruct the semantic map?
+
+Now the reader has a reason to learn the methodology.
+
+The explanation should introduce the pipeline in the order each operation becomes necessary:
+
+`Capture model states → Compare vocabulary associations → Construct networks → Detect communities → Reconstruct semantic relationships → Inspect adjacent possibilities`
+
+Each stage should explain what problem the preceding stage could not solve.
+
+Relevant code excerpts and links belong here, alongside small examples of their actual outputs. Full scripts should remain available through the research repository.
+
+The objective is not to teach every detail of the implementation. It is to make the method understandable and reproducible.
+
+## 06. How do we know the findings are credible?
+
+This is where the earlier experiments become important.
+
+Rather than presenting R001–R019 as a long chronological history, I would select the experiments that answer the reader's most natural questions.
+
+| Reader's question | Supporting research |
+|---|---|
+| Can meaningful structures be reconstructed from intermediate states? | R009–R010 |
+| Are they merely reflections of the original prompt? | R013–R014 |
+| Do relationships remain recognisable when the concepts change? | R015 |
+| Does changing word order change the reconstructed networks? | R018 |
+| Could the differences simply be execution noise? | R019 |
+| Can associated concepts be recovered even when generation is poor? | R020 |
+
+This is where the existing research reports, statistical results, figures and reproducibility resources become valuable.
+
+Evidence should answer specific questions about the discovery, not interrupt its introduction.
+
+## 07. What becomes possible when a human can explore the map?
+
+Only here would I make the human–agent collaboration a major topic.
+
+The interesting division of labour is not simply that the human corrects the agent.
+
+The model provides material from which a wider semantic landscape can be reconstructed. The analysing agent helps expose, compare and interpret that landscape. The human recognises which relationships might matter, chooses where to investigate, rejects unhelpful interpretations and directs further exploration.
+
+The project's meta-analysis contains concrete examples of that process.
+
+I would use one complete example: the human encounters a reconstructed relationship, asks an unexpected question about it, and the subsequent analysis exposes a new direction of investigation.
+
+This connects the scientific work to the broader discovery about human learning.
+
+The article can finish by returning to the opening problem: a person cannot search directly for something they do not yet know exists, but they can explore a reconstructed possibility space and recognise new directions once those possibilities become visible.
+
+---
+
+## What disappears in a greenfield rebuild?
+
+The existing oversized hero, accompanying conceptual panels, duplicate introductions, six-category substitutes for graphs and lengthy retrospective descriptions would go.
+
+The page should also stop using *R020* as though it were a meaningful concept to a new reader. Experiment identifiers belong in captions, evidence and source references after their purpose has been established.
+
+The project history remains available, but it no longer determines the article's narrative order.
+
+## What success would look like
+
+The most important part of the page would be the transition between Sections 02 and 03.
+
+The reader sees an obviously unsuccessful generated response, then encounters a substantially richer network of associations.
+
+That contrast should provoke the question:
+
+**How can a model produce such a poor answer when there is so much interesting structure available to investigate?**
+
+The rest of the article exists to answer that question.
+
+My principal recommendation is therefore to build the page around **one dominant, evidence-backed R020 network exploration**, with a concise introduction before it and the methodology, validation and human–agent analysis after it.
+
+That would make the research itself generate the motivation to continue reading, instead of asking the writing to manufacture interest through explanation.
