@@ -23305,3 +23305,48 @@ I would revise `ARTICLE_OUTLINE_OFFICIAL.md` first, then update the article's le
 The priority is not making the project larger. It is correcting the model of human judgement that organises everything else.
 
 The change can be implemented through a small number of targeted edits, but those edits must reach the governing principle rather than merely altering the wording around it.
+
+### MA-0130 — EXECUTION PLAN: Integrate dual recognition into the official methodology and article
+
+- Entry date: 2026-11-19
+- Source: ChatGPT response to the project owner's question, "what steps need to take place next?"
+- Related entries: MA-0128, MA-0129
+- Related artefacts: ARTICLE_OUTLINE_OFFICIAL.md, ARTICLE_EVIDENCE_INDEX.md, portfolio draft /art/llm-topology
+- Preservation mode: verbatim; prior assistant response reproduced in full below
+- Status: proposed execution sequence; changes require separate implementation and verification
+
+#### ChatGPT response (verbatim)
+
+The next task is to **integrate MA-0128 and MA-0129 into the project's governing methodology**, then bring the article into alignment with it.
+
+This is a correction to the learning mechanism, not a new research programme.
+
+## Required sequence
+
+1. **Revise `ARTICLE_OUTLINE_OFFICIAL.md`.** Update the human's critical capability, learning mechanism, cognitive division of labour and highest-order principle. The central distinction becomes recognising *what resonates* as well as *what is invalid*. Preserve the original research objective and experimental findings.
+
+2. **Reconstruct the learning mechanism.** Replace the exclusively correction-driven loop with two complementary pathways: positive recognition directs exploration; negative recognition challenges inadequate representations. Both feed subsequent agent reconstruction. Resonance is a reason to investigate, not evidence that something is correct.
+
+3. **Connect the revised mechanism to recorded evidence.** Examine `META_ANALYSIS.md` for examples where you selected a promising direction, rather than merely rejecting an incorrect interpretation. Link these examples through `ARTICLE_EVIDENCE_INDEX.md` where appropriate. Do not invent examples to support the revised theory.
+
+4. **Update the draft article.** Revise the human-learning explanation, diagrams and correction-focused sections to represent both pathways. Retain the existing page layout, typography improvements, R001–R020 experimental account and interactive placeholders. This should be a targeted conceptual revision, not a page rebuild.
+
+5. **Have Codex verify the revised page.** Codex should work on the existing draft branch, check that the article follows the updated official outline, run the build and inspect the desktop and mobile rendering. Leave metadata and full interactive functionality for later.
+
+## What would constitute success?
+
+The reader should understand that:
+
+**A human can recognise the potential significance of an unfamiliar relationship without understanding it, direct an agent to investigate it, and acquire knowledge through the resulting reconstruction.**
+
+The same human can recognise contradictions and invalid abstractions, preventing the investigation from converging prematurely on an inadequate explanation.
+
+Both capabilities are essential.
+
+## What would indicate scope drift?
+
+Rebuilding experimental pipelines, changing R001–R020 conclusions, treating resonance as proof, inventing supporting cases or expanding the page's technical functionality before its argument is coherent.
+
+**Immediate next action:** Revise `ARTICLE_OUTLINE_OFFICIAL.md`, using MA-0128 and MA-0129 as the correction record. Then update the article against that revised authority.
+
+No additional experiment is required to make these methodological and editorial changes.
