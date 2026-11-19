@@ -23722,3 +23722,37 @@ The next revision needs less introductory machinery, better contextual orientati
 **The governing test should be whether someone encountering the project for the first time can follow the research without already possessing the knowledge the article is supposed to provide.**
 
 I have reviewed the three pages of feedback. I have not made another page edit in response to it.
+
+### MA-0134 — Revised introductory hook and experiment orientation
+
+- Entry date: `2026-11-20`
+- Source: `ChatGPT response to user-proposed opening`
+- Preservation: `verbatim including the original writing-block markup`
+
+Added the previous response verbatim to the canonical `META_ANALYSIS.md` as **MA-0133 — Reader-orientation failure and revised introduction requirements**.
+
+[View meta-analysis](https://github.com/arh789/llm_topology/blob/main/META_ANALYSIS.md) · [View commit `589b863`](https://github.com/arh789/llm_topology/commit/589b863b943057e1aad531da3c44f19ecab76db3)
+
+## The revised opening
+
+Your proposed framing fixes something the previous versions missed: **the reader immediately understands the experiment's premise and why its failure is interesting**.
+
+I would change *stupid question* to *simple question*. The bridge question is reasonable; the model's inability to answer it is what makes the experiment revealing.
+
+<WritingBlock id="58321" variant="document">## How can you search for what you do not know exists?
+
+Ask a language model a simple question, and sometimes it gives you a stupid answer. But that answer is only the visible result of a much richer process. As the model generates its response, its intermediate states contain associations between ideas that may never appear in the words it produces.
+
+What if we could reconstruct those associations as a network, and use that network to discover things we didn't know to look for?
+
+To explore this, we asked Pythia 70M, a very small open-weights language model, why a city would build a bridge across a river. It failed to give a meaningful answer. Yet when we examined its intermediate states, we uncovered a much broader network of concepts and relationships, including possibilities the model never managed to express in its response.</WritingBlock>
+
+The next thing the reader should encounter is the **actual prompt, the complete failed response, and the semantic map**, including its adjacent and unexplained relationships.
+
+The distinction worth preserving is that the model's internal states do not themselves constitute the finished semantic network. The research pipeline reconstructs that network from them. The proposed introduction communicates this without forcing the reader through the technical methodology.
+
+Most importantly, it doesn't announce what every interesting relationship means before the reader has seen it. It creates a reason to look at the map.
+
+**This is the first point in the article where R020 becomes relevant.** The reader now knows what a language model is being asked to do, why its failure matters, and why examining its internal representations might reveal something unexpected.
+
+No further page edit has been made yet.
