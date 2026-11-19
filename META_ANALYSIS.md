@@ -23594,3 +23594,131 @@ The LLM Topology page currently does a better job of **explaining why the resear
 **The next improvement should be to replace selected retrospective explanations with complete, source-grounded demonstrations of the research process.**
 
 That would also serve the article's governing argument: the reader would observe the same progression from unfamiliar evidence to new understanding that the project claims human-directed agent reconstruction makes possible.
+
+### MA-0133 — Reader-orientation failure and revised introduction requirements
+
+- Entry date: `2026-11-20`
+- Source: `ChatGPT response to the three-page user feedback PDF`
+- Preservation: `verbatim assistant response, including presentation markup`
+
+The feedback identifies a more fundamental problem than excessive explanation or a poorly constructed semantic map.
+
+**The page assumes the reader already understands the research before the article has introduced it.**
+
+Your description on page 3 captures the result:
+
+> I feel like ive walked into a lecture three quarters of the way through, and am not sure if im in the right place.
+
+This is the central failure.
+
+## 1. The hero should be removed
+
+Page 1 demonstrates why the opening is ineffective.
+
+It introduces relationships, generated answers, intermediate states, recorded associations, unresolved adjacency and R020 before establishing what is being investigated.
+
+The reader cannot understand why these things matter because there is no familiar situation against which to interpret them.
+
+The hero also gives away pieces of the experiment before the experiment has been introduced.
+
+**It is not functioning as an introduction. It is functioning as a summary for someone already familiar with the project.**
+
+Removing it is better than rewriting it.
+
+## 2. Page 2 is much closer to the correct introduction
+
+Your feedback explicitly identifies the phrasing on page 2 as better.
+
+That material should be preserved.
+
+However, I have assumed that the reader understands why looking for relationships is useful, rather than simply asking an AI for an answer.
+
+The introduction needs to establish that a generated response is one possible outcome of processing a question, while the underlying representations may expose additional associations that suggest entirely different directions of investigation.
+
+That gives the search for relationships a purpose.
+
+There is no need to give the reader a technical explanation of transformer architecture at this stage.
+
+## 3. The transition to R020 is missing
+
+This is probably the most easily corrected problem.
+
+The article currently refers to R020 as though it were a familiar concept.
+
+It is merely an experiment identifier.
+
+Before introducing the R020 results, the article needs to establish three things:
+
+- **What was investigated:** Pythia 70M, a small open-weights language model, was asked a straightforward question about why a city might build a bridge across a river.
+- **What was unusual:** The model generated a circular answer that failed to explain the reason for constructing the bridge.
+- **What the researchers did:** They examined the model's intermediate representations during generation, reconstructed networks of associated words and concepts, and compared those networks with the information expressed in the answer.
+
+Only then does it make sense to introduce R020 as the recorded experiment.
+
+The reader now understands what the model is, what happened, and why the analysis was performed.
+
+## 4. The semantic map must be the discovery, not another explanation
+
+The reader should encounter the actual prompt and response, followed by a substantial semantic map containing central and adjacent relationships.
+
+The map needs to show how relationships extend beyond the obvious answer, including disruption, recovery, commerce, mathematical associations and unexplained connections.
+
+The important experience is seeing something in the map that the reader had not thought to look for.
+
+My previous edit instead supplied categories and descriptions of what the reader ought to notice.
+
+That reversed the intended relationship between evidence and interpretation.
+
+## 5. The corrected article sequence
+
+<box border radius="lg" padding={3} gap={2} align="center">
+  <box background="surface-secondary" radius="md" padding={3} width="100%" align="center" gap={1}>
+    **1. Introduce the problem**
+
+    <text color="secondary" size="sm" textAlign="center">Preserve the stronger language from page 2</text>
+  </box>
+  <icon name="arrow-down" color="tertiary"/>
+  <box background="surface-secondary" radius="md" padding={3} width="100%" align="center" gap={1}>
+    **2. Introduce the surprising solution**
+
+    <text color="secondary" size="sm" textAlign="center">Investigate intermediate semantic structures instead of relying only on generated answers</text>
+  </box>
+  <icon name="arrow-down" color="tertiary"/>
+  <box background="surface-secondary" radius="md" padding={3} width="100%" align="center" gap={1}>
+    **3. Establish the experiment**
+
+    <text color="secondary" size="sm" textAlign="center">Pythia 70M, the bridge question, and a brief account of the analysis</text>
+  </box>
+  <icon name="arrow-down" color="tertiary"/>
+  <box background="surface-secondary" radius="md" padding={3} width="100%" align="center" gap={1}>
+    **4. Present the discovery**
+
+    <text color="secondary" size="sm" textAlign="center">The exact prompt, failed response and broad, connected semantic map</text>
+  </box>
+  <icon name="arrow-down" color="tertiary"/>
+  <box background="surface-secondary" radius="md" padding={3} width="100%" align="center" gap={1}>
+    **5. Explain and validate**
+
+    <text color="secondary" size="sm" textAlign="center">How the networks were constructed, what the experiments demonstrated, and the supporting evidence</text>
+  </box>
+</box>
+
+## The larger lesson from your feedback
+
+I have repeatedly confused three distinct requirements:
+
+**The reader must know what is happening.**
+
+**The reader must understand why it is interesting.**
+
+**The reader must eventually understand how it works.**
+
+Those requirements do not need to be satisfied simultaneously.
+
+The current page tries to explain how the research works before sufficiently establishing what is happening. It also reveals selected conclusions before giving the reader the opportunity to inspect the discovery.
+
+The next revision needs less introductory machinery, better contextual orientation, and a stronger visual demonstration of the actual semantic network.
+
+**The governing test should be whether someone encountering the project for the first time can follow the research without already possessing the knowledge the article is supposed to provide.**
+
+I have reviewed the three pages of feedback. I have not made another page edit in response to it.
