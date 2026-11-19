@@ -75,65 +75,80 @@ and cannot specify the correct answer?
 |
 +-- 4. THE HUMAN'S CRITICAL CAPABILITY
 |   |
-|   +-- Cannot necessarily recognise the answer
-|   |   before it has been discovered
+|   +-- Cannot necessarily generate the solution
+|   |   or explain a new relationship in advance
 |   |
-|   +-- CAN RECOGNISE
-|   |   +-- Objective violations
-|   |   +-- Contradictions
+|   +-- POSITIVE RECOGNITION
+|   |   +-- Something resonates before it is understood
+|   |   +-- A relationship appears potentially significant
+|   |   +-- A direction deserves further investigation
+|   |   '-- Its value is a question to explore, not a fact proved
+|   |
+|   +-- NEGATIVE RECOGNITION
+|   |   +-- Objective violations and contradictions
 |   |   +-- Unsupported assumptions
-|   |   +-- Lost information
-|   |   +-- Premature coherence
+|   |   +-- Lost information and premature coherence
 |   |   +-- Invalid abstractions
 |   |   '-- Unhelpful transformations
 |   |
 |   '-- CONSEQUENCE
-|       |
-|       '-- Recognition of invalidity
-|           does not require construction
-|           of the correct solution
+|       +-- The human can select promising directions
+|       |   without already understanding their outcome
+|       +-- The human can reject invalid representations
+|       |   without constructing the correct solution
+|       '-- Both judgements guide subsequent exploration
 |
 +-- 5. THE LEARNING MECHANISM
 |   |
 |   +-- AGENT GENERATES
-|   |   Candidate abstraction
-|   |           |
-|   +-- HUMAN CONSTRAINS
-|   |   Identifies what cannot be justified
-|   |           |
-|   +-- AGENT ELIMINATES
-|   |   Invalid information transformations
-|   |           |
+|   |   Candidate representations and relationships
+|   |             |
+|   +-- HUMAN RECOGNISES
+|   |   |
+|   |   +-- RESONANCE / PROMISE
+|   |   |   Select and extend a possible relationship;
+|   |   |   ask what else it connects to and how to test it
+|   |   |
+|   |   '-- INVALIDITY / VIOLATION
+|   |       Challenge assumptions, expose omissions,
+|   |       reject unsupported transformations
+|   |             |
+|   +-- AGENT INVESTIGATES AND RECONSTRUCTS
+|   |   Expand selected possibilities and alternatives;
+|   |   test corrective constraints against evidence
+|   |             |
 |   +-- AGENT PRESERVES
-|   |   Evidence and unresolved associations
-|   |           |
-|   +-- AGENT RECONSTRUCTS
-|   |   Alternative interpretations
-|   |           |
+|   |   Measured evidence, promising branches,
+|   |   rejected hypotheses and unresolved associations
+|   |             |
 |   +-- AGENT EXTERNALISES
-|   |   A more adequate representation
-|   |           |
-|   +-- HUMAN EXAMINES
-|   |   Previously inaccessible possibilities
-|   |           |
-|   +-- HUMAN LEARNS
-|   |   Acquires new understanding
-|   |           |
-|   '-- HUMAN SUPPLIES NEW CONSTRAINTS
-|               |
-|               '----------> REPEAT
+|   |   An inspectable, traceable representation
+|   |             |
+|   +-- HUMAN EXAMINES AND LEARNS
+|   |   Tests the apparent significance of new relations;
+|   |   acquires knowledge not available at the outset
+|   |             |
+|   '-- HUMAN DIRECTS NEXT ITERATION
+|       New questions, positive selections
+|       and corrective constraints
+|                 |
+|                 '----------> REPEAT
 |
 +-- 6. WHAT THE META-ANALYSIS ESTABLISHED
 |   |
-|   +-- Agent does not need the correct answer
-|   +-- Human does not need the correct answer
+|   +-- Agent does not need the correct answer in advance
+|   +-- Human does not need the correct answer in advance
 |   +-- Initial abstractions need not be correct
-|   +-- Incorrect abstractions can expose violations
-|   +-- Violations generate new constraints
-|   +-- Constraints reduce admissible possibilities
-|   +-- Reconstruction generates new abstractions
+|   +-- Human selection concerns usefulness and direction,
+|   |   as well as rejection of invalid interpretations
+|   +-- A promising relation can motivate another inquiry
+|   +-- Incorrect abstractions expose violations
+|   +-- Negative constraints reduce invalid possibilities
+|   +-- Positive selection redirects attention and exploration
+|   +-- Reconstruction generates alternative abstractions
 |   +-- External evidence tests their adequacy
-|   '-- Persistent records accumulate corrections
+|   '-- Persistent records accumulate selections, questions,
+|       corrections and results
 |
 +-- 7. WHAT THIS THREAD DEMONSTRATED
 |   |
@@ -149,7 +164,7 @@ and cannot specify the correct answer?
 |   |           |
 |   |           v
 |   |   HUMAN CORRECTION
-|   |   Learning can emerge through elimination
+|   |   Learning can emerge through exploration and elimination
 |   |
 |   +-- Initial agent interpretation
 |   |   Abstractions must begin correctly
@@ -177,30 +192,43 @@ and cannot specify the correct answer?
 |   |           |
 |   |           v
 |   |   HUMAN CORRECTION
-|   |   Human constraints enable the learning loop
+|   |   Human direction and constraints enable the loop
 |   |
-|   '-- Initial agent interpretation
-|       The agent's learning is the ultimate end
+|   +-- Initial agent interpretation
+|   |   The agent's learning is the ultimate end
+|   |           |
+|   |           v
+|   |   HUMAN CORRECTION
+|   |   Agent reconstruction enables
+|   |   human discovery of unknown knowledge
+|   |
+|   +-- RECORDED DIRECTIONAL SELECTION
+|   |   From the R014-R015 map, the human chose
+|   |   another line of inquiry using SDA-3 questions
+|   |   (MA-0099): inspect what emerges and what is absent
+|   |
+|   '-- Initial page representation
+|       Human recognises only invalidity
 |               |
 |               v
-|       HUMAN CORRECTION
-|       Agent reconstruction enables
-|       human discovery of unknown knowledge
+|       HUMAN CORRECTION / MA-0128
+|       "Recognises what resonates, or what is
+|       unsupported, missing or invalid"
 |
-+-- 8. THE HAPPY ACCIDENT — MA-0083
++-- 8. THE HAPPY ACCIDENT — MA-0083, MA-0120
 |   |
 |   +-- ORIGINAL FRAMING
 |   |   Human teaches agent to learn
 |   |   Human learning is incidental
 |   |
-|   +-- OBSERVED MECHANISM
-|   |   Human constrains agent
+|   +-- OBSERVED RESEARCH PROCESS
+|   |   Human recognises problems and selects directions
 |   |        |
-|   |   Agent reconstructs information
+|   |   Agent explores and reconstructs information
 |   |        |
 |   |   Agent exposes new abstractions
 |   |        |
-|   |   Human discovers new relationships
+|   |   Human examines and learns new relationships
 |   |
 |   '-- EMERGENT REINTERPRETATION
 |       |
@@ -215,18 +243,22 @@ and cannot specify the correct answer?
 |   |
 |   +-- HUMAN
 |   |   +-- Supplies objective
-|   |   +-- Judges utility
-|   |   +-- Detects invalid transformations
+|   |   +-- Recognises resonance and potential significance
+|   |   +-- Selects promising directions to investigate
+|   |   +-- Judges utility without assuming truth
+|   |   +-- Detects invalid transformations and omissions
 |   |   '-- Directs further investigation
 |   |
 |   +-- AGENT
 |   |   +-- Generates possibilities
-|   |   +-- Explores relationships
+|   |   +-- Explores selected relationships
+|   |   +-- Tests corrective constraints
 |   |   +-- Reconstructs abstractions
 |   |   '-- Exposes previously unseen structure
 |   |
 |   '-- SHARED EXTERNAL MEMORY
-|       +-- Experiments
+|       +-- Experiments and source measurements
+|       +-- Promising branches and selected questions
 |       +-- Failed interpretations
 |       +-- Corrective constraints
 |       +-- Reconstructed abstractions
@@ -240,14 +272,18 @@ and cannot specify the correct answer?
     +-- Agent ignorance of the solution
     |   does not prevent generation
     |
-    +-- Human constraints guide the agent
+    +-- Human positive recognition selects directions
+    |   without guaranteeing correctness
+    |
+    +-- Human negative recognition constrains invalidity
     |   without specifying the destination
     |
     +-- Agent reconstruction exposes structures
     |   beyond the human's initial knowledge
     |
     '-- HUMAN KNOWLEDGE EXPANDS THROUGH
-        CONSTRAINED AGENT RECONSTRUCTION
+        HUMAN-DIRECTED, CONSTRAINED
+        AGENT RECONSTRUCTION
 ```
 
 ## The deepest compression
@@ -259,16 +295,28 @@ Does not know the possibility space
                 |
                 v
 AGENT
-Generates possible representations
+Generates representations
 of that unknown space
                 |
                 v
 HUMAN
-Recognises what cannot be correct
+Recognises resonance or invalidity
+                |
+       +--------+---------+
+       |                  |
+       v                  v
+     RESONANCE         INVALIDITY
+       |                  |
+       v                  v
+    SELECT AND          CHALLENGE
+    INVESTIGATE         AND REVISE
+       |                  |
+       +--------+---------+
                 |
                 v
 AGENT
-Reconstructs what might be correct
+Explores and reconstructs
+while preserving the evidence
                 |
                 v
 NEW KNOWLEDGE BECOMES ACCESSIBLE
@@ -281,14 +329,16 @@ HUMAN LEARNS
 
 ## What becomes central?
 
-The central relationship is **the asymmetry between generating possibilities and recognising violations**.
+The central relationship is **the asymmetry between generating possibilities and recognising their potential significance or invalidity**.
 
-The human cannot necessarily generate the knowledge being sought, but can provide independent constraints on the agent's attempts to represent it. The agent can generate alternative abstractions without knowing in advance which will survive.
+The human cannot necessarily generate or explain the knowledge being sought, but can recognise when an unfamiliar relationship resonates and when a representation fails. Positive recognition selects directions for further investigation; negative recognition challenges unsupported abstractions and imposes constraints. Neither judgement supplies a complete answer in advance. Resonance is a reason to investigate, not proof of correctness.
 
-SDA-3 helps expose possibilities and omissions. LLM topology investigates the learned semantic structures from which possibilities can be reconstructed. Human correction supplies selection pressure. Persistent records enable subsequent iterations to build on previous discoveries.
+The agent generates and reconstructs alternatives, preserves competing relationships and unresolved evidence, and externalises candidate maps that the human can examine. SDA-3 helps expose possibilities and omissions; LLM topology examines learned semantic organisation inferred from transformer-state measurements. The original experimental objective remains unchanged.
 
-This also reveals why the *happy accident* matters: the human's acquisition of new knowledge is not a separate activity from teaching the agent. It can be a direct consequence of the agent being forced to reconstruct its understanding.
+The collaboration record contains both forms of selection. [MA-0083](META_ANALYSIS.md) identifies human selection pressure over the research abstractions; [MA-0099](META_ANALYSIS.md) records the human choosing to interrogate the R014–R015 map with further SDA-3 questions; [MA-0128](META_ANALYSIS.md) and [MA-0129](META_ANALYSIS.md) articulate the missing role of resonance. These are observations and interpretations of the research process, not experiments establishing resonance as a reliable predictor of truth.
 
-**The ultimate insight is that a human can learn about an unknown possibility space by constraining an agent's exploration of it, rather than needing to understand that space before asking the agent to investigate it.**
+This also explains why the *happy accident* matters: the human's acquisition of new knowledge is not separate from directing the agent. The human can discover a promising direction before understanding it, and acquire a better explanation through constrained reconstruction and further evidence.
+
+**The ultimate insight is that a human can learn about an unknown possibility space by recognising potential significance and invalidity in an agent's proposed representations, then directing exploration and reconstruction without already knowing the correct answer.**
 
 The learning process itself becomes a tool for discovery.
