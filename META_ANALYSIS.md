@@ -23350,3 +23350,51 @@ Rebuilding experimental pipelines, changing R001–R020 conclusions, treating re
 **Immediate next action:** Revise `ARTICLE_OUTLINE_OFFICIAL.md`, using MA-0128 and MA-0129 as the correction record. Then update the article against that revised authority.
 
 No additional experiment is required to make these methodological and editorial changes.
+
+### MA-0131 — IMPLEMENTATION RECORD: Dual recognition integrated into official outline and article draft
+
+- Entry date: 2026-11-19
+- Entry type: controlled methodology/artifact implementation and verification record
+- Governing plan: MA-0130
+- Governing insight: MA-0128 and MA-0129
+- Status: implementation committed; research measurements unchanged; browser-based visual inspection outstanding
+- Preservation mode: append-only
+
+#### Research repository changes
+
+1. `ARTICLE_OUTLINE_OFFICIAL.md` updated in commit `15a47641fb59fbf135f5c595f11e60b5cb949beb`.
+   - Sections 4–10 and the deepest compression now treat positive recognition of possible significance and negative recognition of invalidity as complementary controls over agent reconstruction.
+   - Positive recognition selects promising investigations without proving their correctness.
+   - Negative recognition tests assumptions, omissions and invalid transformations without requiring the human to specify the final answer.
+   - The original goal of inferring semantic structure from changes in transformer states remains unchanged.
+2. `ARTICLE_EVIDENCE_INDEX.md` updated in commit `09961df24cb8963ebcf6a3a90d50ab7f0972acaa`.
+   - Added C10, identifying the meta-analysis record for positive directional selection and negative correction.
+   - MA-0099 records a user-selected line of inquiry following examination of the R014–R015 semantic map.
+   - MA-0083, MA-0120, MA-0128, MA-0129 and MA-0130 provide interpretive context and the explicit recognition correction.
+   - C10 distinguishes recorded choices from the **interpreted** human-learning mechanism; no controlled experiment has established resonance as a reliable predictor of correctness.
+3. All R001–R020 run artefacts, measurements and underlying findings were left unchanged.
+
+#### Portfolio draft changes
+
+Repository: `arh789/my-portfolio`  
+Branch: `draft/llm-topology-visual-v1-20261119`  
+Draft PR: https://github.com/arh789/my-portfolio/pull/1
+
+- `page.js`, commit `3b4bfc645ff1bccd413e8bfaac302faa6bcbda1f`: revised opening contrast, the human–agent loop, side-by-side recognition pathways, MA-0099 example, correction-ledger description, cognitive division of labour and closing explanation.
+- `page.module.css`, commit `fbdb8de8b10c6471d6931a901059f6316ddac077`: scoped spacing for the new recognition cards.
+- `INTERACTIVE_PLACEHOLDERS.md`, commit `6c10a3c3f11f781fd13a3c1c3f11bd4924a657e5`: updated future correction-ledger contract to include positive selection and evidence provenance.
+- `CODEX_HANDOVER.md`, commit `a6f6e0663bb95fa3983a0d99aee2399fd8b5902e`: documented the new methodological authority and remaining Codex visual-QA task.
+- No article metadata, navigation registry, live interactive component or production merge was introduced.
+
+#### Verification and remaining work
+
+- The four draft source files were fetched back and checked for the intended content.
+- All eight page-section anchors and all three interactive slot IDs were present; the JSX's CSS-class references had corresponding definitions.
+- Vercel successfully built and deployed commit `a6f6e0663bb95fa3983a0d99aee2399fd8b5902e`; deployment reported `READY`.
+- The draft route `/art/llm-topology` responded with HTTP 200 and served the revised two-path text, documented case and three placeholders.
+- **Not yet completed:** independent desktop/mobile screenshot inspection, keyboard/navigation behaviour testing and the Codex visual review. These cannot be inferred from successful compilation or HTML response.
+
+#### Next bounded operation
+
+Codex should inspect the existing draft PR and verify visual layout at desktop and mobile sizes, especially the two added recognition cards, longer headings, corrected text size and MA-0099 citation. Fix only verified defects; keep the PR in draft and defer metadata and functional interactive components until the visual first draft has been reviewed.
+
