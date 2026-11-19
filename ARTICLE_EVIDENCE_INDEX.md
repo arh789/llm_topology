@@ -219,6 +219,43 @@ therefore a candidate explanation, not a demonstrated mechanism.
   The analysis evidence and human-utility status are separately recorded in
   [R020 analysis manifest](single_prompt_topology/runs/R020_pythia-70m-representation-output-contrast/analysis/R020_ANALYSIS_MANIFEST.json).
 
+## C10 — Human direction combines selecting promising possibilities and correcting inadequate interpretations
+
+**Claim (interpretive, not experimental).** In the recorded human–agent research
+process, the project owner does more than reject errors. They also select
+relationships, maps and lines of inquiry that appear worth investigating
+before their outcome is known. The emerging methodology therefore has two
+complementary pathways: positive recognition directs exploration; negative
+recognition imposes corrective constraints. Neither pathway replaces external
+evidence or establishes the correctness of a promising hypothesis.
+
+- **Direct record of research direction:** [MA-0099](META_ANALYSIS.md#ma-0099--next-inquiry-sda-3-interrogatives-applied-to-the-independently-reconstructed-r014r015-semantic-map)
+  includes the owner's request to reproduce the R014–R015 semantic map and,
+  after inspecting it, to ask what is central, adjacent, emerging, missing and
+  highly correlated. This is a **recorded choice of further inquiry**, not
+  proof that the selected questions or any resulting explanation were valid.
+- **Human-selection analysis:** [MA-0083](META_ANALYSIS.md#ma-0083--critical-combined-entry-human-selection-pressure-and-the-joint-learning-system)
+  records the owner's inquiry into optimal human–agent collaboration and the
+  interpretation of human selection pressure and utility judgement.
+- **Unexpected human-learning objective:** [MA-0120](META_ANALYSIS.md#ma-0120--critical-insight-human-learning-through-agent-exploration)
+  preserves the insight that the human acquired knowledge about an unfamiliar
+  possibility space by teaching the agent to explore it.
+- **Explicit positive-recognition correction:** [MA-0128](META_ANALYSIS.md#ma-0128--core-insight-positive-recognition-and-resonance-in-the-humanagent-learning-mechanism)
+  records the owner's precise diagram edit adding recognition of resonance.
+  [MA-0129](META_ANALYSIS.md#ma-0129--core-methodology-revision-dual-recognition-and-directional-selection)
+  articulates the revised dual-path interpretation;
+  [MA-0130](META_ANALYSIS.md#ma-0130--execution-plan-integrate-dual-recognition-into-the-official-methodology-and-article)
+  governs this integration.
+- **Current article authority:** [ARTICLE_OUTLINE_OFFICIAL.md](ARTICLE_OUTLINE_OFFICIAL.md),
+  sections 4–10, the deepest compression and "What becomes central?".
+
+**Evidence level:** the occurrence and wording of the owner's questions and
+corrections are directly documented in the meta-analysis; the general
+human-learning mechanism is **interpreted**; claims that resonance reliably
+predicts truth, improves scientific outcomes, or has been validated by a
+controlled experiment remain **proposed and untested**. The R001–R020
+measurement claims are not revised by C10.
+
 ## Claims that remain proposed
 
 The article may motivate these ideas, but should not present them as results:
