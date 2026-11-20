@@ -24132,3 +24132,103 @@ The central methodological principle is:
 **The human decides what is significant enough to investigate. The evidence determines what can subsequently be established about it.**
 
 The first does not have to wait for the second.
+
+### MA-0137 — Site metadata conventions and missing LLM Topology discovery registration
+
+- Entry date: `2026-11-20`
+- Source: `ChatGPT response to site-asset metadata rules question`
+- Preservation: `verbatim`
+
+Yes. The existing site establishes a fairly clear **metadata convention for research pages**, although not every element is formally enforced.
+
+The most useful references are the Dan John case study, Semantic SEO Lab, existing article frontmatter, the shared site layout and the discovery-generation code.
+
+## 1. Rules already evident in the site
+
+| Inferred rule | Evidence from existing assets |
+|---|---|
+| **Identify the research subject explicitly** | Dan John's title names the person, source platform and method. Semantic SEO Lab names the research domain and programming language. |
+| **Describe the actual research contribution** | Descriptions explain what the experiment investigates or produces, rather than merely repeating the title. |
+| **Use terminology that matches the content** | Titles and descriptions refer to the methods, datasets and findings actually present on the page. |
+| **Give each page a canonical URL** | Both comparison pages specify a canonical path. |
+| **Distinguish research from supporting material** | The article system records content types, project membership, tags, dates and descriptive metadata. |
+| **Connect related research explicitly** | Project membership and site-generated graphs establish relationships between articles and research themes. |
+| **Keep metadata and discovery outputs consistent** | The repository instructions require regeneration of discovery assets when indexed content or its metadata changes. |
+
+A particularly important pattern emerges: **the headline can communicate the intellectual question, while the metadata must still make the research subject identifiable to someone who has never encountered the page.**
+
+The current LLM Topology headline works as an opening question. Its metadata does less well at identifying the specific subject.
+
+## 2. The most important finding: LLM Topology is missing from the site's discovery architecture
+
+I checked the generated assets on the draft branch.
+
+| Site asset | Dan John | LLM Topology |
+|---|---|---|
+| `public/sitemap.xml` | Present | Missing |
+| `public/graph.json` | Present | Missing |
+| `public/agent-map.json` | Present | Missing |
+| `src/app/art/lib/customArticles.js` | Registered | Not registered |
+
+This matters more than whether the page has a `keywords` field.
+
+The LLM Topology page has a canonical URL and working metadata, but it is **not registered as an article in the system that generates the site's research graph and discovery records**.
+
+Dan John establishes the relevant precedent: a custom-built research page is registered with a title, description, date, last-modified date, tags, content type, medium and project membership.
+
+The site then uses those records to generate relationships and discoverable URLs.
+
+The inferred rule is therefore:
+
+**A research page should not exist only as a rendered route. It should also exist as an identified and connected object within the site's information architecture.**
+
+This is consistent with the site's own research argument that semantic visibility depends partly on relationships between information objects, not merely the contents of individual pages.
+
+## 3. Which metadata conventions are mandatory?
+
+The source code suggests the following distinction.
+
+| Field | Status |
+|---|---|
+| Page title and description | Established convention |
+| Canonical path | Established convention |
+| Research title, description and date in article registry | Required for consistent article discovery |
+| Tags and project membership | Essential for the intended graph relationships |
+| Last-modified date | Supported and used in sitemap generation |
+| Open Graph title and description | Established on major research case studies, but not universal |
+| Authors and publication dates in Open Graph | Used by Dan John, not universally required |
+| Keyword array | Used by some research pages; not a universal site requirement |
+
+The rules are therefore not simply a standard SEO checklist. They form a **content identity and relationship model**.
+
+## 4. What does this imply for LLM Topology?
+
+Its present metadata title is:
+
+> How can you search for what you do not know exists? | LLM Topology
+
+This is a useful editorial hook, but it does not explicitly identify transformer states, semantic network reconstruction or the nature of the experiment.
+
+The site’s stronger research metadata usually combines a recognisable subject with a specific analytical method or finding.
+
+For example, a candidate descriptive title would be:
+
+**LLM Topology: Reconstructing Semantic Networks from Transformer States**
+
+The opening question can remain unchanged. The metadata has a different job: identifying the page accurately in search results, research indexes and machine-readable records.
+
+The description should then explain that this is a feasibility experiment using Pythia 70M, whose internal representations were reconstructed into a semantic network despite its poor generated response.
+
+## 5. The inferred implementation sequence
+
+1. Establish the page's descriptive research title and summary from its completed content.
+2. Register LLM Topology in `customArticles.js`, following the Dan John precedent.
+3. Assign relevant existing tags and project membership rather than inventing a disconnected taxonomy.
+4. Align the page metadata, Open Graph information and article registry.
+5. Regenerate the site discovery assets through the existing build process and verify the resulting graph relationships and sitemap entry.
+
+The relevant source files are [siteManifest.js](https://github.com/arh789/my-portfolio/blob/draft/llm-topology-visual-v1-20261119/src/app/siteManifest.js), [customArticles.js](https://github.com/arh789/my-portfolio/blob/draft/llm-topology-visual-v1-20261119/src/app/art/lib/customArticles.js) and [buildSiteDiscovery.js](https://github.com/arh789/my-portfolio/blob/draft/llm-topology-visual-v1-20261119/scripts/buildSiteDiscovery.js).
+
+**The main conclusion:** Before optimising the wording of LLM Topology's metadata, we should establish its correct identity and position within the site's existing research graph. That is the more consequential missing piece.
+
+No repository files have been changed.
