@@ -24424,7 +24424,7 @@ The resulting human-use methodology is precisely:
 
 **The current page explains the R020 experiment well. The revised article explains its underlying purpose more clearly.**
 
-After comparing the published page with [\`revised article.md\`](https://github.com/arh789/llm_topology/blob/main/revised%20article.md), I think the difference is primarily one of **emphasis and conceptual hierarchy**, rather than missing research content.
+After comparing the published page with [`revised article.md`](https://github.com/arh789/llm_topology/blob/main/revised%20article.md), I think the difference is primarily one of **emphasis and conceptual hierarchy**, rather than missing research content.
 
 ## 1. What the revised article does better
 
@@ -24459,7 +24459,7 @@ The current page moves from the failed response into the reconstructed network, 
 
 The revised article makes that relationship immediate:
 
-\`\`\`text id="5hx4py"
+```text id="5hx4py"
 Poor generated response
           ↓
 Reconstructable semantic associations
@@ -24473,7 +24473,7 @@ Human selects a question
 Further investigation
           ↓
 Potential new knowledge
-\`\`\`
+```
 
 **This is the organising structure I would want the current article to communicate more prominently.**
 
