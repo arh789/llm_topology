@@ -24232,3 +24232,350 @@ The relevant source files are [siteManifest.js](https://github.com/arh789/my-por
 **The main conclusion:** Before optimising the wording of LLM Topology's metadata, we should establish its correct identity and position within the site's existing research graph. That is the more consequential missing piece.
 
 No repository files have been changed.
+
+### MA-0138 — R020 SDA-3 reconstruction of experimental task and human-discovery goal
+
+- Entry date: `2026-11-22`
+- Source: `ChatGPT SDA-3 response to the question about R020's inferred task and goal`
+- Preservation: `verbatim; source copy: revised article.md`
+
+## R020 — SDA-3 Structural Analysis
+
+### 1. CENTRAL — What fundamentally defines the run?
+
+**Inferred task:** Determine whether a language model's internal representations contain reconstructable semantic relationships that its generated response fails to express.
+
+**Inferred goal:** Establish whether those relationships can be made accessible as a network through which a human can discover possibilities they would not otherwise know to investigate.
+
+R020 deliberately separates two capabilities:
+
+```text id="djun1f"
+LANGUAGE MODEL
+│
+├── Generative capability
+│   └── Produce a coherent, useful response
+│
+└── Representational capability
+    └── Retain structured semantic associations
+        │
+        └── Reconstruct those associations
+            └── Expose a wider possibility space
+                └── Enable human investigation
+```
+
+Pythia 70M was intentionally selected because its limited generative capability offered an opportunity to investigate whether meaningful semantic organisation remained accessible despite poor output.
+
+The bridge question was chosen because its answer is elementary, but its surrounding semantic territory is broad.
+
+**The experiment is fundamentally about whether representational usefulness can exceed generative usefulness.**
+
+### 2. SUPPRESSED — What is obscured by the conventional interpretation?
+
+The conventional interpretation of a failed response is that the model has little useful information to contribute.
+
+R020 challenges the assumption that:
+
+**Poor generated output = absence of useful learned associations.**
+
+The original hypothesis suggests another possibility: useful semantic relationships may be recoverable even when the model cannot organise them into a satisfactory answer.
+
+The run is not primarily attempting to:
+
+- Repair Pythia's generated response.
+- Demonstrate that the model secretly reasoned out the correct answer.
+- Recover individual training documents.
+- Establish that every reconstructed association is meaningful.
+- Automatically determine which relationships deserve investigation.
+
+Here, *suppressed* identifies what the conventional output-centred interpretation neglects. It is not a claim that the model actively suppressed particular concepts.
+
+### 3. ADJACENT — What surrounding structures become accessible?
+
+The minimal answer concerns connecting places and crossing a river.
+
+R020's reconstructed networks expose a wider associative neighbourhood:
+
+```text id="3k84tr"
+BRIDGE / CITY / RIVER
+│
+├── Crossing and movement
+│   ├── Journeys
+│   └── Roads and railways
+│
+├── Human organisation
+│   ├── Settlements
+│   ├── Inhabitants
+│   └── Commerce
+│
+├── Environment
+│   ├── Rivers and terrain
+│   └── Flooding and disruption
+│
+└── Reconstruction
+    ├── Repairs
+    └── Restoration
+```
+
+These are candidate relationships reconstructed from recorded network evidence, not a single model-generated explanation.
+
+Their importance is that they offer **additional directions of enquiry**, rather than merely improving the original answer.
+
+### 4. HCU — What correlates without an established explanation?
+
+The late-state mathematical branch provides a particularly useful example.
+
+At D32/S05, a connections community links to vocabulary including Poisson, Riemannian and manifold through 74 measured token-neighbour edges.
+
+That relationship does not establish that Pythia was reasoning about mathematical bridge structures.
+
+Nevertheless, it raises a legitimate exploratory question:
+
+**Why does this mathematical vocabulary appear near connections in this measured representation?**
+
+Possible interpretations include semantic association, vocabulary geometry, tokenisation effects or other structural relationships.
+
+The distinction matters:
+
+- The measured edge relationship exists.
+- Its semantic explanation remains uncertain.
+- Its uncertainty does not make it unworthy of investigation.
+
+HCU here is an exploratory classification of the unexpected association, not a measured R020 label.
+
+### 5. EMERGING — What higher-order structure forms?
+
+In the broader LLM Topology project, R020 becomes more than an experiment comparing model representations with generated text.
+
+It provides a practical demonstration of a different discovery process.
+
+```text id="jhpmql"
+MODEL
+Produces a narrow or failed response
+              │
+              ▼
+ANALYTICAL SYSTEM
+Reconstructs a wider semantic network
+              │
+              ▼
+HUMAN
+Encounters unfamiliar relationships
+              │
+              ▼
+HUMAN
+Recognises something worth investigating
+              │
+              ▼
+EVIDENCE INSPECTION
+Examines the relationship and its provenance
+              │
+              ▼
+HUMAN
+Asks a question that was not available initially
+              │
+              ▼
+AGENT + HUMAN
+Investigate and reconstruct further
+              │
+              ▼
+NEW KNOWLEDGE BECOMES ACCESSIBLE
+```
+
+This is where R020 connects directly to the project's wider methodology.
+
+The human need not know what the relevant relationship is before encountering the network.
+
+The analytical system need not know which relationship the human will find significant.
+
+The network supplies possibilities. Human recognition determines the next direction.
+
+## 6. What did R020 actually establish?
+
+The recorded experiment demonstrated that additional semantic associations could be reconstructed and inspected despite the model's poor answer.
+
+However, the strongest prompt-related relationships often appeared in the static input-embedding neighbourhood. The experiment did **not** establish that Pythia had developed a robust, context-specific hidden explanation, or prove that the reconstructed associations were independently more useful than its output.
+
+That distinction does not invalidate the project's exploratory purpose.
+
+R020 established the feasibility of constructing an inspectable semantic instrument. Whether its relationships lead to useful discoveries is a subsequent human-directed question.
+
+---
+
+## Fundamental synthesis
+
+**R020's immediate experimental task:**
+
+Determine whether useful semantic organisation can be reconstructed from a weak language model independently of its ability to produce a coherent answer.
+
+**R020's higher-order goal within LLM Topology:**
+
+Make otherwise unexpressed semantic relationships accessible so a human can discover new questions without already knowing what to search for.
+
+The resulting human-use methodology is precisely:
+
+> **Find a relationship you did not expect. Inspect its evidence. Decide what question it raises.**
+
+**The ultimate objective is not to extract a better answer from the model. It is to expand the space of questions available to the human.**
+
+### MA-0139 — Editorial comparison: R020 page versus revised article
+
+- Entry date: `2026-11-22`
+- Source: `ChatGPT response comparing the published LLM Topology article with the revised R020 SDA-3 analysis`
+- Preservation: `verbatim`
+
+**The current page explains the R020 experiment well. The revised article explains its underlying purpose more clearly.**
+
+After comparing the published page with [\`revised article.md\`](https://github.com/arh789/llm_topology/blob/main/revised%20article.md), I think the difference is primarily one of **emphasis and conceptual hierarchy**, rather than missing research content.
+
+## 1. What the revised article does better
+
+| Dimension | Current page | Revised article |
+|---|---|---|
+| Fundamental problem | How can we discover things we do not know to search for? | Why does conventional answer-seeking obscure potentially useful semantic relationships? |
+| Experimental task | Capture hidden states and reconstruct a semantic network | Separate representational capability from generative capability |
+| Central discovery | The poor response contrasts with a much richer network | Poor output does not necessarily imply an absence of reconstructable associations |
+| Unexpected relationships | Presents three interesting examples | Explains why unexpected and unresolved relationships are central to the methodology |
+| Human's role | Explains the human–agent division of labour near the end | Places human recognition and question selection at the centre |
+| Ultimate objective | Make previously unexpressed relationships explorable | Expand the space of questions available to the human |
+
+The current page contains most of these ideas. However, the revised article makes their **logical dependencies** much more explicit.
+
+## 2. The most important difference: task versus goal
+
+The revised article distinguishes two things that the current page sometimes treats together.
+
+**Experimental task:**
+
+Determine whether a weak language model retains reconstructable semantic relationships despite producing an inadequate response.
+
+**Higher-order goal:**
+
+Use those reconstructed relationships to enable human discovery within an unfamiliar possibility space.
+
+That distinction is essential.
+
+The experiment is a means of creating the instrument. The instrument is a means of expanding human understanding.
+
+The current page moves from the failed response into the reconstructed network, methodology and evidence. It tells the reader why this is interesting, but the deeper relationship between the technical experiment and human discovery is distributed across several sections.
+
+The revised article makes that relationship immediate:
+
+\`\`\`text id="5hx4py"
+Poor generated response
+          ↓
+Reconstructable semantic associations
+          ↓
+Inspectable network
+          ↓
+Human encounters unexpected relationship
+          ↓
+Human selects a question
+          ↓
+Further investigation
+          ↓
+Potential new knowledge
+\`\`\`
+
+**This is the organising structure I would want the current article to communicate more prominently.**
+
+## 3. The HCU discussion reveals an important weakness
+
+The revised article asks:
+
+> Why does this mathematical vocabulary appear near connections in this measured representation?
+
+This is more than an unusual finding. It demonstrates the methodology producing a new question.
+
+The current page includes the mathematical relationship and its 74 measured edges. It also correctly avoids claiming that the relationship represents mathematical reasoning.
+
+However, the practical demonstration stops early.
+
+The reader is told that the relationship deserves investigation, but does not see an example of the next investigative action.
+
+There is also an interface limitation: the mathematical branch is available through the raw-network explorer, not the derived conceptual map. The default derived view emphasises prompt-related relationships.
+
+Consequently, the page invites the reader to discover the unexpected, while its most unexpected example is relatively difficult to reach.
+
+That is a more important issue than whether the article contains enough explanatory text.
+
+## 4. The human–agent section is conceptually weaker than the revised article
+
+Section 07 uses R014–R015 to demonstrate how the human questioned an unfamiliar reconstructed network.
+
+This is legitimate and useful.
+
+But it means the strongest example of human-directed investigation is borrowed from an earlier experiment, rather than demonstrated using the network the reader has just explored.
+
+The revised article draws a clearer distinction between the respective capabilities:
+
+**Analytical system:** Exposes possible relationships.
+
+**Human:** Recognises potential significance, selects directions and identifies questions.
+
+**Further investigation:** Tests what those relationships might mean.
+
+The current page explains this. The revised article makes it the central organising principle.
+
+I would preserve the R014–R015 example, but make the R020 example of human-directed exploration more explicit.
+
+## 5. What the current page does better
+
+The revised article should not simply replace the published page.
+
+The existing article offers several things the revised response does not:
+
+- An actual experiment with the recorded prompt and continuation.
+- An interactive network containing measured relationships.
+- Explanations of data capture, token projection, community detection and semantic reconstruction.
+- Code excerpts and source references.
+- Evidence from preceding experiments.
+- Clear distinctions between measurement and interpretation.
+
+It also correctly limits the conclusions.
+
+The revised article's discussion of new knowledge becoming accessible is a description of the proposed discovery process, not evidence that every unexpected relationship produces new knowledge.
+
+The current page's scientific caution should remain intact.
+
+## 6. What I would change
+
+I would not undertake another wholesale rewrite.
+
+Instead, I would make three targeted improvements.
+
+**First, strengthen the opening distinction between the experimental task and the higher-order goal.** Explain that reconstructing associations is the technical objective, while expanding the questions available to a human is the reason the instrument matters.
+
+**Second, make Section 04 demonstrate one complete discovery sequence.** For example: encounter the unexpected mathematical relationship, inspect its measured community links, then formulate a question that could guide the next investigation. Do not supply a predetermined explanation.
+
+**Third, strengthen Section 07's connection to R020.** The earlier R014–R015 work shows how the human–agent methodology emerged; R020 should demonstrate how a reader can now apply it.
+
+The statement already added above the network should remain unchanged:
+
+> Find a relationship you did not expect. Inspect its evidence. Decide what question it raises.
+
+The next improvement is to **demonstrate that instruction**, rather than explain it again.
+
+---
+
+## 7. The deeper conclusion
+
+I think the revised article reveals something important about how the project is being presented.
+
+The current page is organised around the experiment:
+
+**Problem → Experiment → Network → Findings → Method → Evidence → Human–agent process.**
+
+The revised article is organised around the intellectual discovery:
+
+**What conventional interpretation misses → What becomes accessible → What unexpected relationships reveal → How humans use them → What becomes possible.**
+
+Neither structure is inherently wrong. The first is stronger for documenting research. The second is stronger for communicating why the research exists.
+
+The best result would retain the current page's experimental narrative while making the revised article's conceptual structure more apparent.
+
+**Fundamentally, R020 is not about discovering that a weak model contains a surprisingly rich network. That is the experimental finding.**
+
+**It is about investigating whether exposing such networks can enable a human to discover relationships and formulate questions they could not have anticipated.**
+
+The revised article expresses that distinction more effectively.
+
+That is the part I would carry into the published page.
