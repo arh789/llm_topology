@@ -13,6 +13,15 @@ contained in `full_vocabulary_cutoff.py`; the R005 relationship baseline is in
 `cutoff_population_topology.py`. Topic modelling, multi-model comparisons and
 causal interventions remain outside the proof-of-concept scope.
 
+## Transformer State Topology Pipeline
+
+R020's complete autoregressive measurement workflow has been generalised as
+the [Transformer State Topology Pipeline](TSTP.md). Architecture-specific
+block and final-normalisation access now lives behind explicit adapters, while
+capture, replay, vocabulary projection, cutoffs, networks, communities and
+exports share one contract. The initial `pythia` and `qwen2` adapters passed
+the recorded [engineering validation](TSTP_VALIDATION.md).
+
 ## Before running
 
 Shut down the kernel used by `pythia_prompt_playground.ipynb` if Pythia 12B is

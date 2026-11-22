@@ -83,6 +83,13 @@ is prepared.
 - [`topology_run.py`](single_prompt_topology/topology_run.py) — general CLI.
 - [`r019_repeatability_control.py`](single_prompt_topology/r019_repeatability_control.py)
   — sequential-repeat capture and within/between-order comparisons.
+- [`tstp_engine.py`](single_prompt_topology/tstp_engine.py) —
+  model-interchangeable autoregressive capture, projection, network construction
+  and measured export.
+- [`tstp/adapters.py`](single_prompt_topology/tstp/adapters.py) — the explicit
+  Pythia/GPT-NeoX and Qwen2 architecture boundary.
+- [`TSTP_VALIDATION.md`](single_prompt_topology/TSTP_VALIDATION.md) — exact
+  Pythia/R020 regression and bounded Qwen end-to-end validation.
 
 ## Validate the existing evidence
 
@@ -107,11 +114,23 @@ From `single_prompt_topology`:
 ```powershell
 python -m unittest test_topology_engine -v
 python -m unittest test_r017_regression -v
+python -m unittest test_tstp_adapters -v
+python -m unittest test_tstp_model_integration -v
 ```
 
 The exact network tests and frozen R017 regression require CUDA. The lifecycle
 test record is preserved in
 [`R018_LIFECYCLE_UPDATE_VERIFICATION.md`](single_prompt_topology/R018_LIFECYCLE_UPDATE_VERIFICATION.md).
+
+The normal TSTP integration suite validates complete Pythia capture equivalence
+and Qwen state capture. Its expensive 52-network Qwen export test is opt-in:
+
+```powershell
+$env:TSTP_FULL_INTEGRATION = '1'
+python -m unittest `
+  test_tstp_model_integration.LocalModelIntegrationTests.test_qwen_adapter_reaches_measured_network_exports `
+  -v
+```
 
 ## Execute a fresh replication
 

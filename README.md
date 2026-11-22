@@ -33,6 +33,16 @@ article claim to its supporting evidence, use:
 7. [`R019_RESULT.json`](single_prompt_topology/runs/R019_olmo3-order-repeatability-control/R019_RESULT.json)
    — the compact machine-readable determinism control.
 
+## Model-interchangeable measurement pipeline
+
+[`TSTP.md`](single_prompt_topology/TSTP.md) documents the Transformer State
+Topology Pipeline extracted from R020. TSTP preserves the complete
+autoregressive capture-to-network workflow while isolating architecture access
+behind validated adapters. Pythia/GPT-NeoX and Qwen2 are currently supported;
+the [engineering validation](single_prompt_topology/TSTP_VALIDATION.md) records
+exact R020 Pythia reconciliation and a complete 52-network Qwen export test.
+Semantic reconstruction remains a separate downstream task.
+
 ## Current evidence state
 
 R015 measurement and downstream semantic reconstruction are complete for the

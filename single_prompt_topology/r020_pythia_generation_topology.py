@@ -1442,7 +1442,8 @@ def construct_networks(
                         )
                     previous_generation[generation_key] = state_data
                     print(
-                        f"R020 network {len(metrics):03d}/{expected_networks}: "
+                        f"{context.config['run_id']} network "
+                        f"{len(metrics):03d}/{expected_networks}: "
                         f"decision {decision_index + 1:02d}, state {state_index:02d}, "
                         f"{side}, {len(nodes):,} nodes, {len(communities)} communities, "
                         f"{time.perf_counter() - network_started:.2f}s.",
@@ -1461,9 +1462,24 @@ def construct_networks(
     state_frame = pd.DataFrame(state_transitions).sort_values(
         ["decision_index", "target_state_index", "side"], kind="stable"
     )
-    generation_frame = pd.DataFrame(generation_transitions).sort_values(
-        ["target_decision_index", "state_index", "side"], kind="stable"
-    )
+    generation_frame = pd.DataFrame(generation_transitions)
+    if generation_frame.empty:
+        generation_frame = pd.DataFrame(
+            columns=[
+                "comparison_type",
+                "source_decision_index",
+                "target_decision_index",
+                "source_generated_token_index",
+                "target_generated_token_index",
+                "state_index",
+                "state_label",
+                "side",
+            ]
+        )
+    else:
+        generation_frame = generation_frame.sort_values(
+            ["target_decision_index", "state_index", "side"], kind="stable"
+        )
     match_frame = pd.DataFrame(matches)
     network_index.to_csv(context.run_dir / "network_index.csv", index=False)
     community_nodes.to_csv(context.run_dir / "community_nodes.csv", index=False)
