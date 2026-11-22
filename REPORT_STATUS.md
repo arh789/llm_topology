@@ -158,10 +158,10 @@ through R020. It is interpretive context, not a substitute for individual
 run plans, manifests or measured evidence.
 
 
-[`ARTICLE_OUTLINE.md`](ARTICLE_OUTLINE.md) reproduces responses verbatim and
-chronologically. Some statements describe the repository state at the time of
-writing—for example, that R019 had not yet been pushed. It is source material
-for drafting, not a current factual register.
+[`ARTICLE_OUTLINE_OFFICIAL.md`](ARTICLE_OUTLINE_OFFICIAL.md) is the final
+conceptual synthesis used as the article's content authority. Earlier
+chronological drafting material was superseded and remains recoverable through
+Git history; verbatim project evolution is retained in `META_ANALYSIS.md`.
 
 [`META_ANALYSIS.md`](META_ANALYSIS.md) is append-only research history. When
 entries conflict, later explicitly revised entries govern the current

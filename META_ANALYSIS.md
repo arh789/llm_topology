@@ -24579,3 +24579,25 @@ The best result would retain the current page's experimental narrative while mak
 The revised article expresses that distinction more effectively.
 
 That is the part I would carry into the published page.
+
+### MA-0140 — Superseded article-draft provenance
+
+- Entry date: `2026-11-22`
+- Source: `Codex repository housekeeping following commit e3e86c1`
+- Status: `documentation-only provenance clarification`
+
+The article-drafting files `ANALYSIS_BRIEF.md`, `ARTICLE_OUTLINE.md` and
+`revised article.md` were removed from the current branch after being
+superseded. Their exact contents remain recoverable from the parent commit
+[`f1ebb4f`](https://github.com/arh789/llm_topology/tree/f1ebb4f670d47be8db87a681959b4f840e2b3389):
+
+- [`ANALYSIS_BRIEF.md`](https://github.com/arh789/llm_topology/blob/f1ebb4f670d47be8db87a681959b4f840e2b3389/ANALYSIS_BRIEF.md)
+- [`ARTICLE_OUTLINE.md`](https://github.com/arh789/llm_topology/blob/f1ebb4f670d47be8db87a681959b4f840e2b3389/ARTICLE_OUTLINE.md)
+- [`revised article.md`](https://github.com/arh789/llm_topology/blob/f1ebb4f670d47be8db87a681959b4f840e2b3389/revised%20article.md)
+
+Historical references to those filenames in this append-only file describe
+the repository state at the time of each entry; they are not current-path
+references. The current conceptual authority is
+[`ARTICLE_OUTLINE_OFFICIAL.md`](ARTICLE_OUTLINE_OFFICIAL.md). Evidence
+provenance remains governed by [`ARTICLE_EVIDENCE_INDEX.md`](ARTICLE_EVIDENCE_INDEX.md),
+[`METHODOLOGY.md`](METHODOLOGY.md) and the individual run artefacts.
