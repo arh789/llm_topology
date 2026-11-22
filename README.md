@@ -4,9 +4,9 @@ This is the independent working repository for an experimental project
 examining semantic conflict, language-model behaviour and internal
 representation geometry.
 
-> **Repository status:** private working evidence. Public release, licensing,
-> citation metadata and archival are deliberately deferred until the project
-> and article reach their final state.
+> **Repository status:** active research evidence supporting the published
+> [LLM Topology article](https://decrepitfilth.art/art/llm-topology).
+> Experimental work, interpretation and documentation remain in development.
 
 > **Canonical repository:** `arh789/llm_topology` became the authoritative
 > project repository on 2026-11-17. The former
@@ -18,9 +18,8 @@ representation geometry.
 The complete research archive remains below. For the shorter route from an
 article claim to its supporting evidence, use:
 
-1. [`ARTICLE_OUTLINE.md`](ARTICLE_OUTLINE.md) — chronological source material
-   for the article; it preserves historical statements verbatim and is not a
-   current-results authority.
+1. [`ARTICLE_OUTLINE_OFFICIAL.md`](ARTICLE_OUTLINE_OFFICIAL.md) — the final
+   conceptual synthesis used as the article’s content authority.
 2. [`ARTICLE_EVIDENCE_INDEX.md`](ARTICLE_EVIDENCE_INDEX.md) — the current
    claim-to-measurement, code, interpretation and limitation map.
 3. [`METHODOLOGY.md`](METHODOLOGY.md) — what is standard, what is distinctive
@@ -162,8 +161,8 @@ and are not versioned here.
 3. [`ZOMBIE_CASE_STUDY.md`](ZOMBIE_CASE_STUDY.md) — how an existing
    ChatGPT zombie-survival interrogation relates to the proposed research,
    including limitations and a candidate controlled stimulus.
-4. [`ANALYSIS_BRIEF.md`](ANALYSIS_BRIEF.md) — bounded questions for ChatGPT to
-   analyse using the two preceding documents.
+4. [`ARTICLE_OUTLINE_OFFICIAL.md`](ARTICLE_OUTLINE_OFFICIAL.md) — the article’s
+   governing conceptual synthesis and human-learning framework.
 5. [`pythia_prompt_playground.ipynb`](pythia_prompt_playground.ipynb) — an
    executed interactive comparison surface for Pythia 410M, 6.9B and 12B.
 6. [`single_prompt_topology/README.md`](single_prompt_topology/README.md) — the
